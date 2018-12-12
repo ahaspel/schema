@@ -1,0 +1,46 @@
+{
+  "$id": "https://congistics.com/schema/CxUnit",
+  "title": "com.congistics.cbrd.util.CxUnit",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "ObjectType": {
+      "type": "string",
+      "enum": [
+        "Unit"
+      ]
+    },
+    "Scalar": {
+      "type": "number"
+    },
+    "UnitType": {
+      "type": "string",
+      "enum": [
+        "Time",
+        "Length",
+        "Weight",
+        "Area",
+        "Volume",
+        "Money",
+        "Self"
+      ]
+    },
+    "Integral": {
+      "type": "boolean"
+    },
+    "Id": {
+      "type": "integer"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Id",
+    "Name"
+  ]
+}

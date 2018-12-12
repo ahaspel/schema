@@ -1,0 +1,24 @@
+{
+  "$id": "https://congistics.com/schema/CxRange",
+  "title": "com.congistics.cbrd.time.CxRange",
+  "definitions": {},
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "End": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "Duration": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Start",
+    "End"
+  ]
+}

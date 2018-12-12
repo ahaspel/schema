@@ -1,0 +1,220 @@
+{
+  "$id": "https://congistics.com/schema/CxLicense",
+  "title": "com.congistics.cbrd.security.CxLicense",
+  "definitions": {
+    "IxActionHolder": {
+      "type": "object",
+      "properties": {
+        "Start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "End": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "Lifespan": {
+          "$ref": "#/definitions/IxRange"
+        },
+        "CurrentLifespan": {
+          "$ref": "#/definitions/IxRange"
+        },
+        "History": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IxRange"
+          }
+        },
+        "Duration": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "integer"
+        },
+        "ObjectType": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IxAttribute<String>"
+          }
+        },
+        "Dto": {
+          "$ref": "#/definitions/IxDataTransferObject"
+        }
+      },
+      "required": [
+        "Id",
+        "Name"
+      ]
+    },
+    "IxAttribute<String>": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "integer"
+        },
+        "ObjectType": {
+          "type": "string",
+          "enum": [
+            "Attribute"
+          ]
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Id",
+        "Name"
+      ]
+    },
+    "IxDataTransferObject": {
+      "type": "object",
+      "properties": {
+        "ValidationStatus": {
+          "type": "string",
+          "enum": [
+            "New",
+            "Updated",
+            "Deleted",
+            "None",
+            "SerializationFailure",
+            "DatabaseFailure",
+            "ValidationFailure"
+          ]
+        },
+        "Valid": {
+          "type": "boolean"
+        },
+        "ErrorMessage": {
+          "title": "Error Message",
+          "description": "Empty if Valid is true.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ValidationStatus",
+        "Valid",
+        "ErrorMessage"
+      ]
+    },
+    "IxRange": {
+      "type": "object",
+      "properties": {
+        "Start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "End": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "Duration": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Start",
+        "End"
+      ]
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Expiration": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "AllowedUsers": {
+      "type": "integer"
+    },
+    "AllowedWebUsers": {
+      "type": "integer"
+    },
+    "SerialNumber": {
+      "type": "string"
+    },
+    "Valid": {
+      "type": "boolean"
+    },
+    "MachineId": {
+      "type": "string"
+    },
+    "Nag": {
+      "type": "boolean"
+    },
+    "ErrorMessage": {
+      "type": "string"
+    },
+    "ObjectType": {
+      "type": "string"
+    },
+    "Dto": {
+      "$ref": "#/definitions/IxDataTransferObject"
+    },
+    "Children": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/IxActionHolder"
+      }
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Id": {
+      "type": "integer"
+    },
+    "Start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "End": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "Lifespan": {
+      "$ref": "#/definitions/IxRange"
+    },
+    "CurrentLifespan": {
+      "$ref": "#/definitions/IxRange"
+    },
+    "History": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/IxRange"
+      }
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/IxAttribute<String>"
+      }
+    }
+  },
+  "required": [
+    "Expiration",
+    "AllowedUsers",
+    "AllowedWebUsers",
+    "SerialNumber",
+    "Name",
+    "Id"
+  ]
+}
