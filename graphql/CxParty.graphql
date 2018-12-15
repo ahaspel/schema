@@ -1,0 +1,204 @@
+type CxParty {
+  PhoneNumbers: [IxPhoneNumber]
+  Emails: [IxEmail]
+  DefaultPhoneNumber: IxPhoneNumber
+  DefaultEmail: IxEmail
+  Name: String
+  Description: String
+  Title: IxTypedItem__String__
+  Address: IxAddress
+  ObjectType: CxPartyObjectType
+  Children: [IxActionHolder]
+  Id: ID!
+  Start: String
+  End: String
+  Lifespan: IxRange
+  CurrentLifespan: IxRange
+  History: [IxRange]
+  Duration: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxPartyInput {
+  PhoneNumbers: [IxPhoneNumberDO]
+  Emails: [IxEmailDO]
+  DefaultPhoneNumber: IxPhoneNumberDO
+  DefaultEmail: IxEmailDO
+  Name: String!
+  Description: String
+  Title: IxTypedItem__String__DO
+  Address: IxAddressDO
+  ObjectType: CxPartyObjectType
+  Children: [IxActionHolderDO]
+  Id: ID!
+  Start: String
+  End: String
+  Lifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
+  Duration: String
+  Tags: [IxAttribute__String__DO]
+}
+
+enum CxPartyObjectType {
+  Party
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxActionHolder {
+  Start: String
+  End: String
+  Lifespan: IxRange
+  CurrentLifespan: IxRange
+  History: [IxRange]
+  Duration: String
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxActionHolderDO {
+  Id: ID!
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddressObjectType
+  Name: String
+  Description: String
+}
+
+input IxAddressDO {
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__DO {
+  Id: ID!
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxEmail {
+  Id: ID!
+  Email: String
+  New: Boolean
+  Name: String
+  Description: String
+}
+
+input IxEmailDO {
+  Id: ID!
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLookupValue {
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  BatchStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Valid: Boolean
+  New: Boolean
+  Name: String
+  Description: String
+}
+
+input IxPhoneNumberDO {
+  Id: ID!
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+type IxTypedItem__String__ {
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+}
+
+input IxTypedItem__String__DO {
+  Id: ID!
+}
+
+extend type Mutation {
+  cxPartys_onSave(data: [CxPartyInput], objectType: String, operation: String = "edit"): [CxParty]
+}
+
+extend type Query {
+  cxPartys(filters: [FilterInput]): [CxParty]
+}

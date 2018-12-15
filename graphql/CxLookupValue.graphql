@@ -1,0 +1,67 @@
+type CxLookupValue {
+  Tags: [IxAttribute__String__]
+  Id: ID!
+  Name: String
+  Description: String
+  ObjectType: CxLookupValueObjectType
+}
+
+input CxLookupValueInput {
+  Tags: [IxAttribute__String__DO]
+  Id: ID!
+  Name: String!
+  Description: String
+  ObjectType: CxLookupValueObjectType!
+}
+
+enum CxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  BatchStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAttribute__String__ {
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__DO {
+  Id: ID!
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+extend type Mutation {
+  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String, operation: String = "edit"): [CxLookupValue]
+}
+
+extend type Query {
+  cxLookupValues(filters: [FilterInput]): [CxLookupValue]
+}
