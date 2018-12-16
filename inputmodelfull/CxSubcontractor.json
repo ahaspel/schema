@@ -1,7 +1,16 @@
 {
-	"Preferred": true,
+	"Preferred": false,
 	"IsMover": false,
 	"SupplyTypes": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -24,16 +33,22 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": true,
-	"ObjectType": "sit",
+	"SuppliesAll": false,
+	"ObjectType": "est",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "voluptatem",
+	"AccountCode": "et",
 	"PhoneNumbers": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -59,18 +74,6 @@
 		},
 		{
 			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
 		}
 	],
 	"DefaultPhoneNumber": {
@@ -79,8 +82,8 @@
 	"DefaultEmail": {
 		"Id": 0
 	},
-	"Name": "quis",
-	"Description": "tempore",
+	"Name": "voluptate",
+	"Description": "at",
 	"Title": {
 		"Id": 0
 	},
@@ -88,51 +91,51 @@
 		"Id": 1
 	},
 	"Id": 0,
-	"Start": "sunt",
-	"End": "asperiores",
+	"Start": "aliquid",
+	"End": "quis",
 	"Lifespan": {
-		"Start": "quo",
-		"End": "id",
-		"Duration": "sunt"
+		"Start": "qui",
+		"End": "omnis",
+		"Duration": "aspernatur"
 	},
 	"CurrentLifespan": {
-		"Start": "perferendis",
-		"End": "eveniet",
+		"Start": "magni",
+		"End": "non",
 		"Duration": "quisquam"
 	},
 	"History": [
 		{
-			"Start": "sed",
-			"End": "eum",
-			"Duration": "inventore"
+			"Start": "impedit",
+			"End": "ex",
+			"Duration": "eos"
 		},
 		{
-			"Start": "veritatis",
-			"End": "modi",
-			"Duration": "sed"
+			"Start": "voluptatum",
+			"End": "earum",
+			"Duration": "tempora"
 		},
 		{
-			"Start": "non",
-			"End": "eos",
-			"Duration": "hic"
+			"Start": "reprehenderit",
+			"End": "sed",
+			"Duration": "aut"
 		},
 		{
-			"Start": "aut",
-			"End": "porro",
-			"Duration": "ipsum"
+			"Start": "autem",
+			"End": "amet",
+			"Duration": "ut"
 		},
 		{
-			"Start": "eos",
-			"End": "aut",
-			"Duration": "aliquam"
+			"Start": "sit",
+			"End": "sit",
+			"Duration": "distinctio"
 		},
 		{
-			"Start": "sed",
-			"End": "aspernatur",
-			"Duration": "numquam"
+			"Start": "aperiam",
+			"End": "et",
+			"Duration": "cupiditate"
 		}
 	],
-	"Duration": "et",
+	"Duration": "omnis",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }
