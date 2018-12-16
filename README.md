@@ -14,5 +14,11 @@ Where XXX is the build that Aaron tagged it with.
 
 When you want to upgrade to a later version you need to edit package.json to match the tag you want.
 
+From there you can update the package like so: 
+
+    npm upgrade cb-schema
+
+There are probably other ways to skin this cat.
+
 
 
