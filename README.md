@@ -15,6 +15,11 @@ Where XXX is the build that Aaron tagged it with.
 Then do:
 
     npm install
+    
+    
+Or just do this:
+
+    npm i --save git+ssh://git@github.com:ahaspel/schema.git   
 
 When you want to upgrade to a later version you need to edit package.json to match the tag you want.
 
