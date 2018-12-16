@@ -1,7 +1,10 @@
 {
 	"Preferred": false,
-	"IsMover": false,
+	"IsMover": true,
 	"SupplyTypes": [
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -24,19 +27,16 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": true,
-	"ObjectType": "laboriosam",
+	"SuppliesAll": false,
+	"ObjectType": "dolorem",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "eveniet",
+	"AccountCode": "quia",
 	"PhoneNumbers": [
-		{
-			"Id": 0
-		},
 		{
 			"Id": 0
 		},
@@ -62,12 +62,6 @@
 		},
 		{
 			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
 		}
 	],
 	"DefaultPhoneNumber": {
@@ -76,8 +70,8 @@
 	"DefaultEmail": {
 		"Id": 0
 	},
-	"Name": "repellat",
-	"Description": "quas",
+	"Name": "quas",
+	"Description": "qui",
 	"Title": {
 		"Id": 0
 	},
@@ -85,56 +79,46 @@
 		"Id": 1
 	},
 	"Id": 0,
-	"Start": "molestiae",
-	"End": "consequatur",
+	"Start": "amet",
+	"End": "tenetur",
 	"Lifespan": {
-		"Start": "dolores",
-		"End": "officiis",
-		"Duration": "minima"
+		"Start": "cumque",
+		"End": "necessitatibus",
+		"Duration": "soluta"
 	},
 	"CurrentLifespan": {
-		"Start": "incidunt",
-		"End": "doloremque",
-		"Duration": "beatae"
+		"Start": "voluptatibus",
+		"End": "qui",
+		"Duration": "sint"
 	},
 	"History": [
 		{
-			"Start": "possimus",
+			"Start": "inventore",
 			"End": "hic",
-			"Duration": "quae"
+			"Duration": "ut"
 		},
 		{
-			"Start": "maxime",
-			"End": "optio",
-			"Duration": "fugit"
+			"Start": "earum",
+			"End": "fugit",
+			"Duration": "eveniet"
 		},
 		{
-			"Start": "et",
-			"End": "ducimus",
-			"Duration": "atque"
+			"Start": "minima",
+			"End": "dolore",
+			"Duration": "quo"
 		},
 		{
-			"Start": "suscipit",
-			"End": "labore",
-			"Duration": "a"
-		},
-		{
-			"Start": "voluptatem",
-			"End": "molestias",
-			"Duration": "vero"
-		},
-		{
-			"Start": "iusto",
+			"Start": "perferendis",
 			"End": "voluptatem",
-			"Duration": "expedita"
+			"Duration": "autem"
 		},
 		{
-			"Start": "odit",
-			"End": "repellat",
-			"Duration": "ipsum"
+			"Start": "ab",
+			"End": "maiores",
+			"Duration": "odio"
 		}
 	],
-	"Duration": "aut",
+	"Duration": "quo",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }
