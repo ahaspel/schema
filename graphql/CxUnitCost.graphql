@@ -1,0 +1,62 @@
+type CxUnitCost {
+  Cost: IxMoney
+  Unit: IxUnit
+  Notes: String
+}
+
+input CxUnitCostInput {
+  Cost: IxMoneyInput!
+  Unit: IxUnitDO!
+  Notes: String
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+extend type Mutation {
+  cxUnitCosts_onSave(data: [CxUnitCostInput], objectType: String, operation: String = "edit"): [CxUnitCost]
+}
+
+extend type Query {
+  cxUnitCosts(filters: [FilterInput]): [CxUnitCost]
+}

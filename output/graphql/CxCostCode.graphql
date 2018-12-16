@@ -1,0 +1,101 @@
+type CxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  ObjectType: CxCostCodeObjectType
+  Tags: [IxAttribute__String__]
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input CxCostCodeInput {
+  UnitCost: IxUnitCostInput!
+  Global: Boolean
+  ObjectType: CxCostCodeObjectType
+  Tags: [IxAttribute__String__DO]
+  Id: ID!
+  Name: String!
+  Description: String
+}
+
+enum CxCostCodeObjectType {
+  CostCode
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAttribute__String__ {
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__DO {
+  Id: ID!
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+extend type Mutation {
+  cxCostCodes_onSave(data: [CxCostCodeInput], objectType: String, operation: String = "edit"): [CxCostCode]
+}
+
+extend type Query {
+  cxCostCodes(filters: [FilterInput]): [CxCostCode]
+}

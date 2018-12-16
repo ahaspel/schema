@@ -1,0 +1,22 @@
+type CxError {
+  Id: ID!
+  ObjectType: String
+}
+
+input CxErrorInput {
+  Id: ID!
+  ObjectType: String!
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+extend type Mutation {
+  cxErrors_onSave(data: [CxErrorInput], objectType: String, operation: String = "edit"): [CxError]
+}
+
+extend type Query {
+  cxErrors(filters: [FilterInput]): [CxError]
+}

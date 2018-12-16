@@ -1,0 +1,184 @@
+{
+	"id": "https://congistics.com/schema/CxLicense",
+	"title": "com.congistics.cbrd.security.CxLicense",
+	"definitions": {
+		"IxActionHolder": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Lifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"History": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxRange"
+					}
+				},
+				"Duration": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxRange": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		}
+	},
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"Expiration": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"AllowedUsers": {
+			"type": "integer"
+		},
+		"AllowedWebUsers": {
+			"type": "integer"
+		},
+		"SerialNumber": {
+			"type": "string"
+		},
+		"Valid": {
+			"type": "boolean"
+		},
+		"MachineId": {
+			"type": "string"
+		},
+		"Nag": {
+			"type": "boolean"
+		},
+		"ErrorMessage": {
+			"type": "string"
+		},
+		"ObjectType": {
+			"type": "string"
+		},
+		"Children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxActionHolder"
+			}
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Lifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxRange"
+			}
+		},
+		"Duration": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"Expiration",
+		"AllowedUsers",
+		"AllowedWebUsers",
+		"SerialNumber",
+		"Name",
+		"Id"
+	]
+}

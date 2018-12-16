@@ -1,0 +1,238 @@
+{
+	"id": "https://congistics.com/schema/CxUser",
+	"title": "com.congistics.cbrd.party.CxUser",
+	"definitions": {
+		"IxActionHolder": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Lifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"History": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxRange"
+					}
+				},
+				"Duration": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxLevel": {
+			"type": "object",
+			"properties": {
+				"Privileges": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxTypedItem__String__"
+					}
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxRange": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		},
+		"IxTypedItem__String__": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		}
+	},
+	"type": "object",
+	"properties": {
+		"Username": {
+			"type": "string"
+		},
+		"Password": {
+			"type": "string"
+		},
+		"Level": {
+			"$ref": "#/definitions/IxLevel"
+		},
+		"WebPrivileges": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxTypedItem__String__"
+			}
+		},
+		"Privileges": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxTypedItem__String__"
+			}
+		},
+		"Administrator": {
+			"type": "boolean"
+		},
+		"ReadOnly": {
+			"type": "boolean"
+		},
+		"WebLevel": {
+			"type": "string",
+			"enum": [
+				"None",
+				"All",
+				"Personal"
+			]
+		},
+		"ObjectType": {
+			"type": "string"
+		},
+		"Children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxActionHolder"
+			}
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Lifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxRange"
+			}
+		},
+		"Duration": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"Username",
+		"Password",
+		"Name",
+		"Id"
+	]
+}

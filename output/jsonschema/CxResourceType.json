@@ -1,0 +1,167 @@
+{
+	"id": "https://congistics.com/schema/CxResourceType",
+	"title": "com.congistics.cbrd.resource.CxResourceType",
+	"definitions": {
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxRange": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		},
+		"IxResourceSubtype": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceSubtype"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxTypedItem__String__": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		}
+	},
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"Id": {
+			"type": "integer"
+		},
+		"Type": {
+			"$ref": "#/definitions/IxTypedItem__String__"
+		},
+		"Subtype": {
+			"$ref": "#/definitions/IxTypedItem__String__"
+		},
+		"ResourceSubtypes": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResourceSubtype"
+			}
+		},
+		"MoveVehicle": {
+			"type": "boolean"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"ResourceType"
+			]
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string"
+		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Lifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxRange"
+			}
+		},
+		"Duration": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"Id",
+		"Name"
+	]
+}
