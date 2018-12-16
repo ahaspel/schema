@@ -12,6 +12,10 @@ To include this in your application put a strophe like this in your package.json
 
 Where XXX is the build that Aaron tagged it with.
 
+Then do:
+
+    npm install
+
 When you want to upgrade to a later version you need to edit package.json to match the tag you want.
 
 From there you can update the package like so: 
