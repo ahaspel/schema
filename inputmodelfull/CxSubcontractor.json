@@ -1,7 +1,10 @@
 {
 	"Preferred": false,
-	"IsMover": true,
+	"IsMover": false,
 	"SupplyTypes": [
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -30,22 +33,16 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": false,
-	"ObjectType": "magnam",
+	"SuppliesAll": true,
+	"ObjectType": "nesciunt",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "et",
+	"AccountCode": "nihil",
 	"PhoneNumbers": [
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
 		{
 			"Id": 0
 		},
@@ -83,6 +80,9 @@
 		},
 		{
 			"Id": 0
+		},
+		{
+			"Id": 0
 		}
 	],
 	"DefaultPhoneNumber": {
@@ -91,8 +91,8 @@
 	"DefaultEmail": {
 		"Id": 0
 	},
-	"Name": "cumque",
-	"Description": "error",
+	"Name": "explicabo",
+	"Description": "cumque",
 	"Title": {
 		"Id": 0
 	},
@@ -100,46 +100,31 @@
 		"Id": 1
 	},
 	"Id": 0,
-	"Start": "voluptates",
-	"End": "accusantium",
+	"Start": "fugiat",
+	"End": "non",
 	"Lifespan": {
-		"Start": "non",
-		"End": "voluptate",
-		"Duration": "at"
+		"Start": "id",
+		"End": "praesentium",
+		"Duration": "quos"
 	},
 	"CurrentLifespan": {
-		"Start": "ut",
-		"End": "molestiae",
-		"Duration": "sequi"
+		"Start": "amet",
+		"End": "voluptas",
+		"Duration": "quia"
 	},
 	"History": [
 		{
-			"Start": "ab",
-			"End": "quidem",
-			"Duration": "inventore"
+			"Start": "corrupti",
+			"End": "sint",
+			"Duration": "tempora"
 		},
 		{
-			"Start": "qui",
-			"End": "laudantium",
-			"Duration": "ut"
-		},
-		{
-			"Start": "debitis",
-			"End": "magni",
-			"Duration": "et"
-		},
-		{
-			"Start": "iusto",
-			"End": "aspernatur",
-			"Duration": "architecto"
-		},
-		{
-			"Start": "ab",
-			"End": "facere",
-			"Duration": "modi"
+			"Start": "adipisci",
+			"End": "repellat",
+			"Duration": "laborum"
 		}
 	],
-	"Duration": "aspernatur",
+	"Duration": "pariatur",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }
