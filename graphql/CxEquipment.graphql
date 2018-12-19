@@ -1,22 +1,32 @@
-type CxSubcontractor {
-  Preferred: Boolean
-  IsMover: Boolean
-  SupplyTypes: [IxSupplyType]
-  DefaultSupplyType: IxResourceType
-  DefaultResourceSubtype: IxResourceSubtype
-  SuppliesAll: Boolean
+type CxEquipment {
+  Model: String
+  Make: String
+  SerialNumber: String
+  Year: String
+  Height: IxQuantity
+  Weight: IxQuantity
+  Width: IxQuantity
+  Capacity: IxQuantity
+  MoveNotes: String
+  AbbreviatedName: String
   ObjectType: String
-  CompanyType: IxLookupValue
-  Contacts: [IxParty]
-  AccountCode: String
-  PhoneNumbers: [IxPhoneNumber]
-  Emails: [IxEmail]
-  DefaultPhoneNumber: IxPhoneNumber
-  DefaultEmail: IxEmail
-  Name: String
   Description: String
-  Title: IxTypedItem__String__
+  Temporary: Boolean
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  UnitCost: IxUnitCost
+  InCrew: Boolean
+  Divisible: Boolean
+  HasDescription: Boolean
+  ForeColor: String
+  BackColor: String
   Address: IxAddress
+  Location: IxAddress
+  AllowMove: Boolean
+  Returned: Boolean
+  AccountCode: String
+  Children: [IxActionHolder]
+  Name: String
   Id: ID!
   Start: String
   End: String
@@ -27,25 +37,35 @@ type CxSubcontractor {
   Tags: [IxAttribute__String__]
 }
 
-input CxSubcontractorInput {
-  Preferred: Boolean
-  IsMover: Boolean
-  SupplyTypes: [IxSupplyTypeDO]
-  DefaultSupplyType: IxResourceTypeDO
-  DefaultResourceSubtype: IxResourceSubtypeDO
-  SuppliesAll: Boolean
+input CxEquipmentInput {
+  Model: String!
+  Make: String!
+  SerialNumber: String
+  Year: String
+  Height: IxQuantityInput
+  Weight: IxQuantityInput
+  Width: IxQuantityInput
+  Capacity: IxQuantityInput
+  MoveNotes: String
+  AbbreviatedName: String
   ObjectType: String
-  CompanyType: IxLookupValueDO!
-  Contacts: [IxPartyDO]
-  AccountCode: String
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
-  DefaultPhoneNumber: IxPhoneNumberDO
-  DefaultEmail: IxEmailDO
-  Name: String!
   Description: String
-  Title: IxTypedItem__String__DO
+  Temporary: Boolean
+  ResourceType: IxResourceTypeDO!
+  ResourceSubtype: IxResourceSubtypeDO!
+  UnitCost: IxUnitCostInput
+  InCrew: Boolean
+  Divisible: Boolean
+  HasDescription: Boolean
+  ForeColor: String
+  BackColor: String
   Address: IxAddressDO
+  Location: IxAddressDO
+  AllowMove: Boolean
+  Returned: Boolean
+  AccountCode: String
+  Children: [IxActionHolderDO]
+  Name: String!
   Id: ID!
   Start: String
   End: String
@@ -59,6 +79,24 @@ input CxSubcontractorInput {
 input FilterInput {
   name: String!
   values: [String]
+}
+
+type IxActionHolder {
+  Start: String
+  End: String
+  Lifespan: IxRange
+  CurrentLifespan: IxRange
+  History: [IxRange]
+  Duration: String
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxActionHolderDO {
+  Id: ID!
 }
 
 type IxAddress {
@@ -97,18 +135,6 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxEmail {
-  Id: ID!
-  Email: String
-  New: Boolean
-  Name: String
-  Description: String
-}
-
-input IxEmailDO {
-  Id: ID!
-}
-
 type IxGeocode {
   Lat: Float
   Lng: Float
@@ -127,10 +153,6 @@ type IxLookupValue {
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
-}
-
-input IxLookupValueDO {
-  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -162,45 +184,19 @@ type IxMoney {
   Quantity: Float
 }
 
-type IxParty {
-  PhoneNumbers: [IxPhoneNumber]
-  Emails: [IxEmail]
-  DefaultPhoneNumber: IxPhoneNumber
-  DefaultEmail: IxEmail
-  Title: IxTypedItem__String__
-  Start: String
-  End: String
-  Lifespan: IxRange
-  History: [IxRange]
-  CurrentLifespan: IxRange
-  Duration: String
-  Id: ID!
-  ObjectType: IxPartyObjectType
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
-input IxPartyDO {
-  Id: ID!
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
 }
 
-enum IxPartyObjectType {
-  Party
-}
-
-type IxPhoneNumber {
-  Id: ID!
-  PhoneNumber: String
-  Valid: Boolean
-  New: Boolean
-  Name: String
-  Description: String
-}
-
-input IxPhoneNumberDO {
-  Id: ID!
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
 type IxRange {
@@ -257,31 +253,11 @@ enum IxResourceTypeObjectType {
   ResourceType
 }
 
-type IxSupplyType {
-  ResourceSubtype: IxResourceSubtype
-  UnitCosts: [IxUnitCost]
-  AccrualNumber: String
-  Notes: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxSupplyTypeDO {
-  Id: ID!
-}
-
 type IxTypedItem__String__ {
   Id: ID!
   ObjectType: String
   Name: String
   Description: String
-}
-
-input IxTypedItem__String__DO {
-  Id: ID!
 }
 
 type IxUnit {
@@ -300,6 +276,16 @@ type IxUnitCost {
   Notes: String
 }
 
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
 enum IxUnitObjectType {
   Unit
 }
@@ -315,9 +301,9 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String, operation: String = "edit"): [CxSubcontractor]
+  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String, operation: String = "edit"): [CxEquipment]
 }
 
 extend type Query {
-  cxSubcontractors(filters: [FilterInput]): [CxSubcontractor]
+  cxEquipments(filters: [FilterInput]): [CxEquipment]
 }

@@ -1,7 +1,57 @@
 {
-	"id": "https://congistics.com/schema/CxSubcontractor",
-	"title": "com.congistics.cbrd.party.CxSubcontractor",
+	"id": "https://congistics.com/schema/CxEquipment",
+	"title": "com.congistics.cbrd.resource.CxEquipment",
 	"definitions": {
+		"IxActionHolder": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Lifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"History": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxRange"
+					}
+				},
+				"Duration": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
 		"IxAddress": {
 			"type": "object",
 			"properties": {
@@ -67,80 +117,6 @@
 				"Name"
 			]
 		},
-		"IxEmail": {
-			"type": "object",
-			"properties": {
-				"Id": {
-					"type": "integer"
-				},
-				"Email": {
-					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id",
-				"Email",
-				"Name"
-			]
-		},
-		"IxLookupValue": {
-			"type": "object",
-			"properties": {
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Minority",
-						"Skill",
-						"Training",
-						"Union",
-						"State",
-						"Attribute",
-						"PurchaseOrderStatus",
-						"Privilege",
-						"BatchStatus",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"JobCertification",
-						"WebPrivilege"
-					]
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxMoney": {
 			"type": "object",
 			"properties": {
@@ -156,109 +132,19 @@
 				"Quantity"
 			]
 		},
-		"IxParty": {
+		"IxQuantity": {
 			"type": "object",
 			"properties": {
-				"PhoneNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
 				},
-				"Emails": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxEmail"
-					}
-				},
-				"DefaultPhoneNumber": {
-					"$ref": "#/definitions/IxPhoneNumber"
-				},
-				"DefaultEmail": {
-					"$ref": "#/definitions/IxEmail"
-				},
-				"Title": {
-					"$ref": "#/definitions/IxTypedItem__String__"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Lifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Party"
-					]
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
+				"Quantity": {
+					"type": "number"
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
-			]
-		},
-		"IxPhoneNumber": {
-			"type": "object",
-			"properties": {
-				"Id": {
-					"type": "integer"
-				},
-				"PhoneNumber": {
-					"type": "string"
-				},
-				"Valid": {
-					"type": "boolean"
-				},
-				"New": {
-					"type": "boolean"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id",
-				"PhoneNumber",
-				"Name"
+				"Unit",
+				"Quantity"
 			]
 		},
 		"IxRange": {
@@ -377,69 +263,6 @@
 				"Id"
 			]
 		},
-		"IxSupplyType": {
-			"type": "object",
-			"properties": {
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"UnitCosts": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxUnitCost"
-					}
-				},
-				"AccrualNumber": {
-					"type": "string"
-				},
-				"Notes": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"ResourceSubtype",
-				"Id",
-				"Name"
-			]
-		},
-		"IxTypedItem__String__": {
-			"type": "object",
-			"properties": {
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxUnit": {
 			"type": "object",
 			"properties": {
@@ -499,6 +322,26 @@
 				"Cost"
 			]
 		},
+		"IxTypedItem__String__": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxGeocode": {
 			"type": "object",
 			"properties": {
@@ -521,75 +364,146 @@
 				"Lat",
 				"Lng"
 			]
+		},
+		"IxLookupValue": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Privilege",
+						"BatchStatus",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"JobCertification",
+						"WebPrivilege"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id"
+			]
 		}
 	},
 	"type": "object",
 	"properties": {
-		"Preferred": {
-			"type": "boolean"
+		"Model": {
+			"type": "string"
 		},
-		"IsMover": {
-			"type": "boolean"
+		"Make": {
+			"type": "string"
 		},
-		"SupplyTypes": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxSupplyType"
-			}
+		"SerialNumber": {
+			"type": "string"
 		},
-		"DefaultSupplyType": {
-			"$ref": "#/definitions/IxResourceType"
+		"Year": {
+			"type": "string",
+			"format": "date-time"
 		},
-		"DefaultResourceSubtype": {
-			"$ref": "#/definitions/IxResourceSubtype"
+		"Height": {
+			"$ref": "#/definitions/IxQuantity"
 		},
-		"SuppliesAll": {
-			"type": "boolean"
+		"Weight": {
+			"$ref": "#/definitions/IxQuantity"
+		},
+		"Width": {
+			"$ref": "#/definitions/IxQuantity"
+		},
+		"Capacity": {
+			"$ref": "#/definitions/IxQuantity"
+		},
+		"MoveNotes": {
+			"type": "string"
+		},
+		"AbbreviatedName": {
+			"type": "string"
 		},
 		"ObjectType": {
-			"type": "string"
-		},
-		"CompanyType": {
-			"$ref": "#/definitions/IxLookupValue"
-		},
-		"Contacts": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxParty"
-			}
-		},
-		"AccountCode": {
-			"type": "string"
-		},
-		"PhoneNumbers": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxPhoneNumber"
-			}
-		},
-		"Emails": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxEmail"
-			}
-		},
-		"DefaultPhoneNumber": {
-			"$ref": "#/definitions/IxPhoneNumber"
-		},
-		"DefaultEmail": {
-			"$ref": "#/definitions/IxEmail"
-		},
-		"Name": {
 			"type": "string"
 		},
 		"Description": {
 			"type": "string"
 		},
-		"Title": {
-			"$ref": "#/definitions/IxTypedItem__String__"
+		"Temporary": {
+			"type": "boolean"
+		},
+		"ResourceType": {
+			"$ref": "#/definitions/IxResourceType"
+		},
+		"ResourceSubtype": {
+			"$ref": "#/definitions/IxResourceSubtype"
+		},
+		"UnitCost": {
+			"$ref": "#/definitions/IxUnitCost"
+		},
+		"InCrew": {
+			"type": "boolean"
+		},
+		"Divisible": {
+			"type": "boolean"
+		},
+		"HasDescription": {
+			"type": "boolean"
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
+		},
+		"Location": {
+			"$ref": "#/definitions/IxAddress"
+		},
+		"AllowMove": {
+			"type": "boolean"
+		},
+		"Returned": {
+			"type": "boolean"
+		},
+		"AccountCode": {
+			"type": "string"
+		},
+		"Children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxActionHolder"
+			}
+		},
+		"Name": {
+			"type": "string"
 		},
 		"Id": {
 			"type": "integer"
@@ -625,7 +539,10 @@
 		}
 	},
 	"required": [
-		"CompanyType",
+		"Model",
+		"Make",
+		"ResourceType",
+		"ResourceSubtype",
 		"Name",
 		"Id"
 	]
