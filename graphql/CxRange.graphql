@@ -20,5 +20,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxRanges(filters: [FilterInput]): [CxRange]
+  cxRanges(filters: [FilterInput], objectType: String): [CxRange]
 }

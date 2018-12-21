@@ -63,5 +63,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxLookupValues(filters: [FilterInput]): [CxLookupValue]
+  cxLookupValues(filters: [FilterInput], objectType: String): [CxLookupValue]
 }

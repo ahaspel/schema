@@ -89,5 +89,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxHolidays(filters: [FilterInput]): [CxHoliday]
+  cxHolidays(filters: [FilterInput], objectType: String): [CxHoliday]
 }

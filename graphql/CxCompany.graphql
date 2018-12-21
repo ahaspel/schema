@@ -234,5 +234,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxCompanys(filters: [FilterInput]): [CxCompany]
+  cxCompanys(filters: [FilterInput], objectType: String): [CxCompany]
 }

@@ -99,5 +99,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxLicenses(filters: [FilterInput]): [CxLicense]
+  cxLicenses(filters: [FilterInput], objectType: String): [CxLicense]
 }

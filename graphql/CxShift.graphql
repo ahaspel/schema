@@ -105,5 +105,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxShifts(filters: [FilterInput]): [CxShift]
+  cxShifts(filters: [FilterInput], objectType: String): [CxShift]
 }

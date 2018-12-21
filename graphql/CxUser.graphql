@@ -128,5 +128,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxUsers(filters: [FilterInput]): [CxUser]
+  cxUsers(filters: [FilterInput], objectType: String): [CxUser]
 }

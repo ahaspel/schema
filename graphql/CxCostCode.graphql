@@ -97,5 +97,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxCostCodes(filters: [FilterInput]): [CxCostCode]
+  cxCostCodes(filters: [FilterInput], objectType: String): [CxCostCode]
 }

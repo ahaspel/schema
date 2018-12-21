@@ -18,5 +18,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxErrors(filters: [FilterInput]): [CxError]
+  cxErrors(filters: [FilterInput], objectType: String): [CxError]
 }

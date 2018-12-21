@@ -99,5 +99,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxAddresss(filters: [FilterInput]): [CxAddress]
+  cxAddresss(filters: [FilterInput], objectType: String): [CxAddress]
 }

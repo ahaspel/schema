@@ -102,5 +102,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxResourceTypes(filters: [FilterInput]): [CxResourceType]
+  cxResourceTypes(filters: [FilterInput], objectType: String): [CxResourceType]
 }

@@ -58,5 +58,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxUnitCosts(filters: [FilterInput]): [CxUnitCost]
+  cxUnitCosts(filters: [FilterInput], objectType: String): [CxUnitCost]
 }

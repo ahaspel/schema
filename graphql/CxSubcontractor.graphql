@@ -319,5 +319,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxSubcontractors(filters: [FilterInput]): [CxSubcontractor]
+  cxSubcontractors(filters: [FilterInput], objectType: String): [CxSubcontractor]
 }

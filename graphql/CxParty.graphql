@@ -200,5 +200,5 @@ extend type Mutation {
 }
 
 extend type Query {
-  cxPartys(filters: [FilterInput]): [CxParty]
+  cxPartys(filters: [FilterInput], objectType: String): [CxParty]
 }
