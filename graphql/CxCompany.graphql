@@ -5,17 +5,12 @@ type CxCompany {
   ObjectType: String
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
-  DefaultPhoneNumber: IxPhoneNumber
-  DefaultEmail: IxEmail
   Name: String
   Description: String
   Title: IxTypedItem__String__
   Address: IxAddress
   Children: [IxActionHolder]
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -29,17 +24,12 @@ input CxCompanyInput {
   ObjectType: String
   PhoneNumbers: [IxPhoneNumberDO]
   Emails: [IxEmailDO]
-  DefaultPhoneNumber: IxPhoneNumberDO
-  DefaultEmail: IxEmailDO
   Name: String!
   Description: String
   Title: IxTypedItem__String__DO
   Address: IxAddressDO
   Children: [IxActionHolderDO]
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
@@ -52,14 +42,11 @@ input FilterInput {
 }
 
 type IxActionHolder {
-  Start: String
-  End: String
-  Lifespan: IxRange
-  CurrentLifespan: IxRange
   History: [IxRange]
+  CurrentLifespan: IxRange
   Duration: String
-  Id: ID!
   ObjectType: String
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -76,8 +63,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -91,8 +78,8 @@ enum IxAddressObjectType {
 }
 
 type IxAttribute__String__ {
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -166,19 +153,14 @@ enum IxLookupValueObjectType {
 }
 
 type IxParty {
-  PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
-  DefaultPhoneNumber: IxPhoneNumber
-  DefaultEmail: IxEmail
+  PhoneNumbers: [IxPhoneNumber]
   Title: IxTypedItem__String__
-  Start: String
-  End: String
-  Lifespan: IxRange
   History: [IxRange]
   CurrentLifespan: IxRange
   Duration: String
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -219,8 +201,8 @@ input IxRangeInput {
 }
 
 type IxTypedItem__String__ {
-  Id: ID!
   ObjectType: String
+  Id: ID!
   Name: String
   Description: String
 }

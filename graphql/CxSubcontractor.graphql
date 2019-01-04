@@ -11,16 +11,11 @@ type CxSubcontractor {
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
-  DefaultPhoneNumber: IxPhoneNumber
-  DefaultEmail: IxEmail
   Name: String
   Description: String
   Title: IxTypedItem__String__
   Address: IxAddress
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -40,16 +35,11 @@ input CxSubcontractorInput {
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberDO]
   Emails: [IxEmailDO]
-  DefaultPhoneNumber: IxPhoneNumberDO
-  DefaultEmail: IxEmailDO
   Name: String!
   Description: String
   Title: IxTypedItem__String__DO
   Address: IxAddressDO
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
@@ -165,12 +155,7 @@ type IxMoney {
 type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
-  DefaultPhoneNumber: IxPhoneNumber
-  DefaultEmail: IxEmail
   Title: IxTypedItem__String__
-  Start: String
-  End: String
-  Lifespan: IxRange
   History: [IxRange]
   CurrentLifespan: IxRange
   Duration: String
@@ -240,9 +225,6 @@ type IxResourceType {
   ObjectType: IxResourceTypeObjectType
   Name: String
   Description: String
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String

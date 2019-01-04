@@ -5,34 +5,23 @@
 		"IxActionHolder": {
 			"type": "object",
 			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Lifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
 				"History": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxRange"
 					}
 				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Duration": {
+					"type": "string"
+				},
+				"ObjectType": {
 					"type": "string"
 				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
 				},
 				"Name": {
 					"type": "string"
@@ -73,14 +62,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -96,14 +85,14 @@
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -194,37 +183,20 @@
 		"IxParty": {
 			"type": "object",
 			"properties": {
-				"PhoneNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
 				"Emails": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxEmail"
 					}
 				},
-				"DefaultPhoneNumber": {
-					"$ref": "#/definitions/IxPhoneNumber"
-				},
-				"DefaultEmail": {
-					"$ref": "#/definitions/IxEmail"
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
 				},
 				"Title": {
 					"$ref": "#/definitions/IxTypedItem__String__"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Lifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"History": {
 					"type": "array",
@@ -238,14 +210,14 @@
 				"Duration": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Party"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -319,11 +291,11 @@
 		"IxTypedItem__String__": {
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -389,12 +361,6 @@
 				"$ref": "#/definitions/IxEmail"
 			}
 		},
-		"DefaultPhoneNumber": {
-			"$ref": "#/definitions/IxPhoneNumber"
-		},
-		"DefaultEmail": {
-			"$ref": "#/definitions/IxEmail"
-		},
 		"Name": {
 			"type": "string"
 		},
@@ -415,17 +381,6 @@
 		},
 		"Id": {
 			"type": "integer"
-		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"Lifespan": {
-			"$ref": "#/definitions/IxRange"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

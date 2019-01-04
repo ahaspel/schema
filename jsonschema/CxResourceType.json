@@ -130,17 +130,6 @@
 		"Name": {
 			"type": "string"
 		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"Lifespan": {
-			"$ref": "#/definitions/IxRange"
-		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},

@@ -7,9 +7,6 @@ type CxShift {
   Children: [IxActionHolder]
   Description: String
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Tags: [IxAttribute__String__]
@@ -24,9 +21,6 @@ input CxShiftInput {
   Children: [IxActionHolderDO]
   Description: String
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Tags: [IxAttribute__String__DO]
@@ -42,9 +36,6 @@ input FilterInput {
 }
 
 type IxActionHolder {
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String

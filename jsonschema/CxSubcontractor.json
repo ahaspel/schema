@@ -171,25 +171,8 @@
 						"$ref": "#/definitions/IxEmail"
 					}
 				},
-				"DefaultPhoneNumber": {
-					"$ref": "#/definitions/IxPhoneNumber"
-				},
-				"DefaultEmail": {
-					"$ref": "#/definitions/IxEmail"
-				},
 				"Title": {
 					"$ref": "#/definitions/IxTypedItem__String__"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Lifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"History": {
 					"type": "array",
@@ -342,17 +325,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Lifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -573,12 +545,6 @@
 				"$ref": "#/definitions/IxEmail"
 			}
 		},
-		"DefaultPhoneNumber": {
-			"$ref": "#/definitions/IxPhoneNumber"
-		},
-		"DefaultEmail": {
-			"$ref": "#/definitions/IxEmail"
-		},
 		"Name": {
 			"type": "string"
 		},
@@ -593,17 +559,6 @@
 		},
 		"Id": {
 			"type": "integer"
-		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"Lifespan": {
-			"$ref": "#/definitions/IxRange"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

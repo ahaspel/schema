@@ -7,9 +7,6 @@ type CxResourceType {
   ObjectType: CxResourceTypeObjectType
   Description: String
   Name: String
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -25,9 +22,6 @@ input CxResourceTypeInput {
   ObjectType: CxResourceTypeObjectType
   Description: String
   Name: String!
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String

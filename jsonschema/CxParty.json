@@ -5,17 +5,6 @@
 		"IxActionHolder": {
 			"type": "object",
 			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Lifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -297,12 +286,6 @@
 				"$ref": "#/definitions/IxEmail"
 			}
 		},
-		"DefaultPhoneNumber": {
-			"$ref": "#/definitions/IxPhoneNumber"
-		},
-		"DefaultEmail": {
-			"$ref": "#/definitions/IxEmail"
-		},
 		"Name": {
 			"type": "string"
 		},
@@ -329,17 +312,6 @@
 		},
 		"Id": {
 			"type": "integer"
-		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"Lifespan": {
-			"$ref": "#/definitions/IxRange"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

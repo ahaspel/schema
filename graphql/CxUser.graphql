@@ -12,9 +12,6 @@ type CxUser {
   Description: String
   Name: String
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -35,9 +32,6 @@ input CxUserInput {
   Description: String
   Name: String!
   Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
@@ -56,9 +50,6 @@ input FilterInput {
 }
 
 type IxActionHolder {
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String

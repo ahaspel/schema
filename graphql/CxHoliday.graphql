@@ -5,9 +5,6 @@ type CxHoliday {
   ObjectType: CxHolidayObjectType
   Children: [IxActionHolder]
   Description: String
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -21,9 +18,6 @@ input CxHolidayInput {
   ObjectType: CxHolidayObjectType
   Children: [IxActionHolderDO]
   Description: String
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
@@ -40,9 +34,6 @@ input FilterInput {
 }
 
 type IxActionHolder {
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
