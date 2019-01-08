@@ -1,122 +1,65 @@
 {
-	"Name": null,
+	"Name": "",
 	"Days": [
 		{
-			"Day": null,
-			"DayByName": null,
-			"Start": null,
-			"End": null
+			"Day": 0,
+			"DayByName": "",
+			"Start": "",
+			"End": ""
 		},
 		{
-			"Day": null,
-			"DayByName": null,
-			"Start": null,
-			"End": null
+			"Day": 0,
+			"DayByName": "",
+			"Start": "",
+			"End": ""
 		}
 	],
-	"Default": null,
-	"UseHolidays": null,
-	"ObjectType": null,
+	"Default": false,
+	"UseHolidays": false,
+	"ObjectType": "Shift",
 	"Children": [
 		{
-			"CurrentLifespan": {
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			"History": [
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				}
-			],
-			"Duration": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null,
-			"Tags": []
+			"Id": 0
 		},
 		{
-			"CurrentLifespan": {
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			"History": [
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				}
-			],
-			"Duration": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null,
-			"Tags": []
+			"Id": 0
+		},
+		{
+			"Id": 0
 		}
 	],
-	"Description": null,
+	"Description": "",
 	"Id": 0,
 	"CurrentLifespan": {
-		"Start": null,
-		"End": null,
-		"Duration": null
+		"Start": "",
+		"End": "",
+		"Duration": ""
 	},
 	"History": [
 		{
-			"Start": null,
-			"End": null,
-			"Duration": null
+			"Start": "",
+			"End": "",
+			"Duration": ""
 		},
 		{
-			"Start": null,
-			"End": null,
-			"Duration": null
-		},
-		{
-			"Start": null,
-			"End": null,
-			"Duration": null
-		},
-		{
-			"Start": null,
-			"End": null,
-			"Duration": null
-		},
-		{
-			"Start": null,
-			"End": null,
-			"Duration": null
+			"Start": "",
+			"End": "",
+			"Duration": ""
 		}
 	],
-	"Tags": []
+	"Tags": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		}
+	],
+	"__typename": "CxShift"
 }

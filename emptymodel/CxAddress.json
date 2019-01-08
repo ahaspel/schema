@@ -1,22 +1,19 @@
 {
 	"Id": 0,
-	"Name": null,
-	"Description": null,
-	"ObjectType": null,
-	"Street": null,
-	"StreetDetails": null,
-	"ZipCode": null,
-	"City": null,
+	"Name": "",
+	"Description": "",
+	"ObjectType": "",
+	"Street": "",
+	"StreetDetails": "",
+	"ZipCode": "",
+	"City": "",
 	"State": {
-		"Id": 0,
-		"ObjectType": null,
-		"Name": null,
-		"Description": null,
-		"Tags": []
+		"Id": 0
 	},
 	"Geocode": {
-		"Lat": null,
-		"Lng": null,
-		"Source": null
-	}
+		"Lat": 0,
+		"Lng": 0,
+		"Source": "GPSService"
+	},
+	"__typename": "CxAddress"
 }

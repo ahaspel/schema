@@ -1,324 +1,144 @@
 {
-	"Model": null,
-	"Make": null,
-	"SerialNumber": null,
-	"Year": null,
+	"Model": "",
+	"Make": "",
+	"SerialNumber": "",
+	"Year": "",
 	"Height": {
 		"Unit": {
-			"UnitType": null,
-			"Scalar": null,
-			"Integral": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
+			"Id": 0
 		},
-		"Quantity": null
+		"Quantity": 0
 	},
 	"Weight": {
 		"Unit": {
-			"UnitType": null,
-			"Scalar": null,
-			"Integral": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
+			"Id": 0
 		},
-		"Quantity": null
+		"Quantity": 0
 	},
 	"Width": {
 		"Unit": {
-			"UnitType": null,
-			"Scalar": null,
-			"Integral": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
+			"Id": 0
 		},
-		"Quantity": null
+		"Quantity": 0
 	},
 	"Capacity": {
 		"Unit": {
-			"UnitType": null,
-			"Scalar": null,
-			"Integral": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
+			"Id": 0
 		},
-		"Quantity": null
+		"Quantity": 0
 	},
-	"MoveNotes": null,
-	"AbbreviatedName": null,
-	"ObjectType": null,
-	"Description": null,
-	"Temporary": null,
+	"MoveNotes": "",
+	"AbbreviatedName": "",
+	"ObjectType": "",
+	"Description": "",
+	"Temporary": false,
 	"ResourceType": {
-		"Type": {
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
-		},
-		"Subtype": {
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
-		},
-		"ResourceSubtypes": [
-			{
-				"Id": 0,
-				"ObjectType": null,
-				"Name": null,
-				"Description": null,
-				"Tags": []
-			},
-			{
-				"Id": 0,
-				"ObjectType": null,
-				"Name": null,
-				"Description": null,
-				"Tags": []
-			},
-			{
-				"Id": 0,
-				"ObjectType": null,
-				"Name": null,
-				"Description": null,
-				"Tags": []
-			}
-		],
-		"MoveVehicle": null,
-		"Id": 0,
-		"ObjectType": null,
-		"Name": null,
-		"Description": null,
-		"Start": null,
-		"End": null,
-		"Lifespan": {
-			"Start": null,
-			"End": null,
-			"Duration": null
-		},
-		"CurrentLifespan": {
-			"Start": null,
-			"End": null,
-			"Duration": null
-		},
-		"History": [
-			{
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			{
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			{
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			{
-				"Start": null,
-				"End": null,
-				"Duration": null
-			}
-		],
-		"Duration": null,
-		"Tags": []
+		"Id": 0
 	},
 	"ResourceSubtype": {
-		"Id": 0,
-		"ObjectType": null,
-		"Name": null,
-		"Description": null,
-		"Tags": []
+		"Id": 0
 	},
 	"UnitCost": {
 		"Unit": {
-			"UnitType": null,
-			"Scalar": null,
-			"Integral": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
+			"Id": 0
 		},
 		"Cost": {
 			"Unit": {
-				"UnitType": null,
-				"Scalar": null,
-				"Integral": null,
-				"Id": 0,
-				"ObjectType": null,
-				"Name": null,
-				"Description": null
+				"Id": 0
 			},
-			"Quantity": null
+			"Quantity": 0
 		},
-		"Notes": null
+		"Notes": ""
 	},
-	"InCrew": null,
-	"Divisible": null,
-	"HasDescription": null,
-	"ForeColor": null,
-	"BackColor": null,
+	"InCrew": false,
+	"Divisible": false,
+	"HasDescription": false,
+	"ForeColor": "",
+	"BackColor": "",
 	"Address": {
-		"Street": null,
-		"StreetDetails": null,
-		"State": {
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null,
-			"Tags": []
-		},
-		"City": null,
-		"ZipCode": null,
-		"Geocode": {
-			"Lat": null,
-			"Lng": null,
-			"Source": null
-		},
-		"Id": 0,
-		"ObjectType": null,
-		"Name": null,
-		"Description": null
+		"Id": 0
 	},
 	"Location": {
-		"Street": null,
-		"StreetDetails": null,
-		"State": {
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null,
-			"Tags": []
-		},
-		"City": null,
-		"ZipCode": null,
-		"Geocode": {
-			"Lat": null,
-			"Lng": null,
-			"Source": null
-		},
-		"Id": 0,
-		"ObjectType": null,
-		"Name": null,
-		"Description": null
+		"Id": 0
 	},
-	"AllowMove": null,
-	"Returned": null,
-	"AccountCode": null,
+	"AllowMove": false,
+	"Returned": false,
+	"AccountCode": "",
 	"Children": [
 		{
-			"Start": null,
-			"End": null,
-			"Lifespan": {
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			"CurrentLifespan": {
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			"History": [
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				}
-			],
-			"Duration": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null,
-			"Tags": []
+			"Id": 0
 		},
 		{
-			"Start": null,
-			"End": null,
-			"Lifespan": {
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			"CurrentLifespan": {
-				"Start": null,
-				"End": null,
-				"Duration": null
-			},
-			"History": [
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				},
-				{
-					"Start": null,
-					"End": null,
-					"Duration": null
-				}
-			],
-			"Duration": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null,
-			"Tags": []
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
 		}
 	],
-	"Name": null,
+	"Name": "",
 	"Id": 0,
-	"Start": null,
-	"End": null,
+	"Start": "",
+	"End": "",
 	"Lifespan": {
-		"Start": null,
-		"End": null,
-		"Duration": null
+		"Start": "",
+		"End": "",
+		"Duration": ""
 	},
 	"CurrentLifespan": {
-		"Start": null,
-		"End": null,
-		"Duration": null
+		"Start": "",
+		"End": "",
+		"Duration": ""
 	},
 	"History": [
 		{
-			"Start": null,
-			"End": null,
-			"Duration": null
+			"Start": "",
+			"End": "",
+			"Duration": ""
 		},
 		{
-			"Start": null,
-			"End": null,
-			"Duration": null
+			"Start": "",
+			"End": "",
+			"Duration": ""
 		},
 		{
-			"Start": null,
-			"End": null,
-			"Duration": null
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		{
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		{
+			"Start": "",
+			"End": "",
+			"Duration": ""
 		}
 	],
-	"Duration": null,
-	"Tags": []
+	"Duration": "",
+	"Tags": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		}
+	],
+	"__typename": "CxEquipment"
 }

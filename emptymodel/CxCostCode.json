@@ -1,32 +1,43 @@
 {
 	"UnitCost": {
 		"Unit": {
-			"UnitType": null,
-			"Scalar": null,
-			"Integral": null,
-			"Id": 0,
-			"ObjectType": null,
-			"Name": null,
-			"Description": null
+			"Id": 0
 		},
 		"Cost": {
 			"Unit": {
-				"UnitType": null,
-				"Scalar": null,
-				"Integral": null,
-				"Id": 0,
-				"ObjectType": null,
-				"Name": null,
-				"Description": null
+				"Id": 0
 			},
-			"Quantity": null
+			"Quantity": 0
 		},
-		"Notes": null
+		"Notes": ""
 	},
-	"Global": null,
-	"ObjectType": null,
-	"Tags": [],
+	"Global": false,
+	"ObjectType": "CostCode",
+	"Tags": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		}
+	],
 	"Id": 0,
-	"Name": null,
-	"Description": null
+	"Name": "",
+	"Description": "",
+	"__typename": "CxCostCode"
 }
