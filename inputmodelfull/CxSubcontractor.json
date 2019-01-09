@@ -1,7 +1,19 @@
 {
-	"Preferred": true,
-	"IsMover": true,
+	"Preferred": false,
+	"IsMover": false,
 	"SupplyTypes": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -15,15 +27,15 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": true,
-	"ObjectType": "fuga",
+	"SuppliesAll": false,
+	"ObjectType": "quos",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "non",
+	"AccountCode": "aut",
 	"PhoneNumbers": [
 		{
 			"Id": 0
@@ -55,8 +67,8 @@
 			"Id": 0
 		}
 	],
-	"Name": "fuga",
-	"Description": "architecto",
+	"Name": "minima",
+	"Description": "rerum",
 	"Title": {
 		"Id": 0
 	},
@@ -65,43 +77,48 @@
 	},
 	"Id": 0,
 	"CurrentLifespan": {
-		"Start": "delectus",
-		"End": "placeat",
-		"Duration": "est"
+		"Start": "odit",
+		"End": "distinctio",
+		"Duration": "similique"
 	},
 	"History": [
 		{
-			"Start": "nihil",
-			"End": "molestiae",
-			"Duration": "repellat"
+			"Start": "impedit",
+			"End": "et",
+			"Duration": "quae"
 		},
 		{
-			"Start": "quisquam",
-			"End": "alias",
-			"Duration": "eos"
+			"Start": "voluptatibus",
+			"End": "dolor",
+			"Duration": "ad"
+		},
+		{
+			"Start": "et",
+			"End": "unde",
+			"Duration": "aut"
 		},
 		{
 			"Start": "velit",
-			"End": "nostrum",
-			"Duration": "ipsa"
+			"End": "eius",
+			"Duration": "aut"
 		},
 		{
-			"Start": "ut",
-			"End": "autem",
-			"Duration": "fugiat"
+			"Start": "voluptas",
+			"End": "sit",
+			"Duration": "beatae"
 		},
 		{
-			"Start": "unde",
-			"End": "ad",
-			"Duration": "ipsum"
+			"Start": "dolorum",
+			"End": "libero",
+			"Duration": "dolor"
 		},
 		{
-			"Start": "neque",
-			"End": "omnis",
-			"Duration": "quidem"
+			"Start": "incidunt",
+			"End": "aliquam",
+			"Duration": "earum"
 		}
 	],
-	"Duration": "dolorum",
+	"Duration": "voluptas",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }
