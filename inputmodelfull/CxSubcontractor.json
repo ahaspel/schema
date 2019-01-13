@@ -1,7 +1,10 @@
 {
-	"Preferred": false,
-	"IsMover": false,
+	"Preferred": true,
+	"IsMover": true,
 	"SupplyTypes": [
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -28,24 +31,15 @@
 		"Id": 29
 	},
 	"SuppliesAll": false,
-	"ObjectType": "quos",
+	"ObjectType": "amet",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "aut",
+	"AccountCode": "sit",
 	"PhoneNumbers": [
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
 		{
 			"Id": 0
 		},
@@ -65,10 +59,13 @@
 		},
 		{
 			"Id": 0
+		},
+		{
+			"Id": 0
 		}
 	],
-	"Name": "minima",
-	"Description": "rerum",
+	"Name": "nulla",
+	"Description": "placeat",
 	"Title": {
 		"Id": 0
 	},
@@ -77,48 +74,43 @@
 	},
 	"Id": 0,
 	"CurrentLifespan": {
-		"Start": "odit",
-		"End": "distinctio",
-		"Duration": "similique"
+		"Start": "et",
+		"End": "incidunt",
+		"Duration": "velit"
 	},
 	"History": [
 		{
-			"Start": "impedit",
-			"End": "et",
-			"Duration": "quae"
+			"Start": "velit",
+			"End": "similique",
+			"Duration": "sed"
 		},
 		{
-			"Start": "voluptatibus",
-			"End": "dolor",
-			"Duration": "ad"
+			"Start": "officia",
+			"End": "distinctio",
+			"Duration": "quia"
+		},
+		{
+			"Start": "atque",
+			"End": "repellendus",
+			"Duration": "magni"
+		},
+		{
+			"Start": "eos",
+			"End": "explicabo",
+			"Duration": "reiciendis"
 		},
 		{
 			"Start": "et",
-			"End": "unde",
-			"Duration": "aut"
+			"End": "quae",
+			"Duration": "sed"
 		},
 		{
-			"Start": "velit",
-			"End": "eius",
-			"Duration": "aut"
-		},
-		{
-			"Start": "voluptas",
-			"End": "sit",
-			"Duration": "beatae"
-		},
-		{
-			"Start": "dolorum",
-			"End": "libero",
-			"Duration": "dolor"
-		},
-		{
-			"Start": "incidunt",
-			"End": "aliquam",
-			"Duration": "earum"
+			"Start": "delectus",
+			"End": "et",
+			"Duration": "autem"
 		}
 	],
-	"Duration": "voluptas",
+	"Duration": "eos",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }
