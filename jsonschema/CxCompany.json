@@ -5,23 +5,23 @@
 		"IxActionHolder": {
 			"type": "object",
 			"properties": {
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"History": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxRange"
 					}
 				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
 				"Duration": {
-					"type": "string"
-				},
-				"ObjectType": {
 					"type": "string"
 				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
 				},
 				"Name": {
 					"type": "string"
@@ -62,14 +62,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -85,14 +85,14 @@
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -210,14 +210,14 @@
 				"Duration": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Party"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -291,11 +291,11 @@
 		"IxTypedItem__String__": {
 			"type": "object",
 			"properties": {
-				"ObjectType": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
 				},
 				"Name": {
 					"type": "string"

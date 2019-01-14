@@ -159,16 +159,16 @@
 		"IxParty": {
 			"type": "object",
 			"properties": {
-				"PhoneNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
 				"Emails": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
 				"Title": {

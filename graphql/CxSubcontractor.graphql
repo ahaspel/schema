@@ -153,8 +153,8 @@ type IxMoney {
 }
 
 type IxParty {
-  PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
   Title: IxTypedItem__String__
   History: [IxRange]
   CurrentLifespan: IxRange

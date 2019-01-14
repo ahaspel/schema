@@ -42,11 +42,11 @@ input FilterInput {
 }
 
 type IxActionHolder {
-  History: [IxRange]
   CurrentLifespan: IxRange
+  History: [IxRange]
   Duration: String
-  ObjectType: String
   Id: ID!
+  ObjectType: String
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -63,8 +63,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
   Name: String
   Description: String
 }
@@ -78,8 +78,8 @@ enum IxAddressObjectType {
 }
 
 type IxAttribute__String__ {
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -159,8 +159,8 @@ type IxParty {
   History: [IxRange]
   CurrentLifespan: IxRange
   Duration: String
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -201,8 +201,8 @@ input IxRangeInput {
 }
 
 type IxTypedItem__String__ {
-  ObjectType: String
   Id: ID!
+  ObjectType: String
   Name: String
   Description: String
 }
