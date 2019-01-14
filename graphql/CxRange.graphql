@@ -16,9 +16,9 @@ input FilterInput {
 }
 
 extend type Mutation {
-  cxRanges_onSave(data: [CxRangeInput], objectType: String, operation: String = "edit"): [CxRange]
+  cxRanges_onSave(data: [CxRangeInput], objectType: String = "CxRange", operation: String = "edit"): [CxRange]
 }
 
 extend type Query {
-  cxRanges(filters: [FilterInput], objectType: String): [CxRange]
+  cxRanges(filters: [FilterInput], objectType: String = "CxRange"): [CxRange]
 }

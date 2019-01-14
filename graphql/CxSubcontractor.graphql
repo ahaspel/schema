@@ -297,9 +297,9 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String, operation: String = "edit"): [CxSubcontractor]
+  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String = "CxSubcontractor", operation: String = "edit"): [CxSubcontractor]
 }
 
 extend type Query {
-  cxSubcontractors(filters: [FilterInput], objectType: String): [CxSubcontractor]
+  cxSubcontractors(filters: [FilterInput], objectType: String = "CxSubcontractor"): [CxSubcontractor]
 }

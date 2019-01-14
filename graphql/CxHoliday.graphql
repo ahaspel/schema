@@ -76,9 +76,9 @@ input IxRangeInput {
 }
 
 extend type Mutation {
-  cxHolidays_onSave(data: [CxHolidayInput], objectType: String, operation: String = "edit"): [CxHoliday]
+  cxHolidays_onSave(data: [CxHolidayInput], objectType: String = "CxHoliday", operation: String = "edit"): [CxHoliday]
 }
 
 extend type Query {
-  cxHolidays(filters: [FilterInput], objectType: String): [CxHoliday]
+  cxHolidays(filters: [FilterInput], objectType: String = "CxHoliday"): [CxHoliday]
 }

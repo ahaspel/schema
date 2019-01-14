@@ -92,9 +92,9 @@ input IxTypedItem__String__DO {
 }
 
 extend type Mutation {
-  cxResourceTypes_onSave(data: [CxResourceTypeInput], objectType: String, operation: String = "edit"): [CxResourceType]
+  cxResourceTypes_onSave(data: [CxResourceTypeInput], objectType: String = "CxResourceType", operation: String = "edit"): [CxResourceType]
 }
 
 extend type Query {
-  cxResourceTypes(filters: [FilterInput], objectType: String): [CxResourceType]
+  cxResourceTypes(filters: [FilterInput], objectType: String = "CxResourceType"): [CxResourceType]
 }

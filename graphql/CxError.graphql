@@ -14,9 +14,9 @@ input FilterInput {
 }
 
 extend type Mutation {
-  cxErrors_onSave(data: [CxErrorInput], objectType: String, operation: String = "edit"): [CxError]
+  cxErrors_onSave(data: [CxErrorInput], objectType: String = "CxError", operation: String = "edit"): [CxError]
 }
 
 extend type Query {
-  cxErrors(filters: [FilterInput], objectType: String): [CxError]
+  cxErrors(filters: [FilterInput], objectType: String = "CxError"): [CxError]
 }
