@@ -6,7 +6,7 @@ type CxUnitCost {
 
 input CxUnitCostInput {
   Cost: IxMoneyInput!
-  Unit: IxUnitDO!
+  Unit: IxUnitInput!
   Notes: String
 }
 
@@ -21,7 +21,7 @@ type IxMoney {
 }
 
 input IxMoneyInput {
-  Unit: IxUnitDO!
+  Unit: IxUnitInput!
   Quantity: Float!
 }
 
@@ -35,8 +35,14 @@ type IxUnit {
   Description: String
 }
 
-input IxUnitDO {
+input IxUnitInput {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
   Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
 }
 
 enum IxUnitObjectType {

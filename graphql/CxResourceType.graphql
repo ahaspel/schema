@@ -17,13 +17,13 @@ input CxResourceTypeInput {
   Id: ID!
   Type: IxTypedItem__String__DO
   Subtype: IxTypedItem__String__DO
-  ResourceSubtypes: [IxResourceSubtypeDO]
+  ResourceSubtypes: [IxResourceSubtypeInput]
   MoveVehicle: Boolean
   ObjectType: CxResourceTypeObjectType
   Description: String
   Name: String!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
+  CurrentLifespan: IxRangeDO
+  History: [IxRangeDO]
   Duration: String
   Tags: [IxAttribute__String__DO]
 }
@@ -58,10 +58,8 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
+input IxRangeDO {
+
 }
 
 type IxResourceSubtype {
@@ -72,8 +70,12 @@ type IxResourceSubtype {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceSubtypeDO {
+input IxResourceSubtypeInput {
   Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
+  Name: String!
+  Description: String
+  Tags: [IxAttribute__String__DO]
 }
 
 enum IxResourceSubtypeObjectType {

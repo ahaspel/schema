@@ -6,41 +6,38 @@
 	"Subtype": {
 		"Id": 0
 	},
-	"ResourceSubtypes": {
-		"Id": 29
-	},
-	"MoveVehicle": false,
-	"ObjectType": "ResourceType",
-	"Description": "omnis",
-	"Name": "beatae",
-	"CurrentLifespan": {
-		"Start": "voluptatibus",
-		"End": "et",
-		"Duration": "odit"
-	},
-	"History": [
+	"ResourceSubtypes": [
 		{
-			"Start": "nemo",
-			"End": "possimus",
-			"Duration": "rerum"
+			"Id": 0,
+			"ObjectType": "ResourceSubtype",
+			"Name": "et",
+			"Description": "omnis",
+			"Tags": []
 		},
 		{
-			"Start": "praesentium",
-			"End": "ut",
-			"Duration": "fuga"
-		},
-		{
-			"Start": "delectus",
-			"End": "architecto",
-			"Duration": "veniam"
-		},
-		{
-			"Start": "fugiat",
-			"End": "non",
-			"Duration": "minima"
+			"Id": 0,
+			"ObjectType": "ResourceSubtype",
+			"Name": "dolores",
+			"Description": "magni",
+			"Tags": []
 		}
 	],
-	"Duration": "animi",
+	"MoveVehicle": false,
+	"ObjectType": "ResourceType",
+	"Description": "aut",
+	"Name": "iste",
+	"CurrentLifespan": {},
+	"History": [
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{}
+	],
+	"Duration": "atque",
 	"Tags": [],
 	"__typename": "CxResourceType"
 }

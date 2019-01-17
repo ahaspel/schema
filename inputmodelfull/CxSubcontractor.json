@@ -1,6 +1,6 @@
 {
 	"Preferred": true,
-	"IsMover": true,
+	"IsMover": false,
 	"SupplyTypes": [
 		{
 			"Id": 0
@@ -41,43 +41,81 @@
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "cupiditate",
+	"AccountCode": "odit",
 	"PhoneNumbers": [
 		{
-			"Id": 0
+			"Id": 0,
+			"PhoneNumber": "dolore",
+			"Valid": true,
+			"New": true,
+			"Name": "quis",
+			"Description": "voluptates"
 		},
 		{
-			"Id": 0
+			"Id": 0,
+			"PhoneNumber": "cupiditate",
+			"Valid": false,
+			"New": false,
+			"Name": "adipisci",
+			"Description": "saepe"
 		},
 		{
-			"Id": 0
+			"Id": 0,
+			"PhoneNumber": "est",
+			"Valid": false,
+			"New": false,
+			"Name": "praesentium",
+			"Description": "est"
 		},
 		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
+			"Id": 0,
+			"PhoneNumber": "nihil",
+			"Valid": true,
+			"New": false,
+			"Name": "nam",
+			"Description": "exercitationem"
 		}
 	],
 	"Emails": [
 		{
-			"Id": 0
+			"Id": 0,
+			"Email": "dolorum",
+			"Name": "ut",
+			"Description": "molestiae"
 		},
 		{
-			"Id": 0
+			"Id": 0,
+			"Email": "maiores",
+			"Name": "excepturi",
+			"Description": "quo"
 		},
 		{
-			"Id": 0
+			"Id": 0,
+			"Email": "facere",
+			"Name": "ut",
+			"Description": "suscipit"
+		},
+		{
+			"Id": 0,
+			"Email": "molestias",
+			"Name": "velit",
+			"Description": "provident"
+		},
+		{
+			"Id": 0,
+			"Email": "id",
+			"Name": "maiores",
+			"Description": "voluptate"
+		},
+		{
+			"Id": 0,
+			"Email": "sint",
+			"Name": "nulla",
+			"Description": "perferendis"
 		}
 	],
-	"Name": "omnis",
-	"Description": "vel",
+	"Name": "nihil",
+	"Description": "eum",
 	"Address": {
 		"Id": 1
 	},

@@ -16,8 +16,8 @@ input CxHolidayInput {
   ObjectType: CxHolidayObjectType
   Description: String
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
+  CurrentLifespan: IxRangeDO
+  History: [IxRangeDO]
   Duration: String
   Tags: [IxAttribute__String__DO]
 }
@@ -52,10 +52,8 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
+input IxRangeDO {
+
 }
 
 extend type Mutation {

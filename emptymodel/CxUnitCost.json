@@ -1,12 +1,24 @@
 {
 	"Cost": {
 		"Unit": {
-			"Id": 0
+			"UnitType": "Money",
+			"Scalar": 0,
+			"Integral": false,
+			"Id": 0,
+			"ObjectType": "Unit",
+			"Name": "",
+			"Description": ""
 		},
 		"Quantity": 0
 	},
 	"Unit": {
-		"Id": 0
+		"UnitType": "Weight",
+		"Scalar": 0,
+		"Integral": false,
+		"Id": 0,
+		"ObjectType": "Unit",
+		"Name": "",
+		"Description": ""
 	},
 	"Notes": "",
 	"__typename": "CxUnitCost"

@@ -11,7 +11,7 @@ type CxShift {
 
 input CxShiftInput {
   Name: String!
-  Days: [IxShiftDayInput]!
+  Days: [IxShiftDayDO]!
   Default: Boolean
   UseHolidays: Boolean
   ObjectType: CxShiftObjectType
@@ -52,12 +52,8 @@ type IxShiftDay {
   Included: Boolean
 }
 
-input IxShiftDayInput {
-  Day: Int!
-  DayByName: String
-  Start: String!
-  End: String!
-  Included: Boolean
+input IxShiftDayDO {
+
 }
 
 extend type Mutation {

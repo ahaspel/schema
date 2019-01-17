@@ -17,8 +17,8 @@ input CxCompanyInput {
   Contacts: [IxPartyDO]
   AccountCode: String
   ObjectType: CxCompanyObjectType
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
   Name: String!
   Description: String
   Address: IxAddressDO
@@ -78,8 +78,11 @@ type IxEmail {
   Description: String
 }
 
-input IxEmailDO {
+input IxEmailInput {
   Id: ID!
+  Email: String!
+  Name: String!
+  Description: String
 }
 
 type IxGeocode {
@@ -162,8 +165,13 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberDO {
+input IxPhoneNumberInput {
   Id: ID!
+  PhoneNumber: String!
+  Valid: Boolean
+  New: Boolean
+  Name: String!
+  Description: String
 }
 
 type IxRange {
