@@ -54,9 +54,9 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxUnitCosts_onSave(data: [CxUnitCostInput], objectType: String = "CxUnitCost", operation: String = "edit"): [CxUnitCost]
+  cxUnitCosts_onSave(data: [CxUnitCostInput], objectType: String, operation: String = "edit"): [CxUnitCost]
 }
 
 extend type Query {
-  cxUnitCosts(filters: [FilterInput], objectType: String = "CxUnitCost"): [CxUnitCost]
+  cxUnitCosts(filters: [FilterInput], objectType: String): [CxUnitCost]
 }

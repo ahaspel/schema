@@ -95,9 +95,9 @@ input IxRangeInput {
 }
 
 extend type Mutation {
-  cxLicenses_onSave(data: [CxLicenseInput], objectType: String = "CxLicense", operation: String = "edit"): [CxLicense]
+  cxLicenses_onSave(data: [CxLicenseInput], objectType: String, operation: String = "edit"): [CxLicense]
 }
 
 extend type Query {
-  cxLicenses(filters: [FilterInput], objectType: String = "CxLicense"): [CxLicense]
+  cxLicenses(filters: [FilterInput], objectType: String): [CxLicense]
 }

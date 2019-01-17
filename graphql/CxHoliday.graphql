@@ -1,10 +1,9 @@
 type CxHoliday {
   Holiday: String
   Name: String
-  Id: ID!
   ObjectType: CxHolidayObjectType
-  Children: [IxActionHolder]
   Description: String
+  Id: ID!
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -14,10 +13,9 @@ type CxHoliday {
 input CxHolidayInput {
   Holiday: String!
   Name: String!
-  Id: ID!
   ObjectType: CxHolidayObjectType
-  Children: [IxActionHolderDO]
   Description: String
+  Id: ID!
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
@@ -31,21 +29,6 @@ enum CxHolidayObjectType {
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxActionHolder {
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxActionHolderDO {
-  Id: ID!
 }
 
 type IxAttribute__String__ {
@@ -76,9 +59,9 @@ input IxRangeInput {
 }
 
 extend type Mutation {
-  cxHolidays_onSave(data: [CxHolidayInput], objectType: String = "CxHoliday", operation: String = "edit"): [CxHoliday]
+  cxHolidays_onSave(data: [CxHolidayInput], objectType: String = "Holiday", operation: String = "edit"): [CxHoliday]
 }
 
 extend type Query {
-  cxHolidays(filters: [FilterInput], objectType: String = "CxHoliday"): [CxHoliday]
+  cxHolidays(filters: [FilterInput], objectType: String = "Holiday"): [CxHoliday]
 }

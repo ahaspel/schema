@@ -301,9 +301,9 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String = "CxEquipment", operation: String = "edit"): [CxEquipment]
+  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String, operation: String = "edit"): [CxEquipment]
 }
 
 extend type Query {
-  cxEquipments(filters: [FilterInput], objectType: String = "CxEquipment"): [CxEquipment]
+  cxEquipments(filters: [FilterInput], objectType: String): [CxEquipment]
 }

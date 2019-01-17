@@ -6,11 +6,7 @@ type CxParty {
   Title: IxTypedItem__String__
   Address: IxAddress
   ObjectType: CxPartyObjectType
-  Children: [IxActionHolder]
   Id: ID!
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
 }
 
@@ -22,11 +18,7 @@ input CxPartyInput {
   Title: IxTypedItem__String__DO
   Address: IxAddressDO
   ObjectType: CxPartyObjectType
-  Children: [IxActionHolderDO]
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
   Tags: [IxAttribute__String__DO]
 }
 
@@ -37,21 +29,6 @@ enum CxPartyObjectType {
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxActionHolder {
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxActionHolderDO {
-  Id: ID!
 }
 
 type IxAddress {
@@ -93,7 +70,6 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  New: Boolean
   Name: String
   Description: String
 }
@@ -159,18 +135,6 @@ input IxPhoneNumberDO {
   Id: ID!
 }
 
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
 type IxTypedItem__String__ {
   Id: ID!
   ObjectType: String
@@ -183,9 +147,9 @@ input IxTypedItem__String__DO {
 }
 
 extend type Mutation {
-  cxPartys_onSave(data: [CxPartyInput], objectType: String = "CxParty", operation: String = "edit"): [CxParty]
+  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit"): [CxParty]
 }
 
 extend type Query {
-  cxPartys(filters: [FilterInput], objectType: String = "CxParty"): [CxParty]
+  cxPartys(filters: [FilterInput], objectType: String = "Party"): [CxParty]
 }

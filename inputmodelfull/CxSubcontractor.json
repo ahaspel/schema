@@ -1,6 +1,6 @@
 {
-	"Preferred": false,
-	"IsMover": false,
+	"Preferred": true,
+	"IsMover": true,
 	"SupplyTypes": [
 		{
 			"Id": 0
@@ -33,16 +33,31 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": false,
-	"ObjectType": "distinctio",
+	"SuppliesAll": true,
+	"ObjectType": "Subcontractor",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "numquam",
+	"AccountCode": "cupiditate",
 	"PhoneNumbers": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -59,44 +74,14 @@
 		},
 		{
 			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
 		}
 	],
-	"Name": "quia",
-	"Description": "alias",
-	"Title": {
-		"Id": 0
-	},
+	"Name": "omnis",
+	"Description": "vel",
 	"Address": {
 		"Id": 1
 	},
 	"Id": 0,
-	"CurrentLifespan": {
-		"Start": "quis",
-		"End": "sed",
-		"Duration": "qui"
-	},
-	"History": [
-		{
-			"Start": "repudiandae",
-			"End": "voluptatibus",
-			"Duration": "iusto"
-		},
-		{
-			"Start": "ut",
-			"End": "deserunt",
-			"Duration": "iusto"
-		}
-	],
-	"Duration": "quod",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }

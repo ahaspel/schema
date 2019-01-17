@@ -59,9 +59,9 @@ enum IxAttributeStringObjectType {
 }
 
 extend type Mutation {
-  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String = "CxLookupValue", operation: String = "edit"): [CxLookupValue]
+  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String = "JobPriority", operation: String = "edit"): [CxLookupValue]
 }
 
 extend type Query {
-  cxLookupValues(filters: [FilterInput], objectType: String = "CxLookupValue"): [CxLookupValue]
+  cxLookupValues(filters: [FilterInput], objectType: String = "JobPriority"): [CxLookupValue]
 }

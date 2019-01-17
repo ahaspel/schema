@@ -2,18 +2,13 @@ type CxCompany {
   CompanyType: IxLookupValue
   Contacts: [IxParty]
   AccountCode: String
-  ObjectType: String
+  ObjectType: CxCompanyObjectType
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   Name: String
   Description: String
-  Title: IxTypedItem__String__
   Address: IxAddress
-  Children: [IxActionHolder]
   Id: ID!
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
 }
 
@@ -21,39 +16,23 @@ input CxCompanyInput {
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
-  ObjectType: String
+  ObjectType: CxCompanyObjectType
   PhoneNumbers: [IxPhoneNumberDO]
   Emails: [IxEmailDO]
   Name: String!
   Description: String
-  Title: IxTypedItem__String__DO
   Address: IxAddressDO
-  Children: [IxActionHolderDO]
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
   Tags: [IxAttribute__String__DO]
+}
+
+enum CxCompanyObjectType {
+  Company
 }
 
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxActionHolder {
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxActionHolderDO {
-  Id: ID!
 }
 
 type IxAddress {
@@ -95,7 +74,6 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  New: Boolean
   Name: String
   Description: String
 }
@@ -194,12 +172,6 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
 type IxTypedItem__String__ {
   Id: ID!
   ObjectType: String
@@ -207,14 +179,10 @@ type IxTypedItem__String__ {
   Description: String
 }
 
-input IxTypedItem__String__DO {
-  Id: ID!
-}
-
 extend type Mutation {
-  cxCompanys_onSave(data: [CxCompanyInput], objectType: String = "CxCompany", operation: String = "edit"): [CxCompany]
+  cxCompanys_onSave(data: [CxCompanyInput], objectType: String = "Company", operation: String = "edit"): [CxCompany]
 }
 
 extend type Query {
-  cxCompanys(filters: [FilterInput], objectType: String = "CxCompany"): [CxCompany]
+  cxCompanys(filters: [FilterInput], objectType: String = "Company"): [CxCompany]
 }
