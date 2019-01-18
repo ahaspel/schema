@@ -2,6 +2,45 @@
 	"id": "https://congistics.com/schema/CxShift",
 	"title": "com.congistics.cbrd.time.CxShift",
 	"definitions": {
+		"IxActionHolder": {
+			"type": "object",
+			"properties": {
+				"History": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxRange"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Duration": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -24,6 +63,26 @@
 			"required": [
 				"Id",
 				"Name"
+			]
+		},
+		"IxRange": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
 			]
 		},
 		"IxShiftDay": {
@@ -61,8 +120,7 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxShiftDay"
-			},
-			"minItems": 1
+			}
 		},
 		"Default": {
 			"type": "boolean"
@@ -76,11 +134,26 @@
 				"Shift"
 			]
 		},
+		"Children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxActionHolder"
+			}
+		},
 		"Description": {
 			"type": "string"
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxRange"
+			}
 		},
 		"Tags": {
 			"type": "array",

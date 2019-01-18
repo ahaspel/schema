@@ -6,19 +6,27 @@ type CxParty {
   Title: IxTypedItem__String__
   Address: IxAddress
   ObjectType: CxPartyObjectType
+  Children: [IxActionHolder]
   Id: ID!
+  CurrentLifespan: IxRange
+  History: [IxRange]
+  Duration: String
   Tags: [IxAttribute__String__]
 }
 
 input CxPartyInput {
-  PhoneNumbers: [IxPhoneNumberInput]
-  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberDO]
+  Emails: [IxEmailDO]
   Name: String!
   Description: String
   Title: IxTypedItem__String__DO
   Address: IxAddressDO
   ObjectType: CxPartyObjectType
+  Children: [IxActionHolderDO]
   Id: ID!
+  CurrentLifespan: IxRangeDO
+  History: [IxRangeDO]
+  Duration: String
   Tags: [IxAttribute__String__DO]
 }
 
@@ -29,6 +37,21 @@ enum CxPartyObjectType {
 input FilterInput {
   name: String!
   values: [String]
+}
+
+type IxActionHolder {
+  History: [IxRange]
+  CurrentLifespan: IxRange
+  Duration: String
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxActionHolderDO {
+  Id: ID!
 }
 
 type IxAddress {
@@ -70,15 +93,13 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
+  New: Boolean
   Name: String
   Description: String
 }
 
-input IxEmailInput {
+input IxEmailDO {
   Id: ID!
-  Email: String!
-  Name: String!
-  Description: String
 }
 
 type IxGeocode {
@@ -134,13 +155,18 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberInput {
+input IxPhoneNumberDO {
   Id: ID!
-  PhoneNumber: String!
-  Valid: Boolean
-  New: Boolean
-  Name: String!
-  Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeDO {
+
 }
 
 type IxTypedItem__String__ {

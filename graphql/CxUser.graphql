@@ -7,7 +7,8 @@ type CxUser {
   Administrator: Boolean
   ReadOnly: Boolean
   WebLevel: CxUserWebLevel
-  ObjectType: CxUserObjectType
+  ObjectType: String
+  Children: [IxActionHolder]
   Description: String
   Name: String
   Id: ID!
@@ -26,7 +27,8 @@ input CxUserInput {
   Administrator: Boolean
   ReadOnly: Boolean
   WebLevel: CxUserWebLevel
-  ObjectType: CxUserObjectType
+  ObjectType: String
+  Children: [IxActionHolderDO]
   Description: String
   Name: String!
   Id: ID!
@@ -34,10 +36,6 @@ input CxUserInput {
   History: [IxRangeDO]
   Duration: String
   Tags: [IxAttribute__String__DO]
-}
-
-enum CxUserObjectType {
-  User
 }
 
 enum CxUserWebLevel {
@@ -49,6 +47,21 @@ enum CxUserWebLevel {
 input FilterInput {
   name: String!
   values: [String]
+}
+
+type IxActionHolder {
+  History: [IxRange]
+  CurrentLifespan: IxRange
+  Duration: String
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxActionHolderDO {
+  Id: ID!
 }
 
 type IxAttribute__String__ {
@@ -100,9 +113,9 @@ input IxTypedItem__String__DO {
 }
 
 extend type Mutation {
-  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit"): [CxUser]
+  cxUsers_onSave(data: [CxUserInput], objectType: String, operation: String = "edit"): [CxUser]
 }
 
 extend type Query {
-  cxUsers(filters: [FilterInput], objectType: String = "User"): [CxUser]
+  cxUsers(filters: [FilterInput], objectType: String): [CxUser]
 }

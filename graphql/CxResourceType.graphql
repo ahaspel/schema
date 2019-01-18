@@ -17,7 +17,7 @@ input CxResourceTypeInput {
   Id: ID!
   Type: IxTypedItem__String__DO
   Subtype: IxTypedItem__String__DO
-  ResourceSubtypes: [IxResourceSubtypeInput]
+  ResourceSubtypes: [IxResourceSubtypeDO]
   MoveVehicle: Boolean
   ObjectType: CxResourceTypeObjectType
   Description: String
@@ -70,12 +70,8 @@ type IxResourceSubtype {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceSubtypeInput {
+input IxResourceSubtypeDO {
   Id: ID!
-  ObjectType: IxResourceSubtypeObjectType
-  Name: String!
-  Description: String
-  Tags: [IxAttribute__String__DO]
 }
 
 enum IxResourceSubtypeObjectType {

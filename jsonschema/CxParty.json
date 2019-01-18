@@ -2,6 +2,45 @@
 	"id": "https://congistics.com/schema/CxParty",
 	"title": "com.congistics.cbrd.party.CxParty",
 	"definitions": {
+		"IxActionHolder": {
+			"type": "object",
+			"properties": {
+				"History": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxRange"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Duration": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
 		"IxAddress": {
 			"type": "object",
 			"properties": {
@@ -76,6 +115,9 @@
 				"Email": {
 					"type": "string"
 				},
+				"New": {
+					"type": "boolean"
+				},
 				"Name": {
 					"type": "string"
 				},
@@ -115,6 +157,26 @@
 				"Id",
 				"PhoneNumber",
 				"Name"
+			]
+		},
+		"IxRange": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
 			]
 		},
 		"IxTypedItem__String__": {
@@ -213,14 +275,12 @@
 	"type": "object",
 	"properties": {
 		"PhoneNumbers": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
 		},
 		"Emails": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxEmail"
@@ -244,8 +304,26 @@
 				"Party"
 			]
 		},
+		"Children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxActionHolder"
+			}
+		},
 		"Id": {
 			"type": "integer"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxRange"
+			}
+		},
+		"Duration": {
+			"type": "string"
 		},
 		"Tags": {
 			"type": "array",

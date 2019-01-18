@@ -1,9 +1,10 @@
 type CxHoliday {
   Holiday: String
   Name: String
-  ObjectType: CxHolidayObjectType
-  Description: String
   Id: ID!
+  ObjectType: CxHolidayObjectType
+  Children: [IxActionHolder]
+  Description: String
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
@@ -13,9 +14,10 @@ type CxHoliday {
 input CxHolidayInput {
   Holiday: String!
   Name: String!
-  ObjectType: CxHolidayObjectType
-  Description: String
   Id: ID!
+  ObjectType: CxHolidayObjectType
+  Children: [IxActionHolderDO]
+  Description: String
   CurrentLifespan: IxRangeDO
   History: [IxRangeDO]
   Duration: String
@@ -29,6 +31,21 @@ enum CxHolidayObjectType {
 input FilterInput {
   name: String!
   values: [String]
+}
+
+type IxActionHolder {
+  History: [IxRange]
+  CurrentLifespan: IxRange
+  Duration: String
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxActionHolderDO {
+  Id: ID!
 }
 
 type IxAttribute__String__ {

@@ -2,6 +2,45 @@
 	"id": "https://congistics.com/schema/CxCompany",
 	"title": "com.congistics.cbrd.party.CxCompany",
 	"definitions": {
+		"IxActionHolder": {
+			"type": "object",
+			"properties": {
+				"History": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxRange"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Duration": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
 		"IxAddress": {
 			"type": "object",
 			"properties": {
@@ -75,6 +114,9 @@
 				},
 				"Email": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
 				},
 				"Name": {
 					"type": "string"
@@ -305,20 +347,15 @@
 			"type": "string"
 		},
 		"ObjectType": {
-			"type": "string",
-			"enum": [
-				"Company"
-			]
+			"type": "string"
 		},
 		"PhoneNumbers": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
 		},
 		"Emails": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxEmail"
@@ -330,11 +367,32 @@
 		"Description": {
 			"type": "string"
 		},
+		"Title": {
+			"$ref": "#/definitions/IxTypedItem__String__"
+		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
 		},
+		"Children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxActionHolder"
+			}
+		},
 		"Id": {
 			"type": "integer"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxRange"
+			}
+		},
+		"Duration": {
+			"type": "string"
 		},
 		"Tags": {
 			"type": "array",

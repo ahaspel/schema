@@ -5,7 +5,7 @@ type CxSubcontractor {
   DefaultSupplyType: IxResourceType
   DefaultResourceSubtype: IxResourceSubtype
   SuppliesAll: Boolean
-  ObjectType: CxSubcontractorObjectType
+  ObjectType: String
   CompanyType: IxLookupValue
   Contacts: [IxParty]
   AccountCode: String
@@ -13,8 +13,12 @@ type CxSubcontractor {
   Emails: [IxEmail]
   Name: String
   Description: String
+  Title: IxTypedItem__String__
   Address: IxAddress
   Id: ID!
+  CurrentLifespan: IxRange
+  History: [IxRange]
+  Duration: String
   Tags: [IxAttribute__String__]
 }
 
@@ -25,21 +29,21 @@ input CxSubcontractorInput {
   DefaultSupplyType: IxResourceTypeDO
   DefaultResourceSubtype: IxResourceSubtypeDO
   SuppliesAll: Boolean
-  ObjectType: CxSubcontractorObjectType
+  ObjectType: String
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
-  PhoneNumbers: [IxPhoneNumberInput]
-  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberDO]
+  Emails: [IxEmailDO]
   Name: String!
   Description: String
+  Title: IxTypedItem__String__DO
   Address: IxAddressDO
   Id: ID!
+  CurrentLifespan: IxRangeDO
+  History: [IxRangeDO]
+  Duration: String
   Tags: [IxAttribute__String__DO]
-}
-
-enum CxSubcontractorObjectType {
-  Subcontractor
 }
 
 input FilterInput {
@@ -86,15 +90,13 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
+  New: Boolean
   Name: String
   Description: String
 }
 
-input IxEmailInput {
+input IxEmailDO {
   Id: ID!
-  Email: String!
-  Name: String!
-  Description: String
 }
 
 type IxGeocode {
@@ -182,19 +184,18 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberInput {
+input IxPhoneNumberDO {
   Id: ID!
-  PhoneNumber: String!
-  Valid: Boolean
-  New: Boolean
-  Name: String!
-  Description: String
 }
 
 type IxRange {
   Start: String
   End: String
   Duration: String
+}
+
+input IxRangeDO {
+
 }
 
 type IxResourceSubtype {
@@ -259,6 +260,10 @@ type IxTypedItem__String__ {
   Description: String
 }
 
+input IxTypedItem__String__DO {
+  Id: ID!
+}
+
 type IxUnit {
   UnitType: IxUnitUnitType
   Scalar: Float
@@ -290,9 +295,9 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String = "Subcontractor", operation: String = "edit"): [CxSubcontractor]
+  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String, operation: String = "edit"): [CxSubcontractor]
 }
 
 extend type Query {
-  cxSubcontractors(filters: [FilterInput], objectType: String = "Subcontractor"): [CxSubcontractor]
+  cxSubcontractors(filters: [FilterInput], objectType: String): [CxSubcontractor]
 }

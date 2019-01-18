@@ -4,8 +4,11 @@ type CxShift {
   Default: Boolean
   UseHolidays: Boolean
   ObjectType: CxShiftObjectType
+  Children: [IxActionHolder]
   Description: String
   Id: ID!
+  CurrentLifespan: IxRange
+  History: [IxRange]
   Tags: [IxAttribute__String__]
 }
 
@@ -15,8 +18,11 @@ input CxShiftInput {
   Default: Boolean
   UseHolidays: Boolean
   ObjectType: CxShiftObjectType
+  Children: [IxActionHolderDO]
   Description: String
   Id: ID!
+  CurrentLifespan: IxRangeDO
+  History: [IxRangeDO]
   Tags: [IxAttribute__String__DO]
 }
 
@@ -27,6 +33,21 @@ enum CxShiftObjectType {
 input FilterInput {
   name: String!
   values: [String]
+}
+
+type IxActionHolder {
+  History: [IxRange]
+  CurrentLifespan: IxRange
+  Duration: String
+  Id: ID!
+  ObjectType: String
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxActionHolderDO {
+  Id: ID!
 }
 
 type IxAttribute__String__ {
@@ -42,6 +63,16 @@ input IxAttribute__String__DO {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeDO {
+
 }
 
 type IxShiftDay {
