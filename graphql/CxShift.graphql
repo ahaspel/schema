@@ -14,15 +14,15 @@ type CxShift {
 
 input CxShiftInput {
   Name: String!
-  Days: [IxShiftDayDO]!
+  Days: [IxShiftDayInput]!
   Default: Boolean
   UseHolidays: Boolean
   ObjectType: CxShiftObjectType
   Children: [IxActionHolderDO]
   Description: String
   Id: ID!
-  CurrentLifespan: IxRangeDO
-  History: [IxRangeDO]
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
   Tags: [IxAttribute__String__DO]
 }
 
@@ -71,8 +71,10 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeDO {
-
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 type IxShiftDay {
@@ -83,8 +85,12 @@ type IxShiftDay {
   Included: Boolean
 }
 
-input IxShiftDayDO {
-
+input IxShiftDayInput {
+  Day: Int!
+  DayByName: String
+  Start: String!
+  End: String!
+  Included: Boolean
 }
 
 extend type Mutation {

@@ -40,8 +40,8 @@ input CxSubcontractorInput {
   Title: IxTypedItem__String__DO
   Address: IxAddressDO
   Id: ID!
-  CurrentLifespan: IxRangeDO
-  History: [IxRangeDO]
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
   Duration: String
   Tags: [IxAttribute__String__DO]
 }
@@ -194,8 +194,10 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeDO {
-
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 type IxResourceSubtype {

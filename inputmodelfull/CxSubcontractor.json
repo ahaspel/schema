@@ -1,7 +1,13 @@
 {
-	"Preferred": true,
+	"Preferred": false,
 	"IsMover": true,
 	"SupplyTypes": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -27,16 +33,28 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": true,
-	"ObjectType": "aut",
+	"SuppliesAll": false,
+	"ObjectType": "dolorum",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": {
 		"Id": 1
 	},
-	"AccountCode": "facilis",
+	"AccountCode": "ab",
 	"PhoneNumbers": [
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
+		{
+			"Id": 0
+		},
 		{
 			"Id": 0
 		},
@@ -50,28 +68,10 @@
 		},
 		{
 			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
 		}
 	],
-	"Name": "voluptas",
-	"Description": "nobis",
+	"Name": "id",
+	"Description": "vel",
 	"Title": {
 		"Id": 0
 	},
@@ -79,13 +79,29 @@
 		"Id": 1
 	},
 	"Id": 0,
-	"CurrentLifespan": {},
+	"CurrentLifespan": {
+		"Start": "id",
+		"End": "ea",
+		"Duration": "suscipit"
+	},
 	"History": [
-		{},
-		{},
-		{}
+		{
+			"Start": "dolor",
+			"End": "in",
+			"Duration": "molestiae"
+		},
+		{
+			"Start": "consequatur",
+			"End": "laudantium",
+			"Duration": "nulla"
+		},
+		{
+			"Start": "commodi",
+			"End": "voluptatem",
+			"Duration": "sit"
+		}
 	],
-	"Duration": "autem",
+	"Duration": "vel",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }

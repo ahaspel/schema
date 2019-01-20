@@ -42,10 +42,10 @@ input CxEquipmentInput {
   Make: String!
   SerialNumber: String
   Year: String
-  Height: IxQuantityDO
-  Weight: IxQuantityDO
-  Width: IxQuantityDO
-  Capacity: IxQuantityDO
+  Height: IxQuantityInput
+  Weight: IxQuantityInput
+  Width: IxQuantityInput
+  Capacity: IxQuantityInput
   MoveNotes: String
   AbbreviatedName: String
   ObjectType: String
@@ -53,7 +53,7 @@ input CxEquipmentInput {
   Temporary: Boolean
   ResourceType: IxResourceTypeDO!
   ResourceSubtype: IxResourceSubtypeDO!
-  UnitCost: IxUnitCostDO
+  UnitCost: IxUnitCostInput
   InCrew: Boolean
   Divisible: Boolean
   HasDescription: Boolean
@@ -69,9 +69,9 @@ input CxEquipmentInput {
   Id: ID!
   Start: String
   End: String
-  Lifespan: IxRangeDO
-  CurrentLifespan: IxRangeDO
-  History: [IxRangeDO]
+  Lifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
   Duration: String
   Tags: [IxAttribute__String__DO]
 }
@@ -184,13 +184,19 @@ type IxMoney {
   Quantity: Float
 }
 
+input IxMoneyInput {
+  Unit: IxUnitInput!
+  Quantity: Float!
+}
+
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
 }
 
-input IxQuantityDO {
-
+input IxQuantityInput {
+  Unit: IxUnitInput!
+  Quantity: Float!
 }
 
 type IxRange {
@@ -199,8 +205,10 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeDO {
-
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 type IxResourceSubtype {
@@ -268,8 +276,20 @@ type IxUnitCost {
   Notes: String
 }
 
-input IxUnitCostDO {
+input IxUnitCostInput {
+  Unit: IxUnitInput!
+  Cost: IxMoneyInput!
+  Notes: String
+}
 
+input IxUnitInput {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
 }
 
 enum IxUnitObjectType {

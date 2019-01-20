@@ -3,10 +3,54 @@
 	"Make": "",
 	"SerialNumber": "",
 	"Year": "",
-	"Height": {},
-	"Weight": {},
-	"Width": {},
-	"Capacity": {},
+	"Height": {
+		"Unit": {
+			"UnitType": "Self",
+			"Scalar": 0,
+			"Integral": false,
+			"Id": 0,
+			"ObjectType": "Unit",
+			"Name": "",
+			"Description": ""
+		},
+		"Quantity": 0
+	},
+	"Weight": {
+		"Unit": {
+			"UnitType": "Self",
+			"Scalar": 0,
+			"Integral": false,
+			"Id": 0,
+			"ObjectType": "Unit",
+			"Name": "",
+			"Description": ""
+		},
+		"Quantity": 0
+	},
+	"Width": {
+		"Unit": {
+			"UnitType": "Area",
+			"Scalar": 0,
+			"Integral": false,
+			"Id": 0,
+			"ObjectType": "Unit",
+			"Name": "",
+			"Description": ""
+		},
+		"Quantity": 0
+	},
+	"Capacity": {
+		"Unit": {
+			"UnitType": "Self",
+			"Scalar": 0,
+			"Integral": false,
+			"Id": 0,
+			"ObjectType": "Unit",
+			"Name": "",
+			"Description": ""
+		},
+		"Quantity": 0
+	},
 	"MoveNotes": "",
 	"AbbreviatedName": "",
 	"ObjectType": "",
@@ -18,7 +62,30 @@
 	"ResourceSubtype": {
 		"Id": 0
 	},
-	"UnitCost": {},
+	"UnitCost": {
+		"Unit": {
+			"UnitType": "Length",
+			"Scalar": 0,
+			"Integral": false,
+			"Id": 0,
+			"ObjectType": "Unit",
+			"Name": "",
+			"Description": ""
+		},
+		"Cost": {
+			"Unit": {
+				"UnitType": "Weight",
+				"Scalar": 0,
+				"Integral": false,
+				"Id": 0,
+				"ObjectType": "Unit",
+				"Name": "",
+				"Description": ""
+			},
+			"Quantity": 0
+		},
+		"Notes": ""
+	},
 	"InCrew": false,
 	"Divisible": false,
 	"HasDescription": false,
@@ -38,8 +105,16 @@
 	"Id": 0,
 	"Start": "",
 	"End": "",
-	"Lifespan": {},
-	"CurrentLifespan": {},
+	"Lifespan": {
+		"Start": "",
+		"End": "",
+		"Duration": ""
+	},
+	"CurrentLifespan": {
+		"Start": "",
+		"End": "",
+		"Duration": ""
+	},
 	"History": [],
 	"Duration": "",
 	"Tags": [],

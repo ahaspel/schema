@@ -21,7 +21,7 @@ input CxAddressInput {
   ZipCode: String
   City: String
   State: IxLookupValueDO!
-  Geocode: IxGeocodeDO
+  Geocode: IxGeocodeInput
 }
 
 input FilterInput {
@@ -46,8 +46,10 @@ type IxGeocode {
   Source: IxGeocodeSource
 }
 
-input IxGeocodeDO {
-
+input IxGeocodeInput {
+  Lat: Float!
+  Lng: Float!
+  Source: IxGeocodeSource
 }
 
 enum IxGeocodeSource {

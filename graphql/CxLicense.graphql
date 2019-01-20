@@ -37,9 +37,9 @@ input CxLicenseInput {
   Id: ID!
   Start: String
   End: String
-  Lifespan: IxRangeDO
-  CurrentLifespan: IxRangeDO
-  History: [IxRangeDO]
+  Lifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
   Duration: String
   Tags: [IxAttribute__String__DO]
 }
@@ -88,8 +88,10 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeDO {
-
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 extend type Mutation {
