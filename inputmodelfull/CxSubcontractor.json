@@ -1,13 +1,7 @@
 {
-	"Preferred": false,
-	"IsMover": true,
+	"Preferred": true,
+	"IsMover": false,
 	"SupplyTypes": [
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
 		{
 			"Id": 0
 		},
@@ -33,25 +27,18 @@
 	"DefaultResourceSubtype": {
 		"Id": 29
 	},
-	"SuppliesAll": false,
-	"ObjectType": "dolorum",
+	"SuppliesAll": true,
+	"ObjectType": "necessitatibus",
 	"CompanyType": {
 		"Id": 1
 	},
-	"Contacts": {
-		"Id": 1
-	},
-	"AccountCode": "ab",
+	"Contacts": [
+		{
+			"Id": 1
+		}
+	],
+	"AccountCode": "quas",
 	"PhoneNumbers": [
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
-		{
-			"Id": 0
-		},
 		{
 			"Id": 0
 		},
@@ -68,10 +55,13 @@
 		},
 		{
 			"Id": 0
+		},
+		{
+			"Id": 0
 		}
 	],
-	"Name": "id",
-	"Description": "vel",
+	"Name": "molestias",
+	"Description": "saepe",
 	"Title": {
 		"Id": 0
 	},
@@ -80,28 +70,53 @@
 	},
 	"Id": 0,
 	"CurrentLifespan": {
-		"Start": "id",
-		"End": "ea",
-		"Duration": "suscipit"
+		"Start": "eius",
+		"End": "consequuntur",
+		"Duration": "a"
 	},
 	"History": [
 		{
-			"Start": "dolor",
-			"End": "in",
-			"Duration": "molestiae"
+			"Start": "perferendis",
+			"End": "sequi",
+			"Duration": "velit"
 		},
 		{
-			"Start": "consequatur",
-			"End": "laudantium",
-			"Duration": "nulla"
+			"Start": "voluptate",
+			"End": "qui",
+			"Duration": "voluptatibus"
 		},
 		{
-			"Start": "commodi",
-			"End": "voluptatem",
+			"Start": "rem",
+			"End": "voluptatibus",
+			"Duration": "dolores"
+		},
+		{
+			"Start": "reprehenderit",
+			"End": "dolorem",
+			"Duration": "et"
+		},
+		{
+			"Start": "rerum",
+			"End": "accusantium",
+			"Duration": "ducimus"
+		},
+		{
+			"Start": "saepe",
+			"End": "nihil",
+			"Duration": "atque"
+		},
+		{
+			"Start": "rerum",
+			"End": "ut",
 			"Duration": "sit"
+		},
+		{
+			"Start": "distinctio",
+			"End": "commodi",
+			"Duration": "qui"
 		}
 	],
-	"Duration": "vel",
+	"Duration": "recusandae",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }
