@@ -96,6 +96,7 @@ input IxRangeInput {
 
 extend type Mutation {
   cxLicenses_onSave(data: [CxLicenseInput], objectType: String, operation: String = "edit"): [CxLicense]
+  cxLicenses_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxLicense]
 }
 
 extend type Query {

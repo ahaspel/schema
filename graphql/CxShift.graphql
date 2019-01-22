@@ -95,6 +95,7 @@ input IxShiftDayInput {
 
 extend type Mutation {
   cxShifts_onSave(data: [CxShiftInput], objectType: String = "Shift", operation: String = "edit"): [CxShift]
+  cxShifts_onDelete(data: [String], objectType: String = "Shift", operation: String = "delete"): [CxShift]
 }
 
 extend type Query {

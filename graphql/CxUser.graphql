@@ -116,6 +116,7 @@ input IxTypedItem__String__DO {
 
 extend type Mutation {
   cxUsers_onSave(data: [CxUserInput], objectType: String, operation: String = "edit"): [CxUser]
+  cxUsers_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxUser]
 }
 
 extend type Query {

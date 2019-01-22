@@ -39,6 +39,7 @@ input FilterInput {
 
 extend type Mutation {
   cxUnits_onSave(data: [CxUnitInput], objectType: String = "Unit", operation: String = "edit"): [CxUnit]
+  cxUnits_onDelete(data: [String], objectType: String = "Unit", operation: String = "delete"): [CxUnit]
 }
 
 extend type Query {

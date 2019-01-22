@@ -213,6 +213,7 @@ input IxTypedItem__String__DO {
 
 extend type Mutation {
   cxCompanys_onSave(data: [CxCompanyInput], objectType: String, operation: String = "edit"): [CxCompany]
+  cxCompanys_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxCompany]
 }
 
 extend type Query {

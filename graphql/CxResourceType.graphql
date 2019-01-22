@@ -93,6 +93,7 @@ input IxTypedItem__String__DO {
 
 extend type Mutation {
   cxResourceTypes_onSave(data: [CxResourceTypeInput], objectType: String = "ResourceType", operation: String = "edit"): [CxResourceType]
+  cxResourceTypes_onDelete(data: [String], objectType: String = "ResourceType", operation: String = "delete"): [CxResourceType]
 }
 
 extend type Query {
