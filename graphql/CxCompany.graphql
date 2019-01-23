@@ -2,18 +2,13 @@ type CxCompany {
   CompanyType: IxLookupValue
   Contacts: [IxParty]
   AccountCode: String
-  ObjectType: String
+  ObjectType: CxCompanyObjectType
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   Name: String
   Description: String
-  Title: IxTypedItem__String__
   Address: IxAddress
-  Children: [IxActionHolder]
   Id: ID!
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
 }
 
@@ -21,39 +16,23 @@ input CxCompanyInput {
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
-  ObjectType: String
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
+  ObjectType: CxCompanyObjectType
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
   Name: String!
   Description: String
-  Title: IxTypedItem__String__DO
   Address: IxAddressDO
-  Children: [IxActionHolderDO]
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
   Tags: [IxAttribute__String__DO]
+}
+
+enum CxCompanyObjectType {
+  Company
 }
 
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxActionHolder {
-  History: [IxRange]
-  CurrentLifespan: IxRange
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxActionHolderDO {
-  Id: ID!
 }
 
 type IxAddress {
@@ -95,13 +74,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  New: Boolean
   Name: String
   Description: String
 }
 
-input IxEmailDO {
+input IxEmailInput {
   Id: ID!
+  Email: String!
+  Name: String!
+  Description: String
 }
 
 type IxGeocode {
@@ -155,7 +136,6 @@ enum IxLookupValueObjectType {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Title: IxTypedItem__String__
   History: [IxRange]
   CurrentLifespan: IxRange
   Duration: String
@@ -178,14 +158,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Valid: Boolean
-  New: Boolean
   Name: String
   Description: String
 }
 
-input IxPhoneNumberDO {
+input IxPhoneNumberInput {
   Id: ID!
+  PhoneNumber: String!
+  Name: String!
+  Description: String
 }
 
 type IxRange {
@@ -194,28 +175,11 @@ type IxRange {
   Duration: String
 }
 
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
-type IxTypedItem__String__ {
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-}
-
-input IxTypedItem__String__DO {
-  Id: ID!
-}
-
 extend type Mutation {
-  cxCompanys_onSave(data: [CxCompanyInput], objectType: String, operation: String = "edit"): [CxCompany]
-  cxCompanys_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxCompany]
+  cxCompanys_onSave(data: [CxCompanyInput], objectType: String = "Company", operation: String = "edit"): [CxCompany]
+  cxCompanys_onDelete(data: [String], objectType: String = "Company", operation: String = "delete"): [CxCompany]
 }
 
 extend type Query {
-  cxCompanys(filters: [FilterInput], objectType: String): [CxCompany]
+  cxCompanys(filters: [FilterInput], objectType: String = "Company"): [CxCompany]
 }

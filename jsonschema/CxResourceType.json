@@ -15,7 +15,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -24,26 +25,6 @@
 			"required": [
 				"Id",
 				"Name"
-			]
-		},
-		"IxRange": {
-			"type": "object",
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
 			]
 		},
 		"IxResourceSubtype": {
@@ -59,7 +40,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -86,7 +68,8 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -110,10 +93,12 @@
 			"$ref": "#/definitions/IxTypedItem__String__"
 		},
 		"ResourceSubtypes": {
+			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxResourceSubtype"
-			}
+			},
+			"minItems": 1
 		},
 		"MoveVehicle": {
 			"type": "boolean"
@@ -128,19 +113,8 @@
 			"type": "string"
 		},
 		"Name": {
-			"type": "string"
-		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
-		"Duration": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"Tags": {
 			"type": "array",
@@ -151,6 +125,7 @@
 	},
 	"required": [
 		"Id",
+		"ResourceSubtypes",
 		"Name"
 	]
 }

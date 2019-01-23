@@ -19,11 +19,7 @@
 						"GPSService"
 					]
 				}
-			},
-			"required": [
-				"Lat",
-				"Lng"
-			]
+			}
 		},
 		"IxLookupValue": {
 			"type": "object",
@@ -58,7 +54,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -87,7 +84,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"

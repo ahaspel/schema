@@ -47,8 +47,8 @@ type IxGeocode {
 }
 
 input IxGeocodeInput {
-  Lat: Float!
-  Lng: Float!
+  Lat: Float
+  Lng: Float
   Source: IxGeocodeSource
 }
 

@@ -2,46 +2,8 @@
 	"id": "https://congistics.com/schema/CxParty",
 	"title": "com.congistics.cbrd.party.CxParty",
 	"definitions": {
-		"IxActionHolder": {
-			"type": "object",
-			"properties": {
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"Id",
-				"Name"
-			]
-		},
 		"IxAddress": {
+			"description": "Editable",
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -72,14 +34,18 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Id"
+				"Street",
+				"State",
+				"Id",
+				"Name"
 			]
 		},
 		"IxAttribute__String__": {
@@ -95,7 +61,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -113,13 +80,12 @@
 					"type": "integer"
 				},
 				"Email": {
-					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
+					"type": "string",
+					"format": "email"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -129,74 +95,6 @@
 				"Id",
 				"Email",
 				"Name"
-			]
-		},
-		"IxPhoneNumber": {
-			"type": "object",
-			"properties": {
-				"Id": {
-					"type": "integer"
-				},
-				"PhoneNumber": {
-					"type": "string"
-				},
-				"Valid": {
-					"type": "boolean"
-				},
-				"New": {
-					"type": "boolean"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id",
-				"PhoneNumber",
-				"Name"
-			]
-		},
-		"IxRange": {
-			"type": "object",
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
-		},
-		"IxTypedItem__String__": {
-			"type": "object",
-			"properties": {
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
 			]
 		},
 		"IxGeocode": {
@@ -216,11 +114,7 @@
 						"GPSService"
 					]
 				}
-			},
-			"required": [
-				"Lat",
-				"Lng"
-			]
+			}
 		},
 		"IxLookupValue": {
 			"type": "object",
@@ -255,7 +149,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -270,30 +165,53 @@
 			"required": [
 				"Id"
 			]
+		},
+		"IxPhoneNumber": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"PhoneNumber": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"PhoneNumber",
+				"Name"
+			]
 		}
 	},
 	"type": "object",
 	"properties": {
 		"PhoneNumbers": {
+			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
 		},
 		"Emails": {
+			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxEmail"
 			}
 		},
 		"Name": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"Description": {
 			"type": "string"
-		},
-		"Title": {
-			"$ref": "#/definitions/IxTypedItem__String__"
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
@@ -304,26 +222,8 @@
 				"Party"
 			]
 		},
-		"Children": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxActionHolder"
-			}
-		},
 		"Id": {
 			"type": "integer"
-		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
-		"Duration": {
-			"type": "string"
 		},
 		"Tags": {
 			"type": "array",

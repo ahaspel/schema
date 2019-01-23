@@ -2,45 +2,6 @@
 	"id": "https://congistics.com/schema/CxHoliday",
 	"title": "com.congistics.cbrd.time.CxHoliday",
 	"definitions": {
-		"IxActionHolder": {
-			"type": "object",
-			"properties": {
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"Id",
-				"Name"
-			]
-		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -54,7 +15,8 @@
 					]
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -77,7 +39,8 @@
 					"format": "date-time"
 				},
 				"Duration": {
-					"type": "string"
+					"type": "string",
+					"format": "time"
 				}
 			},
 			"required": [
@@ -93,10 +56,8 @@
 			"format": "date-time"
 		},
 		"Name": {
-			"type": "string"
-		},
-		"Id": {
-			"type": "integer"
+			"type": "string",
+			"minLength": 1
 		},
 		"ObjectType": {
 			"type": "string",
@@ -104,14 +65,11 @@
 				"Holiday"
 			]
 		},
-		"Children": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxActionHolder"
-			}
-		},
 		"Description": {
 			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

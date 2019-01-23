@@ -3,30 +3,20 @@ type CxParty {
   Emails: [IxEmail]
   Name: String
   Description: String
-  Title: IxTypedItem__String__
   Address: IxAddress
   ObjectType: CxPartyObjectType
-  Children: [IxActionHolder]
   Id: ID!
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
 }
 
 input CxPartyInput {
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
   Name: String!
   Description: String
-  Title: IxTypedItem__String__DO
   Address: IxAddressDO
   ObjectType: CxPartyObjectType
-  Children: [IxActionHolderDO]
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
   Tags: [IxAttribute__String__DO]
 }
 
@@ -37,21 +27,6 @@ enum CxPartyObjectType {
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxActionHolder {
-  History: [IxRange]
-  CurrentLifespan: IxRange
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxActionHolderDO {
-  Id: ID!
 }
 
 type IxAddress {
@@ -93,13 +68,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  New: Boolean
   Name: String
   Description: String
 }
 
-input IxEmailDO {
+input IxEmailInput {
   Id: ID!
+  Email: String!
+  Name: String!
+  Description: String
 }
 
 type IxGeocode {
@@ -149,37 +126,15 @@ enum IxLookupValueObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Valid: Boolean
-  New: Boolean
   Name: String
   Description: String
 }
 
-input IxPhoneNumberDO {
+input IxPhoneNumberInput {
   Id: ID!
-}
-
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
-type IxTypedItem__String__ {
-  Id: ID!
-  ObjectType: String
-  Name: String
+  PhoneNumber: String!
+  Name: String!
   Description: String
-}
-
-input IxTypedItem__String__DO {
-  Id: ID!
 }
 
 extend type Mutation {
