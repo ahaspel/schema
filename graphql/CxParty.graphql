@@ -10,8 +10,8 @@ type CxParty {
 }
 
 input CxPartyInput {
-  PhoneNumbers: [IxPhoneNumberInput]
-  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberDO]
+  Emails: [IxEmailDO]
   Name: String!
   Description: String
   Address: IxAddressDO
@@ -72,11 +72,8 @@ type IxEmail {
   Description: String
 }
 
-input IxEmailInput {
+input IxEmailDO {
   Id: ID!
-  Email: String!
-  Name: String!
-  Description: String
 }
 
 type IxGeocode {
@@ -130,11 +127,8 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberInput {
+input IxPhoneNumberDO {
   Id: ID!
-  PhoneNumber: String!
-  Name: String!
-  Description: String
 }
 
 extend type Mutation {
