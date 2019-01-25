@@ -3,7 +3,6 @@
 	"title": "com.congistics.cbrd.party.CxSubcontractor",
 	"definitions": {
 		"IxAddress": {
-			"description": "Editable",
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -236,8 +235,7 @@
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
+				"Id"
 			]
 		},
 		"IxPhoneNumber": {
@@ -324,7 +322,6 @@
 					"$ref": "#/definitions/IxTypedItem__String__"
 				},
 				"ResourceSubtypes": {
-					"description": "Editable",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxResourceSubtype"
@@ -541,14 +538,12 @@
 			"type": "string"
 		},
 		"PhoneNumbers": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
 		},
 		"Emails": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxEmail"

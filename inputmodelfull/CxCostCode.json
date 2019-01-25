@@ -1,33 +1,34 @@
 {
 	"UnitCost": {
 		"Unit": {
-			"UnitType": "Weight",
-			"Scalar": 6832,
-			"Integral": false,
-			"Id": 0,
-			"ObjectType": "Unit",
-			"Name": "dolor",
-			"Description": "omnis"
+			"Id": 1
 		},
 		"Cost": {
 			"Unit": {
-				"UnitType": "Volume",
-				"Scalar": 85922,
-				"Integral": false,
-				"Id": 0,
-				"ObjectType": "Unit",
-				"Name": "expedita",
-				"Description": "tempore"
+				"Id": 1
 			},
-			"Quantity": 69714
+			"Quantity": 43266
 		},
-		"Notes": "nesciunt"
+		"Notes": "laborum"
 	},
 	"Global": true,
 	"ObjectType": "CostCode",
-	"Tags": [],
+	"Tags": [
+		{
+			"Id": 0,
+			"ObjectType": "Attribute",
+			"Name": "cum",
+			"Description": "et"
+		},
+		{
+			"Id": 0,
+			"ObjectType": "Attribute",
+			"Name": "enim",
+			"Description": "incidunt"
+		}
+	],
 	"Id": 0,
-	"Name": "veniam",
-	"Description": "nesciunt",
+	"Name": "voluptatum",
+	"Description": "fugit",
 	"__typename": "CxCostCode"
 }

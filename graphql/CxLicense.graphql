@@ -31,7 +31,7 @@ input CxLicenseInput {
   Nag: Boolean
   ErrorMessage: String
   ObjectType: String
-  Children: [IxActionHolderDO]
+  Children: [IxActionHolderInput]
   Description: String
   Name: String!
   Id: ID!
@@ -41,7 +41,7 @@ input CxLicenseInput {
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 input FilterInput {
@@ -63,8 +63,18 @@ type IxActionHolder {
   Tags: [IxAttribute__String__]
 }
 
-input IxActionHolderDO {
+input IxActionHolderInput {
+  Start: String
+  End: String
+  Lifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
+  Duration: String
   Id: ID!
+  ObjectType: String
+  Name: String!
+  Description: String
+  Tags: [IxAttribute__String__Input]
 }
 
 type IxAttribute__String__ {
@@ -74,8 +84,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {

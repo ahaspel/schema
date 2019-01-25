@@ -3,7 +3,6 @@
 	"title": "com.congistics.cbrd.party.CxParty",
 	"definitions": {
 		"IxAddress": {
-			"description": "Editable",
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -193,14 +192,12 @@
 	"type": "object",
 	"properties": {
 		"PhoneNumbers": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
 		},
 		"Emails": {
-			"description": "Editable",
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxEmail"

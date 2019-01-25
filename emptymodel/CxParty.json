@@ -4,7 +4,22 @@
 	"Name": "",
 	"Description": "",
 	"Address": {
-		"Id": 0
+		"Street": "",
+		"StreetDetails": "",
+		"State": {
+			"Id": 0
+		},
+		"City": "",
+		"ZipCode": "",
+		"Geocode": {
+			"Lat": 0,
+			"Lng": 0,
+			"Source": "GPSService"
+		},
+		"Id": 0,
+		"ObjectType": "Address",
+		"Name": "",
+		"Description": ""
 	},
 	"ObjectType": "Party",
 	"Id": 0,

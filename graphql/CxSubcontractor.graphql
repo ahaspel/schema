@@ -21,7 +21,7 @@ type CxSubcontractor {
 input CxSubcontractorInput {
   Preferred: Boolean
   IsMover: Boolean
-  SupplyTypes: [IxSupplyTypeDO]
+  SupplyTypes: [IxSupplyTypeInput]
   DefaultSupplyType: IxResourceTypeDO
   DefaultResourceSubtype: IxResourceSubtypeDO
   SuppliesAll: Boolean
@@ -29,13 +29,13 @@ input CxSubcontractorInput {
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
   Name: String!
   Description: String
-  Address: IxAddressDO
+  Address: IxAddressInput
   Id: ID!
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxSubcontractorObjectType {
@@ -60,8 +60,17 @@ type IxAddress {
   Description: String
 }
 
-input IxAddressDO {
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String
+  ZipCode: String
+  Geocode: IxGeocodeInput
   Id: ID!
+  ObjectType: IxAddressObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAddressObjectType {
@@ -75,8 +84,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -90,11 +102,20 @@ type IxEmail {
   Description: String
 }
 
-input IxEmailDO {
+input IxEmailInput {
   Id: ID!
+  Email: String!
+  Name: String!
+  Description: String
 }
 
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -147,6 +168,11 @@ type IxMoney {
   Quantity: Float
 }
 
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -176,8 +202,11 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberDO {
+input IxPhoneNumberInput {
   Id: ID!
+  PhoneNumber: String!
+  Name: String!
+  Description: String
 }
 
 type IxRange {
@@ -237,8 +266,16 @@ type IxSupplyType {
   Tags: [IxAttribute__String__]
 }
 
-input IxSupplyTypeDO {
+input IxSupplyTypeInput {
+  ResourceSubtype: IxResourceSubtypeDO!
+  UnitCosts: [IxUnitCostInput]
+  AccrualNumber: String
+  Notes: String
   Id: ID!
+  ObjectType: String
+  Name: String!
+  Description: String
+  Tags: [IxAttribute__String__Input]
 }
 
 type IxTypedItem__String__ {
@@ -262,6 +299,16 @@ type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
   Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
 }
 
 enum IxUnitObjectType {

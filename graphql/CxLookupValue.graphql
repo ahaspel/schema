@@ -7,7 +7,7 @@ type CxLookupValue {
 }
 
 input CxLookupValueInput {
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
   Id: ID!
   Name: String!
   Description: String
@@ -50,8 +50,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {

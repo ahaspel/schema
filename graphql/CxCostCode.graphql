@@ -12,7 +12,7 @@ input CxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   ObjectType: CxCostCodeObjectType
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
   Id: ID!
   Name: String!
   Description: String
@@ -34,8 +34,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -48,7 +51,7 @@ type IxMoney {
 }
 
 input IxMoneyInput {
-  Unit: IxUnitInput!
+  Unit: IxUnitDO!
   Quantity: Float!
 }
 
@@ -69,19 +72,13 @@ type IxUnitCost {
 }
 
 input IxUnitCostInput {
-  Unit: IxUnitInput!
+  Unit: IxUnitDO!
   Cost: IxMoneyInput!
   Notes: String
 }
 
-input IxUnitInput {
-  UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
+input IxUnitDO {
   Id: ID!
-  ObjectType: IxUnitObjectType
-  Name: String
-  Description: String
 }
 
 enum IxUnitObjectType {

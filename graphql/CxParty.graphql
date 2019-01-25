@@ -10,14 +10,14 @@ type CxParty {
 }
 
 input CxPartyInput {
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
   Name: String!
   Description: String
-  Address: IxAddressDO
+  Address: IxAddressInput
   ObjectType: CxPartyObjectType
   Id: ID!
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxPartyObjectType {
@@ -42,8 +42,17 @@ type IxAddress {
   Description: String
 }
 
-input IxAddressDO {
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String
+  ZipCode: String
+  Geocode: IxGeocodeInput
   Id: ID!
+  ObjectType: IxAddressObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAddressObjectType {
@@ -57,8 +66,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -72,11 +84,20 @@ type IxEmail {
   Description: String
 }
 
-input IxEmailDO {
+input IxEmailInput {
   Id: ID!
+  Email: String!
+  Name: String!
+  Description: String
 }
 
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -94,6 +115,10 @@ type IxLookupValue {
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -127,8 +152,11 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberDO {
+input IxPhoneNumberInput {
   Id: ID!
+  PhoneNumber: String!
+  Name: String!
+  Description: String
 }
 
 extend type Mutation {

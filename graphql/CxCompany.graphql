@@ -17,13 +17,13 @@ input CxCompanyInput {
   Contacts: [IxPartyDO]
   AccountCode: String
   ObjectType: CxCompanyObjectType
-  PhoneNumbers: [IxPhoneNumberDO]
-  Emails: [IxEmailDO]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
   Name: String!
   Description: String
-  Address: IxAddressDO
+  Address: IxAddressInput
   Id: ID!
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxCompanyObjectType {
@@ -48,8 +48,17 @@ type IxAddress {
   Description: String
 }
 
-input IxAddressDO {
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String
+  ZipCode: String
+  Geocode: IxGeocodeInput
   Id: ID!
+  ObjectType: IxAddressObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAddressObjectType {
@@ -63,8 +72,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -78,11 +90,20 @@ type IxEmail {
   Description: String
 }
 
-input IxEmailDO {
+input IxEmailInput {
   Id: ID!
+  Email: String!
+  Name: String!
+  Description: String
 }
 
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -159,8 +180,11 @@ type IxPhoneNumber {
   Description: String
 }
 
-input IxPhoneNumberDO {
+input IxPhoneNumberInput {
   Id: ID!
+  PhoneNumber: String!
+  Name: String!
+  Description: String
 }
 
 type IxRange {

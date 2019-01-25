@@ -64,7 +64,7 @@ input CxEquipmentInput {
   AllowMove: Boolean
   Returned: Boolean
   AccountCode: String
-  Children: [IxActionHolderDO]
+  Children: [IxActionHolderInput]
   Name: String!
   Id: ID!
   Start: String
@@ -73,7 +73,7 @@ input CxEquipmentInput {
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 input FilterInput {
@@ -95,8 +95,18 @@ type IxActionHolder {
   Tags: [IxAttribute__String__]
 }
 
-input IxActionHolderDO {
+input IxActionHolderInput {
+  Start: String
+  End: String
+  Lifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput
+  History: [IxRangeInput]
+  Duration: String
   Id: ID!
+  ObjectType: String
+  Name: String!
+  Description: String
+  Tags: [IxAttribute__String__Input]
 }
 
 type IxAddress {
@@ -127,8 +137,11 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String!
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -185,7 +198,7 @@ type IxMoney {
 }
 
 input IxMoneyInput {
-  Unit: IxUnitInput!
+  Unit: IxUnitDO!
   Quantity: Float!
 }
 
@@ -195,7 +208,7 @@ type IxQuantity {
 }
 
 input IxQuantityInput {
-  Unit: IxUnitInput!
+  Unit: IxUnitDO!
   Quantity: Float!
 }
 
@@ -277,19 +290,13 @@ type IxUnitCost {
 }
 
 input IxUnitCostInput {
-  Unit: IxUnitInput!
+  Unit: IxUnitDO!
   Cost: IxMoneyInput!
   Notes: String
 }
 
-input IxUnitInput {
-  UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
+input IxUnitDO {
   Id: ID!
-  ObjectType: IxUnitObjectType
-  Name: String
-  Description: String
 }
 
 enum IxUnitObjectType {
