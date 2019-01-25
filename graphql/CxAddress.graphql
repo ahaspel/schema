@@ -1,7 +1,5 @@
 type CxAddress {
   Id: ID!
-  Name: String
-  Description: String
   ObjectType: String
   Street: String
   StreetDetails: String
@@ -13,8 +11,6 @@ type CxAddress {
 
 input CxAddressInput {
   Id: ID!
-  Name: String!
-  Description: String
   ObjectType: String
   Street: String!
   StreetDetails: String

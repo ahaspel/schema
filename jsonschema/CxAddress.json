@@ -92,8 +92,7 @@
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
+				"Id"
 			]
 		}
 	},
@@ -102,12 +101,6 @@
 	"properties": {
 		"Id": {
 			"type": "integer"
-		},
-		"Name": {
-			"type": "string"
-		},
-		"Description": {
-			"type": "string"
 		},
 		"ObjectType": {
 			"type": "string"
@@ -133,7 +126,6 @@
 	},
 	"required": [
 		"Id",
-		"Name",
 		"Street",
 		"State"
 	]

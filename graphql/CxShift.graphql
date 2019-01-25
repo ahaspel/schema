@@ -17,7 +17,7 @@ input CxShiftInput {
   ObjectType: CxShiftObjectType
   Description: String
   Id: ID!
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttribute__String__DO]
 }
 
 enum CxShiftObjectType {
@@ -36,11 +36,8 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__Input {
+input IxAttribute__String__DO {
   Id: ID!
-  ObjectType: IxAttributeStringObjectType
-  Name: String!
-  Description: String
 }
 
 enum IxAttributeStringObjectType {

@@ -12,9 +12,9 @@ input CxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   ObjectType: CxCostCodeObjectType
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttribute__String__DO]
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -34,11 +34,8 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__Input {
+input IxAttribute__String__DO {
   Id: ID!
-  ObjectType: IxAttributeStringObjectType
-  Name: String!
-  Description: String
 }
 
 enum IxAttributeStringObjectType {

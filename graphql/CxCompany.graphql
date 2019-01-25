@@ -23,7 +23,7 @@ input CxCompanyInput {
   Description: String
   Address: IxAddressInput
   Id: ID!
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttribute__String__DO]
 }
 
 enum CxCompanyObjectType {
@@ -57,7 +57,7 @@ input IxAddressInput {
   Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -72,11 +72,8 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__Input {
+input IxAttribute__String__DO {
   Id: ID!
-  ObjectType: IxAttributeStringObjectType
-  Name: String!
-  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -93,7 +90,7 @@ type IxEmail {
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -183,7 +180,7 @@ type IxPhoneNumber {
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Name: String!
+  Name: String
   Description: String
 }
 

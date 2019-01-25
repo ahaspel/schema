@@ -21,8 +21,8 @@ input CxUserInput {
   Username: String!
   Password: String!
   Level: IxLevelDO
-  WebPrivileges: [IxTypedItem__String__Input]
-  Privileges: [IxTypedItem__String__Input]
+  WebPrivileges: [IxTypedItem__String__DO]
+  Privileges: [IxTypedItem__String__DO]
   Administrator: Boolean
   ReadOnly: Boolean
   WebLevel: CxUserWebLevel
@@ -33,7 +33,7 @@ input CxUserInput {
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttribute__String__DO]
 }
 
 enum CxUserObjectType {
@@ -58,11 +58,8 @@ type IxAttribute__String__ {
   Description: String
 }
 
-input IxAttribute__String__Input {
+input IxAttribute__String__DO {
   Id: ID!
-  ObjectType: IxAttributeStringObjectType
-  Name: String!
-  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -100,11 +97,8 @@ type IxTypedItem__String__ {
   Description: String
 }
 
-input IxTypedItem__String__Input {
+input IxTypedItem__String__DO {
   Id: ID!
-  ObjectType: String
-  Name: String!
-  Description: String
 }
 
 extend type Mutation {
