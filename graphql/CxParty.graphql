@@ -2,9 +2,9 @@ type CxParty {
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   Name: String
-  Description: String
   Address: IxAddress
   ObjectType: CxPartyObjectType
+  Description: String
   Id: ID!
   Tags: [IxAttribute__String__]
 }
@@ -13,9 +13,9 @@ input CxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!
-  Description: String
   Address: IxAddressInput
   ObjectType: CxPartyObjectType
+  Description: String
   Id: ID!
   Tags: [IxAttribute__String__Input]
 }

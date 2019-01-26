@@ -213,9 +213,6 @@
 			"type": "string",
 			"minLength": 1
 		},
-		"Description": {
-			"type": "string"
-		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
 		},
@@ -224,6 +221,9 @@
 			"enum": [
 				"Party"
 			]
+		},
+		"Description": {
+			"type": "string"
 		},
 		"Id": {
 			"type": "integer"

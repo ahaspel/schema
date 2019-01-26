@@ -6,8 +6,8 @@ type CxCompany {
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   Name: String
-  Description: String
   Address: IxAddress
+  Description: String
   Id: ID!
   Tags: [IxAttribute__String__]
 }
@@ -20,8 +20,8 @@ input CxCompanyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!
-  Description: String
   Address: IxAddressInput
+  Description: String
   Id: ID!
   Tags: [IxAttribute__String__Input]
 }

@@ -567,11 +567,11 @@
 			"type": "string",
 			"minLength": 1
 		},
-		"Description": {
-			"type": "string"
-		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
+		},
+		"Description": {
+			"type": "string"
 		},
 		"Id": {
 			"type": "integer"
