@@ -5,6 +5,12 @@
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -23,6 +29,8 @@
 				}
 			},
 			"required": [
+				"BaseObject",
+				"AttributeId",
 				"Id"
 			]
 		}
@@ -44,6 +52,9 @@
 		"Description": {
 			"type": "string"
 		},
+		"BaseObject": {
+			"type": "string"
+		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
@@ -62,7 +73,6 @@
 				"Attribute",
 				"PurchaseOrderStatus",
 				"Privilege",
-				"BatchStatus",
 				"TimeEntryType",
 				"CompanyType",
 				"JobStatus",

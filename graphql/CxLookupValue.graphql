@@ -3,14 +3,16 @@ type CxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  BaseObject: String
   ObjectType: CxLookupValueObjectType
 }
 
 input CxLookupValueInput {
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
   Id: ID!
   Name: String
   Description: String
+  BaseObject: String
   ObjectType: CxLookupValueObjectType!
 }
 
@@ -30,7 +32,6 @@ enum CxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   Privilege
-  BatchStatus
   TimeEntryType
   CompanyType
   JobStatus
@@ -44,14 +45,21 @@ input FilterInput {
 }
 
 type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
   Id: ID!
   ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {

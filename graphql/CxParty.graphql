@@ -17,7 +17,7 @@ input CxPartyInput {
   Address: IxAddressInput
   ObjectType: CxPartyObjectType
   Id: ID!
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxPartyObjectType {
@@ -60,14 +60,21 @@ enum IxAddressObjectType {
 }
 
 type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
   Id: ID!
   ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -107,6 +114,7 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
+  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Name: String
@@ -134,7 +142,6 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   Privilege
-  BatchStatus
   TimeEntryType
   CompanyType
   JobStatus

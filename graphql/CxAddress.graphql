@@ -26,6 +26,8 @@ input FilterInput {
 }
 
 type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
   Id: ID!
   ObjectType: IxAttributeStringObjectType
   Name: String
@@ -55,6 +57,7 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
+  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Name: String
@@ -82,7 +85,6 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   Privilege
-  BatchStatus
   TimeEntryType
   CompanyType
   JobStatus

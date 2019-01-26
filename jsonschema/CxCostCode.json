@@ -5,6 +5,12 @@
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -23,6 +29,8 @@
 				}
 			},
 			"required": [
+				"BaseObject",
+				"AttributeId",
 				"Id"
 			]
 		},
@@ -61,6 +69,9 @@
 				},
 				"Integral": {
 					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
 				},
 				"Id": {
 					"type": "integer"
@@ -129,6 +140,9 @@
 			"type": "string"
 		},
 		"Description": {
+			"type": "string"
+		},
+		"BaseObject": {
 			"type": "string"
 		}
 	},

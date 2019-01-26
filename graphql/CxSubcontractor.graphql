@@ -35,7 +35,7 @@ input CxSubcontractorInput {
   Description: String
   Address: IxAddressInput
   Id: ID!
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxSubcontractorObjectType {
@@ -78,14 +78,21 @@ enum IxAddressObjectType {
 }
 
 type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
   Id: ID!
   ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -125,6 +132,7 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
+  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Name: String
@@ -152,7 +160,6 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   Privilege
-  BatchStatus
   TimeEntryType
   CompanyType
   JobStatus
@@ -233,6 +240,7 @@ type IxResourceType {
   Subtype: IxTypedItem__String__
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
+  BaseObject: String
   Id: ID!
   ObjectType: IxResourceTypeObjectType
   Name: String
@@ -272,10 +280,11 @@ input IxSupplyTypeInput {
   ObjectType: String
   Name: String
   Description: String
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 type IxTypedItem__String__ {
+  BaseObject: String
   Id: ID!
   ObjectType: String
   Name: String
@@ -286,6 +295,7 @@ type IxUnit {
   UnitType: IxUnitUnitType
   Scalar: Float
   Integral: Boolean
+  BaseObject: String
   Id: ID!
   ObjectType: IxUnitObjectType
   Name: String

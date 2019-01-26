@@ -49,6 +49,12 @@
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -67,6 +73,8 @@
 				}
 			},
 			"required": [
+				"BaseObject",
+				"AttributeId",
 				"Id"
 			]
 		},
@@ -115,6 +123,9 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -136,7 +147,6 @@
 						"Attribute",
 						"PurchaseOrderStatus",
 						"Privilege",
-						"BatchStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",

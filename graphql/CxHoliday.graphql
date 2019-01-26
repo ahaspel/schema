@@ -19,7 +19,7 @@ input CxHolidayInput {
   CurrentLifespan: IxRangeInput
   History: [IxRangeInput]
   Duration: String
-  Tags: [IxAttribute__String__DO]
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxHolidayObjectType {
@@ -32,14 +32,21 @@ input FilterInput {
 }
 
 type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
   Id: ID!
   ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
 
-input IxAttribute__String__DO {
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {

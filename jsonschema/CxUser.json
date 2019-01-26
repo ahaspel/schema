@@ -5,6 +5,12 @@
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -23,6 +29,8 @@
 				}
 			},
 			"required": [
+				"BaseObject",
+				"AttributeId",
 				"Id"
 			]
 		},
@@ -77,6 +85,9 @@
 		"IxTypedItem__String__": {
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
