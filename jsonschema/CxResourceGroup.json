@@ -317,29 +317,6 @@
 			]
 		},
 		"IxRange": {
-			"type": [
-				"object",
-				"null"
-			],
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
-		},
-		"IxRange-1": {
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -398,14 +375,14 @@
 				"History": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/IxRange-1"
+						"$ref": "#/definitions/IxRange"
 					}
 				},
 				"Duration": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange-1"
+					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",
@@ -439,14 +416,14 @@
 				"History": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/IxRange-1"
+						"$ref": "#/definitions/IxRange"
 					}
 				},
 				"Duration": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange-1"
+					"$ref": "#/definitions/IxRange"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -639,7 +616,7 @@
 		"History": {
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/IxRange-1"
+				"$ref": "#/definitions/IxRange"
 			}
 		},
 		"ResourceBlocks": {

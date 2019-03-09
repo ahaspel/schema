@@ -3,7 +3,7 @@ type CxResourceGroup {
   Count: Int
   Name: String
   CurrentLifespan: IxRange
-  History: [IxRange-1]
+  History: [IxRange]
   ResourceBlocks: [IxResourceBlock]
   ObjectType: CxResourceGroupObjectType
   Temporary: Boolean
@@ -231,13 +231,7 @@ type IxRange {
   Duration: String
 }
 
-type IxRange-1 {
-  Start: String
-  End: String
-  Duration: String
-}
-
-input IxRange-1Input {
+input IxRangeInput {
   Start: String!
   End: String!
   Duration: String
@@ -253,9 +247,9 @@ type IxResource {
   Id: ID!
   Name: String
   Description: String
-  History: [IxRange-1]
+  History: [IxRange]
   Duration: String
-  CurrentLifespan: IxRange-1
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String
@@ -265,9 +259,9 @@ type IxResource {
 type IxResourceBlock {
   Resource: IxResource
   Valid: Boolean
-  History: [IxRange-1]
+  History: [IxRange]
   Duration: String
-  CurrentLifespan: IxRange-1
+  CurrentLifespan: IxRange
   ObjectType: IxResourceBlockObjectType
   Id: ID!
   Name: String
@@ -278,9 +272,9 @@ type IxResourceBlock {
 input IxResourceBlockInput {
   Resource: IxResourceDO!
   Valid: Boolean
-  History: [IxRange-1Input]
+  History: [IxRangeInput]
   Duration: String
-  CurrentLifespan: IxRange-1Input!
+  CurrentLifespan: IxRangeInput!
   ObjectType: IxResourceBlockObjectType
   Id: ID!
   Name: String
