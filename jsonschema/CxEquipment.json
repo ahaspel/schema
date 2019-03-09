@@ -264,9 +264,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
 				"History": {
 					"type": "array",
 					"items": {
@@ -275,6 +272,9 @@
 				},
 				"Duration": {
 					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",

@@ -158,9 +158,9 @@ type IxEmployee {
   Id: ID!
   Name: String
   Description: String
-  CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String

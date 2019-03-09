@@ -253,9 +253,9 @@ type IxResource {
   Id: ID!
   Name: String
   Description: String
-  CurrentLifespan: IxRange-1
   History: [IxRange-1]
   Duration: String
+  CurrentLifespan: IxRange-1
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String
@@ -265,9 +265,9 @@ type IxResource {
 type IxResourceBlock {
   Resource: IxResource
   Valid: Boolean
-  CurrentLifespan: IxRange-1
   History: [IxRange-1]
   Duration: String
+  CurrentLifespan: IxRange-1
   ObjectType: IxResourceBlockObjectType
   Id: ID!
   Name: String
@@ -278,9 +278,9 @@ type IxResourceBlock {
 input IxResourceBlockInput {
   Resource: IxResourceDO!
   Valid: Boolean
-  CurrentLifespan: IxRange-1Input!
   History: [IxRange-1Input]
   Duration: String
+  CurrentLifespan: IxRange-1Input!
   ObjectType: IxResourceBlockObjectType
   Id: ID!
   Name: String

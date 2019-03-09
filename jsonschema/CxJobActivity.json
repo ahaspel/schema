@@ -34,29 +34,6 @@
 			]
 		},
 		"IxRange": {
-			"type": [
-				"object",
-				"null"
-			],
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
-		},
-		"IxRange-1": {
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -103,12 +80,9 @@
 			"$ref": "#/definitions/IxRange"
 		},
 		"History": {
-			"type": [
-				"array",
-				"null"
-			],
+			"type": "array",
 			"items": {
-				"$ref": "#/definitions/IxRange-1"
+				"$ref": "#/definitions/IxRange"
 			}
 		},
 		"ForeColor": {

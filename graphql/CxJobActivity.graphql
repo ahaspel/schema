@@ -4,7 +4,7 @@ type CxJobActivity {
   Completed: Boolean
   Priority: Int
   CurrentLifespan: IxRange
-  History: [IxRange-1]
+  History: [IxRange]
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
@@ -58,12 +58,6 @@ enum IxAttributeStringObjectType {
 }
 
 type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
-type IxRange-1 {
   Start: String
   End: String
   Duration: String
