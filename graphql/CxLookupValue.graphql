@@ -1,18 +1,14 @@
 type CxLookupValue {
-  Tags: [IxAttribute__String__]
-  Id: ID!
   Name: String
+  Id: ID!
   Description: String
-  BaseObject: String
   ObjectType: CxLookupValueObjectType
 }
 
 input CxLookupValueInput {
-  Tags: [IxAttribute__String__Input]
+  Name: String!
   Id: ID!
-  Name: String
   Description: String
-  BaseObject: String
   ObjectType: CxLookupValueObjectType!
 }
 
@@ -42,28 +38,6 @@ enum CxLookupValueObjectType {
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxAttribute__String__ {
-  BaseObject: String
-  AttributeId: Int
-  Id: ID!
-  ObjectType: IxAttributeStringObjectType
-  Name: String
-  Description: String
-}
-
-input IxAttribute__String__Input {
-  BaseObject: String!
-  AttributeId: Int!
-  Id: ID!
-  ObjectType: IxAttributeStringObjectType
-  Name: String
-  Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
 }
 
 extend type Mutation {

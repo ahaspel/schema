@@ -1,29 +1,25 @@
 {
-	"Id": 0,
-	"Type": {
-		"Id": 0
-	},
-	"Subtype": {
-		"Id": 0
-	},
+	"Family": "Labor",
 	"ResourceSubtypes": [
 		{
-			"Id": 29
+			"ObjectType": "ResourceSubtype",
+			"Id": 0,
+			"Name": "natus",
+			"Description": "nihil"
 		}
 	],
-	"MoveVehicle": false,
-	"BaseObject": "rem",
-	"ObjectType": "ResourceType",
-	"Description": "cum",
-	"Name": "quo",
+	"MoveVehicle": true,
+	"Name": "impedit",
+	"Id": 0,
+	"Description": "quos",
 	"Tags": [
 		{
-			"BaseObject": "voluptatem",
+			"BaseObject": "hic",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "molestias"
+			"Description": "veritatis"
 		}
 	],
 	"__typename": "CxResourceType"

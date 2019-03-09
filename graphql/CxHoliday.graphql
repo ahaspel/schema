@@ -2,23 +2,16 @@ type CxHoliday {
   Holiday: String
   Name: String
   ObjectType: CxHolidayObjectType
-  Description: String
   Id: ID!
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
 input CxHolidayInput {
   Holiday: String!
   Name: String!
-  ObjectType: CxHolidayObjectType
-  Description: String
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -34,8 +27,8 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -43,26 +36,14 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
 
 enum IxAttributeStringObjectType {
   Attribute
-}
-
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
 }
 
 extend type Mutation {

@@ -1,0 +1,146 @@
+{
+	"id": "https://congistics.com/schema/CxJobActivity",
+	"title": "com.congistics.cbrd.job.CxJobActivity",
+	"definitions": {
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"BaseObject",
+				"AttributeId",
+				"Id"
+			]
+		},
+		"IxRange": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		},
+		"IxRange-1": {
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		}
+	},
+	"immutable": [
+		"ObjectType",
+		"Dto",
+		"History",
+		"Duration",
+		"ParentId"
+	],
+	"type": "object",
+	"properties": {
+		"ParentId": {
+			"type": "integer"
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Completed": {
+			"type": "boolean"
+		},
+		"Priority": {
+			"type": "integer"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"History": {
+			"type": [
+				"array",
+				"null"
+			],
+			"items": {
+				"$ref": "#/definitions/IxRange-1"
+			}
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"JobActivity"
+			]
+		},
+		"Duration": {
+			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"Name",
+		"Id"
+	]
+}

@@ -2,10 +2,24 @@
 	"PhoneNumbers": [],
 	"Emails": [],
 	"Name": "",
-	"Address": [],
-	"ObjectType": [],
-	"Description": "",
+	"Address": {
+		"Street": "",
+		"StreetDetails": "",
+		"State": {
+			"Id": 0
+		},
+		"City": "",
+		"ZipCode": "",
+		"Geocode": {
+			"Lat": 0,
+			"Lng": 0,
+			"Source": "Owner"
+		},
+		"ObjectType": "Address",
+		"Id": 0
+	},
 	"Id": 0,
+	"Description": "",
 	"Tags": [],
 	"__typename": "CxParty"
 }

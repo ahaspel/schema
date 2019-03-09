@@ -1,0 +1,85 @@
+type CxJobActivity {
+  ParentId: Int
+  Name: String
+  Completed: Boolean
+  Priority: Int
+  CurrentLifespan: IxRange
+  History: [IxRange-1]
+  ForeColor: String
+  BackColor: String
+  ObjectType: CxJobActivityObjectType
+  Duration: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxJobActivityInput {
+  Name: String!
+  Completed: Boolean
+  Priority: Int
+  CurrentLifespan: IxRangeInput
+  ForeColor: String
+  BackColor: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxJobActivityObjectType {
+  JobActivity
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+type IxRange-1 {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+extend type Mutation {
+  cxJobActivitys_onSave(data: [CxJobActivityInput], objectType: String = "JobActivity", operation: String = "edit"): [CxJobActivity]
+  cxJobActivitys_onDelete(data: [String], objectType: String = "JobActivity", operation: String = "delete"): [CxJobActivity]
+}
+
+extend type Query {
+  cxJobActivitys(filters: [FilterInput], objectType: String = "JobActivity"): [CxJobActivity]
+}

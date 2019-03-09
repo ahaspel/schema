@@ -1,0 +1,159 @@
+{
+	"Priority": {
+		"Id": 1
+	},
+	"Client": {
+		"Id": 2
+	},
+	"TotalCost": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 118
+	},
+	"Types": [
+		{
+			"Id": 1
+		}
+	],
+	"Subtypes": [
+		{
+			"Id": 1
+		}
+	],
+	"Certifications": [
+		{
+			"Id": 1
+		}
+	],
+	"Address": {
+		"Street": "fugiat",
+		"StreetDetails": "dolore",
+		"State": {
+			"Id": 1
+		},
+		"City": "voluptatibus",
+		"ZipCode": "recusandae",
+		"Geocode": {
+			"Lat": -14.9202,
+			"Lng": 144.0251,
+			"Source": "Action"
+		},
+		"ObjectType": "Address",
+		"Id": 0
+	},
+	"AccountCode": "alias",
+	"Contacts": [
+		{
+			"Id": 1
+		}
+	],
+	"Name": "eligendi",
+	"Notes": "quae",
+	"CurrentLifespan": {
+		"Start": "2018-01-14T08:00:00",
+		"End": "2019-12-14T08:00:00",
+		"Duration": "dolorum"
+	},
+	"JobActivities": [
+		{
+			"ParentId": 465,
+			"Completed": false,
+			"Priority": 929,
+			"ObjectType": "JobActivity",
+			"Id": 0,
+			"Name": "nobis",
+			"Description": "consectetur",
+			"History": [
+				{
+					"Start": "2018-01-14T08:00:00",
+					"End": "2019-12-14T08:00:00",
+					"Duration": "iste"
+				}
+			],
+			"CurrentLifespan": {
+				"Start": "2018-01-14T08:00:00",
+				"End": "2019-12-14T08:00:00",
+				"Duration": "similique"
+			},
+			"Duration": "ut",
+			"Tags": [
+				{
+					"BaseObject": "vel",
+					"AttributeId": 2,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Name": "Capacity",
+					"Description": "amet"
+				}
+			],
+			"ForeColor": "#FFFFFF00",
+			"BackColor": "Transparent"
+		}
+	],
+	"Owner": {
+		"Id": 1
+	},
+	"Manager": {
+		"Id": 1
+	},
+	"Status": {
+		"Id": 1
+	},
+	"StatusDue": "2019-01-14T08:00:00",
+	"ForeColor": "#FFFFFF00",
+	"BackColor": "Transparent",
+	"JobCosts": [
+		{
+			"CostCode": {
+				"UnitCost": {
+					"Unit": {
+						"Id": 1
+					},
+					"Cost": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 361
+					},
+					"Notes": "mollitia"
+				},
+				"Global": false,
+				"BaseObject": "fugit",
+				"ObjectType": "CostCode",
+				"Id": 0,
+				"Name": "enim",
+				"Description": "sunt"
+			},
+			"CostPerUnit": {
+				"Unit": {
+					"Id": 1
+				},
+				"Quantity": 821
+			},
+			"TotalAmount": 567,
+			"CompletedAmount": 185,
+			"BaseObject": "dolorem",
+			"ObjectType": "JobCost",
+			"Id": 0,
+			"Name": "est",
+			"Description": "voluptatibus"
+		}
+	],
+	"TotalHours": 0,
+	"EstimatedLaborHours": 591,
+	"EstimatedEquipmentHours": 810,
+	"Id": 0,
+	"Description": "rerum",
+	"Tags": [
+		{
+			"BaseObject": "nemo",
+			"AttributeId": 2,
+			"ObjectType": "Attribute",
+			"Id": 0,
+			"Name": "Capacity",
+			"Description": "natus"
+		}
+	],
+	"__typename": "CxJob"
+}

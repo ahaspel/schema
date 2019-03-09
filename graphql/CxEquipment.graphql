@@ -8,32 +8,25 @@ type CxEquipment {
   Width: IxQuantity
   Capacity: IxQuantity
   MoveNotes: String
-  AbbreviatedName: String
-  ObjectType: String
-  Description: String
+  Operators: [IxEmployee]
+  ObjectType: CxEquipmentObjectType
+  Returned: Boolean
   Temporary: Boolean
+  Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   UnitCost: IxUnitCost
   InCrew: Boolean
-  Divisible: Boolean
-  HasDescription: Boolean
   ForeColor: String
   BackColor: String
   Address: IxAddress
-  Location: IxAddress
-  AllowMove: Boolean
-  Returned: Boolean
+  Location: IxLocation
   AccountCode: String
-  Children: [IxActionHolder]
-  Name: String
-  Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRange
   CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
+  Id: ID!
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -47,66 +40,29 @@ input CxEquipmentInput {
   Width: IxQuantityInput
   Capacity: IxQuantityInput
   MoveNotes: String
-  AbbreviatedName: String
-  ObjectType: String
-  Description: String
+  Operators: [IxEmployeeDO]
   Temporary: Boolean
+  Owner: IxCompanyDO!
   ResourceType: IxResourceTypeDO!
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCost: IxUnitCostInput
-  InCrew: Boolean
-  Divisible: Boolean
-  HasDescription: Boolean
   ForeColor: String
   BackColor: String
-  Address: IxAddressDO
-  Location: IxAddressDO
-  AllowMove: Boolean
-  Returned: Boolean
-  AccountCode: String
-  Children: [IxActionHolderInput]
-  Name: String!
-  Id: ID!
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
-  CurrentLifespan: IxRangeInput
+  AccountCode: String!
+  CurrentLifespan: IxRangeInput!
   History: [IxRangeInput]
-  Duration: String
+  Id: ID!
+  Description: String
   Tags: [IxAttribute__String__Input]
+}
+
+enum CxEquipmentObjectType {
+  Equipment
 }
 
 input FilterInput {
   name: String!
   values: [String]
-}
-
-type IxActionHolder {
-  Start: String
-  End: String
-  Lifespan: IxRange
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxActionHolderInput {
-  Start: String
-  End: String
-  Lifespan: IxRangeInput
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
-  Id: ID!
-  ObjectType: String
-  Name: String!
-  Description: String
-  Tags: [IxAttribute__String__Input]
 }
 
 type IxAddress {
@@ -116,13 +72,7 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
-  Name: String
-  Description: String
-}
-
-input IxAddressDO {
   Id: ID!
 }
 
@@ -131,21 +81,103 @@ enum IxAddressObjectType {
 }
 
 type IxAttribute__String__ {
-  Id: ID!
+  BaseObject: String
+  AttributeId: Int
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
 
 input IxAttribute__String__Input {
-  Id: ID!
+  BaseObject: String!
+  AttributeId: Int!
   ObjectType: IxAttributeStringObjectType
-  Name: String!
+  Id: ID!
+  Name: String
   Description: String
 }
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxCompany {
+  CompanyType: IxLookupValue
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxCompanyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+  AccountCode: String
+  Contacts: [IxParty]
+}
+
+input IxCompanyDO {
+  Id: ID!
+}
+
+enum IxCompanyObjectType {
+  Company
+  Subcontractor
+}
+
+type IxEmail {
+  Id: ID!
+  Email: String
+  Name: String
+  Description: String
+}
+
+type IxEmployee {
+  Person: IxParty
+  PhoneNumbers: [IxPhoneNumber]
+  Emails: [IxEmail]
+  FirstName: String
+  LastName: String
+  MiddleName: String
+  BirthDate: String
+  PreviousExperience: IxQuantity
+  Minority: [IxLookupValue]
+  Unions: [IxLookupValue]
+  Licenses: [IxLookupValue]
+  Languages: [IxLookupValue]
+  TrainingCourses: [IxLookupValue]
+  Skills: [IxLookupValue]
+  LaborClassification: [IxLookupValue]
+  Machines: [IxResourceType]
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  ObjectType: IxEmployeeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRange
+  History: [IxRange]
+  Duration: String
+  Tags: [IxAttribute__String__]
+  AccountCode: String
+  ForeColor: String
+  BackColor: String
+  Address: IxAddress
+  Location: IxLocation
+  IsMover: Boolean
+  Contacts: [IxParty]
+  InCrew: Boolean
+}
+
+input IxEmployeeDO {
+  Id: ID!
+}
+
+enum IxEmployeeObjectType {
+  Employee
 }
 
 type IxGeocode {
@@ -160,12 +192,18 @@ enum IxGeocodeSource {
   GPSService
 }
 
-type IxLookupValue {
-  Id: ID!
-  ObjectType: IxLookupValueObjectType
+type IxLocation {
+  Address: IxAddress
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Name: String
+  Description: String
 }
 
 enum IxLookupValueObjectType {
@@ -184,7 +222,6 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   Privilege
-  BatchStatus
   TimeEntryType
   CompanyType
   JobStatus
@@ -200,6 +237,31 @@ type IxMoney {
 input IxMoneyInput {
   Unit: IxUnitDO!
   Quantity: Float!
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Subcontractor
+  Plant
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Name: String
+  Description: String
 }
 
 type IxQuantity {
@@ -225,11 +287,10 @@ input IxRangeInput {
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
 }
 
 input IxResourceSubtypeDO {
@@ -241,20 +302,14 @@ enum IxResourceSubtypeObjectType {
 }
 
 type IxResourceType {
-  Type: IxTypedItem__String__
-  Subtype: IxTypedItem__String__
+  Family: IxResourceTypeFamily
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
-  Id: ID!
+  BaseObject: String
   ObjectType: IxResourceTypeObjectType
+  Id: ID!
   Name: String
   Description: String
-  Start: String
-  End: String
-  Lifespan: IxRange
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
 }
 
@@ -262,21 +317,22 @@ input IxResourceTypeDO {
   Id: ID!
 }
 
-enum IxResourceTypeObjectType {
-  ResourceType
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
 }
 
-type IxTypedItem__String__ {
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
+enum IxResourceTypeObjectType {
+  ResourceType
 }
 
 type IxUnit {
   UnitType: IxUnitUnitType
   Scalar: Float
   Integral: Boolean
+  BaseObject: String
   Id: ID!
   ObjectType: IxUnitObjectType
   Name: String
@@ -314,10 +370,10 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String, operation: String = "edit"): [CxEquipment]
-  cxEquipments_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxEquipment]
+  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String = "Equipment", operation: String = "edit"): [CxEquipment]
+  cxEquipments_onDelete(data: [String], objectType: String = "Equipment", operation: String = "delete"): [CxEquipment]
 }
 
 extend type Query {
-  cxEquipments(filters: [FilterInput], objectType: String): [CxEquipment]
+  cxEquipments(filters: [FilterInput], objectType: String = "Equipment"): [CxEquipment]
 }

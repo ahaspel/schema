@@ -2,19 +2,32 @@
 	"Preferred": false,
 	"IsMover": false,
 	"SupplyTypes": [],
-	"DefaultSupplyType": [],
-	"DefaultResourceSubtype": [],
-	"SuppliesAll": false,
-	"ObjectType": [],
-	"CompanyType": [],
+	"CompanyType": {
+		"Id": 0
+	},
 	"Contacts": [],
 	"AccountCode": "",
 	"PhoneNumbers": [],
 	"Emails": [],
 	"Name": "",
-	"Address": [],
-	"Description": "",
+	"Address": {
+		"Street": "",
+		"StreetDetails": "",
+		"State": {
+			"Id": 0
+		},
+		"City": "",
+		"ZipCode": "",
+		"Geocode": {
+			"Lat": 0,
+			"Lng": 0,
+			"Source": "Owner"
+		},
+		"ObjectType": "Address",
+		"Id": 0
+	},
 	"Id": 0,
+	"Description": "",
 	"Tags": [],
 	"__typename": "CxSubcontractor"
 }

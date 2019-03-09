@@ -1,0 +1,341 @@
+type CxMaterial {
+  ObjectType: CxMaterialObjectType
+  CurrentLifespan: IxRange
+  Inventory: IxInventory
+  Quantity: IxQuantity
+  QuantityRemaining: IxQuantity
+  Unit: IxUnit
+  Reusable: Boolean
+  Temporary: Boolean
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  UnitCost: IxUnitCost
+  ForeColor: String
+  BackColor: String
+  AccountCode: String
+  Duration: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxMaterialInput {
+  CurrentLifespan: IxRangeInput
+  Inventory: IxInventoryInput!
+  Quantity: IxQuantityInput
+  Unit: IxUnitDO!
+  Reusable: Boolean!
+  Temporary: Boolean
+  Owner: IxCompanyDO!
+  ResourceType: IxResourceTypeDO!
+  ResourceSubtype: IxResourceSubtypeDO!
+  UnitCost: IxUnitCostInput
+  ForeColor: String
+  BackColor: String
+  AccountCode: String
+  Duration: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxMaterialObjectType {
+  Material
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxCompany {
+  CompanyType: IxLookupValue
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxCompanyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+  AccountCode: String
+  Contacts: [IxParty]
+}
+
+input IxCompanyDO {
+  Id: ID!
+}
+
+enum IxCompanyObjectType {
+  Company
+  Subcontractor
+}
+
+type IxEmail {
+  Id: ID!
+  Email: String
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxInventory {
+  Items: [IxInventoryItem]
+  Total: Float
+  Empty: Boolean
+}
+
+input IxInventoryInput {
+  Items: [IxInventoryItemInput]!
+  Total: Float
+  Empty: Boolean
+}
+
+type IxInventoryItem {
+  Id: ID!
+  Quantity: Float
+  Start: String
+  Vendor: IxCompany
+  AccountCode: String
+  Name: String
+  Description: String
+}
+
+input IxInventoryItemInput {
+  Id: ID!
+  Quantity: Float!
+  Start: String!
+  Vendor: IxCompanyDO
+  AccountCode: String
+  Name: String
+  Description: String
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Subcontractor
+  Plant
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Name: String
+  Description: String
+}
+
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+type IxResourceSubtype {
+  ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxResourceSubtypeDO {
+  Id: ID!
+}
+
+enum IxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  ResourceSubtypes: [IxResourceSubtype]
+  MoveVehicle: Boolean
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input IxResourceTypeDO {
+  Id: ID!
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+enum IxResourceTypeObjectType {
+  ResourceType
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+extend type Mutation {
+  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit"): [CxMaterial]
+  cxMaterials_onDelete(data: [String], objectType: String = "Material", operation: String = "delete"): [CxMaterial]
+}
+
+extend type Query {
+  cxMaterials(filters: [FilterInput], objectType: String = "Material"): [CxMaterial]
+}

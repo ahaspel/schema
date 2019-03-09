@@ -11,18 +11,17 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -33,33 +32,17 @@
 				"AttributeId",
 				"Id"
 			]
-		},
-		"IxRange": {
-			"type": "object",
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string",
-					"format": "time"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
 		}
 	},
+	"immutable": [
+		"ObjectType",
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"Holiday": {
 			"type": "string",
+			"minLength": 1,
 			"format": "date-time"
 		},
 		"Name": {
@@ -72,22 +55,10 @@
 				"Holiday"
 			]
 		},
-		"Description": {
-			"type": "string"
-		},
 		"Id": {
 			"type": "integer"
 		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
-		"Duration": {
+		"Description": {
 			"type": "string"
 		},
 		"Tags": {
@@ -98,8 +69,8 @@
 		}
 	},
 	"required": [
-		"Holiday",
 		"Name",
-		"Id"
+		"Id",
+		"Holiday"
 	]
 }

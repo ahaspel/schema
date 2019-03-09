@@ -1,19 +1,17 @@
 {
+	"Person": {
+		"Id": 0
+	},
 	"Username": "",
 	"Password": "",
-	"Level": [],
+	"Level": {
+		"Id": 0
+	},
 	"WebPrivileges": [],
 	"Privileges": [],
-	"Administrator": false,
-	"ReadOnly": false,
-	"WebLevel": [],
-	"ObjectType": [],
+	"WebLevel": "All",
 	"Description": "",
-	"Name": "",
 	"Id": 0,
-	"CurrentLifespan": [],
-	"History": [],
-	"Duration": "",
 	"Tags": [],
 	"__typename": "CxUser"
 }

@@ -2,8 +2,6 @@ type CxSubcontractor {
   Preferred: Boolean
   IsMover: Boolean
   SupplyTypes: [IxSupplyType]
-  DefaultSupplyType: IxResourceType
-  DefaultResourceSubtype: IxResourceSubtype
   SuppliesAll: Boolean
   ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValue
@@ -13,8 +11,8 @@ type CxSubcontractor {
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
-  Description: String
   Id: ID!
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -22,19 +20,15 @@ input CxSubcontractorInput {
   Preferred: Boolean
   IsMover: Boolean
   SupplyTypes: [IxSupplyTypeInput]
-  DefaultSupplyType: IxResourceTypeDO
-  DefaultResourceSubtype: IxResourceSubtypeDO
-  SuppliesAll: Boolean
-  ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValueDO!
-  Contacts: [IxPartyDO]
+  Contacts: [IxPartyInput]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
-  Description: String
   Id: ID!
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -54,23 +48,19 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
-  Name: String
-  Description: String
+  Id: ID!
 }
 
 input IxAddressInput {
   Street: String!
   StreetDetails: String
   State: IxLookupValueDO!
-  City: String
+  City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
-  Name: String
-  Description: String
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -80,8 +70,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -89,8 +79,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -133,11 +123,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
 }
 
 input IxLookupValueDO {
@@ -167,36 +156,33 @@ enum IxLookupValueObjectType {
   WebPrivilege
 }
 
-type IxMoney {
-  Unit: IxUnit
-  Quantity: Float
-}
-
-input IxMoneyInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
-}
-
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  History: [IxRange]
-  CurrentLifespan: IxRange
-  Duration: String
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
   Address: IxAddress
+  Tags: [IxAttribute__String__]
 }
 
-input IxPartyDO {
+input IxPartyInput {
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  ObjectType: IxPartyObjectType
   Id: ID!
+  Name: String!
+  Description: String
+  Address: IxAddressInput
+  Tags: [IxAttribute__String__Input]
 }
 
 enum IxPartyObjectType {
   Party
+  Company
+  Subcontractor
+  Plant
 }
 
 type IxPhoneNumber {
@@ -213,18 +199,11 @@ input IxPhoneNumberInput {
   Description: String
 }
 
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
 }
 
 input IxResourceSubtypeDO {
@@ -235,37 +214,12 @@ enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
 
-type IxResourceType {
-  Type: IxTypedItem__String__
-  Subtype: IxTypedItem__String__
-  ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxResourceTypeObjectType
-  Name: String
-  Description: String
-  History: [IxRange]
-  CurrentLifespan: IxRange
-  Duration: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
-}
-
-enum IxResourceTypeObjectType {
-  ResourceType
-}
-
 type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
-  UnitCosts: [IxUnitCost]
   AccrualNumber: String
   Notes: String
+  ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  ObjectType: String
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -273,63 +227,17 @@ type IxSupplyType {
 
 input IxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
-  UnitCosts: [IxUnitCostInput]
   AccrualNumber: String
   Notes: String
+  ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  ObjectType: String
   Name: String
   Description: String
   Tags: [IxAttribute__String__Input]
 }
 
-type IxTypedItem__String__ {
-  BaseObject: String
-  Id: ID!
-  ObjectType: String
-  Name: String
-  Description: String
-}
-
-type IxUnit {
-  UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxUnitObjectType
-  Name: String
-  Description: String
-}
-
-type IxUnitCost {
-  Unit: IxUnit
-  Cost: IxMoney
-  Notes: String
-}
-
-input IxUnitCostInput {
-  Unit: IxUnitDO!
-  Cost: IxMoneyInput!
-  Notes: String
-}
-
-input IxUnitDO {
-  Id: ID!
-}
-
-enum IxUnitObjectType {
-  Unit
-}
-
-enum IxUnitUnitType {
-  Time
-  Length
-  Weight
-  Area
-  Volume
-  Money
-  Self
+enum IxSupplyTypeObjectType {
+  SupplyType
 }
 
 extend type Mutation {

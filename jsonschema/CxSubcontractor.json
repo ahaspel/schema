@@ -6,7 +6,8 @@
 			"type": "object",
 			"properties": {
 				"Street": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"StreetDetails": {
 					"type": "string"
@@ -15,7 +16,8 @@
 					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"ZipCode": {
 					"type": "string"
@@ -23,26 +25,20 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
 				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
 				"Street",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -55,18 +51,17 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -89,8 +84,7 @@
 					"format": "email"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -126,9 +120,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -154,37 +145,18 @@
 						"WebPrivilege"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [
 				"Id"
-			]
-		},
-		"IxMoney": {
-			"type": "object",
-			"properties": {
-				"Unit": {
-					"$ref": "#/definitions/IxUnit"
-				},
-				"Quantity": {
-					"type": "number"
-				}
-			},
-			"required": [
-				"Unit",
-				"Quantity"
 			]
 		},
 		"IxParty": {
@@ -202,27 +174,17 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string",
-					"format": "time"
-				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"Party"
+						"Party",
+						"Company",
+						"Subcontractor",
+						"Plant"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
@@ -231,17 +193,18 @@
 				"Description": {
 					"type": "string"
 				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [
+				"Name",
 				"Id"
 			]
 		},
@@ -255,8 +218,7 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -267,112 +229,23 @@
 				"PhoneNumber"
 			]
 		},
-		"IxRange": {
-			"type": "object",
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string",
-					"format": "time"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
-		},
 		"IxResourceSubtype": {
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxResourceType": {
-			"type": "object",
-			"properties": {
-				"Type": {
-					"$ref": "#/definitions/IxTypedItem__String__"
-				},
-				"Subtype": {
-					"$ref": "#/definitions/IxTypedItem__String__"
-				},
-				"ResourceSubtypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceSubtype"
-					}
-				},
-				"MoveVehicle": {
-					"type": "boolean"
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceType"
-					]
-				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
-				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string",
-					"format": "time"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [
@@ -385,27 +258,23 @@
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
-				"UnitCosts": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxUnitCost"
-					}
-				},
 				"AccrualNumber": {
 					"type": "string"
 				},
 				"Notes": {
 					"type": "string"
 				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"SupplyType"
+					]
+				},
 				"Id": {
 					"type": "integer"
 				},
-				"ObjectType": {
-					"type": "string"
-				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -421,95 +290,13 @@
 				"ResourceSubtype",
 				"Id"
 			]
-		},
-		"IxUnit": {
-			"type": "object",
-			"properties": {
-				"UnitType": {
-					"type": "string",
-					"enum": [
-						"Time",
-						"Length",
-						"Weight",
-						"Area",
-						"Volume",
-						"Money",
-						"Self"
-					]
-				},
-				"Scalar": {
-					"type": "number"
-				},
-				"Integral": {
-					"type": "boolean"
-				},
-				"BaseObject": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Unit"
-					]
-				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxUnitCost": {
-			"type": "object",
-			"properties": {
-				"Unit": {
-					"$ref": "#/definitions/IxUnit"
-				},
-				"Cost": {
-					"$ref": "#/definitions/IxMoney"
-				},
-				"Notes": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Unit",
-				"Cost"
-			]
-		},
-		"IxTypedItem__String__": {
-			"type": "object",
-			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
 		}
 	},
+	"immutable": [
+		"ObjectType",
+		"Dto",
+		"SuppliesAll"
+	],
 	"type": "object",
 	"properties": {
 		"Preferred": {
@@ -523,12 +310,6 @@
 			"items": {
 				"$ref": "#/definitions/IxSupplyType"
 			}
-		},
-		"DefaultSupplyType": {
-			"$ref": "#/definitions/IxResourceType"
-		},
-		"DefaultResourceSubtype": {
-			"$ref": "#/definitions/IxResourceSubtype"
 		},
 		"SuppliesAll": {
 			"type": "boolean"
@@ -570,11 +351,11 @@
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
 		},
-		"Description": {
-			"type": "string"
-		},
 		"Id": {
 			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
 		},
 		"Tags": {
 			"type": "array",
@@ -584,8 +365,8 @@
 		}
 	},
 	"required": [
-		"CompanyType",
 		"Name",
-		"Id"
+		"Id",
+		"CompanyType"
 	]
 }

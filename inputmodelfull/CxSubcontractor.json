@@ -1,105 +1,126 @@
 {
-	"Preferred": true,
+	"Preferred": false,
 	"IsMover": false,
 	"SupplyTypes": [
 		{
 			"ResourceSubtype": {
 				"Id": 29
 			},
-			"UnitCosts": [
-				{
-					"Unit": {
-						"Id": 1
-					},
-					"Cost": {
-						"Unit": {
-							"Id": 1
-						},
-						"Quantity": 3843
-					},
-					"Notes": "ipsum"
-				}
-			],
-			"AccrualNumber": "ipsum",
-			"Notes": "maxime",
+			"AccrualNumber": "neque",
+			"Notes": "molestiae",
+			"ObjectType": "SupplyType",
 			"Id": 0,
-			"ObjectType": "ipsam",
-			"Name": "magnam",
-			"Description": "ut",
+			"Name": "dolorem",
+			"Description": "illum",
 			"Tags": [
 				{
-					"BaseObject": "rem",
+					"BaseObject": "magni",
 					"AttributeId": 2,
-					"Id": 0,
 					"ObjectType": "Attribute",
+					"Id": 0,
 					"Name": "Capacity",
-					"Description": "ad"
+					"Description": "cum"
 				}
 			]
 		}
 	],
-	"DefaultSupplyType": {
-		"Id": 1
-	},
-	"DefaultResourceSubtype": {
-		"Id": 29
-	},
-	"SuppliesAll": false,
-	"ObjectType": "Subcontractor",
 	"CompanyType": {
 		"Id": 1
 	},
 	"Contacts": [
 		{
-			"Id": 1
+			"Emails": [
+				{
+					"Id": 0,
+					"Email": "Serena.Boyer@gmail.com",
+					"Name": "in",
+					"Description": "necessitatibus"
+				}
+			],
+			"PhoneNumbers": [
+				{
+					"Id": 0,
+					"PhoneNumber": "quo",
+					"Name": "aperiam",
+					"Description": "nisi"
+				}
+			],
+			"ObjectType": "Subcontractor",
+			"Id": 0,
+			"Name": "consequuntur",
+			"Description": "doloribus",
+			"Address": {
+				"Street": "suscipit",
+				"StreetDetails": "et",
+				"State": {
+					"Id": 1
+				},
+				"City": "et",
+				"ZipCode": "veniam",
+				"Geocode": {
+					"Lat": -20.7934,
+					"Lng": -70.2217,
+					"Source": "Owner"
+				},
+				"ObjectType": "Address",
+				"Id": 0
+			},
+			"Tags": [
+				{
+					"BaseObject": "id",
+					"AttributeId": 2,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Name": "Capacity",
+					"Description": "quod"
+				}
+			]
 		}
 	],
-	"AccountCode": "quo",
+	"AccountCode": "qui",
 	"PhoneNumbers": [
 		{
 			"Id": 0,
-			"PhoneNumber": "itaque",
-			"Name": "fuga",
-			"Description": "est"
+			"PhoneNumber": "saepe",
+			"Name": "magnam",
+			"Description": "accusamus"
 		}
 	],
 	"Emails": [
 		{
 			"Id": 0,
-			"Email": "Olin_Medhurst@hotmail.com",
-			"Name": "omnis",
-			"Description": "omnis"
+			"Email": "Maximilian_Pollich88@hotmail.com",
+			"Name": "facere",
+			"Description": "qui"
 		}
 	],
-	"Name": "officiis",
+	"Name": "sit",
 	"Address": {
-		"Street": "accusamus",
-		"StreetDetails": "veritatis",
+		"Street": "error",
+		"StreetDetails": "voluptatem",
 		"State": {
 			"Id": 1
 		},
-		"City": "corrupti",
-		"ZipCode": "distinctio",
+		"City": "quae",
+		"ZipCode": "fuga",
 		"Geocode": {
-			"Lat": "61.8977",
-			"Lng": "-15.9474",
-			"Source": "Owner"
+			"Lat": 82.1561,
+			"Lng": 153.1715,
+			"Source": "Action"
 		},
-		"Id": 0,
 		"ObjectType": "Address",
-		"Name": "sit",
-		"Description": "aut"
+		"Id": 0
 	},
-	"Description": "accusantium",
 	"Id": 0,
+	"Description": "quae",
 	"Tags": [
 		{
-			"BaseObject": "laborum",
+			"BaseObject": "nemo",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "rerum"
+			"Description": "nulla"
 		}
 	],
 	"__typename": "CxSubcontractor"

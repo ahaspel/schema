@@ -1,38 +1,29 @@
 type CxUser {
+  Person: IxParty
   Username: String
   Password: String
   Level: IxLevel
-  WebPrivileges: [IxTypedItem__String__]
-  Privileges: [IxTypedItem__String__]
+  WebPrivileges: [IxLookupValue]
+  Privileges: [IxLookupValue]
   Administrator: Boolean
   ReadOnly: Boolean
   WebLevel: CxUserWebLevel
-  ObjectType: CxUserObjectType
   Description: String
-  Name: String
+  ObjectType: CxUserObjectType
   Id: ID!
-  CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
 }
 
 input CxUserInput {
+  Person: IxPartyDO!
   Username: String!
   Password: String!
-  Level: IxLevelDO
-  WebPrivileges: [IxTypedItem__String__DO]
-  Privileges: [IxTypedItem__String__DO]
-  Administrator: Boolean
-  ReadOnly: Boolean
+  Level: IxLevelDO!
+  WebPrivileges: [IxLookupValueDO]
+  Privileges: [IxLookupValueDO]
   WebLevel: CxUserWebLevel
-  ObjectType: CxUserObjectType
   Description: String
-  Name: String!
   Id: ID!
-  CurrentLifespan: IxRangeInput
-  History: [IxRangeInput]
-  Duration: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -51,11 +42,26 @@ input FilterInput {
   values: [String]
 }
 
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -63,8 +69,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -73,10 +79,28 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxLevel {
-  Privileges: [IxTypedItem__String__]
+type IxEmail {
   Id: ID!
-  ObjectType: String
+  Email: String
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLevel {
+  ObjectType: IxLevelObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -85,28 +109,72 @@ input IxLevelDO {
   Id: ID!
 }
 
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
+enum IxLevelObjectType {
+  Level
 }
 
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
-type IxTypedItem__String__ {
+type IxLookupValue {
   BaseObject: String
+  ObjectType: IxLookupValueObjectType
   Id: ID!
-  ObjectType: String
   Name: String
   Description: String
 }
 
-input IxTypedItem__String__DO {
+input IxLookupValueDO {
   Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+}
+
+input IxPartyDO {
+  Id: ID!
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Subcontractor
+  Plant
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Name: String
+  Description: String
 }
 
 extend type Mutation {

@@ -28,10 +28,11 @@
 		"Quantity": 0
 	},
 	"MoveNotes": "",
-	"AbbreviatedName": "",
-	"ObjectType": "",
-	"Description": "",
+	"Operators": [],
 	"Temporary": false,
+	"Owner": {
+		"Id": 0
+	},
 	"ResourceType": {
 		"Id": 0
 	},
@@ -50,37 +51,17 @@
 		},
 		"Notes": ""
 	},
-	"InCrew": false,
-	"Divisible": false,
-	"HasDescription": false,
 	"ForeColor": "",
 	"BackColor": "",
-	"Address": {
-		"Id": 0
-	},
-	"Location": {
-		"Id": 0
-	},
-	"AllowMove": false,
-	"Returned": false,
 	"AccountCode": "",
-	"Children": [],
-	"Name": "",
-	"Id": 0,
-	"Start": "",
-	"End": "",
-	"Lifespan": {
-		"Start": "",
-		"End": "",
-		"Duration": ""
-	},
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",
 		"Duration": ""
 	},
 	"History": [],
-	"Duration": "",
+	"Id": 0,
+	"Description": "",
 	"Tags": [],
 	"__typename": "CxEquipment"
 }

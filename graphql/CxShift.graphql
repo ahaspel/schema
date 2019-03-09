@@ -4,8 +4,8 @@ type CxShift {
   Default: Boolean
   UseHolidays: Boolean
   ObjectType: CxShiftObjectType
-  Description: String
   Id: ID!
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -14,9 +14,8 @@ input CxShiftInput {
   Days: [IxShiftDayInput]!
   Default: Boolean
   UseHolidays: Boolean
-  ObjectType: CxShiftObjectType
-  Description: String
   Id: ID!
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -32,8 +31,8 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -41,8 +40,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }

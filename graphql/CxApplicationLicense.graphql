@@ -1,0 +1,64 @@
+type CxApplicationLicense {
+  Id: ID!
+  Expiration: String
+  AllowedUsers: Int
+  AllowedWebUsers: Int
+  SerialNumber: String
+  Valid: Boolean
+  MachineId: String
+  Nag: Boolean
+  ErrorMessage: String
+  ObjectType: CxApplicationLicenseObjectType
+  Tags: [IxAttribute__String__]
+}
+
+input CxApplicationLicenseInput {
+  Id: ID!
+  Expiration: String!
+  AllowedUsers: Int!
+  AllowedWebUsers: Int!
+  SerialNumber: String!
+  MachineId: String
+  Nag: Boolean
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxApplicationLicenseObjectType {
+  ApplicationLicense
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+extend type Mutation {
+  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit"): [CxApplicationLicense]
+  cxApplicationLicenses_onDelete(data: [String], objectType: String = "ApplicationLicense", operation: String = "delete"): [CxApplicationLicense]
+}
+
+extend type Query {
+  cxApplicationLicenses(filters: [FilterInput], objectType: String = "ApplicationLicense"): [CxApplicationLicense]
+}

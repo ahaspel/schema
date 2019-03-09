@@ -1,0 +1,390 @@
+type CxJob {
+  Priority: IxLookupValue
+  Client: IxCompany
+  TotalCost: IxMoney
+  Types: [IxLookupValue]
+  Subtypes: [IxLookupValue]
+  Certifications: [IxLookupValue]
+  Address: IxAddress
+  AccountCode: String
+  Contacts: [IxParty]
+  Name: String
+  Notes: String
+  CurrentLifespan: IxRange
+  JobActivities: [IxJobActivity]
+  Owner: IxParty
+  Manager: IxParty
+  Status: IxLookupValue
+  StatusDue: String
+  ForeColor: String
+  BackColor: String
+  ObjectType: CxJobObjectType
+  JobCosts: [IxJobCost]
+  TotalHours: Float
+  EstimatedLaborHours: Float
+  EstimatedEquipmentHours: Float
+  HasAttachments: Boolean
+  History: [IxRange]
+  Duration: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxJobInput {
+  Priority: IxLookupValueDO!
+  Client: IxCompanyDO
+  TotalCost: IxMoneyInput
+  Types: [IxLookupValueDO]!
+  Subtypes: [IxLookupValueDO]!
+  Certifications: [IxLookupValueDO]
+  Address: IxAddressInput!
+  AccountCode: String!
+  Contacts: [IxPartyDO]
+  Name: String!
+  Notes: String
+  CurrentLifespan: IxRangeInput!
+  JobActivities: [IxJobActivityInput]!
+  Owner: IxPartyDO!
+  Manager: IxPartyDO!
+  Status: IxLookupValueDO!
+  StatusDue: String
+  ForeColor: String
+  BackColor: String
+  JobCosts: [IxJobCostInput]
+  TotalHours: Float
+  EstimatedLaborHours: Float
+  EstimatedEquipmentHours: Float
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxJobObjectType {
+  Job
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxCompany {
+  CompanyType: IxLookupValue
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxCompanyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+  AccountCode: String
+  Contacts: [IxParty]
+}
+
+input IxCompanyDO {
+  Id: ID!
+}
+
+enum IxCompanyObjectType {
+  Company
+  Subcontractor
+}
+
+type IxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  BaseObject: String
+  ObjectType: IxCostCodeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxCostCodeInput {
+  UnitCost: IxUnitCostInput!
+  Global: Boolean
+  BaseObject: String
+  ObjectType: IxCostCodeObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+}
+
+enum IxCostCodeObjectType {
+  CostCode
+}
+
+type IxEmail {
+  Id: ID!
+  Email: String
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxJobActivity {
+  ParentId: Int
+  Completed: Boolean
+  Priority: Int
+  ObjectType: IxJobActivityObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  History: [IxRange]
+  CurrentLifespan: IxRange
+  Duration: String
+  Tags: [IxAttribute__String__]
+  ForeColor: String
+  BackColor: String
+}
+
+input IxJobActivityInput {
+  ParentId: Int
+  Completed: Boolean
+  Priority: Int
+  ObjectType: IxJobActivityObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+  History: [IxRangeInput]
+  CurrentLifespan: IxRangeInput
+  Duration: String
+  Tags: [IxAttribute__String__Input]
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
+}
+
+type IxJobCost {
+  CostCode: IxCostCode
+  CostPerUnit: IxMoney
+  TotalAmount: Float
+  CompletedAmount: Float
+  BaseObject: String
+  ObjectType: IxJobCostObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxJobCostInput {
+  CostCode: IxCostCodeInput!
+  CostPerUnit: IxMoneyInput
+  TotalAmount: Float!
+  CompletedAmount: Float
+  BaseObject: String
+  ObjectType: IxJobCostObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+}
+
+enum IxJobCostObjectType {
+  JobCost
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+}
+
+input IxPartyDO {
+  Id: ID!
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Subcontractor
+  Plant
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Name: String
+  Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+extend type Mutation {
+  cxJobs_onSave(data: [CxJobInput], objectType: String = "Job", operation: String = "edit"): [CxJob]
+  cxJobs_onDelete(data: [String], objectType: String = "Job", operation: String = "delete"): [CxJob]
+}
+
+extend type Query {
+  cxJobs(filters: [FilterInput], objectType: String = "Job"): [CxJob]
+}

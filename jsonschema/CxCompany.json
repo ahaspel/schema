@@ -6,7 +6,8 @@
 			"type": "object",
 			"properties": {
 				"Street": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"StreetDetails": {
 					"type": "string"
@@ -15,7 +16,8 @@
 					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"ZipCode": {
 					"type": "string"
@@ -23,26 +25,20 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
 				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
 				"Street",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -55,18 +51,17 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -89,8 +84,7 @@
 					"format": "email"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -126,9 +120,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -154,18 +145,14 @@
 						"WebPrivilege"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [
@@ -187,27 +174,17 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string",
-					"format": "time"
-				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"Party"
+						"Party",
+						"Company",
+						"Subcontractor",
+						"Plant"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
@@ -216,17 +193,18 @@
 				"Description": {
 					"type": "string"
 				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [
+				"Name",
 				"Id"
 			]
 		},
@@ -240,8 +218,7 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -251,29 +228,12 @@
 				"Id",
 				"PhoneNumber"
 			]
-		},
-		"IxRange": {
-			"type": "object",
-			"properties": {
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"Duration": {
-					"type": "string",
-					"format": "time"
-				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
 		}
 	},
+	"immutable": [
+		"ObjectType",
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"CompanyType": {
@@ -291,7 +251,8 @@
 		"ObjectType": {
 			"type": "string",
 			"enum": [
-				"Company"
+				"Company",
+				"Subcontractor"
 			]
 		},
 		"PhoneNumbers": {
@@ -313,11 +274,11 @@
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
 		},
-		"Description": {
-			"type": "string"
-		},
 		"Id": {
 			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
 		},
 		"Tags": {
 			"type": "array",
@@ -327,8 +288,8 @@
 		}
 	},
 	"required": [
-		"CompanyType",
 		"Name",
-		"Id"
+		"Id",
+		"CompanyType"
 	]
 }

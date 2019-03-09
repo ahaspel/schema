@@ -4,8 +4,8 @@ type CxParty {
   Name: String
   Address: IxAddress
   ObjectType: CxPartyObjectType
-  Description: String
   Id: ID!
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -14,14 +14,16 @@ input CxPartyInput {
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
-  ObjectType: CxPartyObjectType
-  Description: String
   Id: ID!
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
 enum CxPartyObjectType {
   Party
+  Company
+  Subcontractor
+  Plant
 }
 
 input FilterInput {
@@ -36,23 +38,19 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
-  Name: String
-  Description: String
+  Id: ID!
 }
 
 input IxAddressInput {
   Street: String!
   StreetDetails: String
   State: IxLookupValueDO!
-  City: String
+  City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
-  Name: String
-  Description: String
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -62,8 +60,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -71,8 +69,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -115,11 +113,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
 }
 
 input IxLookupValueDO {

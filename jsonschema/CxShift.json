@@ -11,18 +11,17 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -64,6 +63,10 @@
 			]
 		}
 	},
+	"immutable": [
+		"ObjectType",
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"Name": {
@@ -75,7 +78,7 @@
 			"items": {
 				"$ref": "#/definitions/IxShiftDay"
 			},
-			"minItems": 1
+			"minLength": 1
 		},
 		"Default": {
 			"type": "boolean"
@@ -89,11 +92,11 @@
 				"Shift"
 			]
 		},
-		"Description": {
-			"type": "string"
-		},
 		"Id": {
 			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
 		},
 		"Tags": {
 			"type": "array",
@@ -104,7 +107,7 @@
 	},
 	"required": [
 		"Name",
-		"Days",
-		"Id"
+		"Id",
+		"Days"
 	]
 }

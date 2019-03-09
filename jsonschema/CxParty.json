@@ -6,7 +6,8 @@
 			"type": "object",
 			"properties": {
 				"Street": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"StreetDetails": {
 					"type": "string"
@@ -15,7 +16,8 @@
 					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"ZipCode": {
 					"type": "string"
@@ -23,26 +25,20 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
 				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
 				"Street",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -55,18 +51,17 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -89,8 +84,7 @@
 					"format": "email"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -126,9 +120,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -154,18 +145,14 @@
 						"WebPrivilege"
 					]
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [
@@ -182,8 +169,7 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -195,6 +181,10 @@
 			]
 		}
 	},
+	"immutable": [
+		"ObjectType",
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"PhoneNumbers": {
@@ -219,14 +209,17 @@
 		"ObjectType": {
 			"type": "string",
 			"enum": [
-				"Party"
+				"Party",
+				"Company",
+				"Subcontractor",
+				"Plant"
 			]
-		},
-		"Description": {
-			"type": "string"
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
 		},
 		"Tags": {
 			"type": "array",

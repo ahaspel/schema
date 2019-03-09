@@ -1,9 +1,7 @@
 {
 	"id": "https://congistics.com/schema/CxUnit",
 	"title": "com.congistics.cbrd.util.CxUnit",
-	"definitions": {},
 	"type": "object",
-	"additionalProperties": false,
 	"properties": {
 		"ObjectType": {
 			"type": "string",
@@ -44,5 +42,6 @@
 	},
 	"required": [
 		"Id"
-	]
+	],
+	"definitions": {}
 }

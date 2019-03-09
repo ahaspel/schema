@@ -2,38 +2,6 @@
 	"id": "https://congistics.com/schema/CxCostCode",
 	"title": "com.congistics.cbrd.cost.CxCostCode",
 	"definitions": {
-		"IxAttribute__String__": {
-			"type": "object",
-			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
-				"AttributeId": {
-					"type": "integer"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Attribute"
-					]
-				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"BaseObject",
-				"AttributeId",
-				"Id"
-			]
-		},
 		"IxMoney": {
 			"type": "object",
 			"properties": {
@@ -83,8 +51,7 @@
 					]
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -113,6 +80,10 @@
 			]
 		}
 	},
+	"immutable": [
+		"ObjectType",
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"UnitCost": {
@@ -127,27 +98,20 @@
 				"CostCode"
 			]
 		},
-		"Tags": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxAttribute__String__"
-			}
+		"Name": {
+			"type": "string",
+			"minLength": 1
 		},
 		"Id": {
 			"type": "integer"
 		},
-		"Name": {
-			"type": "string"
-		},
 		"Description": {
-			"type": "string"
-		},
-		"BaseObject": {
 			"type": "string"
 		}
 	},
 	"required": [
-		"UnitCost",
-		"Id"
+		"Name",
+		"Id",
+		"UnitCost"
 	]
 }
