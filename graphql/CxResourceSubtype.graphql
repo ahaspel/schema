@@ -1,0 +1,42 @@
+type CxResourceSubtype {
+  ObjectType: CxResourceSubtypeObjectType
+  Name: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxResourceSubtypeDO {
+  Id: ID!
+}
+
+enum CxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+extend type Mutation {
+  cxResourceSubtypes_onSave(data: [CxResourceSubtypeDO], objectType: String = "ResourceSubtype", operation: String = "edit"): [CxResourceSubtype]
+  cxResourceSubtypes_onDelete(data: [String], objectType: String = "ResourceSubtype", operation: String = "delete"): [CxResourceSubtype]
+}
+
+extend type Query {
+  cxResourceSubtypes(filters: [FilterInput], objectType: String = "ResourceSubtype"): [CxResourceSubtype]
+}

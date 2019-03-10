@@ -51,6 +51,7 @@ input CxJobInput {
   StatusDue: String
   ForeColor: String
   BackColor: String
+  ObjectType: CxJobObjectType
   JobCosts: [IxJobCostInput]
   TotalHours: Float
   EstimatedLaborHours: Float
@@ -76,8 +77,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 input IxAddressInput {
@@ -87,8 +88,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -98,8 +99,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -107,8 +108,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -121,8 +122,8 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxCompanyObjectType
   Id: ID!
+  ObjectType: IxCompanyObjectType
   Name: String
   Description: String
   Address: IxAddress
@@ -144,8 +145,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Name: String
   Description: String
 }
@@ -154,8 +155,8 @@ input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Name: String!
   Description: String
 }
@@ -193,8 +194,8 @@ type IxJobActivity {
   ParentId: Int
   Completed: Boolean
   Priority: Int
-  ObjectType: IxJobActivityObjectType
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Name: String
   Description: String
   History: [IxRange]
@@ -209,8 +210,8 @@ input IxJobActivityInput {
   ParentId: Int
   Completed: Boolean
   Priority: Int
-  ObjectType: IxJobActivityObjectType
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Name: String!
   Description: String
   History: [IxRangeInput]
@@ -231,8 +232,8 @@ type IxJobCost {
   TotalAmount: Float
   CompletedAmount: Float
   BaseObject: String
-  ObjectType: IxJobCostObjectType
   Id: ID!
+  ObjectType: IxJobCostObjectType
   Name: String
   Description: String
 }
@@ -243,8 +244,8 @@ input IxJobCostInput {
   TotalAmount: Float!
   CompletedAmount: Float
   BaseObject: String
-  ObjectType: IxJobCostObjectType
   Id: ID!
+  ObjectType: IxJobCostObjectType
   Name: String!
   Description: String
 }
@@ -255,8 +256,8 @@ enum IxJobCostObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
 }
@@ -301,8 +302,8 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Name: String
   Description: String
   Address: IxAddress

@@ -25,14 +25,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				}
 			},
 			"required": [
@@ -51,14 +51,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -91,15 +91,15 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Company",
 						"Subcontractor"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -249,20 +249,23 @@
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Employee"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"Name": {
 					"type": "string"
 				},
 				"Description": {
 					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"History": {
 					"type": "array",
@@ -272,9 +275,6 @@
 				},
 				"Duration": {
 					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",
@@ -358,6 +358,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -382,9 +385,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -427,6 +427,9 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -435,9 +438,6 @@
 						"Subcontractor",
 						"Plant"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -518,14 +518,14 @@
 		"IxResourceSubtype": {
 			"type": "object",
 			"properties": {
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -562,14 +562,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceType"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -652,7 +652,6 @@
 		}
 	},
 	"immutable": [
-		"ObjectType",
 		"Dto",
 		"Duration",
 		"Returned",

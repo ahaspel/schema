@@ -1,0 +1,25 @@
+type CxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input CxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+extend type Mutation {
+  cxRanges_onSave(data: [CxRangeInput], objectType: String, operation: String = "edit"): [CxRange]
+  cxRanges_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxRange]
+}
+
+extend type Query {
+  cxRanges(filters: [FilterInput], objectType: String): [CxRange]
+}

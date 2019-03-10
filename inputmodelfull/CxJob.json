@@ -9,7 +9,7 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 361
+		"Quantity": 749
 	},
 	"Types": [
 		{
@@ -27,64 +27,64 @@
 		}
 	],
 	"Address": {
-		"Street": "aut",
-		"StreetDetails": "velit",
+		"Street": "corrupti",
+		"StreetDetails": "voluptatem",
 		"State": {
 			"Id": 1
 		},
-		"City": "voluptatem",
-		"ZipCode": "nobis",
+		"City": "et",
+		"ZipCode": "occaecati",
 		"Geocode": {
-			"Lat": 8.9229,
-			"Lng": 81.4968,
-			"Source": "GPSService"
+			"Lat": 52.0681,
+			"Lng": -41.3389,
+			"Source": "Owner"
 		},
-		"ObjectType": "Address",
-		"Id": 0
+		"Id": 0,
+		"ObjectType": "Address"
 	},
-	"AccountCode": "veniam",
+	"AccountCode": "ad",
 	"Contacts": [
 		{
 			"Id": 1
 		}
 	],
-	"Name": "provident",
-	"Notes": "at",
+	"Name": "minima",
+	"Notes": "sequi",
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2019-12-14T08:00:00",
-		"Duration": "rerum"
+		"Duration": "omnis"
 	},
 	"JobActivities": [
 		{
-			"ParentId": 107,
+			"ParentId": 840,
 			"Completed": false,
-			"Priority": 839,
-			"ObjectType": "JobActivity",
+			"Priority": 649,
 			"Id": 0,
-			"Name": "odio",
-			"Description": "voluptatem",
+			"ObjectType": "JobActivity",
+			"Name": "quia",
+			"Description": "aut",
 			"History": [
 				{
 					"Start": "2018-01-14T08:00:00",
 					"End": "2019-12-14T08:00:00",
-					"Duration": "illum"
+					"Duration": "in"
 				}
 			],
 			"CurrentLifespan": {
 				"Start": "2018-01-14T08:00:00",
 				"End": "2019-12-14T08:00:00",
-				"Duration": "quia"
+				"Duration": "ut"
 			},
-			"Duration": "et",
+			"Duration": "dolorem",
 			"Tags": [
 				{
-					"BaseObject": "impedit",
+					"BaseObject": "quo",
 					"AttributeId": 2,
-					"ObjectType": "Attribute",
 					"Id": 0,
+					"ObjectType": "Attribute",
 					"Name": "Capacity",
-					"Description": "libero"
+					"Description": "aperiam"
 				}
 			],
 			"ForeColor": "#FFFFFF00",
@@ -103,6 +103,7 @@
 	"StatusDue": "2019-01-14T08:00:00",
 	"ForeColor": "#FFFFFF00",
 	"BackColor": "Transparent",
+	"ObjectType": "Job",
 	"JobCosts": [
 		{
 			"CostCode": {
@@ -114,45 +115,45 @@
 						"Unit": {
 							"Id": 1
 						},
-						"Quantity": 234
+						"Quantity": 581
 					},
-					"Notes": "ea"
+					"Notes": "sapiente"
 				},
-				"Global": false,
-				"BaseObject": "vero",
-				"ObjectType": "CostCode",
+				"Global": true,
+				"BaseObject": "perspiciatis",
 				"Id": 0,
-				"Name": "mollitia",
-				"Description": "laboriosam"
+				"ObjectType": "CostCode",
+				"Name": "commodi",
+				"Description": "commodi"
 			},
 			"CostPerUnit": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 590
+				"Quantity": 795
 			},
-			"TotalAmount": 424,
-			"CompletedAmount": 917,
-			"BaseObject": "saepe",
-			"ObjectType": "JobCost",
+			"TotalAmount": 209,
+			"CompletedAmount": 745,
+			"BaseObject": "tempore",
 			"Id": 0,
-			"Name": "eum",
-			"Description": "in"
+			"ObjectType": "JobCost",
+			"Name": "aperiam",
+			"Description": "error"
 		}
 	],
-	"TotalHours": 551,
-	"EstimatedLaborHours": 951,
-	"EstimatedEquipmentHours": 809,
+	"TotalHours": 261,
+	"EstimatedLaborHours": 457,
+	"EstimatedEquipmentHours": 463,
 	"Id": 0,
 	"Description": "quia",
 	"Tags": [
 		{
-			"BaseObject": "saepe",
+			"BaseObject": "quos",
 			"AttributeId": 2,
-			"ObjectType": "Attribute",
 			"Id": 0,
+			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "dolores"
+			"Description": "eveniet"
 		}
 	],
 	"__typename": "CxJob"

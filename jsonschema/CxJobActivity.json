@@ -11,14 +11,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -55,7 +55,6 @@
 		}
 	},
 	"immutable": [
-		"ObjectType",
 		"Dto",
 		"History",
 		"Duration",

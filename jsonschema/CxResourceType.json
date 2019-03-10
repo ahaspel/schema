@@ -11,14 +11,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -36,14 +36,14 @@
 		"IxResourceSubtype": {
 			"type": "object",
 			"properties": {
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
@@ -60,7 +60,6 @@
 		}
 	},
 	"immutable": [
-		"ObjectType",
 		"Dto"
 	],
 	"type": "object",

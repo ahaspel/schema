@@ -13,8 +13,8 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Subcontractor",
 		"Id": 0,
+		"ObjectType": "Subcontractor",
 		"Name": "",
 		"Description": "",
 		"Address": {
@@ -28,10 +28,10 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
-			"ObjectType": "Address",
-			"Id": 0
+			"Id": 0,
+			"ObjectType": "Address"
 		},
 		"Tags": []
 	},
@@ -46,10 +46,10 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
-		"ObjectType": "Address",
-		"Id": 0
+		"Id": 0,
+		"ObjectType": "Address"
 	},
 	"PhoneNumbers": [],
 	"Emails": [],
@@ -62,6 +62,7 @@
 	"TrainingCourses": [],
 	"Skills": [],
 	"LaborClassification": [],
+	"ObjectType": "Employee",
 	"Temporary": false,
 	"Owner": {
 		"Id": 0

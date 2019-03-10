@@ -1,0 +1,106 @@
+{
+	"id": "https://congistics.com/schema/CxAddress",
+	"title": "com.congistics.cbrd.address.CxAddress",
+	"definitions": {
+		"IxGeocode": {
+			"type": "object",
+			"properties": {
+				"Lat": {
+					"type": "number"
+				},
+				"Lng": {
+					"type": "number"
+				},
+				"Source": {
+					"type": "string",
+					"enum": [
+						"Action",
+						"Owner",
+						"GPSService"
+					]
+				}
+			}
+		},
+		"IxLookupValue": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Privilege",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"JobCertification",
+						"WebPrivilege"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		}
+	},
+	"type": "object",
+	"properties": {
+		"Id": {
+			"type": "integer"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"Address"
+			]
+		},
+		"Street": {
+			"type": "string"
+		},
+		"StreetDetails": {
+			"type": "string"
+		},
+		"ZipCode": {
+			"type": "string"
+		},
+		"City": {
+			"type": "string"
+		},
+		"State": {
+			"$ref": "#/definitions/IxLookupValue"
+		},
+		"Geocode": {
+			"$ref": "#/definitions/IxGeocode"
+		}
+	},
+	"required": [
+		"Id",
+		"Street",
+		"City",
+		"State"
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"id": "https://congistics.com/schema/CxPhoneNumber",
+	"title": "com.congistics.cbrd.party.CxPhoneNumber",
+	"type": "object",
+	"properties": {
+		"Id": {
+			"type": "integer"
+		},
+		"PhoneNumber": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"Id",
+		"PhoneNumber"
+	],
+	"definitions": {}
+}

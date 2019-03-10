@@ -1,0 +1,25 @@
+type CxEmail {
+  Id: ID!
+  Name: String
+  Email: String
+}
+
+input CxEmailInput {
+  Id: ID!
+  Name: String
+  Email: String!
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+extend type Mutation {
+  cxEmails_onSave(data: [CxEmailInput], objectType: String, operation: String = "edit"): [CxEmail]
+  cxEmails_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxEmail]
+}
+
+extend type Query {
+  cxEmails(filters: [FilterInput], objectType: String): [CxEmail]
+}

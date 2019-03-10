@@ -1,0 +1,21 @@
+{
+	"id": "https://congistics.com/schema/CxEmail",
+	"title": "com.congistics.cbrd.party.CxEmail",
+	"type": "object",
+	"properties": {
+		"Id": {
+			"type": "integer"
+		},
+		"Name": {
+			"type": "string"
+		},
+		"Email": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"Id",
+		"Email"
+	],
+	"definitions": {}
+}

@@ -26,6 +26,7 @@ input CxResourceGroupInput {
   Contact: IxPartyDO!
   Name: String!
   ResourceBlocks: [IxResourceBlockInput]!
+  ObjectType: CxResourceGroupObjectType
   Temporary: Boolean
   Owner: IxCompanyDO!
   ResourceType: IxResourceTypeDO!
@@ -56,8 +57,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 input IxAddressInput {
@@ -67,8 +68,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -78,8 +79,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -87,8 +88,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -101,8 +102,8 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxCompanyObjectType
   Id: ID!
+  ObjectType: IxCompanyObjectType
   Name: String
   Description: String
   Address: IxAddress
@@ -153,8 +154,8 @@ type IxLocation {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
 }
@@ -199,8 +200,8 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Name: String
   Description: String
   Address: IxAddress
@@ -243,13 +244,13 @@ type IxResource {
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  ObjectType: IxResourceObjectType
   Id: ID!
+  ObjectType: IxResourceObjectType
   Name: String
   Description: String
+  CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
-  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String
@@ -259,11 +260,11 @@ type IxResource {
 type IxResourceBlock {
   Resource: IxResource
   Valid: Boolean
+  CurrentLifespan: IxRange
   History: [IxRange]
   Duration: String
-  CurrentLifespan: IxRange
-  ObjectType: IxResourceBlockObjectType
   Id: ID!
+  ObjectType: IxResourceBlockObjectType
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -272,11 +273,11 @@ type IxResourceBlock {
 input IxResourceBlockInput {
   Resource: IxResourceDO!
   Valid: Boolean
+  CurrentLifespan: IxRangeInput!
   History: [IxRangeInput]
   Duration: String
-  CurrentLifespan: IxRangeInput!
-  ObjectType: IxResourceBlockObjectType
   Id: ID!
+  ObjectType: IxResourceBlockObjectType
   Name: String
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -298,8 +299,8 @@ enum IxResourceObjectType {
 }
 
 type IxResourceSubtype {
-  ObjectType: IxResourceSubtypeObjectType
   Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
   Name: String
   Description: String
 }
@@ -317,8 +318,8 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  ObjectType: IxResourceTypeObjectType
   Id: ID!
+  ObjectType: IxResourceTypeObjectType
   Name: String
   Description: String
   Tags: [IxAttribute__String__]

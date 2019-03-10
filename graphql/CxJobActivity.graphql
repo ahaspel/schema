@@ -21,6 +21,7 @@ input CxJobActivityInput {
   CurrentLifespan: IxRangeInput
   ForeColor: String
   BackColor: String
+  ObjectType: CxJobActivityObjectType
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -38,8 +39,8 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -47,8 +48,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }

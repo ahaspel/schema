@@ -1,0 +1,92 @@
+type CxAddress {
+  Id: ID!
+  ObjectType: CxAddressObjectType
+  Street: String
+  StreetDetails: String
+  ZipCode: String
+  City: String
+  State: IxLookupValue
+  Geocode: IxGeocode
+}
+
+input CxAddressInput {
+  Id: ID!
+  ObjectType: CxAddressObjectType
+  Street: String!
+  StreetDetails: String
+  ZipCode: String
+  City: String!
+  State: IxLookupValueDO!
+  Geocode: IxGeocodeInput
+}
+
+enum CxAddressObjectType {
+  Address
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLookupValue {
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Name: String
+  Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+extend type Mutation {
+  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit"): [CxAddress]
+  cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
+}
+
+extend type Query {
+  cxAddresss(filters: [FilterInput], objectType: String = "Address"): [CxAddress]
+}
