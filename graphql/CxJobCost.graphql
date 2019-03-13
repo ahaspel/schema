@@ -1,0 +1,116 @@
+type CxJobCost {
+  CostPerUnit: IxMoney
+  CostCode: IxCostCode
+  TotalAmount: Float
+  CompletedAmount: Float
+  ObjectType: CxJobCostObjectType
+  Name: String
+  Id: ID!
+  Description: String
+  BaseObject: String
+}
+
+input CxJobCostInput {
+  CostPerUnit: IxMoneyInput
+  CostCode: IxCostCodeInput!
+  TotalAmount: Float!
+  CompletedAmount: Float
+  ObjectType: CxJobCostObjectType
+  Name: String
+  Id: ID!
+  Description: String
+  BaseObject: String
+}
+
+enum CxJobCostObjectType {
+  JobCost
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxCostCodeObjectType
+  Name: String
+  Description: String
+}
+
+input IxCostCodeInput {
+  UnitCost: IxUnitCostInput!
+  Global: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxCostCodeObjectType
+  Name: String
+  Description: String
+}
+
+enum IxCostCodeObjectType {
+  CostCode
+}
+
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+extend type Mutation {
+  cxJobCosts_onSave(data: [CxJobCostInput], objectType: String = "JobCost", operation: String = "edit"): [CxJobCost]
+  cxJobCosts_onDelete(data: [String], objectType: String = "JobCost", operation: String = "delete"): [CxJobCost]
+}
+
+extend type Query {
+  cxJobCosts(filters: [FilterInput], objectType: String = "JobCost"): [CxJobCost]
+}

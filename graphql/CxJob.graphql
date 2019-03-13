@@ -23,6 +23,7 @@ type CxJob {
   TotalHours: Float
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
+  Attachments: [IxDocument]
   HasAttachments: Boolean
   History: [IxRange]
   Duration: String
@@ -56,6 +57,7 @@ input CxJobInput {
   TotalHours: Float
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
+  Attachments: [IxDocumentInput]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -163,6 +165,30 @@ input IxCostCodeInput {
 
 enum IxCostCodeObjectType {
   CostCode
+}
+
+type IxDocument {
+  Attached: Boolean
+  FilePath: String
+  FullName: String
+  Id: ID!
+  ObjectType: IxDocumentObjectType
+  Name: String
+  Description: String
+}
+
+input IxDocumentInput {
+  Attached: Boolean
+  FilePath: String!
+  FullName: String
+  Id: ID!
+  ObjectType: IxDocumentObjectType
+  Name: String!
+  Description: String
+}
+
+enum IxDocumentObjectType {
+  Document
 }
 
 type IxEmail {
