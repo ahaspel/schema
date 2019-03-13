@@ -51,7 +51,6 @@ input CxEquipmentInput {
   BackColor: String
   AccountCode: String!
   CurrentLifespan: IxRangeInput!
-  History: [IxRangeInput]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -134,7 +133,7 @@ type IxEmail {
 }
 
 type IxEmployee {
-  Person: IxParty
+  PartyId: Int
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   FirstName: String

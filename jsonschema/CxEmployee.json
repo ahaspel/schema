@@ -491,6 +491,8 @@
 	},
 	"immutable": [
 		"Dto",
+		"History",
+		"History",
 		"InCrew",
 		"Duration",
 		"Location"
@@ -516,8 +518,8 @@
 		"IsMover": {
 			"type": "boolean"
 		},
-		"Person": {
-			"$ref": "#/definitions/IxParty"
+		"PartyId": {
+			"type": "integer"
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
@@ -655,7 +657,6 @@
 	"required": [
 		"LastName",
 		"FirstName",
-		"Person",
 		"Owner",
 		"ResourceType",
 		"ResourceSubtype",
