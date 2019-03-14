@@ -1,0 +1,81 @@
+{
+	"id": "https://congistics.com/schema/CxDocument",
+	"title": "com.congistics.cbrd.io.CxDocument",
+	"definitions": {
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"BaseObject",
+				"AttributeId",
+				"Id"
+			]
+		}
+	},
+	"immutable": [
+		"Dto",
+		"Attached"
+	],
+	"type": "object",
+	"properties": {
+		"Attached": {
+			"type": "boolean"
+		},
+		"FilePath": {
+			"type": "string",
+			"minLength": 1
+		},
+		"FullName": {
+			"type": "string"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"Document"
+			]
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"Name",
+		"Id",
+		"FilePath"
+	]
+}

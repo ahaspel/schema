@@ -1,0 +1,109 @@
+{
+	"ObjectType": "TimeEntry",
+	"Duration": "sint",
+	"Hours": 720,
+	"Minutes": 350,
+	"Name": "qui",
+	"Resource": {
+		"Id": 6
+	},
+	"EntryType": {
+		"Id": 1
+	},
+	"LaborClassification": {
+		"Id": 1
+	},
+	"CostCodes": [
+		{
+			"UnitCost": {
+				"Unit": {
+					"Id": 1
+				},
+				"Cost": {
+					"Unit": {
+						"Id": 1
+					},
+					"Quantity": 550
+				},
+				"Notes": "quae"
+			},
+			"Global": false,
+			"BaseObject": "tenetur",
+			"Id": 0,
+			"ObjectType": "CostCode",
+			"Name": "nisi",
+			"Description": "dolores"
+		}
+	],
+	"AuxiliaryResources": [
+		{
+			"Id": 6
+		}
+	],
+	"JobActivity": {
+		"Id": 156
+	},
+	"Owner": {
+		"Id": 1
+	},
+	"IsVoid": false,
+	"Billable": false,
+	"StartLocation": {
+		"Lat": 59.5632,
+		"Lng": -143.8352,
+		"Source": "GPSService"
+	},
+	"PunchStart": "2019-01-14T08:00:00",
+	"EndLocation": {
+		"Lat": 53.3399,
+		"Lng": -130.6514,
+		"Source": "Owner"
+	},
+	"PunchEnd": "2019-01-14T08:00:00",
+	"Punch": "PunchedOut",
+	"StartDistance": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 711
+	},
+	"EndDistance": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 598
+	},
+	"Approvals": [
+		{
+			"Approver": {
+				"Id": 1
+			},
+			"AsOf": "2019-01-14T08:00:00"
+		}
+	],
+	"Approved": false,
+	"CurrentLifespan": {
+		"Start": "2018-01-14T08:00:00",
+		"End": "2018-12-14T08:00:00"
+	},
+	"History": [
+		{
+			"Start": "2018-01-14T08:00:00",
+			"End": "2019-12-14T08:00:00",
+			"Duration": "totam"
+		}
+	],
+	"Id": 0,
+	"Description": "blanditiis",
+	"Tags": [
+		{
+			"BaseObject": "velit",
+			"AttributeId": 2,
+			"Id": 0,
+			"ObjectType": "Attribute",
+			"Name": "Capacity",
+			"Description": "sit"
+		}
+	],
+	"__typename": "CxTimeEntry"
+}

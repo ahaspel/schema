@@ -1,0 +1,60 @@
+type CxDocument {
+  Attached: Boolean
+  FilePath: String
+  FullName: String
+  ObjectType: CxDocumentObjectType
+  Name: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxDocumentInput {
+  FilePath: String!
+  FullName: String
+  ObjectType: CxDocumentObjectType
+  Name: String!
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxDocumentObjectType {
+  Document
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+extend type Mutation {
+  cxDocuments_onSave(data: [CxDocumentInput], objectType: String = "Document", operation: String = "edit"): [CxDocument]
+  cxDocuments_onDelete(data: [String], objectType: String = "Document", operation: String = "delete"): [CxDocument]
+}
+
+extend type Query {
+  cxDocuments(filters: [FilterInput], objectType: String = "Document"): [CxDocument]
+}

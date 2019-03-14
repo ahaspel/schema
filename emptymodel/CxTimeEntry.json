@@ -1,0 +1,63 @@
+{
+	"ObjectType": "TimeEntry",
+	"Duration": "",
+	"Hours": 0,
+	"Minutes": 0,
+	"Name": "",
+	"Resource": {
+		"Id": 0
+	},
+	"EntryType": {
+		"Id": 0
+	},
+	"LaborClassification": {
+		"Id": 0
+	},
+	"CostCodes": [],
+	"AuxiliaryResources": [],
+	"JobActivity": {
+		"Id": 0
+	},
+	"Owner": {
+		"Id": 0
+	},
+	"IsVoid": false,
+	"Billable": false,
+	"StartLocation": {
+		"Lat": 0,
+		"Lng": 0,
+		"Source": "Owner"
+	},
+	"PunchStart": "",
+	"EndLocation": {
+		"Lat": 0,
+		"Lng": 0,
+		"Source": "Owner"
+	},
+	"PunchEnd": "",
+	"Punch": "PunchedIn",
+	"StartDistance": {
+		"Unit": {
+			"Id": 0
+		},
+		"Quantity": 0
+	},
+	"EndDistance": {
+		"Unit": {
+			"Id": 0
+		},
+		"Quantity": 0
+	},
+	"Approvals": [],
+	"Approved": false,
+	"CurrentLifespan": {
+		"Start": "",
+		"End": "",
+		"Duration": ""
+	},
+	"History": [],
+	"Id": 0,
+	"Description": "",
+	"Tags": [],
+	"__typename": "CxTimeEntry"
+}
