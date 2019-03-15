@@ -1,9 +1,9 @@
 {
 	"ObjectType": "TimeEntry",
-	"Duration": "sint",
-	"Hours": 720,
-	"Minutes": 350,
-	"Name": "qui",
+	"Duration": "modi",
+	"Hours": 775,
+	"Minutes": 432,
+	"Name": "dicta",
 	"Resource": {
 		"Id": 6
 	},
@@ -23,16 +23,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 550
+					"Quantity": 184
 				},
-				"Notes": "quae"
+				"Notes": "quod"
 			},
 			"Global": false,
-			"BaseObject": "tenetur",
+			"BaseObject": "sunt",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "nisi",
-			"Description": "dolores"
+			"Name": "dolor",
+			"Description": "rerum"
 		}
 	],
 	"AuxiliaryResources": [
@@ -47,31 +47,31 @@
 		"Id": 1
 	},
 	"IsVoid": false,
-	"Billable": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": 59.5632,
-		"Lng": -143.8352,
-		"Source": "GPSService"
+		"Lat": 20.7271,
+		"Lng": -57.0857,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 53.3399,
-		"Lng": -130.6514,
-		"Source": "Owner"
+		"Lat": 46.1969,
+		"Lng": -43.8875,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 711
+		"Quantity": 324
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 598
+		"Quantity": 234
 	},
 	"Approvals": [
 		{
@@ -81,7 +81,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,19 +90,19 @@
 		{
 			"Start": "2018-01-14T08:00:00",
 			"End": "2019-12-14T08:00:00",
-			"Duration": "totam"
+			"Duration": "animi"
 		}
 	],
 	"Id": 0,
-	"Description": "blanditiis",
+	"Description": "amet",
 	"Tags": [
 		{
-			"BaseObject": "velit",
+			"BaseObject": "esse",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "sit"
+			"Description": "voluptatem"
 		}
 	],
 	"__typename": "CxTimeEntry"

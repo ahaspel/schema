@@ -45,7 +45,6 @@ input CxEmployeeInput {
   MiddleName: String
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
-  PartyId: Int
   Address: IxAddressInput
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
