@@ -271,7 +271,7 @@ type IxResourceBlock {
 }
 
 input IxResourceBlockInput {
-  Resource: IxResourceDO!
+  Resource: IxResourceDO
   Valid: Boolean
   CurrentLifespan: IxRangeInput!
   History: [IxRangeInput]

@@ -1,9 +1,9 @@
 {
 	"ObjectType": "TimeEntry",
-	"Duration": "modi",
-	"Hours": 775,
-	"Minutes": 432,
-	"Name": "dicta",
+	"Duration": "assumenda",
+	"Hours": 395,
+	"Minutes": 183,
+	"Name": "sunt",
 	"Resource": {
 		"Id": 6
 	},
@@ -23,16 +23,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 184
+					"Quantity": 850
 				},
-				"Notes": "quod"
+				"Notes": "saepe"
 			},
-			"Global": false,
-			"BaseObject": "sunt",
+			"Global": true,
+			"BaseObject": "voluptate",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "dolor",
-			"Description": "rerum"
+			"Name": "culpa",
+			"Description": "dolorum"
 		}
 	],
 	"AuxiliaryResources": [
@@ -49,29 +49,29 @@
 	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": 20.7271,
-		"Lng": -57.0857,
+		"Lat": -76.7977,
+		"Lng": -164.2742,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 46.1969,
-		"Lng": -43.8875,
-		"Source": "GPSService"
+		"Lat": 43.4079,
+		"Lng": -72.2777,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 324
+		"Quantity": 360
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 234
+		"Quantity": 5
 	},
 	"Approvals": [
 		{
@@ -90,19 +90,19 @@
 		{
 			"Start": "2018-01-14T08:00:00",
 			"End": "2019-12-14T08:00:00",
-			"Duration": "animi"
+			"Duration": "consequatur"
 		}
 	],
 	"Id": 0,
-	"Description": "amet",
+	"Description": "ipsum",
 	"Tags": [
 		{
-			"BaseObject": "esse",
+			"BaseObject": "enim",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "voluptatem"
+			"Description": "amet"
 		}
 	],
 	"__typename": "CxTimeEntry"
