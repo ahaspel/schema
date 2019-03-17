@@ -56,8 +56,6 @@
 	},
 	"immutable": [
 		"Dto",
-		"History",
-		"Duration",
 		"ParentId"
 	],
 	"type": "object",
@@ -78,12 +76,6 @@
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
 		"ForeColor": {
 			"type": "string"
 		},
@@ -95,9 +87,6 @@
 			"enum": [
 				"JobActivity"
 			]
-		},
-		"Duration": {
-			"type": "string"
 		},
 		"Id": {
 			"type": "integer"

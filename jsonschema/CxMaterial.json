@@ -527,6 +527,7 @@
 	},
 	"immutable": [
 		"Dto",
+		"Quantity",
 		"QuantityRemaining"
 	],
 	"type": "object",
@@ -555,9 +556,6 @@
 		"Reusable": {
 			"type": "boolean"
 		},
-		"Temporary": {
-			"type": "boolean"
-		},
 		"Owner": {
 			"$ref": "#/definitions/IxCompany"
 		},
@@ -567,9 +565,6 @@
 		"ResourceSubtype": {
 			"$ref": "#/definitions/IxResourceSubtype"
 		},
-		"UnitCost": {
-			"$ref": "#/definitions/IxUnitCost"
-		},
 		"ForeColor": {
 			"type": "string"
 		},
@@ -577,9 +572,6 @@
 			"type": "string"
 		},
 		"AccountCode": {
-			"type": "string"
-		},
-		"Duration": {
 			"type": "string"
 		},
 		"Id": {
@@ -599,7 +591,6 @@
 		"Inventory",
 		"Unit",
 		"Reusable",
-		"Owner",
 		"ResourceType",
 		"ResourceSubtype",
 		"Id"

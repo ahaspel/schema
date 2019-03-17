@@ -1,6 +1,5 @@
 type CxTimeEntry {
   ObjectType: CxTimeEntryObjectType
-  Duration: String
   Hours: Float
   Minutes: Int
   Name: String
@@ -23,7 +22,6 @@ type CxTimeEntry {
   Approvals: [IxApproval]
   Approved: Boolean
   CurrentLifespan: IxRange
-  History: [IxRange]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -31,7 +29,6 @@ type CxTimeEntry {
 
 input CxTimeEntryInput {
   ObjectType: CxTimeEntryObjectType
-  Duration: String
   Hours: Float
   Minutes: Int
   Name: String
@@ -54,7 +51,6 @@ input CxTimeEntryInput {
   Approvals: [IxApprovalInput]
   Approved: Boolean
   CurrentLifespan: IxRangeInput!
-  History: [IxRangeInput]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -198,9 +194,7 @@ type IxJobActivity {
   ObjectType: IxJobActivityObjectType
   Name: String
   Description: String
-  History: [IxRange]
   CurrentLifespan: IxRange
-  Duration: String
   Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
@@ -321,8 +315,6 @@ type IxResource {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String

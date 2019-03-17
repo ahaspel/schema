@@ -1,9 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Duration": "assumenda",
-	"Hours": 395,
-	"Minutes": 183,
-	"Name": "sunt",
+	"Hours": 424,
+	"Minutes": 7,
+	"Name": "omnis",
 	"Resource": {
 		"Id": 6
 	},
@@ -23,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 850
+					"Quantity": 397
 				},
-				"Notes": "saepe"
+				"Notes": "et"
 			},
-			"Global": true,
-			"BaseObject": "voluptate",
+			"Global": false,
+			"BaseObject": "asperiores",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "culpa",
-			"Description": "dolorum"
+			"Name": "eaque",
+			"Description": "quidem"
 		}
 	],
 	"AuxiliaryResources": [
@@ -46,32 +45,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
+	"IsVoid": true,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": -76.7977,
-		"Lng": -164.2742,
+		"Lat": -76.7951,
+		"Lng": -173.3405,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 43.4079,
-		"Lng": -72.2777,
-		"Source": "Action"
+		"Lat": -25.2428,
+		"Lng": -150.7543,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 360
+		"Quantity": 494
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 5
+		"Quantity": 154
 	},
 	"Approvals": [
 		{
@@ -81,28 +80,21 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
-	"History": [
-		{
-			"Start": "2018-01-14T08:00:00",
-			"End": "2019-12-14T08:00:00",
-			"Duration": "consequatur"
-		}
-	],
 	"Id": 0,
-	"Description": "ipsum",
+	"Description": "quia",
 	"Tags": [
 		{
-			"BaseObject": "enim",
+			"BaseObject": "fugiat",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "amet"
+			"Description": "soluta"
 		}
 	],
 	"__typename": "CxTimeEntry"

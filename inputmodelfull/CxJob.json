@@ -9,7 +9,7 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 209
+		"Quantity": 515
 	},
 	"Types": [
 		{
@@ -28,61 +28,53 @@
 	],
 	"Address": {
 		"Street": "ut",
-		"StreetDetails": "facilis",
+		"StreetDetails": "voluptatem",
 		"State": {
 			"Id": 1
 		},
-		"City": "consequatur",
-		"ZipCode": "eum",
+		"City": "dolores",
+		"ZipCode": "et",
 		"Geocode": {
-			"Lat": 70.3083,
-			"Lng": 119.6066,
-			"Source": "Action"
+			"Lat": -40.048,
+			"Lng": -133.2066,
+			"Source": "GPSService"
 		},
 		"Id": 0,
 		"ObjectType": "Address"
 	},
-	"AccountCode": "omnis",
+	"AccountCode": "voluptates",
 	"Contacts": [
 		{
 			"Id": 1
 		}
 	],
-	"Name": "exercitationem",
-	"Notes": "est",
+	"Name": "maxime",
+	"Notes": "architecto",
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"JobActivities": [
 		{
-			"ParentId": 63,
-			"Completed": true,
-			"Priority": 137,
+			"ParentId": 829,
+			"Completed": false,
+			"Priority": 835,
 			"Id": 0,
 			"ObjectType": "JobActivity",
-			"Name": "deleniti",
-			"Description": "blanditiis",
-			"History": [
-				{
-					"Start": "2018-01-14T08:00:00",
-					"End": "2019-12-14T08:00:00",
-					"Duration": "ipsum"
-				}
-			],
+			"Name": "qui",
+			"Description": "illo",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T08:00:00",
 				"End": "2018-12-14T08:00:00"
 			},
-			"Duration": "ea",
 			"Tags": [
 				{
-					"BaseObject": "et",
+					"BaseObject": "esse",
 					"AttributeId": 2,
 					"Id": 0,
 					"ObjectType": "Attribute",
 					"Name": "Capacity",
-					"Description": "odio"
+					"Description": "quo"
 				}
 			],
 			"ForeColor": "#FFFFFF00",
@@ -113,56 +105,56 @@
 						"Unit": {
 							"Id": 1
 						},
-						"Quantity": 683
+						"Quantity": 970
 					},
-					"Notes": "aut"
+					"Notes": "asperiores"
 				},
 				"Global": false,
-				"BaseObject": "asperiores",
+				"BaseObject": "rerum",
 				"Id": 0,
 				"ObjectType": "CostCode",
-				"Name": "quis",
-				"Description": "architecto"
+				"Name": "voluptas",
+				"Description": "ea"
 			},
 			"CostPerUnit": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 831
+				"Quantity": 233
 			},
-			"TotalAmount": 524,
-			"CompletedAmount": 411,
-			"BaseObject": "sunt",
+			"TotalAmount": 670,
+			"CompletedAmount": 286,
+			"BaseObject": "modi",
 			"Id": 0,
 			"ObjectType": "JobCost",
-			"Name": "labore",
-			"Description": "impedit"
+			"Name": "veritatis",
+			"Description": "ad"
 		}
 	],
-	"TotalHours": 895,
-	"EstimatedLaborHours": 873,
-	"EstimatedEquipmentHours": 438,
+	"TotalHours": 229,
+	"EstimatedLaborHours": 283,
+	"EstimatedEquipmentHours": 733,
 	"Attachments": [
 		{
-			"Attached": true,
-			"FilePath": "ratione",
-			"FullName": "at",
+			"Attached": false,
+			"FilePath": "voluptate",
+			"FullName": "debitis",
 			"Id": 0,
 			"ObjectType": "Document",
-			"Name": "repellendus",
-			"Description": "quam"
+			"Name": "est",
+			"Description": "atque"
 		}
 	],
 	"Id": 0,
-	"Description": "tenetur",
+	"Description": "nihil",
 	"Tags": [
 		{
-			"BaseObject": "error",
+			"BaseObject": "aut",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "nisi"
+			"Description": "molestias"
 		}
 	],
 	"__typename": "CxJob"

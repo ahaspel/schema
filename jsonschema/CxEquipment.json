@@ -267,15 +267,6 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"Duration": {
-					"type": "string"
-				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -653,8 +644,6 @@
 	},
 	"immutable": [
 		"Dto",
-		"History",
-		"Duration",
 		"Returned",
 		"Location",
 		"Address",
@@ -743,15 +732,6 @@
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
-		"Duration": {
-			"type": "string"
 		},
 		"Id": {
 			"type": "integer"

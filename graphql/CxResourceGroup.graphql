@@ -3,10 +3,8 @@ type CxResourceGroup {
   Count: Int
   Name: String
   CurrentLifespan: IxRange
-  History: [IxRange]
   ResourceBlocks: [IxResourceBlock]
   ObjectType: CxResourceGroupObjectType
-  Temporary: Boolean
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
@@ -16,7 +14,6 @@ type CxResourceGroup {
   Address: IxAddress
   Location: IxLocation
   AccountCode: String
-  Duration: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -27,14 +24,10 @@ input CxResourceGroupInput {
   Name: String!
   ResourceBlocks: [IxResourceBlockInput]!
   ObjectType: CxResourceGroupObjectType
-  Temporary: Boolean
   Owner: IxCompanyDO!
-  ResourceType: IxResourceTypeDO!
-  ResourceSubtype: IxResourceSubtypeDO!
   UnitCost: IxUnitCostInput
   ForeColor: String
   BackColor: String
-  Address: IxAddressInput
   AccountCode: String
   Id: ID!
   Description: String
@@ -57,17 +50,6 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
-  ObjectType: IxAddressObjectType
-}
-
-input IxAddressInput {
-  Street: String!
-  StreetDetails: String
-  State: IxLookupValueDO!
-  City: String!
-  ZipCode: String
-  Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
 }
@@ -134,12 +116,6 @@ type IxGeocode {
   Source: IxGeocodeSource
 }
 
-input IxGeocodeInput {
-  Lat: Float
-  Lng: Float
-  Source: IxGeocodeSource
-}
-
 enum IxGeocodeSource {
   Action
   Owner
@@ -158,10 +134,6 @@ type IxLookupValue {
   ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
-}
-
-input IxLookupValueDO {
-  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -249,8 +221,6 @@ type IxResource {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String
@@ -259,10 +229,7 @@ type IxResource {
 
 type IxResourceBlock {
   Resource: IxResource
-  Valid: Boolean
   CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Id: ID!
   ObjectType: IxResourceBlockObjectType
   Name: String
@@ -271,11 +238,8 @@ type IxResourceBlock {
 }
 
 input IxResourceBlockInput {
-  Resource: IxResourceDO
-  Valid: Boolean
+  Resource: IxResourceDO!
   CurrentLifespan: IxRangeInput!
-  History: [IxRangeInput]
-  Duration: String
   Id: ID!
   ObjectType: IxResourceBlockObjectType
   Name: String
@@ -305,10 +269,6 @@ type IxResourceSubtype {
   Description: String
 }
 
-input IxResourceSubtypeDO {
-  Id: ID!
-}
-
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -323,10 +283,6 @@ type IxResourceType {
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
 }
 
 enum IxResourceTypeFamily {

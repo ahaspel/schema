@@ -6,15 +6,12 @@ type CxMaterial {
   QuantityRemaining: IxQuantity
   Unit: IxUnit
   Reusable: Boolean
-  Temporary: Boolean
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  UnitCost: IxUnitCost
   ForeColor: String
   BackColor: String
   AccountCode: String
-  Duration: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -24,18 +21,14 @@ input CxMaterialInput {
   ObjectType: CxMaterialObjectType
   CurrentLifespan: IxRangeInput
   Inventory: IxInventoryInput!
-  Quantity: IxQuantityInput
   Unit: IxUnitDO!
   Reusable: Boolean!
-  Temporary: Boolean
-  Owner: IxCompanyDO!
+  Owner: IxCompanyDO
   ResourceType: IxResourceTypeDO!
   ResourceSubtype: IxResourceSubtypeDO!
-  UnitCost: IxUnitCostInput
   ForeColor: String
   BackColor: String
   AccountCode: String
-  Duration: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -192,16 +185,6 @@ enum IxLookupValueObjectType {
   WebPrivilege
 }
 
-type IxMoney {
-  Unit: IxUnit
-  Quantity: Float
-}
-
-input IxMoneyInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
-}
-
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -230,11 +213,6 @@ type IxPhoneNumber {
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
-}
-
-input IxQuantityInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
 }
 
 type IxRange {
@@ -300,18 +278,6 @@ type IxUnit {
   ObjectType: IxUnitObjectType
   Name: String
   Description: String
-}
-
-type IxUnitCost {
-  Unit: IxUnit
-  Cost: IxMoney
-  Notes: String
-}
-
-input IxUnitCostInput {
-  Unit: IxUnitDO!
-  Cost: IxMoneyInput!
-  Notes: String
 }
 
 input IxUnitDO {

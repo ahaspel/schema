@@ -248,17 +248,8 @@
 				"Description": {
 					"type": "string"
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string"
 				},
 				"Tags": {
 					"type": "array",
@@ -479,15 +470,6 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"Duration": {
-					"type": "string"
-				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -652,9 +634,6 @@
 				"TimeEntry"
 			]
 		},
-		"Duration": {
-			"type": "string"
-		},
 		"Hours": {
 			"type": "number"
 		},
@@ -736,12 +715,6 @@
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
 		},
 		"Id": {
 			"type": "integer"

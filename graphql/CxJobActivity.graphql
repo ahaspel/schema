@@ -4,11 +4,9 @@ type CxJobActivity {
   Completed: Boolean
   Priority: Int
   CurrentLifespan: IxRange
-  History: [IxRange]
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
-  Duration: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]

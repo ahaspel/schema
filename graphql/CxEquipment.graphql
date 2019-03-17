@@ -23,8 +23,6 @@ type CxEquipment {
   Location: IxLocation
   AccountCode: String
   CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -159,8 +157,6 @@ type IxEmployee {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Tags: [IxAttribute__String__]
   AccountCode: String
   ForeColor: String

@@ -30,8 +30,6 @@ type CxEmployee {
   Location: IxLocation
   AccountCode: String
   CurrentLifespan: IxRange
-  History: [IxRange]
-  Duration: String
   Id: ID!
   Description: String
   Name: String

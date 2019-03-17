@@ -491,9 +491,7 @@
 	},
 	"immutable": [
 		"Dto",
-		"History",
 		"InCrew",
-		"Duration",
 		"Location",
 		"PartyId"
 	],
@@ -504,10 +502,12 @@
 			"format": "date-time"
 		},
 		"LastName": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"FirstName": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"MiddleName": {
 			"type": "string"
@@ -628,15 +628,6 @@
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
-		"Duration": {
-			"type": "string"
 		},
 		"Id": {
 			"type": "integer"

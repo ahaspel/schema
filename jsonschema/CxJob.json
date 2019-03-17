@@ -270,17 +270,8 @@
 				"Description": {
 					"type": "string"
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"Duration": {
-					"type": "string"
 				},
 				"Tags": {
 					"type": "array",
@@ -555,8 +546,6 @@
 	},
 	"immutable": [
 		"Dto",
-		"History",
-		"Duration",
 		"HasAttachments"
 	],
 	"type": "object",
@@ -668,15 +657,6 @@
 		},
 		"HasAttachments": {
 			"type": "boolean"
-		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
-		"Duration": {
-			"type": "string"
 		},
 		"Id": {
 			"type": "integer"

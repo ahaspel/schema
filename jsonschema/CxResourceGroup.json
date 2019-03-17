@@ -375,15 +375,6 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"Duration": {
-					"type": "string"
-				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -410,20 +401,8 @@
 				"Resource": {
 					"$ref": "#/definitions/IxResource"
 				},
-				"Valid": {
-					"type": "boolean"
-				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"History": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxRange"
-					}
-				},
-				"Duration": {
-					"type": "string"
 				},
 				"Id": {
 					"type": "integer"
@@ -449,7 +428,8 @@
 			},
 			"required": [
 				"CurrentLifespan",
-				"Id"
+				"Id",
+				"Resource"
 			]
 		},
 		"IxResourceSubtype": {
@@ -590,9 +570,10 @@
 	},
 	"immutable": [
 		"Dto",
-		"History",
-		"Duration",
 		"CurrentLifespan",
+		"ResourceType",
+		"ResourceSubtype",
+		"Address",
 		"Location",
 		"Count"
 	],
@@ -611,12 +592,6 @@
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},
-		"History": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxRange"
-			}
-		},
 		"ResourceBlocks": {
 			"type": "array",
 			"items": {
@@ -629,9 +604,6 @@
 			"enum": [
 				"Crew"
 			]
-		},
-		"Temporary": {
-			"type": "boolean"
 		},
 		"Owner": {
 			"$ref": "#/definitions/IxCompany"
@@ -660,9 +632,6 @@
 		"AccountCode": {
 			"type": "string"
 		},
-		"Duration": {
-			"type": "string"
-		},
 		"Id": {
 			"type": "integer"
 		},
@@ -681,8 +650,6 @@
 		"Id",
 		"Contact",
 		"ResourceBlocks",
-		"Owner",
-		"ResourceType",
-		"ResourceSubtype"
+		"Owner"
 	]
 }
