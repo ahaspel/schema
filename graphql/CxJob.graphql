@@ -39,7 +39,7 @@ input CxJobInput {
   Certifications: [IxLookupValueDO]
   Address: IxAddressInput!
   AccountCode: String!
-  Contacts: [IxPartyDO]
+  Contacts: [IxPartyInput]
   Name: String!
   Notes: String
   CurrentLifespan: IxRangeInput!
@@ -196,6 +196,13 @@ type IxEmail {
   Description: String
 }
 
+input IxEmailInput {
+  Id: ID!
+  Email: String!
+  Name: String
+  Description: String
+}
+
 type IxGeocode {
   Lat: Float
   Lng: Float
@@ -334,6 +341,17 @@ input IxPartyDO {
   Id: ID!
 }
 
+input IxPartyInput {
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Id: ID!
+  ObjectType: IxPartyObjectType
+  Name: String
+  Description: String
+  Address: IxAddressInput
+  Tags: [IxAttribute__String__Input]
+}
+
 enum IxPartyObjectType {
   Party
   Company
@@ -344,6 +362,13 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
+  Name: String
+  Description: String
+}
+
+input IxPhoneNumberInput {
+  Id: ID!
+  PhoneNumber: String!
   Name: String
   Description: String
 }

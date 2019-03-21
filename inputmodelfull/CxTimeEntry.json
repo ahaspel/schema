@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 424,
-	"Minutes": 7,
-	"Name": "omnis",
+	"Hours": 640,
+	"Minutes": 658,
+	"Name": "repellendus",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,15 +22,15 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 397
+					"Quantity": 557
 				},
-				"Notes": "et"
+				"Notes": "voluptas"
 			},
-			"Global": false,
-			"BaseObject": "asperiores",
+			"Global": true,
+			"BaseObject": "repellendus",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "eaque",
+			"Name": "consectetur",
 			"Description": "quidem"
 		}
 	],
@@ -46,16 +46,16 @@
 		"Id": 1
 	},
 	"IsVoid": true,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": -76.7951,
-		"Lng": -173.3405,
-		"Source": "Action"
+		"Lat": 20.6455,
+		"Lng": -146.3735,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -25.2428,
-		"Lng": -150.7543,
+		"Lat": 56.9435,
+		"Lng": 9.423,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -64,13 +64,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 494
+		"Quantity": 966
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 154
+		"Quantity": 459
 	},
 	"Approvals": [
 		{
@@ -80,21 +80,21 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "quia",
+	"Description": "corporis",
 	"Tags": [
 		{
-			"BaseObject": "fugiat",
+			"BaseObject": "corrupti",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "soluta"
+			"Description": "aspernatur"
 		}
 	],
 	"__typename": "CxTimeEntry"
