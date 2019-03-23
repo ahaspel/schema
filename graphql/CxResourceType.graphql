@@ -68,7 +68,7 @@ type IxResourceSubtype {
 input IxResourceSubtypeInput {
   Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Name: String
+  Name: String!
   Description: String
 }
 

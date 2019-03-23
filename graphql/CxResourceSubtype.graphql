@@ -6,8 +6,12 @@ type CxResourceSubtype {
   Tags: [IxAttribute__String__]
 }
 
-input CxResourceSubtypeDO {
+input CxResourceSubtypeInput {
+  ObjectType: CxResourceSubtypeObjectType
+  Name: String!
   Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxResourceSubtypeObjectType {
@@ -28,12 +32,21 @@ type IxAttribute__String__ {
   Description: String
 }
 
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
 enum IxAttributeStringObjectType {
   Attribute
 }
 
 extend type Mutation {
-  cxResourceSubtypes_onSave(data: [CxResourceSubtypeDO], objectType: String = "ResourceSubtype", operation: String = "edit"): [CxResourceSubtype]
+  cxResourceSubtypes_onSave(data: [CxResourceSubtypeInput], objectType: String = "ResourceSubtype", operation: String = "edit"): [CxResourceSubtype]
   cxResourceSubtypes_onDelete(data: [String], objectType: String = "ResourceSubtype", operation: String = "delete"): [CxResourceSubtype]
 }
 

@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 302,
-	"Minutes": 326,
-	"Name": "perferendis",
+	"Hours": 928,
+	"Minutes": 514,
+	"Name": "facere",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 641
+					"Quantity": 330
 				},
-				"Notes": "soluta"
+				"Notes": "officia"
 			},
-			"Global": true,
-			"BaseObject": "voluptatem",
+			"Global": false,
+			"BaseObject": "officia",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "repellat",
-			"Description": "officia"
+			"Name": "perspiciatis",
+			"Description": "ducimus"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,18 +45,18 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
-	"Billable": false,
+	"IsVoid": true,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": 13.5902,
-		"Lng": -71.4314,
+		"Lat": 86.9414,
+		"Lng": -141.8625,
 		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -45.975,
-		"Lng": -60.1498,
-		"Source": "Action"
+		"Lat": 70.7463,
+		"Lng": 54.2951,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "PunchedIn",
@@ -64,13 +64,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 771
+		"Quantity": 14
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 760
+		"Quantity": 868
 	},
 	"Approvals": [
 		{
@@ -80,21 +80,21 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "nostrum",
+	"Description": "voluptate",
 	"Tags": [
 		{
-			"BaseObject": "perspiciatis",
-			"AttributeId": 790,
+			"BaseObject": "dolorem",
+			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Name": "veniam",
-			"Description": "placeat"
+			"Name": "Capacity",
+			"Description": "corrupti"
 		}
 	],
 	"__typename": "CxTimeEntry"
