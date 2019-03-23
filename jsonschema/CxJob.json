@@ -3,6 +3,12 @@
 	"title": "com.congistics.cbrd.job.CxJob",
 	"definitions": {
 		"IxAddress": {
+			"superRequired": [
+				"Id",
+				"Street",
+				"City",
+				"State"
+			],
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -74,6 +80,11 @@
 			]
 		},
 		"IxCompany": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"CompanyType"
+			],
 			"type": "object",
 			"properties": {
 				"CompanyType": {
@@ -131,6 +142,11 @@
 			]
 		},
 		"IxCostCode": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"UnitCost"
+			],
 			"type": "object",
 			"properties": {
 				"UnitCost": {
@@ -166,6 +182,11 @@
 			]
 		},
 		"IxDocument": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"FilePath"
+			],
 			"type": "object",
 			"properties": {
 				"Attached": {
@@ -202,6 +223,10 @@
 			]
 		},
 		"IxEmail": {
+			"superRequired": [
+				"Id",
+				"Email"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -243,6 +268,10 @@
 			}
 		},
 		"IxJobActivity": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"ParentId": {
@@ -292,6 +321,11 @@
 			]
 		},
 		"IxJobCost": {
+			"superRequired": [
+				"CostCode",
+				"TotalAmount",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"CostCode": {
@@ -319,21 +353,24 @@
 					]
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Name",
-				"Id",
 				"CostCode",
+				"Id",
 				"TotalAmount"
 			]
 		},
 		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -394,6 +431,10 @@
 			]
 		},
 		"IxParty": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Emails": {
@@ -441,6 +482,10 @@
 			]
 		},
 		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -462,6 +507,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -482,6 +531,9 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {

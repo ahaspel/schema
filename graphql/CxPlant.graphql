@@ -1,45 +1,35 @@
-type CxResourceGroup {
-  Contact: IxParty
-  Count: Int
-  Name: String
-  Temporary: Boolean
-  CurrentLifespan: IxRange
-  ResourceBlocks: [IxResourceBlock]
-  ObjectType: CxResourceGroupObjectType
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  UnitCost: IxUnitCost
-  ForeColor: String
-  BackColor: String
-  Address: IxAddress
-  Location: IxLocation
+type CxPlant {
+  Capacities: [IxCapacity]
+  ObjectType: CxPlantObjectType
+  CompanyType: IxLookupValue
+  Contacts: [IxParty]
   AccountCode: String
+  PhoneNumbers: [IxPhoneNumber]
+  Emails: [IxEmail]
+  Name: String
+  Address: IxAddress
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
 }
 
-input CxResourceGroupInput {
-  Contact: IxPartyDO!
-  Name: String!
-  Temporary: Boolean
-  ResourceBlocks: [IxResourceBlockInput]!
-  ObjectType: CxResourceGroupObjectType
-  Owner: IxCompanyDO
-  ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO
-  UnitCost: IxUnitCostInput
-  ForeColor: String
-  BackColor: String
+input CxPlantInput {
+  Capacities: [IxCapacityInput]
+  ObjectType: CxPlantObjectType
+  CompanyType: IxLookupValueDO!
+  Contacts: [IxPartyDO]
   AccountCode: String
+  PhoneNumbers: [IxPhoneNumberInput]
+  Emails: [IxEmailInput]
+  Name: String
+  Address: IxAddressInput
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
 }
 
-enum CxResourceGroupObjectType {
-  Crew
+enum CxPlantObjectType {
+  Plant
 }
 
 input FilterInput {
@@ -54,6 +44,17 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
 }
@@ -84,27 +85,20 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxCompany {
-  CompanyType: IxLookupValue
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
+type IxCapacity {
+  Material: IxResourceSubtype
   Id: ID!
-  ObjectType: IxCompanyObjectType
-  Name: String
-  Description: String
-  Address: IxAddress
-  Tags: [IxAttribute__String__]
-  AccountCode: String
-  Contacts: [IxParty]
+  ResourceType: IxResourceType
+  Quantity: IxQuantity
+  QuantityRemaining: IxQuantity
 }
 
-input IxCompanyDO {
+input IxCapacityInput {
+  Material: IxResourceSubtypeDO!
   Id: ID!
-}
-
-enum IxCompanyObjectType {
-  Company
-  Subcontractor
+  ResourceType: IxResourceTypeInput
+  Quantity: IxQuantityInput!
+  QuantityRemaining: IxQuantityInput
 }
 
 type IxEmail {
@@ -114,7 +108,20 @@ type IxEmail {
   Description: String
 }
 
+input IxEmailInput {
+  Id: ID!
+  Email: String!
+  Name: String
+  Description: String
+}
+
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -126,18 +133,16 @@ enum IxGeocodeSource {
   GPSService
 }
 
-type IxLocation {
-  Address: IxAddress
-  Name: String
-  Description: String
-}
-
 type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -161,16 +166,6 @@ enum IxLookupValueObjectType {
   JobStatus
   JobCertification
   WebPrivilege
-}
-
-type IxMoney {
-  Unit: IxUnit
-  Quantity: Float
-}
-
-input IxMoneyInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
 }
 
 type IxParty {
@@ -202,68 +197,21 @@ type IxPhoneNumber {
   Description: String
 }
 
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
-type IxResource {
-  Temporary: Boolean
-  UnitCost: IxUnitCost
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
+input IxPhoneNumberInput {
   Id: ID!
-  ObjectType: IxResourceObjectType
+  PhoneNumber: String!
   Name: String
   Description: String
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  AccountCode: String
-  ForeColor: String
-  BackColor: String
 }
 
-type IxResourceBlock {
-  Resource: IxResource
-  CurrentLifespan: IxRange
-  Id: ID!
-  ObjectType: IxResourceBlockObjectType
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
 }
 
-input IxResourceBlockInput {
-  Resource: IxResourceDO!
-  CurrentLifespan: IxRangeInput!
-  Id: ID!
-  ObjectType: IxResourceBlockObjectType
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__Input]
-}
-
-enum IxResourceBlockObjectType {
-  ResourceBlock
-}
-
-input IxResourceDO {
-  Id: ID!
-}
-
-enum IxResourceObjectType {
-  Crew
-  Employee
-  Equipment
-  Material
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
 type IxResourceSubtype {
@@ -293,15 +241,23 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceTypeDO {
-  Id: ID!
-}
-
 enum IxResourceTypeFamily {
   Labor
   Equipment
   Material
   Group
+}
+
+input IxResourceTypeInput {
+  Family: IxResourceTypeFamily!
+  ResourceSubtypes: [IxResourceSubtypeDO]!
+  MoveVehicle: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxResourceTypeObjectType
+  Name: String!
+  Description: String
+  Tags: [IxAttribute__String__Input]
 }
 
 enum IxResourceTypeObjectType {
@@ -317,18 +273,6 @@ type IxUnit {
   ObjectType: IxUnitObjectType
   Name: String
   Description: String
-}
-
-type IxUnitCost {
-  Unit: IxUnit
-  Cost: IxMoney
-  Notes: String
-}
-
-input IxUnitCostInput {
-  Unit: IxUnitDO!
-  Cost: IxMoneyInput!
-  Notes: String
 }
 
 input IxUnitDO {
@@ -350,10 +294,10 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit"): [CxResourceGroup]
-  cxResourceGroups_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResourceGroup]
+  cxPlants_onSave(data: [CxPlantInput], objectType: String = "Plant", operation: String = "edit"): [CxPlant]
+  cxPlants_onDelete(data: [String], objectType: String = "Plant", operation: String = "delete"): [CxPlant]
 }
 
 extend type Query {
-  cxResourceGroups(filters: [FilterInput], objectType: String = "Crew"): [CxResourceGroup]
+  cxPlants(filters: [FilterInput], objectType: String = "Plant"): [CxPlant]
 }

@@ -3,6 +3,12 @@
 	"title": "com.congistics.cbrd.resource.CxMaterial",
 	"definitions": {
 		"IxAddress": {
+			"superRequired": [
+				"Id",
+				"Street",
+				"City",
+				"State"
+			],
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -74,6 +80,11 @@
 			]
 		},
 		"IxCompany": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"CompanyType"
+			],
 			"type": "object",
 			"properties": {
 				"CompanyType": {
@@ -131,6 +142,10 @@
 			]
 		},
 		"IxEmail": {
+			"superRequired": [
+				"Id",
+				"Email"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -224,6 +239,11 @@
 			]
 		},
 		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -284,6 +304,10 @@
 			]
 		},
 		"IxParty": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Emails": {
@@ -331,6 +355,10 @@
 			]
 		},
 		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -367,6 +395,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
 			"type": [
 				"object",
 				"null"
@@ -390,6 +422,9 @@
 			]
 		},
 		"IxResourceSubtype": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -413,6 +448,12 @@
 			]
 		},
 		"IxResourceType": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"Family",
+				"ResourceSubtypes"
+			],
 			"type": "object",
 			"properties": {
 				"Family": {
@@ -463,6 +504,9 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {

@@ -3,6 +3,12 @@
 	"title": "com.congistics.cbrd.time.CxTimeEntry",
 	"definitions": {
 		"IxAddress": {
+			"superRequired": [
+				"Id",
+				"Street",
+				"City",
+				"State"
+			],
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -90,6 +96,11 @@
 			]
 		},
 		"IxCompany": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"CompanyType"
+			],
 			"type": "object",
 			"properties": {
 				"CompanyType": {
@@ -148,6 +159,11 @@
 			]
 		},
 		"IxCostCode": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"UnitCost"
+			],
 			"type": "object",
 			"properties": {
 				"UnitCost": {
@@ -181,6 +197,10 @@
 			]
 		},
 		"IxEmail": {
+			"superRequired": [
+				"Id",
+				"Email"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -222,6 +242,10 @@
 			}
 		},
 		"IxJobActivity": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"ParentId": {
@@ -269,6 +293,11 @@
 			]
 		},
 		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -329,6 +358,10 @@
 			]
 		},
 		"IxParty": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Emails": {
@@ -376,6 +409,10 @@
 			]
 		},
 		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -412,6 +449,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -491,6 +532,9 @@
 			]
 		},
 		"IxResourceSubtype": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -514,6 +558,12 @@
 			]
 		},
 		"IxResourceType": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"Family",
+				"ResourceSubtypes"
+			],
 			"type": "object",
 			"properties": {
 				"Family": {
@@ -564,6 +614,9 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {

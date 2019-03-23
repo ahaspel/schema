@@ -273,7 +273,7 @@ input IxJobCostInput {
   BaseObject: String
   Id: ID!
   ObjectType: IxJobCostObjectType
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -346,7 +346,7 @@ input IxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String
+  Name: String!
   Description: String
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]

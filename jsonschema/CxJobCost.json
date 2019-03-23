@@ -3,6 +3,11 @@
 	"title": "com.congistics.cbrd.cost.CxJobCost",
 	"definitions": {
 		"IxCostCode": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"UnitCost"
+			],
 			"type": "object",
 			"properties": {
 				"UnitCost": {
@@ -51,6 +56,9 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {
@@ -136,11 +144,11 @@
 		"Name": {
 			"type": "string"
 		},
-		"Id": {
-			"type": "integer"
-		},
 		"Description": {
 			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
 		},
 		"BaseObject": {
 			"type": "string"

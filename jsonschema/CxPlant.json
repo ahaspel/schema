@@ -1,6 +1,6 @@
 {
-	"id": "https://congistics.com/schema/CxSubcontractor",
-	"title": "com.congistics.cbrd.party.CxSubcontractor",
+	"id": "https://congistics.com/schema/CxPlant",
+	"title": "com.congistics.cbrd.party.CxPlant",
 	"definitions": {
 		"IxAddress": {
 			"superRequired": [
@@ -77,6 +77,31 @@
 				"BaseObject",
 				"AttributeId",
 				"Id"
+			]
+		},
+		"IxCapacity": {
+			"type": "object",
+			"properties": {
+				"Material": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"Quantity": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"QuantityRemaining": {
+					"$ref": "#/definitions/IxQuantity"
+				}
+			},
+			"required": [
+				"Material",
+				"Id",
+				"Quantity"
 			]
 		},
 		"IxEmail": {
@@ -206,8 +231,7 @@
 					]
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -223,7 +247,6 @@
 				}
 			},
 			"required": [
-				"Name",
 				"Id"
 			]
 		},
@@ -252,6 +275,21 @@
 				"PhoneNumber"
 			]
 		},
+		"IxQuantity": {
+			"type": "object",
+			"properties": {
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"Quantity": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"Unit",
+				"Quantity"
+			]
+		},
 		"IxResourceSubtype": {
 			"superRequired": [
 				"Id"
@@ -278,16 +316,34 @@
 				"Id"
 			]
 		},
-		"IxSupplyType": {
+		"IxResourceType": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"Family",
+				"ResourceSubtypes"
+			],
 			"type": "object",
 			"properties": {
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
+				"Family": {
+					"type": "string",
+					"enum": [
+						"Labor",
+						"Equipment",
+						"Material",
+						"Group"
+					]
 				},
-				"AccrualNumber": {
-					"type": "string"
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
 				},
-				"Notes": {
+				"MoveVehicle": {
+					"type": "boolean"
+				},
+				"BaseObject": {
 					"type": "string"
 				},
 				"Id": {
@@ -296,7 +352,7 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"SupplyType"
+						"ResourceType"
 					]
 				},
 				"Name": {
@@ -313,36 +369,71 @@
 				}
 			},
 			"required": [
-				"ResourceSubtype",
+				"Family",
+				"ResourceSubtypes",
+				"Id"
+			]
+		},
+		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
+			"type": "object",
+			"properties": {
+				"UnitType": {
+					"type": "string",
+					"enum": [
+						"Time",
+						"Length",
+						"Weight",
+						"Area",
+						"Volume",
+						"Money",
+						"Self"
+					]
+				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
 				"Id"
 			]
 		}
 	},
-	"immutable": [
-		"Dto",
-		"SuppliesAll"
-	],
 	"type": "object",
 	"properties": {
-		"Preferred": {
-			"type": "boolean"
-		},
-		"IsMover": {
-			"type": "boolean"
-		},
-		"SupplyTypes": {
+		"Capacities": {
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/IxSupplyType"
+				"$ref": "#/definitions/IxCapacity"
 			}
-		},
-		"SuppliesAll": {
-			"type": "boolean"
 		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
-				"Subcontractor"
+				"Plant"
 			]
 		},
 		"CompanyType": {
@@ -370,8 +461,7 @@
 			}
 		},
 		"Name": {
-			"type": "string",
-			"minLength": 1
+			"type": "string"
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
@@ -390,8 +480,7 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id",
-		"CompanyType"
+		"CompanyType",
+		"Id"
 	]
 }

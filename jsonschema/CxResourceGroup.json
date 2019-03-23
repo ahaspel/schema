@@ -3,6 +3,12 @@
 	"title": "com.congistics.cbrd.resource.CxResourceGroup",
 	"definitions": {
 		"IxAddress": {
+			"superRequired": [
+				"Id",
+				"Street",
+				"City",
+				"State"
+			],
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -74,6 +80,11 @@
 			]
 		},
 		"IxCompany": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"CompanyType"
+			],
 			"type": "object",
 			"properties": {
 				"CompanyType": {
@@ -131,6 +142,10 @@
 			]
 		},
 		"IxEmail": {
+			"superRequired": [
+				"Id",
+				"Email"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -189,6 +204,11 @@
 			]
 		},
 		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -249,6 +269,10 @@
 			]
 		},
 		"IxParty": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Emails": {
@@ -296,6 +320,10 @@
 			]
 		},
 		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -317,6 +345,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -428,11 +460,14 @@
 			},
 			"required": [
 				"CurrentLifespan",
-				"Id",
-				"Resource"
+				"Resource",
+				"Id"
 			]
 		},
 		"IxResourceSubtype": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -456,6 +491,12 @@
 			]
 		},
 		"IxResourceType": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"Family",
+				"ResourceSubtypes"
+			],
 			"type": "object",
 			"properties": {
 				"Family": {
@@ -506,6 +547,9 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {
@@ -570,12 +614,10 @@
 	},
 	"immutable": [
 		"Dto",
-		"CurrentLifespan",
-		"ResourceType",
-		"ResourceSubtype",
+		"Count",
 		"Address",
 		"Location",
-		"Count"
+		"CurrentLifespan"
 	],
 	"type": "object",
 	"properties": {
@@ -588,6 +630,9 @@
 		"Name": {
 			"type": "string",
 			"minLength": 1
+		},
+		"Temporary": {
+			"type": "boolean"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
@@ -649,7 +694,6 @@
 		"Name",
 		"Id",
 		"Contact",
-		"ResourceBlocks",
-		"Owner"
+		"ResourceBlocks"
 	]
 }

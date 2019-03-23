@@ -5,8 +5,8 @@ type CxJobCost {
   CompletedAmount: Float
   ObjectType: CxJobCostObjectType
   Name: String
-  Id: ID!
   Description: String
+  Id: ID!
   BaseObject: String
 }
 
@@ -17,8 +17,8 @@ input CxJobCostInput {
   CompletedAmount: Float
   ObjectType: CxJobCostObjectType
   Name: String
-  Id: ID!
   Description: String
+  Id: ID!
   BaseObject: String
 }
 
@@ -47,7 +47,7 @@ input IxCostCodeInput {
   BaseObject: String
   Id: ID!
   ObjectType: IxCostCodeObjectType
-  Name: String
+  Name: String!
   Description: String
 }
 

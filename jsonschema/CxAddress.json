@@ -22,6 +22,11 @@
 			}
 		},
 		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {

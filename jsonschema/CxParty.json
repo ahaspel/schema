@@ -3,6 +3,12 @@
 	"title": "com.congistics.cbrd.party.CxParty",
 	"definitions": {
 		"IxAddress": {
+			"superRequired": [
+				"Id",
+				"Street",
+				"City",
+				"State"
+			],
 			"type": "object",
 			"properties": {
 				"Street": {
@@ -74,6 +80,10 @@
 			]
 		},
 		"IxEmail": {
+			"superRequired": [
+				"Id",
+				"Email"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -115,6 +125,11 @@
 			}
 		},
 		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -160,6 +175,10 @@
 			]
 		},
 		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
 			"type": "object",
 			"properties": {
 				"Id": {

@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 640,
-	"Minutes": 658,
-	"Name": "repellendus",
+	"Hours": 302,
+	"Minutes": 326,
+	"Name": "perferendis",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 557
+					"Quantity": 641
 				},
-				"Notes": "voluptas"
+				"Notes": "soluta"
 			},
 			"Global": true,
-			"BaseObject": "repellendus",
+			"BaseObject": "voluptatem",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "consectetur",
-			"Description": "quidem"
+			"Name": "repellat",
+			"Description": "officia"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,32 +45,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": 20.6455,
-		"Lng": -146.3735,
-		"Source": "GPSService"
+		"Lat": 13.5902,
+		"Lng": -71.4314,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 56.9435,
-		"Lng": 9.423,
-		"Source": "GPSService"
+		"Lat": -45.975,
+		"Lng": -60.1498,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 966
+		"Quantity": 771
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 459
+		"Quantity": 760
 	},
 	"Approvals": [
 		{
@@ -80,21 +80,21 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "corporis",
+	"Description": "nostrum",
 	"Tags": [
 		{
-			"BaseObject": "corrupti",
-			"AttributeId": 2,
+			"BaseObject": "perspiciatis",
+			"AttributeId": 790,
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Name": "Capacity",
-			"Description": "aspernatur"
+			"Name": "veniam",
+			"Description": "placeat"
 		}
 	],
 	"__typename": "CxTimeEntry"
