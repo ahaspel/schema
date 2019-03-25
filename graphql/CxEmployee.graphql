@@ -31,6 +31,7 @@ type CxEmployee {
   AccountCode: String
   CurrentLifespan: IxRange
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -66,6 +67,7 @@ input CxEmployeeInput {
   AccountCode: String
   CurrentLifespan: IxRangeInput!
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Name: String
   Tags: [IxAttribute__String__Input]
@@ -139,6 +141,7 @@ type IxCompany {
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
+  Divisions: [IxLookupValue]
   Contacts: [IxParty]
 }
 

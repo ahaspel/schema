@@ -12,6 +12,7 @@ type CxSubcontractor {
   Name: String
   Address: IxAddress
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -29,6 +30,7 @@ input CxSubcontractorInput {
   Name: String!
   Address: IxAddressInput
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }

@@ -2,6 +2,7 @@ type CxResourceSubtype {
   ObjectType: CxResourceSubtypeObjectType
   Name: String
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -10,6 +11,7 @@ input CxResourceSubtypeInput {
   ObjectType: CxResourceSubtypeObjectType
   Name: String!
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -43,6 +45,41 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxLookupValue {
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Name: String
+  Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
 }
 
 extend type Mutation {

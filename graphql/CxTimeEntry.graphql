@@ -23,6 +23,7 @@ type CxTimeEntry {
   Approved: Boolean
   CurrentLifespan: IxRange
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -52,6 +53,7 @@ input CxTimeEntryInput {
   Approved: Boolean
   CurrentLifespan: IxRangeInput!
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -129,6 +131,7 @@ type IxCompany {
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
+  Divisions: [IxLookupValue]
   Contacts: [IxParty]
 }
 
@@ -316,6 +319,7 @@ type IxResource {
   Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Divisions: [IxLookupValue]
   AccountCode: String
   ForeColor: String
   BackColor: String

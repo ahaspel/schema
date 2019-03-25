@@ -130,6 +130,12 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
 				"Contacts": {
 					"type": "array",
 					"items": {
@@ -295,6 +301,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
 					}
 				},
 				"AccountCode": {
@@ -790,6 +802,12 @@
 		"Id": {
 			"type": "integer"
 		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
 		"Description": {
 			"type": "string"
 		},
@@ -801,6 +819,7 @@
 		}
 	},
 	"required": [
+		"Name",
 		"Model",
 		"Make",
 		"Owner",

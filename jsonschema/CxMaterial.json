@@ -130,6 +130,12 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
 				"Contacts": {
 					"type": "array",
 					"items": {
@@ -572,6 +578,7 @@
 	},
 	"immutable": [
 		"Dto",
+		"Name",
 		"Quantity",
 		"QuantityRemaining"
 	],
@@ -622,7 +629,16 @@
 		"Id": {
 			"type": "integer"
 		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
 		"Description": {
+			"type": "string"
+		},
+		"Name": {
 			"type": "string"
 		},
 		"Tags": {

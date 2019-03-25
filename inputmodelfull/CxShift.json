@@ -1,27 +1,32 @@
 {
-	"Name": "dolorem",
+	"Name": "eius",
 	"Days": [
 		{
 			"Day": 1,
-			"DayByName": "perspiciatis",
+			"DayByName": "laboriosam",
 			"Start": "08:00:00",
 			"End": "16:00:00",
 			"Included": true
 		}
 	],
 	"Default": false,
-	"UseHolidays": true,
+	"UseHolidays": false,
 	"ObjectType": "Shift",
 	"Id": 0,
-	"Description": "molestiae",
+	"Divisions": [
+		{
+			"Id": 1
+		}
+	],
+	"Description": "quidem",
 	"Tags": [
 		{
-			"BaseObject": "praesentium",
+			"BaseObject": "voluptate",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "incidunt"
+			"Description": "nesciunt"
 		}
 	],
 	"__typename": "CxShift"

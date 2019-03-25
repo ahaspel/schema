@@ -130,6 +130,12 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
 				"Contacts": {
 					"type": "array",
 					"items": {
@@ -676,6 +682,12 @@
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
 		},
 		"Description": {
 			"type": "string"

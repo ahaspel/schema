@@ -13,7 +13,9 @@ type CxMaterial {
   BackColor: String
   AccountCode: String
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
+  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -30,6 +32,7 @@ input CxMaterialInput {
   BackColor: String
   AccountCode: String
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -91,6 +94,7 @@ type IxCompany {
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
+  Divisions: [IxLookupValue]
   Contacts: [IxParty]
 }
 
@@ -160,6 +164,10 @@ type IxLookupValue {
   ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {

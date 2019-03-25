@@ -5,6 +5,7 @@ type CxParty {
   Address: IxAddress
   ObjectType: CxPartyObjectType
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -16,6 +17,7 @@ input CxPartyInput {
   Address: IxAddressInput
   ObjectType: CxPartyObjectType
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }

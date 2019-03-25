@@ -9,6 +9,7 @@ type CxPlant {
   Name: String
   Address: IxAddress
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -24,6 +25,7 @@ input CxPlantInput {
   Name: String
   Address: IxAddressInput
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }

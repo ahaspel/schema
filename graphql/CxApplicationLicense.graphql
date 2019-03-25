@@ -9,6 +9,7 @@ type CxApplicationLicense {
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
+  Divisions: [IxLookupValue]
   Tags: [IxAttribute__String__]
 }
 
@@ -21,6 +22,7 @@ input CxApplicationLicenseInput {
   MachineId: String
   Nag: Boolean
   ObjectType: CxApplicationLicenseObjectType
+  Divisions: [IxLookupValueDO]
   Tags: [IxAttribute__String__Input]
 }
 
@@ -53,6 +55,41 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxLookupValue {
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Name: String
+  Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
 }
 
 extend type Mutation {

@@ -130,6 +130,12 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
 				"Contacts": {
 					"type": "array",
 					"items": {
@@ -598,7 +604,8 @@
 	},
 	"immutable": [
 		"Dto",
-		"HasAttachments"
+		"HasAttachments",
+		"TotalHours"
 	],
 	"type": "object",
 	"properties": {
@@ -712,6 +719,12 @@
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
 		},
 		"Description": {
 			"type": "string"

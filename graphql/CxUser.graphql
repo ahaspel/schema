@@ -11,6 +11,7 @@ type CxUser {
   Description: String
   ObjectType: CxUserObjectType
   Id: ID!
+  Divisions: [IxLookupValue]
   Tags: [IxAttribute__String__]
 }
 
@@ -25,6 +26,7 @@ input CxUserInput {
   Description: String
   ObjectType: CxUserObjectType
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Tags: [IxAttribute__String__Input]
 }
 

@@ -1,26 +1,31 @@
 {
-	"Family": "Labor",
+	"Family": "Equipment",
 	"ResourceSubtypes": [
 		{
 			"Id": 0,
 			"ObjectType": "ResourceSubtype",
-			"Name": "ducimus",
-			"Description": "perspiciatis"
+			"Name": "voluptatem",
+			"Description": "quidem"
 		}
 	],
 	"MoveVehicle": false,
-	"Name": "repellendus",
+	"Name": "a",
 	"ObjectType": "ResourceType",
 	"Id": 0,
-	"Description": "voluptas",
+	"Divisions": [
+		{
+			"Id": 1
+		}
+	],
+	"Description": "assumenda",
 	"Tags": [
 		{
-			"BaseObject": "perspiciatis",
+			"BaseObject": "perferendis",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "doloribus"
+			"Description": "labore"
 		}
 	],
 	"__typename": "CxResourceType"

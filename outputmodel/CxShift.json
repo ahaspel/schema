@@ -1,27 +1,36 @@
 {
-	"Name": "odit",
+	"Name": "inventore",
 	"Days": [
 		{
-			"Day": 1,
-			"DayByName": "expedita",
+			"Day": 0,
+			"DayByName": "voluptatum",
 			"Start": "08:00:00",
 			"End": "08:00:00",
-			"Included": false
+			"Included": true
 		}
 	],
-	"Default": true,
-	"UseHolidays": false,
+	"Default": false,
+	"UseHolidays": true,
 	"ObjectType": "Shift",
 	"Id": 0,
-	"Description": "aperiam",
+	"Divisions": [
+		{
+			"BaseObject": "libero",
+			"Id": 0,
+			"ObjectType": "JobStatus",
+			"Name": "nostrum",
+			"Description": "perspiciatis"
+		}
+	],
+	"Description": "beatae",
 	"Tags": [
 		{
-			"BaseObject": "ratione",
-			"AttributeId": 263,
+			"BaseObject": "voluptatibus",
+			"AttributeId": 900,
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Name": "ratione",
-			"Description": "placeat"
+			"Name": "veniam",
+			"Description": "accusamus"
 		}
 	]
 }

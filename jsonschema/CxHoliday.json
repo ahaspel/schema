@@ -32,6 +32,56 @@
 				"AttributeId",
 				"Id"
 			]
+		},
+		"IxLookupValue": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"ObjectType"
+			],
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Privilege",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"JobCertification",
+						"WebPrivilege"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
 		}
 	},
 	"immutable": [
@@ -56,6 +106,12 @@
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
 		},
 		"Description": {
 			"type": "string"

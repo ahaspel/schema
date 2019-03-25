@@ -24,6 +24,7 @@ type CxEquipment {
   AccountCode: String
   CurrentLifespan: IxRange
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -50,6 +51,7 @@ input CxEquipmentInput {
   AccountCode: String!
   CurrentLifespan: IxRangeInput!
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -111,6 +113,7 @@ type IxCompany {
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
+  Divisions: [IxLookupValue]
   Contacts: [IxParty]
 }
 
@@ -158,6 +161,7 @@ type IxEmployee {
   Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Divisions: [IxLookupValue]
   AccountCode: String
   ForeColor: String
   BackColor: String
@@ -200,6 +204,10 @@ type IxLookupValue {
   ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {

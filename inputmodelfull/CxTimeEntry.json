@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 928,
-	"Minutes": 514,
-	"Name": "facere",
+	"Hours": 795,
+	"Minutes": 844,
+	"Name": "ducimus",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 330
+					"Quantity": 776
 				},
-				"Notes": "officia"
+				"Notes": "praesentium"
 			},
 			"Global": false,
-			"BaseObject": "officia",
+			"BaseObject": "numquam",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "perspiciatis",
-			"Description": "ducimus"
+			"Name": "voluptatum",
+			"Description": "dolore"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,17 +45,17 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
-	"Billable": true,
+	"IsVoid": false,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 86.9414,
-		"Lng": -141.8625,
+		"Lat": -13.3817,
+		"Lng": 9.8671,
 		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 70.7463,
-		"Lng": 54.2951,
+		"Lat": -41.9103,
+		"Lng": 84.3799,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -64,13 +64,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 14
+		"Quantity": 430
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 868
+		"Quantity": 480
 	},
 	"Approvals": [
 		{
@@ -80,21 +80,26 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "voluptate",
+	"Divisions": [
+		{
+			"Id": 1
+		}
+	],
+	"Description": "distinctio",
 	"Tags": [
 		{
-			"BaseObject": "dolorem",
+			"BaseObject": "numquam",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "corrupti"
+			"Description": "nesciunt"
 		}
 	],
 	"__typename": "CxTimeEntry"
