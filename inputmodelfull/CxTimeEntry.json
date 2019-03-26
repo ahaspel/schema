@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 795,
-	"Minutes": 844,
-	"Name": "ducimus",
+	"Hours": 37,
+	"Minutes": 201,
+	"Name": "impedit",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 776
+					"Quantity": 614
 				},
-				"Notes": "praesentium"
+				"Notes": "maxime"
 			},
 			"Global": false,
-			"BaseObject": "numquam",
+			"BaseObject": "temporibus",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "voluptatum",
-			"Description": "dolore"
+			"Name": "consequuntur",
+			"Description": "voluptatem"
 		}
 	],
 	"AuxiliaryResources": [
@@ -46,31 +46,31 @@
 		"Id": 1
 	},
 	"IsVoid": false,
-	"Billable": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": -13.3817,
-		"Lng": 9.8671,
-		"Source": "Owner"
+		"Lat": 0.2298,
+		"Lng": 138.5981,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -41.9103,
-		"Lng": 84.3799,
-		"Source": "GPSService"
+		"Lat": 74.3252,
+		"Lng": -145.2358,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 430
+		"Quantity": 628
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 480
+		"Quantity": 426
 	},
 	"Approvals": [
 		{
@@ -91,15 +91,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "distinctio",
+	"Description": "aliquid",
 	"Tags": [
 		{
-			"BaseObject": "numquam",
+			"BaseObject": "facere",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "nesciunt"
+			"Description": "adipisci"
 		}
 	],
 	"__typename": "CxTimeEntry"

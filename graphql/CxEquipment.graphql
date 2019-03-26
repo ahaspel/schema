@@ -26,6 +26,7 @@ type CxEquipment {
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
+  Name: String
   Tags: [IxAttribute__String__]
 }
 
