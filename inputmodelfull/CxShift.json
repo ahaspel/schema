@@ -1,16 +1,16 @@
 {
-	"Name": "a",
+	"Name": "ipsam",
 	"Days": [
 		{
 			"Day": 1,
-			"DayByName": "repellendus",
+			"DayByName": "ratione",
 			"Start": "08:00:00",
 			"End": "16:00:00",
-			"Included": false
+			"Included": true
 		}
 	],
-	"Default": true,
-	"UseHolidays": false,
+	"Default": false,
+	"UseHolidays": true,
 	"ObjectType": "Shift",
 	"Id": 0,
 	"Divisions": [
@@ -18,15 +18,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "voluptatibus",
+	"Description": "voluptas",
 	"Tags": [
 		{
-			"BaseObject": "veritatis",
+			"BaseObject": "repellendus",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "minima"
+			"Description": "consequuntur"
 		}
 	],
 	"__typename": "CxShift"

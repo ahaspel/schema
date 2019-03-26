@@ -41,7 +41,10 @@ input CxResourceInput {
 }
 
 enum CxResourceObjectType {
-  Resource
+  Crew
+  Employee
+  Equipment
+  Material
 }
 
 input FilterInput {
@@ -361,10 +364,10 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxResources_onSave(data: [CxResourceInput], objectType: String = "Resource", operation: String = "edit"): [CxResource]
-  cxResources_onDelete(data: [String], objectType: String = "Resource", operation: String = "delete"): [CxResource]
+  cxResources_onSave(data: [CxResourceInput], objectType: String = "Crew", operation: String = "edit"): [CxResource]
+  cxResources_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResource]
 }
 
 extend type Query {
-  cxResources(filters: [FilterInput], objectType: String = "Resource"): [CxResource]
+  cxResources(filters: [FilterInput], objectType: String = "Crew"): [CxResource]
 }

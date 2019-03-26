@@ -573,7 +573,10 @@
 		"ObjectType": {
 			"type": "string",
 			"enum": [
-				"Resource"
+				"Crew",
+				"Employee",
+				"Equipment",
+				"Material"
 			]
 		},
 		"Divisions": {
