@@ -1,0 +1,112 @@
+{
+	"Temporary": false,
+	"Owner": {
+		"CompanyType": {
+			"Id": 0
+		},
+		"Emails": [],
+		"PhoneNumbers": [],
+		"Id": 0,
+		"ObjectType": "Company",
+		"Name": "",
+		"Description": "",
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "GPSService"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		},
+		"Tags": [],
+		"AccountCode": "",
+		"Divisions": [],
+		"Contacts": []
+	},
+	"ResourceType": {
+		"Family": "Labor",
+		"ResourceSubtypes": [],
+		"MoveVehicle": false,
+		"BaseObject": "",
+		"Id": 0,
+		"ObjectType": "ResourceType",
+		"Name": "",
+		"Description": "",
+		"Tags": []
+	},
+	"ResourceSubtype": {
+		"Id": 0
+	},
+	"UnitCost": {
+		"Unit": {
+			"Id": 0
+		},
+		"Cost": {
+			"Unit": {
+				"Id": 0
+			},
+			"Quantity": 0
+		},
+		"Notes": ""
+	},
+	"InCrew": false,
+	"ForeColor": "",
+	"BackColor": "",
+	"Address": {
+		"Street": "",
+		"StreetDetails": "",
+		"State": {
+			"Id": 0
+		},
+		"City": "",
+		"ZipCode": "",
+		"Geocode": {
+			"Lat": 0,
+			"Lng": 0,
+			"Source": "Action"
+		},
+		"Id": 0,
+		"ObjectType": "Address"
+	},
+	"Location": {
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "GPSService"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		},
+		"Name": "",
+		"Description": ""
+	},
+	"AccountCode": "",
+	"CurrentLifespan": {
+		"Start": "",
+		"End": "",
+		"Duration": ""
+	},
+	"Id": 0,
+	"ObjectType": "Resource",
+	"Divisions": [],
+	"Description": "",
+	"Name": "",
+	"Tags": [],
+	"__typename": "CxResource"
+}

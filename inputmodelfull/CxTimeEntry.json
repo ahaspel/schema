@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 37,
-	"Minutes": 201,
-	"Name": "impedit",
+	"Hours": 733,
+	"Minutes": 6,
+	"Name": "temporibus",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 614
+					"Quantity": 90
 				},
-				"Notes": "maxime"
+				"Notes": "perferendis"
 			},
-			"Global": false,
-			"BaseObject": "temporibus",
+			"Global": true,
+			"BaseObject": "provident",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "consequuntur",
-			"Description": "voluptatem"
+			"Name": "repellendus",
+			"Description": "distinctio"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,17 +45,17 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
+	"IsVoid": true,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": 0.2298,
-		"Lng": 138.5981,
+		"Lat": 81.7015,
+		"Lng": 4.1783,
 		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 74.3252,
-		"Lng": -145.2358,
+		"Lat": -31.9197,
+		"Lng": -67.5951,
 		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -64,13 +64,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 628
+		"Quantity": 978
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 426
+		"Quantity": 58
 	},
 	"Approvals": [
 		{
@@ -80,7 +80,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -91,15 +91,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "aliquid",
+	"Description": "accusamus",
 	"Tags": [
 		{
-			"BaseObject": "facere",
+			"BaseObject": "possimus",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "adipisci"
+			"Description": "voluptatibus"
 		}
 	],
 	"__typename": "CxTimeEntry"

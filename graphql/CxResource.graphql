@@ -1,0 +1,370 @@
+type CxResource {
+  Temporary: Boolean
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  UnitCost: IxUnitCost
+  InCrew: Boolean
+  ForeColor: String
+  BackColor: String
+  Address: IxAddress
+  Location: IxLocation
+  AccountCode: String
+  CurrentLifespan: IxRange
+  Id: ID!
+  ObjectType: CxResourceObjectType
+  Divisions: [IxLookupValue]
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxResourceInput {
+  Temporary: Boolean
+  Owner: IxCompanyInput
+  ResourceType: IxResourceTypeInput!
+  ResourceSubtype: IxResourceSubtypeDO!
+  UnitCost: IxUnitCostInput
+  InCrew: Boolean
+  ForeColor: String
+  BackColor: String
+  Address: IxAddressInput
+  Location: IxLocationInput
+  AccountCode: String
+  CurrentLifespan: IxRangeInput
+  Id: ID!
+  ObjectType: CxResourceObjectType
+  Divisions: [IxLookupValueDO]
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxResourceObjectType {
+  Resource
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: Int
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxCompany {
+  CompanyType: IxLookupValue
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  Id: ID!
+  ObjectType: IxCompanyObjectType
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+  AccountCode: String
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+}
+
+input IxCompanyInput {
+  CompanyType: IxLookupValueDO!
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Id: ID!
+  ObjectType: IxCompanyObjectType
+  Name: String!
+  Description: String
+  Address: IxAddressInput
+  Tags: [IxAttribute__String__Input]
+  AccountCode: String
+  Divisions: [IxLookupValueDO]
+  Contacts: [IxPartyDO]
+}
+
+enum IxCompanyObjectType {
+  Company
+  Subcontractor
+}
+
+type IxEmail {
+  Id: ID!
+  Email: String
+  Name: String
+  Description: String
+}
+
+input IxEmailInput {
+  Id: ID!
+  Email: String!
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLocation {
+  Address: IxAddress
+  Name: String
+  Description: String
+}
+
+input IxLocationInput {
+  Address: IxAddressInput!
+  Name: String
+  Description: String
+}
+
+type IxLookupValue {
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Name: String
+  Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  Id: ID!
+  ObjectType: IxPartyObjectType
+  Name: String
+  Description: String
+  Address: IxAddress
+  Tags: [IxAttribute__String__]
+}
+
+input IxPartyDO {
+  Id: ID!
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Subcontractor
+  Plant
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Name: String
+  Description: String
+}
+
+input IxPhoneNumberInput {
+  Id: ID!
+  PhoneNumber: String!
+  Name: String
+  Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+type IxResourceSubtype {
+  Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
+  Name: String
+  Description: String
+}
+
+input IxResourceSubtypeDO {
+  Id: ID!
+}
+
+enum IxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  ResourceSubtypes: [IxResourceSubtype]
+  MoveVehicle: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxResourceTypeObjectType
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+input IxResourceTypeInput {
+  Family: IxResourceTypeFamily!
+  ResourceSubtypes: [IxResourceSubtypeDO]!
+  MoveVehicle: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxResourceTypeObjectType
+  Name: String!
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum IxResourceTypeObjectType {
+  ResourceType
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+extend type Mutation {
+  cxResources_onSave(data: [CxResourceInput], objectType: String = "Resource", operation: String = "edit"): [CxResource]
+  cxResources_onDelete(data: [String], objectType: String = "Resource", operation: String = "delete"): [CxResource]
+}
+
+extend type Query {
+  cxResources(filters: [FilterInput], objectType: String = "Resource"): [CxResource]
+}
