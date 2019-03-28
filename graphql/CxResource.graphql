@@ -59,8 +59,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -70,8 +70,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -81,19 +81,19 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -104,10 +104,10 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxCompanyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
@@ -119,10 +119,10 @@ input IxCompanyInput {
   CompanyType: IxLookupValueDO!
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  Id: ID!
   ObjectType: IxCompanyObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]
   AccountCode: String
@@ -138,15 +138,15 @@ enum IxCompanyObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -169,22 +169,22 @@ enum IxGeocodeSource {
 
 type IxLocation {
   Address: IxAddress
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxLocationInput {
   Address: IxAddressInput!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxLookupValueDO {
@@ -227,10 +227,10 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -249,15 +249,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {
@@ -273,10 +273,10 @@ input IxRangeInput {
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxResourceSubtypeDO {
@@ -292,10 +292,10 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -311,10 +311,10 @@ input IxResourceTypeInput {
   ResourceSubtypes: [IxResourceSubtypeDO]!
   MoveVehicle: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
   Tags: [IxAttribute__String__Input]
 }
 
@@ -327,10 +327,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 type IxUnitCost {

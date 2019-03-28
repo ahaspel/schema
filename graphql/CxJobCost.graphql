@@ -35,20 +35,20 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
 }
 
 enum IxCostCodeObjectType {
@@ -70,10 +70,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 type IxUnitCost {

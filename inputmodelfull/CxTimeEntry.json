@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 108,
-	"Minutes": 916,
-	"Name": "aliquam",
+	"Hours": 23,
+	"Minutes": 855,
+	"Name": "asperiores",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 887
+					"Quantity": 467
 				},
-				"Notes": "doloremque"
+				"Notes": "dolore"
 			},
 			"Global": false,
-			"BaseObject": "consequuntur",
-			"Id": 0,
+			"BaseObject": "voluptatem",
 			"ObjectType": "CostCode",
-			"Name": "consequatur",
-			"Description": "occaecati"
+			"Id": 0,
+			"Description": "incidunt",
+			"Name": "nesciunt"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,32 +45,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": 9.8051,
-		"Lng": 100.238,
+		"Lat": 72.6493,
+		"Lng": 98.2664,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 73.2551,
-		"Lng": 69.4557,
+		"Lat": -13.1852,
+		"Lng": -14.1495,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 914
+		"Quantity": 484
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 962
+		"Quantity": 732
 	},
 	"Approvals": [
 		{
@@ -80,7 +80,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -91,15 +91,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "nesciunt",
+	"Description": "eveniet",
 	"Tags": [
 		{
-			"BaseObject": "maxime",
+			"BaseObject": "veniam",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
-			"Name": "Capacity",
-			"Description": "eveniet"
+			"Id": 0,
+			"Description": "aliquam",
+			"Name": "Capacity"
 		}
 	],
 	"__typename": "CxTimeEntry"

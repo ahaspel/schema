@@ -1,64 +1,38 @@
-type CxEquipment {
-  Model: String
-  Make: String
-  SerialNumber: String
-  Year: String
-  Height: IxQuantity
-  Weight: IxQuantity
-  Width: IxQuantity
-  Capacity: IxQuantity
-  MoveNotes: String
-  Operators: [IxEmployee]
-  ObjectType: CxEquipmentObjectType
-  Returned: Boolean
-  Temporary: Boolean
-  Owner: IxCompany
+type CxTaskDay {
+  ParentId: Int
+  Filled: Boolean
+  Resource: IxVirtualResource
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  UnitCost: IxUnitCost
-  InCrew: Boolean
-  ForeColor: String
-  BackColor: String
-  Address: IxAddress
-  Location: IxLocation
-  AccountCode: String
+  Quantity: IxQuantity
+  Job: IxJob
+  JobActivity: IxJobActivity
+  ObjectType: CxTaskDayObjectType
+  Divisions: [IxLookupValue]
   CurrentLifespan: IxRange
   Id: ID!
-  Divisions: [IxLookupValue]
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
 }
 
-input CxEquipmentInput {
-  Model: String!
-  Make: String!
-  SerialNumber: String
-  Year: String
-  Height: IxQuantityInput
-  Weight: IxQuantityInput
-  Width: IxQuantityInput
-  Capacity: IxQuantityInput
-  MoveNotes: String
-  Operators: [IxEmployeeDO]
-  ObjectType: CxEquipmentObjectType
-  Temporary: Boolean
-  Owner: IxCompanyDO!
-  ResourceType: IxResourceTypeDO!
-  ResourceSubtype: IxResourceSubtypeDO!
-  UnitCost: IxUnitCostInput
-  ForeColor: String
-  BackColor: String
-  AccountCode: String!
+input CxTaskDayInput {
+  ParentId: Int
+  Filled: Boolean
+  Resource: IxVirtualResourceDO!
+  Quantity: IxQuantityInput
+  JobActivity: IxJobActivityDO!
+  ObjectType: CxTaskDayObjectType
+  Divisions: [IxLookupValueDO]
   CurrentLifespan: IxRangeInput!
   Id: ID!
-  Divisions: [IxLookupValueDO]
   Description: String
+  Name: String
   Tags: [IxAttribute__String__Input]
 }
 
-enum CxEquipmentObjectType {
-  Equipment
+enum CxTaskDayObjectType {
+  TaskDay
 }
 
 input FilterInput {
@@ -118,13 +92,37 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
-input IxCompanyDO {
-  Id: ID!
-}
-
 enum IxCompanyObjectType {
   Company
   Subcontractor
+}
+
+type IxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  BaseObject: String
+  ObjectType: IxCostCodeObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxCostCodeObjectType {
+  CostCode
+}
+
+type IxDocument {
+  Attached: Boolean
+  FilePath: String
+  FullName: String
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxDocumentObjectType {
+  Document
 }
 
 type IxEmail {
@@ -132,53 +130,6 @@ type IxEmail {
   Email: String
   Description: String
   Name: String
-}
-
-type IxEmployee {
-  PartyId: Int
-  PhoneNumbers: [IxPhoneNumber]
-  Emails: [IxEmail]
-  FirstName: String
-  LastName: String
-  MiddleName: String
-  BirthDate: String
-  PreviousExperience: IxQuantity
-  Minority: [IxLookupValue]
-  Unions: [IxLookupValue]
-  Licenses: [IxLookupValue]
-  Languages: [IxLookupValue]
-  TrainingCourses: [IxLookupValue]
-  Skills: [IxLookupValue]
-  LaborClassification: [IxLookupValue]
-  Machines: [IxResourceType]
-  Temporary: Boolean
-  UnitCost: IxUnitCost
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  ObjectType: IxEmployeeObjectType
-  Id: ID!
-  Description: String
-  Name: String
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Divisions: [IxLookupValue]
-  AccountCode: String
-  ForeColor: String
-  BackColor: String
-  Address: IxAddress
-  Location: IxLocation
-  IsMover: Boolean
-  Contacts: [IxParty]
-  InCrew: Boolean
-}
-
-input IxEmployeeDO {
-  Id: ID!
-}
-
-enum IxEmployeeObjectType {
-  Employee
 }
 
 type IxGeocode {
@@ -193,10 +144,78 @@ enum IxGeocodeSource {
   GPSService
 }
 
-type IxLocation {
-  Address: IxAddress
+type IxJob {
+  Client: IxCompany
+  Priority: IxLookupValue
+  Certifications: [IxLookupValue]
+  Notes: String
+  JobActivities: [IxJobActivity]
+  Status: IxLookupValue
+  StatusDue: String
+  Types: [IxLookupValue]
+  Subtypes: [IxLookupValue]
+  Owner: IxParty
+  Manager: IxParty
+  JobCosts: [IxJobCost]
+  TotalCost: IxMoney
+  EstimatedLaborHours: Float
+  EstimatedEquipmentHours: Float
+  ObjectType: IxJobObjectType
+  Id: ID!
   Description: String
   Name: String
+  AccountCode: String
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  ForeColor: String
+  BackColor: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+}
+
+type IxJobActivity {
+  ParentId: Int
+  Completed: Boolean
+  Priority: Int
+  ObjectType: IxJobActivityObjectType
+  Id: ID!
+  Description: String
+  Name: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  ForeColor: String
+  BackColor: String
+}
+
+input IxJobActivityDO {
+  Id: ID!
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
+}
+
+type IxJobCost {
+  CostCode: IxCostCode
+  CostPerUnit: IxMoney
+  TotalAmount: Float
+  CompletedAmount: Float
+  BaseObject: String
+  ObjectType: IxJobCostObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxJobCostObjectType {
+  JobCost
+}
+
+enum IxJobObjectType {
+  Job
 }
 
 type IxLookupValue {
@@ -237,11 +256,6 @@ enum IxLookupValueObjectType {
 type IxMoney {
   Unit: IxUnit
   Quantity: Float
-}
-
-input IxMoneyInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
 }
 
 type IxParty {
@@ -298,10 +312,6 @@ type IxResourceSubtype {
   Name: String
 }
 
-input IxResourceSubtypeDO {
-  Id: ID!
-}
-
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -316,10 +326,6 @@ type IxResourceType {
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
 }
 
 enum IxResourceTypeFamily {
@@ -350,12 +356,6 @@ type IxUnitCost {
   Notes: String
 }
 
-input IxUnitCostInput {
-  Unit: IxUnitDO!
-  Cost: IxMoneyInput!
-  Notes: String
-}
-
 input IxUnitDO {
   Id: ID!
 }
@@ -374,11 +374,29 @@ enum IxUnitUnitType {
   Self
 }
 
+type IxVirtualResource {
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Id: ID!
+  ObjectType: IxVirtualResourceObjectType
+  Name: String
+  Description: String
+}
+
+input IxVirtualResourceDO {
+  Id: ID!
+}
+
+enum IxVirtualResourceObjectType {
+  VirtualResource
+}
+
 extend type Mutation {
-  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String = "Equipment", operation: String = "edit"): [CxEquipment]
-  cxEquipments_onDelete(data: [String], objectType: String = "Equipment", operation: String = "delete"): [CxEquipment]
+  cxTaskDays_onSave(data: [CxTaskDayInput], objectType: String = "TaskDay", operation: String = "edit"): [CxTaskDay]
+  cxTaskDays_onDelete(data: [String], objectType: String = "TaskDay", operation: String = "delete"): [CxTaskDay]
 }
 
 extend type Query {
-  cxEquipments(filters: [FilterInput], objectType: String = "Equipment"): [CxEquipment]
+  cxTaskDays(filters: [FilterInput], objectType: String = "TaskDay"): [CxTaskDay]
 }

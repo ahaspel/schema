@@ -41,19 +41,19 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -62,10 +62,10 @@ enum IxAttributeStringObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxLookupValueDO {
@@ -96,17 +96,17 @@ enum IxLookupValueObjectType {
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxResourceSubtypeInput {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
 }
 
 enum IxResourceSubtypeObjectType {

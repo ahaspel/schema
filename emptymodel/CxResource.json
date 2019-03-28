@@ -6,10 +6,10 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
+		"ObjectType": "Company",
 		"Id": 0,
-		"ObjectType": "Subcontractor",
-		"Name": "",
 		"Description": "",
+		"Name": "",
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
@@ -23,8 +23,8 @@
 				"Lng": 0,
 				"Source": "GPSService"
 			},
-			"Id": 0,
-			"ObjectType": "Address"
+			"ObjectType": "Address",
+			"Id": 0
 		},
 		"Tags": [],
 		"AccountCode": "",
@@ -32,14 +32,14 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Group",
+		"Family": "Labor",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
-		"Id": 0,
 		"ObjectType": "ResourceType",
-		"Name": "",
+		"Id": 0,
 		"Description": "",
+		"Name": "",
 		"Tags": []
 	},
 	"ResourceSubtype": {
@@ -73,8 +73,8 @@
 			"Lng": 0,
 			"Source": "Owner"
 		},
-		"Id": 0,
-		"ObjectType": "Address"
+		"ObjectType": "Address",
+		"Id": 0
 	},
 	"Location": {
 		"Address": {
@@ -88,13 +88,13 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
-			"Id": 0,
-			"ObjectType": "Address"
+			"ObjectType": "Address",
+			"Id": 0
 		},
-		"Name": "",
-		"Description": ""
+		"Description": "",
+		"Name": ""
 	},
 	"AccountCode": "",
 	"CurrentLifespan": {
@@ -103,7 +103,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Material",
+	"ObjectType": "Equipment",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

@@ -51,8 +51,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -62,8 +62,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -73,19 +73,19 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -95,15 +95,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -126,10 +126,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxLookupValueDO {
@@ -162,10 +162,10 @@ enum IxLookupValueObjectType {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -173,10 +173,10 @@ type IxParty {
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]
 }
@@ -191,22 +191,22 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxResourceSubtypeDO {
@@ -221,10 +221,10 @@ type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
   AccrualNumber: String
   Notes: String
-  Id: ID!
   ObjectType: IxSupplyTypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -232,10 +232,10 @@ input IxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
   AccrualNumber: String
   Notes: String
-  Id: ID!
   ObjectType: IxSupplyTypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Tags: [IxAttribute__String__Input]
 }
 

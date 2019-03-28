@@ -11,19 +11,19 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Name": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -43,9 +43,6 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -72,10 +69,13 @@
 						"WebPrivilege"
 					]
 				},
-				"Name": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -90,21 +90,21 @@
 			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
+				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
 				}
 			},
 			"required": [

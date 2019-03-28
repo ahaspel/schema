@@ -1,16 +1,16 @@
 {
-	"Name": "ipsam",
+	"Name": "rerum",
 	"Days": [
 		{
 			"Day": 1,
-			"DayByName": "ratione",
+			"DayByName": "repellendus",
 			"Start": "08:00:00",
 			"End": "16:00:00",
-			"Included": true
+			"Included": false
 		}
 	],
 	"Default": false,
-	"UseHolidays": true,
+	"UseHolidays": false,
 	"ObjectType": "Shift",
 	"Id": 0,
 	"Divisions": [
@@ -18,15 +18,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "voluptas",
+	"Description": "adipisci",
 	"Tags": [
 		{
-			"BaseObject": "repellendus",
+			"BaseObject": "voluptatibus",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
-			"Name": "Capacity",
-			"Description": "consequuntur"
+			"Id": 0,
+			"Description": "recusandae",
+			"Name": "Capacity"
 		}
 	],
 	"__typename": "CxShift"

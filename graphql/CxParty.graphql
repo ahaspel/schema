@@ -5,7 +5,6 @@ type CxParty {
   Address: IxAddress
   ObjectType: CxPartyObjectType
   Id: ID!
-  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
 }
@@ -17,7 +16,6 @@ input CxPartyInput {
   Address: IxAddressInput
   ObjectType: CxPartyObjectType
   Id: ID!
-  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -41,8 +39,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -52,8 +50,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -63,19 +61,19 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -85,15 +83,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -116,10 +114,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxLookupValueDO {
@@ -152,15 +150,15 @@ enum IxLookupValueObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 extend type Mutation {

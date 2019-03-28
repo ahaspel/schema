@@ -78,8 +78,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -89,8 +89,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -100,19 +100,19 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -123,10 +123,10 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxCompanyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
@@ -147,20 +147,20 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
 }
 
 enum IxCostCodeObjectType {
@@ -171,20 +171,20 @@ type IxDocument {
   Attached: Boolean
   FilePath: String
   FullName: String
-  Id: ID!
   ObjectType: IxDocumentObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxDocumentInput {
   Attached: Boolean
   FilePath: String!
   FullName: String
-  Id: ID!
   ObjectType: IxDocumentObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
 }
 
 enum IxDocumentObjectType {
@@ -194,15 +194,15 @@ enum IxDocumentObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -227,10 +227,10 @@ type IxJobActivity {
   ParentId: Int
   Completed: Boolean
   Priority: Int
-  Id: ID!
   ObjectType: IxJobActivityObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   ForeColor: String
@@ -241,10 +241,10 @@ input IxJobActivityInput {
   ParentId: Int
   Completed: Boolean
   Priority: Int
-  Id: ID!
   ObjectType: IxJobActivityObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
   CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
   ForeColor: String
@@ -261,10 +261,10 @@ type IxJobCost {
   TotalAmount: Float
   CompletedAmount: Float
   BaseObject: String
-  Id: ID!
   ObjectType: IxJobCostObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxJobCostInput {
@@ -273,10 +273,10 @@ input IxJobCostInput {
   TotalAmount: Float!
   CompletedAmount: Float
   BaseObject: String
-  Id: ID!
   ObjectType: IxJobCostObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxJobCostObjectType {
@@ -285,10 +285,10 @@ enum IxJobCostObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxLookupValueDO {
@@ -331,10 +331,10 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -346,10 +346,10 @@ input IxPartyDO {
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String!
+  Id: ID!
   Description: String
+  Name: String!
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]
 }
@@ -364,15 +364,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {
@@ -392,10 +392,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 type IxUnitCost {
