@@ -145,7 +145,6 @@
 				}
 			},
 			"required": [
-				"CompanyType",
 				"Id"
 			]
 		},
@@ -423,6 +422,10 @@
 			]
 		}
 	},
+	"immutable": [
+		"Dto",
+		"ResourceType"
+	],
 	"type": "object",
 	"properties": {
 		"ResourceType": {
@@ -437,35 +440,16 @@
 				"VirtualResource"
 			]
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
 		"Owner": {
 			"$ref": "#/definitions/IxCompany"
 		},
-		"Location": {
-			"$ref": "#/definitions/IxLocation"
-		},
 		"Id": {
 			"type": "integer"
-		},
-		"Description": {
-			"type": "string"
-		},
-		"Name": {
-			"type": "string"
-		},
-		"Tags": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxAttribute__String__"
-			}
 		}
 	},
 	"required": [
+		"ResourceSubtype",
+		"Owner",
 		"Id"
 	]
 }

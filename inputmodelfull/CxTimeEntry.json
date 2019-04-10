@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 8,
-	"Minutes": 90,
-	"Name": "blanditiis",
+	"Hours": 419,
+	"Minutes": 960,
+	"Name": "repellendus",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 25
+					"Quantity": 956
 				},
-				"Notes": "repellat"
+				"Notes": "suscipit"
 			},
 			"Global": false,
 			"BaseObject": "perspiciatis",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "consequuntur",
-			"Name": "facilis"
+			"Description": "molestias",
+			"Name": "laboriosam"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,32 +45,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
-	"Billable": false,
+	"IsVoid": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": -64.5701,
-		"Lng": 96.4348,
+		"Lat": -36.7598,
+		"Lng": 119.6207,
 		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 29.7439,
-		"Lng": -71.0063,
-		"Source": "Action"
+		"Lat": -78.486,
+		"Lng": -149.1382,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 547
+		"Quantity": 487
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 472
+		"Quantity": 308
 	},
 	"Approvals": [
 		{
@@ -80,7 +80,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -91,14 +91,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "laboriosam",
+	"Description": "tempore",
 	"Tags": [
 		{
-			"BaseObject": "eveniet",
+			"BaseObject": "consequuntur",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "assumenda",
+			"Description": "magnam",
 			"Name": "Capacity"
 		}
 	],

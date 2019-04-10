@@ -982,6 +982,9 @@
 			]
 		},
 		"IxVirtualResource": {
+			"immutable": [
+				"ResourceType"
+			],
 			"type": "object",
 			"properties": {
 				"Owner": {
@@ -1001,12 +1004,6 @@
 				},
 				"Id": {
 					"type": "integer"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
 				}
 			},
 			"required": [
@@ -1023,7 +1020,8 @@
 		"ActionType",
 		"Filled",
 		"Completed",
-		"Cancelled"
+		"Cancelled",
+		"Location"
 	],
 	"type": "object",
 	"properties": {

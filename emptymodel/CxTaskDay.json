@@ -1,25 +1,5 @@
 {
 	"ParentId": 0,
-	"Location": {
-		"Address": {
-			"Street": "",
-			"StreetDetails": "",
-			"State": {
-				"Id": 0
-			},
-			"City": "",
-			"ZipCode": "",
-			"Geocode": {
-				"Lat": 0,
-				"Lng": 0,
-				"Source": "Owner"
-			},
-			"Id": 0,
-			"ObjectType": "Address"
-		},
-		"Name": "",
-		"Description": ""
-	},
 	"ShiftSupervisor": false,
 	"JobCost": {
 		"Id": 0
@@ -32,24 +12,11 @@
 		"Owner": {
 			"Id": 0
 		},
-		"ResourceType": {
-			"Family": "Group",
-			"ResourceSubtypes": [],
-			"MoveVehicle": false,
-			"BaseObject": "",
-			"ObjectType": "ResourceType",
-			"Id": 0,
-			"Description": "",
-			"Name": "",
-			"Tags": []
-		},
 		"ResourceSubtype": {
 			"Id": 0
 		},
 		"ObjectType": "VirtualResource",
-		"Id": 0,
-		"Description": "",
-		"Name": ""
+		"Id": 0
 	},
 	"Quantity": {
 		"Unit": {

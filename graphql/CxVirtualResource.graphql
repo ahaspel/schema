@@ -2,16 +2,14 @@ type CxVirtualResource {
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   ObjectType: CxVirtualResourceObjectType
-  Divisions: [IxLookupValue]
   Owner: IxCompany
-  Location: IxLocation
   Id: ID!
-  Description: String
-  Name: String
-  Tags: [IxAttribute__String__]
 }
 
-input CxVirtualResourceDO {
+input CxVirtualResourceInput {
+  ResourceSubtype: IxResourceSubtypeDO!
+  ObjectType: CxVirtualResourceObjectType
+  Owner: IxCompanyDO!
   Id: ID!
 }
 
@@ -67,6 +65,10 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
+input IxCompanyDO {
+  Id: ID!
+}
+
 enum IxCompanyObjectType {
   Company
   Subcontractor
@@ -90,12 +92,6 @@ enum IxGeocodeSource {
   Action
   Owner
   GPSService
-}
-
-type IxLocation {
-  Address: IxAddress
-  Name: String
-  Description: String
 }
 
 type IxLookupValue {
@@ -161,6 +157,10 @@ type IxResourceSubtype {
   Name: String
 }
 
+input IxResourceSubtypeDO {
+  Id: ID!
+}
+
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -189,7 +189,7 @@ enum IxResourceTypeObjectType {
 }
 
 extend type Mutation {
-  cxVirtualResources_onSave(data: [CxVirtualResourceDO], objectType: String = "VirtualResource", operation: String = "edit"): [CxVirtualResource]
+  cxVirtualResources_onSave(data: [CxVirtualResourceInput], objectType: String = "VirtualResource", operation: String = "edit"): [CxVirtualResource]
   cxVirtualResources_onDelete(data: [String], objectType: String = "VirtualResource", operation: String = "delete"): [CxVirtualResource]
 }
 

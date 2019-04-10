@@ -36,7 +36,6 @@ enum CxTaskDayActionType {
 
 input CxTaskDayInput {
   ParentId: Int!
-  Location: IxLocationInput
   ShiftSupervisor: Boolean
   JobCost: IxJobCostDO
   JobActivity: IxJobActivityDO!
@@ -88,17 +87,6 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
-  ObjectType: IxAddressObjectType
-}
-
-input IxAddressInput {
-  Street: String!
-  StreetDetails: String
-  State: IxLookupValueDO!
-  City: String!
-  ZipCode: String
-  Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
 }
@@ -195,12 +183,6 @@ type IxGeocode {
   Source: IxGeocodeSource
 }
 
-input IxGeocodeInput {
-  Lat: Float
-  Lng: Float
-  Source: IxGeocodeSource
-}
-
 enum IxGeocodeSource {
   Action
   Owner
@@ -291,22 +273,12 @@ type IxLocation {
   Description: String
 }
 
-input IxLocationInput {
-  Address: IxAddressInput!
-  Name: String
-  Description: String
-}
-
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
   Description: String
   Name: String
-}
-
-input IxLookupValueDO {
-  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -418,18 +390,6 @@ enum IxResourceTypeFamily {
   Group
 }
 
-input IxResourceTypeInput {
-  Family: IxResourceTypeFamily!
-  ResourceSubtypes: [IxResourceSubtypeDO]!
-  MoveVehicle: Boolean
-  BaseObject: String
-  ObjectType: IxResourceTypeObjectType
-  Id: ID!
-  Description: String
-  Name: String!
-  Tags: [IxAttribute__String__Input]
-}
-
 enum IxResourceTypeObjectType {
   ResourceType
 }
@@ -487,18 +447,13 @@ type IxVirtualResource {
   ResourceSubtype: IxResourceSubtype
   ObjectType: IxVirtualResourceObjectType
   Id: ID!
-  Description: String
-  Name: String
 }
 
 input IxVirtualResourceInput {
   Owner: IxCompanyDO!
-  ResourceType: IxResourceTypeInput
   ResourceSubtype: IxResourceSubtypeDO!
   ObjectType: IxVirtualResourceObjectType
   Id: ID!
-  Description: String
-  Name: String
 }
 
 enum IxVirtualResourceObjectType {
