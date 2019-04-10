@@ -1,5 +1,5 @@
 type CxApplicationLicense {
-  Id: ID!
+  Id: ID
   Expiration: String
   AllowedUsers: Int
   AllowedWebUsers: Int
@@ -14,11 +14,11 @@ type CxApplicationLicense {
 }
 
 input CxApplicationLicenseInput {
-  Id: ID!
-  Expiration: String!
-  AllowedUsers: Int!
-  AllowedWebUsers: Int!
-  SerialNumber: String!
+  Id: ID
+  Expiration: String
+  AllowedUsers: Int
+  AllowedWebUsers: Int
+  SerialNumber: String
   MachineId: String
   Nag: Boolean
   ObjectType: CxApplicationLicenseObjectType

@@ -1,5 +1,5 @@
 {
-	"ParentId": 250,
+	"ParentId": 60,
 	"ShiftSupervisor": true,
 	"JobCost": {
 		"Id": 0
@@ -9,13 +9,20 @@
 	},
 	"ObjectType": "TaskDay",
 	"Resource": {
+		"Owner": {
+			"Id": 2
+		},
+		"ResourceSubtype": {
+			"Id": 29
+		},
+		"ObjectType": "VirtualResource",
 		"Id": 0
 	},
 	"Quantity": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 605
+		"Quantity": 727
 	},
 	"Status": {
 		"Id": 0
@@ -27,6 +34,13 @@
 	],
 	"VirtualResources": [
 		{
+			"Owner": {
+				"Id": 2
+			},
+			"ResourceSubtype": {
+				"Id": 29
+			},
+			"ObjectType": "VirtualResource",
 			"Id": 0
 		}
 	],
@@ -35,15 +49,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "accusamus",
+	"Description": "perspiciatis",
 	"Name": "cupiditate",
 	"Tags": [
 		{
-			"BaseObject": "quaerat",
+			"BaseObject": "molestiae",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "numquam",
+			"Description": "facere",
 			"Name": "Capacity"
 		}
 	],

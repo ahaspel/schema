@@ -42,11 +42,11 @@ input CxTaskDayInput {
   JobCost: IxJobCostDO
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
-  Resource: IxVirtualResourceDO!
+  Resource: IxVirtualResourceInput!
   Quantity: IxQuantityInput
   Status: IxActionStatusDO
   Resources: [IxResourceDO]
-  VirtualResources: [IxVirtualResourceDO]
+  VirtualResources: [IxVirtualResourceInput]
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
@@ -134,6 +134,10 @@ type IxCompany {
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
+}
+
+input IxCompanyDO {
+  Id: ID!
 }
 
 enum IxCompanyObjectType {
@@ -392,6 +396,10 @@ type IxResourceSubtype {
   Name: String
 }
 
+input IxResourceSubtypeDO {
+  Id: ID!
+}
+
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -471,11 +479,14 @@ type IxVirtualResource {
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   ObjectType: IxVirtualResourceObjectType
-  Id: ID!
+  Id: ID
 }
 
-input IxVirtualResourceDO {
-  Id: ID!
+input IxVirtualResourceInput {
+  Owner: IxCompanyDO
+  ResourceSubtype: IxResourceSubtypeDO
+  ObjectType: IxVirtualResourceObjectType
+  Id: ID
 }
 
 enum IxVirtualResourceObjectType {
