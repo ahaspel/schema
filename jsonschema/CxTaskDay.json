@@ -1007,9 +1007,7 @@
 				}
 			},
 			"required": [
-				"Id",
-				"Owner",
-				"ResourceSubtype"
+				"Id"
 			]
 		}
 	},
@@ -1087,6 +1085,18 @@
 		},
 		"Status": {
 			"$ref": "#/definitions/IxActionStatus"
+		},
+		"Resources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
+		},
+		"VirtualResources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxVirtualResource"
+			}
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

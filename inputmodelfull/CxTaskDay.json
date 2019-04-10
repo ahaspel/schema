@@ -1,6 +1,6 @@
 {
-	"ParentId": 236,
-	"ShiftSupervisor": false,
+	"ParentId": 250,
+	"ShiftSupervisor": true,
 	"JobCost": {
 		"Id": 0
 	},
@@ -9,38 +9,41 @@
 	},
 	"ObjectType": "TaskDay",
 	"Resource": {
-		"Owner": {
-			"Id": 2
-		},
-		"ResourceSubtype": {
-			"Id": 29
-		},
-		"ObjectType": "VirtualResource",
 		"Id": 0
 	},
 	"Quantity": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 600
+		"Quantity": 605
 	},
 	"Status": {
 		"Id": 0
 	},
+	"Resources": [
+		{
+			"Id": 6
+		}
+	],
+	"VirtualResources": [
+		{
+			"Id": 0
+		}
+	],
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "voluptas",
-	"Name": "repudiandae",
+	"Description": "accusamus",
+	"Name": "cupiditate",
 	"Tags": [
 		{
-			"BaseObject": "aperiam",
+			"BaseObject": "quaerat",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "consequuntur",
+			"Description": "numquam",
 			"Name": "Capacity"
 		}
 	],
