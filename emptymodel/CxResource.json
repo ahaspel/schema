@@ -6,7 +6,7 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Company",
+		"ObjectType": "Plant",
 		"Id": 0,
 		"Description": "",
 		"Name": "",
@@ -21,10 +21,10 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
-			"ObjectType": "Address",
-			"Id": 0
+			"Id": 0,
+			"ObjectType": "Address"
 		},
 		"Tags": [],
 		"AccountCode": "",
@@ -32,7 +32,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Group",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -71,10 +71,10 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "Owner"
+			"Source": "GPSService"
 		},
-		"ObjectType": "Address",
-		"Id": 0
+		"Id": 0,
+		"ObjectType": "Address"
 	},
 	"Location": {
 		"Address": {
@@ -90,11 +90,11 @@
 				"Lng": 0,
 				"Source": "Owner"
 			},
-			"ObjectType": "Address",
-			"Id": 0
+			"Id": 0,
+			"ObjectType": "Address"
 		},
-		"Description": "",
-		"Name": ""
+		"Name": "",
+		"Description": ""
 	},
 	"AccountCode": "",
 	"CurrentLifespan": {
@@ -103,7 +103,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Equipment",
+	"ObjectType": "Employee",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

@@ -1,73 +1,154 @@
 {
-	"ParentId": 380,
-	"Filled": false,
-	"Resource": {
-		"Owner": {
-			"CompanyType": {
-				"BaseObject": "consequuntur",
-				"ObjectType": "Attribute",
+	"ParentId": 332,
+	"ActionType": "Subcontractor",
+	"Location": {
+		"Address": {
+			"Street": "soluta",
+			"StreetDetails": "dignissimos",
+			"State": {
+				"BaseObject": "minima",
+				"ObjectType": "State",
 				"Id": 0,
-				"Description": "suscipit",
-				"Name": "accusantium"
+				"Description": "numquam",
+				"Name": "praesentium"
+			},
+			"City": "a",
+			"ZipCode": "accusantium",
+			"Geocode": {
+				"Lat": 117,
+				"Lng": 968,
+				"Source": "Owner"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		},
+		"Name": "quibusdam",
+		"Description": "veritatis"
+	},
+	"ShiftSupervisor": false,
+	"JobCost": {
+		"CostCode": {
+			"UnitCost": {
+				"Unit": {
+					"UnitType": "Time",
+					"Scalar": 92,
+					"Integral": false,
+					"BaseObject": "corrupti",
+					"ObjectType": "Unit",
+					"Id": 0,
+					"Description": "voluptas",
+					"Name": "perspiciatis"
+				},
+				"Cost": {
+					"Unit": {
+						"UnitType": "Area",
+						"Scalar": 521,
+						"Integral": false,
+						"BaseObject": "sapiente",
+						"ObjectType": "Unit",
+						"Id": 0,
+						"Description": "excepturi",
+						"Name": "beatae"
+					},
+					"Quantity": 896
+				},
+				"Notes": "minima"
+			},
+			"Global": false,
+			"BaseObject": "perspiciatis",
+			"ObjectType": "CostCode",
+			"Id": 0,
+			"Description": "accusamus",
+			"Name": "beatae"
+		},
+		"CostPerUnit": {
+			"Unit": {
+				"UnitType": "Self",
+				"Scalar": 372,
+				"Integral": true,
+				"BaseObject": "voluptatibus",
+				"ObjectType": "Unit",
+				"Id": 0,
+				"Description": "recusandae",
+				"Name": "adipisci"
+			},
+			"Quantity": 526
+		},
+		"TotalAmount": 181,
+		"CompletedAmount": 447,
+		"BaseObject": "laudantium",
+		"ObjectType": "JobCost",
+		"Id": 0,
+		"Description": "delectus",
+		"Name": "voluptatibus"
+	},
+	"Job": {
+		"Client": {
+			"CompanyType": {
+				"BaseObject": "blanditiis",
+				"ObjectType": "JobCertification",
+				"Id": 0,
+				"Description": "consequatur",
+				"Name": "facere"
 			},
 			"Emails": [
 				{
 					"Id": 0,
-					"Email": "Hazle.Mann@hotmail.com",
-					"Description": "repudiandae",
-					"Name": "repellendus"
+					"Email": "Ignacio_Fisher33@yahoo.com",
+					"Description": "corrupti",
+					"Name": "voluptatem"
 				}
 			],
 			"PhoneNumbers": [
 				{
 					"Id": 0,
-					"PhoneNumber": "itaque",
-					"Description": "voluptas",
-					"Name": "architecto"
+					"PhoneNumber": "consequuntur",
+					"Description": "architecto",
+					"Name": "blanditiis"
 				}
 			],
 			"ObjectType": "Subcontractor",
 			"Id": 0,
-			"Description": "consequuntur",
-			"Name": "veritatis",
+			"Description": "voluptatem",
+			"Name": "molestiae",
 			"Address": {
-				"Street": "a",
-				"StreetDetails": "voluptatibus",
+				"Street": "voluptatibus",
+				"StreetDetails": "repellat",
 				"State": {
-					"BaseObject": "quidem",
-					"ObjectType": "JobCertification",
+					"BaseObject": "libero",
+					"ObjectType": "CompanyType",
 					"Id": 0,
-					"Description": "consequatur",
-					"Name": "consequuntur"
+					"Description": "occaecati",
+					"Name": "excepturi"
 				},
-				"City": "eos",
-				"ZipCode": "temporibus",
+				"City": "odio",
+				"ZipCode": "doloremque",
 				"Geocode": {
-					"Lat": 381,
-					"Lng": 624,
-					"Source": "Owner"
+					"Lat": 855,
+					"Lng": 656,
+					"Source": "Action"
 				},
-				"ObjectType": "Address",
-				"Id": 0
+				"Id": 0,
+				"ObjectType": "Address"
 			},
 			"Tags": [
 				{
-					"BaseObject": "deleniti",
-					"AttributeId": 724,
+					"BaseObject": "molestias",
+					"AttributeId": 632,
 					"ObjectType": "Attribute",
 					"Id": 0,
-					"Description": "perspiciatis",
-					"Name": "quidem"
+					"Description": "placeat",
+					"Name": "perspiciatis"
 				}
 			],
-			"AccountCode": "veritatis",
+			"AccountCode": "voluptate",
 			"Divisions": [
 				{
-					"BaseObject": "consequuntur",
-					"ObjectType": "Training",
+					"BaseObject": "voluptatibus",
+					"ObjectType": "JobCertification",
 					"Id": 0,
-					"Description": "consequatur",
-					"Name": "cupiditate"
+					"Description": "repellendus",
+					"Name": "accusamus"
 				}
 			],
 			"Contacts": [
@@ -75,51 +156,577 @@
 					"Emails": [
 						{
 							"Id": 0,
-							"Email": "Dariana.Boyer@gmail.com",
-							"Description": "nostrum",
-							"Name": "facere"
+							"Email": "Thelma.Roberts40@yahoo.com",
+							"Description": "nesciunt",
+							"Name": "aperiam"
 						}
 					],
 					"PhoneNumbers": [
 						{
 							"Id": 0,
-							"PhoneNumber": "molestiae",
-							"Description": "ducimus",
-							"Name": "provident"
+							"PhoneNumber": "dolorem",
+							"Description": "perspiciatis",
+							"Name": "dolores"
+						}
+					],
+					"ObjectType": "Company",
+					"Id": 0,
+					"Description": "similique",
+					"Name": "consectetur",
+					"Address": {
+						"Street": "repudiandae",
+						"StreetDetails": "consequatur",
+						"State": {
+							"BaseObject": "perspiciatis",
+							"ObjectType": "JobStatus",
+							"Id": 0,
+							"Description": "impedit",
+							"Name": "consequuntur"
+						},
+						"City": "est",
+						"ZipCode": "asperiores",
+						"Geocode": {
+							"Lat": 74,
+							"Lng": 173,
+							"Source": "Action"
+						},
+						"Id": 0,
+						"ObjectType": "Address"
+					},
+					"Tags": [
+						{
+							"BaseObject": "praesentium",
+							"AttributeId": 296,
+							"ObjectType": "Attribute",
+							"Id": 0,
+							"Description": "similique",
+							"Name": "fugiat"
+						}
+					]
+				}
+			]
+		},
+		"Priority": {
+			"BaseObject": "tenetur",
+			"ObjectType": "Training",
+			"Id": 0,
+			"Description": "perspiciatis",
+			"Name": "nesciunt"
+		},
+		"Certifications": [
+			{
+				"BaseObject": "aliquid",
+				"ObjectType": "Union",
+				"Id": 0,
+				"Description": "perspiciatis",
+				"Name": "expedita"
+			}
+		],
+		"Notes": "fugiat",
+		"JobActivities": [
+			{
+				"ParentId": 857,
+				"Completed": true,
+				"Priority": 326,
+				"ObjectType": "JobActivity",
+				"Id": 0,
+				"Description": "assumenda",
+				"Name": "inventore",
+				"CurrentLifespan": {
+					"Start": "2019-01-14T08:00:00",
+					"End": "2019-01-14T08:00:00",
+					"Duration": "beatae"
+				},
+				"Tags": [
+					{
+						"BaseObject": "voluptates",
+						"AttributeId": 702,
+						"ObjectType": "Attribute",
+						"Id": 0,
+						"Description": "fugiat",
+						"Name": "repellat"
+					}
+				],
+				"ForeColor": "voluptatem",
+				"BackColor": "tempore"
+			}
+		],
+		"Status": {
+			"BaseObject": "inventore",
+			"ObjectType": "JobSubtype",
+			"Id": 0,
+			"Description": "eligendi",
+			"Name": "perspiciatis"
+		},
+		"StatusDue": "2019-01-14T08:00:00",
+		"Types": [
+			{
+				"BaseObject": "voluptas",
+				"ObjectType": "State",
+				"Id": 0,
+				"Description": "voluptatem",
+				"Name": "consequatur"
+			}
+		],
+		"Subtypes": [
+			{
+				"BaseObject": "fugiat",
+				"ObjectType": "Union",
+				"Id": 0,
+				"Description": "explicabo",
+				"Name": "voluptatum"
+			}
+		],
+		"Owner": {
+			"Emails": [
+				{
+					"Id": 0,
+					"Email": "Tyreek_Gerlach@gmail.com",
+					"Description": "recusandae",
+					"Name": "deleniti"
+				}
+			],
+			"PhoneNumbers": [
+				{
+					"Id": 0,
+					"PhoneNumber": "officiis",
+					"Description": "consequuntur",
+					"Name": "corrupti"
+				}
+			],
+			"ObjectType": "Company",
+			"Id": 0,
+			"Description": "voluptatibus",
+			"Name": "aspernatur",
+			"Address": {
+				"Street": "voluptate",
+				"StreetDetails": "recusandae",
+				"State": {
+					"BaseObject": "dignissimos",
+					"ObjectType": "LaborClass",
+					"Id": 0,
+					"Description": "quibusdam",
+					"Name": "occaecati"
+				},
+				"City": "consequuntur",
+				"ZipCode": "voluptatem",
+				"Geocode": {
+					"Lat": 446,
+					"Lng": 576,
+					"Source": "Action"
+				},
+				"Id": 0,
+				"ObjectType": "Address"
+			},
+			"Tags": [
+				{
+					"BaseObject": "similique",
+					"AttributeId": 131,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Description": "architecto",
+					"Name": "dolores"
+				}
+			]
+		},
+		"Manager": {
+			"Emails": [
+				{
+					"Id": 0,
+					"Email": "Lavern_Yost@yahoo.com",
+					"Description": "minima",
+					"Name": "perferendis"
+				}
+			],
+			"PhoneNumbers": [
+				{
+					"Id": 0,
+					"PhoneNumber": "facilis",
+					"Description": "soluta",
+					"Name": "dignissimos"
+				}
+			],
+			"ObjectType": "Plant",
+			"Id": 0,
+			"Description": "laborum",
+			"Name": "voluptatum",
+			"Address": {
+				"Street": "consequuntur",
+				"StreetDetails": "veritatis",
+				"State": {
+					"BaseObject": "voluptatibus",
+					"ObjectType": "JobType",
+					"Id": 0,
+					"Description": "consequatur",
+					"Name": "nostrum"
+				},
+				"City": "soluta",
+				"ZipCode": "corrupti",
+				"Geocode": {
+					"Lat": 672,
+					"Lng": 796,
+					"Source": "GPSService"
+				},
+				"Id": 0,
+				"ObjectType": "Address"
+			},
+			"Tags": [
+				{
+					"BaseObject": "voluptatibus",
+					"AttributeId": 800,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Description": "consequatur",
+					"Name": "suscipit"
+				}
+			]
+		},
+		"JobCosts": [
+			{
+				"CostCode": {
+					"UnitCost": {
+						"Unit": {
+							"UnitType": "Money",
+							"Scalar": 656,
+							"Integral": false,
+							"BaseObject": "aliquam",
+							"ObjectType": "Unit",
+							"Id": 0,
+							"Description": "doloribus",
+							"Name": "consequatur"
+						},
+						"Cost": {
+							"Unit": {
+								"UnitType": "Money",
+								"Scalar": 39,
+								"Integral": false,
+								"BaseObject": "dolorem",
+								"ObjectType": "Unit",
+								"Id": 0,
+								"Description": "temporibus",
+								"Name": "perspiciatis"
+							},
+							"Quantity": 442
+						},
+						"Notes": "voluptate"
+					},
+					"Global": false,
+					"BaseObject": "maxime",
+					"ObjectType": "CostCode",
+					"Id": 0,
+					"Description": "consequuntur",
+					"Name": "quaerat"
+				},
+				"CostPerUnit": {
+					"Unit": {
+						"UnitType": "Volume",
+						"Scalar": 428,
+						"Integral": true,
+						"BaseObject": "numquam",
+						"ObjectType": "Unit",
+						"Id": 0,
+						"Description": "corporis",
+						"Name": "blanditiis"
+					},
+					"Quantity": 804
+				},
+				"TotalAmount": 927,
+				"CompletedAmount": 436,
+				"BaseObject": "quisquam",
+				"ObjectType": "JobCost",
+				"Id": 0,
+				"Description": "cumque",
+				"Name": "voluptatibus"
+			}
+		],
+		"TotalCost": {
+			"Unit": {
+				"UnitType": "Weight",
+				"Scalar": 11,
+				"Integral": false,
+				"BaseObject": "provident",
+				"ObjectType": "Unit",
+				"Id": 0,
+				"Description": "soluta",
+				"Name": "voluptatibus"
+			},
+			"Quantity": 184
+		},
+		"EstimatedLaborHours": 834,
+		"EstimatedEquipmentHours": 907,
+		"ObjectType": "Job",
+		"Id": 0,
+		"Description": "dolorem",
+		"Name": "perferendis",
+		"AccountCode": "tenetur",
+		"Attachments": [
+			{
+				"Attached": true,
+				"FilePath": "praesentium",
+				"FullName": "cupiditate",
+				"ObjectType": "Document",
+				"Id": 0,
+				"Description": "repudiandae",
+				"Name": "accusantium"
+			}
+		],
+		"HasAttachments": false,
+		"ForeColor": "repudiandae",
+		"BackColor": "maxime",
+		"CurrentLifespan": {
+			"Start": "2019-01-14T08:00:00",
+			"End": "2019-01-14T08:00:00",
+			"Duration": "quisquam"
+		},
+		"Tags": [
+			{
+				"BaseObject": "repudiandae",
+				"AttributeId": 171,
+				"ObjectType": "Attribute",
+				"Id": 0,
+				"Description": "impedit",
+				"Name": "tempora"
+			}
+		],
+		"Address": {
+			"Street": "a",
+			"StreetDetails": "consequuntur",
+			"State": {
+				"BaseObject": "voluptatum",
+				"ObjectType": "PurchaseOrderStatus",
+				"Id": 0,
+				"Description": "repudiandae",
+				"Name": "aliquam"
+			},
+			"City": "omnis",
+			"ZipCode": "repellendus",
+			"Geocode": {
+				"Lat": 822,
+				"Lng": 702,
+				"Source": "Action"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		},
+		"Divisions": [
+			{
+				"BaseObject": "nostrum",
+				"ObjectType": "Attribute",
+				"Id": 0,
+				"Description": "magnam",
+				"Name": "consequatur"
+			}
+		],
+		"Contacts": [
+			{
+				"Emails": [
+					{
+						"Id": 0,
+						"Email": "Allison.Howe@yahoo.com",
+						"Description": "corrupti",
+						"Name": "praesentium"
+					}
+				],
+				"PhoneNumbers": [
+					{
+						"Id": 0,
+						"PhoneNumber": "quidem",
+						"Description": "consequatur",
+						"Name": "ratione"
+					}
+				],
+				"ObjectType": "Party",
+				"Id": 0,
+				"Description": "praesentium",
+				"Name": "assumenda",
+				"Address": {
+					"Street": "maxime",
+					"StreetDetails": "nesciunt",
+					"State": {
+						"BaseObject": "nesciunt",
+						"ObjectType": "Attribute",
+						"Id": 0,
+						"Description": "voluptas",
+						"Name": "explicabo"
+					},
+					"City": "voluptatibus",
+					"ZipCode": "repudiandae",
+					"Geocode": {
+						"Lat": 982,
+						"Lng": 638,
+						"Source": "Owner"
+					},
+					"Id": 0,
+					"ObjectType": "Address"
+				},
+				"Tags": [
+					{
+						"BaseObject": "delectus",
+						"AttributeId": 417,
+						"ObjectType": "Attribute",
+						"Id": 0,
+						"Description": "voluptatibus",
+						"Name": "voluptatum"
+					}
+				]
+			}
+		]
+	},
+	"JobActivity": {
+		"ParentId": 257,
+		"Completed": true,
+		"Priority": 6,
+		"ObjectType": "JobActivity",
+		"Id": 0,
+		"Description": "voluptatem",
+		"Name": "laudantium",
+		"CurrentLifespan": {
+			"Start": "2019-01-14T08:00:00",
+			"End": "2019-01-14T08:00:00",
+			"Duration": "temporibus"
+		},
+		"Tags": [
+			{
+				"BaseObject": "debitis",
+				"AttributeId": 608,
+				"ObjectType": "Attribute",
+				"Id": 0,
+				"Description": "aperiam",
+				"Name": "corrupti"
+			}
+		],
+		"ForeColor": "numquam",
+		"BackColor": "dolores"
+	},
+	"ObjectType": "TaskDay",
+	"Divisions": [
+		{
+			"BaseObject": "deleniti",
+			"ObjectType": "Training",
+			"Id": 0,
+			"Description": "laudantium",
+			"Name": "placeat"
+		}
+	],
+	"Resource": {
+		"Owner": {
+			"CompanyType": {
+				"BaseObject": "veritatis",
+				"ObjectType": "Privilege",
+				"Id": 0,
+				"Description": "maxime",
+				"Name": "perspiciatis"
+			},
+			"Emails": [
+				{
+					"Id": 0,
+					"Email": "Maximus4@yahoo.com",
+					"Description": "consequatur",
+					"Name": "reiciendis"
+				}
+			],
+			"PhoneNumbers": [
+				{
+					"Id": 0,
+					"PhoneNumber": "tempora",
+					"Description": "dolorem",
+					"Name": "consequatur"
+				}
+			],
+			"ObjectType": "Subcontractor",
+			"Id": 0,
+			"Description": "laudantium",
+			"Name": "explicabo",
+			"Address": {
+				"Street": "cupiditate",
+				"StreetDetails": "dolores",
+				"State": {
+					"BaseObject": "magnam",
+					"ObjectType": "LaborClass",
+					"Id": 0,
+					"Description": "accusantium",
+					"Name": "recusandae"
+				},
+				"City": "a",
+				"ZipCode": "consequatur",
+				"Geocode": {
+					"Lat": 441,
+					"Lng": 710,
+					"Source": "Owner"
+				},
+				"Id": 0,
+				"ObjectType": "Address"
+			},
+			"Tags": [
+				{
+					"BaseObject": "labore",
+					"AttributeId": 886,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Description": "deleniti",
+					"Name": "consequatur"
+				}
+			],
+			"AccountCode": "dolorem",
+			"Divisions": [
+				{
+					"BaseObject": "perspiciatis",
+					"ObjectType": "JobType",
+					"Id": 0,
+					"Description": "laborum",
+					"Name": "pariatur"
+				}
+			],
+			"Contacts": [
+				{
+					"Emails": [
+						{
+							"Id": 0,
+							"Email": "Quincy.Thompson@yahoo.com",
+							"Description": "facere",
+							"Name": "tempora"
+						}
+					],
+					"PhoneNumbers": [
+						{
+							"Id": 0,
+							"PhoneNumber": "officiis",
+							"Description": "voluptas",
+							"Name": "aliquam"
 						}
 					],
 					"ObjectType": "Plant",
 					"Id": 0,
-					"Description": "deserunt",
-					"Name": "recusandae",
+					"Description": "repellendus",
+					"Name": "voluptatem",
 					"Address": {
-						"Street": "et",
-						"StreetDetails": "quibusdam",
+						"Street": "tempore",
+						"StreetDetails": "consectetur",
 						"State": {
-							"BaseObject": "voluptate",
-							"ObjectType": "State",
+							"BaseObject": "perspiciatis",
+							"ObjectType": "Minority",
 							"Id": 0,
-							"Description": "voluptatibus",
-							"Name": "voluptas"
+							"Description": "repudiandae",
+							"Name": "libero"
 						},
-						"City": "tempore",
-						"ZipCode": "incidunt",
+						"City": "molestiae",
+						"ZipCode": "recusandae",
 						"Geocode": {
-							"Lat": 49,
-							"Lng": 88,
-							"Source": "GPSService"
+							"Lat": 969,
+							"Lng": 503,
+							"Source": "Owner"
 						},
-						"ObjectType": "Address",
-						"Id": 0
+						"Id": 0,
+						"ObjectType": "Address"
 					},
 					"Tags": [
 						{
-							"BaseObject": "officia",
-							"AttributeId": 574,
+							"BaseObject": "voluptatem",
+							"AttributeId": 211,
 							"ObjectType": "Attribute",
 							"Id": 0,
-							"Description": "aperiam",
-							"Name": "incidunt"
+							"Description": "reiciendis",
+							"Name": "tempore"
 						}
 					]
 				}
@@ -131,626 +738,88 @@
 				{
 					"ObjectType": "ResourceSubtype",
 					"Id": 0,
-					"Description": "dolorum",
-					"Name": "repellat"
+					"Description": "voluptatibus",
+					"Name": "nesciunt"
 				}
 			],
-			"MoveVehicle": true,
-			"BaseObject": "beatae",
+			"MoveVehicle": false,
+			"BaseObject": "doloremque",
 			"ObjectType": "ResourceType",
 			"Id": 0,
-			"Description": "corporis",
-			"Name": "accusantium",
+			"Description": "accusantium",
+			"Name": "labore",
 			"Tags": [
 				{
-					"BaseObject": "magnam",
-					"AttributeId": 181,
+					"BaseObject": "voluptatem",
+					"AttributeId": 342,
 					"ObjectType": "Attribute",
 					"Id": 0,
-					"Description": "consequuntur",
-					"Name": "nostrum"
+					"Description": "nostrum",
+					"Name": "voluptatem"
 				}
 			]
 		},
 		"ResourceSubtype": {
 			"ObjectType": "ResourceSubtype",
 			"Id": 0,
-			"Description": "adipisci",
-			"Name": "molestiae"
+			"Description": "libero",
+			"Name": "consequatur"
 		},
-		"Id": 0,
 		"ObjectType": "VirtualResource",
-		"Name": "libero",
-		"Description": "impedit"
-	},
-	"ResourceType": {
-		"Family": "Group",
-		"ResourceSubtypes": [
-			{
-				"ObjectType": "ResourceSubtype",
-				"Id": 0,
-				"Description": "voluptatem",
-				"Name": "accusantium"
-			}
-		],
-		"MoveVehicle": true,
-		"BaseObject": "consequatur",
-		"ObjectType": "ResourceType",
 		"Id": 0,
-		"Description": "facere",
-		"Name": "perspiciatis",
-		"Tags": [
-			{
-				"BaseObject": "consequatur",
-				"AttributeId": 130,
-				"ObjectType": "Attribute",
-				"Id": 0,
-				"Description": "voluptatibus",
-				"Name": "consequuntur"
-			}
-		]
-	},
-	"ResourceSubtype": {
-		"ObjectType": "ResourceSubtype",
-		"Id": 0,
-		"Description": "cupiditate",
-		"Name": "nesciunt"
+		"Description": "dolore",
+		"Name": "perspiciatis"
 	},
 	"Quantity": {
 		"Unit": {
 			"UnitType": "Weight",
-			"Scalar": 276,
+			"Scalar": 992,
 			"Integral": false,
-			"BaseObject": "aperiam",
+			"BaseObject": "nostrum",
 			"ObjectType": "Unit",
 			"Id": 0,
-			"Description": "molestiae",
-			"Name": "consequatur"
+			"Description": "temporibus",
+			"Name": "laborum"
 		},
-		"Quantity": 731
+		"Quantity": 631
 	},
-	"Job": {
-		"Client": {
-			"CompanyType": {
-				"BaseObject": "voluptas",
-				"ObjectType": "Union",
-				"Id": 0,
-				"Description": "asperiores",
-				"Name": "cumque"
-			},
-			"Emails": [
-				{
-					"Id": 0,
-					"Email": "Arvilla62@hotmail.com",
-					"Description": "tempore",
-					"Name": "fugiat"
-				}
-			],
-			"PhoneNumbers": [
-				{
-					"Id": 0,
-					"PhoneNumber": "perspiciatis",
-					"Description": "nostrum",
-					"Name": "repellat"
-				}
-			],
-			"ObjectType": "Subcontractor",
+	"Filled": false,
+	"Completed": false,
+	"Cancelled": false,
+	"Status": {
+		"ParentType": {
+			"BaseObject": "maxime",
+			"ObjectType": "TypedItem",
 			"Id": 0,
-			"Description": "provident",
-			"Name": "excepturi",
-			"Address": {
-				"Street": "molestias",
-				"StreetDetails": "occaecati",
-				"State": {
-					"BaseObject": "delectus",
-					"ObjectType": "Division",
-					"Id": 0,
-					"Description": "consequatur",
-					"Name": "repudiandae"
-				},
-				"City": "a",
-				"ZipCode": "molestiae",
-				"Geocode": {
-					"Lat": 328,
-					"Lng": 935,
-					"Source": "Action"
-				},
-				"ObjectType": "Address",
-				"Id": 0
-			},
-			"Tags": [
-				{
-					"BaseObject": "repudiandae",
-					"AttributeId": 631,
-					"ObjectType": "Attribute",
-					"Id": 0,
-					"Description": "commodi",
-					"Name": "pariatur"
-				}
-			],
-			"AccountCode": "voluptatibus",
-			"Divisions": [
-				{
-					"BaseObject": "voluptatibus",
-					"ObjectType": "JobPriority",
-					"Id": 0,
-					"Description": "magnam",
-					"Name": "consequatur"
-				}
-			],
-			"Contacts": [
-				{
-					"Emails": [
-						{
-							"Id": 0,
-							"Email": "Rae_Bartell33@gmail.com",
-							"Description": "dolorem",
-							"Name": "voluptatibus"
-						}
-					],
-					"PhoneNumbers": [
-						{
-							"Id": 0,
-							"PhoneNumber": "voluptatibus",
-							"Description": "aliquid",
-							"Name": "voluptas"
-						}
-					],
-					"ObjectType": "Party",
-					"Id": 0,
-					"Description": "eveniet",
-					"Name": "impedit",
-					"Address": {
-						"Street": "assumenda",
-						"StreetDetails": "doloremque",
-						"State": {
-							"BaseObject": "dolorum",
-							"ObjectType": "Minority",
-							"Id": 0,
-							"Description": "consectetur",
-							"Name": "consectetur"
-						},
-						"City": "consequuntur",
-						"ZipCode": "excepturi",
-						"Geocode": {
-							"Lat": 451,
-							"Lng": 858,
-							"Source": "Owner"
-						},
-						"ObjectType": "Address",
-						"Id": 0
-					},
-					"Tags": [
-						{
-							"BaseObject": "fugiat",
-							"AttributeId": 250,
-							"ObjectType": "Attribute",
-							"Id": 0,
-							"Description": "praesentium",
-							"Name": "perferendis"
-						}
-					]
-				}
-			]
+			"Description": "consequuntur",
+			"Name": "consequuntur"
 		},
-		"Priority": {
-			"BaseObject": "consequatur",
-			"ObjectType": "Language",
-			"Id": 0,
-			"Description": "fugiat",
-			"Name": "perferendis"
-		},
-		"Certifications": [
-			{
-				"BaseObject": "cupiditate",
-				"ObjectType": "Division",
-				"Id": 0,
-				"Description": "voluptatem",
-				"Name": "voluptatibus"
-			}
-		],
-		"Notes": "repudiandae",
-		"JobActivities": [
-			{
-				"ParentId": 367,
-				"Completed": true,
-				"Priority": 429,
-				"ObjectType": "JobActivity",
-				"Id": 0,
-				"Description": "placeat",
-				"Name": "repellendus",
-				"CurrentLifespan": {
-					"Start": "2019-01-14T08:00:00",
-					"End": "2019-01-14T08:00:00",
-					"Duration": "repellat"
-				},
-				"Tags": [
-					{
-						"BaseObject": "similique",
-						"AttributeId": 837,
-						"ObjectType": "Attribute",
-						"Id": 0,
-						"Description": "laboriosam",
-						"Name": "officiis"
-					}
-				],
-				"ForeColor": "repudiandae",
-				"BackColor": "cumque"
-			}
-		],
-		"Status": {
-			"BaseObject": "recusandae",
-			"ObjectType": "JobCertification",
-			"Id": 0,
-			"Description": "facilis",
-			"Name": "maxime"
-		},
-		"StatusDue": "2019-01-14T08:00:00",
-		"Types": [
-			{
-				"BaseObject": "consequatur",
-				"ObjectType": "JobPriority",
-				"Id": 0,
-				"Description": "quibusdam",
-				"Name": "perspiciatis"
-			}
-		],
-		"Subtypes": [
-			{
-				"BaseObject": "architecto",
-				"ObjectType": "PurchaseOrderStatus",
-				"Id": 0,
-				"Description": "magnam",
-				"Name": "consequuntur"
-			}
-		],
-		"Owner": {
-			"Emails": [
-				{
-					"Id": 0,
-					"Email": "Alexandra69@hotmail.com",
-					"Description": "itaque",
-					"Name": "expedita"
-				}
-			],
-			"PhoneNumbers": [
-				{
-					"Id": 0,
-					"PhoneNumber": "repudiandae",
-					"Description": "voluptatibus",
-					"Name": "molestiae"
-				}
-			],
-			"ObjectType": "Plant",
-			"Id": 0,
-			"Description": "excepturi",
-			"Name": "explicabo",
-			"Address": {
-				"Street": "ut",
-				"StreetDetails": "soluta",
-				"State": {
-					"BaseObject": "dignissimos",
-					"ObjectType": "Division",
-					"Id": 0,
-					"Description": "itaque",
-					"Name": "architecto"
-				},
-				"City": "qui",
-				"ZipCode": "veniam",
-				"Geocode": {
-					"Lat": 870,
-					"Lng": 443,
-					"Source": "Action"
-				},
-				"ObjectType": "Address",
-				"Id": 0
-			},
-			"Tags": [
-				{
-					"BaseObject": "tempora",
-					"AttributeId": 840,
-					"ObjectType": "Attribute",
-					"Id": 0,
-					"Description": "ratione",
-					"Name": "doloremque"
-				}
-			]
-		},
-		"Manager": {
-			"Emails": [
-				{
-					"Id": 0,
-					"Email": "Kobe33@yahoo.com",
-					"Description": "tempore",
-					"Name": "consequuntur"
-				}
-			],
-			"PhoneNumbers": [
-				{
-					"Id": 0,
-					"PhoneNumber": "perspiciatis",
-					"Description": "fugiat",
-					"Name": "doloribus"
-				}
-			],
-			"ObjectType": "Plant",
-			"Id": 0,
-			"Description": "perspiciatis",
-			"Name": "possimus",
-			"Address": {
-				"Street": "explicabo",
-				"StreetDetails": "debitis",
-				"State": {
-					"BaseObject": "dolorem",
-					"ObjectType": "WebPrivilege",
-					"Id": 0,
-					"Description": "veniam",
-					"Name": "itaque"
-				},
-				"City": "et",
-				"ZipCode": "similique",
-				"Geocode": {
-					"Lat": 528,
-					"Lng": 842,
-					"Source": "Owner"
-				},
-				"ObjectType": "Address",
-				"Id": 0
-			},
-			"Tags": [
-				{
-					"BaseObject": "accusamus",
-					"AttributeId": 270,
-					"ObjectType": "Attribute",
-					"Id": 0,
-					"Description": "quaerat",
-					"Name": "consequatur"
-				}
-			]
-		},
-		"JobCosts": [
-			{
-				"CostCode": {
-					"UnitCost": {
-						"Unit": {
-							"UnitType": "Volume",
-							"Scalar": 680,
-							"Integral": true,
-							"BaseObject": "labore",
-							"ObjectType": "Unit",
-							"Id": 0,
-							"Description": "accusantium",
-							"Name": "accusamus"
-						},
-						"Cost": {
-							"Unit": {
-								"UnitType": "Length",
-								"Scalar": 625,
-								"Integral": true,
-								"BaseObject": "aperiam",
-								"ObjectType": "Unit",
-								"Id": 0,
-								"Description": "voluptatem",
-								"Name": "deserunt"
-							},
-							"Quantity": 77
-						},
-						"Notes": "perferendis"
-					},
-					"Global": true,
-					"BaseObject": "voluptate",
-					"ObjectType": "CostCode",
-					"Id": 0,
-					"Description": "voluptate",
-					"Name": "provident"
-				},
-				"CostPerUnit": {
-					"Unit": {
-						"UnitType": "Self",
-						"Scalar": 92,
-						"Integral": false,
-						"BaseObject": "accusamus",
-						"ObjectType": "Unit",
-						"Id": 0,
-						"Description": "perspiciatis",
-						"Name": "voluptatibus"
-					},
-					"Quantity": 709
-				},
-				"TotalAmount": 790,
-				"CompletedAmount": 265,
-				"BaseObject": "aperiam",
-				"ObjectType": "JobCost",
-				"Id": 0,
-				"Description": "perspiciatis",
-				"Name": "consectetur"
-			}
-		],
-		"TotalCost": {
-			"Unit": {
-				"UnitType": "Money",
-				"Scalar": 329,
-				"Integral": true,
-				"BaseObject": "voluptas",
-				"ObjectType": "Unit",
-				"Id": 0,
-				"Description": "quidem",
-				"Name": "suscipit"
-			},
-			"Quantity": 403
-		},
-		"EstimatedLaborHours": 693,
-		"EstimatedEquipmentHours": 649,
-		"ObjectType": "Job",
+		"Completed": true,
+		"Cancelled": false,
+		"BaseObject": "provident",
+		"ObjectType": "ActionStatus",
 		"Id": 0,
-		"Description": "cumque",
-		"Name": "placeat",
-		"AccountCode": "expedita",
-		"Attachments": [
-			{
-				"Attached": true,
-				"FilePath": "voluptatem",
-				"FullName": "perferendis",
-				"ObjectType": "Document",
-				"Id": 0,
-				"Description": "consequatur",
-				"Name": "libero"
-			}
-		],
-		"HasAttachments": false,
-		"ForeColor": "molestiae",
-		"BackColor": "doloremque",
-		"CurrentLifespan": {
-			"Start": "2019-01-14T08:00:00",
-			"End": "2019-01-14T08:00:00",
-			"Duration": "quibusdam"
-		},
-		"Tags": [
-			{
-				"BaseObject": "beatae",
-				"AttributeId": 704,
-				"ObjectType": "Attribute",
-				"Id": 0,
-				"Description": "tempora",
-				"Name": "expedita"
-			}
-		],
-		"Address": {
-			"Street": "a",
-			"StreetDetails": "voluptatibus",
-			"State": {
-				"BaseObject": "deserunt",
-				"ObjectType": "WebPrivilege",
-				"Id": 0,
-				"Description": "provident",
-				"Name": "dolorem"
-			},
-			"City": "et",
-			"ZipCode": "laboriosam",
-			"Geocode": {
-				"Lat": 389,
-				"Lng": 454,
-				"Source": "Owner"
-			},
-			"ObjectType": "Address",
-			"Id": 0
-		},
-		"Divisions": [
-			{
-				"BaseObject": "itaque",
-				"ObjectType": "CompanyType",
-				"Id": 0,
-				"Description": "dolores",
-				"Name": "consequatur"
-			}
-		],
-		"Contacts": [
-			{
-				"Emails": [
-					{
-						"Id": 0,
-						"Email": "Bridie25@yahoo.com",
-						"Description": "delectus",
-						"Name": "deleniti"
-					}
-				],
-				"PhoneNumbers": [
-					{
-						"Id": 0,
-						"PhoneNumber": "voluptatum",
-						"Description": "fugiat",
-						"Name": "maxime"
-					}
-				],
-				"ObjectType": "Plant",
-				"Id": 0,
-				"Description": "suscipit",
-				"Name": "debitis",
-				"Address": {
-					"Street": "labore",
-					"StreetDetails": "voluptatibus",
-					"State": {
-						"BaseObject": "provident",
-						"ObjectType": "Division",
-						"Id": 0,
-						"Description": "consequatur",
-						"Name": "voluptates"
-					},
-					"City": "a",
-					"ZipCode": "voluptatibus",
-					"Geocode": {
-						"Lat": 261,
-						"Lng": 936,
-						"Source": "Owner"
-					},
-					"ObjectType": "Address",
-					"Id": 0
-				},
-				"Tags": [
-					{
-						"BaseObject": "perspiciatis",
-						"AttributeId": 677,
-						"ObjectType": "Attribute",
-						"Id": 0,
-						"Description": "delectus",
-						"Name": "veniam"
-					}
-				]
-			}
-		]
+		"Description": "maiores",
+		"Name": "dignissimos",
+		"ForeColor": "voluptatum",
+		"BackColor": "laboriosam"
 	},
-	"JobActivity": {
-		"ParentId": 263,
-		"Completed": false,
-		"Priority": 56,
-		"ObjectType": "JobActivity",
-		"Id": 0,
-		"Description": "quibusdam",
-		"Name": "voluptatem",
-		"CurrentLifespan": {
-			"Start": "2019-01-14T08:00:00",
-			"End": "2019-01-14T08:00:00",
-			"Duration": "voluptatibus"
-		},
-		"Tags": [
-			{
-				"BaseObject": "consectetur",
-				"AttributeId": 772,
-				"ObjectType": "Attribute",
-				"Id": 0,
-				"Description": "facilis",
-				"Name": "molestiae"
-			}
-		],
-		"ForeColor": "voluptas",
-		"BackColor": "consequatur"
-	},
-	"ObjectType": "TaskDay",
-	"Divisions": [
-		{
-			"BaseObject": "possimus",
-			"ObjectType": "Division",
-			"Id": 0,
-			"Description": "cupiditate",
-			"Name": "tempore"
-		}
-	],
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "labore"
+		"Duration": "dolorem"
 	},
 	"Id": 0,
-	"Description": "accusamus",
-	"Name": "magnam",
+	"Description": "molestiae",
+	"Name": "impedit",
 	"Tags": [
 		{
-			"BaseObject": "repellendus",
-			"AttributeId": 893,
+			"BaseObject": "doloribus",
+			"AttributeId": 542,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "dignissimos",
-			"Name": "dolorum"
+			"Description": "repellat",
+			"Name": "maxime"
 		}
 	]
 }

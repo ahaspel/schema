@@ -13,13 +13,14 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
-		"ObjectType": "Address",
-		"Id": 0
+		"Id": 0,
+		"ObjectType": "Address"
 	},
-	"ObjectType": "Party",
+	"ObjectType": "Company",
 	"Id": 0,
+	"Divisions": [],
 	"Description": "",
 	"Tags": [],
 	"__typename": "CxParty"

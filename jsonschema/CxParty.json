@@ -31,14 +31,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				}
 			},
 			"required": [
@@ -235,6 +235,12 @@
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
 		},
 		"Description": {
 			"type": "string"

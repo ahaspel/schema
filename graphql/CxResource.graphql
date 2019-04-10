@@ -59,8 +59,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 input IxAddressInput {
@@ -70,8 +70,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -133,6 +133,7 @@ input IxCompanyInput {
 enum IxCompanyObjectType {
   Company
   Subcontractor
+  Plant
 }
 
 type IxEmail {
@@ -169,14 +170,14 @@ enum IxGeocodeSource {
 
 type IxLocation {
   Address: IxAddress
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxLocationInput {
   Address: IxAddressInput!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxLookupValue {

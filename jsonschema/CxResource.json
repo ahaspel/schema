@@ -31,14 +31,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				}
 			},
 			"required": [
@@ -106,7 +106,8 @@
 					"type": "string",
 					"enum": [
 						"Company",
-						"Subcontractor"
+						"Subcontractor",
+						"Plant"
 					]
 				},
 				"Id": {
@@ -199,10 +200,10 @@
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},

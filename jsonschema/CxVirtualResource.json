@@ -1,6 +1,6 @@
 {
-	"id": "https://congistics.com/schema/CxCompany",
-	"title": "com.congistics.cbrd.party.CxCompany",
+	"id": "https://congistics.com/schema/CxVirtualResource",
+	"title": "com.congistics.cbrd.resource.CxVirtualResource",
 	"definitions": {
 		"IxAddress": {
 			"superRequired": [
@@ -79,6 +79,76 @@
 				"Id"
 			]
 		},
+		"IxCompany": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"CompanyType"
+			],
+			"type": "object",
+			"properties": {
+				"CompanyType": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"Emails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Company",
+						"Subcontractor",
+						"Plant"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"AccountCode": {
+					"type": "string"
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Contacts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				}
+			},
+			"required": [
+				"CompanyType",
+				"Id"
+			]
+		},
 		"IxEmail": {
 			"superRequired": [
 				"Id",
@@ -123,6 +193,23 @@
 					]
 				}
 			}
+		},
+		"IxLocation": {
+			"type": "object",
+			"properties": {
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Address"
+			]
 		},
 		"IxLookupValue": {
 			"superRequired": [
@@ -209,8 +296,7 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
@@ -223,7 +309,6 @@
 				}
 			},
 			"required": [
-				"Name",
 				"Id"
 			]
 		},
@@ -251,54 +336,106 @@
 				"Id",
 				"PhoneNumber"
 			]
+		},
+		"IxResourceSubtype": {
+			"superRequired": [
+				"Name",
+				"Id"
+			],
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceSubtype"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxResourceType": {
+			"superRequired": [
+				"Name",
+				"Id",
+				"Family",
+				"ResourceSubtypes"
+			],
+			"type": "object",
+			"properties": {
+				"Family": {
+					"type": "string",
+					"enum": [
+						"Labor",
+						"Equipment",
+						"Material",
+						"Group"
+					]
+				},
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
+				},
+				"MoveVehicle": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceType"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Family",
+				"ResourceSubtypes",
+				"Id"
+			]
 		}
 	},
-	"immutable": [
-		"Dto"
-	],
 	"type": "object",
 	"properties": {
-		"CompanyType": {
-			"$ref": "#/definitions/IxLookupValue"
+		"ResourceType": {
+			"$ref": "#/definitions/IxResourceType"
 		},
-		"Contacts": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxParty"
-			}
-		},
-		"AccountCode": {
-			"type": "string"
+		"ResourceSubtype": {
+			"$ref": "#/definitions/IxResourceSubtype"
 		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
-				"Company",
-				"Subcontractor",
-				"Plant"
+				"VirtualResource"
 			]
-		},
-		"PhoneNumbers": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxPhoneNumber"
-			}
-		},
-		"Emails": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxEmail"
-			}
-		},
-		"Name": {
-			"type": "string",
-			"minLength": 1
-		},
-		"Address": {
-			"$ref": "#/definitions/IxAddress"
-		},
-		"Id": {
-			"type": "integer"
 		},
 		"Divisions": {
 			"type": "array",
@@ -306,7 +443,19 @@
 				"$ref": "#/definitions/IxLookupValue"
 			}
 		},
+		"Owner": {
+			"$ref": "#/definitions/IxCompany"
+		},
+		"Location": {
+			"$ref": "#/definitions/IxLocation"
+		},
+		"Id": {
+			"type": "integer"
+		},
 		"Description": {
+			"type": "string"
+		},
+		"Name": {
 			"type": "string"
 		},
 		"Tags": {
@@ -317,8 +466,6 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id",
-		"CompanyType"
+		"Id"
 	]
 }

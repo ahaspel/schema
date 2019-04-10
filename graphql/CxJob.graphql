@@ -78,8 +78,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 input IxAddressInput {
@@ -89,8 +89,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -141,6 +141,7 @@ input IxCompanyDO {
 enum IxCompanyObjectType {
   Company
   Subcontractor
+  Plant
 }
 
 type IxCostCode {

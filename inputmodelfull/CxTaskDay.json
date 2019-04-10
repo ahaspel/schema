@@ -1,38 +1,92 @@
 {
-	"ParentId": 685,
-	"Filled": false,
-	"Resource": {
-		"Id": 0
-	},
-	"Quantity": {
-		"Unit": {
-			"Id": 1
+	"ParentId": 646,
+	"Location": {
+		"Address": {
+			"Street": "velit",
+			"StreetDetails": "consequuntur",
+			"State": {
+				"Id": 1
+			},
+			"City": "ea",
+			"ZipCode": "delectus",
+			"Geocode": {
+				"Lat": -63.3149,
+				"Lng": 42.7988,
+				"Source": "Owner"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
 		},
-		"Quantity": 940
+		"Name": "voluptatum",
+		"Description": "expedita"
+	},
+	"ShiftSupervisor": false,
+	"JobCost": {
+		"Id": 0
 	},
 	"JobActivity": {
 		"Id": 156
 	},
 	"ObjectType": "TaskDay",
-	"Divisions": [
-		{
+	"Resource": {
+		"Owner": {
+			"Id": 2
+		},
+		"ResourceType": {
+			"Family": "Equipment",
+			"ResourceSubtypes": [
+				{
+					"Id": 29
+				}
+			],
+			"MoveVehicle": true,
+			"BaseObject": "veniam",
+			"ObjectType": "ResourceType",
+			"Id": 0,
+			"Description": "dignissimos",
+			"Name": "consequatur",
+			"Tags": [
+				{
+					"BaseObject": "aliquam",
+					"AttributeId": 2,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Description": "debitis",
+					"Name": "Capacity"
+				}
+			]
+		},
+		"ResourceSubtype": {
+			"Id": 29
+		},
+		"ObjectType": "VirtualResource",
+		"Id": 0,
+		"Description": "consequuntur",
+		"Name": "adipisci"
+	},
+	"Quantity": {
+		"Unit": {
 			"Id": 1
-		}
-	],
+		},
+		"Quantity": 974
+	},
+	"Status": {
+		"Id": 0
+	},
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "itaque",
-	"Name": "temporibus",
+	"Description": "voluptas",
+	"Name": "praesentium",
 	"Tags": [
 		{
-			"BaseObject": "mollitia",
+			"BaseObject": "voluptatibus",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "voluptatem",
+			"Description": "nesciunt",
 			"Name": "Capacity"
 		}
 	],

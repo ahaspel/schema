@@ -1,14 +1,19 @@
 type CxTaskDay {
   ParentId: Int
-  Filled: Boolean
-  Resource: IxVirtualResource
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Quantity: IxQuantity
+  ActionType: CxTaskDayActionType
+  Location: IxLocation
+  ShiftSupervisor: Boolean
+  JobCost: IxJobCost
   Job: IxJob
   JobActivity: IxJobActivity
   ObjectType: CxTaskDayObjectType
   Divisions: [IxLookupValue]
+  Resource: IxVirtualResource
+  Quantity: IxQuantity
+  Filled: Boolean
+  Completed: Boolean
+  Cancelled: Boolean
+  Status: IxActionStatus
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -16,14 +21,29 @@ type CxTaskDay {
   Tags: [IxAttribute__String__]
 }
 
+enum CxTaskDayActionType {
+  Crew
+  Employee
+  Equipment
+  Generic
+  Plant
+  Subcontractor
+  Task
+  Material
+  Group
+  Move
+}
+
 input CxTaskDayInput {
-  ParentId: Int
-  Filled: Boolean
-  Resource: IxVirtualResourceDO!
-  Quantity: IxQuantityInput
+  ParentId: Int!
+  Location: IxLocationInput
+  ShiftSupervisor: Boolean
+  JobCost: IxJobCostDO
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
-  Divisions: [IxLookupValueDO]
+  Resource: IxVirtualResourceInput!
+  Quantity: IxQuantityInput
+  Status: IxActionStatusDO
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
@@ -40,6 +60,27 @@ input FilterInput {
   values: [String]
 }
 
+type IxActionStatus {
+  ParentType: IxTypedItem__String__
+  Completed: Boolean
+  Cancelled: Boolean
+  BaseObject: String
+  ObjectType: IxActionStatusObjectType
+  Id: ID!
+  Description: String
+  Name: String
+  ForeColor: String
+  BackColor: String
+}
+
+input IxActionStatusDO {
+  Id: ID!
+}
+
+enum IxActionStatusObjectType {
+  ActionStatus
+}
+
 type IxAddress {
   Street: String
   StreetDetails: String
@@ -47,8 +88,19 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -92,9 +144,14 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
+input IxCompanyDO {
+  Id: ID!
+}
+
 enum IxCompanyObjectType {
   Company
   Subcontractor
+  Plant
 }
 
 type IxCostCode {
@@ -133,6 +190,12 @@ type IxEmail {
 }
 
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -210,12 +273,28 @@ type IxJobCost {
   Name: String
 }
 
+input IxJobCostDO {
+  Id: ID!
+}
+
 enum IxJobCostObjectType {
   JobCost
 }
 
 enum IxJobObjectType {
   Job
+}
+
+type IxLocation {
+  Address: IxAddress
+  Name: String
+  Description: String
+}
+
+input IxLocationInput {
+  Address: IxAddressInput!
+  Name: String
+  Description: String
 }
 
 type IxLookupValue {
@@ -312,6 +391,10 @@ type IxResourceSubtype {
   Name: String
 }
 
+input IxResourceSubtypeDO {
+  Id: ID!
+}
+
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -335,8 +418,32 @@ enum IxResourceTypeFamily {
   Group
 }
 
+input IxResourceTypeInput {
+  Family: IxResourceTypeFamily!
+  ResourceSubtypes: [IxResourceSubtypeDO]!
+  MoveVehicle: Boolean
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Description: String
+  Name: String!
+  Tags: [IxAttribute__String__Input]
+}
+
 enum IxResourceTypeObjectType {
   ResourceType
+}
+
+type IxTypedItem__String__ {
+  BaseObject: String
+  ObjectType: IxTypedItemStringObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxTypedItemStringObjectType {
+  TypedItem
 }
 
 type IxUnit {
@@ -378,14 +485,20 @@ type IxVirtualResource {
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  Id: ID!
   ObjectType: IxVirtualResourceObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
-input IxVirtualResourceDO {
+input IxVirtualResourceInput {
+  Owner: IxCompanyDO!
+  ResourceType: IxResourceTypeInput
+  ResourceSubtype: IxResourceSubtypeDO!
+  ObjectType: IxVirtualResourceObjectType
   Id: ID!
+  Description: String
+  Name: String
 }
 
 enum IxVirtualResourceObjectType {

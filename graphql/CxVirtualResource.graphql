@@ -1,44 +1,22 @@
-type CxMaterial {
-  ObjectType: CxMaterialObjectType
-  CurrentLifespan: IxRange
-  Inventory: IxInventory
-  Quantity: IxQuantity
-  QuantityRemaining: IxQuantity
-  Unit: IxUnit
-  Reusable: Boolean
-  Owner: IxCompany
+type CxVirtualResource {
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  ForeColor: String
-  BackColor: String
-  AccountCode: String
-  Id: ID!
+  ObjectType: CxVirtualResourceObjectType
   Divisions: [IxLookupValue]
+  Owner: IxCompany
+  Location: IxLocation
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
 }
 
-input CxMaterialInput {
-  ObjectType: CxMaterialObjectType
-  CurrentLifespan: IxRangeInput
-  Inventory: IxInventoryInput!
-  Unit: IxUnitDO!
-  Reusable: Boolean!
-  Owner: IxCompanyDO
-  ResourceType: IxResourceTypeDO!
-  ResourceSubtype: IxResourceSubtypeDO!
-  ForeColor: String
-  BackColor: String
-  AccountCode: String
+input CxVirtualResourceDO {
   Id: ID!
-  Divisions: [IxLookupValueDO]
-  Description: String
-  Tags: [IxAttribute__String__Input]
 }
 
-enum CxMaterialObjectType {
-  Material
+enum CxVirtualResourceObjectType {
+  VirtualResource
 }
 
 input FilterInput {
@@ -70,15 +48,6 @@ type IxAttribute__String__ {
   Name: String
 }
 
-input IxAttribute__String__Input {
-  BaseObject: String!
-  AttributeId: Int!
-  ObjectType: IxAttributeStringObjectType
-  Id: ID!
-  Description: String
-  Name: String
-}
-
 enum IxAttributeStringObjectType {
   Attribute
 }
@@ -96,10 +65,6 @@ type IxCompany {
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
-}
-
-input IxCompanyDO {
-  Id: ID!
 }
 
 enum IxCompanyObjectType {
@@ -127,36 +92,10 @@ enum IxGeocodeSource {
   GPSService
 }
 
-type IxInventory {
-  Items: [IxInventoryItem]
-  Total: Float
-  Empty: Boolean
-}
-
-input IxInventoryInput {
-  Items: [IxInventoryItemInput]!
-  Total: Float
-  Empty: Boolean
-}
-
-type IxInventoryItem {
-  Id: ID!
-  Quantity: Float
-  Start: String
-  Vendor: IxCompany
-  AccountCode: String
-  Description: String
+type IxLocation {
+  Address: IxAddress
   Name: String
-}
-
-input IxInventoryItemInput {
-  Id: ID!
-  Quantity: Float!
-  Start: String!
-  Vendor: IxCompanyDO
-  AccountCode: String
   Description: String
-  Name: String
 }
 
 type IxLookupValue {
@@ -165,10 +104,6 @@ type IxLookupValue {
   Id: ID!
   Description: String
   Name: String
-}
-
-input IxLookupValueDO {
-  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -219,32 +154,11 @@ type IxPhoneNumber {
   Name: String
 }
 
-type IxQuantity {
-  Unit: IxUnit
-  Quantity: Float
-}
-
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
-  Duration: String
-}
-
 type IxResourceSubtype {
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
   Description: String
   Name: String
-}
-
-input IxResourceSubtypeDO {
-  Id: ID!
 }
 
 enum IxResourceSubtypeObjectType {
@@ -263,10 +177,6 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceTypeDO {
-  Id: ID!
-}
-
 enum IxResourceTypeFamily {
   Labor
   Equipment
@@ -278,40 +188,11 @@ enum IxResourceTypeObjectType {
   ResourceType
 }
 
-type IxUnit {
-  UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
-  ObjectType: IxUnitObjectType
-  Id: ID!
-  Description: String
-  Name: String
-}
-
-input IxUnitDO {
-  Id: ID!
-}
-
-enum IxUnitObjectType {
-  Unit
-}
-
-enum IxUnitUnitType {
-  Time
-  Length
-  Weight
-  Area
-  Volume
-  Money
-  Self
-}
-
 extend type Mutation {
-  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit"): [CxMaterial]
-  cxMaterials_onDelete(data: [String], objectType: String = "Material", operation: String = "delete"): [CxMaterial]
+  cxVirtualResources_onSave(data: [CxVirtualResourceDO], objectType: String = "VirtualResource", operation: String = "edit"): [CxVirtualResource]
+  cxVirtualResources_onDelete(data: [String], objectType: String = "VirtualResource", operation: String = "delete"): [CxVirtualResource]
 }
 
 extend type Query {
-  cxMaterials(filters: [FilterInput], objectType: String = "Material"): [CxMaterial]
+  cxVirtualResources(filters: [FilterInput], objectType: String = "VirtualResource"): [CxVirtualResource]
 }
