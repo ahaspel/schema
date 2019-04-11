@@ -9,6 +9,7 @@ type CxJob {
   AccountCode: String
   Contacts: [IxParty]
   Name: String
+  DisplayName: String
   Notes: String
   CurrentLifespan: IxRange
   JobActivities: [IxJobActivity]

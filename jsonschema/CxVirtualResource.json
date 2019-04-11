@@ -424,6 +424,7 @@
 	},
 	"immutable": [
 		"Dto",
+		"DisplayName",
 		"ResourceType"
 	],
 	"type": "object",
@@ -442,6 +443,9 @@
 		},
 		"Owner": {
 			"$ref": "#/definitions/IxCompany"
+		},
+		"DisplayName": {
+			"type": "string"
 		},
 		"Id": {
 			"type": "integer"

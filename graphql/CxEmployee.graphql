@@ -28,12 +28,12 @@ type CxEmployee {
   ForeColor: String
   BackColor: String
   Location: IxLocation
+  DisplayName: String
   AccountCode: String
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -69,7 +69,6 @@ input CxEmployeeInput {
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
-  Name: String
   Tags: [IxAttribute__String__Input]
 }
 

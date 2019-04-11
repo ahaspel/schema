@@ -318,6 +318,7 @@ type IxResource {
   Id: ID!
   Description: String
   Name: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]

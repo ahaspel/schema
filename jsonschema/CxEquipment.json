@@ -295,6 +295,9 @@
 				"Name": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -711,6 +714,7 @@
 	},
 	"immutable": [
 		"Dto",
+		"DisplayName",
 		"Name",
 		"Returned",
 		"Location",
@@ -794,6 +798,9 @@
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
 		},
+		"DisplayName": {
+			"type": "string"
+		},
 		"AccountCode": {
 			"type": "string",
 			"minLength": 1
@@ -811,9 +818,6 @@
 			}
 		},
 		"Description": {
-			"type": "string"
-		},
-		"Name": {
 			"type": "string"
 		},
 		"Tags": {

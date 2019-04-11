@@ -411,6 +411,9 @@
 				"Name": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -628,6 +631,7 @@
 	},
 	"immutable": [
 		"Dto",
+		"DisplayName",
 		"Count",
 		"Address",
 		"Location",
@@ -687,6 +691,9 @@
 		},
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
+		},
+		"DisplayName": {
+			"type": "string"
 		},
 		"AccountCode": {
 			"type": "string"

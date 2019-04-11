@@ -11,11 +11,11 @@ type CxMaterial {
   ResourceSubtype: IxResourceSubtype
   ForeColor: String
   BackColor: String
+  DisplayName: String
   AccountCode: String
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
 }
 

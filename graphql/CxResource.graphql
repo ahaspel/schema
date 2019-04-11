@@ -9,6 +9,7 @@ type CxResource {
   BackColor: String
   Address: IxAddress
   Location: IxLocation
+  DisplayName: String
   AccountCode: String
   CurrentLifespan: IxRange
   Id: ID!

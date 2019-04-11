@@ -21,12 +21,12 @@ type CxEquipment {
   BackColor: String
   Address: IxAddress
   Location: IxLocation
+  DisplayName: String
   AccountCode: String
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -161,6 +161,7 @@ type IxEmployee {
   Id: ID!
   Description: String
   Name: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]

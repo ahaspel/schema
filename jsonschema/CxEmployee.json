@@ -543,6 +543,7 @@
 	},
 	"immutable": [
 		"Dto",
+		"DisplayName",
 		"InCrew",
 		"Location",
 		"PartyId"
@@ -675,6 +676,9 @@
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
 		},
+		"DisplayName": {
+			"type": "string"
+		},
 		"AccountCode": {
 			"type": "string"
 		},
@@ -691,9 +695,6 @@
 			}
 		},
 		"Description": {
-			"type": "string"
-		},
-		"Name": {
 			"type": "string"
 		},
 		"Tags": {

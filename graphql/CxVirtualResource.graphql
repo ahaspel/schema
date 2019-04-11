@@ -3,6 +3,7 @@ type CxVirtualResource {
   ResourceSubtype: IxResourceSubtype
   ObjectType: CxVirtualResourceObjectType
   Owner: IxCompany
+  DisplayName: String
   Id: ID!
 }
 

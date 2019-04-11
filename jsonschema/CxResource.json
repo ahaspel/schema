@@ -528,7 +528,8 @@
 		}
 	},
 	"immutable": [
-		"Dto"
+		"Dto",
+		"DisplayName"
 	],
 	"type": "object",
 	"properties": {
@@ -561,6 +562,9 @@
 		},
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
+		},
+		"DisplayName": {
+			"type": "string"
 		},
 		"AccountCode": {
 			"type": "string"

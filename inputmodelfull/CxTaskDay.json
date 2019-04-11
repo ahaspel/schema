@@ -1,6 +1,6 @@
 {
-	"ParentId": 60,
-	"ShiftSupervisor": true,
+	"ParentId": 31,
+	"ShiftSupervisor": false,
 	"JobCost": {
 		"Id": 0
 	},
@@ -16,14 +16,16 @@
 			"Id": 29
 		},
 		"ObjectType": "VirtualResource",
-		"Id": 0
+		"Id": 0,
+		"DisplayName": "repellendus"
 	},
 	"Quantity": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 727
+		"Quantity": 36
 	},
+	"Virtual": false,
 	"Status": {
 		"Id": 0
 	},
@@ -41,7 +43,8 @@
 				"Id": 29
 			},
 			"ObjectType": "VirtualResource",
-			"Id": 0
+			"Id": 0,
+			"DisplayName": "voluptates"
 		}
 	],
 	"CurrentLifespan": {
@@ -49,15 +52,14 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "perspiciatis",
-	"Name": "cupiditate",
+	"Description": "itaque",
 	"Tags": [
 		{
-			"BaseObject": "molestiae",
+			"BaseObject": "aspernatur",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "facere",
+			"Description": "beatae",
 			"Name": "Capacity"
 		}
 	],

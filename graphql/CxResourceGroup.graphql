@@ -14,6 +14,7 @@ type CxResourceGroup {
   BackColor: String
   Address: IxAddress
   Location: IxLocation
+  DisplayName: String
   AccountCode: String
   Id: ID!
   Divisions: [IxLookupValue]
@@ -232,6 +233,7 @@ type IxResource {
   Id: ID!
   Description: String
   Name: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
