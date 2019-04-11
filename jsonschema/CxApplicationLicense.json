@@ -86,7 +86,6 @@
 	},
 	"immutable": [
 		"Dto",
-		"DisplayName",
 		"Valid",
 		"ErrorMessage"
 	],
@@ -97,6 +96,7 @@
 		},
 		"Expiration": {
 			"type": "string",
+			"minLength": 1,
 			"format": "date-time"
 		},
 		"AllowedUsers": {
@@ -110,7 +110,8 @@
 			"maximum": 1000
 		},
 		"SerialNumber": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"Valid": {
 			"type": "boolean"
@@ -130,17 +131,18 @@
 				"ApplicationLicense"
 			]
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
 		"Tags": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
 			}
 		}
-	}
+	},
+	"required": [
+		"Id",
+		"Expiration",
+		"AllowedUsers",
+		"AllowedWebUsers",
+		"SerialNumber"
+	]
 }

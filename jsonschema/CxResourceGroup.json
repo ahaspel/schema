@@ -631,7 +631,6 @@
 	},
 	"immutable": [
 		"Dto",
-		"DisplayName",
 		"Count",
 		"Address",
 		"Location",
@@ -691,9 +690,6 @@
 		},
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
-		},
-		"DisplayName": {
-			"type": "string"
 		},
 		"AccountCode": {
 			"type": "string"

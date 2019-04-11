@@ -14,7 +14,6 @@ type CxResourceGroup {
   BackColor: String
   Address: IxAddress
   Location: IxLocation
-  DisplayName: String
   AccountCode: String
   Id: ID!
   Divisions: [IxLookupValue]

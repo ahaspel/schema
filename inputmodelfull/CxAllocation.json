@@ -1,0 +1,208 @@
+{
+	"JobActivity": {
+		"Id": 156
+	},
+	"Shift": {
+		"Id": 0
+	},
+	"TaskDays": [
+		{
+			"ParentId": 282,
+			"Virtual": true,
+			"ShiftSupervisor": true,
+			"Status": {
+				"Id": 0
+			},
+			"Resource": {
+				"Owner": {
+					"Id": 2
+				},
+				"ResourceType": {
+					"Family": "Group",
+					"ResourceSubtypes": [
+						{
+							"Id": 29
+						}
+					],
+					"MoveVehicle": true,
+					"BaseObject": "voluptatibus",
+					"ObjectType": "ResourceType",
+					"Id": 0,
+					"Description": "consequatur",
+					"Name": "explicabo",
+					"Tags": [
+						{
+							"BaseObject": "deleniti",
+							"AttributeId": 2,
+							"ObjectType": "Attribute",
+							"Id": 0,
+							"Description": "facilis",
+							"Name": "Capacity"
+						}
+					]
+				},
+				"ResourceSubtype": {
+					"Id": 29
+				},
+				"ObjectType": "VirtualResource",
+				"Id": 0,
+				"Description": "perferendis",
+				"Name": "consequatur",
+				"DisplayName": "numquam"
+			},
+			"Quantity": {
+				"Unit": {
+					"Id": 1
+				},
+				"Quantity": 100
+			},
+			"ResourceType": {
+				"Family": "Labor",
+				"ResourceSubtypes": [
+					{
+						"Id": 29
+					}
+				],
+				"MoveVehicle": false,
+				"BaseObject": "consequatur",
+				"ObjectType": "ResourceType",
+				"Id": 0,
+				"Description": "beatae",
+				"Name": "quibusdam",
+				"Tags": [
+					{
+						"BaseObject": "perspiciatis",
+						"AttributeId": 2,
+						"ObjectType": "Attribute",
+						"Id": 0,
+						"Description": "voluptatibus",
+						"Name": "Capacity"
+					}
+				]
+			},
+			"ResourceSubtype": {
+				"Id": 29
+			},
+			"JobActivity": {
+				"Id": 156
+			},
+			"Job": {
+				"Id": 0
+			},
+			"JobCost": {
+				"Id": 0
+			},
+			"Location": {
+				"Address": {
+					"Street": "atque",
+					"StreetDetails": "maxime",
+					"State": {
+						"Id": 1
+					},
+					"City": "quis",
+					"ZipCode": "consequuntur",
+					"Geocode": {
+						"Lat": -22.3294,
+						"Lng": -132.3147,
+						"Source": "Action"
+					},
+					"Id": 0,
+					"ObjectType": "Address"
+				},
+				"Name": "dolorum",
+				"Description": "cupiditate"
+			},
+			"ActionType": "Move",
+			"VirtualResources": [
+				{
+					"Owner": {
+						"Id": 2
+					},
+					"ResourceType": {
+						"Family": "Equipment",
+						"ResourceSubtypes": [
+							{
+								"Id": 29
+							}
+						],
+						"MoveVehicle": false,
+						"BaseObject": "impedit",
+						"ObjectType": "ResourceType",
+						"Id": 0,
+						"Description": "cumque",
+						"Name": "distinctio",
+						"Tags": [
+							{
+								"BaseObject": "minima",
+								"AttributeId": 2,
+								"ObjectType": "Attribute",
+								"Id": 0,
+								"Description": "voluptates",
+								"Name": "Capacity"
+							}
+						]
+					},
+					"ResourceSubtype": {
+						"Id": 29
+					},
+					"ObjectType": "VirtualResource",
+					"Id": 0,
+					"Description": "perferendis",
+					"Name": "repudiandae",
+					"DisplayName": "possimus"
+				}
+			],
+			"Resources": [
+				{
+					"Id": 6
+				}
+			],
+			"Completed": false,
+			"Cancelled": true,
+			"ObjectType": "TaskDay",
+			"Id": 0,
+			"Description": "debitis",
+			"Name": "perspiciatis",
+			"CurrentLifespan": {
+				"Start": "2018-01-14T08:00:00",
+				"End": "2018-12-14T08:00:00"
+			},
+			"Tags": [
+				{
+					"BaseObject": "veritatis",
+					"AttributeId": 2,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Description": "beatae",
+					"Name": "Capacity"
+				}
+			],
+			"ResourceIds": [
+				973
+			],
+			"DisplayName": "recusandae"
+		}
+	],
+	"Crew": {
+		"Id": 0
+	},
+	"CurrentLifespan": {
+		"Start": "2018-01-14T08:00:00",
+		"End": "2018-12-14T08:00:00"
+	},
+	"ObjectType": "Allocation",
+	"Id": 0,
+	"Description": "eveniet",
+	"Name": "quibusdam",
+	"Tags": [
+		{
+			"BaseObject": "magnam",
+			"AttributeId": 2,
+			"ObjectType": "Attribute",
+			"Id": 0,
+			"Description": "repellendus",
+			"Name": "Capacity"
+		}
+	],
+	"__typename": "CxAllocation"
+}
