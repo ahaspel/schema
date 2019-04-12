@@ -7,9 +7,9 @@
 	},
 	"TaskDays": [
 		{
-			"ParentId": 282,
-			"Virtual": true,
-			"ShiftSupervisor": true,
+			"ParentId": 761,
+			"Virtual": false,
+			"ShiftSupervisor": false,
 			"Status": {
 				"Id": 0
 			},
@@ -18,25 +18,25 @@
 					"Id": 2
 				},
 				"ResourceType": {
-					"Family": "Group",
+					"Family": "Labor",
 					"ResourceSubtypes": [
 						{
 							"Id": 29
 						}
 					],
 					"MoveVehicle": true,
-					"BaseObject": "voluptatibus",
+					"BaseObject": "officiis",
 					"ObjectType": "ResourceType",
 					"Id": 0,
-					"Description": "consequatur",
-					"Name": "explicabo",
+					"Description": "placeat",
+					"Name": "dolores",
 					"Tags": [
 						{
-							"BaseObject": "deleniti",
+							"BaseObject": "veniam",
 							"AttributeId": 2,
 							"ObjectType": "Attribute",
 							"Id": 0,
-							"Description": "facilis",
+							"Description": "voluptatem",
 							"Name": "Capacity"
 						}
 					]
@@ -46,36 +46,36 @@
 				},
 				"ObjectType": "VirtualResource",
 				"Id": 0,
-				"Description": "perferendis",
-				"Name": "consequatur",
-				"DisplayName": "numquam"
+				"Description": "assumenda",
+				"Name": "dolorem",
+				"DisplayName": "repudiandae"
 			},
 			"Quantity": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 100
+				"Quantity": 508
 			},
 			"ResourceType": {
-				"Family": "Labor",
+				"Family": "Material",
 				"ResourceSubtypes": [
 					{
 						"Id": 29
 					}
 				],
 				"MoveVehicle": false,
-				"BaseObject": "consequatur",
+				"BaseObject": "consectetur",
 				"ObjectType": "ResourceType",
 				"Id": 0,
-				"Description": "beatae",
-				"Name": "quibusdam",
+				"Description": "laborum",
+				"Name": "possimus",
 				"Tags": [
 					{
-						"BaseObject": "perspiciatis",
+						"BaseObject": "dolore",
 						"AttributeId": 2,
 						"ObjectType": "Attribute",
 						"Id": 0,
-						"Description": "voluptatibus",
+						"Description": "consectetur",
 						"Name": "Capacity"
 					}
 				]
@@ -94,25 +94,25 @@
 			},
 			"Location": {
 				"Address": {
-					"Street": "atque",
-					"StreetDetails": "maxime",
+					"Street": "provident",
+					"StreetDetails": "perspiciatis",
 					"State": {
 						"Id": 1
 					},
-					"City": "quis",
-					"ZipCode": "consequuntur",
+					"City": "minima",
+					"ZipCode": "officiis",
 					"Geocode": {
-						"Lat": -22.3294,
-						"Lng": -132.3147,
+						"Lat": 55.7666,
+						"Lng": -70.1146,
 						"Source": "Action"
 					},
 					"Id": 0,
 					"ObjectType": "Address"
 				},
-				"Name": "dolorum",
-				"Description": "cupiditate"
+				"Name": "accusamus",
+				"Description": "tenetur"
 			},
-			"ActionType": "Move",
+			"ActionType": "Equipment",
 			"VirtualResources": [
 				{
 					"Owner": {
@@ -125,19 +125,19 @@
 								"Id": 29
 							}
 						],
-						"MoveVehicle": false,
-						"BaseObject": "impedit",
+						"MoveVehicle": true,
+						"BaseObject": "voluptatibus",
 						"ObjectType": "ResourceType",
 						"Id": 0,
-						"Description": "cumque",
-						"Name": "distinctio",
+						"Description": "voluptas",
+						"Name": "repudiandae",
 						"Tags": [
 							{
-								"BaseObject": "minima",
+								"BaseObject": "explicabo",
 								"AttributeId": 2,
 								"ObjectType": "Attribute",
 								"Id": 0,
-								"Description": "voluptates",
+								"Description": "veniam",
 								"Name": "Capacity"
 							}
 						]
@@ -147,9 +147,9 @@
 					},
 					"ObjectType": "VirtualResource",
 					"Id": 0,
-					"Description": "perferendis",
-					"Name": "repudiandae",
-					"DisplayName": "possimus"
+					"Description": "perspiciatis",
+					"Name": "deleniti",
+					"DisplayName": "dolorem"
 				}
 			],
 			"Resources": [
@@ -157,30 +157,30 @@
 					"Id": 6
 				}
 			],
-			"Completed": false,
+			"Completed": true,
 			"Cancelled": true,
 			"ObjectType": "TaskDay",
 			"Id": 0,
-			"Description": "debitis",
-			"Name": "perspiciatis",
+			"Description": "repudiandae",
+			"Name": "debitis",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T08:00:00",
 				"End": "2018-12-14T08:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "veritatis",
+					"BaseObject": "officia",
 					"AttributeId": 2,
 					"ObjectType": "Attribute",
 					"Id": 0,
-					"Description": "beatae",
+					"Description": "tempore",
 					"Name": "Capacity"
 				}
 			],
 			"ResourceIds": [
-				973
+				890
 			],
-			"DisplayName": "recusandae"
+			"DisplayName": "laudantium"
 		}
 	],
 	"Crew": {
@@ -192,15 +192,15 @@
 	},
 	"ObjectType": "Allocation",
 	"Id": 0,
-	"Description": "eveniet",
-	"Name": "quibusdam",
+	"Description": "expedita",
+	"Name": "voluptatem",
 	"Tags": [
 		{
-			"BaseObject": "magnam",
+			"BaseObject": "praesentium",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "repellendus",
+			"Description": "voluptatibus",
 			"Name": "Capacity"
 		}
 	],

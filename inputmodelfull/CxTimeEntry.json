@@ -1,8 +1,8 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 673,
-	"Minutes": 58,
-	"Name": "aliquam",
+	"Hours": 338,
+	"Minutes": 90,
+	"Name": "incidunt",
 	"Resource": {
 		"Id": 6
 	},
@@ -22,16 +22,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 13
+					"Quantity": 799
 				},
-				"Notes": "voluptatibus"
+				"Notes": "consequuntur"
 			},
-			"Global": true,
-			"BaseObject": "quisquam",
+			"Global": false,
+			"BaseObject": "perspiciatis",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "aliquam",
-			"Name": "accusamus"
+			"Description": "doloribus",
+			"Name": "molestiae"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,32 +45,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": -57.6252,
-		"Lng": 11.1609,
-		"Source": "GPSService"
+		"Lat": -15.4122,
+		"Lng": 161.3527,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -87.7328,
-		"Lng": -115.8672,
-		"Source": "Owner"
+		"Lat": 84.7204,
+		"Lng": -138.129,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 434
+		"Quantity": 287
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 969
+		"Quantity": 6
 	},
 	"Approvals": [
 		{
@@ -91,14 +91,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "occaecati",
+	"Description": "voluptatem",
 	"Tags": [
 		{
-			"BaseObject": "repellendus",
+			"BaseObject": "blanditiis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "consequuntur",
+			"Description": "molestiae",
 			"Name": "Capacity"
 		}
 	],
