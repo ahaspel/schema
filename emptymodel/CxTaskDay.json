@@ -1,24 +1,12 @@
 {
 	"ParentId": 0,
 	"ShiftSupervisor": false,
-	"JobCost": {
-		"Id": 0
-	},
 	"JobActivity": {
 		"Id": 0
 	},
 	"ObjectType": "TaskDay",
-	"Resource": {
-		"Owner": {
-			"Id": 0
-		},
-		"ResourceSubtype": {
-			"Id": 0
-		},
-		"ObjectType": "VirtualResource",
-		"Id": 0,
-		"DisplayName": ""
-	},
+	"Resources": [],
+	"VirtualResources": [],
 	"Quantity": {
 		"Unit": {
 			"Id": 0
@@ -26,11 +14,9 @@
 		"Quantity": 0
 	},
 	"Virtual": false,
-	"Status": {
+	"ActionStatus": {
 		"Id": 0
 	},
-	"Resources": [],
-	"VirtualResources": [],
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",

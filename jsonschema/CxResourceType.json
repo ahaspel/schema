@@ -35,8 +35,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -85,8 +85,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -108,8 +108,8 @@
 				}
 			},
 			"required": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			]
 		}
 	},
@@ -132,8 +132,7 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxResourceSubtype"
-			},
-			"minLength": 1
+			}
 		},
 		"MoveVehicle": {
 			"type": "boolean"
@@ -151,12 +150,6 @@
 		"Id": {
 			"type": "integer"
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
 		"Description": {
 			"type": "string"
 		},
@@ -168,9 +161,9 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id",
 		"Family",
+		"Id",
+		"Name",
 		"ResourceSubtypes"
 	]
 }

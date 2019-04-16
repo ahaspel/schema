@@ -35,8 +35,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -126,8 +126,7 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxShiftDay"
-			},
-			"minLength": 1
+			}
 		},
 		"Default": {
 			"type": "boolean"
@@ -161,8 +160,8 @@
 		}
 	},
 	"required": [
-		"Name",
 		"Id",
-		"Days"
+		"Days",
+		"Name"
 	]
 }

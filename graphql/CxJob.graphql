@@ -15,7 +15,7 @@ type CxJob {
   JobActivities: [IxJobActivity]
   Owner: IxParty
   Manager: IxParty
-  Status: IxLookupValue
+  JobStatus: IxLookupValue
   StatusDue: String
   ForeColor: String
   BackColor: String
@@ -48,7 +48,7 @@ input CxJobInput {
   JobActivities: [IxJobActivityInput]!
   Owner: IxPartyDO!
   Manager: IxPartyDO!
-  Status: IxLookupValueDO!
+  JobStatus: IxLookupValueDO!
   StatusDue: String
   ForeColor: String
   BackColor: String

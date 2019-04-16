@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -176,18 +176,19 @@
 		},
 		"IxEmployee": {
 			"superRequired": [
-				"LastName",
-				"FirstName",
-				"Owner",
-				"ResourceType",
-				"ResourceSubtype",
 				"CurrentLifespan",
-				"Id"
+				"FirstName",
+				"Id",
+				"LastName",
+				"Owner",
+				"Person",
+				"ResourceSubtype",
+				"ResourceType"
 			],
 			"type": "object",
 			"properties": {
-				"PartyId": {
-					"type": "integer"
+				"Person": {
+					"$ref": "#/definitions/IxParty"
 				},
 				"PhoneNumbers": {
 					"type": "array",
@@ -385,8 +386,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -450,8 +451,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -565,8 +566,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -592,9 +593,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -713,12 +714,13 @@
 		}
 	},
 	"immutable": [
-		"Dto",
-		"DisplayName",
-		"Returned",
-		"Location",
 		"Address",
-		"InCrew"
+		"DisplayName",
+		"Dto",
+		"InCrew",
+		"Location",
+		"ResourceType",
+		"Returned"
 	],
 	"type": "object",
 	"properties": {
@@ -827,13 +829,12 @@
 		}
 	},
 	"required": [
-		"Model",
-		"Make",
-		"Owner",
-		"ResourceType",
-		"ResourceSubtype",
-		"Id",
+		"AccountCode",
 		"CurrentLifespan",
-		"AccountCode"
+		"Id",
+		"Make",
+		"Model",
+		"Owner",
+		"ResourceSubtype"
 	]
 }

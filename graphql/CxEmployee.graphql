@@ -5,7 +5,7 @@ type CxEmployee {
   MiddleName: String
   PreviousExperience: IxQuantity
   IsMover: Boolean
-  PartyId: Int
+  Person: IxParty
   Address: IxAddress
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
@@ -44,6 +44,7 @@ input CxEmployeeInput {
   MiddleName: String
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
+  Person: IxPartyInput!
   Address: IxAddressInput
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]

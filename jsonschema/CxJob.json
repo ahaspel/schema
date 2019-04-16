@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -150,8 +150,8 @@
 		},
 		"IxCostCode": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"UnitCost"
 			],
 			"type": "object",
@@ -183,16 +183,16 @@
 				}
 			},
 			"required": [
-				"Name",
 				"Id",
+				"Name",
 				"UnitCost"
 			]
 		},
 		"IxDocument": {
 			"superRequired": [
-				"Name",
+				"FilePath",
 				"Id",
-				"FilePath"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -224,9 +224,9 @@
 				}
 			},
 			"required": [
-				"Name",
 				"Id",
-				"FilePath"
+				"FilePath",
+				"Name"
 			]
 		},
 		"IxEmail": {
@@ -276,8 +276,8 @@
 		},
 		"IxJobActivity": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -323,8 +323,8 @@
 				}
 			},
 			"required": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			]
 		},
 		"IxJobCost": {
@@ -374,8 +374,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -439,8 +439,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -604,8 +604,8 @@
 		}
 	},
 	"immutable": [
-		"Dto",
 		"DisplayName",
+		"Dto",
 		"HasAttachments",
 		"TotalHours"
 	],
@@ -624,15 +624,13 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxLookupValue"
-			},
-			"minLength": 1
+			}
 		},
 		"Subtypes": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxLookupValue"
-			},
-			"minLength": 1
+			}
 		},
 		"Certifications": {
 			"type": "array",
@@ -670,8 +668,7 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxJobActivity"
-			},
-			"minLength": 1
+			}
 		},
 		"Owner": {
 			"$ref": "#/definitions/IxParty"
@@ -679,7 +676,7 @@
 		"Manager": {
 			"$ref": "#/definitions/IxParty"
 		},
-		"Status": {
+		"JobStatus": {
 			"$ref": "#/definitions/IxLookupValue"
 		},
 		"StatusDue": {
@@ -742,18 +739,18 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id",
 		"AccountCode",
-		"CurrentLifespan",
-		"Manager",
-		"Owner",
-		"JobActivities",
 		"Address",
-		"Types",
+		"CurrentLifespan",
+		"Id",
+		"JobActivities",
+		"JobStatus",
+		"Manager",
+		"Name",
+		"Owner",
+		"Priority",
 		"Subtypes",
-		"Status",
-		"Priority"
+		"Types"
 	],
 	"fullInput": [
 		"Contacts"

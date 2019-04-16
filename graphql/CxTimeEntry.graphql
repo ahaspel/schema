@@ -2,7 +2,6 @@ type CxTimeEntry {
   ObjectType: CxTimeEntryObjectType
   Hours: Float
   Minutes: Int
-  Name: String
   Resource: IxResource
   EntryType: IxLookupValue
   LaborClassification: IxLookupValue
@@ -32,7 +31,6 @@ input CxTimeEntryInput {
   ObjectType: CxTimeEntryObjectType
   Hours: Float
   Minutes: Int
-  Name: String
   Resource: IxResourceDO!
   EntryType: IxLookupValueDO
   LaborClassification: IxLookupValueDO

@@ -35,8 +35,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -102,12 +102,6 @@
 		"Id": {
 			"type": "integer"
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
 		"Description": {
 			"type": "string"
 		},
@@ -119,7 +113,7 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id"
+		"Id",
+		"Name"
 	]
 }

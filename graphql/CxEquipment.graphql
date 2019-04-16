@@ -44,7 +44,6 @@ input CxEquipmentInput {
   ObjectType: CxEquipmentObjectType
   Temporary: Boolean
   Owner: IxCompanyDO!
-  ResourceType: IxResourceTypeDO!
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCost: IxUnitCostInput
   ForeColor: String
@@ -136,7 +135,7 @@ type IxEmail {
 }
 
 type IxEmployee {
-  PartyId: Int
+  Person: IxParty
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   FirstName: String
@@ -318,10 +317,6 @@ type IxResourceType {
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
 }
 
 enum IxResourceTypeFamily {

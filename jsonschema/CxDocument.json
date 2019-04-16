@@ -35,8 +35,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -85,8 +85,8 @@
 		}
 	},
 	"immutable": [
-		"Dto",
-		"Attached"
+		"Attached",
+		"Dto"
 	],
 	"type": "object",
 	"properties": {
@@ -130,8 +130,8 @@
 		}
 	},
 	"required": [
-		"Name",
+		"FilePath",
 		"Id",
-		"FilePath"
+		"Name"
 	]
 }

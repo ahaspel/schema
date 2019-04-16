@@ -97,9 +97,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -167,8 +167,8 @@
 		},
 		"IxCostCode": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"UnitCost"
 			],
 			"type": "object",
@@ -250,8 +250,8 @@
 		},
 		"IxJobActivity": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -301,8 +301,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -366,8 +366,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -549,8 +549,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -576,9 +576,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -696,6 +696,12 @@
 			]
 		}
 	},
+	"immutable": [
+		"DisplayName",
+		"Dto",
+		"HasAttachments",
+		"TotalHours"
+	],
 	"type": "object",
 	"properties": {
 		"ObjectType": {
@@ -709,9 +715,6 @@
 		},
 		"Minutes": {
 			"type": "integer"
-		},
-		"Name": {
-			"type": "string"
 		},
 		"Resource": {
 			"$ref": "#/definitions/IxResource"
@@ -806,10 +809,10 @@
 		}
 	},
 	"required": [
-		"Resource",
+		"CurrentLifespan",
+		"Id",
 		"JobActivity",
 		"Owner",
-		"CurrentLifespan",
-		"Id"
+		"Resource"
 	]
 }

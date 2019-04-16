@@ -122,9 +122,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -191,8 +191,8 @@
 		},
 		"IxCostCode": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"UnitCost"
 			],
 			"type": "object",
@@ -228,9 +228,9 @@
 		},
 		"IxDocument": {
 			"superRequired": [
-				"Name",
+				"FilePath",
 				"Id",
-				"FilePath"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -311,18 +311,18 @@
 		},
 		"IxJob": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"AccountCode",
-				"CurrentLifespan",
-				"Manager",
-				"Owner",
-				"JobActivities",
 				"Address",
-				"Types",
+				"CurrentLifespan",
+				"Id",
+				"JobActivities",
+				"JobStatus",
+				"Manager",
+				"Name",
+				"Owner",
+				"Priority",
 				"Subtypes",
-				"Status",
-				"Priority"
+				"Types"
 			],
 			"type": "object",
 			"properties": {
@@ -347,7 +347,7 @@
 						"$ref": "#/definitions/IxJobActivity"
 					}
 				},
-				"Status": {
+				"JobStatus": {
 					"$ref": "#/definitions/IxLookupValue"
 				},
 				"StatusDue": {
@@ -454,8 +454,8 @@
 		},
 		"IxJobActivity": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -565,8 +565,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -630,8 +630,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -813,8 +813,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -840,9 +840,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -988,9 +988,6 @@
 			]
 		},
 		"IxVirtualResource": {
-			"immutable": [
-				"ResourceType"
-			],
 			"type": "object",
 			"properties": {
 				"Owner": {
@@ -1005,27 +1002,41 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"VirtualResource"
+						"VirtualResource",
+						"Crew",
+						"Employee",
+						"Equipment",
+						"Material"
 					]
 				},
 				"Id": {
 					"type": "integer"
 				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
 				"DisplayName": {
 					"type": "string"
 				}
-			}
+			},
+			"required": [
+				"Owner",
+				"ResourceSubtype"
+			]
 		}
 	},
 	"immutable": [
-		"Dto",
-		"DisplayName",
-		"Job",
-		"Divisions",
 		"ActionType",
-		"Filled",
-		"Completed",
 		"Cancelled",
+		"Completed",
+		"DisplayName",
+		"Divisions",
+		"Dto",
+		"Filled",
+		"Job",
 		"Location"
 	],
 	"type": "object",
@@ -1054,9 +1065,6 @@
 		"ShiftSupervisor": {
 			"type": "boolean"
 		},
-		"JobCost": {
-			"$ref": "#/definitions/IxJobCost"
-		},
 		"Job": {
 			"$ref": "#/definitions/IxJob"
 		},
@@ -1075,8 +1083,17 @@
 				"$ref": "#/definitions/IxLookupValue"
 			}
 		},
-		"Resource": {
-			"$ref": "#/definitions/IxVirtualResource"
+		"Resources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
+		},
+		"VirtualResources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxVirtualResource"
+			}
 		},
 		"Quantity": {
 			"$ref": "#/definitions/IxQuantity"
@@ -1093,20 +1110,8 @@
 		"Cancelled": {
 			"type": "boolean"
 		},
-		"Status": {
+		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
-		},
-		"Resources": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxResource"
-			}
-		},
-		"VirtualResources": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxVirtualResource"
-			}
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
@@ -1125,10 +1130,10 @@
 		}
 	},
 	"required": [
-		"Resource",
-		"JobActivity",
 		"CurrentLifespan",
 		"Id",
-		"ParentId"
+		"JobActivity",
+		"ParentId",
+		"Resources"
 	]
 }

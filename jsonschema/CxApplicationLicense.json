@@ -35,8 +35,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -84,11 +84,6 @@
 			]
 		}
 	},
-	"immutable": [
-		"Dto",
-		"Valid",
-		"ErrorMessage"
-	],
 	"type": "object",
 	"properties": {
 		"Id": {
@@ -131,6 +126,18 @@
 				"ApplicationLicense"
 			]
 		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string"
+		},
 		"Tags": {
 			"type": "array",
 			"items": {
@@ -139,10 +146,10 @@
 		}
 	},
 	"required": [
-		"Id",
-		"Expiration",
 		"AllowedUsers",
 		"AllowedWebUsers",
+		"Expiration",
+		"Id",
 		"SerialNumber"
 	]
 }

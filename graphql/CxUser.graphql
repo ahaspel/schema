@@ -1,7 +1,8 @@
 type CxUser {
-  Person: IxParty
+  Party: IxParty
   Username: String
   Password: String
+  CognitoId: String
   Level: IxLevel
   WebPrivileges: [IxLookupValue]
   Privileges: [IxLookupValue]
@@ -10,22 +11,23 @@ type CxUser {
   WebLevel: CxUserWebLevel
   Description: String
   ObjectType: CxUserObjectType
-  Id: ID
+  Id: ID!
   Divisions: [IxLookupValue]
   Tags: [IxAttribute__String__]
 }
 
 input CxUserInput {
-  Person: IxPartyDO
-  Username: String
-  Password: String
-  Level: IxLevelDO
+  Party: IxPartyDO!
+  Username: String!
+  Password: String!
+  CognitoId: String!
+  Level: IxLevelDO!
   WebPrivileges: [IxLookupValueDO]
   Privileges: [IxLookupValueDO]
   WebLevel: CxUserWebLevel
   Description: String
   ObjectType: CxUserObjectType
-  Id: ID
+  Id: ID!
   Divisions: [IxLookupValueDO]
   Tags: [IxAttribute__String__Input]
 }

@@ -126,8 +126,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -176,8 +176,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -223,8 +223,8 @@
 				}
 			},
 			"required": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			]
 		},
 		"IxPhoneNumber": {
@@ -254,8 +254,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -397,8 +397,8 @@
 		}
 	},
 	"required": [
-		"Name",
+		"CompanyType",
 		"Id",
-		"CompanyType"
+		"Name"
 	]
 }

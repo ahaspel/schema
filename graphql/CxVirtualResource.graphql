@@ -2,16 +2,24 @@ type CxVirtualResource {
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   ObjectType: CxVirtualResourceObjectType
+  Divisions: [IxLookupValue]
   Owner: IxCompany
+  Location: IxLocation
   DisplayName: String
-  Id: ID!
+  Id: ID
+  Description: String
+  Tags: [IxAttribute__String__]
 }
 
 input CxVirtualResourceInput {
   ResourceSubtype: IxResourceSubtypeDO!
   ObjectType: CxVirtualResourceObjectType
+  Divisions: [IxLookupValueDO]
   Owner: IxCompanyDO!
-  Id: ID!
+  Location: IxLocationInput
+  Id: ID
+  Description: String
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxVirtualResourceObjectType {
@@ -34,6 +42,17 @@ type IxAddress {
   ObjectType: IxAddressObjectType
 }
 
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
 enum IxAddressObjectType {
   Address
 }
@@ -41,6 +60,15 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Description: String
@@ -89,10 +117,28 @@ type IxGeocode {
   Source: IxGeocodeSource
 }
 
+input IxGeocodeInput {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
 enum IxGeocodeSource {
   Action
   Owner
   GPSService
+}
+
+type IxLocation {
+  Address: IxAddress
+  Name: String
+  Description: String
+}
+
+input IxLocationInput {
+  Address: IxAddressInput!
+  Name: String
+  Description: String
 }
 
 type IxLookupValue {
@@ -101,6 +147,10 @@ type IxLookupValue {
   Id: ID!
   Description: String
   Name: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {

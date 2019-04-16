@@ -1,65 +1,39 @@
 {
-	"ParentId": 608,
-	"ShiftSupervisor": true,
-	"JobCost": {
-		"Id": 0
-	},
+	"ParentId": 230,
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
 	"ObjectType": "TaskDay",
-	"Resource": {
-		"Owner": {
-			"Id": 2
-		},
-		"ResourceSubtype": {
-			"Id": 29
-		},
-		"ObjectType": "VirtualResource",
-		"Id": 0,
-		"DisplayName": "pariatur"
-	},
-	"Quantity": {
-		"Unit": {
-			"Id": 1
-		},
-		"Quantity": 823
-	},
-	"Virtual": false,
-	"Status": {
-		"Id": 0
-	},
 	"Resources": [
 		{
 			"Id": 6
 		}
 	],
-	"VirtualResources": [
-		{
-			"Owner": {
-				"Id": 2
-			},
-			"ResourceSubtype": {
-				"Id": 29
-			},
-			"ObjectType": "VirtualResource",
-			"Id": 0,
-			"DisplayName": "officia"
-		}
-	],
+	"VirtualResources": [],
+	"Quantity": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 356
+	},
+	"Virtual": true,
+	"ActionStatus": {
+		"Id": 1
+	},
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "similique",
+	"Description": "reiciendis",
 	"Tags": [
 		{
-			"BaseObject": "veritatis",
+			"BaseObject": "deserunt",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "corrupti",
+			"Description": "consequatur",
 			"Name": "Capacity"
 		}
 	],

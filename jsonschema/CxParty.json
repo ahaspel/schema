@@ -126,8 +126,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -253,7 +253,7 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id"
+		"Id",
+		"Name"
 	]
 }

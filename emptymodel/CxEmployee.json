@@ -10,6 +10,31 @@
 		"Quantity": 0
 	},
 	"IsMover": false,
+	"Person": {
+		"Emails": [],
+		"PhoneNumbers": [],
+		"ObjectType": "Party",
+		"Id": 0,
+		"Description": "",
+		"Name": "",
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "Action"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		},
+		"Tags": []
+	},
 	"Address": {
 		"Street": "",
 		"StreetDetails": "",
@@ -21,7 +46,7 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
 		"Id": 0,
 		"ObjectType": "Address"

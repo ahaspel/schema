@@ -3,9 +3,45 @@
 		"Id": 29
 	},
 	"ObjectType": "VirtualResource",
+	"Divisions": [
+		{
+			"Id": 1
+		}
+	],
 	"Owner": {
 		"Id": 2
 	},
+	"Location": {
+		"Address": {
+			"Street": "et",
+			"StreetDetails": "molestias",
+			"State": {
+				"Id": 1
+			},
+			"City": "itaque",
+			"ZipCode": "officia",
+			"Geocode": {
+				"Lat": 2.8631,
+				"Lng": -127.394,
+				"Source": "GPSService"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		},
+		"Name": "perferendis",
+		"Description": "laudantium"
+	},
 	"Id": 0,
+	"Description": "veniam",
+	"Tags": [
+		{
+			"BaseObject": "inventore",
+			"AttributeId": 2,
+			"ObjectType": "Attribute",
+			"Id": 0,
+			"Description": "consequuntur",
+			"Name": "Capacity"
+		}
+	],
 	"__typename": "CxVirtualResource"
 }

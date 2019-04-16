@@ -149,8 +149,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -199,8 +199,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -275,13 +275,13 @@
 		}
 	},
 	"immutable": [
-		"Dto",
 		"Administrator",
+		"Dto",
 		"ReadOnly"
 	],
 	"type": "object",
 	"properties": {
-		"Person": {
+		"Party": {
 			"$ref": "#/definitions/IxParty"
 		},
 		"Username": {
@@ -291,6 +291,10 @@
 		"Password": {
 			"type": "string",
 			"minLength": 3
+		},
+		"CognitoId": {
+			"type": "string",
+			"minLength": 10
 		},
 		"Level": {
 			"$ref": "#/definitions/IxLevel"
@@ -345,5 +349,13 @@
 				"$ref": "#/definitions/IxAttribute__String__"
 			}
 		}
-	}
+	},
+	"required": [
+		"CognitoId",
+		"Id",
+		"Level",
+		"Party",
+		"Password",
+		"Username"
+	]
 }

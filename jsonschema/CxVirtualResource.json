@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -212,8 +212,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -262,8 +262,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -338,8 +338,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -365,9 +365,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -423,8 +423,8 @@
 		}
 	},
 	"immutable": [
-		"Dto",
 		"DisplayName",
+		"Dto",
 		"ResourceType"
 	],
 	"type": "object",
@@ -441,19 +441,36 @@
 				"VirtualResource"
 			]
 		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
 		"Owner": {
 			"$ref": "#/definitions/IxCompany"
+		},
+		"Location": {
+			"$ref": "#/definitions/IxLocation"
 		},
 		"DisplayName": {
 			"type": "string"
 		},
 		"Id": {
 			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
 		}
 	},
 	"required": [
-		"Id",
-		"ResourceSubtype",
-		"Owner"
+		"Owner",
+		"ResourceSubtype"
 	]
 }

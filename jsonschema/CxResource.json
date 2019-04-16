@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -213,8 +213,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -278,8 +278,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -378,8 +378,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -405,9 +405,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -528,8 +528,8 @@
 		}
 	},
 	"immutable": [
-		"Dto",
-		"DisplayName"
+		"DisplayName",
+		"Dto"
 	],
 	"type": "object",
 	"properties": {
@@ -605,7 +605,7 @@
 	},
 	"required": [
 		"Id",
-		"ResourceType",
-		"ResourceSubtype"
+		"ResourceSubtype",
+		"ResourceType"
 	]
 }

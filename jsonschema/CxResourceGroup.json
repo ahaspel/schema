@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -212,8 +212,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -277,8 +277,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -482,8 +482,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -509,9 +509,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -630,11 +630,11 @@
 		}
 	},
 	"immutable": [
-		"Dto",
-		"Count",
 		"Address",
-		"Location",
-		"CurrentLifespan"
+		"Count",
+		"CurrentLifespan",
+		"Dto",
+		"Location"
 	],
 	"type": "object",
 	"properties": {
@@ -658,8 +658,7 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxResourceBlock"
-			},
-			"minLength": 1
+			}
 		},
 		"ObjectType": {
 			"type": "string",
@@ -714,9 +713,9 @@
 		}
 	},
 	"required": [
-		"Name",
-		"Id",
 		"Contact",
+		"Id",
+		"Name",
 		"ResourceBlocks"
 	]
 }

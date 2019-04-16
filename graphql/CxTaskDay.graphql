@@ -3,20 +3,18 @@ type CxTaskDay {
   ActionType: CxTaskDayActionType
   Location: IxLocation
   ShiftSupervisor: Boolean
-  JobCost: IxJobCost
   Job: IxJob
   JobActivity: IxJobActivity
   ObjectType: CxTaskDayObjectType
   Divisions: [IxLookupValue]
-  Resource: IxVirtualResource
+  Resources: [IxResource]
+  VirtualResources: [IxVirtualResource]
   Quantity: IxQuantity
   Virtual: Boolean
   DisplayName: String
   Completed: Boolean
   Cancelled: Boolean
-  Status: IxActionStatus
-  Resources: [IxResource]
-  VirtualResources: [IxVirtualResource]
+  ActionStatus: IxActionStatus
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -39,15 +37,13 @@ enum CxTaskDayActionType {
 input CxTaskDayInput {
   ParentId: Int!
   ShiftSupervisor: Boolean
-  JobCost: IxJobCostDO
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
-  Resource: IxVirtualResourceInput!
+  Resources: [IxResourceDO]!
+  VirtualResources: [IxVirtualResourceInput]
   Quantity: IxQuantityInput
   Virtual: Boolean
-  Status: IxActionStatusDO
-  Resources: [IxResourceDO]
-  VirtualResources: [IxVirtualResourceInput]
+  ActionStatus: IxActionStatusDO
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
@@ -199,7 +195,7 @@ type IxJob {
   Certifications: [IxLookupValue]
   Notes: String
   JobActivities: [IxJobActivity]
-  Status: IxLookupValue
+  JobStatus: IxLookupValue
   StatusDue: String
   Types: [IxLookupValue]
   Subtypes: [IxLookupValue]
@@ -258,10 +254,6 @@ type IxJobCost {
   Id: ID!
   Description: String
   Name: String
-}
-
-input IxJobCostDO {
-  Id: ID!
 }
 
 enum IxJobCostObjectType {
@@ -425,6 +417,18 @@ enum IxResourceTypeFamily {
   Group
 }
 
+input IxResourceTypeInput {
+  Family: IxResourceTypeFamily!
+  ResourceSubtypes: [IxResourceSubtypeDO]!
+  MoveVehicle: Boolean
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Description: String
+  Name: String!
+  Tags: [IxAttribute__String__Input]
+}
+
 enum IxResourceTypeObjectType {
   ResourceType
 }
@@ -482,19 +486,28 @@ type IxVirtualResource {
   ResourceSubtype: IxResourceSubtype
   ObjectType: IxVirtualResourceObjectType
   Id: ID
+  Description: String
+  Name: String
   DisplayName: String
 }
 
 input IxVirtualResourceInput {
-  Owner: IxCompanyDO
-  ResourceSubtype: IxResourceSubtypeDO
+  Owner: IxCompanyDO!
+  ResourceType: IxResourceTypeInput
+  ResourceSubtype: IxResourceSubtypeDO!
   ObjectType: IxVirtualResourceObjectType
   Id: ID
+  Description: String
+  Name: String
   DisplayName: String
 }
 
 enum IxVirtualResourceObjectType {
   VirtualResource
+  Crew
+  Employee
+  Equipment
+  Material
 }
 
 extend type Mutation {

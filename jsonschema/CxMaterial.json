@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -247,8 +247,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -312,8 +312,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -430,8 +430,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -457,9 +457,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -578,10 +578,12 @@
 		}
 	},
 	"immutable": [
-		"Dto",
-		"DisplayName",
-		"Quantity",
-		"QuantityRemaining"
+		"Address",
+		"InCrew",
+		"Location",
+		"Name",
+		"Temporary",
+		"UnitCost"
 	],
 	"type": "object",
 	"properties": {
@@ -590,6 +592,9 @@
 			"enum": [
 				"Material"
 			]
+		},
+		"Temporary": {
+			"type": "boolean"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
@@ -618,6 +623,12 @@
 		"ResourceSubtype": {
 			"$ref": "#/definitions/IxResourceSubtype"
 		},
+		"UnitCost": {
+			"$ref": "#/definitions/IxUnitCost"
+		},
+		"InCrew": {
+			"type": "boolean"
+		},
 		"ForeColor": {
 			"type": "string"
 		},
@@ -642,6 +653,9 @@
 		"Description": {
 			"type": "string"
 		},
+		"Name": {
+			"type": "string"
+		},
 		"Tags": {
 			"type": "array",
 			"items": {
@@ -650,11 +664,11 @@
 		}
 	},
 	"required": [
+		"Id",
 		"Inventory",
-		"Unit",
-		"Reusable",
-		"ResourceType",
 		"ResourceSubtype",
-		"Id"
+		"ResourceType",
+		"Reusable",
+		"Unit"
 	]
 }

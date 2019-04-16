@@ -81,9 +81,9 @@
 		},
 		"IxCompany": {
 			"superRequired": [
-				"Name",
+				"CompanyType",
 				"Id",
-				"CompanyType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -212,8 +212,8 @@
 		},
 		"IxLookupValue": {
 			"superRequired": [
-				"Name",
 				"Id",
+				"Name",
 				"ObjectType"
 			],
 			"type": "object",
@@ -277,8 +277,8 @@
 		},
 		"IxParty": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -324,8 +324,8 @@
 				}
 			},
 			"required": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			]
 		},
 		"IxPhoneNumber": {
@@ -394,8 +394,8 @@
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
-				"Name",
-				"Id"
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -421,9 +421,9 @@
 		},
 		"IxResourceType": {
 			"superRequired": [
-				"Name",
-				"Id",
 				"Family",
+				"Id",
+				"Name",
 				"ResourceSubtypes"
 			],
 			"type": "object",
@@ -542,11 +542,10 @@
 		}
 	},
 	"immutable": [
-		"Dto",
 		"DisplayName",
+		"Dto",
 		"InCrew",
-		"Location",
-		"PartyId"
+		"Location"
 	],
 	"type": "object",
 	"properties": {
@@ -571,8 +570,8 @@
 		"IsMover": {
 			"type": "boolean"
 		},
-		"PartyId": {
-			"type": "integer"
+		"Person": {
+			"$ref": "#/definitions/IxParty"
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
@@ -705,12 +704,13 @@
 		}
 	},
 	"required": [
-		"LastName",
-		"FirstName",
-		"Owner",
-		"ResourceType",
-		"ResourceSubtype",
 		"CurrentLifespan",
-		"Id"
+		"FirstName",
+		"Id",
+		"LastName",
+		"Owner",
+		"Person",
+		"ResourceSubtype",
+		"ResourceType"
 	]
 }
