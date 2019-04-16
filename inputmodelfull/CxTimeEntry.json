@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 930,
-	"Minutes": 926,
+	"Hours": 438,
+	"Minutes": 235,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 774
+					"Quantity": 941
 				},
-				"Notes": "consequuntur"
+				"Notes": "occaecati"
 			},
 			"Global": true,
-			"BaseObject": "consequatur",
+			"BaseObject": "quisquam",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "mollitia",
-			"Name": "tenetur"
+			"Description": "consequuntur",
+			"Name": "architecto"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,32 +44,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": -89.8913,
-		"Lng": 90.1955,
-		"Source": "Owner"
+		"Lat": 31.4631,
+		"Lng": -62.9267,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 52.8202,
-		"Lng": -96.1076,
-		"Source": "Action"
+		"Lat": -58.5905,
+		"Lng": 108.1159,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 142
+		"Quantity": 721
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 489
+		"Quantity": 267
 	},
 	"Approvals": [
 		{
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "expedita",
+	"Description": "doloremque",
 	"Tags": [
 		{
-			"BaseObject": "laboriosam",
+			"BaseObject": "voluptas",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "voluptatem",
+			"Description": "repellendus",
 			"Name": "Capacity"
 		}
 	],

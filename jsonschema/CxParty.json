@@ -236,12 +236,6 @@
 		"Id": {
 			"type": "integer"
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
 		"Description": {
 			"type": "string"
 		},
