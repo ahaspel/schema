@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 593,
-	"Minutes": 561,
+	"Hours": 613,
+	"Minutes": 643,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 85
+					"Quantity": 817
 				},
-				"Notes": "soluta"
+				"Notes": "facere"
 			},
-			"Global": true,
-			"BaseObject": "repellat",
+			"Global": false,
+			"BaseObject": "deleniti",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "explicabo",
-			"Name": "voluptatem"
+			"Description": "reiciendis",
+			"Name": "voluptatibus"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,17 +44,17 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
+	"IsVoid": true,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": 67.5424,
-		"Lng": -74.8123,
-		"Source": "GPSService"
+		"Lat": 15.8843,
+		"Lng": -138.8948,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -22.0534,
-		"Lng": 37.3541,
+		"Lat": -48.2591,
+		"Lng": -104.2733,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -63,13 +63,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 141
+		"Quantity": 660
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 167
+		"Quantity": 369
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "cumque",
+	"Description": "voluptatibus",
 	"Tags": [
 		{
-			"BaseObject": "itaque",
+			"BaseObject": "cumque",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "consequuntur",
+			"Description": "perspiciatis",
 			"Name": "Capacity"
 		}
 	],
