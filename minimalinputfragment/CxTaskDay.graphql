@@ -1,0 +1,15 @@
+
+fragment CXTASKDAYINPUTMIN on CxTaskDayInput {
+  ParentId
+  JobActivity {
+    Id
+  }
+  Resources {
+    Id
+  }
+  CurrentLifespan {
+    Start
+    End
+  }
+  Id
+}

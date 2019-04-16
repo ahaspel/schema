@@ -1,0 +1,40 @@
+
+fragment CXJOBINPUTMIN on CxJobInput {
+  Priority {
+    Id
+  }
+  Types {
+    Id
+  }
+  Subtypes {
+    Id
+  }
+  Address {
+    Street
+    State {
+      Id
+    }
+    City
+    Id
+  }
+  AccountCode
+  Name
+  CurrentLifespan {
+    Start
+    End
+  }
+  JobActivities {
+    Id
+    Name
+  }
+  Owner {
+    Id
+  }
+  Manager {
+    Id
+  }
+  JobStatus {
+    Id
+  }
+  Id
+}

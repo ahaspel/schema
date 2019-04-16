@@ -1,0 +1,10 @@
+
+fragment CXSHIFTINPUTMIN on CxShiftInput {
+  Name
+  Days {
+    Day
+    Start
+    End
+  }
+  Id
+}

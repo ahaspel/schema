@@ -1,0 +1,20 @@
+
+fragment CXJOBCOSTINPUTMIN on CxJobCostInput {
+  CostCode {
+    UnitCost {
+      Unit {
+        Id
+      }
+      Cost {
+        Unit {
+          Id
+        }
+        Quantity
+      }
+    }
+    Id
+    Name
+  }
+  TotalAmount
+  Id
+}

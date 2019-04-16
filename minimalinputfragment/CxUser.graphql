@@ -1,0 +1,13 @@
+
+fragment CXUSERINPUTMIN on CxUserInput {
+  Party {
+    Id
+  }
+  Username
+  Password
+  CognitoId
+  Level {
+    Id
+  }
+  Id
+}

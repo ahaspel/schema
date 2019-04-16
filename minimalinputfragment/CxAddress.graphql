@@ -1,0 +1,9 @@
+
+fragment CXADDRESSINPUTMIN on CxAddressInput {
+  Id
+  Street
+  City
+  State {
+    Id
+  }
+}

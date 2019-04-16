@@ -1,0 +1,20 @@
+
+fragment CXEMPLOYEEINPUTMIN on CxEmployeeInput {
+  LastName
+  FirstName
+  Person {
+    Id
+    Name
+  }
+  Owner {
+    Id
+  }
+  ResourceSubtype {
+    Id
+  }
+  CurrentLifespan {
+    Start
+    End
+  }
+  Id
+}

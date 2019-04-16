@@ -1,0 +1,17 @@
+
+fragment CXTIMEENTRYINPUTMIN on CxTimeEntryInput {
+  Resource {
+    Id
+  }
+  JobActivity {
+    Id
+  }
+  Owner {
+    Id
+  }
+  CurrentLifespan {
+    Start
+    End
+  }
+  Id
+}

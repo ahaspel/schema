@@ -1,0 +1,18 @@
+
+fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroupInput {
+  Contact {
+    Id
+  }
+  Name
+  ResourceBlocks {
+    Resource {
+      Id
+    }
+    CurrentLifespan {
+      Start
+      End
+    }
+    Id
+  }
+  Id
+}

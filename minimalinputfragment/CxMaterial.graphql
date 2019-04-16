@@ -1,0 +1,18 @@
+
+fragment CXMATERIALINPUTMIN on CxMaterialInput {
+  Inventory {
+    Items {
+    Id
+    Quantity
+    Start
+  }
+  }
+  Unit {
+    Id
+  }
+  Reusable
+  ResourceSubtype {
+    Id
+  }
+  Id
+}

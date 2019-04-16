@@ -1,0 +1,15 @@
+
+fragment CXRESOURCEINPUTMIN on CxResourceInput {
+  ResourceType {
+    Family
+    ResourceSubtypes {
+    Id
+  }
+    Id
+    Name
+  }
+  ResourceSubtype {
+    Id
+  }
+  Id
+}

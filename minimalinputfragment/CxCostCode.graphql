@@ -1,0 +1,16 @@
+
+fragment CXCOSTCODEINPUTMIN on CxCostCodeInput {
+  UnitCost {
+    Unit {
+      Id
+    }
+    Cost {
+      Unit {
+        Id
+      }
+      Quantity
+    }
+  }
+  Name
+  Id
+}

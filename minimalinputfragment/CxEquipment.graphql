@@ -1,0 +1,17 @@
+
+fragment CXEQUIPMENTINPUTMIN on CxEquipmentInput {
+  Model
+  Make
+  Owner {
+    Id
+  }
+  ResourceSubtype {
+    Id
+  }
+  AccountCode
+  CurrentLifespan {
+    Start
+    End
+  }
+  Id
+}

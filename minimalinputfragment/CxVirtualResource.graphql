@@ -1,0 +1,9 @@
+
+fragment CXVIRTUALRESOURCEINPUTMIN on CxVirtualResourceInput {
+  ResourceSubtype {
+    Id
+  }
+  Owner {
+    Id
+  }
+}
