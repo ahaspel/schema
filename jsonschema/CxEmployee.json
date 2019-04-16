@@ -573,21 +573,6 @@
 		"Person": {
 			"$ref": "#/definitions/IxParty"
 		},
-		"Address": {
-			"$ref": "#/definitions/IxAddress"
-		},
-		"PhoneNumbers": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxPhoneNumber"
-			}
-		},
-		"Emails": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxEmail"
-			}
-		},
 		"Contacts": {
 			"type": "array",
 			"items": {

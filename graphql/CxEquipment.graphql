@@ -136,8 +136,6 @@ type IxEmail {
 
 type IxEmployee {
   Person: IxParty
-  PhoneNumbers: [IxPhoneNumber]
-  Emails: [IxEmail]
   FirstName: String
   LastName: String
   MiddleName: String
@@ -167,7 +165,6 @@ type IxEmployee {
   AccountCode: String
   ForeColor: String
   BackColor: String
-  Address: IxAddress
   Location: IxLocation
   IsMover: Boolean
   Contacts: [IxParty]

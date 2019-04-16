@@ -13,7 +13,7 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Party",
+		"ObjectType": "Subcontractor",
 		"Id": 0,
 		"Description": "",
 		"Name": "",
@@ -28,31 +28,13 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
 		},
 		"Tags": []
 	},
-	"Address": {
-		"Street": "",
-		"StreetDetails": "",
-		"State": {
-			"Id": 0
-		},
-		"City": "",
-		"ZipCode": "",
-		"Geocode": {
-			"Lat": 0,
-			"Lng": 0,
-			"Source": "Owner"
-		},
-		"Id": 0,
-		"ObjectType": "Address"
-	},
-	"PhoneNumbers": [],
-	"Emails": [],
 	"Contacts": [],
 	"Minority": [],
 	"Unions": [],
