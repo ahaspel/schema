@@ -190,18 +190,6 @@
 				"Person": {
 					"$ref": "#/definitions/IxParty"
 				},
-				"PhoneNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
-				"Emails": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxEmail"
-					}
-				},
 				"FirstName": {
 					"type": "string"
 				},
@@ -322,9 +310,6 @@
 				},
 				"BackColor": {
 					"type": "string"
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
 				},
 				"Location": {
 					"$ref": "#/definitions/IxLocation"

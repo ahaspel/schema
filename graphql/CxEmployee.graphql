@@ -6,9 +6,6 @@ type CxEmployee {
   PreviousExperience: IxQuantity
   IsMover: Boolean
   Person: IxParty
-  Address: IxAddress
-  PhoneNumbers: [IxPhoneNumber]
-  Emails: [IxEmail]
   Contacts: [IxParty]
   Minority: [IxLookupValue]
   Unions: [IxLookupValue]
@@ -45,9 +42,6 @@ input CxEmployeeInput {
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
   Person: IxPartyInput!
-  Address: IxAddressInput
-  PhoneNumbers: [IxPhoneNumberInput]
-  Emails: [IxEmailInput]
   Contacts: [IxPartyInput]
   Minority: [IxLookupValueDO]
   Unions: [IxLookupValueDO]
