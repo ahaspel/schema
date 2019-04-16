@@ -54,7 +54,6 @@ input CxEmployeeInput {
   ObjectType: CxEmployeeObjectType
   Temporary: Boolean
   Owner: IxCompanyDO!
-  ResourceType: IxResourceTypeDO!
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCost: IxUnitCostInput
   ForeColor: String

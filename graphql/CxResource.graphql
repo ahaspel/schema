@@ -7,7 +7,6 @@ type CxResource {
   InCrew: Boolean
   ForeColor: String
   BackColor: String
-  Address: IxAddress
   Location: IxLocation
   DisplayName: String
   AccountCode: String
@@ -29,7 +28,6 @@ input CxResourceInput {
   InCrew: Boolean
   ForeColor: String
   BackColor: String
-  Address: IxAddressInput
   Location: IxLocationInput
   AccountCode: String
   CurrentLifespan: IxRangeInput

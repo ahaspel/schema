@@ -32,7 +32,6 @@ input CxMaterialInput {
   Unit: IxUnitDO!
   Reusable: Boolean!
   Owner: IxCompanyDO
-  ResourceType: IxResourceTypeDO!
   ResourceSubtype: IxResourceSubtypeDO!
   ForeColor: String
   BackColor: String
@@ -278,10 +277,6 @@ type IxResourceType {
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
 }
 
 enum IxResourceTypeFamily {

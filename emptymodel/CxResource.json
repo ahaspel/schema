@@ -6,7 +6,7 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Company",
+		"ObjectType": "Plant",
 		"Id": 0,
 		"Description": "",
 		"Name": "",
@@ -21,7 +21,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -32,7 +32,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Group",
+		"Family": "Material",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -60,22 +60,6 @@
 	"InCrew": false,
 	"ForeColor": "",
 	"BackColor": "",
-	"Address": {
-		"Street": "",
-		"StreetDetails": "",
-		"State": {
-			"Id": 0
-		},
-		"City": "",
-		"ZipCode": "",
-		"Geocode": {
-			"Lat": 0,
-			"Lng": 0,
-			"Source": "Owner"
-		},
-		"Id": 0,
-		"ObjectType": "Address"
-	},
 	"Location": {
 		"Address": {
 			"Street": "",
@@ -88,7 +72,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -103,7 +87,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Material",
+	"ObjectType": "Equipment",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

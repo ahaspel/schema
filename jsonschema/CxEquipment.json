@@ -182,8 +182,7 @@
 				"LastName",
 				"Owner",
 				"Person",
-				"ResourceSubtype",
-				"ResourceType"
+				"ResourceSubtype"
 			],
 			"type": "object",
 			"properties": {
@@ -777,9 +776,6 @@
 		},
 		"BackColor": {
 			"type": "string"
-		},
-		"Address": {
-			"$ref": "#/definitions/IxAddress"
 		},
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
