@@ -1,18 +1,22 @@
 
-fragment CXJOBINPUTMIN on CxJobInput {
+fragment CXJOBINPUTMIN on CxJob {
   Priority {
     Id
+    _ObjectType: ObjectType
   }
   Types {
     Id
+    _ObjectType: ObjectType
   }
   Subtypes {
     Id
+    _ObjectType: ObjectType
   }
   Address {
     Street
     State {
       Id
+      _ObjectType: ObjectType
     }
     City
     Id
@@ -35,6 +39,7 @@ fragment CXJOBINPUTMIN on CxJobInput {
   }
   JobStatus {
     Id
+    _ObjectType: ObjectType
   }
   Id
 }

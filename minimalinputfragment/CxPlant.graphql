@@ -1,7 +1,8 @@
 
-fragment CXPLANTINPUTMIN on CxPlantInput {
+fragment CXPLANTINPUTMIN on CxPlant {
   CompanyType {
     Id
+    _ObjectType: ObjectType
   }
   Id
 }

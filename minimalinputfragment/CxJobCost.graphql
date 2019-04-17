@@ -1,5 +1,5 @@
 
-fragment CXJOBCOSTINPUTMIN on CxJobCostInput {
+fragment CXJOBCOSTINPUTMIN on CxJobCost {
   CostCode {
     UnitCost {
       Unit {

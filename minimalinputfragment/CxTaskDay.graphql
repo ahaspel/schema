@@ -1,5 +1,5 @@
 
-fragment CXTASKDAYINPUTMIN on CxTaskDayInput {
+fragment CXTASKDAYINPUTMIN on CxTaskDay {
   ParentId
   JobActivity {
     Id

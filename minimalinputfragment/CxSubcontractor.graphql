@@ -1,7 +1,8 @@
 
-fragment CXSUBCONTRACTORINPUTMIN on CxSubcontractorInput {
+fragment CXSUBCONTRACTORINPUTMIN on CxSubcontractor {
   CompanyType {
     Id
+    _ObjectType: ObjectType
   }
   Name
   Id
