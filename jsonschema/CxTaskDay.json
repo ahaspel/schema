@@ -800,6 +800,9 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
+				},
 				"ForeColor": {
 					"type": "string"
 				},

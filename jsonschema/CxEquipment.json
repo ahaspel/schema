@@ -304,14 +304,14 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
 				"BackColor": {
 					"type": "string"
-				},
-				"Location": {
-					"$ref": "#/definitions/IxLocation"
 				},
 				"IsMover": {
 					"type": "boolean"

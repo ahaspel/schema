@@ -162,9 +162,9 @@ type IxEmployee {
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
+  Location: IxLocation
   ForeColor: String
   BackColor: String
-  Location: IxLocation
   IsMover: Boolean
   Contacts: [IxParty]
   InCrew: Boolean

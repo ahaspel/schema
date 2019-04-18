@@ -210,6 +210,12 @@ enum IxJobActivityObjectType {
   JobActivity
 }
 
+type IxLocation {
+  Address: IxAddress
+  Name: String
+  Description: String
+}
+
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
@@ -321,6 +327,7 @@ type IxResource {
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
+  Location: IxLocation
   ForeColor: String
   BackColor: String
 }

@@ -2,14 +2,11 @@ type CxResourceGroup {
   Contact: IxParty
   Count: Int
   Name: String
-  Temporary: Boolean
   CurrentLifespan: IxRange
   ResourceBlocks: [IxResourceBlock]
   ObjectType: CxResourceGroupObjectType
-  Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  UnitCost: IxUnitCost
   ForeColor: String
   BackColor: String
   Location: IxLocation
@@ -23,13 +20,10 @@ type CxResourceGroup {
 input CxResourceGroupInput {
   Contact: IxPartyDO!
   Name: String!
-  Temporary: Boolean
   ResourceBlocks: [IxResourceBlockInput]!
   ObjectType: CxResourceGroupObjectType
-  Owner: IxCompanyDO
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO
-  UnitCost: IxUnitCostInput
   ForeColor: String
   BackColor: String
   AccountCode: String
@@ -98,10 +92,6 @@ type IxCompany {
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
-}
-
-input IxCompanyDO {
-  Id: ID!
 }
 
 enum IxCompanyObjectType {
@@ -175,11 +165,6 @@ type IxMoney {
   Quantity: Float
 }
 
-input IxMoneyInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
-}
-
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -236,6 +221,7 @@ type IxResource {
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
+  Location: IxLocation
   ForeColor: String
   BackColor: String
 }
@@ -332,16 +318,6 @@ type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
   Notes: String
-}
-
-input IxUnitCostInput {
-  Unit: IxUnitDO!
-  Cost: IxMoneyInput!
-  Notes: String
-}
-
-input IxUnitDO {
-  Id: ID!
 }
 
 enum IxUnitObjectType {

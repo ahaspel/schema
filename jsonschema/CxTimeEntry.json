@@ -299,6 +299,23 @@
 				"Id"
 			]
 		},
+		"IxLocation": {
+			"type": "object",
+			"properties": {
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Address"
+			]
+		},
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
@@ -535,6 +552,9 @@
 				},
 				"AccountCode": {
 					"type": "string"
+				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
 				},
 				"ForeColor": {
 					"type": "string"

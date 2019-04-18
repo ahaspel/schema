@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 96,
-	"Minutes": 147,
+	"Hours": 679,
+	"Minutes": 910,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 790
+					"Quantity": 77
 				},
-				"Notes": "dolores"
+				"Notes": "perspiciatis"
 			},
 			"Global": true,
-			"BaseObject": "perspiciatis",
+			"BaseObject": "explicabo",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "consequatur",
-			"Name": "molestias"
+			"Description": "voluptas",
+			"Name": "maxime"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,18 +44,18 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
-	"Billable": true,
+	"IsVoid": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 20.5957,
-		"Lng": 103.4704,
+		"Lat": -25.3661,
+		"Lng": 164.7157,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 53.4891,
-		"Lng": 99.3823,
-		"Source": "Action"
+		"Lat": -9.3672,
+		"Lng": 62.8214,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "PunchedOut",
@@ -63,13 +63,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 871
+		"Quantity": 276
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 894
+		"Quantity": 206
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "eligendi",
+	"Description": "quaerat",
 	"Tags": [
 		{
-			"BaseObject": "aliquam",
+			"BaseObject": "perspiciatis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "maxime",
+			"Description": "numquam",
 			"Name": "Capacity"
 		}
 	],

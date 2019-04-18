@@ -432,6 +432,9 @@
 				"AccountCode": {
 					"type": "string"
 				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -648,9 +651,6 @@
 			"type": "string",
 			"minLength": 1
 		},
-		"Temporary": {
-			"type": "boolean"
-		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},
@@ -666,17 +666,11 @@
 				"Crew"
 			]
 		},
-		"Owner": {
-			"$ref": "#/definitions/IxCompany"
-		},
 		"ResourceType": {
 			"$ref": "#/definitions/IxResourceType"
 		},
 		"ResourceSubtype": {
 			"$ref": "#/definitions/IxResourceSubtype"
-		},
-		"UnitCost": {
-			"$ref": "#/definitions/IxUnitCost"
 		},
 		"ForeColor": {
 			"type": "string"

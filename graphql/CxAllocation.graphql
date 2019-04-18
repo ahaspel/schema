@@ -324,6 +324,7 @@ type IxResource {
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
+  Location: IxLocation
   ForeColor: String
   BackColor: String
 }
@@ -360,9 +361,9 @@ type IxResourceGroup {
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
+  Location: IxLocation
   ForeColor: String
   BackColor: String
-  Location: IxLocation
 }
 
 enum IxResourceGroupObjectType {
