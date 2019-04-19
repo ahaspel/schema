@@ -17,5 +17,6 @@ const CXCOSTCODEINPUTMIN = `fragment CXCOSTCODEINPUTMIN on CxCostCode {
 module.exports = { CXCOSTCODEINPUTMIN,
                    saveMutation :  'cxCostCodeInputs_onSave',
                    deletionMutation :  'cxCostCodeInputs_Delete',
-                   objectType: 'CostCode'
+                   objectType: 'CostCode',
+                   clazz: 'CxCostCodeInput'
                  };

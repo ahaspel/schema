@@ -6,5 +6,6 @@ const CXPHONENUMBERINPUTMIN = `fragment CXPHONENUMBERINPUTMIN on CxPhoneNumber {
 module.exports = { CXPHONENUMBERINPUTMIN,
                    saveMutation :  'cxPhoneNumberInputs_onSave',
                    deletionMutation :  'cxPhoneNumberInputs_Delete',
-                   objectType: 'PhoneNumber'
+                   objectType: 'PhoneNumber',
+                   clazz: 'CxPhoneNumberInput'
                  };

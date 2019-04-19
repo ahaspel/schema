@@ -18,5 +18,6 @@ const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment {
 module.exports = { CXEQUIPMENTINPUTMIN,
                    saveMutation :  'cxEquipmentInputs_onSave',
                    deletionMutation :  'cxEquipmentInputs_Delete',
-                   objectType: 'Equipment'
+                   objectType: 'Equipment',
+                   clazz: 'CxEquipmentInput'
                  };

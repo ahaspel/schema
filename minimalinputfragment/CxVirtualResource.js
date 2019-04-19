@@ -10,5 +10,6 @@ const CXVIRTUALRESOURCEINPUTMIN = `fragment CXVIRTUALRESOURCEINPUTMIN on CxVirtu
 module.exports = { CXVIRTUALRESOURCEINPUTMIN,
                    saveMutation :  'cxVirtualResourceInputs_onSave',
                    deletionMutation :  'cxVirtualResourceInputs_Delete',
-                   objectType: 'VirtualResource'
+                   objectType: 'VirtualResource',
+                   clazz: 'CxVirtualResourceInput'
                  };

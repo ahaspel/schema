@@ -6,5 +6,6 @@ const CXRANGEINPUTMIN = `fragment CXRANGEINPUTMIN on CxRange {
 module.exports = { CXRANGEINPUTMIN,
                    saveMutation :  'cxRangeInputs_onSave',
                    deletionMutation :  'cxRangeInputs_Delete',
-                   objectType: 'Range'
+                   objectType: 'Range',
+                   clazz: 'CxRangeInput'
                  };

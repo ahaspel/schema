@@ -21,5 +21,6 @@ const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
 module.exports = { CXJOBCOSTINPUTMIN,
                    saveMutation :  'cxJobCostInputs_onSave',
                    deletionMutation :  'cxJobCostInputs_Delete',
-                   objectType: 'JobCost'
+                   objectType: 'JobCost',
+                   clazz: 'CxJobCostInput'
                  };

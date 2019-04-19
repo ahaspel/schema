@@ -19,5 +19,6 @@ const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxResourceG
 module.exports = { CXRESOURCEGROUPINPUTMIN,
                    saveMutation :  'cxResourceGroupInputs_onSave',
                    deletionMutation :  'cxResourceGroupInputs_Delete',
-                   objectType: 'ResourceGroup'
+                   objectType: 'ResourceGroup',
+                   clazz: 'CxResourceGroupInput'
                  };

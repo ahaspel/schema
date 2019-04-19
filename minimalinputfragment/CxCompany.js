@@ -10,5 +10,6 @@ const CXCOMPANYINPUTMIN = `fragment CXCOMPANYINPUTMIN on CxCompany {
 module.exports = { CXCOMPANYINPUTMIN,
                    saveMutation :  'cxCompanyInputs_onSave',
                    deletionMutation :  'cxCompanyInputs_Delete',
-                   objectType: 'Company'
+                   objectType: 'Company',
+                   clazz: 'CxCompanyInput'
                  };

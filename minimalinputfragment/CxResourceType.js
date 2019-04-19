@@ -11,5 +11,6 @@ const CXRESOURCETYPEINPUTMIN = `fragment CXRESOURCETYPEINPUTMIN on CxResourceTyp
 module.exports = { CXRESOURCETYPEINPUTMIN,
                    saveMutation :  'cxResourceTypeInputs_onSave',
                    deletionMutation :  'cxResourceTypeInputs_Delete',
-                   objectType: 'ResourceType'
+                   objectType: 'ResourceType',
+                   clazz: 'CxResourceTypeInput'
                  };

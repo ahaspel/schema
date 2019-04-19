@@ -6,5 +6,6 @@ const CXPARTYINPUTMIN = `fragment CXPARTYINPUTMIN on CxParty {
 module.exports = { CXPARTYINPUTMIN,
                    saveMutation :  'cxPartyInputs_onSave',
                    deletionMutation :  'cxPartyInputs_Delete',
-                   objectType: 'Party'
+                   objectType: 'Party',
+                   clazz: 'CxPartyInput'
                  };

@@ -9,5 +9,6 @@ const CXPLANTINPUTMIN = `fragment CXPLANTINPUTMIN on CxPlant {
 module.exports = { CXPLANTINPUTMIN,
                    saveMutation :  'cxPlantInputs_onSave',
                    deletionMutation :  'cxPlantInputs_Delete',
-                   objectType: 'Plant'
+                   objectType: 'Plant',
+                   clazz: 'CxPlantInput'
                  };

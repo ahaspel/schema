@@ -11,5 +11,6 @@ const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
 module.exports = { CXSHIFTINPUTMIN,
                    saveMutation :  'cxShiftInputs_onSave',
                    deletionMutation :  'cxShiftInputs_Delete',
-                   objectType: 'Shift'
+                   objectType: 'Shift',
+                   clazz: 'CxShiftInput'
                  };

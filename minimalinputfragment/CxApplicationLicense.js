@@ -9,5 +9,6 @@ const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on C
 module.exports = { CXAPPLICATIONLICENSEINPUTMIN,
                    saveMutation :  'cxApplicationLicenseInputs_onSave',
                    deletionMutation :  'cxApplicationLicenseInputs_Delete',
-                   objectType: 'ApplicationLicense'
+                   objectType: 'ApplicationLicense',
+                   clazz: 'CxApplicationLicenseInput'
                  };

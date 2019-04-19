@@ -7,5 +7,6 @@ const CXLOOKUPVALUEINPUTMIN = `fragment CXLOOKUPVALUEINPUTMIN on CxLookupValue {
 module.exports = { CXLOOKUPVALUEINPUTMIN,
                    saveMutation :  'cxLookupValueInputs_onSave',
                    deletionMutation :  'cxLookupValueInputs_Delete',
-                   objectType: 'LookupValue'
+                   objectType: 'LookupValue',
+                   clazz: 'CxLookupValueInput'
                  };

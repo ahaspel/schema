@@ -14,5 +14,6 @@ const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
 module.exports = { CXUSERINPUTMIN,
                    saveMutation :  'cxUserInputs_onSave',
                    deletionMutation :  'cxUserInputs_Delete',
-                   objectType: 'User'
+                   objectType: 'User',
+                   clazz: 'CxUserInput'
                  };

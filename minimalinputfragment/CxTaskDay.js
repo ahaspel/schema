@@ -16,5 +16,6 @@ const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
 module.exports = { CXTASKDAYINPUTMIN,
                    saveMutation :  'cxTaskDayInputs_onSave',
                    deletionMutation :  'cxTaskDayInputs_Delete',
-                   objectType: 'TaskDay'
+                   objectType: 'TaskDay',
+                   clazz: 'CxTaskDayInput'
                  };

@@ -10,5 +10,6 @@ const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSubcontra
 module.exports = { CXSUBCONTRACTORINPUTMIN,
                    saveMutation :  'cxSubcontractorInputs_onSave',
                    deletionMutation :  'cxSubcontractorInputs_Delete',
-                   objectType: 'Subcontractor'
+                   objectType: 'Subcontractor',
+                   clazz: 'CxSubcontractorInput'
                  };

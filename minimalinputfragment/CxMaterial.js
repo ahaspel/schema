@@ -19,5 +19,6 @@ const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
 module.exports = { CXMATERIALINPUTMIN,
                    saveMutation :  'cxMaterialInputs_onSave',
                    deletionMutation :  'cxMaterialInputs_Delete',
-                   objectType: 'Material'
+                   objectType: 'Material',
+                   clazz: 'CxMaterialInput'
                  };

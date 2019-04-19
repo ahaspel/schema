@@ -11,5 +11,6 @@ const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
 module.exports = { CXADDRESSINPUTMIN,
                    saveMutation :  'cxAddressInputs_onSave',
                    deletionMutation :  'cxAddressInputs_Delete',
-                   objectType: 'Address'
+                   objectType: 'Address',
+                   clazz: 'CxAddressInput'
                  };

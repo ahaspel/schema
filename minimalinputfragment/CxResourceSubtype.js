@@ -6,5 +6,6 @@ const CXRESOURCESUBTYPEINPUTMIN = `fragment CXRESOURCESUBTYPEINPUTMIN on CxResou
 module.exports = { CXRESOURCESUBTYPEINPUTMIN,
                    saveMutation :  'cxResourceSubtypeInputs_onSave',
                    deletionMutation :  'cxResourceSubtypeInputs_Delete',
-                   objectType: 'ResourceSubtype'
+                   objectType: 'ResourceSubtype',
+                   clazz: 'CxResourceSubtypeInput'
                  };
