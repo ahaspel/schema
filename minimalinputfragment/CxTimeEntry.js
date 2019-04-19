@@ -15,4 +15,8 @@ const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
   }
   Id
 }`;
-module.exports = { CXTIMEENTRYINPUTMIN };
+module.exports = { CXTIMEENTRYINPUTMIN,
+                   saveMutation :  'cxTimeEntryInputs_onSave',
+                   deletionMutation :  'cxTimeEntryInputs_Delete',
+                   objectType: 'TimeEntry'
+                 };

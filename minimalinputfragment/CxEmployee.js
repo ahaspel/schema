@@ -18,4 +18,8 @@ const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
   }
   Id
 }`;
-module.exports = { CXEMPLOYEEINPUTMIN };
+module.exports = { CXEMPLOYEEINPUTMIN,
+                   saveMutation :  'cxEmployeeInputs_onSave',
+                   deletionMutation :  'cxEmployeeInputs_Delete',
+                   objectType: 'Employee'
+                 };

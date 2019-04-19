@@ -7,4 +7,8 @@ const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSubcontra
   Name
   Id
 }`;
-module.exports = { CXSUBCONTRACTORINPUTMIN };
+module.exports = { CXSUBCONTRACTORINPUTMIN,
+                   saveMutation :  'cxSubcontractorInputs_onSave',
+                   deletionMutation :  'cxSubcontractorInputs_Delete',
+                   objectType: 'Subcontractor'
+                 };

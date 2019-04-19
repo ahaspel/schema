@@ -6,4 +6,8 @@ const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on C
   AllowedWebUsers
   SerialNumber
 }`;
-module.exports = { CXAPPLICATIONLICENSEINPUTMIN };
+module.exports = { CXAPPLICATIONLICENSEINPUTMIN,
+                   saveMutation :  'cxApplicationLicenseInputs_onSave',
+                   deletionMutation :  'cxApplicationLicenseInputs_Delete',
+                   objectType: 'ApplicationLicense'
+                 };

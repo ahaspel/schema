@@ -7,4 +7,8 @@ const CXCOMPANYINPUTMIN = `fragment CXCOMPANYINPUTMIN on CxCompany {
   Name
   Id
 }`;
-module.exports = { CXCOMPANYINPUTMIN };
+module.exports = { CXCOMPANYINPUTMIN,
+                   saveMutation :  'cxCompanyInputs_onSave',
+                   deletionMutation :  'cxCompanyInputs_Delete',
+                   objectType: 'Company'
+                 };

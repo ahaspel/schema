@@ -43,4 +43,8 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   }
   Id
 }`;
-module.exports = { CXJOBINPUTMIN };
+module.exports = { CXJOBINPUTMIN,
+                   saveMutation :  'cxJobInputs_onSave',
+                   deletionMutation :  'cxJobInputs_Delete',
+                   objectType: 'Job'
+                 };

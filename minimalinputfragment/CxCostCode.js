@@ -14,4 +14,8 @@ const CXCOSTCODEINPUTMIN = `fragment CXCOSTCODEINPUTMIN on CxCostCode {
   Name
   Id
 }`;
-module.exports = { CXCOSTCODEINPUTMIN };
+module.exports = { CXCOSTCODEINPUTMIN,
+                   saveMutation :  'cxCostCodeInputs_onSave',
+                   deletionMutation :  'cxCostCodeInputs_Delete',
+                   objectType: 'CostCode'
+                 };

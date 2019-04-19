@@ -8,4 +8,8 @@ const CXRESOURCETYPEINPUTMIN = `fragment CXRESOURCETYPEINPUTMIN on CxResourceTyp
   Name
   Id
 }`;
-module.exports = { CXRESOURCETYPEINPUTMIN };
+module.exports = { CXRESOURCETYPEINPUTMIN,
+                   saveMutation :  'cxResourceTypeInputs_onSave',
+                   deletionMutation :  'cxResourceTypeInputs_Delete',
+                   objectType: 'ResourceType'
+                 };

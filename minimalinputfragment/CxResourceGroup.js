@@ -16,4 +16,8 @@ const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxResourceG
   }
   Id
 }`;
-module.exports = { CXRESOURCEGROUPINPUTMIN };
+module.exports = { CXRESOURCEGROUPINPUTMIN,
+                   saveMutation :  'cxResourceGroupInputs_onSave',
+                   deletionMutation :  'cxResourceGroupInputs_Delete',
+                   objectType: 'ResourceGroup'
+                 };
