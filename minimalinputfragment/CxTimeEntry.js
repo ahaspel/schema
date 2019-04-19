@@ -16,8 +16,9 @@ const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
   Id
 }`;
 module.exports = { CXTIMEENTRYINPUTMIN,
-                   saveMutation :  'cxTimeEntryInputs_onSave',
-                   deletionMutation :  'cxTimeEntryInputs_Delete',
+                   query:'cxTimeEntrys',
+                   saveMutation :  'cxTimeEntrys_onSave',
+                   deletionMutation :  'cxTimeEntrys_onDelete',
                    objectType: 'TimeEntry',
                    clazz: 'CxTimeEntryInput'
                  };

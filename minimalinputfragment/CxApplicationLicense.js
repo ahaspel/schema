@@ -7,8 +7,9 @@ const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on C
   SerialNumber
 }`;
 module.exports = { CXAPPLICATIONLICENSEINPUTMIN,
-                   saveMutation :  'cxApplicationLicenseInputs_onSave',
-                   deletionMutation :  'cxApplicationLicenseInputs_Delete',
+                   query:'cxApplicationLicenses',
+                   saveMutation :  'cxApplicationLicenses_onSave',
+                   deletionMutation :  'cxApplicationLicenses_onDelete',
                    objectType: 'ApplicationLicense',
                    clazz: 'CxApplicationLicenseInput'
                  };

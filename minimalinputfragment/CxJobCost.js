@@ -19,8 +19,9 @@ const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
   Id
 }`;
 module.exports = { CXJOBCOSTINPUTMIN,
-                   saveMutation :  'cxJobCostInputs_onSave',
-                   deletionMutation :  'cxJobCostInputs_Delete',
+                   query:'cxJobCosts',
+                   saveMutation :  'cxJobCosts_onSave',
+                   deletionMutation :  'cxJobCosts_onDelete',
                    objectType: 'JobCost',
                    clazz: 'CxJobCostInput'
                  };

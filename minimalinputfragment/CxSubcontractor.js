@@ -8,8 +8,9 @@ const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSubcontra
   Id
 }`;
 module.exports = { CXSUBCONTRACTORINPUTMIN,
-                   saveMutation :  'cxSubcontractorInputs_onSave',
-                   deletionMutation :  'cxSubcontractorInputs_Delete',
+                   query:'cxSubcontractors',
+                   saveMutation :  'cxSubcontractors_onSave',
+                   deletionMutation :  'cxSubcontractors_onDelete',
                    objectType: 'Subcontractor',
                    clazz: 'CxSubcontractorInput'
                  };

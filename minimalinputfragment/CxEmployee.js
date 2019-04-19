@@ -19,8 +19,9 @@ const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
   Id
 }`;
 module.exports = { CXEMPLOYEEINPUTMIN,
-                   saveMutation :  'cxEmployeeInputs_onSave',
-                   deletionMutation :  'cxEmployeeInputs_Delete',
+                   query:'cxEmployees',
+                   saveMutation :  'cxEmployees_onSave',
+                   deletionMutation :  'cxEmployees_onDelete',
                    objectType: 'Employee',
                    clazz: 'CxEmployeeInput'
                  };

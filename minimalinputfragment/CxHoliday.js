@@ -5,8 +5,9 @@ const CXHOLIDAYINPUTMIN = `fragment CXHOLIDAYINPUTMIN on CxHoliday {
   Id
 }`;
 module.exports = { CXHOLIDAYINPUTMIN,
-                   saveMutation :  'cxHolidayInputs_onSave',
-                   deletionMutation :  'cxHolidayInputs_Delete',
+                   query:'cxHolidays',
+                   saveMutation :  'cxHolidays_onSave',
+                   deletionMutation :  'cxHolidays_onDelete',
                    objectType: 'Holiday',
                    clazz: 'CxHolidayInput'
                  };

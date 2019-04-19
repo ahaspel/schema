@@ -4,8 +4,9 @@ const CXJOBACTIVITYINPUTMIN = `fragment CXJOBACTIVITYINPUTMIN on CxJobActivity {
   Id
 }`;
 module.exports = { CXJOBACTIVITYINPUTMIN,
-                   saveMutation :  'cxJobActivityInputs_onSave',
-                   deletionMutation :  'cxJobActivityInputs_Delete',
+                   query:'cxJobActivitys',
+                   saveMutation :  'cxJobActivitys_onSave',
+                   deletionMutation :  'cxJobActivitys_onDelete',
                    objectType: 'JobActivity',
                    clazz: 'CxJobActivityInput'
                  };

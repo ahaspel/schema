@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 942,
-	"Minutes": 550,
+	"Hours": 791,
+	"Minutes": 726,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 484
+					"Quantity": 223
 				},
-				"Notes": "laudantium"
+				"Notes": "occaecati"
 			},
-			"Global": false,
-			"BaseObject": "recusandae",
+			"Global": true,
+			"BaseObject": "perspiciatis",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "perferendis",
-			"Name": "repudiandae"
+			"Description": "quibusdam",
+			"Name": "voluptatem"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,17 +44,17 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": 72.7524,
-		"Lng": -103.375,
-		"Source": "GPSService"
+		"Lat": 85.9095,
+		"Lng": 174.9121,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -28.0316,
-		"Lng": -59.19,
+		"Lat": 14.9993,
+		"Lng": 126.9902,
 		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -63,13 +63,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 974
+		"Quantity": 677
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 452
+		"Quantity": 8
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "molestias",
+	"Description": "asperiores",
 	"Tags": [
 		{
-			"BaseObject": "recusandae",
+			"BaseObject": "reiciendis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "facere",
+			"Description": "molestias",
 			"Name": "Capacity"
 		}
 	],

@@ -4,8 +4,9 @@ const CXEMAILINPUTMIN = `fragment CXEMAILINPUTMIN on CxEmail {
   Email
 }`;
 module.exports = { CXEMAILINPUTMIN,
-                   saveMutation :  'cxEmailInputs_onSave',
-                   deletionMutation :  'cxEmailInputs_Delete',
+                   query:'cxEmails',
+                   saveMutation :  'cxEmails_onSave',
+                   deletionMutation :  'cxEmails_onDelete',
                    objectType: 'Email',
                    clazz: 'CxEmailInput'
                  };

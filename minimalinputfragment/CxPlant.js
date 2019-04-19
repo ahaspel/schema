@@ -7,8 +7,9 @@ const CXPLANTINPUTMIN = `fragment CXPLANTINPUTMIN on CxPlant {
   Id
 }`;
 module.exports = { CXPLANTINPUTMIN,
-                   saveMutation :  'cxPlantInputs_onSave',
-                   deletionMutation :  'cxPlantInputs_Delete',
+                   query:'cxPlants',
+                   saveMutation :  'cxPlants_onSave',
+                   deletionMutation :  'cxPlants_onDelete',
                    objectType: 'Plant',
                    clazz: 'CxPlantInput'
                  };

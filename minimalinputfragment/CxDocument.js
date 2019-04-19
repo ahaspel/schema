@@ -5,8 +5,9 @@ const CXDOCUMENTINPUTMIN = `fragment CXDOCUMENTINPUTMIN on CxDocument {
   Id
 }`;
 module.exports = { CXDOCUMENTINPUTMIN,
-                   saveMutation :  'cxDocumentInputs_onSave',
-                   deletionMutation :  'cxDocumentInputs_Delete',
+                   query:'cxDocuments',
+                   saveMutation :  'cxDocuments_onSave',
+                   deletionMutation :  'cxDocuments_onDelete',
                    objectType: 'Document',
                    clazz: 'CxDocumentInput'
                  };
