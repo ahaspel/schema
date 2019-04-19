@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 534,
-	"Minutes": 602,
+	"Hours": 268,
+	"Minutes": 333,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 150
+					"Quantity": 26
 				},
-				"Notes": "repellendus"
+				"Notes": "quisquam"
 			},
-			"Global": false,
-			"BaseObject": "voluptatum",
+			"Global": true,
+			"BaseObject": "adipisci",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "mollitia",
-			"Name": "deleniti"
+			"Description": "perspiciatis",
+			"Name": "repudiandae"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,31 +45,31 @@
 		"Id": 1
 	},
 	"IsVoid": false,
-	"Billable": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": -49.5363,
-		"Lng": -112.2194,
+		"Lat": 40.6993,
+		"Lng": -71.6573,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -1.0226,
-		"Lng": 85.7211,
+		"Lat": -59.9133,
+		"Lng": 147.9331,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 722
+		"Quantity": 837
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 28
+		"Quantity": 704
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "molestiae",
+	"Description": "possimus",
 	"Tags": [
 		{
 			"BaseObject": "perferendis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "voluptas",
+			"Description": "molestiae",
 			"Name": "Capacity"
 		}
 	],
