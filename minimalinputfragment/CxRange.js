@@ -1,5 +1,6 @@
 
-export const CXRANGEINPUTMIN = `fragment CXRANGEINPUTMIN on CxRange {
+const CXRANGEINPUTMIN = `fragment CXRANGEINPUTMIN on CxRange {
   Start
   End
 }`;
+module.exports = { CXRANGEINPUTMIN };

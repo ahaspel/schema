@@ -1,5 +1,5 @@
 
-export const CXRESOURCETYPEINPUTMIN = `fragment CXRESOURCETYPEINPUTMIN on CxResourceType {
+const CXRESOURCETYPEINPUTMIN = `fragment CXRESOURCETYPEINPUTMIN on CxResourceType {
   Family
   ResourceSubtypes {
     Id
@@ -8,3 +8,4 @@ export const CXRESOURCETYPEINPUTMIN = `fragment CXRESOURCETYPEINPUTMIN on CxReso
   Name
   Id
 }`;
+module.exports = { CXRESOURCETYPEINPUTMIN };

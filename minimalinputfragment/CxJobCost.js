@@ -1,5 +1,5 @@
 
-export const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
+const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
   CostCode {
     UnitCost {
       Unit {
@@ -18,3 +18,4 @@ export const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
   TotalAmount
   Id
 }`;
+module.exports = { CXJOBCOSTINPUTMIN };

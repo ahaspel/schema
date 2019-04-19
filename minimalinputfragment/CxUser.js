@@ -1,5 +1,5 @@
 
-export const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
+const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   Party {
     Id
   }
@@ -11,3 +11,4 @@ export const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   }
   Id
 }`;
+module.exports = { CXUSERINPUTMIN };

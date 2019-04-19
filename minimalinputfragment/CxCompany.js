@@ -1,5 +1,5 @@
 
-export const CXCOMPANYINPUTMIN = `fragment CXCOMPANYINPUTMIN on CxCompany {
+const CXCOMPANYINPUTMIN = `fragment CXCOMPANYINPUTMIN on CxCompany {
   CompanyType {
     Id
     _ObjectType: ObjectType
@@ -7,3 +7,4 @@ export const CXCOMPANYINPUTMIN = `fragment CXCOMPANYINPUTMIN on CxCompany {
   Name
   Id
 }`;
+module.exports = { CXCOMPANYINPUTMIN };

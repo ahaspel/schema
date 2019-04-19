@@ -1,5 +1,5 @@
 
-export const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
+const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   Priority {
     Id
     _ObjectType: ObjectType
@@ -43,3 +43,4 @@ export const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   }
   Id
 }`;
+module.exports = { CXJOBINPUTMIN };

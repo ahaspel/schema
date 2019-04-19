@@ -1,8 +1,9 @@
 
-export const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on CxApplicationLicense {
+const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on CxApplicationLicense {
   Id
   Expiration
   AllowedUsers
   AllowedWebUsers
   SerialNumber
 }`;
+module.exports = { CXAPPLICATIONLICENSEINPUTMIN };

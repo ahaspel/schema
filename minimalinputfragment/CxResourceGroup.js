@@ -1,5 +1,5 @@
 
-export const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroup {
+const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroup {
   Contact {
     Id
   }
@@ -16,3 +16,4 @@ export const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxRe
   }
   Id
 }`;
+module.exports = { CXRESOURCEGROUPINPUTMIN };

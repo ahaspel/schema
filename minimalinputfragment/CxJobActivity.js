@@ -1,5 +1,6 @@
 
-export const CXJOBACTIVITYINPUTMIN = `fragment CXJOBACTIVITYINPUTMIN on CxJobActivity {
+const CXJOBACTIVITYINPUTMIN = `fragment CXJOBACTIVITYINPUTMIN on CxJobActivity {
   Name
   Id
 }`;
+module.exports = { CXJOBACTIVITYINPUTMIN };

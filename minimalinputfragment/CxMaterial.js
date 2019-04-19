@@ -1,5 +1,5 @@
 
-export const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
+const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
   Inventory {
     Items {
     Id
@@ -16,3 +16,4 @@ export const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
   }
   Id
 }`;
+module.exports = { CXMATERIALINPUTMIN };

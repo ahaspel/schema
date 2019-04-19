@@ -1,5 +1,5 @@
 
-export const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
+const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
   Resource {
     Id
   }
@@ -15,3 +15,4 @@ export const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry 
   }
   Id
 }`;
+module.exports = { CXTIMEENTRYINPUTMIN };

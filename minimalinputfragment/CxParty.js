@@ -1,5 +1,6 @@
 
-export const CXPARTYINPUTMIN = `fragment CXPARTYINPUTMIN on CxParty {
+const CXPARTYINPUTMIN = `fragment CXPARTYINPUTMIN on CxParty {
   Name
   Id
 }`;
+module.exports = { CXPARTYINPUTMIN };

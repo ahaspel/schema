@@ -1,5 +1,5 @@
 
-export const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
+const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
   LastName
   FirstName
   Person {
@@ -18,3 +18,4 @@ export const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
   }
   Id
 }`;
+module.exports = { CXEMPLOYEEINPUTMIN };

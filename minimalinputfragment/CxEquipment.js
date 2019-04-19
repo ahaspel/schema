@@ -1,5 +1,5 @@
 
-export const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment {
+const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment {
   Model
   Make
   Owner {
@@ -15,3 +15,4 @@ export const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment 
   }
   Id
 }`;
+module.exports = { CXEQUIPMENTINPUTMIN };

@@ -1,5 +1,5 @@
 
-export const CXRESOURCEINPUTMIN = `fragment CXRESOURCEINPUTMIN on CxResource {
+const CXRESOURCEINPUTMIN = `fragment CXRESOURCEINPUTMIN on CxResource {
   ResourceType {
     Family
     ResourceSubtypes {
@@ -13,3 +13,4 @@ export const CXRESOURCEINPUTMIN = `fragment CXRESOURCEINPUTMIN on CxResource {
   }
   Id
 }`;
+module.exports = { CXRESOURCEINPUTMIN };

@@ -1,5 +1,5 @@
 
-export const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSubcontractor {
+const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSubcontractor {
   CompanyType {
     Id
     _ObjectType: ObjectType
@@ -7,3 +7,4 @@ export const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSu
   Name
   Id
 }`;
+module.exports = { CXSUBCONTRACTORINPUTMIN };

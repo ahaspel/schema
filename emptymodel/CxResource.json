@@ -6,7 +6,7 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Company",
+		"ObjectType": "Plant",
 		"Id": 0,
 		"Description": "",
 		"Name": "",
@@ -32,7 +32,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Group",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -72,7 +72,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -87,7 +87,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Crew",
+	"ObjectType": "Material",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

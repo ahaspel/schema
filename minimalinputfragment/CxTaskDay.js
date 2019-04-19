@@ -1,5 +1,5 @@
 
-export const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
+const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
   ParentId
   JobActivity {
     Id
@@ -13,3 +13,4 @@ export const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
   }
   Id
 }`;
+module.exports = { CXTASKDAYINPUTMIN };

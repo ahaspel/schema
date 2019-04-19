@@ -1,5 +1,5 @@
 
-export const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
+const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
   Id
   Street
   City
@@ -8,3 +8,4 @@ export const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
     _ObjectType: ObjectType
   }
 }`;
+module.exports = { CXADDRESSINPUTMIN };

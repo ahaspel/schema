@@ -1,5 +1,5 @@
 
-export const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
+const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
   Name
   Days {
     Day
@@ -8,3 +8,4 @@ export const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
   }
   Id
 }`;
+module.exports = { CXSHIFTINPUTMIN };

@@ -1,5 +1,5 @@
 
-export const CXVIRTUALRESOURCEINPUTMIN = `fragment CXVIRTUALRESOURCEINPUTMIN on CxVirtualResource {
+const CXVIRTUALRESOURCEINPUTMIN = `fragment CXVIRTUALRESOURCEINPUTMIN on CxVirtualResource {
   ResourceSubtype {
     Id
   }
@@ -7,3 +7,4 @@ export const CXVIRTUALRESOURCEINPUTMIN = `fragment CXVIRTUALRESOURCEINPUTMIN on 
     Id
   }
 }`;
+module.exports = { CXVIRTUALRESOURCEINPUTMIN };
