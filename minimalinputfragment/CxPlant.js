@@ -6,7 +6,8 @@ const CXPLANTINPUTMIN = `fragment CXPLANTINPUTMIN on CxPlant {
   }
   Id
 }`;
-module.exports = { CXPLANTINPUTMIN,
+module.exports = { fragment: CXPLANTINPUTMIN,
+                   fragmentName: 'CXPLANTINPUTMIN',
                    query:'cxPlants',
                    saveMutation :  'cxPlants_onSave',
                    deletionMutation :  'cxPlants_onDelete',

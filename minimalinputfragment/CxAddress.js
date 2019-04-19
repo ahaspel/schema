@@ -8,7 +8,8 @@ const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
     _ObjectType: ObjectType
   }
 }`;
-module.exports = { CXADDRESSINPUTMIN,
+module.exports = { fragment: CXADDRESSINPUTMIN,
+                   fragmentName: 'CXADDRESSINPUTMIN',
                    query:'cxAddresss',
                    saveMutation :  'cxAddresss_onSave',
                    deletionMutation :  'cxAddresss_onDelete',

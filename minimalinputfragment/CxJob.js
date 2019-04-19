@@ -43,7 +43,8 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   }
   Id
 }`;
-module.exports = { CXJOBINPUTMIN,
+module.exports = { fragment: CXJOBINPUTMIN,
+                   fragmentName: 'CXJOBINPUTMIN',
                    query:'cxJobs',
                    saveMutation :  'cxJobs_onSave',
                    deletionMutation :  'cxJobs_onDelete',

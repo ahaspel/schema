@@ -11,7 +11,8 @@ const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   }
   Id
 }`;
-module.exports = { CXUSERINPUTMIN,
+module.exports = { fragment: CXUSERINPUTMIN,
+                   fragmentName: 'CXUSERINPUTMIN',
                    query:'cxUsers',
                    saveMutation :  'cxUsers_onSave',
                    deletionMutation :  'cxUsers_onDelete',

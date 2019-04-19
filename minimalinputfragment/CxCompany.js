@@ -7,7 +7,8 @@ const CXCOMPANYINPUTMIN = `fragment CXCOMPANYINPUTMIN on CxCompany {
   Name
   Id
 }`;
-module.exports = { CXCOMPANYINPUTMIN,
+module.exports = { fragment: CXCOMPANYINPUTMIN,
+                   fragmentName: 'CXCOMPANYINPUTMIN',
                    query:'cxCompanys',
                    saveMutation :  'cxCompanys_onSave',
                    deletionMutation :  'cxCompanys_onDelete',

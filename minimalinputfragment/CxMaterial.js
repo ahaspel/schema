@@ -16,7 +16,8 @@ const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
   }
   Id
 }`;
-module.exports = { CXMATERIALINPUTMIN,
+module.exports = { fragment: CXMATERIALINPUTMIN,
+                   fragmentName: 'CXMATERIALINPUTMIN',
                    query:'cxMaterials',
                    saveMutation :  'cxMaterials_onSave',
                    deletionMutation :  'cxMaterials_onDelete',

@@ -7,7 +7,8 @@ const CXVIRTUALRESOURCEINPUTMIN = `fragment CXVIRTUALRESOURCEINPUTMIN on CxVirtu
     Id
   }
 }`;
-module.exports = { CXVIRTUALRESOURCEINPUTMIN,
+module.exports = { fragment: CXVIRTUALRESOURCEINPUTMIN,
+                   fragmentName: 'CXVIRTUALRESOURCEINPUTMIN',
                    query:'cxVirtualResources',
                    saveMutation :  'cxVirtualResources_onSave',
                    deletionMutation :  'cxVirtualResources_onDelete',

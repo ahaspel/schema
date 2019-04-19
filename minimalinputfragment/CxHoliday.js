@@ -4,7 +4,8 @@ const CXHOLIDAYINPUTMIN = `fragment CXHOLIDAYINPUTMIN on CxHoliday {
   Name
   Id
 }`;
-module.exports = { CXHOLIDAYINPUTMIN,
+module.exports = { fragment: CXHOLIDAYINPUTMIN,
+                   fragmentName: 'CXHOLIDAYINPUTMIN',
                    query:'cxHolidays',
                    saveMutation :  'cxHolidays_onSave',
                    deletionMutation :  'cxHolidays_onDelete',

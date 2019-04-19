@@ -18,7 +18,8 @@ const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
   TotalAmount
   Id
 }`;
-module.exports = { CXJOBCOSTINPUTMIN,
+module.exports = { fragment: CXJOBCOSTINPUTMIN,
+                   fragmentName: 'CXJOBCOSTINPUTMIN',
                    query:'cxJobCosts',
                    saveMutation :  'cxJobCosts_onSave',
                    deletionMutation :  'cxJobCosts_onDelete',

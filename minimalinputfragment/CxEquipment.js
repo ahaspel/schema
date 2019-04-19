@@ -15,7 +15,8 @@ const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment {
   }
   Id
 }`;
-module.exports = { CXEQUIPMENTINPUTMIN,
+module.exports = { fragment: CXEQUIPMENTINPUTMIN,
+                   fragmentName: 'CXEQUIPMENTINPUTMIN',
                    query:'cxEquipments',
                    saveMutation :  'cxEquipments_onSave',
                    deletionMutation :  'cxEquipments_onDelete',

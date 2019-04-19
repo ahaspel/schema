@@ -13,7 +13,8 @@ const CXRESOURCEINPUTMIN = `fragment CXRESOURCEINPUTMIN on CxResource {
   }
   Id
 }`;
-module.exports = { CXRESOURCEINPUTMIN,
+module.exports = { fragment: CXRESOURCEINPUTMIN,
+                   fragmentName: 'CXRESOURCEINPUTMIN',
                    query:'cxResources',
                    saveMutation :  'cxResources_onSave',
                    deletionMutation :  'cxResources_onDelete',

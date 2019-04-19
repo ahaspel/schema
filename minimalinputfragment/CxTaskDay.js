@@ -13,7 +13,8 @@ const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
   }
   Id
 }`;
-module.exports = { CXTASKDAYINPUTMIN,
+module.exports = { fragment: CXTASKDAYINPUTMIN,
+                   fragmentName: 'CXTASKDAYINPUTMIN',
                    query:'cxTaskDays',
                    saveMutation :  'cxTaskDays_onSave',
                    deletionMutation :  'cxTaskDays_onDelete',
