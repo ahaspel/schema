@@ -1,5 +1,5 @@
 
-fragment CXUSERINPUTMIN on CxUser {
+export const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   Party {
     Id
   }
@@ -10,4 +10,4 @@ fragment CXUSERINPUTMIN on CxUser {
     Id
   }
   Id
-}
+}`;

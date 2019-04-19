@@ -1,5 +1,5 @@
 
-fragment CXMATERIALINPUTMIN on CxMaterial {
+export const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
   Inventory {
     Items {
     Id
@@ -15,4 +15,4 @@ fragment CXMATERIALINPUTMIN on CxMaterial {
     Id
   }
   Id
-}
+}`;

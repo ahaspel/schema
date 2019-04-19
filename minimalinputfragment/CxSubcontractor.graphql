@@ -1,9 +1,9 @@
 
-fragment CXSUBCONTRACTORINPUTMIN on CxSubcontractor {
+export const CXSUBCONTRACTORINPUTMIN = `fragment CXSUBCONTRACTORINPUTMIN on CxSubcontractor {
   CompanyType {
     Id
     _ObjectType: ObjectType
   }
   Name
   Id
-}
+}`;

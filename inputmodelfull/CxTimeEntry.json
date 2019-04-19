@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 86,
-	"Minutes": 746,
+	"Hours": 534,
+	"Minutes": 602,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 698
+					"Quantity": 150
 				},
-				"Notes": "quisquam"
+				"Notes": "repellendus"
 			},
-			"Global": true,
-			"BaseObject": "accusamus",
+			"Global": false,
+			"BaseObject": "voluptatum",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "voluptas",
-			"Name": "officia"
+			"Description": "mollitia",
+			"Name": "deleniti"
 		}
 	],
 	"AuxiliaryResources": [
@@ -47,29 +47,29 @@
 	"IsVoid": false,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": -83.5503,
-		"Lng": -20.2547,
-		"Source": "Owner"
+		"Lat": -49.5363,
+		"Lng": -112.2194,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -56.8409,
-		"Lng": -108.9664,
+		"Lat": -1.0226,
+		"Lng": 85.7211,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 18
+		"Quantity": 722
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 95
+		"Quantity": 28
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "repellendus",
+	"Description": "molestiae",
 	"Tags": [
 		{
-			"BaseObject": "veritatis",
+			"BaseObject": "perferendis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "voluptatem",
+			"Description": "voluptas",
 			"Name": "Capacity"
 		}
 	],

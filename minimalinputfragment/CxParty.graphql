@@ -1,5 +1,5 @@
 
-fragment CXPARTYINPUTMIN on CxParty {
+export const CXPARTYINPUTMIN = `fragment CXPARTYINPUTMIN on CxParty {
   Name
   Id
-}
+}`;

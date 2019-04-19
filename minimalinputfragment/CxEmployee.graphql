@@ -1,5 +1,5 @@
 
-fragment CXEMPLOYEEINPUTMIN on CxEmployee {
+export const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
   LastName
   FirstName
   Person {
@@ -17,4 +17,4 @@ fragment CXEMPLOYEEINPUTMIN on CxEmployee {
     End
   }
   Id
-}
+}`;

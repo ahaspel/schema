@@ -1,5 +1,5 @@
 
-fragment CXEQUIPMENTINPUTMIN on CxEquipment {
+export const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment {
   Model
   Make
   Owner {
@@ -14,4 +14,4 @@ fragment CXEQUIPMENTINPUTMIN on CxEquipment {
     End
   }
   Id
-}
+}`;

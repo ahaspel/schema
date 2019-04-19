@@ -1,6 +1,6 @@
 
-fragment CXHOLIDAYINPUTMIN on CxHoliday {
+export const CXHOLIDAYINPUTMIN = `fragment CXHOLIDAYINPUTMIN on CxHoliday {
   Holiday
   Name
   Id
-}
+}`;

@@ -1,5 +1,5 @@
 
-fragment CXCOSTCODEINPUTMIN on CxCostCode {
+export const CXCOSTCODEINPUTMIN = `fragment CXCOSTCODEINPUTMIN on CxCostCode {
   UnitCost {
     Unit {
       Id
@@ -13,4 +13,4 @@ fragment CXCOSTCODEINPUTMIN on CxCostCode {
   }
   Name
   Id
-}
+}`;

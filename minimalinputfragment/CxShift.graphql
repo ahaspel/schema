@@ -1,5 +1,5 @@
 
-fragment CXSHIFTINPUTMIN on CxShift {
+export const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
   Name
   Days {
     Day
@@ -7,4 +7,4 @@ fragment CXSHIFTINPUTMIN on CxShift {
     End
   }
   Id
-}
+}`;

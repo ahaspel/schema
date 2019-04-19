@@ -1,5 +1,5 @@
 
-fragment CXADDRESSINPUTMIN on CxAddress {
+export const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
   Id
   Street
   City
@@ -7,4 +7,4 @@ fragment CXADDRESSINPUTMIN on CxAddress {
     Id
     _ObjectType: ObjectType
   }
-}
+}`;

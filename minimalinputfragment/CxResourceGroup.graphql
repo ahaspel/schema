@@ -1,5 +1,5 @@
 
-fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroup {
+export const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroup {
   Contact {
     Id
   }
@@ -15,4 +15,4 @@ fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroup {
     Id
   }
   Id
-}
+}`;

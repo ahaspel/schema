@@ -1,5 +1,5 @@
 
-fragment CXJOBINPUTMIN on CxJob {
+export const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   Priority {
     Id
     _ObjectType: ObjectType
@@ -42,4 +42,4 @@ fragment CXJOBINPUTMIN on CxJob {
     _ObjectType: ObjectType
   }
   Id
-}
+}`;

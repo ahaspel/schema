@@ -1,5 +1,5 @@
 
-fragment CXJOBCOSTINPUTMIN on CxJobCost {
+export const CXJOBCOSTINPUTMIN = `fragment CXJOBCOSTINPUTMIN on CxJobCost {
   CostCode {
     UnitCost {
       Unit {
@@ -17,4 +17,4 @@ fragment CXJOBCOSTINPUTMIN on CxJobCost {
   }
   TotalAmount
   Id
-}
+}`;

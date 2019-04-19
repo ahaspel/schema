@@ -1,5 +1,5 @@
 
-fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
+export const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
   Resource {
     Id
   }
@@ -14,4 +14,4 @@ fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
     End
   }
   Id
-}
+}`;

@@ -1,5 +1,5 @@
 
-fragment CXTASKDAYINPUTMIN on CxTaskDay {
+export const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
   ParentId
   JobActivity {
     Id
@@ -12,4 +12,4 @@ fragment CXTASKDAYINPUTMIN on CxTaskDay {
     End
   }
   Id
-}
+}`;
