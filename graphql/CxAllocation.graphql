@@ -4,10 +4,12 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
+  ActualTaskDays: [IxTaskDay]
+  VirtualTaskDays: [IxTaskDay]
+  ResourceQuantities: [IxResourceQuantity]
   DisplayName: String
   Cancelled: Boolean
   Completed: Boolean
-  VirtualResources: [IxVirtualResource]
   Resources: [IxResource]
   ResourceIds: [Int]
   Crew: IxResourceGroup
@@ -48,16 +50,24 @@ input FilterInput {
 }
 
 type IxActionStatus {
-  ParentType: IxTypedItem__String__
+  ActionStatusType: IxActionStatusActionStatusType
   Completed: Boolean
   Cancelled: Boolean
   BaseObject: String
   ObjectType: IxActionStatusObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   ForeColor: String
   BackColor: String
+}
+
+enum IxActionStatusActionStatusType {
+  Active
+  Inactive
+  Completed
+  Cancelled
+  Overallocated
 }
 
 enum IxActionStatusObjectType {
@@ -84,8 +94,8 @@ type IxAttribute__String__ {
   AttributeId: Int
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -98,8 +108,8 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
@@ -119,8 +129,8 @@ type IxCostCode {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxCostCodeObjectType {
@@ -133,8 +143,8 @@ type IxDocument {
   FullName: String
   ObjectType: IxDocumentObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxDocumentObjectType {
@@ -144,8 +154,8 @@ enum IxDocumentObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -178,8 +188,8 @@ type IxJob {
   EstimatedEquipmentHours: Float
   ObjectType: IxJobObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   AccountCode: String
   Attachments: [IxDocument]
   HasAttachments: Boolean
@@ -199,8 +209,8 @@ type IxJobActivity {
   Priority: Int
   ObjectType: IxJobActivityObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   ForeColor: String
@@ -219,8 +229,8 @@ type IxJobCost {
   BaseObject: String
   ObjectType: IxJobCostObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxJobCostObjectType {
@@ -241,8 +251,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxLookupValueObjectType {
@@ -278,8 +288,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -294,8 +304,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxQuantity {
@@ -317,8 +327,8 @@ type IxResource {
   ResourceSubtype: IxResourceSubtype
   ObjectType: IxResourceObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -334,8 +344,8 @@ type IxResourceBlock {
   CurrentLifespan: IxRange
   ObjectType: IxResourceBlockObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -354,8 +364,8 @@ type IxResourceGroup {
   ResourceSubtype: IxResourceSubtype
   ObjectType: IxResourceGroupObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -377,11 +387,19 @@ enum IxResourceObjectType {
   Material
 }
 
+type IxResourceQuantity {
+  Id: ID!
+  Supplier: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Quantity: IxQuantity
+}
+
 type IxResourceSubtype {
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -395,8 +413,8 @@ type IxResourceType {
   BaseObject: String
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -417,8 +435,8 @@ type IxShift {
   UseHolidays: Boolean
   ObjectType: IxShiftObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxShiftDay {
@@ -435,24 +453,21 @@ enum IxShiftObjectType {
 
 type IxTaskDay {
   ParentId: Int
-  Virtual: Boolean
   ShiftSupervisor: Boolean
+  Filled: Boolean
   ActionStatus: IxActionStatus
-  Quantity: IxQuantity
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
+  ResourceQuantity: IxResourceQuantity
   JobActivity: IxJobActivity
   Job: IxJob
   Location: IxLocation
   ActionType: IxTaskDayActionType
-  VirtualResources: [IxVirtualResource]
   Resources: [IxResource]
   Completed: Boolean
   Cancelled: Boolean
   ObjectType: IxTaskDayObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   DisplayName: String
@@ -472,19 +487,8 @@ enum IxTaskDayActionType {
 }
 
 enum IxTaskDayObjectType {
-  TaskDay
-}
-
-type IxTypedItem__String__ {
-  BaseObject: String
-  ObjectType: IxTypedItemStringObjectType
-  Id: ID!
-  Description: String
-  Name: String
-}
-
-enum IxTypedItemStringObjectType {
-  TypedItem
+  ActualTaskDay
+  VirtualTaskDay
 }
 
 type IxUnit {
@@ -494,8 +498,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {
@@ -516,25 +520,6 @@ enum IxUnitUnitType {
   Volume
   Money
   Self
-}
-
-type IxVirtualResource {
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  ObjectType: IxVirtualResourceObjectType
-  Id: ID
-  Description: String
-  Name: String
-  DisplayName: String
-}
-
-enum IxVirtualResourceObjectType {
-  VirtualResource
-  Crew
-  Employee
-  Equipment
-  Material
 }
 
 extend type Mutation {

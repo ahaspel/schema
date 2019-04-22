@@ -70,8 +70,8 @@ type IxAttribute__String__ {
   AttributeId: Int
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -79,8 +79,8 @@ input IxAttribute__String__Input {
   AttributeId: Int!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -90,15 +90,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -123,8 +123,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxLookupValueDO {
@@ -159,8 +159,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -170,8 +170,8 @@ input IxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]
 }
@@ -186,15 +186,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Description: String
   Name: String
+  Description: String
 }
 
 extend type Mutation {

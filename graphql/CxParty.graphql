@@ -63,8 +63,8 @@ type IxAttribute__String__ {
   AttributeId: Int
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -72,8 +72,8 @@ input IxAttribute__String__Input {
   AttributeId: Int!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -83,15 +83,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Id: ID!
   Email: String!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -116,8 +116,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxLookupValueDO {
@@ -150,15 +150,15 @@ enum IxLookupValueObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
   Id: ID!
   PhoneNumber: String!
-  Description: String
   Name: String
+  Description: String
 }
 
 extend type Mutation {

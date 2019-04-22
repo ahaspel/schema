@@ -61,8 +61,8 @@ type IxAttribute__String__ {
   AttributeId: Int
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -70,8 +70,8 @@ input IxAttribute__String__Input {
   AttributeId: Int!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -84,8 +84,8 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
@@ -102,8 +102,8 @@ enum IxCompanyObjectType {
 type IxEmail {
   Id: ID!
   Email: String
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -128,8 +128,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxLookupValueDO {
@@ -169,8 +169,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -189,8 +189,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   Id: ID!
   PhoneNumber: String
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
@@ -213,8 +213,8 @@ type IxResource {
   ResourceSubtype: IxResourceSubtype
   ObjectType: IxResourceObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -230,8 +230,8 @@ type IxResourceBlock {
   CurrentLifespan: IxRange
   ObjectType: IxResourceBlockObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -240,8 +240,8 @@ input IxResourceBlockInput {
   CurrentLifespan: IxRangeInput!
   ObjectType: IxResourceBlockObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -263,8 +263,8 @@ enum IxResourceObjectType {
 type IxResourceSubtype {
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeDO {
@@ -282,8 +282,8 @@ type IxResourceType {
   BaseObject: String
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -305,8 +305,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

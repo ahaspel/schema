@@ -1,0 +1,51 @@
+type CxActionStatus {
+  ActionStatusType: CxActionStatusActionStatusType
+  Completed: Boolean
+  Cancelled: Boolean
+  ObjectType: CxActionStatusObjectType
+  ForeColor: String
+  BackColor: String
+  Name: String
+  Id: ID!
+  Description: String
+  BaseObject: String
+}
+
+enum CxActionStatusActionStatusType {
+  Active
+  Inactive
+  Completed
+  Cancelled
+  Overallocated
+}
+
+input CxActionStatusInput {
+  ActionStatusType: CxActionStatusActionStatusType
+  Completed: Boolean
+  Cancelled: Boolean
+  ObjectType: CxActionStatusObjectType
+  ForeColor: String
+  BackColor: String
+  Name: String!
+  Id: ID!
+  Description: String
+  BaseObject: String
+}
+
+enum CxActionStatusObjectType {
+  ActionStatus
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+}
+
+extend type Mutation {
+  cxActionStatuss_onSave(data: [CxActionStatusInput], objectType: String = "ActionStatus", operation: String = "edit"): [CxActionStatus]
+  cxActionStatuss_onDelete(data: [String], objectType: String = "ActionStatus", operation: String = "delete"): [CxActionStatus]
+}
+
+extend type Query {
+  cxActionStatuss(filters: [FilterInput], objectType: String = "ActionStatus"): [CxActionStatus]
+}
