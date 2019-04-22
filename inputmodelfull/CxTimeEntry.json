@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 372,
-	"Minutes": 840,
+	"Hours": 274,
+	"Minutes": 24,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 502
+					"Quantity": 233
 				},
-				"Notes": "molestiae"
+				"Notes": "voluptatibus"
 			},
-			"Global": false,
-			"BaseObject": "molestiae",
+			"Global": true,
+			"BaseObject": "ducimus",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "consequuntur",
-			"Name": "consequuntur"
+			"Description": "quisquam",
+			"Name": "temporibus"
 		}
 	],
 	"AuxiliaryResources": [
@@ -47,29 +47,29 @@
 	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": 27.543,
-		"Lng": 127.0133,
-		"Source": "Action"
+		"Lat": -11.2859,
+		"Lng": 83.2926,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -15.6243,
-		"Lng": 160.6347,
-		"Source": "GPSService"
+		"Lat": 18.2885,
+		"Lng": -135.2462,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 685
+		"Quantity": 511
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 270
+		"Quantity": 714
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,14 +90,14 @@
 			"Id": 1
 		}
 	],
-	"Description": "voluptatem",
+	"Description": "officiis",
 	"Tags": [
 		{
-			"BaseObject": "veniam",
+			"BaseObject": "laborum",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "provident",
+			"Description": "minima",
 			"Name": "Capacity"
 		}
 	],
