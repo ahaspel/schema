@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 778,
-	"Minutes": 113,
+	"Hours": 91,
+	"Minutes": 655,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 518
+					"Quantity": 165
 				},
-				"Notes": "consequatur"
+				"Notes": "eveniet"
 			},
 			"Global": true,
-			"BaseObject": "debitis",
+			"BaseObject": "dolorum",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "commodi",
-			"Description": "tempore"
+			"Name": "quaerat",
+			"Description": "mollitia"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,17 +45,17 @@
 		"Id": 1
 	},
 	"IsVoid": false,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 65.4227,
-		"Lng": 90.0995,
-		"Source": "Owner"
+		"Lat": -54.3303,
+		"Lng": -104.8238,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 11.3231,
-		"Lng": 125.3418,
-		"Source": "GPSService"
+		"Lat": -78.8363,
+		"Lng": -171.4664,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "PunchedIn",
@@ -63,13 +63,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 437
+		"Quantity": 97
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 737
+		"Quantity": 18
 	},
 	"Approvals": [
 		{
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "voluptatum",
+	"Description": "debitis",
 	"Tags": [
 		{
-			"BaseObject": "consequatur",
+			"BaseObject": "voluptas",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "explicabo"
+			"Description": "molestiae"
 		}
 	],
 	"__typename": "CxTimeEntry"

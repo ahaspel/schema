@@ -7,9 +7,9 @@
 	},
 	"TaskDays": [
 		{
-			"ParentId": 991,
-			"ShiftSupervisor": true,
-			"Filled": true,
+			"ParentId": 171,
+			"ShiftSupervisor": false,
+			"Filled": false,
 			"ActionStatus": {
 				"Id": 1
 			},
@@ -28,7 +28,7 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 711
+					"Quantity": 147
 				}
 			},
 			"JobActivity": {
@@ -39,25 +39,25 @@
 			},
 			"Location": {
 				"Address": {
-					"Street": "ducimus",
-					"StreetDetails": "beatae",
+					"Street": "pariatur",
+					"StreetDetails": "officia",
 					"State": {
 						"Id": 1
 					},
-					"City": "recusandae",
-					"ZipCode": "veniam",
+					"City": "aut",
+					"ZipCode": "dolores",
 					"Geocode": {
-						"Lat": 73.6427,
-						"Lng": -88.1763,
-						"Source": "Action"
+						"Lat": -64.1857,
+						"Lng": -160.6028,
+						"Source": "GPSService"
 					},
 					"Id": 0,
 					"ObjectType": "Address"
 				},
-				"Name": "dolorem",
-				"Description": "libero"
+				"Name": "consequatur",
+				"Description": "delectus"
 			},
-			"ActionType": "Equipment",
+			"ActionType": "Group",
 			"Resources": [
 				{
 					"Id": 6
@@ -67,23 +67,23 @@
 			"Cancelled": true,
 			"ObjectType": "ActualTaskDay",
 			"Id": 0,
-			"Name": "quibusdam",
-			"Description": "inventore",
+			"Name": "assumenda",
+			"Description": "incidunt",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T08:00:00",
 				"End": "2018-12-14T08:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "laboriosam",
+					"BaseObject": "doloribus",
 					"AttributeId": 2,
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "perferendis"
+					"Description": "reiciendis"
 				}
 			],
-			"DisplayName": "perspiciatis"
+			"DisplayName": "expedita"
 		}
 	],
 	"Crew": {
@@ -95,16 +95,16 @@
 	},
 	"ObjectType": "Allocation",
 	"Id": 0,
-	"Description": "aperiam",
-	"Name": "minima",
+	"Description": "voluptatibus",
+	"Name": "dolore",
 	"Tags": [
 		{
-			"BaseObject": "voluptatem",
+			"BaseObject": "commodi",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "consequatur"
+			"Description": "incidunt"
 		}
 	],
 	"__typename": "CxAllocation"

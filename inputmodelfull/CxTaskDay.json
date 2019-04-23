@@ -1,10 +1,10 @@
 {
-	"ParentId": 562,
-	"ShiftSupervisor": true,
+	"ParentId": 149,
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -25,10 +25,10 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 747
+			"Quantity": 834
 		}
 	},
-	"Completed": false,
+	"Completed": true,
 	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 1
@@ -38,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "itaque",
+	"Description": "perspiciatis",
 	"Tags": [
 		{
-			"BaseObject": "incidunt",
+			"BaseObject": "consequuntur",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "tempore"
+			"Description": "libero"
 		}
 	],
 	"__typename": "CxTaskDay"
