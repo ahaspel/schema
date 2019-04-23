@@ -1,48 +1,36 @@
 {
 	"Capacities": [
 		{
-			"Material": {
-				"Id": 29
-			},
 			"Id": 0,
 			"ResourceType": {
-				"Family": "Equipment",
-				"ResourceSubtypes": [
-					{
-						"Id": 29
-					}
-				],
-				"MoveVehicle": false,
-				"BaseObject": "praesentium",
-				"ObjectType": "ResourceType",
-				"Id": 0,
-				"Description": "voluptatum",
-				"Name": "explicabo",
-				"Tags": [
-					{
-						"BaseObject": "beatae",
-						"AttributeId": 2,
-						"ObjectType": "Attribute",
-						"Id": 0,
-						"Description": "delectus",
-						"Name": "Capacity"
-					}
-				]
+				"Id": 1
+			},
+			"ResourceSubtype": {
+				"Id": 29
 			},
 			"Quantity": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 890
-			},
-			"QuantityRemaining": {
-				"Unit": {
-					"Id": 1
-				},
-				"Quantity": 499
+				"Quantity": 650
 			}
 		}
 	],
+	"DefaultCapacity": {
+		"Id": 0,
+		"ResourceType": {
+			"Id": 1
+		},
+		"ResourceSubtype": {
+			"Id": 29
+		},
+		"Quantity": {
+			"Unit": {
+				"Id": 1
+			},
+			"Quantity": 738
+		}
+	},
 	"ObjectType": "Plant",
 	"CompanyType": {
 		"Id": 1
@@ -52,36 +40,36 @@
 			"Id": 1
 		}
 	],
-	"AccountCode": "doloremque",
+	"AccountCode": "magnam",
 	"PhoneNumbers": [
 		{
 			"Id": 0,
-			"PhoneNumber": "tenetur",
-			"Description": "consectetur",
-			"Name": "voluptatem"
+			"PhoneNumber": "voluptates",
+			"Name": "distinctio",
+			"Description": "consequuntur"
 		}
 	],
 	"Emails": [
 		{
 			"Id": 0,
-			"Email": "Wiley.Kshlerin24@yahoo.com",
-			"Description": "reiciendis",
-			"Name": "deserunt"
+			"Email": "Rosendo36@hotmail.com",
+			"Name": "asperiores",
+			"Description": "soluta"
 		}
 	],
-	"Name": "facilis",
+	"Name": "soluta",
 	"Address": {
-		"Street": "quidem",
-		"StreetDetails": "perspiciatis",
+		"Street": "consequuntur",
+		"StreetDetails": "facere",
 		"State": {
 			"Id": 1
 		},
-		"City": "in",
-		"ZipCode": "voluptatum",
+		"City": "fugiat",
+		"ZipCode": "occaecati",
 		"Geocode": {
-			"Lat": -65.9138,
-			"Lng": 43.4752,
-			"Source": "Owner"
+			"Lat": -41.1572,
+			"Lng": 169.7046,
+			"Source": "Action"
 		},
 		"Id": 0,
 		"ObjectType": "Address"
@@ -92,15 +80,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "nostrum",
+	"Description": "dolorum",
 	"Tags": [
 		{
-			"BaseObject": "incidunt",
+			"BaseObject": "officiis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "consequuntur",
-			"Name": "Capacity"
+			"Name": "Capacity",
+			"Description": "occaecati"
 		}
 	],
 	"__typename": "CxPlant"

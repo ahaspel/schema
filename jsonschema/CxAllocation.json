@@ -5,8 +5,15 @@
 		"IxActionStatus": {
 			"type": "object",
 			"properties": {
-				"ParentType": {
-					"$ref": "#/definitions/IxTypedItem__String__"
+				"ActionStatusType": {
+					"type": "string",
+					"enum": [
+						"Active",
+						"Inactive",
+						"Completed",
+						"Cancelled",
+						"Overallocated"
+					]
 				},
 				"Completed": {
 					"type": "boolean"
@@ -26,10 +33,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"ForeColor": {
@@ -107,10 +114,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -154,10 +161,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Address": {
@@ -215,10 +222,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -253,10 +260,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -279,10 +286,10 @@
 					"type": "string",
 					"format": "email"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -397,10 +404,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"AccountCode": {
@@ -478,10 +485,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -536,10 +543,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -603,10 +610,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -660,10 +667,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Address": {
@@ -693,10 +700,10 @@
 				"PhoneNumber": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -774,10 +781,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -833,10 +840,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -896,10 +903,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -937,6 +944,31 @@
 				"Id"
 			]
 		},
+		"IxResourceQuantity": {
+			"type": "object",
+			"properties": {
+				"Supplier": {
+					"$ref": "#/definitions/IxCompany"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Quantity": {
+					"$ref": "#/definitions/IxQuantity"
+				}
+			},
+			"required": [
+				"Id",
+				"Supplier",
+				"ResourceSubtype"
+			]
+		},
 		"IxResourceSubtype": {
 			"superRequired": [
 				"Id",
@@ -953,10 +985,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1003,10 +1035,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -1049,10 +1081,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1095,23 +1127,17 @@
 				"ParentId": {
 					"type": "integer"
 				},
-				"Virtual": {
+				"ShiftSupervisor": {
 					"type": "boolean"
 				},
-				"ShiftSupervisor": {
+				"Filled": {
 					"type": "boolean"
 				},
 				"ActionStatus": {
 					"$ref": "#/definitions/IxActionStatus"
 				},
-				"Quantity": {
-					"$ref": "#/definitions/IxQuantity"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
+				"ResourceQuantity": {
+					"$ref": "#/definitions/IxResourceQuantity"
 				},
 				"JobActivity": {
 					"$ref": "#/definitions/IxJobActivity"
@@ -1137,12 +1163,6 @@
 						"Move"
 					]
 				},
-				"VirtualResources": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxVirtualResource"
-					}
-				},
 				"Resources": {
 					"type": "array",
 					"items": {
@@ -1158,16 +1178,17 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"TaskDay"
+						"ActualTaskDay",
+						"VirtualTaskDay"
 					]
 				},
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -1186,32 +1207,6 @@
 			"required": [
 				"ActionStatus",
 				"JobActivity",
-				"Id"
-			]
-		},
-		"IxTypedItem__String__": {
-			"type": "object",
-			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"TypedItem"
-					]
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				}
-			},
-			"required": [
 				"Id"
 			]
 		},
@@ -1251,10 +1246,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1279,57 +1274,15 @@
 				"Unit",
 				"Cost"
 			]
-		},
-		"IxVirtualResource": {
-			"type": "object",
-			"properties": {
-				"Owner": {
-					"$ref": "#/definitions/IxCompany"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"VirtualResource",
-						"Crew",
-						"Employee",
-						"Equipment",
-						"Material"
-					]
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"DisplayName": {
-					"type": "string"
-				}
-			}
 		}
 	},
 	"immutable": [
 		"ActionType",
-		"Cancelled",
-		"Completed",
 		"DisplayName",
-		"Divisions",
 		"Dto",
 		"Job",
 		"JobCosts",
-		"Location",
-		"ResourceIds",
-		"Resources",
-		"VirtualResources"
+		"Location"
 	],
 	"type": "object",
 	"properties": {
@@ -1354,30 +1307,6 @@
 		"DisplayName": {
 			"type": "string"
 		},
-		"Cancelled": {
-			"type": "boolean"
-		},
-		"Completed": {
-			"type": "boolean"
-		},
-		"VirtualResources": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxVirtualResource"
-			}
-		},
-		"Resources": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxResource"
-			}
-		},
-		"ResourceIds": {
-			"type": "array",
-			"items": {
-				"type": "integer"
-			}
-		},
 		"Crew": {
 			"$ref": "#/definitions/IxResourceGroup"
 		},
@@ -1398,12 +1327,6 @@
 				"Group",
 				"Move"
 			]
-		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
 		},
 		"ObjectType": {
 			"type": "string",
@@ -1428,6 +1351,8 @@
 		}
 	},
 	"required": [
-		"Id"
+		"Id",
+		"JobActivity",
+		"TaskDays"
 	]
 }

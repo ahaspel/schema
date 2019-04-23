@@ -4,16 +4,28 @@
 	"JobActivity": {
 		"Id": 0
 	},
-	"ObjectType": "TaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Resources": [],
-	"VirtualResources": [],
-	"Quantity": {
-		"Unit": {
+	"ResourceQuantity": {
+		"Supplier": {
 			"Id": 0
 		},
-		"Quantity": 0
+		"Id": 0,
+		"ResourceType": {
+			"Id": 0
+		},
+		"ResourceSubtype": {
+			"Id": 0
+		},
+		"Quantity": {
+			"Unit": {
+				"Id": 0
+			},
+			"Quantity": 0
+		}
 	},
-	"Virtual": false,
+	"Completed": false,
+	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 0
 	},

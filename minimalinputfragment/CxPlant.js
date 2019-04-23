@@ -4,6 +4,7 @@ const CXPLANTINPUTMIN = `fragment CXPLANTINPUTMIN on CxPlant {
     Id
     _ObjectType: ObjectType
   }
+  Name
   Id
 }`;
 module.exports = { fragment: CXPLANTINPUTMIN,

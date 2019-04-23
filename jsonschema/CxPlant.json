@@ -66,10 +66,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -82,26 +82,23 @@
 		"IxCapacity": {
 			"type": "object",
 			"properties": {
-				"Material": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
 				"Id": {
 					"type": "integer"
 				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
 				},
-				"Quantity": {
-					"$ref": "#/definitions/IxQuantity"
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
 				},
-				"QuantityRemaining": {
+				"Quantity": {
 					"$ref": "#/definitions/IxQuantity"
 				}
 			},
 			"required": [
-				"Material",
 				"Id",
-				"Quantity"
+				"Quantity",
+				"ResourceSubtype"
 			]
 		},
 		"IxEmail": {
@@ -118,10 +115,10 @@
 					"type": "string",
 					"format": "email"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -188,10 +185,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -230,10 +227,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Address": {
@@ -263,10 +260,10 @@
 				"PhoneNumber": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -306,10 +303,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -356,10 +353,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -370,8 +367,6 @@
 				}
 			},
 			"required": [
-				"Family",
-				"ResourceSubtypes",
 				"Id"
 			]
 		},
@@ -411,10 +406,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -423,6 +418,9 @@
 			]
 		}
 	},
+	"immutable": [
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"Capacities": {
@@ -430,6 +428,9 @@
 			"items": {
 				"$ref": "#/definitions/IxCapacity"
 			}
+		},
+		"DefaultCapacity": {
+			"$ref": "#/definitions/IxCapacity"
 		},
 		"ObjectType": {
 			"type": "string",
@@ -462,7 +463,8 @@
 			}
 		},
 		"Name": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
@@ -488,6 +490,7 @@
 	},
 	"required": [
 		"CompanyType",
-		"Id"
+		"Id",
+		"Name"
 	]
 }

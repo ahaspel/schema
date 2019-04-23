@@ -1,23 +1,35 @@
 {
-	"ParentId": 988,
+	"ParentId": 562,
 	"ShiftSupervisor": true,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "TaskDay",
+	"ObjectType": "ActualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
 		}
 	],
-	"VirtualResources": [],
-	"Quantity": {
-		"Unit": {
+	"ResourceQuantity": {
+		"Supplier": {
+			"Id": 2
+		},
+		"Id": 0,
+		"ResourceType": {
 			"Id": 1
 		},
-		"Quantity": 844
+		"ResourceSubtype": {
+			"Id": 29
+		},
+		"Quantity": {
+			"Unit": {
+				"Id": 1
+			},
+			"Quantity": 747
+		}
 	},
-	"Virtual": false,
+	"Completed": false,
+	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -26,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "repellendus",
+	"Description": "itaque",
 	"Tags": [
 		{
-			"BaseObject": "voluptas",
+			"BaseObject": "incidunt",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "accusantium",
-			"Name": "Capacity"
+			"Name": "Capacity",
+			"Description": "tempore"
 		}
 	],
 	"__typename": "CxTaskDay"

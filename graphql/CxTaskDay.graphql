@@ -10,10 +10,6 @@ type CxTaskDay {
   Divisions: [IxLookupValue]
   Resources: [IxResource]
   ResourceQuantity: IxResourceQuantity
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Quantity: IxQuantity
-  Virtual: Boolean
   DisplayName: String
   Completed: Boolean
   Cancelled: Boolean
@@ -44,10 +40,8 @@ input CxTaskDayInput {
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
   ResourceQuantity: IxResourceQuantityInput
-  ResourceType: IxResourceTypeInput
-  ResourceSubtype: IxResourceSubtypeDO
-  Quantity: IxQuantityInput
-  Virtual: Boolean
+  Completed: Boolean
+  Cancelled: Boolean
   ActionStatus: IxActionStatusDO
   CurrentLifespan: IxRangeInput!
   Id: ID!
@@ -399,17 +393,17 @@ enum IxResourceObjectType {
 }
 
 type IxResourceQuantity {
-  Id: ID!
   Supplier: IxCompany
+  Id: ID!
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Quantity: IxQuantity
 }
 
 input IxResourceQuantityInput {
-  Id: ID!
   Supplier: IxCompanyDO!
-  ResourceType: IxResourceTypeInput
+  Id: ID!
+  ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO!
   Quantity: IxQuantityInput
 }
@@ -441,23 +435,15 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
+input IxResourceTypeDO {
+  Id: ID!
+}
+
 enum IxResourceTypeFamily {
   Labor
   Equipment
   Material
   Group
-}
-
-input IxResourceTypeInput {
-  Family: IxResourceTypeFamily!
-  ResourceSubtypes: [IxResourceSubtypeDO]!
-  MoveVehicle: Boolean
-  BaseObject: String
-  ObjectType: IxResourceTypeObjectType
-  Id: ID!
-  Name: String!
-  Description: String
-  Tags: [IxAttribute__String__Input]
 }
 
 enum IxResourceTypeObjectType {

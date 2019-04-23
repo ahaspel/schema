@@ -6,10 +6,10 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Company",
+		"ObjectType": "Subcontractor",
 		"Id": 0,
-		"Description": "",
 		"Name": "",
+		"Description": "",
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
@@ -32,14 +32,14 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Group",
+		"Family": "Labor",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
 		"ObjectType": "ResourceType",
 		"Id": 0,
-		"Description": "",
 		"Name": "",
+		"Description": "",
 		"Tags": []
 	},
 	"ResourceSubtype": {
@@ -72,7 +72,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -87,7 +87,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Crew",
+	"ObjectType": "Material",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

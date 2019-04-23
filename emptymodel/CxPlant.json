@@ -1,5 +1,20 @@
 {
 	"Capacities": [],
+	"DefaultCapacity": {
+		"Id": 0,
+		"ResourceType": {
+			"Id": 0
+		},
+		"ResourceSubtype": {
+			"Id": 0
+		},
+		"Quantity": {
+			"Unit": {
+				"Id": 0
+			},
+			"Quantity": 0
+		}
+	},
 	"ObjectType": "Plant",
 	"CompanyType": {
 		"Id": 0
@@ -20,7 +35,7 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "Owner"
+			"Source": "Action"
 		},
 		"Id": 0,
 		"ObjectType": "Address"

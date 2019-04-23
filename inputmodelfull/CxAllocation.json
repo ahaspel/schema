@@ -1,3 +1,111 @@
 {
+	"JobActivity": {
+		"Id": 156
+	},
+	"Shift": {
+		"Id": 0
+	},
+	"TaskDays": [
+		{
+			"ParentId": 991,
+			"ShiftSupervisor": true,
+			"Filled": true,
+			"ActionStatus": {
+				"Id": 1
+			},
+			"ResourceQuantity": {
+				"Supplier": {
+					"Id": 2
+				},
+				"Id": 0,
+				"ResourceType": {
+					"Id": 1
+				},
+				"ResourceSubtype": {
+					"Id": 29
+				},
+				"Quantity": {
+					"Unit": {
+						"Id": 1
+					},
+					"Quantity": 711
+				}
+			},
+			"JobActivity": {
+				"Id": 156
+			},
+			"Job": {
+				"Id": 0
+			},
+			"Location": {
+				"Address": {
+					"Street": "ducimus",
+					"StreetDetails": "beatae",
+					"State": {
+						"Id": 1
+					},
+					"City": "recusandae",
+					"ZipCode": "veniam",
+					"Geocode": {
+						"Lat": 73.6427,
+						"Lng": -88.1763,
+						"Source": "Action"
+					},
+					"Id": 0,
+					"ObjectType": "Address"
+				},
+				"Name": "dolorem",
+				"Description": "libero"
+			},
+			"ActionType": "Equipment",
+			"Resources": [
+				{
+					"Id": 6
+				}
+			],
+			"Completed": true,
+			"Cancelled": true,
+			"ObjectType": "ActualTaskDay",
+			"Id": 0,
+			"Name": "quibusdam",
+			"Description": "inventore",
+			"CurrentLifespan": {
+				"Start": "2018-01-14T08:00:00",
+				"End": "2018-12-14T08:00:00"
+			},
+			"Tags": [
+				{
+					"BaseObject": "laboriosam",
+					"AttributeId": 2,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Name": "Capacity",
+					"Description": "perferendis"
+				}
+			],
+			"DisplayName": "perspiciatis"
+		}
+	],
+	"Crew": {
+		"Id": 0
+	},
+	"CurrentLifespan": {
+		"Start": "2018-01-14T08:00:00",
+		"End": "2018-12-14T08:00:00"
+	},
+	"ObjectType": "Allocation",
+	"Id": 0,
+	"Description": "aperiam",
+	"Name": "minima",
+	"Tags": [
+		{
+			"BaseObject": "voluptatem",
+			"AttributeId": 2,
+			"ObjectType": "Attribute",
+			"Id": 0,
+			"Name": "Capacity",
+			"Description": "consequatur"
+		}
+	],
 	"__typename": "CxAllocation"
 }

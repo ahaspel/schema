@@ -4,18 +4,10 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
-  ActualTaskDays: [IxTaskDay]
-  VirtualTaskDays: [IxTaskDay]
-  ResourceQuantities: [IxResourceQuantity]
   DisplayName: String
-  Cancelled: Boolean
-  Completed: Boolean
-  Resources: [IxResource]
-  ResourceIds: [Int]
   Crew: IxResourceGroup
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
-  Divisions: [IxLookupValue]
   ObjectType: CxAllocationObjectType
   Id: ID!
   Description: String
@@ -36,8 +28,17 @@ enum CxAllocationActionType {
   Move
 }
 
-input CxAllocationDO {
+input CxAllocationInput {
+  JobActivity: IxJobActivityDO!
+  Shift: IxShiftDO
+  TaskDays: [IxTaskDayInput]!
+  Crew: IxResourceGroupDO
+  CurrentLifespan: IxRangeInput
+  ObjectType: CxAllocationObjectType
   Id: ID!
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__Input]
 }
 
 enum CxAllocationObjectType {
@@ -70,6 +71,10 @@ enum IxActionStatusActionStatusType {
   Overallocated
 }
 
+input IxActionStatusDO {
+  Id: ID!
+}
+
 enum IxActionStatusObjectType {
   ActionStatus
 }
@@ -85,6 +90,17 @@ type IxAddress {
   ObjectType: IxAddressObjectType
 }
 
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
 enum IxAddressObjectType {
   Address
 }
@@ -92,6 +108,15 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: Int!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -115,6 +140,10 @@ type IxCompany {
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
+}
+
+input IxCompanyDO {
+  Id: ID!
 }
 
 enum IxCompanyObjectType {
@@ -159,6 +188,12 @@ type IxEmail {
 }
 
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -217,6 +252,10 @@ type IxJobActivity {
   BackColor: String
 }
 
+input IxJobActivityDO {
+  Id: ID!
+}
+
 enum IxJobActivityObjectType {
   JobActivity
 }
@@ -237,6 +276,10 @@ enum IxJobCostObjectType {
   JobCost
 }
 
+input IxJobDO {
+  Id: ID!
+}
+
 enum IxJobObjectType {
   Job
 }
@@ -247,12 +290,22 @@ type IxLocation {
   Description: String
 }
 
+input IxLocationInput {
+  Address: IxAddressInput!
+  Name: String
+  Description: String
+}
+
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
   Name: String
   Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -313,9 +366,20 @@ type IxQuantity {
   Quantity: Float
 }
 
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
 type IxRange {
   Start: String
   End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
   Duration: String
 }
 
@@ -353,6 +417,10 @@ enum IxResourceBlockObjectType {
   ResourceBlock
 }
 
+input IxResourceDO {
+  Id: ID!
+}
+
 type IxResourceGroup {
   Contact: IxParty
   ResourceBlocks: [IxResourceBlock]
@@ -376,6 +444,10 @@ type IxResourceGroup {
   BackColor: String
 }
 
+input IxResourceGroupDO {
+  Id: ID!
+}
+
 enum IxResourceGroupObjectType {
   Crew
 }
@@ -388,11 +460,19 @@ enum IxResourceObjectType {
 }
 
 type IxResourceQuantity {
-  Id: ID!
   Supplier: IxCompany
+  Id: ID!
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Quantity: IxQuantity
+}
+
+input IxResourceQuantityInput {
+  Supplier: IxCompanyDO!
+  Id: ID!
+  ResourceType: IxResourceTypeDO
+  ResourceSubtype: IxResourceSubtypeDO!
+  Quantity: IxQuantityInput
 }
 
 type IxResourceSubtype {
@@ -400,6 +480,10 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+}
+
+input IxResourceSubtypeDO {
+  Id: ID!
 }
 
 enum IxResourceSubtypeObjectType {
@@ -416,6 +500,10 @@ type IxResourceType {
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
+}
+
+input IxResourceTypeDO {
+  Id: ID!
 }
 
 enum IxResourceTypeFamily {
@@ -445,6 +533,10 @@ type IxShiftDay {
   Start: String
   End: String
   Included: Boolean
+}
+
+input IxShiftDO {
+  Id: ID!
 }
 
 enum IxShiftObjectType {
@@ -486,6 +578,28 @@ enum IxTaskDayActionType {
   Move
 }
 
+input IxTaskDayInput {
+  ParentId: Int
+  ShiftSupervisor: Boolean
+  Filled: Boolean
+  ActionStatus: IxActionStatusDO!
+  ResourceQuantity: IxResourceQuantityInput
+  JobActivity: IxJobActivityDO!
+  Job: IxJobDO
+  Location: IxLocationInput
+  ActionType: IxTaskDayActionType
+  Resources: [IxResourceDO]
+  Completed: Boolean
+  Cancelled: Boolean
+  ObjectType: IxTaskDayObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttribute__String__Input]
+  DisplayName: String
+}
+
 enum IxTaskDayObjectType {
   ActualTaskDay
   VirtualTaskDay
@@ -508,6 +622,10 @@ type IxUnitCost {
   Notes: String
 }
 
+input IxUnitDO {
+  Id: ID!
+}
+
 enum IxUnitObjectType {
   Unit
 }
@@ -523,7 +641,7 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxAllocations_onSave(data: [CxAllocationDO], objectType: String = "Allocation", operation: String = "edit"): [CxAllocation]
+  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit"): [CxAllocation]
   cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
 }
 

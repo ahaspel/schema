@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 274,
-	"Minutes": 24,
+	"Hours": 778,
+	"Minutes": 113,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 233
+					"Quantity": 518
 				},
-				"Notes": "voluptatibus"
+				"Notes": "consequatur"
 			},
 			"Global": true,
-			"BaseObject": "ducimus",
+			"BaseObject": "debitis",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Description": "quisquam",
-			"Name": "temporibus"
+			"Name": "commodi",
+			"Description": "tempore"
 		}
 	],
 	"AuxiliaryResources": [
@@ -47,29 +47,29 @@
 	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": -11.2859,
-		"Lng": 83.2926,
+		"Lat": 65.4227,
+		"Lng": 90.0995,
 		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 18.2885,
-		"Lng": -135.2462,
-		"Source": "Owner"
+		"Lat": 11.3231,
+		"Lng": 125.3418,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 511
+		"Quantity": 437
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 714
+		"Quantity": 737
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "officiis",
+	"Description": "voluptatum",
 	"Tags": [
 		{
-			"BaseObject": "laborum",
+			"BaseObject": "consequatur",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Description": "minima",
-			"Name": "Capacity"
+			"Name": "Capacity",
+			"Description": "explicabo"
 		}
 	],
 	"__typename": "CxTimeEntry"

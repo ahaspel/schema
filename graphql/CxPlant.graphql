@@ -1,5 +1,6 @@
 type CxPlant {
   Capacities: [IxCapacity]
+  DefaultCapacity: IxCapacity
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValue
   Contacts: [IxParty]
@@ -16,13 +17,14 @@ type CxPlant {
 
 input CxPlantInput {
   Capacities: [IxCapacityInput]
+  DefaultCapacity: IxCapacityInput
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
-  Name: String
+  Name: String!
   Address: IxAddressInput
   Id: ID!
   Divisions: [IxLookupValueDO]
@@ -88,57 +90,17 @@ enum IxAttributeStringObjectType {
 }
 
 type IxCapacity {
-  Material: IxResourceSubtype
-  Id: ID
-  Supplier: IxCompany
+  Id: ID!
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Quantity: IxQuantity
 }
 
 input IxCapacityInput {
-  Material: IxResourceSubtypeDO!
-  Id: ID
-  Supplier: IxCompanyInput
-  ResourceType: IxResourceTypeInput
-  ResourceSubtype: IxResourceSubtypeDO
+  Id: ID!
+  ResourceType: IxResourceTypeDO
+  ResourceSubtype: IxResourceSubtypeDO!
   Quantity: IxQuantityInput!
-}
-
-type IxCompany {
-  CompanyType: IxLookupValue
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxCompanyObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Address: IxAddress
-  Tags: [IxAttribute__String__]
-  AccountCode: String
-  Divisions: [IxLookupValue]
-  Contacts: [IxParty]
-}
-
-input IxCompanyInput {
-  CompanyType: IxLookupValueDO!
-  Emails: [IxEmailInput]
-  PhoneNumbers: [IxPhoneNumberInput]
-  ObjectType: IxCompanyObjectType
-  Id: ID!
-  Name: String!
-  Description: String
-  Address: IxAddressInput
-  Tags: [IxAttribute__String__Input]
-  AccountCode: String
-  Divisions: [IxLookupValueDO]
-  Contacts: [IxPartyDO]
-}
-
-enum IxCompanyObjectType {
-  Company
-  Subcontractor
-  Plant
 }
 
 type IxEmail {
@@ -281,23 +243,15 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
+input IxResourceTypeDO {
+  Id: ID!
+}
+
 enum IxResourceTypeFamily {
   Labor
   Equipment
   Material
   Group
-}
-
-input IxResourceTypeInput {
-  Family: IxResourceTypeFamily!
-  ResourceSubtypes: [IxResourceSubtypeDO]!
-  MoveVehicle: Boolean
-  BaseObject: String
-  ObjectType: IxResourceTypeObjectType
-  Id: ID!
-  Name: String!
-  Description: String
-  Tags: [IxAttribute__String__Input]
 }
 
 enum IxResourceTypeObjectType {

@@ -1,0 +1,56 @@
+{
+	"id": "https://congistics.com/schema/CxActionStatus",
+	"title": "com.congistics.cbrd.action.CxActionStatus",
+	"definitions": {},
+	"immutable": [
+		"Dto"
+	],
+	"type": "object",
+	"properties": {
+		"ActionStatusType": {
+			"type": "string",
+			"enum": [
+				"Active",
+				"Inactive",
+				"Completed",
+				"Cancelled",
+				"Overallocated"
+			]
+		},
+		"Completed": {
+			"type": "boolean"
+		},
+		"Cancelled": {
+			"type": "boolean"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"ActionStatus"
+			]
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"BaseObject": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"Id",
+		"Name"
+	]
+}
