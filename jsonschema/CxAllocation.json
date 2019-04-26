@@ -1304,9 +1304,6 @@
 				"$ref": "#/definitions/IxTaskDay"
 			}
 		},
-		"DisplayName": {
-			"type": "string"
-		},
 		"Crew": {
 			"$ref": "#/definitions/IxResourceGroup"
 		},
@@ -1333,6 +1330,12 @@
 			"enum": [
 				"Allocation"
 			]
+		},
+		"DisplayName": {
+			"type": "string"
+		},
+		"ActionStatus": {
+			"$ref": "#/definitions/IxActionStatus"
 		},
 		"Id": {
 			"type": "integer"

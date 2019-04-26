@@ -21,7 +21,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -32,7 +32,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Group",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -87,7 +87,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Employee",
+	"ObjectType": "Crew",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

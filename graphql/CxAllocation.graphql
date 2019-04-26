@@ -4,11 +4,12 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
-  DisplayName: String
   Crew: IxResourceGroup
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
+  DisplayName: String
+  ActionStatus: IxActionStatus
   Id: ID!
   Description: String
   Name: String
@@ -35,6 +36,7 @@ input CxAllocationInput {
   Crew: IxResourceGroupDO
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
+  ActionStatus: IxActionStatusDO
   Id: ID!
   Description: String
   Name: String

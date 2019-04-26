@@ -7,9 +7,9 @@
 	},
 	"TaskDays": [
 		{
-			"ParentId": 171,
+			"ParentId": 615,
 			"ShiftSupervisor": false,
-			"Filled": false,
+			"Filled": true,
 			"ActionStatus": {
 				"Id": 1
 			},
@@ -28,7 +28,7 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 147
+					"Quantity": 335
 				}
 			},
 			"JobActivity": {
@@ -39,51 +39,51 @@
 			},
 			"Location": {
 				"Address": {
-					"Street": "pariatur",
-					"StreetDetails": "officia",
+					"Street": "consequuntur",
+					"StreetDetails": "consequatur",
 					"State": {
 						"Id": 1
 					},
-					"City": "aut",
-					"ZipCode": "dolores",
+					"City": "unde",
+					"ZipCode": "excepturi",
 					"Geocode": {
-						"Lat": -64.1857,
-						"Lng": -160.6028,
-						"Source": "GPSService"
+						"Lat": 75.8999,
+						"Lng": 156.7442,
+						"Source": "Owner"
 					},
 					"Id": 0,
 					"ObjectType": "Address"
 				},
-				"Name": "consequatur",
-				"Description": "delectus"
+				"Name": "voluptate",
+				"Description": "praesentium"
 			},
-			"ActionType": "Group",
+			"ActionType": "Crew",
 			"Resources": [
 				{
 					"Id": 6
 				}
 			],
 			"Completed": true,
-			"Cancelled": true,
+			"Cancelled": false,
 			"ObjectType": "ActualTaskDay",
 			"Id": 0,
-			"Name": "assumenda",
-			"Description": "incidunt",
+			"Name": "officia",
+			"Description": "cupiditate",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T08:00:00",
 				"End": "2018-12-14T08:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "doloribus",
+					"BaseObject": "perspiciatis",
 					"AttributeId": 2,
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "reiciendis"
+					"Description": "praesentium"
 				}
 			],
-			"DisplayName": "expedita"
+			"DisplayName": "consequuntur"
 		}
 	],
 	"Crew": {
@@ -94,17 +94,20 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"ObjectType": "Allocation",
+	"ActionStatus": {
+		"Id": 1
+	},
 	"Id": 0,
-	"Description": "voluptatibus",
-	"Name": "dolore",
+	"Description": "doloremque",
+	"Name": "occaecati",
 	"Tags": [
 		{
-			"BaseObject": "commodi",
+			"BaseObject": "facilis",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "incidunt"
+			"Description": "labore"
 		}
 	],
 	"__typename": "CxAllocation"
