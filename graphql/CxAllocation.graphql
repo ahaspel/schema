@@ -1,4 +1,5 @@
 type CxAllocation {
+  Name: String
   Location: IxLocation
   Job: IxJob
   JobActivity: IxJobActivity
@@ -10,9 +11,9 @@ type CxAllocation {
   ObjectType: CxAllocationObjectType
   DisplayName: String
   ActionStatus: IxActionStatus
+  ResourceQuantity: IxResourceQuantity
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -30,6 +31,7 @@ enum CxAllocationActionType {
 }
 
 input CxAllocationInput {
+  Name: String
   JobActivity: IxJobActivityDO!
   Shift: IxShiftDO
   TaskDays: [IxTaskDayInput]!
@@ -37,9 +39,9 @@ input CxAllocationInput {
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
   ActionStatus: IxActionStatusDO
+  ResourceQuantity: IxResourceQuantityInput
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttribute__String__Input]
 }
 

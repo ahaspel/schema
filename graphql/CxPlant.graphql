@@ -8,7 +8,7 @@ type CxPlant {
   PhoneNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   Name: String
-  Address: IxAddress
+  Address: IxAddress-1
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -25,7 +25,7 @@ input CxPlantInput {
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!
-  Address: IxAddressInput
+  Address: IxAddress-1Input
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
@@ -52,7 +52,18 @@ type IxAddress {
   ObjectType: IxAddressObjectType
 }
 
-input IxAddressInput {
+type IxAddress-1 {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddress1ObjectType
+}
+
+input IxAddress-1Input {
   Street: String!
   StreetDetails: String
   State: IxLookupValueDO!
@@ -60,7 +71,11 @@ input IxAddressInput {
   ZipCode: String
   Geocode: IxGeocodeInput
   Id: ID!
-  ObjectType: IxAddressObjectType
+  ObjectType: IxAddress1ObjectType
+}
+
+enum IxAddress1ObjectType {
+  Address
 }
 
 enum IxAddressObjectType {

@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 990,
-	"Minutes": 382,
+	"Hours": 181,
+	"Minutes": 468,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 159
+					"Quantity": 770
 				},
-				"Notes": "quisquam"
+				"Notes": "voluptatum"
 			},
 			"Global": true,
-			"BaseObject": "delectus",
+			"BaseObject": "veritatis",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "facere",
-			"Description": "labore"
+			"Name": "deserunt",
+			"Description": "perferendis"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,32 +44,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
-	"Billable": false,
+	"IsVoid": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": 22.3527,
-		"Lng": -18.7055,
+		"Lat": 17.7032,
+		"Lng": 0.2198,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 43.4814,
-		"Lng": -134.8873,
+		"Lat": -43.6606,
+		"Lng": 23.4996,
 		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 179
+		"Quantity": 115
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 347
+		"Quantity": 185
 	},
 	"Approvals": [
 		{
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "excepturi",
+	"Description": "aliquid",
 	"Tags": [
 		{
-			"BaseObject": "perspiciatis",
+			"BaseObject": "maxime",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "molestiae"
+			"Description": "voluptas"
 		}
 	],
 	"__typename": "CxTimeEntry"

@@ -9,7 +9,10 @@
 				"City",
 				"State"
 			],
-			"type": "object",
+			"type": [
+				"object",
+				"null"
+			],
 			"properties": {
 				"Street": {
 					"type": "string",

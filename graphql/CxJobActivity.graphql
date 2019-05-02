@@ -3,10 +3,10 @@ type CxJobActivity {
   Name: String
   Completed: Boolean
   Priority: Int
-  CurrentLifespan: IxRange
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
+  CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -17,10 +17,10 @@ input CxJobActivityInput {
   Name: String!
   Completed: Boolean
   Priority: Int
-  CurrentLifespan: IxRangeInput
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
+  CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String

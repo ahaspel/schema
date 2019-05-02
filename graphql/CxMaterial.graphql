@@ -27,8 +27,6 @@ input CxMaterialInput {
   ObjectType: CxMaterialObjectType
   CurrentLifespan: IxRangeInput
   Inventory: IxInventoryInput!
-  Quantity: IxQuantityInput
-  QuantityRemaining: IxQuantityInput
   Unit: IxUnitDO!
   Reusable: Boolean!
   Owner: IxCompanyDO
@@ -233,11 +231,6 @@ type IxPhoneNumber {
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
-}
-
-input IxQuantityInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
 }
 
 type IxRange {

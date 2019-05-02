@@ -1,4 +1,5 @@
 {
+	"Name": "voluptatibus",
 	"JobActivity": {
 		"Id": 156
 	},
@@ -7,8 +8,8 @@
 	},
 	"TaskDays": [
 		{
-			"ParentId": 615,
-			"ShiftSupervisor": false,
+			"ParentId": 879,
+			"ShiftSupervisor": true,
 			"Filled": true,
 			"ActionStatus": {
 				"Id": 1
@@ -28,7 +29,7 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 335
+					"Quantity": 776
 				}
 			},
 			"JobActivity": {
@@ -39,51 +40,51 @@
 			},
 			"Location": {
 				"Address": {
-					"Street": "consequuntur",
-					"StreetDetails": "consequatur",
+					"Street": "eaque",
+					"StreetDetails": "provident",
 					"State": {
 						"Id": 1
 					},
-					"City": "unde",
-					"ZipCode": "excepturi",
+					"City": "sed",
+					"ZipCode": "officia",
 					"Geocode": {
-						"Lat": 75.8999,
-						"Lng": 156.7442,
-						"Source": "Owner"
+						"Lat": -51.4632,
+						"Lng": 68.8668,
+						"Source": "GPSService"
 					},
 					"Id": 0,
 					"ObjectType": "Address"
 				},
-				"Name": "voluptate",
-				"Description": "praesentium"
+				"Name": "assumenda",
+				"Description": "aliquam"
 			},
-			"ActionType": "Crew",
+			"ActionType": "Subcontractor",
 			"Resources": [
 				{
 					"Id": 6
 				}
 			],
-			"Completed": true,
-			"Cancelled": false,
-			"ObjectType": "ActualTaskDay",
+			"Completed": false,
+			"Cancelled": true,
+			"ObjectType": "VirtualTaskDay",
 			"Id": 0,
-			"Name": "officia",
-			"Description": "cupiditate",
+			"Name": "quisquam",
+			"Description": "voluptatibus",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T08:00:00",
 				"End": "2018-12-14T08:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "perspiciatis",
+					"BaseObject": "consequuntur",
 					"AttributeId": 2,
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "praesentium"
+					"Description": "libero"
 				}
 			],
-			"DisplayName": "consequuntur"
+			"DisplayName": "voluptatem"
 		}
 	],
 	"Crew": {
@@ -97,17 +98,34 @@
 	"ActionStatus": {
 		"Id": 1
 	},
+	"ResourceQuantity": {
+		"Supplier": {
+			"Id": 2
+		},
+		"Id": 0,
+		"ResourceType": {
+			"Id": 1
+		},
+		"ResourceSubtype": {
+			"Id": 29
+		},
+		"Quantity": {
+			"Unit": {
+				"Id": 1
+			},
+			"Quantity": 22
+		}
+	},
 	"Id": 0,
-	"Description": "doloremque",
-	"Name": "occaecati",
+	"Description": "veritatis",
 	"Tags": [
 		{
-			"BaseObject": "facilis",
+			"BaseObject": "consequuntur",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "labore"
+			"Description": "consequuntur"
 		}
 	],
 	"__typename": "CxAllocation"

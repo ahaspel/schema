@@ -1,6 +1,6 @@
 {
 	"id": "https://congistics.com/schema/CxEmployee",
-	"title": "com.congistics.cbrd.party.CxEmployee",
+	"title": "com.congistics.cbrd.resource.CxEmployee",
 	"definitions": {
 		"IxAddress": {
 			"superRequired": [
@@ -200,13 +200,15 @@
 					"$ref": "#/definitions/IxAddress"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
+				"Name",
 				"Address"
 			]
 		},
@@ -694,8 +696,6 @@
 		"FirstName",
 		"Id",
 		"LastName",
-		"Owner",
-		"Person",
 		"ResourceSubtype"
 	]
 }

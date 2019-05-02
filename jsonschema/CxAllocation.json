@@ -1286,6 +1286,9 @@
 	],
 	"type": "object",
 	"properties": {
+		"Name": {
+			"type": "string"
+		},
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
 		},
@@ -1337,13 +1340,13 @@
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
 		},
+		"ResourceQuantity": {
+			"$ref": "#/definitions/IxResourceQuantity"
+		},
 		"Id": {
 			"type": "integer"
 		},
 		"Description": {
-			"type": "string"
-		},
-		"Name": {
 			"type": "string"
 		},
 		"Tags": {

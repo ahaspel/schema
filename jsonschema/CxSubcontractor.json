@@ -48,6 +48,49 @@
 				"Id"
 			]
 		},
+		"IxAddress-1": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"Street": {
+					"type": "string",
+					"minLength": 1
+				},
+				"StreetDetails": {
+					"type": "string"
+				},
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"City": {
+					"type": "string",
+					"minLength": 1
+				},
+				"ZipCode": {
+					"type": "string"
+				},
+				"Geocode": {
+					"$ref": "#/definitions/IxGeocode"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Address"
+					]
+				}
+			},
+			"required": [
+				"Street",
+				"State",
+				"City",
+				"Id"
+			]
+		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -375,7 +418,7 @@
 			"minLength": 1
 		},
 		"Address": {
-			"$ref": "#/definitions/IxAddress"
+			"$ref": "#/definitions/IxAddress-1"
 		},
 		"Id": {
 			"type": "integer"

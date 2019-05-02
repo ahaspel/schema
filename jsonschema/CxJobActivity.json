@@ -127,9 +127,6 @@
 		"Priority": {
 			"type": "integer"
 		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
-		},
 		"ForeColor": {
 			"type": "string"
 		},
@@ -141,6 +138,9 @@
 			"enum": [
 				"JobActivity"
 			]
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"
