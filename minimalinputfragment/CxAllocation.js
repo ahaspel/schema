@@ -4,12 +4,6 @@ const CXALLOCATIONINPUTMIN = `fragment CXALLOCATIONINPUTMIN on CxAllocation {
     Id
   }
   TaskDays {
-    ActionStatus {
-      Id
-    }
-    JobActivity {
-      Id
-    }
     Id
   }
   Id

@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 181,
-	"Minutes": 468,
+	"Hours": 60,
+	"Minutes": 450,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 770
+					"Quantity": 85
 				},
-				"Notes": "voluptatum"
+				"Notes": "facilis"
 			},
-			"Global": true,
-			"BaseObject": "veritatis",
-			"ObjectType": "CostCode",
+			"Global": false,
+			"BaseObject": "occaecati",
 			"Id": 0,
-			"Name": "deserunt",
-			"Description": "perferendis"
+			"ObjectType": "CostCode",
+			"Name": "voluptatibus",
+			"Description": "voluptatum"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,32 +44,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
-	"Billable": true,
+	"IsVoid": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 17.7032,
-		"Lng": 0.2198,
-		"Source": "Action"
+		"Lat": -10.7584,
+		"Lng": -76.0702,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -43.6606,
-		"Lng": 23.4996,
-		"Source": "Owner"
+		"Lat": -54.6023,
+		"Lng": -34.4512,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 115
+		"Quantity": 479
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 185
+		"Quantity": 731
 	},
 	"Approvals": [
 		{
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "aliquid",
+	"Description": "dolore",
 	"Tags": [
 		{
-			"BaseObject": "maxime",
+			"BaseObject": "architecto",
 			"AttributeId": 2,
-			"ObjectType": "Attribute",
 			"Id": 0,
+			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "voluptas"
+			"Description": "veritatis"
 		}
 	],
 	"__typename": "CxTimeEntry"

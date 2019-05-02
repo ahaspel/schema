@@ -48,49 +48,6 @@
 				"Id"
 			]
 		},
-		"IxAddress-1": {
-			"type": [
-				"object",
-				"null"
-			],
-			"properties": {
-				"Street": {
-					"type": "string",
-					"minLength": 1
-				},
-				"StreetDetails": {
-					"type": "string"
-				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
-				},
-				"City": {
-					"type": "string",
-					"minLength": 1
-				},
-				"ZipCode": {
-					"type": "string"
-				},
-				"Geocode": {
-					"$ref": "#/definitions/IxGeocode"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Address"
-					]
-				}
-			},
-			"required": [
-				"Street",
-				"State",
-				"City",
-				"Id"
-			]
-		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -100,14 +57,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -178,6 +135,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -202,9 +162,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -236,6 +193,9 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -244,9 +204,6 @@
 						"Subcontractor",
 						"Plant"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
@@ -338,7 +295,7 @@
 			"minLength": 1
 		},
 		"Address": {
-			"$ref": "#/definitions/IxAddress-1"
+			"$ref": "#/definitions/IxAddress"
 		},
 		"Id": {
 			"type": "integer"
