@@ -5,6 +5,10 @@ const CXALLOCATIONINPUTMIN = `fragment CXALLOCATIONINPUTMIN on CxAllocation {
   }
   TaskDays {
     Id
+    CurrentLifespan {
+      Start
+      End
+    }
   }
   Id
 }`;

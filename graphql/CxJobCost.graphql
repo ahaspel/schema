@@ -35,8 +35,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -45,8 +45,8 @@ input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
+  Id: ID!
   Name: String!
   Description: String
 }
@@ -70,8 +70,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
+  Id: ID!
   Name: String
   Description: String
 }

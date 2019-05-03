@@ -1,19 +1,64 @@
 {
-	"Name": "consequuntur",
+	"Name": "placeat",
 	"JobActivity": {
 		"Id": 156
 	},
 	"Shift": {
-		"Id": 0
+		"Id": 1
 	},
 	"TaskDays": [
 		{
-			"Id": 0
+			"ParentId": 0,
+			"ShiftSupervisor": true,
+			"ActionStatus": {
+				"Id": 1
+			},
+			"ResourceQuantity": {
+				"Supplier": {
+					"Id": 2
+				},
+				"Id": 0,
+				"ResourceType": {
+					"Id": 1
+				},
+				"ResourceSubtype": {
+					"Id": 29
+				},
+				"Quantity": {
+					"Unit": {
+						"Id": 1
+					},
+					"Quantity": 618
+				}
+			},
+			"JobActivity": {
+				"Id": 156
+			},
+			"Resources": [
+				{
+					"Id": 6
+				}
+			],
+			"Id": 0,
+			"Name": "incidunt",
+			"Description": "cumque",
+			"CurrentLifespan": {
+				"Start": "2018-01-14T08:00:00",
+				"End": "2018-12-14T08:00:00"
+			},
+			"Tags": [
+				{
+					"BaseObject": "consequuntur",
+					"AttributeId": 2,
+					"ObjectType": "Attribute",
+					"Id": 0,
+					"Name": "Capacity",
+					"Description": "excepturi"
+				}
+			]
 		}
 	],
-	"Crew": {
-		"Id": 0
-	},
+	"CrewId": 0,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -22,34 +67,16 @@
 	"ActionStatus": {
 		"Id": 1
 	},
-	"ResourceQuantity": {
-		"Supplier": {
-			"Id": 2
-		},
-		"Id": 0,
-		"ResourceType": {
-			"Id": 1
-		},
-		"ResourceSubtype": {
-			"Id": 29
-		},
-		"Quantity": {
-			"Unit": {
-				"Id": 1
-			},
-			"Quantity": 458
-		}
-	},
 	"Id": 0,
-	"Description": "occaecati",
+	"Description": "consequuntur",
 	"Tags": [
 		{
-			"BaseObject": "perspiciatis",
+			"BaseObject": "sapiente",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "repudiandae"
+			"Description": "perspiciatis"
 		}
 	],
 	"__typename": "CxAllocation"

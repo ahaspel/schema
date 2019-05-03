@@ -59,8 +59,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -68,8 +68,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -82,8 +82,8 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxCompanyObjectType
+  Id: ID!
   Name: String
   Description: String
   Address: IxAddress
@@ -126,8 +126,8 @@ type IxLocation {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -167,8 +167,8 @@ type IxMoney {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
   Address: IxAddress
@@ -211,8 +211,8 @@ type IxResource {
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  Id: ID!
   ObjectType: IxResourceObjectType
+  Id: ID!
   Name: String
   Description: String
   DisplayName: String
@@ -228,8 +228,8 @@ type IxResource {
 type IxResourceBlock {
   Resource: IxResource
   CurrentLifespan: IxRange
-  Id: ID!
   ObjectType: IxResourceBlockObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -238,8 +238,8 @@ type IxResourceBlock {
 input IxResourceBlockInput {
   Resource: IxResourceDO!
   CurrentLifespan: IxRangeInput!
-  Id: ID!
   ObjectType: IxResourceBlockObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -261,8 +261,8 @@ enum IxResourceObjectType {
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -280,8 +280,8 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -303,8 +303,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
+  Id: ID!
   Name: String
   Description: String
 }

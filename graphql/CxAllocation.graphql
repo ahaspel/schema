@@ -5,13 +5,12 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
-  Crew: IxResourceGroup
+  CrewId: Int
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
   DisplayName: String
   ActionStatus: IxActionStatus
-  ResourceQuantity: IxResourceQuantity
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -34,12 +33,11 @@ input CxAllocationInput {
   Name: String
   JobActivity: IxJobActivityDO!
   Shift: IxShiftDO
-  TaskDays: [IxTaskDayDO]!
-  Crew: IxResourceGroupDO
+  TaskDays: [IxTaskDayInput]!
+  CrewId: Int
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
   ActionStatus: IxActionStatusDO
-  ResourceQuantity: IxResourceQuantityInput
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -59,8 +57,8 @@ type IxActionStatus {
   Completed: Boolean
   Cancelled: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxActionStatusObjectType
+  Id: ID!
   Name: String
   Description: String
   ForeColor: String
@@ -101,8 +99,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: Int
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -110,8 +108,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: Int!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -124,8 +122,8 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxCompanyObjectType
+  Id: ID!
   Name: String
   Description: String
   Address: IxAddress
@@ -149,8 +147,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -163,8 +161,8 @@ type IxDocument {
   Attached: Boolean
   FilePath: String
   FullName: String
-  Id: ID!
   ObjectType: IxDocumentObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -208,8 +206,8 @@ type IxJob {
   TotalCost: IxMoney
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
-  Id: ID!
   ObjectType: IxJobObjectType
+  Id: ID!
   Name: String
   Description: String
   AccountCode: String
@@ -229,8 +227,8 @@ type IxJobActivity {
   ParentId: Int
   Completed: Boolean
   Priority: Int
-  Id: ID!
   ObjectType: IxJobActivityObjectType
+  Id: ID!
   Name: String
   Description: String
   CurrentLifespan: IxRange
@@ -253,8 +251,8 @@ type IxJobCost {
   TotalAmount: Float
   CompletedAmount: Float
   BaseObject: String
-  Id: ID!
   ObjectType: IxJobCostObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -275,8 +273,8 @@ type IxLocation {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -312,8 +310,8 @@ type IxMoney {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
   Address: IxAddress
@@ -362,8 +360,8 @@ type IxResource {
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  Id: ID!
   ObjectType: IxResourceObjectType
+  Id: ID!
   Name: String
   Description: String
   DisplayName: String
@@ -376,49 +374,8 @@ type IxResource {
   BackColor: String
 }
 
-type IxResourceBlock {
-  Resource: IxResource
-  CurrentLifespan: IxRange
+input IxResourceDO {
   Id: ID!
-  ObjectType: IxResourceBlockObjectType
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-enum IxResourceBlockObjectType {
-  ResourceBlock
-}
-
-type IxResourceGroup {
-  Contact: IxParty
-  ResourceBlocks: [IxResourceBlock]
-  Count: Int
-  Temporary: Boolean
-  UnitCost: IxUnitCost
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Id: ID!
-  ObjectType: IxResourceGroupObjectType
-  Name: String
-  Description: String
-  DisplayName: String
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Divisions: [IxLookupValue]
-  AccountCode: String
-  Location: IxLocation
-  ForeColor: String
-  BackColor: String
-}
-
-input IxResourceGroupDO {
-  Id: ID!
-}
-
-enum IxResourceGroupObjectType {
-  Crew
 }
 
 enum IxResourceObjectType {
@@ -445,8 +402,8 @@ input IxResourceQuantityInput {
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -464,8 +421,8 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -490,8 +447,8 @@ type IxShift {
   Days: [IxShiftDay]
   Default: Boolean
   UseHolidays: Boolean
-  Id: ID!
   ObjectType: IxShiftObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -525,8 +482,8 @@ type IxTaskDay {
   Resources: [IxResource]
   Completed: Boolean
   Cancelled: Boolean
-  Id: ID!
   ObjectType: IxTaskDayObjectType
+  Id: ID!
   Name: String
   Description: String
   CurrentLifespan: IxRange
@@ -547,8 +504,18 @@ enum IxTaskDayActionType {
   Move
 }
 
-input IxTaskDayDO {
+input IxTaskDayInput {
+  ParentId: Int
+  ShiftSupervisor: Boolean
+  ActionStatus: IxActionStatusDO
+  ResourceQuantity: IxResourceQuantityInput
+  JobActivity: IxJobActivityDO
+  Resources: [IxResourceDO]
   Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRangeInput!
+  Tags: [IxAttribute__String__Input]
 }
 
 enum IxTaskDayObjectType {
@@ -561,8 +528,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
+  Id: ID!
   Name: String
   Description: String
 }

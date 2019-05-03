@@ -6,8 +6,8 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
+		"ObjectType": "Company",
 		"Id": 0,
-		"ObjectType": "Plant",
 		"Name": "",
 		"Description": "",
 		"Address": {
@@ -21,7 +21,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "Action"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -32,12 +32,12 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Equipment",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
-		"Id": 0,
 		"ObjectType": "ResourceType",
+		"Id": 0,
 		"Name": "",
 		"Description": "",
 		"Tags": []
@@ -72,7 +72,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"Id": 0,
 			"ObjectType": "Address"

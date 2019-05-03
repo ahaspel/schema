@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 60,
-	"Minutes": 450,
+	"Hours": 843,
+	"Minutes": 273,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 85
+					"Quantity": 286
 				},
-				"Notes": "facilis"
+				"Notes": "occaecati"
 			},
 			"Global": false,
-			"BaseObject": "occaecati",
-			"Id": 0,
+			"BaseObject": "laborum",
 			"ObjectType": "CostCode",
-			"Name": "voluptatibus",
-			"Description": "voluptatum"
+			"Id": 0,
+			"Name": "aliquam",
+			"Description": "labore"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,31 +45,31 @@
 		"Id": 1
 	},
 	"IsVoid": true,
-	"Billable": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": -10.7584,
-		"Lng": -76.0702,
-		"Source": "GPSService"
+		"Lat": -81.0794,
+		"Lng": -76.7431,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -54.6023,
-		"Lng": -34.4512,
+		"Lat": 6.1352,
+		"Lng": -126.6791,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 479
+		"Quantity": 980
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 731
+		"Quantity": 176
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "dolore",
+	"Description": "consectetur",
 	"Tags": [
 		{
-			"BaseObject": "architecto",
+			"BaseObject": "voluptatibus",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "veritatis"
+			"Description": "sapiente"
 		}
 	],
 	"__typename": "CxTimeEntry"

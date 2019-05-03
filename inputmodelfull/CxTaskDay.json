@@ -1,10 +1,10 @@
 {
-	"ParentId": 290,
-	"ShiftSupervisor": false,
+	"ParentId": 0,
+	"ShiftSupervisor": true,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "VirtualTaskDay",
+	"ObjectType": "ActualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -25,10 +25,10 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 432
+			"Quantity": 585
 		}
 	},
-	"Completed": false,
+	"Completed": true,
 	"Cancelled": true,
 	"ActionStatus": {
 		"Id": 1
@@ -38,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "doloribus",
+	"Description": "corporis",
 	"Tags": [
 		{
-			"BaseObject": "laborum",
+			"BaseObject": "debitis",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "magnam"
+			"Description": "aperiam"
 		}
 	],
 	"__typename": "CxTaskDay"

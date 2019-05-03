@@ -24,14 +24,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ActionStatus"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -105,14 +105,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -150,9 +150,6 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -160,6 +157,9 @@
 						"Subcontractor",
 						"Plant"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -213,14 +213,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"CostCode"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -251,14 +251,14 @@
 				"FullName": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Document"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -395,14 +395,14 @@
 				"EstimatedEquipmentHours": {
 					"type": "number"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Job"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -476,14 +476,14 @@
 				"Priority": {
 					"type": "integer"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobActivity"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -534,14 +534,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobCost"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -582,9 +582,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -609,6 +606,9 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -655,9 +655,6 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -666,6 +663,9 @@
 						"Subcontractor",
 						"Plant"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -769,9 +769,6 @@
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -781,127 +778,8 @@
 						"Material"
 					]
 				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"DisplayName": {
-					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Divisions": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"AccountCode": {
-					"type": "string"
-				},
-				"Location": {
-					"$ref": "#/definitions/IxLocation"
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxResourceBlock": {
-			"type": "object",
-			"properties": {
-				"Resource": {
-					"$ref": "#/definitions/IxResource"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceBlock"
-					]
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"Resource",
-				"Id"
-			]
-		},
-		"IxResourceGroup": {
-			"superRequired": [
-				"Contact",
-				"Id",
-				"Name",
-				"ResourceBlocks"
-			],
-			"type": "object",
-			"properties": {
-				"Contact": {
-					"$ref": "#/definitions/IxParty"
-				},
-				"ResourceBlocks": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceBlock"
-					}
-				},
-				"Count": {
-					"type": "integer"
-				},
-				"Temporary": {
-					"type": "boolean"
-				},
-				"UnitCost": {
-					"$ref": "#/definitions/IxUnitCost"
-				},
-				"Owner": {
-					"$ref": "#/definitions/IxCompany"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Crew"
-					]
 				},
 				"Name": {
 					"type": "string"
@@ -976,14 +854,14 @@
 			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -1026,14 +904,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceType"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -1072,14 +950,14 @@
 				"UseHolidays": {
 					"type": "boolean"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Shift"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -1122,6 +1000,17 @@
 			]
 		},
 		"IxTaskDay": {
+			"immutable": [
+				"ActionType",
+				"Cancelled",
+				"Completed",
+				"DisplayName",
+				"Divisions",
+				"Filled",
+				"Job",
+				"Location",
+				"ObjectType"
+			],
 			"type": "object",
 			"properties": {
 				"ParentId": {
@@ -1175,15 +1064,15 @@
 				"Cancelled": {
 					"type": "boolean"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ActualTaskDay",
 						"VirtualTaskDay"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -1205,6 +1094,7 @@
 				}
 			},
 			"required": [
+				"CurrentLifespan",
 				"Id"
 			]
 		},
@@ -1235,14 +1125,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -1305,8 +1195,8 @@
 				"$ref": "#/definitions/IxTaskDay"
 			}
 		},
-		"Crew": {
-			"$ref": "#/definitions/IxResourceGroup"
+		"CrewId": {
+			"type": "integer"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
@@ -1337,9 +1227,6 @@
 		},
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
-		},
-		"ResourceQuantity": {
-			"$ref": "#/definitions/IxResourceQuantity"
 		},
 		"Id": {
 			"type": "integer"
