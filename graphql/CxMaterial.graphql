@@ -67,7 +67,7 @@ enum IxAddressObjectType {
 
 type IxAttribute__String__ {
   BaseObject: String
-  AttributeId: Int
+  AttributeId: ID
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -76,7 +76,7 @@ type IxAttribute__String__ {
 
 input IxAttribute__String__Input {
   BaseObject: String!
-  AttributeId: Int!
+  AttributeId: ID!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String

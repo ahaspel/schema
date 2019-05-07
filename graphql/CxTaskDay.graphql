@@ -1,5 +1,5 @@
 type CxTaskDay {
-  ParentId: Int
+  ParentId: ID
   ActionType: CxTaskDayActionType
   Location: IxLocation
   ShiftSupervisor: Boolean
@@ -34,7 +34,7 @@ enum CxTaskDayActionType {
 }
 
 input CxTaskDayInput {
-  ParentId: Int!
+  ParentId: ID!
   ShiftSupervisor: Boolean
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
@@ -105,7 +105,7 @@ enum IxAddressObjectType {
 
 type IxAttribute__String__ {
   BaseObject: String
-  AttributeId: Int
+  AttributeId: ID
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -114,7 +114,7 @@ type IxAttribute__String__ {
 
 input IxAttribute__String__Input {
   BaseObject: String!
-  AttributeId: Int!
+  AttributeId: ID!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -231,7 +231,7 @@ type IxJob {
 }
 
 type IxJobActivity {
-  ParentId: Int
+  ParentId: ID
   Completed: Boolean
   Priority: Int
   ObjectType: IxJobActivityObjectType

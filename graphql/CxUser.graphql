@@ -2,7 +2,7 @@ type CxUser {
   Party: IxParty
   Username: String
   Password: String
-  CognitoId: String
+  CognitoId: ID
   Level: IxLevel
   WebPrivileges: [IxLookupValue]
   Privileges: [IxLookupValue]
@@ -20,7 +20,7 @@ input CxUserInput {
   Party: IxPartyDO!
   Username: String!
   Password: String!
-  CognitoId: String!
+  CognitoId: ID!
   Level: IxLevelDO!
   WebPrivileges: [IxLookupValueDO]
   Privileges: [IxLookupValueDO]
@@ -64,7 +64,7 @@ enum IxAddressObjectType {
 
 type IxAttribute__String__ {
   BaseObject: String
-  AttributeId: Int
+  AttributeId: ID
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -73,7 +73,7 @@ type IxAttribute__String__ {
 
 input IxAttribute__String__Input {
   BaseObject: String!
-  AttributeId: Int!
+  AttributeId: ID!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String

@@ -5,7 +5,7 @@ type CxApplicationLicense {
   AllowedWebUsers: Int
   SerialNumber: String
   Valid: Boolean
-  MachineId: String
+  MachineId: ID
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
@@ -22,7 +22,7 @@ input CxApplicationLicenseInput {
   AllowedWebUsers: Int!
   SerialNumber: String!
   Valid: Boolean
-  MachineId: String
+  MachineId: ID
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
@@ -43,7 +43,7 @@ input FilterInput {
 
 type IxAttribute__String__ {
   BaseObject: String
-  AttributeId: Int
+  AttributeId: ID
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -52,7 +52,7 @@ type IxAttribute__String__ {
 
 input IxAttribute__String__Input {
   BaseObject: String!
-  AttributeId: Int!
+  AttributeId: ID!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String

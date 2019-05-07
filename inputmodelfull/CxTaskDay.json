@@ -1,10 +1,10 @@
 {
 	"ParentId": 0,
-	"ShiftSupervisor": true,
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -25,10 +25,10 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 585
+			"Quantity": 487
 		}
 	},
-	"Completed": true,
+	"Completed": false,
 	"Cancelled": true,
 	"ActionStatus": {
 		"Id": 1
@@ -38,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "corporis",
+	"Description": "suscipit",
 	"Tags": [
 		{
-			"BaseObject": "debitis",
+			"BaseObject": "quibusdam",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "aperiam"
+			"Description": "quibusdam"
 		}
 	],
 	"__typename": "CxTaskDay"

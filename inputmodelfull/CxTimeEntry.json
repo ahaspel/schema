@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 843,
-	"Minutes": 273,
+	"Hours": 445,
+	"Minutes": 606,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 286
+					"Quantity": 503
 				},
-				"Notes": "occaecati"
+				"Notes": "voluptas"
 			},
 			"Global": false,
-			"BaseObject": "laborum",
+			"BaseObject": "dolorem",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "aliquam",
-			"Description": "labore"
+			"Name": "possimus",
+			"Description": "voluptatum"
 		}
 	],
 	"AuxiliaryResources": [
@@ -47,29 +47,29 @@
 	"IsVoid": true,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": -81.0794,
-		"Lng": -76.7431,
-		"Source": "Action"
+		"Lat": -42.2296,
+		"Lng": -31.1339,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 6.1352,
-		"Lng": -126.6791,
-		"Source": "GPSService"
+		"Lat": 61.1891,
+		"Lng": -50.7362,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 980
+		"Quantity": 904
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 176
+		"Quantity": 607
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "consectetur",
+	"Description": "sapiente",
 	"Tags": [
 		{
-			"BaseObject": "voluptatibus",
+			"BaseObject": "impedit",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "sapiente"
+			"Description": "excepturi"
 		}
 	],
 	"__typename": "CxTimeEntry"

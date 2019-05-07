@@ -5,7 +5,7 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
-  CrewId: Int
+  CrewId: ID
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
@@ -34,7 +34,7 @@ input CxAllocationInput {
   JobActivity: IxJobActivityDO!
   Shift: IxShiftDO
   TaskDays: [IxTaskDayInput]!
-  CrewId: Int
+  CrewId: ID
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
   ActionStatus: IxActionStatusDO
@@ -98,7 +98,7 @@ enum IxAddressObjectType {
 
 type IxAttribute__String__ {
   BaseObject: String
-  AttributeId: Int
+  AttributeId: ID
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -107,7 +107,7 @@ type IxAttribute__String__ {
 
 input IxAttribute__String__Input {
   BaseObject: String!
-  AttributeId: Int!
+  AttributeId: ID!
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -224,7 +224,7 @@ type IxJob {
 }
 
 type IxJobActivity {
-  ParentId: Int
+  ParentId: ID
   Completed: Boolean
   Priority: Int
   ObjectType: IxJobActivityObjectType
@@ -470,7 +470,7 @@ enum IxShiftObjectType {
 }
 
 type IxTaskDay {
-  ParentId: Int
+  ParentId: ID
   ShiftSupervisor: Boolean
   Filled: Boolean
   ActionStatus: IxActionStatus
@@ -505,7 +505,7 @@ enum IxTaskDayActionType {
 }
 
 input IxTaskDayInput {
-  ParentId: Int
+  ParentId: ID
   ShiftSupervisor: Boolean
   ActionStatus: IxActionStatusDO
   ResourceQuantity: IxResourceQuantityInput
