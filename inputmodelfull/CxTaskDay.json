@@ -1,6 +1,6 @@
 {
 	"ParentId": 0,
-	"ShiftSupervisor": false,
+	"ShiftSupervisor": true,
 	"JobActivity": {
 		"Id": 156
 	},
@@ -25,11 +25,11 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 487
+			"Quantity": 128
 		}
 	},
-	"Completed": false,
-	"Cancelled": true,
+	"Completed": true,
+	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -38,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "suscipit",
+	"Description": "deserunt",
 	"Tags": [
 		{
-			"BaseObject": "quibusdam",
+			"BaseObject": "eligendi",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "quibusdam"
+			"Description": "beatae"
 		}
 	],
 	"__typename": "CxTaskDay"
