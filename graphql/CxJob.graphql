@@ -101,8 +101,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -110,8 +110,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Name: String
   Description: String
 }
@@ -124,8 +124,8 @@ type IxCompany {
   CompanyType: IxLookupValue
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxCompanyObjectType
   Id: ID!
+  ObjectType: IxCompanyObjectType
   Name: String
   Description: String
   Address: IxAddress
@@ -149,8 +149,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Name: String
   Description: String
 }
@@ -159,8 +159,8 @@ input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Name: String!
   Description: String
 }
@@ -173,8 +173,8 @@ type IxDocument {
   Attached: Boolean
   FilePath: String
   FullName: String
-  ObjectType: IxDocumentObjectType
   Id: ID!
+  ObjectType: IxDocumentObjectType
   Name: String
   Description: String
 }
@@ -183,8 +183,8 @@ input IxDocumentInput {
   Attached: Boolean
   FilePath: String!
   FullName: String
-  ObjectType: IxDocumentObjectType
   Id: ID!
+  ObjectType: IxDocumentObjectType
   Name: String!
   Description: String
 }
@@ -229,8 +229,8 @@ type IxJobActivity {
   ParentId: ID
   Completed: Boolean
   Priority: Int
-  ObjectType: IxJobActivityObjectType
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Name: String
   Description: String
   CurrentLifespan: IxRange
@@ -243,8 +243,8 @@ input IxJobActivityInput {
   ParentId: ID
   Completed: Boolean
   Priority: Int
-  ObjectType: IxJobActivityObjectType
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Name: String!
   Description: String
   CurrentLifespan: IxRangeInput
@@ -263,8 +263,8 @@ type IxJobCost {
   TotalAmount: Float
   CompletedAmount: Float
   BaseObject: String
-  ObjectType: IxJobCostObjectType
   Id: ID!
+  ObjectType: IxJobCostObjectType
   Name: String
   Description: String
 }
@@ -275,8 +275,8 @@ input IxJobCostInput {
   TotalAmount: Float!
   CompletedAmount: Float
   BaseObject: String
-  ObjectType: IxJobCostObjectType
   Id: ID!
+  ObjectType: IxJobCostObjectType
   Name: String
   Description: String
 }
@@ -287,8 +287,8 @@ enum IxJobCostObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Name: String
   Description: String
 }
@@ -333,8 +333,8 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Name: String
   Description: String
   Address: IxAddress
@@ -348,8 +348,8 @@ input IxPartyDO {
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Name: String!
   Description: String
   Address: IxAddressInput
@@ -394,8 +394,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Name: String
   Description: String
 }

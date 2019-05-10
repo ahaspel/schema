@@ -24,14 +24,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ActionStatus"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -105,14 +105,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -150,6 +150,9 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -157,9 +160,6 @@
 						"Subcontractor",
 						"Plant"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -213,14 +213,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"CostCode"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -250,14 +250,14 @@
 				"FullName": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Document"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -394,14 +394,14 @@
 				"EstimatedEquipmentHours": {
 					"type": "number"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Job"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -475,14 +475,14 @@
 				"Priority": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobActivity"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -533,14 +533,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobCost"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -581,6 +581,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -605,9 +608,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -654,6 +654,9 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -662,9 +665,6 @@
 						"Subcontractor",
 						"Plant"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -768,6 +768,9 @@
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -776,9 +779,6 @@
 						"Equipment",
 						"Material"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -853,14 +853,14 @@
 			],
 			"type": "object",
 			"properties": {
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -903,14 +903,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceType"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -956,14 +956,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"

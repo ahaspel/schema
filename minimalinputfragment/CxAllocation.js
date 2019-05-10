@@ -3,13 +3,6 @@ const CXALLOCATIONINPUTMIN = `fragment CXALLOCATIONINPUTMIN on CxAllocation {
   JobActivity {
     Id
   }
-  TaskDays {
-    Id
-    CurrentLifespan {
-      Start
-      End
-    }
-  }
   Id
 }`;
 module.exports = { fragment: CXALLOCATIONINPUTMIN,

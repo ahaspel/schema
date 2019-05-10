@@ -57,14 +57,14 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -127,14 +127,14 @@
 		"IxLevel": {
 			"type": "object",
 			"properties": {
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Level"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -157,6 +157,9 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -182,9 +185,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -216,6 +216,9 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -224,9 +227,6 @@
 						"Subcontractor",
 						"Plant"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
