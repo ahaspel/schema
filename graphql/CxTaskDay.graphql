@@ -34,7 +34,7 @@ enum CxTaskDayActionType {
 }
 
 input CxTaskDayInput {
-  ParentId: ID!
+  ParentId: ID
   ShiftSupervisor: Boolean
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType

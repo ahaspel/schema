@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 580,
-	"Minutes": 234,
+	"Hours": 915,
+	"Minutes": 84,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 627
+					"Quantity": 392
 				},
-				"Notes": "sapiente"
+				"Notes": "perspiciatis"
 			},
-			"Global": true,
-			"BaseObject": "doloremque",
+			"Global": false,
+			"BaseObject": "voluptatibus",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Name": "aliquam",
-			"Description": "itaque"
+			"Name": "molestias",
+			"Description": "inventore"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,18 +44,18 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
-	"Billable": false,
+	"IsVoid": true,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": 2.862,
-		"Lng": -7.344,
-		"Source": "Action"
+		"Lat": -11.9193,
+		"Lng": 77.4396,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -63.6021,
-		"Lng": -145.6234,
-		"Source": "Action"
+		"Lat": -16.0865,
+		"Lng": 17.2971,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "Manual",
@@ -63,13 +63,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 346
+		"Quantity": 59
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 934
+		"Quantity": 938
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "accusantium",
+	"Description": "sapiente",
 	"Tags": [
 		{
-			"BaseObject": "veniam",
+			"BaseObject": "quisquam",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "corrupti"
+			"Description": "laboriosam"
 		}
 	],
 	"__typename": "CxTimeEntry"

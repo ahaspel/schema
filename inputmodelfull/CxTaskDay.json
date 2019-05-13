@@ -4,7 +4,7 @@
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -25,11 +25,11 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 452
+			"Quantity": 230
 		}
 	},
-	"Completed": true,
-	"Cancelled": true,
+	"Completed": false,
+	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -38,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "labore",
+	"Description": "consequuntur",
 	"Tags": [
 		{
-			"BaseObject": "accusamus",
+			"BaseObject": "veritatis",
 			"AttributeId": 2,
 			"Id": 0,
 			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "officia"
+			"Description": "laborum"
 		}
 	],
 	"__typename": "CxTaskDay"

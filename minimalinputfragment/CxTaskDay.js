@@ -1,6 +1,5 @@
 
 const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
-  ParentId
   JobActivity {
     Id
   }
