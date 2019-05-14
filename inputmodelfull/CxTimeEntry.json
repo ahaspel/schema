@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 915,
-	"Minutes": 84,
+	"Hours": 30,
+	"Minutes": 552,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 392
+					"Quantity": 264
 				},
-				"Notes": "perspiciatis"
+				"Notes": "commodi"
 			},
 			"Global": false,
-			"BaseObject": "voluptatibus",
-			"Id": 0,
+			"BaseObject": "consequuntur",
 			"ObjectType": "CostCode",
-			"Name": "molestias",
-			"Description": "inventore"
+			"Id": 0,
+			"Name": "consequuntur",
+			"Description": "voluptatibus"
 		}
 	],
 	"AuxiliaryResources": [
@@ -44,32 +44,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": -11.9193,
-		"Lng": 77.4396,
+		"Lat": -42.4089,
+		"Lng": -41.7157,
 		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -16.0865,
-		"Lng": 17.2971,
-		"Source": "GPSService"
+		"Lat": 59.2761,
+		"Lng": -159.3354,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 59
+		"Quantity": 723
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 938
+		"Quantity": 397
 	},
 	"Approvals": [
 		{
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "sapiente",
+	"Description": "consequatur",
 	"Tags": [
 		{
 			"BaseObject": "quisquam",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "laboriosam"
+			"Description": "corrupti"
 		}
 	],
 	"__typename": "CxTimeEntry"

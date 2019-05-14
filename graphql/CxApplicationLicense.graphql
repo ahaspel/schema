@@ -44,8 +44,8 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -53,8 +53,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -65,8 +65,8 @@ enum IxAttributeStringObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
 }

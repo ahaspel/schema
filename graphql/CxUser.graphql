@@ -65,8 +65,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -74,8 +74,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -104,8 +104,8 @@ enum IxGeocodeSource {
 }
 
 type IxLevel {
-  Id: ID!
   ObjectType: IxLevelObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -120,8 +120,8 @@ enum IxLevelObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -156,8 +156,8 @@ enum IxLookupValueObjectType {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
   Address: IxAddress

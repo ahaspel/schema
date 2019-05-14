@@ -4,7 +4,7 @@
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "VirtualTaskDay",
+	"ObjectType": "ActualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -25,11 +25,11 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 230
+			"Quantity": 200
 		}
 	},
 	"Completed": false,
-	"Cancelled": false,
+	"Cancelled": true,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -38,15 +38,15 @@
 		"End": "2018-12-14T08:00:00"
 	},
 	"Id": 0,
-	"Description": "consequuntur",
+	"Description": "blanditiis",
 	"Tags": [
 		{
-			"BaseObject": "veritatis",
+			"BaseObject": "consequuntur",
 			"AttributeId": 2,
-			"Id": 0,
 			"ObjectType": "Attribute",
+			"Id": 0,
 			"Name": "Capacity",
-			"Description": "laborum"
+			"Description": "soluta"
 		}
 	],
 	"__typename": "CxTaskDay"
