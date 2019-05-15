@@ -6,8 +6,8 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Subcontractor",
 		"Id": 0,
+		"ObjectType": "Company",
 		"Name": "",
 		"Description": "",
 		"Address": {
@@ -21,7 +21,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -36,8 +36,8 @@
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
-		"ObjectType": "ResourceType",
 		"Id": 0,
+		"ObjectType": "ResourceType",
 		"Name": "",
 		"Description": "",
 		"Tags": []
@@ -87,7 +87,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Equipment",
+	"ObjectType": "Crew",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

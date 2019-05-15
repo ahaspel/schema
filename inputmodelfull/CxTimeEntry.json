@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 30,
-	"Minutes": 552,
+	"Hours": 460,
+	"Minutes": 225,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 264
+					"Quantity": 11
 				},
-				"Notes": "commodi"
+				"Notes": "laudantium"
 			},
 			"Global": false,
-			"BaseObject": "consequuntur",
-			"ObjectType": "CostCode",
+			"BaseObject": "veritatis",
 			"Id": 0,
-			"Name": "consequuntur",
-			"Description": "voluptatibus"
+			"ObjectType": "CostCode",
+			"Name": "molestiae",
+			"Description": "deserunt"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,31 +45,31 @@
 		"Id": 1
 	},
 	"IsVoid": false,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": -42.4089,
-		"Lng": -41.7157,
-		"Source": "Owner"
+		"Lat": 1.3694,
+		"Lng": 140.6003,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 59.2761,
-		"Lng": -159.3354,
-		"Source": "Action"
+		"Lat": 28.9016,
+		"Lng": 169.0825,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 723
+		"Quantity": 278
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 397
+		"Quantity": 290
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": false,
+	"Approved": true,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "consequatur",
+	"Description": "itaque",
 	"Tags": [
 		{
-			"BaseObject": "quisquam",
+			"BaseObject": "provident",
 			"AttributeId": 2,
-			"ObjectType": "Attribute",
 			"Id": 0,
+			"ObjectType": "Attribute",
 			"Name": "Capacity",
-			"Description": "corrupti"
+			"Description": "explicabo"
 		}
 	],
 	"__typename": "CxTimeEntry"
