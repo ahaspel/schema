@@ -5,7 +5,7 @@ type CxApplicationLicense {
   AllowedWebUsers: Int
   SerialNumber: String
   Valid: Boolean
-  MachineId: ID
+  MachineCode: String
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
@@ -22,7 +22,7 @@ input CxApplicationLicenseInput {
   AllowedWebUsers: Int!
   SerialNumber: String!
   Valid: Boolean
-  MachineId: ID
+  MachineCode: String
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType

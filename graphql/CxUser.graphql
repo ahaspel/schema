@@ -2,7 +2,7 @@ type CxUser {
   Party: IxParty
   Username: String
   Password: String
-  CognitoId: ID
+  CognitoCode: String
   Level: IxLevel
   WebPrivileges: [IxLookupValue]
   Privileges: [IxLookupValue]
@@ -20,7 +20,7 @@ input CxUserInput {
   Party: IxPartyDO!
   Username: String!
   Password: String!
-  CognitoId: ID!
+  CognitoCode: String!
   Level: IxLevelDO!
   WebPrivileges: [IxLookupValueDO]
   Privileges: [IxLookupValueDO]

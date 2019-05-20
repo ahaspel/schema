@@ -5,7 +5,7 @@ const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   }
   Username
   Password
-  CognitoId
+  CognitoCode
   Level {
     Id
   }
