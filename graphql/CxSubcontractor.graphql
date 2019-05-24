@@ -73,8 +73,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -82,8 +82,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -126,8 +126,8 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -162,8 +162,8 @@ enum IxLookupValueObjectType {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
   Address: IxAddress
@@ -173,8 +173,8 @@ type IxParty {
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String!
   Description: String
   Address: IxAddressInput
@@ -203,8 +203,8 @@ input IxPhoneNumberInput {
 }
 
 type IxResourceSubtype {
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -221,8 +221,8 @@ type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
   AccrualNumber: String
   Notes: String
-  Id: ID!
   ObjectType: IxSupplyTypeObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
@@ -232,8 +232,8 @@ input IxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
   AccrualNumber: String
   Notes: String
-  Id: ID!
   ObjectType: IxSupplyTypeObjectType
+  Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__Input]

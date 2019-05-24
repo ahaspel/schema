@@ -2,6 +2,7 @@ type CxHoliday {
   Holiday: String
   Name: String
   ObjectType: CxHolidayObjectType
+  CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -12,6 +13,7 @@ input CxHolidayInput {
   Holiday: String!
   Name: String!
   ObjectType: CxHolidayObjectType
+  CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
@@ -30,8 +32,8 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -39,8 +41,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -51,8 +53,8 @@ enum IxAttributeStringObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -82,6 +84,18 @@ enum IxLookupValueObjectType {
   JobStatus
   JobCertification
   WebPrivilege
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 extend type Mutation {
