@@ -1025,6 +1025,12 @@
 				"ActionStatus": {
 					"$ref": "#/definitions/IxActionStatus"
 				},
+				"ConflictIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
 				"ResourceQuantity": {
 					"$ref": "#/definitions/IxResourceQuantity"
 				},

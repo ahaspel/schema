@@ -50,6 +50,7 @@ enum CxAllocationObjectType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 type IxActionStatus {
@@ -474,6 +475,7 @@ type IxTaskDay {
   ShiftSupervisor: Boolean
   Filled: Boolean
   ActionStatus: IxActionStatus
+  ConflictIds: [Int]
   ResourceQuantity: IxResourceQuantity
   JobActivity: IxJobActivity
   Job: IxJob
@@ -508,6 +510,7 @@ input IxTaskDayInput {
   ParentId: ID
   ShiftSupervisor: Boolean
   ActionStatus: IxActionStatusDO
+  ConflictIds: [Int]
   ResourceQuantity: IxResourceQuantityInput
   JobActivity: IxJobActivityDO
   Resources: [IxResourceDO]

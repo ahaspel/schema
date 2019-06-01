@@ -30,6 +30,7 @@ enum CxPartyObjectType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 type IxAddress {

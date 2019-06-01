@@ -38,6 +38,7 @@ enum CxLookupValueObjectType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 extend type Mutation {

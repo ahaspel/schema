@@ -29,6 +29,7 @@ enum CxJobCostObjectType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 type IxCostCode {

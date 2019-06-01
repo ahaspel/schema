@@ -27,6 +27,7 @@ enum CxAddressObjectType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 type IxGeocode {

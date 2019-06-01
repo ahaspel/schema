@@ -39,6 +39,7 @@ enum CxApplicationLicenseObjectType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 type IxAttribute__String__ {

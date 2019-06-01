@@ -30,6 +30,7 @@ enum CxUnitUnitType {
 input FilterInput {
   name: String!
   values: [String]
+  child: String
 }
 
 extend type Mutation {
