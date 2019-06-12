@@ -512,8 +512,8 @@ input IxTaskDayInput {
   ActionStatus: IxActionStatusDO
   ConflictIds: [Int]
   ResourceQuantity: IxResourceQuantityInput
-  JobActivity: IxJobActivityDO
-  Resources: [IxResourceDO]
+  JobActivity: IxJobActivityDO!
+  Resources: [IxResourceDO]!
   Id: ID!
   Name: String
   Description: String
