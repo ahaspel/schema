@@ -514,6 +514,7 @@ input IxTaskDayInput {
   ResourceQuantity: IxResourceQuantityInput
   JobActivity: IxJobActivityDO!
   Resources: [IxResourceDO]!
+  ObjectType: IxTaskDayObjectType
   Id: ID!
   Name: String
   Description: String
