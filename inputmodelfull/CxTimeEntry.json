@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 285,
-	"Minutes": 986,
+	"Hours": 687,
+	"Minutes": 541,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 894
+					"Quantity": 736
 				},
-				"Notes": "fNIHhhIucgg"
+				"Notes": "loVsRicyp"
 			},
-			"Global": true,
-			"BaseObject": "ziUjSJFSFvmQ",
+			"Global": false,
+			"BaseObject": "byGgrMGy",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "qvRtoMyf",
-			"Description": "FpFluY"
+			"Name": "EABgGq",
+			"Description": "zovHCLYTRHH"
 		}
 	],
 	"AuxiliaryResources": [
@@ -45,16 +45,16 @@
 		"Id": 1
 	},
 	"IsVoid": true,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 70.9369,
-		"Lng": 65.8149,
-		"Source": "GPSService"
+		"Lat": 66.7061,
+		"Lng": -4.467,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 63.6683,
-		"Lng": -112.2732,
+		"Lat": 29.7833,
+		"Lng": -89.1383,
 		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -63,13 +63,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 240
+		"Quantity": 8
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 676
+		"Quantity": 91
 	},
 	"Approvals": [
 		{
@@ -79,7 +79,7 @@
 			"AsOf": "2019-01-14T08:00:00"
 		}
 	],
-	"Approved": true,
+	"Approved": false,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
 		"End": "2018-12-14T08:00:00"
@@ -90,15 +90,15 @@
 			"Id": 1
 		}
 	],
-	"Description": "AmKVEXLrpzD",
+	"Description": "OJIxKDQoyCX",
 	"Tags": [
 		{
-			"BaseObject": "eCYoDO",
+			"BaseObject": "JrgqwREThVQI",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "DrKYUNuWbT"
+			"Description": "aKIOPkmmdxG"
 		}
 	],
 	"__typename": "CxTimeEntry"

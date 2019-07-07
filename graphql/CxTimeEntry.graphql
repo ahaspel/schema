@@ -70,6 +70,7 @@ input FilterInput {
   name: String!
   values: [String]
   child: String
+  invert: Boolean = false
 }
 
 type IxAddress {
