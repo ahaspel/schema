@@ -982,7 +982,12 @@
 					"type": "string"
 				},
 				"Start": {
-					"type": "string"
+					"type": "string",
+					"minLength": 5
+				},
+				"Duration": {
+					"type": "string",
+					"minLength": 5
 				},
 				"End": {
 					"type": "string"
@@ -994,7 +999,7 @@
 			"required": [
 				"Day",
 				"Start",
-				"End"
+				"Duration"
 			]
 		},
 		"IxTaskDay": {

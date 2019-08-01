@@ -4,7 +4,7 @@ const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
   Days {
     Day
     Start
-    End
+    Duration
   }
   Id
 }`;

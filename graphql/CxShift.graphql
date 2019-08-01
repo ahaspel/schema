@@ -94,15 +94,15 @@ type IxShiftDay {
   Day: Int
   DayByName: String
   Start: String
+  Duration: String
   End: String
   Included: Boolean
 }
 
 input IxShiftDayInput {
   Day: Int!
-  DayByName: String
   Start: String!
-  End: String!
+  Duration: String!
   Included: Boolean
 }
 
