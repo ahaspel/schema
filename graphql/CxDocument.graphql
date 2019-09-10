@@ -90,7 +90,7 @@ enum IxLookupValueObjectType {
 }
 
 extend type Mutation {
-  cxDocuments_onSave(data: [CxDocumentInput], objectType: String = "Document", operation: String = "edit"): [CxDocument]
+  cxDocuments_onSave(data: [CxDocumentInput], objectType: String = "Document", operation: String = "edit", properties: [String]): [CxDocument]
   cxDocuments_onDelete(data: [String], objectType: String = "Document", operation: String = "delete"): [CxDocument]
 }
 

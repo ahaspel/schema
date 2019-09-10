@@ -185,7 +185,7 @@ type IxPhoneNumber {
 }
 
 extend type Mutation {
-  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit"): [CxUser]
+  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit", properties: [String]): [CxUser]
   cxUsers_onDelete(data: [String], objectType: String = "User", operation: String = "delete"): [CxUser]
 }
 

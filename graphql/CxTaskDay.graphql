@@ -490,7 +490,7 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxTaskDays_onSave(data: [CxTaskDayInput], objectType: String = "ActualTaskDay", operation: String = "edit"): [CxTaskDay]
+  cxTaskDays_onSave(data: [CxTaskDayInput], objectType: String = "ActualTaskDay", operation: String = "edit", properties: [String]): [CxTaskDay]
   cxTaskDays_onDelete(data: [String], objectType: String = "ActualTaskDay", operation: String = "delete"): [CxTaskDay]
 }
 

@@ -164,7 +164,7 @@ input IxPhoneNumberInput {
 }
 
 extend type Mutation {
-  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit"): [CxParty]
+  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit", properties: [String]): [CxParty]
   cxPartys_onDelete(data: [String], objectType: String = "Party", operation: String = "delete"): [CxParty]
 }
 

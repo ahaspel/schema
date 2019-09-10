@@ -321,7 +321,7 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit"): [CxMaterial]
+  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit", properties: [String]): [CxMaterial]
   cxMaterials_onDelete(data: [String], objectType: String = "Material", operation: String = "delete"): [CxMaterial]
 }
 

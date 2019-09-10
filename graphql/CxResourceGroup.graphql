@@ -332,7 +332,7 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit"): [CxResourceGroup]
+  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit", properties: [String]): [CxResourceGroup]
   cxResourceGroups_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResourceGroup]
 }
 

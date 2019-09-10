@@ -421,7 +421,7 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit"): [CxTimeEntry]
+  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String]): [CxTimeEntry]
   cxTimeEntrys_onDelete(data: [String], objectType: String = "TimeEntry", operation: String = "delete"): [CxTimeEntry]
 }
 

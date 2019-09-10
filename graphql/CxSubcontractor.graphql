@@ -246,7 +246,7 @@ enum IxSupplyTypeObjectType {
 }
 
 extend type Mutation {
-  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String = "Subcontractor", operation: String = "edit"): [CxSubcontractor]
+  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String = "Subcontractor", operation: String = "edit", properties: [String]): [CxSubcontractor]
   cxSubcontractors_onDelete(data: [String], objectType: String = "Subcontractor", operation: String = "delete"): [CxSubcontractor]
 }
 

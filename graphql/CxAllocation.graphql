@@ -565,7 +565,7 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit"): [CxAllocation]
+  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String]): [CxAllocation]
   cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
 }
 

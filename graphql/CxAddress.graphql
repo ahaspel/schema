@@ -85,7 +85,7 @@ enum IxLookupValueObjectType {
 }
 
 extend type Mutation {
-  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit"): [CxAddress]
+  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String]): [CxAddress]
   cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
 }
 
