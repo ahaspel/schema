@@ -1,13 +1,13 @@
 {
 	"ParentId": 0,
 	"ConflictIds": [
-		206
+		999
 	],
-	"ShiftSupervisor": false,
+	"ShiftSupervisor": true,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "VirtualTaskDay",
+	"ObjectType": "ActualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -28,10 +28,10 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 8
+			"Quantity": 501
 		}
 	},
-	"Completed": true,
+	"Completed": false,
 	"Cancelled": true,
 	"ActionStatus": {
 		"Id": 1
@@ -41,15 +41,15 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "BQgOiyC",
+	"Description": "SnlbanIkswzM",
 	"Tags": [
 		{
-			"BaseObject": "vqnbzhaNf",
+			"BaseObject": "zsprBj",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "RWpUsjL"
+			"Description": "YtDosNLbQyOo"
 		}
 	],
 	"__typename": "CxTaskDay"
