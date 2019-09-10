@@ -1,9 +1,9 @@
 {
 	"ParentId": 0,
 	"ConflictIds": [
-		491
+		206
 	],
-	"ShiftSupervisor": true,
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
@@ -28,28 +28,28 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 210
+			"Quantity": 8
 		}
 	},
-	"Completed": false,
-	"Cancelled": false,
+	"Completed": true,
+	"Cancelled": true,
 	"ActionStatus": {
 		"Id": 1
 	},
 	"CurrentLifespan": {
 		"Start": "2018-01-14T08:00:00",
-		"End": "2018-12-14T08:00:00"
+		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "jtRoHt",
+	"Description": "BQgOiyC",
 	"Tags": [
 		{
-			"BaseObject": "DGCNDMn",
+			"BaseObject": "vqnbzhaNf",
 			"AttributeId": 2,
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "uLiwwSCmX"
+			"Description": "RWpUsjL"
 		}
 	],
 	"__typename": "CxTaskDay"

@@ -79,14 +79,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -1097,8 +1097,8 @@
 	},
 	"required": [
 		"CurrentLifespan",
-		"Id",
 		"JobActivity",
+		"Id",
 		"Resources"
 	]
 }

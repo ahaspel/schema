@@ -79,14 +79,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -989,6 +989,9 @@
 					"type": "string",
 					"minLength": 5
 				},
+				"Valid": {
+					"type": "boolean"
+				},
 				"End": {
 					"type": "string"
 				},
@@ -1005,8 +1008,8 @@
 		"IxTaskDay": {
 			"superRequired": [
 				"CurrentLifespan",
-				"Id",
 				"JobActivity",
+				"Id",
 				"Resources"
 			],
 			"immutable": [
@@ -1182,6 +1185,7 @@
 		"ActionType",
 		"DisplayName",
 		"Dto",
+		"HasConflicts",
 		"Job",
 		"JobCosts",
 		"Location"
@@ -1211,6 +1215,9 @@
 		},
 		"CrewId": {
 			"type": "integer"
+		},
+		"HasConflicts": {
+			"type": "boolean"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

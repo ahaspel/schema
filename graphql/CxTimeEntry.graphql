@@ -19,7 +19,6 @@ type CxTimeEntry {
   StartDistance: IxQuantity
   EndDistance: IxQuantity
   Approvals: [IxApproval]
-  Approved: Boolean
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -48,7 +47,6 @@ input CxTimeEntryInput {
   StartDistance: IxQuantityInput
   EndDistance: IxQuantityInput
   Approvals: [IxApprovalInput]
-  Approved: Boolean
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Divisions: [IxLookupValueDO]
@@ -80,8 +78,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
