@@ -161,6 +161,16 @@ enum IxLookupValueObjectType {
   WebPrivilege
 }
 
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -221,6 +231,7 @@ enum IxResourceSubtypeObjectType {
 
 type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
+  UnitCosts: [IxUnitCost]
   AccrualNumber: String
   Notes: String
   ObjectType: IxSupplyTypeObjectType
@@ -232,6 +243,7 @@ type IxSupplyType {
 
 input IxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
+  UnitCosts: [IxUnitCostInput]
   AccrualNumber: String
   Notes: String
   ObjectType: IxSupplyTypeObjectType
@@ -243,6 +255,47 @@ input IxSupplyTypeInput {
 
 enum IxSupplyTypeObjectType {
   SupplyType
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
 }
 
 extend type Mutation {
