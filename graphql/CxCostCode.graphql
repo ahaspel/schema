@@ -79,8 +79,13 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxCostCodes_onSave(data: [CxCostCodeInput], objectType: String = "CostCode", operation: String = "edit", properties: [String]): [CxCostCode]
+  cxCostCodes_onSave(data: [CxCostCodeInput], objectType: String = "CostCode", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxCostCode]
   cxCostCodes_onDelete(data: [String], objectType: String = "CostCode", operation: String = "delete"): [CxCostCode]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

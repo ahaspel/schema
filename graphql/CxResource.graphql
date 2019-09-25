@@ -366,8 +366,13 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxResources_onSave(data: [CxResourceInput], objectType: String = "Crew", operation: String = "edit", properties: [String]): [CxResource]
+  cxResources_onSave(data: [CxResourceInput], objectType: String = "Crew", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxResource]
   cxResources_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResource]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

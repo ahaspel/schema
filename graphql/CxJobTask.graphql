@@ -1,0 +1,123 @@
+type CxJobTask {
+  ObjectType: CxJobTaskObjectType
+  Name: String
+  CreatorId: ID
+  JobId: ID
+  Status: IxLookupValue
+  Priority: Int
+  PercentComplete: Int
+  CurrentLifespan: IxRange
+  Id: ID!
+  Divisions: [IxLookupValue]
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxJobTaskInput {
+  ObjectType: CxJobTaskObjectType
+  Name: String
+  CreatorId: ID!
+  JobId: ID!
+  Status: IxLookupValueDO!
+  Priority: Int
+  PercentComplete: Int
+  CurrentLifespan: IxRangeInput
+  Id: ID!
+  Divisions: [IxLookupValueDO]
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxJobTaskObjectType {
+  JobTask
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: ID
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: ID!
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  WebPrivilege
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+extend type Mutation {
+  cxJobTasks_onSave(data: [CxJobTaskInput], objectType: String = "JobTask", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxJobTask]
+  cxJobTasks_onDelete(data: [String], objectType: String = "JobTask", operation: String = "delete"): [CxJobTask]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
+}
+
+extend type Query {
+  cxJobTasks(filters: [FilterInput], objectType: String = "JobTask"): [CxJobTask]
+}

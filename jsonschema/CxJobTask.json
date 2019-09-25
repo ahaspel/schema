@@ -1,0 +1,165 @@
+{
+	"id": "https://congistics.com/schema/CxJobTask",
+	"title": "com.congistics.cbrd.job.CxJobTask",
+	"definitions": {
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"BaseObject",
+				"AttributeId",
+				"Id"
+			]
+		},
+		"IxLookupValue": {
+			"superRequired": [
+				"Id",
+				"Name",
+				"ObjectType"
+			],
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Privilege",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"JobCertification",
+						"WebPrivilege"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		}
+	},
+	"type": "object",
+	"properties": {
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"JobTask"
+			]
+		},
+		"Name": {
+			"type": "string"
+		},
+		"CreatorId": {
+			"type": "integer"
+		},
+		"JobId": {
+			"type": "integer"
+		},
+		"Status": {
+			"$ref": "#/definitions/IxLookupValue"
+		},
+		"Priority": {
+			"type": "integer"
+		},
+		"PercentComplete": {
+			"type": "integer"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"CreatorId",
+		"JobId",
+		"Status",
+		"Id"
+	]
+}

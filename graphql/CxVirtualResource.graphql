@@ -242,8 +242,13 @@ enum IxResourceTypeObjectType {
 }
 
 extend type Mutation {
-  cxVirtualResources_onSave(data: [CxVirtualResourceInput], objectType: String = "VirtualResource", operation: String = "edit", properties: [String]): [CxVirtualResource]
+  cxVirtualResources_onSave(data: [CxVirtualResourceInput], objectType: String = "VirtualResource", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxVirtualResource]
   cxVirtualResources_onDelete(data: [String], objectType: String = "VirtualResource", operation: String = "delete"): [CxVirtualResource]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

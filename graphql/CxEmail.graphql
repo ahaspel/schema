@@ -18,8 +18,13 @@ input FilterInput {
 }
 
 extend type Mutation {
-  cxEmails_onSave(data: [CxEmailInput], objectType: String, operation: String = "edit", properties: [String]): [CxEmail]
+  cxEmails_onSave(data: [CxEmailInput], objectType: String, operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxEmail]
   cxEmails_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxEmail]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

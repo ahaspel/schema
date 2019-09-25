@@ -43,8 +43,13 @@ input FilterInput {
 }
 
 extend type Mutation {
-  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String = "JobPriority", operation: String = "edit", properties: [String]): [CxLookupValue]
+  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String = "JobPriority", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxLookupValue]
   cxLookupValues_onDelete(data: [String], objectType: String = "JobPriority", operation: String = "delete"): [CxLookupValue]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

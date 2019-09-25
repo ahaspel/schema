@@ -18,8 +18,13 @@ input FilterInput {
 }
 
 extend type Mutation {
-  cxPhoneNumbers_onSave(data: [CxPhoneNumberInput], objectType: String, operation: String = "edit", properties: [String]): [CxPhoneNumber]
+  cxPhoneNumbers_onSave(data: [CxPhoneNumberInput], objectType: String, operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxPhoneNumber]
   cxPhoneNumbers_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxPhoneNumber]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

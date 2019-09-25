@@ -1,0 +1,84 @@
+type CxTextMessage {
+  ObjectType: CxTextMessageObjectType
+  Name: String
+  Text: String
+  Sender: IxPhoneNumber
+  Sent: String
+  Recipient: IxPhoneNumber
+  Received: String
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__]
+}
+
+input CxTextMessageInput {
+  ObjectType: CxTextMessageObjectType
+  Name: String
+  Text: String!
+  Sender: IxPhoneNumberInput!
+  Recipient: IxPhoneNumberInput!
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxTextMessageObjectType {
+  TextMessage
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: ID
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: ID!
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxPhoneNumber {
+  Id: ID!
+  PhoneNumber: String
+  Name: String
+  Description: String
+}
+
+input IxPhoneNumberInput {
+  Id: ID!
+  PhoneNumber: String!
+  Name: String
+  Description: String
+}
+
+extend type Mutation {
+  cxTextMessages_onSave(data: [CxTextMessageInput], objectType: String = "TextMessage", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxTextMessage]
+  cxTextMessages_onDelete(data: [String], objectType: String = "TextMessage", operation: String = "delete"): [CxTextMessage]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
+}
+
+extend type Query {
+  cxTextMessages(filters: [FilterInput], objectType: String = "TextMessage"): [CxTextMessage]
+}

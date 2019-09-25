@@ -44,8 +44,13 @@ input FilterInput {
 }
 
 extend type Mutation {
-  cxActionStatuss_onSave(data: [CxActionStatusInput], objectType: String = "ActionStatus", operation: String = "edit", properties: [String]): [CxActionStatus]
+  cxActionStatuss_onSave(data: [CxActionStatusInput], objectType: String = "ActionStatus", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxActionStatus]
   cxActionStatuss_onDelete(data: [String], objectType: String = "ActionStatus", operation: String = "delete"): [CxActionStatus]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

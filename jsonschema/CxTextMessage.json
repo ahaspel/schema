@@ -1,0 +1,164 @@
+{
+	"id": "https://congistics.com/schema/CxTextMessage",
+	"title": "com.congistics.cbrd.io.CxTextMessage",
+	"definitions": {
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"BaseObject",
+				"AttributeId",
+				"Id"
+			]
+		},
+		"IxLookupValue": {
+			"superRequired": [
+				"Id",
+				"Name",
+				"ObjectType"
+			],
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Privilege",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"JobCertification",
+						"WebPrivilege"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"PhoneNumber": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"PhoneNumber"
+			]
+		}
+	},
+	"immutable": [
+		"Sent",
+		"Received"
+	],
+	"type": "object",
+	"properties": {
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"TextMessage"
+			]
+		},
+		"Name": {
+			"type": "string"
+		},
+		"Text": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Sender": {
+			"$ref": "#/definitions/IxPhoneNumber"
+		},
+		"Sent": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Recipient": {
+			"$ref": "#/definitions/IxPhoneNumber"
+		},
+		"Received": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		}
+	},
+	"required": [
+		"Id",
+		"Text",
+		"Sender",
+		"Recipient"
+	]
+}

@@ -101,8 +101,13 @@ enum IxLookupValueObjectType {
 }
 
 extend type Mutation {
-  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String]): [CxApplicationLicense]
+  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxApplicationLicense]
   cxApplicationLicenses_onDelete(data: [String], objectType: String = "ApplicationLicense", operation: String = "delete"): [CxApplicationLicense]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

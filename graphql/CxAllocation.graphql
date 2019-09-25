@@ -567,8 +567,13 @@ enum IxUnitUnitType {
 }
 
 extend type Mutation {
-  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String]): [CxAllocation]
+  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxAllocation]
   cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {

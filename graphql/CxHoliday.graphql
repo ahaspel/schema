@@ -101,8 +101,13 @@ input IxRangeInput {
 }
 
 extend type Mutation {
-  cxHolidays_onSave(data: [CxHolidayInput], objectType: String = "Holiday", operation: String = "edit", properties: [String]): [CxHoliday]
+  cxHolidays_onSave(data: [CxHolidayInput], objectType: String = "Holiday", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxHoliday]
   cxHolidays_onDelete(data: [String], objectType: String = "Holiday", operation: String = "delete"): [CxHoliday]
+}
+
+input PostProcess {
+  name: String!
+  values: [String]
 }
 
 extend type Query {
