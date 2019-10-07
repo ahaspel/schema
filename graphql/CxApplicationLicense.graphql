@@ -100,14 +100,14 @@ enum IxLookupValueObjectType {
   WebPrivilege
 }
 
-extend type Mutation {
-  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxApplicationLicense]
-  cxApplicationLicenses_onDelete(data: [String], objectType: String = "ApplicationLicense", operation: String = "delete"): [CxApplicationLicense]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String], methods: [methodInput]): [CxApplicationLicense]
+  cxApplicationLicenses_onDelete(data: [String], objectType: String = "ApplicationLicense", operation: String = "delete"): [CxApplicationLicense]
 }
 
 extend type Query {

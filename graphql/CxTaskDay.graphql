@@ -489,14 +489,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxTaskDays_onSave(data: [CxTaskDayInput], objectType: String = "ActualTaskDay", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxTaskDay]
-  cxTaskDays_onDelete(data: [String], objectType: String = "ActualTaskDay", operation: String = "delete"): [CxTaskDay]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxTaskDays_onSave(data: [CxTaskDayInput], objectType: String = "ActualTaskDay", operation: String = "edit", properties: [String], methods: [methodInput]): [CxTaskDay]
+  cxTaskDays_onDelete(data: [String], objectType: String = "ActualTaskDay", operation: String = "delete"): [CxTaskDay]
 }
 
 extend type Query {

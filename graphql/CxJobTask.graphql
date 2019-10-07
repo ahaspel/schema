@@ -108,14 +108,14 @@ input IxRangeInput {
   Duration: String
 }
 
-extend type Mutation {
-  cxJobTasks_onSave(data: [CxJobTaskInput], objectType: String = "JobTask", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxJobTask]
-  cxJobTasks_onDelete(data: [String], objectType: String = "JobTask", operation: String = "delete"): [CxJobTask]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxJobTasks_onSave(data: [CxJobTaskInput], objectType: String = "JobTask", operation: String = "edit", properties: [String], methods: [methodInput]): [CxJobTask]
+  cxJobTasks_onDelete(data: [String], objectType: String = "JobTask", operation: String = "delete"): [CxJobTask]
 }
 
 extend type Query {

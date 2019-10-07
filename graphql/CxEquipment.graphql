@@ -136,20 +136,20 @@ type IxEmail {
 }
 
 type IxEmployee {
-  Person: IxParty
-  FirstName: String
-  LastName: String
-  MiddleName: String
   BirthDate: String
+  LastName: String
+  FirstName: String
+  MiddleName: String
   PreviousExperience: IxQuantity
+  Person: IxParty
   Minority: [IxLookupValue]
   Unions: [IxLookupValue]
   Licenses: [IxLookupValue]
+  Machines: [IxResourceType]
   Languages: [IxLookupValue]
   TrainingCourses: [IxLookupValue]
   Skills: [IxLookupValue]
   LaborClassification: [IxLookupValue]
-  Machines: [IxResourceType]
   Temporary: Boolean
   UnitCost: IxUnitCost
   Owner: IxCompany
@@ -369,14 +369,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String = "Equipment", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxEquipment]
-  cxEquipments_onDelete(data: [String], objectType: String = "Equipment", operation: String = "delete"): [CxEquipment]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxEquipments_onSave(data: [CxEquipmentInput], objectType: String = "Equipment", operation: String = "edit", properties: [String], methods: [methodInput]): [CxEquipment]
+  cxEquipments_onDelete(data: [String], objectType: String = "Equipment", operation: String = "delete"): [CxEquipment]
 }
 
 extend type Query {

@@ -365,14 +365,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxResources_onSave(data: [CxResourceInput], objectType: String = "Crew", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxResource]
-  cxResources_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResource]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxResources_onSave(data: [CxResourceInput], objectType: String = "Crew", operation: String = "edit", properties: [String], methods: [methodInput]): [CxResource]
+  cxResources_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResource]
 }
 
 extend type Query {

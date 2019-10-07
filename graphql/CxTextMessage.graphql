@@ -69,14 +69,14 @@ input IxPhoneNumberInput {
   Description: String
 }
 
-extend type Mutation {
-  cxTextMessages_onSave(data: [CxTextMessageInput], objectType: String = "TextMessage", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxTextMessage]
-  cxTextMessages_onDelete(data: [String], objectType: String = "TextMessage", operation: String = "delete"): [CxTextMessage]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxTextMessages_onSave(data: [CxTextMessageInput], objectType: String = "TextMessage", operation: String = "edit", properties: [String], methods: [methodInput]): [CxTextMessage]
+  cxTextMessages_onDelete(data: [String], objectType: String = "TextMessage", operation: String = "delete"): [CxTextMessage]
 }
 
 extend type Query {

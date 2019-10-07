@@ -184,24 +184,24 @@
 			],
 			"type": "object",
 			"properties": {
-				"Person": {
-					"$ref": "#/definitions/IxParty"
-				},
-				"FirstName": {
-					"type": "string"
+				"BirthDate": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"LastName": {
+					"type": "string"
+				},
+				"FirstName": {
 					"type": "string"
 				},
 				"MiddleName": {
 					"type": "string"
 				},
-				"BirthDate": {
-					"type": "string",
-					"format": "date-time"
-				},
 				"PreviousExperience": {
 					"$ref": "#/definitions/IxQuantity"
+				},
+				"Person": {
+					"$ref": "#/definitions/IxParty"
 				},
 				"Minority": {
 					"type": "array",
@@ -219,6 +219,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Machines": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceType"
 					}
 				},
 				"Languages": {
@@ -243,12 +249,6 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Machines": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceType"
 					}
 				},
 				"Temporary": {

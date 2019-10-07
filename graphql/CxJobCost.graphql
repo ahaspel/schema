@@ -108,14 +108,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxJobCosts_onSave(data: [CxJobCostInput], objectType: String = "JobCost", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxJobCost]
-  cxJobCosts_onDelete(data: [String], objectType: String = "JobCost", operation: String = "delete"): [CxJobCost]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxJobCosts_onSave(data: [CxJobCostInput], objectType: String = "JobCost", operation: String = "edit", properties: [String], methods: [methodInput]): [CxJobCost]
+  cxJobCosts_onDelete(data: [String], objectType: String = "JobCost", operation: String = "delete"): [CxJobCost]
 }
 
 extend type Query {

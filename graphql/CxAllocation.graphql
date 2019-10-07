@@ -566,14 +566,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxAllocation]
-  cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String], methods: [methodInput]): [CxAllocation]
+  cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
 }
 
 extend type Query {

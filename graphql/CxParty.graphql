@@ -163,14 +163,14 @@ input IxPhoneNumberInput {
   Description: String
 }
 
-extend type Mutation {
-  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxParty]
-  cxPartys_onDelete(data: [String], objectType: String = "Party", operation: String = "delete"): [CxParty]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit", properties: [String], methods: [methodInput]): [CxParty]
+  cxPartys_onDelete(data: [String], objectType: String = "Party", operation: String = "delete"): [CxParty]
 }
 
 extend type Query {

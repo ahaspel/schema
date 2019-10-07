@@ -78,14 +78,14 @@ enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
 
-extend type Mutation {
-  cxResourceTypes_onSave(data: [CxResourceTypeInput], objectType: String = "ResourceType", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxResourceType]
-  cxResourceTypes_onDelete(data: [String], objectType: String = "ResourceType", operation: String = "delete"): [CxResourceType]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxResourceTypes_onSave(data: [CxResourceTypeInput], objectType: String = "ResourceType", operation: String = "edit", properties: [String], methods: [methodInput]): [CxResourceType]
+  cxResourceTypes_onDelete(data: [String], objectType: String = "ResourceType", operation: String = "delete"): [CxResourceType]
 }
 
 extend type Query {

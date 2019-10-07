@@ -34,14 +34,14 @@ input FilterInput {
   invert: Boolean = false
 }
 
-extend type Mutation {
-  cxUnits_onSave(data: [CxUnitDO], objectType: String = "Unit", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxUnit]
-  cxUnits_onDelete(data: [String], objectType: String = "Unit", operation: String = "delete"): [CxUnit]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxUnits_onSave(data: [CxUnitDO], objectType: String = "Unit", operation: String = "edit", properties: [String], methods: [methodInput]): [CxUnit]
+  cxUnits_onDelete(data: [String], objectType: String = "Unit", operation: String = "delete"): [CxUnit]
 }
 
 extend type Query {

@@ -84,14 +84,14 @@ enum IxLookupValueObjectType {
   WebPrivilege
 }
 
-extend type Mutation {
-  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxAddress]
-  cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String], methods: [methodInput]): [CxAddress]
+  cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
 }
 
 extend type Query {

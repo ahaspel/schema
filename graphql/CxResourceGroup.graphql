@@ -331,14 +331,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxResourceGroup]
-  cxResourceGroups_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResourceGroup]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit", properties: [String], methods: [methodInput]): [CxResourceGroup]
+  cxResourceGroups_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResourceGroup]
 }
 
 extend type Query {

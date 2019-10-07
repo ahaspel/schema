@@ -320,14 +320,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxMaterial]
-  cxMaterials_onDelete(data: [String], objectType: String = "Material", operation: String = "delete"): [CxMaterial]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit", properties: [String], methods: [methodInput]): [CxMaterial]
+  cxMaterials_onDelete(data: [String], objectType: String = "Material", operation: String = "delete"): [CxMaterial]
 }
 
 extend type Query {

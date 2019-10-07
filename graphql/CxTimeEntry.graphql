@@ -418,14 +418,14 @@ enum IxUnitUnitType {
   Self
 }
 
-extend type Mutation {
-  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxTimeEntry]
-  cxTimeEntrys_onDelete(data: [String], objectType: String = "TimeEntry", operation: String = "delete"): [CxTimeEntry]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String], methods: [methodInput]): [CxTimeEntry]
+  cxTimeEntrys_onDelete(data: [String], objectType: String = "TimeEntry", operation: String = "delete"): [CxTimeEntry]
 }
 
 extend type Query {

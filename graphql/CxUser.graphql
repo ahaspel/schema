@@ -184,14 +184,14 @@ type IxPhoneNumber {
   Description: String
 }
 
-extend type Mutation {
-  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit", properties: [String], postProcess: [PostProcess]): [CxUser]
-  cxUsers_onDelete(data: [String], objectType: String = "User", operation: String = "delete"): [CxUser]
+input methodInput {
+  name: String!
+  args: [[String]]
 }
 
-input PostProcess {
-  name: String!
-  values: [String]
+extend type Mutation {
+  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit", properties: [String], methods: [methodInput]): [CxUser]
+  cxUsers_onDelete(data: [String], objectType: String = "User", operation: String = "delete"): [CxUser]
 }
 
 extend type Query {
