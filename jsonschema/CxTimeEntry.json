@@ -499,12 +499,6 @@
 		"IxResource": {
 			"type": "object",
 			"properties": {
-				"Temporary": {
-					"type": "boolean"
-				},
-				"UnitCost": {
-					"$ref": "#/definitions/IxUnitCost"
-				},
 				"Owner": {
 					"$ref": "#/definitions/IxCompany"
 				},
@@ -513,6 +507,18 @@
 				},
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Temporary": {
+					"type": "boolean"
+				},
+				"UnitCost": {
+					"$ref": "#/definitions/IxUnitCost"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -531,12 +537,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"DisplayName": {
-					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",

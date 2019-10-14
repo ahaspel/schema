@@ -313,17 +313,17 @@ input IxRangeInput {
 }
 
 type IxResource {
-  Temporary: Boolean
-  UnitCost: IxUnitCost
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
   ObjectType: IxResourceObjectType
   Id: ID!
   Name: String
   Description: String
-  DisplayName: String
-  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
