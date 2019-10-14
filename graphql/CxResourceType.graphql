@@ -78,9 +78,14 @@ enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
 
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
 input methodInput {
   name: String!
-  args: [[String]]
+  args: JSONObject
 }
 
 extend type Mutation {

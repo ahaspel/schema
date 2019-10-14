@@ -184,24 +184,24 @@
 			],
 			"type": "object",
 			"properties": {
-				"BirthDate": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"LastName": {
-					"type": "string"
+				"Person": {
+					"$ref": "#/definitions/IxParty"
 				},
 				"FirstName": {
+					"type": "string"
+				},
+				"LastName": {
 					"type": "string"
 				},
 				"MiddleName": {
 					"type": "string"
 				},
+				"BirthDate": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"PreviousExperience": {
 					"$ref": "#/definitions/IxQuantity"
-				},
-				"Person": {
-					"$ref": "#/definitions/IxParty"
 				},
 				"Minority": {
 					"type": "array",
@@ -219,12 +219,6 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Machines": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceType"
 					}
 				},
 				"Languages": {
@@ -251,11 +245,11 @@
 						"$ref": "#/definitions/IxLookupValue"
 					}
 				},
-				"Temporary": {
-					"type": "boolean"
-				},
-				"UnitCost": {
-					"$ref": "#/definitions/IxUnitCost"
+				"Machines": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceType"
+					}
 				},
 				"Owner": {
 					"$ref": "#/definitions/IxCompany"
@@ -265,6 +259,18 @@
 				},
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Temporary": {
+					"type": "boolean"
+				},
+				"UnitCost": {
+					"$ref": "#/definitions/IxUnitCost"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -280,12 +286,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"DisplayName": {
-					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",

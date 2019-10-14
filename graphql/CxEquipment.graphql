@@ -136,31 +136,31 @@ type IxEmail {
 }
 
 type IxEmployee {
-  BirthDate: String
-  LastName: String
-  FirstName: String
-  MiddleName: String
-  PreviousExperience: IxQuantity
   Person: IxParty
+  FirstName: String
+  LastName: String
+  MiddleName: String
+  BirthDate: String
+  PreviousExperience: IxQuantity
   Minority: [IxLookupValue]
   Unions: [IxLookupValue]
   Licenses: [IxLookupValue]
-  Machines: [IxResourceType]
   Languages: [IxLookupValue]
   TrainingCourses: [IxLookupValue]
   Skills: [IxLookupValue]
   LaborClassification: [IxLookupValue]
-  Temporary: Boolean
-  UnitCost: IxUnitCost
+  Machines: [IxResourceType]
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
   ObjectType: IxEmployeeObjectType
   Id: ID!
   Name: String
   Description: String
-  DisplayName: String
-  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Divisions: [IxLookupValue]
   AccountCode: String
@@ -369,9 +369,14 @@ enum IxUnitUnitType {
   Self
 }
 
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
 input methodInput {
   name: String!
-  args: [[String]]
+  args: JSONObject
 }
 
 extend type Mutation {
