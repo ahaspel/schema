@@ -3,7 +3,7 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 181
+		"Quantity": 369
 	},
 	"CostCode": {
 		"UnitCost": {
@@ -14,23 +14,40 @@
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 800
+				"Quantity": 465
 			},
-			"Notes": "tbnlenFtjW"
+			"Notes": "jEUnlefWaAv"
 		},
 		"Global": false,
-		"BaseObject": "MSuGrCtOpM",
+		"BaseObject": "PoNfzHP",
 		"ObjectType": "CostCode",
 		"Id": 0,
-		"Name": "DgNfpXYfH",
-		"Description": "uDEDhNJTjBA"
+		"Name": "LsQiRwf",
+		"Description": "yjYPjOhRLDq",
+		"New": true,
+		"Dependencies": [
+			{
+				"ObjectType": "Equipment",
+				"Ids": [
+					54
+				]
+			}
+		]
 	},
-	"TotalAmount": 241,
-	"CompletedAmount": 859,
+	"TotalAmount": 41,
+	"CompletedAmount": 956,
 	"ObjectType": "JobCost",
-	"Name": "ymQQfAke",
-	"Description": "gxRohPaYevLU",
+	"Name": "XqJBXseXAnP",
+	"Description": "raamrDF",
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				386
+			]
+		}
+	],
 	"Id": 0,
-	"BaseObject": "nfxiOhmdP",
+	"BaseObject": "xWIgcaHRSQN",
 	"__typename": "CxJobCost"
 }

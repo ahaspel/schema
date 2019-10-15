@@ -1,3 +1,23 @@
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: CxDependencyObjectType!
+  Ids: [Int]!
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 type CxMaterial {
   ObjectType: CxMaterialObjectType
   Temporary: Boolean
@@ -21,6 +41,7 @@ type CxMaterial {
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
 }
 
 input CxMaterialInput {
@@ -39,6 +60,7 @@ input CxMaterialInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
+  Dependencies: [CxDependencyInput]
 }
 
 enum CxMaterialObjectType {
@@ -70,6 +92,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -79,6 +103,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
+  New: Boolean
+  Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -97,6 +123,8 @@ type IxCompany {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
@@ -171,6 +199,8 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -212,6 +242,8 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -248,6 +280,8 @@ input IxRangeInput {
 }
 
 type IxResourceSubtype {
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
   Name: String
@@ -271,6 +305,8 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Tags: [IxAttribute__String__]
 }
 

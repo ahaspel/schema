@@ -1,26 +1,52 @@
 {
-	"Family": "Material",
+	"Family": "Group",
 	"ResourceSubtypes": [
 		{
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						288
+					]
+				}
+			],
 			"ObjectType": "ResourceSubtype",
 			"Id": 0,
-			"Name": "qsXb",
-			"Description": "evYrYbFHLNc"
+			"Name": "E",
+			"Description": "ynPbnvYN"
 		}
 	],
-	"MoveVehicle": true,
-	"Name": "ZPcRsS",
+	"MoveVehicle": false,
+	"Name": "iWEKELIkP",
 	"ObjectType": "ResourceType",
 	"Id": 0,
-	"Description": "DdZbELkvsqp",
+	"Description": "LAuNRZP",
 	"Tags": [
 		{
-			"BaseObject": "FqEzoI",
+			"BaseObject": "FFjYXjzXkJNO",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						370
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "FFrxnEtd"
+			"Description": "QcgzWOH"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Crew",
+			"Ids": [
+				463
+			]
 		}
 	],
 	"__typename": "CxResourceType"

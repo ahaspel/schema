@@ -1,3 +1,23 @@
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: CxDependencyObjectType!
+  Ids: [Int]!
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 type CxUser {
   Party: IxParty
   Username: String
@@ -14,6 +34,7 @@ type CxUser {
   Id: ID!
   Divisions: [IxLookupValue]
   Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
 }
 
 input CxUserInput {
@@ -30,6 +51,7 @@ input CxUserInput {
   Id: ID!
   Divisions: [IxLookupValueDO]
   Tags: [IxAttribute__String__Input]
+  Dependencies: [CxDependencyInput]
 }
 
 enum CxUserObjectType {
@@ -67,6 +89,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -76,6 +100,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
+  New: Boolean
+  Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -126,6 +152,8 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -162,6 +190,8 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }

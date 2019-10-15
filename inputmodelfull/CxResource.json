@@ -1,5 +1,5 @@
 {
-	"Temporary": true,
+	"Temporary": false,
 	"Owner": {
 		"CompanyType": {
 			"Id": 1
@@ -7,50 +7,68 @@
 		"Emails": [
 			{
 				"Id": 0,
-				"Email": "Monserrate_Kemmer@yahoo.com",
-				"Name": "EbcFdTQ",
-				"Description": "yZIOBfaK"
+				"Email": "Samson57@hotmail.com",
+				"Name": "KRGyRDT",
+				"Description": "ijCWaT"
 			}
 		],
 		"PhoneNumbers": [
 			{
 				"Id": 0,
-				"PhoneNumber": "NSDshOC",
-				"Name": "rTVgIMY",
-				"Description": "HgvgtpRbO"
+				"PhoneNumber": "yQxtYxqu",
+				"Name": "IvvwPZIKX",
+				"Description": "YLIDnmcvw"
 			}
 		],
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Company",
 		"Id": 0,
-		"Name": "aggfOQU",
-		"Description": "WONrJBx",
+		"Name": "bQgUdW",
+		"Description": "ScdtbcfdpBOk",
+		"New": false,
+		"Dependencies": [
+			{
+				"ObjectType": "Equipment",
+				"Ids": [
+					996
+				]
+			}
+		],
 		"Address": {
-			"Street": "AK",
-			"StreetDetails": "SsavafVQ",
+			"Street": "I",
+			"StreetDetails": "DcfLEuptYXg",
 			"State": {
 				"Id": 1
 			},
-			"City": "sTPnTVNrd",
-			"ZipCode": "HsNZABJLG",
+			"City": "Xb",
+			"ZipCode": "ktuTSBYmd",
 			"Geocode": {
-				"Lat": 23.0598,
-				"Lng": -35.0713,
-				"Source": "Owner"
+				"Lat": 13.267,
+				"Lng": -56.4168,
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
 		},
 		"Tags": [
 			{
-				"BaseObject": "qXkfuZl",
+				"BaseObject": "pKfOeOY",
 				"AttributeId": 2,
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "TaskDay",
+						"Ids": [
+							899
+						]
+					}
+				],
 				"ObjectType": "Attribute",
 				"Id": 0,
 				"Name": "Capacity",
-				"Description": "ijrwdkKe"
+				"Description": "uonFzhu"
 			}
 		],
-		"AccountCode": "EQznPLlZgXo",
+		"AccountCode": "ySBfjRm",
 		"Divisions": [
 			{
 				"Id": 1
@@ -63,26 +81,44 @@
 		]
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Group",
 		"ResourceSubtypes": [
 			{
 				"Id": 29
 			}
 		],
 		"MoveVehicle": false,
-		"BaseObject": "wutZCLk",
+		"BaseObject": "MtTXEtqUtli",
 		"ObjectType": "ResourceType",
 		"Id": 0,
-		"Name": "yRVvrr",
-		"Description": "QAYbqUfpMkvl",
+		"Name": "LJVOvXvlQCt",
+		"Description": "emGfoL",
+		"New": true,
+		"Dependencies": [
+			{
+				"ObjectType": "Allocation",
+				"Ids": [
+					455
+				]
+			}
+		],
 		"Tags": [
 			{
-				"BaseObject": "yJpHWFXbM",
+				"BaseObject": "biIgMLGXy",
 				"AttributeId": 2,
+				"New": false,
+				"Dependencies": [
+					{
+						"ObjectType": "Employee",
+						"Ids": [
+							545
+						]
+					}
+				],
 				"ObjectType": "Attribute",
 				"Id": 0,
 				"Name": "Capacity",
-				"Description": "TXKUvY"
+				"Description": "nTCXbLVxw"
 			}
 		]
 	},
@@ -97,55 +133,72 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 100
+			"Quantity": 763
 		},
-		"Notes": "nHxIuteLVUq"
+		"Notes": "oAEKYVheEs"
 	},
-	"InCrew": false,
+	"InCrew": true,
 	"ForeColor": "#FFFFFF00",
 	"BackColor": "Transparent",
 	"Location": {
 		"Address": {
-			"Street": "v",
-			"StreetDetails": "efxBBF",
+			"Street": "cir",
+			"StreetDetails": "xVHsUD",
 			"State": {
 				"Id": 1
 			},
-			"City": "OhDlvmkfoL",
-			"ZipCode": "dZgbKUlk",
+			"City": "ZiTXpfY",
+			"ZipCode": "WlXaqGCQulBw",
 			"Geocode": {
-				"Lat": 44.4759,
-				"Lng": 81.0467,
-				"Source": "GPSService"
+				"Lat": -75.2045,
+				"Lng": 28.4493,
+				"Source": "Action"
 			},
 			"ObjectType": "Address",
 			"Id": 0
 		},
-		"Name": "FetgOsWNx",
-		"Description": "ueIzclUrPFh"
+		"Name": "PskUix",
+		"Description": "eRhBVPxrdl"
 	},
-	"AccountCode": "kqrERoDDu",
+	"AccountCode": "eCbfwgjCTNu",
 	"CurrentLifespan": {
 		"Start": "2018-01-14T00:00:00",
 		"End": "2018-12-14T00:00:00"
 	},
 	"Id": 0,
-	"ObjectType": "Employee",
+	"ObjectType": "Material",
 	"Divisions": [
 		{
 			"Id": 1
 		}
 	],
-	"Description": "INRIXIDjNQfT",
-	"Name": "qrxgjctxHgX",
+	"Description": "PYuWThyT",
+	"Name": "agBevDZ",
 	"Tags": [
 		{
-			"BaseObject": "eWdcuYtt",
+			"BaseObject": "QubFMKdtUghj",
 			"AttributeId": 2,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						426
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "UAXlxXbQd"
+			"Description": "BIaKSotnAQ"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				442
+			]
 		}
 	],
 	"__typename": "CxResource"

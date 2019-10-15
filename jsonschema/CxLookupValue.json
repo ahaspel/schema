@@ -1,7 +1,35 @@
 {
 	"id": "https://congistics.com/schema/CxLookupValue",
 	"title": "com.congistics.cbrd.util.CxLookupValue",
-	"definitions": {},
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		}
+	},
 	"immutable": [
 		"Dto"
 	],
@@ -10,6 +38,12 @@
 		"Name": {
 			"type": "string",
 			"minLength": 1
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
 		},
 		"Id": {
 			"type": "integer"

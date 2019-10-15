@@ -1,48 +1,75 @@
 {
-	"Temporary": false,
+	"Temporary": true,
 	"Owner": {
 		"CompanyType": {
-			"BaseObject": "YKaFruqIwh",
-			"ObjectType": "State",
+			"BaseObject": "xvQLmpy",
+			"ObjectType": "License",
 			"Id": 0,
-			"Name": "YIaHzzRdR",
-			"Description": "XiAlAyPVrHpH"
+			"Name": "TyswLOusMUuT",
+			"Description": "AhXDqLQLsQX",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Crew",
+					"Ids": [
+						630
+					]
+				}
+			]
 		},
 		"Emails": [
 			{
 				"Id": 0,
-				"Email": "Rickie_Gusikowski@gmail.com",
-				"Name": "NOVxODod",
-				"Description": "qgxMUEEG"
+				"Email": "Destini16@gmail.com",
+				"Name": "nFyVAl",
+				"Description": "KpVkQQKZCbS"
 			}
 		],
 		"PhoneNumbers": [
 			{
 				"Id": 0,
-				"PhoneNumber": "wUzMwkKZb",
-				"Name": "wndQzlIw",
-				"Description": "aWRWxft"
+				"PhoneNumber": "tbGhSOyUhpo",
+				"Name": "sAjLKXTLTX",
+				"Description": "lZQNIDbK"
 			}
 		],
-		"ObjectType": "Plant",
+		"ObjectType": "Company",
 		"Id": 0,
-		"Name": "cVnYHlveq",
-		"Description": "ojfRjLhtLs",
+		"Name": "TqDjtY",
+		"Description": "kuzxqFEUXsbA",
+		"New": true,
+		"Dependencies": [
+			{
+				"ObjectType": "TaskDay",
+				"Ids": [
+					136
+				]
+			}
+		],
 		"Address": {
-			"Street": "WaqdIQYqfRU",
-			"StreetDetails": "yIYJwZtURoC",
+			"Street": "ORq",
+			"StreetDetails": "AGzWIrczX",
 			"State": {
-				"BaseObject": "zZrUPaDD",
-				"ObjectType": "TimeEntryType",
+				"BaseObject": "qPFHVkYZkWt",
+				"ObjectType": "JobCertification",
 				"Id": 0,
-				"Name": "qrMOEwFLQ",
-				"Description": "gQDpOmkTTDKr"
+				"Name": "RWDDzlwLK",
+				"Description": "CRbPhVvo",
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "Equipment",
+						"Ids": [
+							128
+						]
+					}
+				]
 			},
-			"City": "R",
-			"ZipCode": "bxSFpgVY",
+			"City": "OeaoaWK",
+			"ZipCode": "mIprhsnSu",
 			"Geocode": {
-				"Lat": 974,
-				"Lng": 285,
+				"Lat": 193,
+				"Lng": 647,
 				"Source": "Action"
 			},
 			"ObjectType": "Address",
@@ -50,22 +77,40 @@
 		},
 		"Tags": [
 			{
-				"BaseObject": "VenLif",
+				"BaseObject": "VhSBiJEJrpfT",
 				"AttributeId": 0,
+				"New": false,
+				"Dependencies": [
+					{
+						"ObjectType": "Job",
+						"Ids": [
+							621
+						]
+					}
+				],
 				"ObjectType": "Attribute",
 				"Id": 0,
-				"Name": "xTvaYihBMLwc",
-				"Description": "hlCLQrNr"
+				"Name": "bDqQIJUEyPV",
+				"Description": "chESrwmLvrmc"
 			}
 		],
-		"AccountCode": "JKCIbiJscf",
+		"AccountCode": "PEwatyMJ",
 		"Divisions": [
 			{
-				"BaseObject": "oPSxidTxiwC",
-				"ObjectType": "CompanyType",
+				"BaseObject": "qZVhcRPP",
+				"ObjectType": "JobType",
 				"Id": 0,
-				"Name": "VbpLefXp",
-				"Description": "NnktxgJsENz"
+				"Name": "NAURIiW",
+				"Description": "LKLQYzaVmcS",
+				"New": false,
+				"Dependencies": [
+					{
+						"ObjectType": "Material",
+						"Ids": [
+							692
+						]
+					}
+				]
 			}
 		],
 		"Contacts": [
@@ -73,170 +118,268 @@
 				"Emails": [
 					{
 						"Id": 0,
-						"Email": "Ford_Erdman61@yahoo.com",
-						"Name": "yLHdeCP",
-						"Description": "xlyZCLU"
+						"Email": "Cleta.Wisozk3@hotmail.com",
+						"Name": "TkONJPkgRMj",
+						"Description": "QRsNtWQInzX"
 					}
 				],
 				"PhoneNumbers": [
 					{
 						"Id": 0,
-						"PhoneNumber": "oOxxEPAYXjm",
-						"Name": "EuTyEF",
-						"Description": "gogIFMaEry"
+						"PhoneNumber": "OPAZSx",
+						"Name": "lXTcSNIXDS",
+						"Description": "vcwnCLm"
 					}
 				],
-				"ObjectType": "Company",
+				"ObjectType": "Plant",
 				"Id": 0,
-				"Name": "ndiiIDSry",
-				"Description": "qmenpwayH",
+				"Name": "bEgapOz",
+				"Description": "eSkKjXrVCW",
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "Job",
+						"Ids": [
+							714
+						]
+					}
+				],
 				"Address": {
-					"Street": "MKdNM",
-					"StreetDetails": "dwpapvCqL",
+					"Street": "zkFENXh",
+					"StreetDetails": "UxCRCE",
 					"State": {
-						"BaseObject": "udYyYRP",
-						"ObjectType": "License",
+						"BaseObject": "loBKEviFarXY",
+						"ObjectType": "Skill",
 						"Id": 0,
-						"Name": "KwcPOqUVU",
-						"Description": "VfgXUUB"
+						"Name": "BEoEqcn",
+						"Description": "xLXWwzSgkTpm",
+						"New": true,
+						"Dependencies": [
+							{
+								"ObjectType": "Material",
+								"Ids": [
+									941
+								]
+							}
+						]
 					},
-					"City": "kOTgWQUtOSX",
-					"ZipCode": "jHrCtSUJQh",
+					"City": "A",
+					"ZipCode": "KyeAwlRWZ",
 					"Geocode": {
-						"Lat": 704,
-						"Lng": 210,
-						"Source": "GPSService"
+						"Lat": 208,
+						"Lng": 73,
+						"Source": "Owner"
 					},
 					"ObjectType": "Address",
 					"Id": 0
 				},
 				"Tags": [
 					{
-						"BaseObject": "dKBdUrrWsxjc",
+						"BaseObject": "XofXaXOwdd",
 						"AttributeId": 0,
+						"New": true,
+						"Dependencies": [
+							{
+								"ObjectType": "Crew",
+								"Ids": [
+									84
+								]
+							}
+						],
 						"ObjectType": "Attribute",
 						"Id": 0,
-						"Name": "gjfsezHHoq",
-						"Description": "KwPhWzGT"
+						"Name": "lWLnVZZdU",
+						"Description": "gBaZANx"
 					}
 				]
 			}
 		]
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Equipment",
 		"ResourceSubtypes": [
 			{
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "Crew",
+						"Ids": [
+							861
+						]
+					}
+				],
 				"ObjectType": "ResourceSubtype",
 				"Id": 0,
-				"Name": "QtdcFsTjZfTf",
-				"Description": "cGYaxBpBLO"
+				"Name": "UtZnsnVhz",
+				"Description": "WxUKqjH"
 			}
 		],
-		"MoveVehicle": false,
-		"BaseObject": "AoDqepsl",
+		"MoveVehicle": true,
+		"BaseObject": "DYqkEk",
 		"ObjectType": "ResourceType",
 		"Id": 0,
-		"Name": "RkymtsUUPB",
-		"Description": "TZGJKsAU",
+		"Name": "byUrtbJly",
+		"Description": "snQXJDDwZPL",
+		"New": true,
+		"Dependencies": [
+			{
+				"ObjectType": "Crew",
+				"Ids": [
+					686
+				]
+			}
+		],
 		"Tags": [
 			{
-				"BaseObject": "hXYqnjL",
+				"BaseObject": "NjDbJydusAOe",
 				"AttributeId": 0,
+				"New": false,
+				"Dependencies": [
+					{
+						"ObjectType": "Allocation",
+						"Ids": [
+							342
+						]
+					}
+				],
 				"ObjectType": "Attribute",
 				"Id": 0,
-				"Name": "YkFOLhxkxEwT",
-				"Description": "PlFAtvawEC"
+				"Name": "RVCRDRDPxXK",
+				"Description": "tylyBkSsFl"
 			}
 		]
 	},
 	"ResourceSubtype": {
+		"New": false,
+		"Dependencies": [
+			{
+				"ObjectType": "Equipment",
+				"Ids": [
+					136
+				]
+			}
+		],
 		"ObjectType": "ResourceSubtype",
 		"Id": 0,
-		"Name": "NFXVARKclBRK",
-		"Description": "QhwqxB"
+		"Name": "LvIvsEZRxZ",
+		"Description": "IXqsYinXOxk"
 	},
 	"UnitCost": {
 		"Unit": {
 			"UnitType": "Length",
-			"Scalar": 671,
-			"Integral": false,
-			"BaseObject": "aFtJURJ",
+			"Scalar": 222,
+			"Integral": true,
+			"BaseObject": "nQFNBR",
 			"ObjectType": "Unit",
 			"Id": 0,
-			"Name": "ejfqzlW",
-			"Description": "pJJXPxCRbi"
+			"Name": "ShMXYKAWGQbi",
+			"Description": "dMKjZUBEEf"
 		},
 		"Cost": {
 			"Unit": {
-				"UnitType": "Area",
-				"Scalar": 778,
+				"UnitType": "Length",
+				"Scalar": 857,
 				"Integral": false,
-				"BaseObject": "iXDSWN",
+				"BaseObject": "mrzJvfVW",
 				"ObjectType": "Unit",
 				"Id": 0,
-				"Name": "JAfvrvMxZ",
-				"Description": "gjDpuja"
+				"Name": "lTiFSqJSm",
+				"Description": "jnzGDddiXCS"
 			},
-			"Quantity": 791
+			"Quantity": 943
 		},
-		"Notes": "knhLCFX"
+		"Notes": "xxxhWVDaUt"
 	},
 	"InCrew": true,
-	"ForeColor": "UafUhyYN",
-	"BackColor": "zEJhbbAWW",
+	"ForeColor": "HKhtouS",
+	"BackColor": "lJGSPdQ",
 	"Location": {
 		"Address": {
-			"Street": "O",
-			"StreetDetails": "hPbYTJzb",
+			"Street": "Yt",
+			"StreetDetails": "lPSYrAUan",
 			"State": {
-				"BaseObject": "UejTDKBwGBy",
-				"ObjectType": "LaborClass",
+				"BaseObject": "MdJlupAB",
+				"ObjectType": "Union",
 				"Id": 0,
-				"Name": "injveDtcS",
-				"Description": "MdwGAIRo"
+				"Name": "nuFUMEp",
+				"Description": "uUopYODa",
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "Equipment",
+						"Ids": [
+							156
+						]
+					}
+				]
 			},
-			"City": "ekWWv",
-			"ZipCode": "GfUHsuForsVc",
+			"City": "kPIjJzf",
+			"ZipCode": "veAddkSqEM",
 			"Geocode": {
-				"Lat": 45,
-				"Lng": 545,
-				"Source": "GPSService"
+				"Lat": 274,
+				"Lng": 915,
+				"Source": "Action"
 			},
 			"ObjectType": "Address",
 			"Id": 0
 		},
-		"Name": "aBmTwXi",
-		"Description": "KdgyWub"
+		"Name": "bVZFDAUPu",
+		"Description": "ktQOhAF"
 	},
-	"DisplayName": "QlxWAoqbnJsZ",
-	"AccountCode": "gWFcvg",
+	"DisplayName": "yGpPNMLTfG",
+	"AccountCode": "fZSRHBaJgoe",
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "gDNYMYAsx"
+		"Duration": "pZOaTGwlvKp"
 	},
 	"Id": 0,
-	"ObjectType": "Equipment",
+	"ObjectType": "Material",
 	"Divisions": [
 		{
-			"BaseObject": "AQBrYyOHoED",
-			"ObjectType": "CompanyType",
+			"BaseObject": "xQNlVAlvjCy",
+			"ObjectType": "WebPrivilege",
 			"Id": 0,
-			"Name": "KGnxvCPM",
-			"Description": "JdUYUWVJoUrb"
+			"Name": "xrRRYB",
+			"Description": "TpatkehrYbg",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Crew",
+					"Ids": [
+						153
+					]
+				}
+			]
 		}
 	],
-	"Description": "fZTDLGZYAdMZ",
-	"Name": "iztXExxLQ",
+	"Description": "WxwRyBbJ",
+	"Name": "vsQYWFFWtBQn",
 	"Tags": [
 		{
-			"BaseObject": "DwsQoW",
+			"BaseObject": "EoVnvIzLs",
 			"AttributeId": 0,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Job",
+					"Ids": [
+						370
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "tFjYssLjJyOe",
-			"Description": "sDHIGC"
+			"Name": "bOUvYRzuKeXc",
+			"Description": "HghHVeSRTs"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				323
+			]
 		}
 	]
 }

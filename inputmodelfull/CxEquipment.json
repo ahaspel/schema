@@ -1,40 +1,40 @@
 {
-	"Model": "HAb",
-	"Make": "mwP",
-	"SerialNumber": "NlYLBnYjaZrO",
+	"Model": "T",
+	"Make": "LlrqXXNwIQW",
+	"SerialNumber": "KmxaSlFXQX",
 	"Year": "2019-01-14T08:00:00",
 	"Height": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 284
+		"Quantity": 32
 	},
 	"Weight": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 206
+		"Quantity": 565
 	},
 	"Width": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 279
+		"Quantity": 210
 	},
 	"Capacity": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 790
+		"Quantity": 735
 	},
-	"MoveNotes": "epoazwFOFhvP",
+	"MoveNotes": "bYHOhbIwN",
 	"Operators": [
 		{
 			"Id": 1
 		}
 	],
 	"ObjectType": "Equipment",
-	"Temporary": false,
+	"Temporary": true,
 	"Owner": {
 		"Id": 2
 	},
@@ -49,13 +49,13 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 469
+			"Quantity": 40
 		},
-		"Notes": "YsDaHDyBugrK"
+		"Notes": "zMiPdeTS"
 	},
 	"ForeColor": "#FFFFFF00",
 	"BackColor": "Transparent",
-	"AccountCode": "beqWq",
+	"AccountCode": "CRrZp",
 	"CurrentLifespan": {
 		"Start": "2018-01-14T00:00:00",
 		"End": "2018-12-14T00:00:00"
@@ -66,15 +66,32 @@
 			"Id": 1
 		}
 	],
-	"Description": "XHSGhhFOH",
+	"Description": "otymUJlr",
 	"Tags": [
 		{
-			"BaseObject": "zGkdIslSKJZ",
+			"BaseObject": "jnhHIMWgj",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						495
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "EZEsQAGDO"
+			"Description": "CGcqoMz"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Crew",
+			"Ids": [
+				376
+			]
 		}
 	],
 	"__typename": "CxEquipment"

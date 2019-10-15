@@ -1,3 +1,23 @@
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: CxDependencyObjectType!
+  Ids: [Int]!
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 type CxResourceType {
   Family: CxResourceTypeFamily
   ResourceSubtypes: [IxResourceSubtype]
@@ -7,6 +27,7 @@ type CxResourceType {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
 }
 
 enum CxResourceTypeFamily {
@@ -25,6 +46,7 @@ input CxResourceTypeInput {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
+  Dependencies: [CxDependencyInput]
 }
 
 enum CxResourceTypeObjectType {
@@ -41,6 +63,8 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -50,6 +74,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
+  New: Boolean
+  Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -61,6 +87,8 @@ enum IxAttributeStringObjectType {
 }
 
 type IxResourceSubtype {
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
   Name: String
@@ -68,6 +96,8 @@ type IxResourceSubtype {
 }
 
 input IxResourceSubtypeInput {
+  New: Boolean
+  Dependencies: [CxDependencyInput]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
   Name: String!

@@ -1,29 +1,46 @@
 {
 	"Id": 0,
 	"Expiration": "2019-01-14T08:00:00",
-	"AllowedUsers": 825,
-	"AllowedWebUsers": 31,
-	"SerialNumber": "XKvvnGp",
+	"AllowedUsers": 438,
+	"AllowedWebUsers": 363,
+	"SerialNumber": "DGLsMvEkDmGK",
 	"Valid": true,
-	"MachineCode": "WzBRFjgzQDXr",
+	"MachineCode": "DvbCdKDLyDD",
 	"Nag": true,
-	"ErrorMessage": "dIYjlIbJsWOA",
+	"ErrorMessage": "UWWUmf",
 	"ObjectType": "ApplicationLicense",
 	"Divisions": [
 		{
 			"Id": 1
 		}
 	],
-	"Description": "RYvnJHL",
-	"Name": "HztukHA",
+	"Description": "IlOAtU",
+	"Name": "JzvkwVvHgHkz",
 	"Tags": [
 		{
-			"BaseObject": "gVVsnBgx",
+			"BaseObject": "lXxTZErHbj",
 			"AttributeId": 2,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Job",
+					"Ids": [
+						282
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "qFLqaEUV"
+			"Description": "sBleCAj"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				868
+			]
 		}
 	],
 	"__typename": "CxApplicationLicense"

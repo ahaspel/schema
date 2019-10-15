@@ -3,104 +3,175 @@
 		"Emails": [
 			{
 				"Id": 0,
-				"Email": "Sincere21@hotmail.com",
-				"Name": "wFMgxYV",
-				"Description": "GbogUf"
+				"Email": "Leonor41@hotmail.com",
+				"Name": "kEHKpYFmk",
+				"Description": "rGusECNaJwPy"
 			}
 		],
 		"PhoneNumbers": [
 			{
 				"Id": 0,
-				"PhoneNumber": "XOReRoVTP",
-				"Name": "ulZQGn",
-				"Description": "UWBvDr"
+				"PhoneNumber": "dYWQzzzkLQ",
+				"Name": "rATayoOn",
+				"Description": "acDYkY"
 			}
 		],
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Company",
 		"Id": 0,
-		"Name": "mutktLIOsm",
-		"Description": "jhCIWGPG",
+		"Name": "cpZlmaLj",
+		"Description": "xZdxgqwojISV",
+		"New": true,
+		"Dependencies": [
+			{
+				"ObjectType": "TaskDay",
+				"Ids": [
+					88
+				]
+			}
+		],
 		"Address": {
-			"Street": "anKii",
-			"StreetDetails": "LUlqlpJrpbl",
+			"Street": "mH",
+			"StreetDetails": "MKXGKS",
 			"State": {
-				"BaseObject": "HoHCqAAC",
-				"ObjectType": "Skill",
+				"BaseObject": "FrrIwQonUvFS",
+				"ObjectType": "Privilege",
 				"Id": 0,
-				"Name": "riKEHcTaG",
-				"Description": "xItWvTombJi"
+				"Name": "aNJapKbI",
+				"Description": "EkamMRJZ",
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "Allocation",
+						"Ids": [
+							640
+						]
+					}
+				]
 			},
-			"City": "ASHzOfLvjqW",
-			"ZipCode": "lWICBeidIGjP",
+			"City": "JbHL",
+			"ZipCode": "fbmVrJp",
 			"Geocode": {
-				"Lat": 954,
-				"Lng": 696,
-				"Source": "Owner"
+				"Lat": 189,
+				"Lng": 946,
+				"Source": "Action"
 			},
 			"ObjectType": "Address",
 			"Id": 0
 		},
 		"Tags": [
 			{
-				"BaseObject": "ntTRMjq",
+				"BaseObject": "uUTGcWQNlDU",
 				"AttributeId": 0,
+				"New": true,
+				"Dependencies": [
+					{
+						"ObjectType": "Crew",
+						"Ids": [
+							185
+						]
+					}
+				],
 				"ObjectType": "Attribute",
 				"Id": 0,
-				"Name": "bEMeigKNjX",
-				"Description": "ySdAjMNdq"
+				"Name": "XTVIfaAMtrd",
+				"Description": "fRhixlnDsBb"
 			}
 		]
 	},
-	"Username": "nQiX",
-	"Password": "LZAAr",
-	"CognitoCode": "kafGyHsVVNW",
+	"Username": "ElZ",
+	"Password": "DhsBkFN",
+	"CognitoCode": "kQXJyrEQygPj",
 	"Level": {
 		"ObjectType": "Level",
 		"Id": 0,
-		"Name": "KXoIYEBCaAsx",
-		"Description": "dZcuFKLutQ"
+		"Name": "sFfeXFDaV",
+		"Description": "VRYFJcwmc"
 	},
 	"WebPrivileges": [
 		{
-			"BaseObject": "JpdSTpHIExit",
-			"ObjectType": "Training",
+			"BaseObject": "mRKtFdinN",
+			"ObjectType": "JobSubtype",
 			"Id": 0,
-			"Name": "xVnmphQylWQg",
-			"Description": "EmLCHLtJ"
+			"Name": "MIDjptfuMuF",
+			"Description": "CNYOpKmTnkMv",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Crew",
+					"Ids": [
+						581
+					]
+				}
+			]
 		}
 	],
 	"Privileges": [
 		{
-			"BaseObject": "WyBZstGs",
-			"ObjectType": "JobType",
+			"BaseObject": "aPCxYnaOR",
+			"ObjectType": "Training",
 			"Id": 0,
-			"Name": "nXNvzREYR",
-			"Description": "wAHteJovmZ"
+			"Name": "GlsXhHGY",
+			"Description": "tjtljRGgDuH",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Allocation",
+					"Ids": [
+						346
+					]
+				}
+			]
 		}
 	],
-	"Administrator": true,
+	"Administrator": false,
 	"ReadOnly": false,
-	"WebLevel": "None",
-	"Description": "WrKdAXBYrk",
+	"WebLevel": "All",
+	"Description": "cEwGdRLmGu",
 	"ObjectType": "User",
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "HDIQjXLtOgYF",
-			"ObjectType": "JobStatus",
+			"BaseObject": "FiHAZr",
+			"ObjectType": "Skill",
 			"Id": 0,
-			"Name": "bVrvngvzpHrh",
-			"Description": "RMlpNs"
+			"Name": "xJNjtHzpE",
+			"Description": "fAxRLGjJEo",
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Crew",
+					"Ids": [
+						32
+					]
+				}
+			]
 		}
 	],
 	"Tags": [
 		{
-			"BaseObject": "pynyKG",
+			"BaseObject": "QnDvdiKiFUS",
 			"AttributeId": 0,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Crew",
+					"Ids": [
+						14
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "plBshUcqpn",
-			"Description": "gQpvUmyMqV"
+			"Name": "lIhZQQYu",
+			"Description": "HqxKpmtx"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Allocation",
+			"Ids": [
+				447
+			]
 		}
 	]
 }

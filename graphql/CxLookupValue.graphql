@@ -1,5 +1,26 @@
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: CxDependencyObjectType!
+  Ids: [Int]!
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 type CxLookupValue {
   Name: String
+  Dependencies: [CxDependency]
   Id: ID!
   Description: String
   ObjectType: CxLookupValueObjectType
@@ -7,6 +28,7 @@ type CxLookupValue {
 
 input CxLookupValueInput {
   Name: String!
+  Dependencies: [CxDependencyInput]
   Id: ID!
   Description: String
   ObjectType: CxLookupValueObjectType!

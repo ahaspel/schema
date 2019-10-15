@@ -1,5 +1,5 @@
 {
-	"Preferred": false,
+	"Preferred": true,
 	"IsMover": true,
 	"SupplyTypes": [
 		{
@@ -15,25 +15,43 @@
 						"Unit": {
 							"Id": 1
 						},
-						"Quantity": 473
+						"Quantity": 442
 					},
-					"Notes": "XrgaAWc"
+					"Notes": "MwmFWNAcXY"
 				}
 			],
-			"AccrualNumber": "PUTlYIm",
-			"Notes": "mLVacUTFym",
+			"AccrualNumber": "ywzCNzHEBxr",
+			"Notes": "bXtQkVakZrg",
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Job",
+					"Ids": [
+						66
+					]
+				}
+			],
 			"ObjectType": "SupplyType",
 			"Id": 0,
-			"Name": "lDORlW",
-			"Description": "gupjEuxoIsnI",
+			"Name": "ySTRtVPwnl",
+			"Description": "MWHuKyYmpOa",
 			"Tags": [
 				{
-					"BaseObject": "zZqUvYVXVHSw",
+					"BaseObject": "MQuosA",
 					"AttributeId": 2,
+					"New": true,
+					"Dependencies": [
+						{
+							"ObjectType": "Equipment",
+							"Ids": [
+								553
+							]
+						}
+					],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "NvsLQLOJVWr"
+					"Description": "JgEyvwjFNWd"
 				}
 			]
 		}
@@ -47,80 +65,98 @@
 			"Emails": [
 				{
 					"Id": 0,
-					"Email": "Cicero92@yahoo.com",
-					"Name": "AUAxoyq",
-					"Description": "KbyqTZrlI"
+					"Email": "Buford54@gmail.com",
+					"Name": "nvUtIkBctDOp",
+					"Description": "XeBCHc"
 				}
 			],
 			"PhoneNumbers": [
 				{
 					"Id": 0,
-					"PhoneNumber": "rstWwRPqQf",
-					"Name": "FOXOuQaedXH",
-					"Description": "kxsAyjD"
+					"PhoneNumber": "MNqUQRTff",
+					"Name": "YFHqsSOYF",
+					"Description": "AcpyCCrGYGEL"
 				}
 			],
-			"ObjectType": "Company",
+			"ObjectType": "Plant",
 			"Id": 0,
-			"Name": "pxW",
-			"Description": "czYIewunaU",
+			"Name": "lEW",
+			"Description": "SMemMFaoj",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Allocation",
+					"Ids": [
+						47
+					]
+				}
+			],
 			"Address": {
-				"Street": "HKFtMFSX",
-				"StreetDetails": "acbgWhRcO",
+				"Street": "C",
+				"StreetDetails": "muEUqGBONAp",
 				"State": {
 					"Id": 1
 				},
-				"City": "cBDBu",
-				"ZipCode": "wTYGoHrfHQT",
+				"City": "jtKS",
+				"ZipCode": "KrqcaCqBTPeO",
 				"Geocode": {
-					"Lat": -57.4799,
-					"Lng": -134.9055,
-					"Source": "GPSService"
+					"Lat": -25.8237,
+					"Lng": 108.4562,
+					"Source": "Owner"
 				},
 				"ObjectType": "Address",
 				"Id": 0
 			},
 			"Tags": [
 				{
-					"BaseObject": "jvtESJA",
+					"BaseObject": "DaRAKweC",
 					"AttributeId": 2,
+					"New": false,
+					"Dependencies": [
+						{
+							"ObjectType": "Crew",
+							"Ids": [
+								143
+							]
+						}
+					],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "uPsTSHzWu"
+					"Description": "ztvugd"
 				}
 			]
 		}
 	],
-	"AccountCode": "ReCmjpg",
+	"AccountCode": "xLnwmDtVGOb",
 	"PhoneNumbers": [
 		{
 			"Id": 0,
-			"PhoneNumber": "hJpcKEc",
-			"Name": "iweXCTOg",
-			"Description": "TZLnqI"
+			"PhoneNumber": "JLNjtHTNeXUw",
+			"Name": "HnHKqOXP",
+			"Description": "gOMlxo"
 		}
 	],
 	"Emails": [
 		{
 			"Id": 0,
-			"Email": "Sammy_Rippin2@hotmail.com",
-			"Name": "XDWXTkqQXATy",
-			"Description": "fcKfbPBlp"
+			"Email": "Dejon_Friesen94@gmail.com",
+			"Name": "CFcHmbqLL",
+			"Description": "hpIXgnQwi"
 		}
 	],
-	"Name": "dsjJLsXoGV",
+	"Name": "FvNKMKfLxz",
 	"Address": {
-		"Street": "CBFDtT",
-		"StreetDetails": "tBApwZXLd",
+		"Street": "FMnRsK",
+		"StreetDetails": "EcuPWRt",
 		"State": {
 			"Id": 1
 		},
-		"City": "jhOsmadFdO",
-		"ZipCode": "LKRpPovXSOLh",
+		"City": "KvFyyolor",
+		"ZipCode": "biktXZm",
 		"Geocode": {
-			"Lat": -14.9336,
-			"Lng": 59.494,
+			"Lat": -22.4008,
+			"Lng": -43.2518,
 			"Source": "GPSService"
 		},
 		"ObjectType": "Address",
@@ -132,15 +168,32 @@
 			"Id": 1
 		}
 	],
-	"Description": "OuEAXC",
+	"Description": "PNglevnRzJo",
 	"Tags": [
 		{
-			"BaseObject": "zxGIRI",
+			"BaseObject": "qjsQjTeLn",
 			"AttributeId": 2,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						643
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "axNnRC"
+			"Description": "TAWBrFUZS"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Equipment",
+			"Ids": [
+				406
+			]
 		}
 	],
 	"__typename": "CxSubcontractor"

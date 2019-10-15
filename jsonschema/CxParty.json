@@ -2,6 +2,33 @@
 	"id": "https://congistics.com/schema/CxParty",
 	"title": "com.congistics.cbrd.party.CxParty",
 	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
 		"IxAddress": {
 			"superRequired": [
 				"Id",
@@ -56,6 +83,15 @@
 				},
 				"AttributeId": {
 					"type": "integer"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -168,6 +204,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -243,6 +288,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
 			}
 		}
 	},

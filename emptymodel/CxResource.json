@@ -6,10 +6,12 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Company",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
+		"New": false,
+		"Dependencies": [],
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
@@ -32,7 +34,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Group",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -40,6 +42,8 @@
 		"Id": 0,
 		"Name": "",
 		"Description": "",
+		"New": false,
+		"Dependencies": [],
 		"Tags": []
 	},
 	"ResourceSubtype": {
@@ -92,5 +96,6 @@
 	"Description": "",
 	"Name": "",
 	"Tags": [],
+	"Dependencies": [],
 	"__typename": "CxResource"
 }

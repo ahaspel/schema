@@ -2,7 +2,7 @@
 	"Contact": {
 		"Id": 1
 	},
-	"Name": "KiWnDXVHqRux",
+	"Name": "MJeUEdBskT",
 	"ResourceBlocks": [
 		{
 			"Resource": {
@@ -14,16 +14,25 @@
 			},
 			"ObjectType": "ResourceBlock",
 			"Id": 0,
-			"Name": "uHuZAu",
-			"Description": "GOofaC",
+			"Name": "ERwsbowRkxNm",
+			"Description": "SINrBM",
 			"Tags": [
 				{
-					"BaseObject": "mddecFqkDys",
+					"BaseObject": "mrYqpNTrH",
 					"AttributeId": 2,
+					"New": true,
+					"Dependencies": [
+						{
+							"ObjectType": "Equipment",
+							"Ids": [
+								974
+							]
+						}
+					],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "IIxElCwrHP"
+					"Description": "JSmfRr"
 				}
 			]
 		}
@@ -34,22 +43,39 @@
 	},
 	"ForeColor": "#FFFFFF00",
 	"BackColor": "Transparent",
-	"AccountCode": "YffCqPsii",
+	"AccountCode": "tVaUzRE",
 	"Id": 0,
 	"Divisions": [
 		{
 			"Id": 1
 		}
 	],
-	"Description": "vxdfljJ",
+	"Description": "yDRiLovSgKg",
 	"Tags": [
 		{
-			"BaseObject": "tJDaMJZXXvi",
+			"BaseObject": "VOujRdavdF",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Job",
+					"Ids": [
+						105
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "ttAlSnwWPiX"
+			"Description": "MvQKCNEHRJ"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Allocation",
+			"Ids": [
+				162
+			]
 		}
 	],
 	"__typename": "CxResourceGroup"

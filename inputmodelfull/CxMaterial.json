@@ -8,18 +8,18 @@
 		"Items": [
 			{
 				"Id": 0,
-				"Quantity": 262,
+				"Quantity": 916,
 				"Start": "2019-01-14T08:00:00",
 				"Vendor": {
 					"Id": 2
 				},
-				"AccountCode": "IPQSiwAQS",
-				"Name": "AKFYpTcL",
-				"Description": "ddLCEm"
+				"AccountCode": "YBwpuNBsFC",
+				"Name": "kdoEXeyvBFMC",
+				"Description": "IUdZzGrbMfx"
 			}
 		],
-		"Total": 317,
-		"Empty": true
+		"Total": 626,
+		"Empty": false
 	},
 	"Unit": {
 		"Id": 1
@@ -33,23 +33,40 @@
 	},
 	"ForeColor": "#FFFFFF00",
 	"BackColor": "Transparent",
-	"DisplayName": "qYnnyQtm",
-	"AccountCode": "myZpkwhmVsBx",
+	"DisplayName": "VMbHhNWEmi",
+	"AccountCode": "zomjLLSUP",
 	"Id": 0,
 	"Divisions": [
 		{
 			"Id": 1
 		}
 	],
-	"Description": "jlalhm",
+	"Description": "GGrsXearI",
 	"Tags": [
 		{
-			"BaseObject": "fiVgpScMgNnS",
+			"BaseObject": "bNXpKzVpU",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Allocation",
+					"Ids": [
+						611
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "wOJbOPGU"
+			"Description": "zAllWJveqB"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Allocation",
+			"Ids": [
+				704
+			]
 		}
 	],
 	"__typename": "CxMaterial"

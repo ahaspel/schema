@@ -24,6 +24,21 @@ enum CxAddressObjectType {
   Address
 }
 
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 input FilterInput {
   name: String!
   values: [String]
@@ -55,6 +70,8 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {

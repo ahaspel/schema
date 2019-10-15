@@ -2,6 +2,33 @@
 	"id": "https://congistics.com/schema/CxJobCost",
 	"title": "com.congistics.cbrd.cost.CxJobCost",
 	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
 		"IxCostCode": {
 			"superRequired": [
 				"Id",
@@ -33,6 +60,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -146,6 +182,12 @@
 		},
 		"Description": {
 			"type": "string"
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
 		},
 		"Id": {
 			"type": "integer"

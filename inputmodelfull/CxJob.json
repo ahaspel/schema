@@ -9,7 +9,7 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 385
+		"Quantity": 525
 	},
 	"Types": [
 		{
@@ -27,74 +27,92 @@
 		}
 	],
 	"Address": {
-		"Street": "kerxKK",
-		"StreetDetails": "wJInlHbzympb",
+		"Street": "y",
+		"StreetDetails": "rYRcIogPmiQd",
 		"State": {
 			"Id": 1
 		},
-		"City": "ZJO",
-		"ZipCode": "bpCGlRoKkL",
+		"City": "KKwpE",
+		"ZipCode": "LALZhZEs",
 		"Geocode": {
-			"Lat": -52.0235,
-			"Lng": -173.201,
+			"Lat": -85.0953,
+			"Lng": -53.9265,
 			"Source": "GPSService"
 		},
 		"ObjectType": "Address",
 		"Id": 0
 	},
-	"AccountCode": "dtbZTAWHPin",
+	"AccountCode": "vbINODDSxHtR",
 	"Contacts": [
 		{
 			"Emails": [
 				{
 					"Id": 0,
-					"Email": "Harrison7@hotmail.com",
-					"Name": "DMVlPh",
-					"Description": "PVilOFGydXTW"
+					"Email": "Maci_Parker@gmail.com",
+					"Name": "xmfPKX",
+					"Description": "QVcqXYUYX"
 				}
 			],
 			"PhoneNumbers": [
 				{
 					"Id": 0,
-					"PhoneNumber": "gRvITGD",
-					"Name": "sNPrtVngIeIQ",
-					"Description": "TdzhMUVlm"
+					"PhoneNumber": "QtkCXCD",
+					"Name": "IFYEtisMWgcE",
+					"Description": "WsxhbWzZv"
 				}
 			],
-			"ObjectType": "Party",
+			"ObjectType": "Plant",
 			"Id": 0,
-			"Name": "YpUdpu",
-			"Description": "ptzelFgaS",
+			"Name": "jbdOOc",
+			"Description": "JmlqlutS",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Job",
+					"Ids": [
+						384
+					]
+				}
+			],
 			"Address": {
-				"Street": "ceaGYCpcXZ",
-				"StreetDetails": "xHgaCTixk",
+				"Street": "NTs",
+				"StreetDetails": "yGoFlA",
 				"State": {
 					"Id": 1
 				},
-				"City": "eThmZS",
-				"ZipCode": "BYrRPirtWk",
+				"City": "i",
+				"ZipCode": "SFYLLVuCI",
 				"Geocode": {
-					"Lat": -52.28,
-					"Lng": 38.9959,
-					"Source": "GPSService"
+					"Lat": -56.2675,
+					"Lng": 35.1557,
+					"Source": "Owner"
 				},
 				"ObjectType": "Address",
 				"Id": 0
 			},
 			"Tags": [
 				{
-					"BaseObject": "FeIDvKodMSq",
+					"BaseObject": "rhYwZRfoeidV",
 					"AttributeId": 2,
+					"New": true,
+					"Dependencies": [
+						{
+							"ObjectType": "Employee",
+							"Ids": [
+								743
+							]
+						}
+					],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "imHiNC"
+					"Description": "BFOzasSl"
 				}
 			]
 		}
 	],
-	"Name": "GD",
-	"Notes": "GgkWLKsr",
+	"Name": "yY",
+	"Notes": "RTcQGyTaXqtj",
 	"CurrentLifespan": {
 		"Start": "2018-01-14T00:00:00",
 		"End": "2018-12-14T00:00:00"
@@ -103,23 +121,41 @@
 		{
 			"ParentId": 0,
 			"Completed": false,
-			"Priority": 341,
+			"Priority": 917,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Allocation",
+					"Ids": [
+						939
+					]
+				}
+			],
 			"ObjectType": "JobActivity",
 			"Id": 0,
-			"Name": "JQIiWuHM",
-			"Description": "SBWltmtHOSY",
+			"Name": "giPULYNSNF",
+			"Description": "rgePmgnePvf",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
 				"End": "2018-12-14T00:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "MIEfudBQ",
+					"BaseObject": "yhNWMujQ",
 					"AttributeId": 2,
+					"New": true,
+					"Dependencies": [
+						{
+							"ObjectType": "Allocation",
+							"Ids": [
+								391
+							]
+						}
+					],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "vMLvKt"
+					"Description": "wFvLvpG"
 				}
 			],
 			"ForeColor": "#FFFFFF00",
@@ -150,43 +186,70 @@
 						"Unit": {
 							"Id": 1
 						},
-						"Quantity": 926
+						"Quantity": 98
 					},
-					"Notes": "QgHmKmphSYV"
+					"Notes": "nsiVbdQwgx"
 				},
-				"Global": false,
-				"BaseObject": "KeBvXtg",
+				"Global": true,
+				"BaseObject": "XteCSeaIEWa",
 				"ObjectType": "CostCode",
 				"Id": 0,
-				"Name": "wbAVtqXaDVzO",
-				"Description": "sAYnnLorKKeO"
+				"Name": "YYrG",
+				"Description": "jopZYPUy",
+				"New": false,
+				"Dependencies": [
+					{
+						"ObjectType": "Allocation",
+						"Ids": [
+							762
+						]
+					}
+				]
 			},
 			"CostPerUnit": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 597
+				"Quantity": 378
 			},
-			"TotalAmount": 849,
-			"CompletedAmount": 991,
-			"BaseObject": "glZhEUrcRYK",
+			"TotalAmount": 817,
+			"CompletedAmount": 585,
+			"BaseObject": "whmMMJ",
 			"ObjectType": "JobCost",
 			"Id": 0,
-			"Name": "hHiTTzwM",
-			"Description": "wacMFIWC"
+			"Name": "cDOGZtiaHCmo",
+			"Description": "dIvWTSL",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						434
+					]
+				}
+			]
 		}
 	],
-	"EstimatedLaborHours": 879,
-	"EstimatedEquipmentHours": 864,
+	"EstimatedLaborHours": 844,
+	"EstimatedEquipmentHours": 121,
 	"Attachments": [
 		{
 			"Attached": true,
-			"FilePath": "hy",
-			"FullName": "qLriOcpgXg",
+			"FilePath": "jjUzHPeUjHa",
+			"FullName": "tRuFNegN",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Equipment",
+					"Ids": [
+						920
+					]
+				}
+			],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "WXLCisLE",
-			"Description": "kgoWIKatK"
+			"Name": "WpskDCUrdE",
+			"Description": "ZXKMhOtDHx"
 		}
 	],
 	"Id": 0,
@@ -195,15 +258,32 @@
 			"Id": 1
 		}
 	],
-	"Description": "uKEaIxg",
+	"Description": "QHYzltj",
 	"Tags": [
 		{
-			"BaseObject": "JLmvgM",
+			"BaseObject": "umumoxPxGEF",
 			"AttributeId": 2,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						23
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "ynwqqkp"
+			"Description": "GHlHhkTPbun"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				11
+			]
 		}
 	],
 	"__typename": "CxJob"

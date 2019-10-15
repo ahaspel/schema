@@ -1,13 +1,13 @@
 {
-	"Name": "ulTjSSxsrIt",
+	"Name": "V",
 	"Days": [
 		{
-			"Day": 4,
-			"DayByName": "oxveuNiqFx",
-			"Start": "bWAlcuAliUGv",
-			"Duration": "WZIdGdimC",
+			"Day": 1,
+			"DayByName": "PECvZGZ",
+			"Start": "WTqirgZqx",
+			"Duration": "McuirROmR",
 			"Valid": false,
-			"End": "TeaJjLHiO",
+			"End": "tLhBRgLD",
 			"Included": false
 		}
 	],
@@ -17,22 +17,48 @@
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "uwdvxJgmU",
-			"ObjectType": "JobStatus",
+			"BaseObject": "JlUyYNTx",
+			"ObjectType": "JobPriority",
 			"Id": 0,
-			"Name": "CtUwJfFWN",
-			"Description": "tHupxNUHSWRJ"
+			"Name": "rSiozQ",
+			"Description": "RlSMgg",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						782
+					]
+				}
+			]
 		}
 	],
-	"Description": "xkxNlGvGdIW",
+	"Description": "XiurbgjUrfs",
 	"Tags": [
 		{
-			"BaseObject": "EbLoGK",
+			"BaseObject": "NHfICq",
 			"AttributeId": 0,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						537
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "UBvpcK",
-			"Description": "lepqfiyqyck"
+			"Name": "GgRlnFBMjh",
+			"Description": "egTedgK"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Allocation",
+			"Ids": [
+				972
+			]
 		}
 	]
 }

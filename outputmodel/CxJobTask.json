@@ -1,41 +1,76 @@
 {
 	"ObjectType": "JobTask",
-	"Name": "yChObTv",
+	"Name": "PAzAkqvqo",
 	"CreatorId": 0,
 	"JobId": 0,
 	"Status": {
-		"BaseObject": "XBTHnkUq",
-		"ObjectType": "Attribute",
+		"BaseObject": "JqFazMeWv",
+		"ObjectType": "Training",
 		"Id": 0,
-		"Name": "dWuyclD",
-		"Description": "WusQBLTYx"
+		"Name": "NwVlQdx",
+		"Description": "gimlzY",
+		"New": false,
+		"Dependencies": [
+			{
+				"ObjectType": "Job",
+				"Ids": [
+					434
+				]
+			}
+		]
 	},
-	"Priority": 318,
-	"PercentComplete": 87,
+	"Priority": 488,
+	"PercentComplete": 702,
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "QCBSnNkqTxv"
+		"Duration": "nKgWiaeoC"
 	},
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "UHIeWEYWPUr",
-			"ObjectType": "JobStatus",
+			"BaseObject": "oquZsZhv",
+			"ObjectType": "Training",
 			"Id": 0,
-			"Name": "kYOmHFCJm",
-			"Description": "dBAZPCw"
+			"Name": "ZQczqN",
+			"Description": "CRTFZmgBT",
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						113
+					]
+				}
+			]
 		}
 	],
-	"Description": "uSmmMZzu",
+	"Description": "hlXBWiNVki",
 	"Tags": [
 		{
-			"BaseObject": "CUlTDFf",
+			"BaseObject": "BhHhHQX",
 			"AttributeId": 0,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						610
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "CAiMqz",
-			"Description": "JJEnYfGxx"
+			"Name": "BvkoSHBZSmnO",
+			"Description": "GfHHSYbvB"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Equipment",
+			"Ids": [
+				25
+			]
 		}
 	]
 }

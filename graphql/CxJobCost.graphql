@@ -1,3 +1,23 @@
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: CxDependencyObjectType!
+  Ids: [Int]!
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 type CxJobCost {
   CostPerUnit: IxMoney
   CostCode: IxCostCode
@@ -6,6 +26,7 @@ type CxJobCost {
   ObjectType: CxJobCostObjectType
   Name: String
   Description: String
+  Dependencies: [CxDependency]
   Id: ID!
   BaseObject: String
 }
@@ -18,6 +39,7 @@ input CxJobCostInput {
   ObjectType: CxJobCostObjectType
   Name: String
   Description: String
+  Dependencies: [CxDependencyInput]
   Id: ID!
   BaseObject: String
 }
@@ -41,6 +63,8 @@ type IxCostCode {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 input IxCostCodeInput {
@@ -51,6 +75,8 @@ input IxCostCodeInput {
   Id: ID!
   Name: String!
   Description: String
+  New: Boolean
+  Dependencies: [CxDependencyInput]
 }
 
 enum IxCostCodeObjectType {

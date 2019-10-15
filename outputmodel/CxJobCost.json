@@ -1,56 +1,73 @@
 {
 	"CostPerUnit": {
 		"Unit": {
-			"UnitType": "Time",
-			"Scalar": 871,
+			"UnitType": "Area",
+			"Scalar": 632,
 			"Integral": true,
-			"BaseObject": "TZSUUwQosE",
+			"BaseObject": "FfeJcSfumFm",
 			"ObjectType": "Unit",
 			"Id": 0,
-			"Name": "Zykqvnkud",
-			"Description": "ppanPkhrk"
+			"Name": "XvJuuW",
+			"Description": "NooeNlDs"
 		},
-		"Quantity": 732
+		"Quantity": 895
 	},
 	"CostCode": {
 		"UnitCost": {
 			"Unit": {
 				"UnitType": "Money",
-				"Scalar": 354,
-				"Integral": false,
-				"BaseObject": "bcsGctDpVGK",
+				"Scalar": 163,
+				"Integral": true,
+				"BaseObject": "iWydTWieTT",
 				"ObjectType": "Unit",
 				"Id": 0,
-				"Name": "RnzpgWtnFRiV",
-				"Description": "YvGiQzChFb"
+				"Name": "PjnDanzmE",
+				"Description": "MRVmvF"
 			},
 			"Cost": {
 				"Unit": {
-					"UnitType": "Self",
-					"Scalar": 587,
-					"Integral": false,
-					"BaseObject": "DmDSWdr",
+					"UnitType": "Volume",
+					"Scalar": 80,
+					"Integral": true,
+					"BaseObject": "pEfLGUMpCF",
 					"ObjectType": "Unit",
 					"Id": 0,
-					"Name": "SgtjDUOAB",
-					"Description": "jnMyypg"
+					"Name": "hojJnt",
+					"Description": "LxqalSDunN"
 				},
-				"Quantity": 906
+				"Quantity": 861
 			},
-			"Notes": "kvFaRzsCa"
+			"Notes": "XAXgyKryEe"
 		},
 		"Global": false,
-		"BaseObject": "NaFUKC",
+		"BaseObject": "jJRNsMpzDzsQ",
 		"ObjectType": "CostCode",
 		"Id": 0,
-		"Name": "svHTXPcrHHl",
-		"Description": "njedDOF"
+		"Name": "fDtBSHrTL",
+		"Description": "LGYrKVbW",
+		"New": false,
+		"Dependencies": [
+			{
+				"ObjectType": "Equipment",
+				"Ids": [
+					814
+				]
+			}
+		]
 	},
-	"TotalAmount": 436,
-	"CompletedAmount": 684,
+	"TotalAmount": 373,
+	"CompletedAmount": 368,
 	"ObjectType": "JobCost",
-	"Name": "oabJYrfTmJF",
-	"Description": "WZHOlFy",
+	"Name": "jAPQpetpK",
+	"Description": "vegjkcmLGNc",
+	"Dependencies": [
+		{
+			"ObjectType": "Employee",
+			"Ids": [
+				523
+			]
+		}
+	],
 	"Id": 0,
-	"BaseObject": "BuRTQYYI"
+	"BaseObject": "XFMwZCQexM"
 }

@@ -1,13 +1,13 @@
 {
 	"ObjectType": "JobTask",
-	"Name": "oVquKlYc",
+	"Name": "tepgRTJv",
 	"CreatorId": 0,
 	"JobId": 0,
 	"Status": {
 		"Id": 1
 	},
-	"Priority": 394,
-	"PercentComplete": 947,
+	"Priority": 488,
+	"PercentComplete": 881,
 	"CurrentLifespan": {
 		"Start": "2018-01-14T00:00:00",
 		"End": "2018-12-14T00:00:00"
@@ -18,15 +18,32 @@
 			"Id": 1
 		}
 	],
-	"Description": "nyJbZcxTI",
+	"Description": "uSZPAhqyjHm",
 	"Tags": [
 		{
-			"BaseObject": "QfyNvyUH",
+			"BaseObject": "VFhZie",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						15
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "VoYMVie"
+			"Description": "fuvUnxRRxn"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Material",
+			"Ids": [
+				861
+			]
 		}
 	],
 	"__typename": "CxJobTask"

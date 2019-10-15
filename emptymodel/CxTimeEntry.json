@@ -24,16 +24,16 @@
 	"StartLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Source": "Action"
+		"Source": "Owner"
 	},
 	"PunchStart": "",
 	"EndLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Source": "Action"
+		"Source": "GPSService"
 	},
 	"PunchEnd": "",
-	"Punch": "Manual",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 0
@@ -56,5 +56,6 @@
 	"Divisions": [],
 	"Description": "",
 	"Tags": [],
+	"Dependencies": [],
 	"__typename": "CxTimeEntry"
 }

@@ -1,31 +1,57 @@
 {
 	"Holiday": "2019-01-14T08:00:00",
-	"Name": "IHrYWa",
+	"Name": "YruJqK",
 	"ObjectType": "Holiday",
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "iaAkphMG"
+		"Duration": "ZuVULAResjwZ"
 	},
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "VhhQhQelXtkv",
-			"ObjectType": "CompanyType",
+			"BaseObject": "LwOhnnXGe",
+			"ObjectType": "PurchaseOrderStatus",
 			"Id": 0,
-			"Name": "shWOQm",
-			"Description": "FPdgXgCci"
+			"Name": "DjIYsdg",
+			"Description": "UMIQsxp",
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Job",
+					"Ids": [
+						935
+					]
+				}
+			]
 		}
 	],
-	"Description": "ctvhrOELxBXh",
+	"Description": "PkqAcU",
 	"Tags": [
 		{
-			"BaseObject": "IoAmRPbXsOQs",
+			"BaseObject": "OOPrcDctY",
 			"AttributeId": 0,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						67
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "ikzYytD",
-			"Description": "taBWzq"
+			"Name": "jNrAKjKxp",
+			"Description": "ueeqbEFErxhB"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Allocation",
+			"Ids": [
+				335
+			]
 		}
 	]
 }

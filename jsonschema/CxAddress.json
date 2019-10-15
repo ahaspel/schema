@@ -2,6 +2,33 @@
 	"id": "https://congistics.com/schema/CxAddress",
 	"title": "com.congistics.cbrd.address.CxAddress",
 	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
 		"IxGeocode": {
 			"type": "object",
 			"properties": {
@@ -65,6 +92,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [

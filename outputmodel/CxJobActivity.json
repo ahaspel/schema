@@ -1,35 +1,61 @@
 {
 	"ParentId": 0,
-	"Name": "xVsZC",
-	"Completed": false,
-	"Priority": 14,
-	"ForeColor": "GKfybRjyCy",
-	"BackColor": "hdIZtHmStxrK",
+	"Name": "MaIejcqq",
+	"Completed": true,
+	"Priority": 36,
+	"ForeColor": "xMjKOshLaQW",
+	"BackColor": "cVPWpjlHusY",
 	"ObjectType": "JobActivity",
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "FvVOQnBs"
+		"Duration": "wcMBTtzJO"
 	},
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "QdHMJEYRg",
-			"ObjectType": "CompanyType",
+			"BaseObject": "grtFWktWBea",
+			"ObjectType": "Minority",
 			"Id": 0,
-			"Name": "aPsDXYpQsA",
-			"Description": "IMUqEWO"
+			"Name": "DMOWryw",
+			"Description": "yybzQuMuVdvc",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "TaskDay",
+					"Ids": [
+						775
+					]
+				}
+			]
 		}
 	],
-	"Description": "ptBHEiJdWZ",
+	"Description": "KZQBlvj",
 	"Tags": [
 		{
-			"BaseObject": "LAJtDSSZM",
+			"BaseObject": "XRNLbNYj",
 			"AttributeId": 0,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Equipment",
+					"Ids": [
+						405
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "VwcExZqzeaWq",
-			"Description": "dFNEgh"
+			"Name": "tafbkrVhN",
+			"Description": "PpveRzzVgO"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Employee",
+			"Ids": [
+				675
+			]
 		}
 	]
 }

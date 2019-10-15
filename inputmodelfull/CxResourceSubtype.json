@@ -1,16 +1,33 @@
 {
 	"ObjectType": "ResourceSubtype",
-	"Name": "nDA",
+	"Name": "BkeW",
 	"Id": 0,
-	"Description": "GmQcxGt",
+	"Description": "OQqgRwdzDB",
 	"Tags": [
 		{
-			"BaseObject": "ahKewPy",
+			"BaseObject": "JrbJUqmSjGTw",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "TaskDay",
+					"Ids": [
+						859
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "qCqOKAY"
+			"Description": "CARyFG"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Equipment",
+			"Ids": [
+				785
+			]
 		}
 	],
 	"__typename": "CxResourceSubtype"

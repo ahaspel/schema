@@ -1,5 +1,5 @@
 {
-	"Name": "cnrqh",
+	"Name": "uzxcDZsIYM",
 	"Days": [
 		{
 			"Day": 1,
@@ -9,7 +9,7 @@
 			"Included": true
 		}
 	],
-	"Default": true,
+	"Default": false,
 	"UseHolidays": true,
 	"ObjectType": "Shift",
 	"Id": 0,
@@ -18,15 +18,32 @@
 			"Id": 1
 		}
 	],
-	"Description": "lVYNrpy",
+	"Description": "LePeSqwZiz",
 	"Tags": [
 		{
-			"BaseObject": "XRQCbUkyZU",
+			"BaseObject": "vpiCmQN",
 			"AttributeId": 2,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "TaskDay",
+					"Ids": [
+						696
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "CSCuCBg"
+			"Description": "ZOJHLtq"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Equipment",
+			"Ids": [
+				66
+			]
 		}
 	],
 	"__typename": "CxShift"

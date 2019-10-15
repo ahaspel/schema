@@ -2,25 +2,51 @@
 	"Family": "Labor",
 	"ResourceSubtypes": [
 		{
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Allocation",
+					"Ids": [
+						761
+					]
+				}
+			],
 			"ObjectType": "ResourceSubtype",
 			"Id": 0,
-			"Name": "HHbyG",
-			"Description": "OWBvYspYMgR"
+			"Name": "SRUvuoYDDv",
+			"Description": "HISGqXOzhZV"
 		}
 	],
-	"MoveVehicle": false,
-	"Name": "FtvSaG",
+	"MoveVehicle": true,
+	"Name": "ksPCB",
 	"ObjectType": "ResourceType",
 	"Id": 0,
-	"Description": "UjHeFGH",
+	"Description": "hasddifa",
 	"Tags": [
 		{
-			"BaseObject": "SoTsNSchNkuK",
+			"BaseObject": "WDLvJr",
 			"AttributeId": 0,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						949
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "wMoOVAxaGh",
-			"Description": "ULXDGkTqgQf"
+			"Name": "fYsDNh",
+			"Description": "zazqsEvLWY"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				146
+			]
 		}
 	]
 }

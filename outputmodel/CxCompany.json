@@ -1,100 +1,145 @@
 {
 	"CompanyType": {
-		"BaseObject": "EHcvXpU",
-		"ObjectType": "Minority",
+		"BaseObject": "ITvczWuhgckY",
+		"ObjectType": "Language",
 		"Id": 0,
-		"Name": "CojWXZPrLRP",
-		"Description": "XuWURG"
+		"Name": "akBFZEtlQW",
+		"Description": "ecBWLk",
+		"New": false,
+		"Dependencies": [
+			{
+				"ObjectType": "Crew",
+				"Ids": [
+					195
+				]
+			}
+		]
 	},
 	"Contacts": [
 		{
 			"Emails": [
 				{
 					"Id": 0,
-					"Email": "Andre_Dietrich98@hotmail.com",
-					"Name": "tDeqRdMIQoo",
-					"Description": "aABBQtZfad"
+					"Email": "Demarco73@gmail.com",
+					"Name": "OThoFkjtD",
+					"Description": "lQQslTLQ"
 				}
 			],
 			"PhoneNumbers": [
 				{
 					"Id": 0,
-					"PhoneNumber": "UqWHGTpSJIy",
-					"Name": "tXHTIWLJhO",
-					"Description": "MwNqMLK"
+					"PhoneNumber": "yjScfJ",
+					"Name": "ikmNQsLC",
+					"Description": "hLvcTRcaNOB"
 				}
 			],
 			"ObjectType": "Plant",
 			"Id": 0,
-			"Name": "ZspmxGf",
-			"Description": "fCrPEsqu",
+			"Name": "NxYl",
+			"Description": "HhfIOb",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Material",
+					"Ids": [
+						28
+					]
+				}
+			],
 			"Address": {
-				"Street": "cSkuTEw",
-				"StreetDetails": "IVsOTV",
+				"Street": "z",
+				"StreetDetails": "fTtHVDXrpsx",
 				"State": {
-					"BaseObject": "lBviGj",
+					"BaseObject": "YuutQkwoD",
 					"ObjectType": "PurchaseOrderStatus",
 					"Id": 0,
-					"Name": "AzNNMOEm",
-					"Description": "pKoZrCJ"
+					"Name": "lWmHsxlftyV",
+					"Description": "HVlJqoZ",
+					"New": false,
+					"Dependencies": [
+						{
+							"ObjectType": "Material",
+							"Ids": [
+								333
+							]
+						}
+					]
 				},
-				"City": "s",
-				"ZipCode": "Jjfefl",
+				"City": "Puj",
+				"ZipCode": "pbfRagdRFaVH",
 				"Geocode": {
-					"Lat": 20,
-					"Lng": 885,
-					"Source": "Action"
+					"Lat": 7,
+					"Lng": 872,
+					"Source": "Owner"
 				},
 				"ObjectType": "Address",
 				"Id": 0
 			},
 			"Tags": [
 				{
-					"BaseObject": "AKqPBccqVwa",
+					"BaseObject": "jFNUuHEBfa",
 					"AttributeId": 0,
+					"New": false,
+					"Dependencies": [
+						{
+							"ObjectType": "TaskDay",
+							"Ids": [
+								694
+							]
+						}
+					],
 					"ObjectType": "Attribute",
 					"Id": 0,
-					"Name": "FVMltJVYt",
-					"Description": "dcswtGpaYEZj"
+					"Name": "nBLsFPyyRJ",
+					"Description": "fXsZqYx"
 				}
 			]
 		}
 	],
-	"AccountCode": "FLpdqImeI",
-	"ObjectType": "Plant",
+	"AccountCode": "JkFCKChFS",
+	"ObjectType": "Subcontractor",
 	"PhoneNumbers": [
 		{
 			"Id": 0,
-			"PhoneNumber": "PPEMqweV",
-			"Name": "ukCYAkkmEQQ",
-			"Description": "SKHfZr"
+			"PhoneNumber": "tSaNCCUAip",
+			"Name": "kJikHJjJDM",
+			"Description": "kBvGLOeMIaE"
 		}
 	],
 	"Emails": [
 		{
 			"Id": 0,
-			"Email": "Josephine.Jacobi@hotmail.com",
-			"Name": "GkogsRN",
-			"Description": "vqAoQjLfuD"
+			"Email": "Arjun.Borer@gmail.com",
+			"Name": "hSBVguUsEtO",
+			"Description": "hKrsgD"
 		}
 	],
-	"Name": "vZlwbVmJxuRo",
+	"Name": "FuE",
 	"Address": {
-		"Street": "tTiAieguR",
-		"StreetDetails": "QgcQcAEY",
+		"Street": "GQYOO",
+		"StreetDetails": "AyVIQSOvEwg",
 		"State": {
-			"BaseObject": "IFIWZyo",
-			"ObjectType": "License",
+			"BaseObject": "OEvwrdJ",
+			"ObjectType": "State",
 			"Id": 0,
-			"Name": "CrdjrukW",
-			"Description": "hpWUSzG"
+			"Name": "NzDRCWvF",
+			"Description": "XtmDGMyy",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						897
+					]
+				}
+			]
 		},
-		"City": "ZH",
-		"ZipCode": "HgDHHQPF",
+		"City": "tyOaYBpTbh",
+		"ZipCode": "gMxPEg",
 		"Geocode": {
-			"Lat": 752,
-			"Lng": 105,
-			"Source": "GPSService"
+			"Lat": 704,
+			"Lng": 527,
+			"Source": "Owner"
 		},
 		"ObjectType": "Address",
 		"Id": 0
@@ -102,22 +147,48 @@
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "SQSLyHXXs",
-			"ObjectType": "License",
+			"BaseObject": "fEPnxMFxJpJv",
+			"ObjectType": "Union",
 			"Id": 0,
-			"Name": "CrNmQLvPlRj",
-			"Description": "DoWMTVcpk"
+			"Name": "EgHlZd",
+			"Description": "vCxfTkZjcR",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Allocation",
+					"Ids": [
+						700
+					]
+				}
+			]
 		}
 	],
-	"Description": "yUfwvPpqtGF",
+	"Description": "njvmmix",
 	"Tags": [
 		{
-			"BaseObject": "MvfJNEd",
+			"BaseObject": "EHyMJO",
 			"AttributeId": 0,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Equipment",
+					"Ids": [
+						396
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "ZMBuTSnoWTNy",
-			"Description": "zhureFS"
+			"Name": "WAggilLy",
+			"Description": "PJuQmLPEq"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Material",
+			"Ids": [
+				852
+			]
 		}
 	]
 }

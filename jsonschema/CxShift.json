@@ -2,6 +2,33 @@
 	"id": "https://congistics.com/schema/CxShift",
 	"title": "com.congistics.cbrd.time.CxShift",
 	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -10,6 +37,15 @@
 				},
 				"AttributeId": {
 					"type": "integer"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -77,6 +113,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -166,6 +211,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
 			}
 		}
 	},

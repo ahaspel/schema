@@ -2,6 +2,33 @@
 	"id": "https://congistics.com/schema/CxCostCode",
 	"title": "com.congistics.cbrd.cost.CxCostCode",
 	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
 		"IxMoney": {
 			"type": "object",
 			"properties": {
@@ -103,6 +130,12 @@
 		"Name": {
 			"type": "string",
 			"minLength": 1
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
 		},
 		"Id": {
 			"type": "integer"

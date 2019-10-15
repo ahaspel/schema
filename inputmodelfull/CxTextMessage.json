@@ -1,29 +1,46 @@
 {
 	"ObjectType": "TextMessage",
-	"Name": "emtOLtTChkg",
-	"Text": "xesinlFBB",
+	"Name": "VmUlsqeoS",
+	"Text": "s",
 	"Sender": {
 		"Id": 0,
-		"PhoneNumber": "oZDcCxwB",
-		"Name": "GpRQEQXc",
-		"Description": "WiXsLL"
+		"PhoneNumber": "IsShNW",
+		"Name": "eBzVVWsHkVL",
+		"Description": "LzZRdmqJ"
 	},
 	"Recipient": {
 		"Id": 0,
-		"PhoneNumber": "mmxWKfZM",
-		"Name": "tJpCKY",
-		"Description": "aIOUizSfjrXh"
+		"PhoneNumber": "xZFLbU",
+		"Name": "SgZyLV",
+		"Description": "kSULUxSZ"
 	},
 	"Id": 0,
-	"Description": "oiedGKsG",
+	"Description": "LsofgrxN",
 	"Tags": [
 		{
-			"BaseObject": "uYavtpZtGXp",
+			"BaseObject": "OENODMiwGnq",
 			"AttributeId": 2,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Crew",
+					"Ids": [
+						869
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "bFERXuk"
+			"Description": "RzqBYoSz"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				750
+			]
 		}
 	],
 	"__typename": "CxTextMessage"

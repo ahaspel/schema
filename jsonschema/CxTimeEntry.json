@@ -2,6 +2,33 @@
 	"id": "https://congistics.com/schema/CxTimeEntry",
 	"title": "com.congistics.cbrd.time.CxTimeEntry",
 	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation",
+						"TaskDay",
+						"Crew",
+						"Job",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
 		"IxAddress": {
 			"superRequired": [
 				"Id",
@@ -73,6 +100,15 @@
 				"AttributeId": {
 					"type": "integer"
 				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -135,6 +171,15 @@
 				"Description": {
 					"type": "string"
 				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				},
@@ -196,6 +241,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -263,6 +317,15 @@
 				},
 				"Priority": {
 					"type": "integer"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -360,6 +423,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -417,6 +489,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
@@ -544,6 +625,15 @@
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
 				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"Divisions": {
 					"type": "array",
 					"items": {
@@ -574,6 +664,15 @@
 			],
 			"type": "object",
 			"properties": {
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -638,6 +737,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"Tags": {
 					"type": "array",
@@ -822,6 +930,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
 			}
 		}
 	},

@@ -13,10 +13,12 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Party",
+		"ObjectType": "Company",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
+		"New": false,
+		"Dependencies": [],
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
@@ -76,5 +78,6 @@
 	"Divisions": [],
 	"Description": "",
 	"Tags": [],
+	"Dependencies": [],
 	"__typename": "CxEmployee"
 }

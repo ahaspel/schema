@@ -1,33 +1,57 @@
 {
 	"Id": 0,
 	"Expiration": "2019-01-14T08:00:00",
-	"AllowedUsers": 107,
-	"AllowedWebUsers": 613,
-	"SerialNumber": "u",
-	"Valid": false,
-	"MachineCode": "cVgzUaW",
-	"Nag": true,
-	"ErrorMessage": "WcNyTlNGTS",
+	"AllowedUsers": 176,
+	"AllowedWebUsers": 109,
+	"SerialNumber": "k",
+	"Valid": true,
+	"MachineCode": "HhbQbFSJNXJv",
+	"Nag": false,
+	"ErrorMessage": "elSCmNWFT",
 	"ObjectType": "ApplicationLicense",
 	"Divisions": [
 		{
-			"BaseObject": "lWXPPoExIdo",
-			"ObjectType": "LaborClass",
+			"BaseObject": "gXkcAyLWCy",
+			"ObjectType": "License",
 			"Id": 0,
-			"Name": "VYPTGMpZFt",
-			"Description": "ArXLrcKK"
+			"Name": "IlELDVF",
+			"Description": "kfsjWU",
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": []
+				}
+			]
 		}
 	],
-	"Description": "vTJHuakRSz",
-	"Name": "NqqNJmZGgSJ",
+	"Description": "FQdiWVGvHD",
+	"Name": "SOuzJl",
 	"Tags": [
 		{
-			"BaseObject": "mylgmicFqnYS",
+			"BaseObject": "RAKerbJO",
 			"AttributeId": 0,
+			"New": false,
+			"Dependencies": [
+				{
+					"ObjectType": "Employee",
+					"Ids": [
+						193
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "vRPgqsRefIy",
-			"Description": "OsMxPKIhN"
+			"Name": "GbTbOU",
+			"Description": "GwLPsALqrR"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "Allocation",
+			"Ids": [
+				167
+			]
 		}
 	]
 }

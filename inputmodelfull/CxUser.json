@@ -2,9 +2,9 @@
 	"Party": {
 		"Id": 1
 	},
-	"Username": "BciwxMU",
-	"Password": "IHhK",
-	"CognitoCode": "hnsOWUlcZd",
+	"Username": "hsxSNVRkqfK",
+	"Password": "MpfZNX",
+	"CognitoCode": "JKJAYcfelt",
 	"Level": {
 		"Id": 1
 	},
@@ -18,8 +18,8 @@
 			"Id": 1
 		}
 	],
-	"WebLevel": "Personal",
-	"Description": "CfkKdr",
+	"WebLevel": "None",
+	"Description": "wcdJGtwXfjt",
 	"ObjectType": "User",
 	"Id": 0,
 	"Divisions": [
@@ -29,12 +29,29 @@
 	],
 	"Tags": [
 		{
-			"BaseObject": "BVMuHdulFNHs",
+			"BaseObject": "LznEAONdYrA",
 			"AttributeId": 2,
+			"New": true,
+			"Dependencies": [
+				{
+					"ObjectType": "Equipment",
+					"Ids": [
+						233
+					]
+				}
+			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "nZsjYLr"
+			"Description": "YLbOqUBSQmpQ"
+		}
+	],
+	"Dependencies": [
+		{
+			"ObjectType": "TaskDay",
+			"Ids": [
+				924
+			]
 		}
 	],
 	"__typename": "CxUser"

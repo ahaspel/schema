@@ -1,3 +1,23 @@
+type CxDependency {
+  ObjectType: CxDependencyObjectType
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: CxDependencyObjectType!
+  Ids: [Int]!
+}
+
+enum CxDependencyObjectType {
+  Allocation
+  TaskDay
+  Crew
+  Job
+  Employee
+  Equipment
+  Material
+}
+
 type CxTaskDay {
   ParentId: ID
   ActionType: CxTaskDayActionType
@@ -19,6 +39,7 @@ type CxTaskDay {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
 }
 
 enum CxTaskDayActionType {
@@ -49,6 +70,7 @@ input CxTaskDayInput {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
+  Dependencies: [CxDependencyInput]
 }
 
 enum CxTaskDayObjectType {
@@ -72,6 +94,8 @@ type IxActionStatus {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
 }
@@ -110,6 +134,8 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -119,6 +145,8 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
+  New: Boolean
+  Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -137,6 +165,8 @@ type IxCompany {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
   AccountCode: String
@@ -162,6 +192,8 @@ type IxCostCode {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 enum IxCostCodeObjectType {
@@ -172,6 +204,8 @@ type IxDocument {
   Attached: Boolean
   FilePath: String
   FullName: String
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
   Id: ID!
   Name: String
@@ -217,6 +251,8 @@ type IxJob {
   TotalCost: IxMoney
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxJobObjectType
   Id: ID!
   Name: String
@@ -238,6 +274,8 @@ type IxJobActivity {
   ParentId: ID
   Completed: Boolean
   Priority: Int
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
   Name: String
@@ -266,6 +304,8 @@ type IxJobCost {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 enum IxJobCostObjectType {
@@ -288,6 +328,8 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 enum IxLookupValueObjectType {
@@ -325,6 +367,8 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
 }
@@ -378,6 +422,8 @@ type IxResource {
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
+  New: Boolean
+  Dependencies: [CxDependency]
   Divisions: [IxLookupValue]
   AccountCode: String
   Location: IxLocation
@@ -413,6 +459,8 @@ input IxResourceQuantityInput {
 }
 
 type IxResourceSubtype {
+  New: Boolean
+  Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
   Name: String
@@ -436,6 +484,8 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
   Tags: [IxAttribute__String__]
 }
 
