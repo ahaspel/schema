@@ -1,16 +1,16 @@
 {
-	"Name": "rpCzGsiLAV",
+	"Name": "taSUtlHmULo",
 	"Days": [
 		{
 			"Day": 1,
 			"Start": "08:00:00",
 			"Duration": "09:00:00",
-			"Valid": false,
+			"Valid": true,
 			"Included": true
 		}
 	],
 	"Default": true,
-	"UseHolidays": false,
+	"UseHolidays": true,
 	"ObjectType": "Shift",
 	"Id": 0,
 	"Divisions": [
@@ -18,24 +18,17 @@
 			"Id": 1
 		}
 	],
-	"Description": "dYQUcUXBb",
+	"Description": "SDmVmOeYAzWE",
 	"Tags": [
 		{
-			"BaseObject": "xEPlrjzJcjGR",
+			"BaseObject": "ZEogqN",
 			"AttributeId": 2,
-			"New": false,
-			"Dependencies": [
-				{
-					"ObjectType": "ghcvWqKnzhs",
-					"Ids": [
-						416
-					]
-				}
-			],
+			"New": true,
+			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "hXtAcnqAd"
+			"Description": "SWLWTaUnxR"
 		}
 	],
 	"__typename": "CxShift"
