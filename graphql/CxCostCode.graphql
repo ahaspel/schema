@@ -13,7 +13,6 @@ input CxCostCodeInput {
   Global: Boolean
   ObjectType: CxCostCodeObjectType
   Name: String!
-  Dependencies: [CxDependencyInput]
   Id: ID!
   Description: String
 }
@@ -23,23 +22,8 @@ enum CxCostCodeObjectType {
 }
 
 type CxDependency {
-  ObjectType: CxDependencyObjectType
+  ObjectType: String
   Ids: [Int]
-}
-
-input CxDependencyInput {
-  ObjectType: CxDependencyObjectType!
-  Ids: [Int]!
-}
-
-enum CxDependencyObjectType {
-  Allocation
-  TaskDay
-  Crew
-  Job
-  Employee
-  Equipment
-  Material
 }
 
 input FilterInput {

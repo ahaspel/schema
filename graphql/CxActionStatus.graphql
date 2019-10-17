@@ -28,7 +28,6 @@ input CxActionStatusInput {
   ForeColor: String
   BackColor: String
   Name: String!
-  Dependencies: [CxDependencyInput]
   Id: ID!
   Description: String
   BaseObject: String
@@ -39,23 +38,8 @@ enum CxActionStatusObjectType {
 }
 
 type CxDependency {
-  ObjectType: CxDependencyObjectType
+  ObjectType: String
   Ids: [Int]
-}
-
-input CxDependencyInput {
-  ObjectType: CxDependencyObjectType!
-  Ids: [Int]!
-}
-
-enum CxDependencyObjectType {
-  Allocation
-  TaskDay
-  Crew
-  Job
-  Employee
-  Equipment
-  Material
 }
 
 input FilterInput {

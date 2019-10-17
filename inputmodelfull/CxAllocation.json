@@ -1,5 +1,5 @@
 {
-	"Name": "bafGzcc",
+	"Name": "eywvWAdieMb",
 	"JobActivity": {
 		"Id": 156
 	},
@@ -9,12 +9,12 @@
 	"TaskDays": [
 		{
 			"ParentId": 0,
-			"ShiftSupervisor": true,
+			"ShiftSupervisor": false,
 			"ActionStatus": {
 				"Id": 1
 			},
 			"ConflictIds": [
-				192
+				315
 			],
 			"ResourceQuantity": {
 				"Supplier": {
@@ -31,7 +31,7 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 995
+					"Quantity": 741
 				}
 			},
 			"JobActivity": {
@@ -45,37 +45,37 @@
 			"New": false,
 			"Dependencies": [
 				{
-					"ObjectType": "Equipment",
+					"ObjectType": "CogyebJnxD",
 					"Ids": [
-						182
+						480
 					]
 				}
 			],
 			"ObjectType": "ActualTaskDay",
 			"Id": 0,
-			"Name": "uDpfKVB",
-			"Description": "xosipstP",
+			"Name": "pbudUiLTFWku",
+			"Description": "dvpynImrQd",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
 				"End": "2018-12-14T00:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "bQDnUSQwBVLm",
+					"BaseObject": "ePmkrYbYeWQ",
 					"AttributeId": 2,
-					"New": true,
+					"New": false,
 					"Dependencies": [
 						{
-							"ObjectType": "Equipment",
+							"ObjectType": "iJpEHDSrsks",
 							"Ids": [
-								262
+								111
 							]
 						}
 					],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "TSDjQPCLi"
+					"Description": "NSzFOwWZkTC"
 				}
 			]
 		}
@@ -90,32 +90,24 @@
 		"Id": 1
 	},
 	"Id": 0,
-	"Description": "cwklwknMlH",
+	"Description": "EmWYAEVRUnOP",
 	"Tags": [
 		{
-			"BaseObject": "zmKLIT",
+			"BaseObject": "WqyElB",
 			"AttributeId": 2,
-			"New": false,
+			"New": true,
 			"Dependencies": [
 				{
-					"ObjectType": "Material",
+					"ObjectType": "qksSbhOPnuHA",
 					"Ids": [
-						27
+						257
 					]
 				}
 			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "JIrNGvkHN"
-		}
-	],
-	"Dependencies": [
-		{
-			"ObjectType": "TaskDay",
-			"Ids": [
-				377
-			]
+			"Description": "wNLBViKDesS"
 		}
 	],
 	"__typename": "CxAllocation"

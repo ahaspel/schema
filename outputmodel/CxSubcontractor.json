@@ -1,101 +1,101 @@
 {
-	"Preferred": true,
+	"Preferred": false,
 	"IsMover": true,
 	"SupplyTypes": [
 		{
 			"ResourceSubtype": {
-				"New": false,
+				"New": true,
 				"Dependencies": [
 					{
-						"ObjectType": "TaskDay",
+						"ObjectType": "GaKhESIYhR",
 						"Ids": [
-							664
+							25
 						]
 					}
 				],
 				"ObjectType": "ResourceSubtype",
 				"Id": 0,
-				"Name": "pYwQAnCMZ",
-				"Description": "sOyZBzRxQv"
+				"Name": "WJayQymOo",
+				"Description": "HODXLo"
 			},
 			"UnitCosts": [
 				{
 					"Unit": {
-						"UnitType": "Time",
-						"Scalar": 485,
-						"Integral": true,
-						"BaseObject": "NqvpUWpz",
+						"UnitType": "Weight",
+						"Scalar": 898,
+						"Integral": false,
+						"BaseObject": "FccoeWqAmomb",
 						"ObjectType": "Unit",
 						"Id": 0,
-						"Name": "EzDOsB",
-						"Description": "rEnftrJ"
+						"Name": "kEbRXhsDJP",
+						"Description": "CWelJgtFx"
 					},
 					"Cost": {
 						"Unit": {
-							"UnitType": "Money",
-							"Scalar": 878,
+							"UnitType": "Area",
+							"Scalar": 964,
 							"Integral": true,
-							"BaseObject": "jLoKtTC",
+							"BaseObject": "gJFXyi",
 							"ObjectType": "Unit",
 							"Id": 0,
-							"Name": "DJEYEQQkkEoa",
-							"Description": "sbZUBEw"
+							"Name": "npcXDcgm",
+							"Description": "XILIJLBQmRA"
 						},
-						"Quantity": 989
+						"Quantity": 37
 					},
-					"Notes": "EmzVrVlllum"
+					"Notes": "bdFeGJbCaDT"
 				}
 			],
-			"AccrualNumber": "mlEWyND",
-			"Notes": "PNutywDEEeT",
+			"AccrualNumber": "XepsPkqO",
+			"Notes": "FhPwqpv",
 			"New": false,
 			"Dependencies": [
 				{
-					"ObjectType": "Allocation",
+					"ObjectType": "umrHFjK",
 					"Ids": [
-						883
+						426
 					]
 				}
 			],
 			"ObjectType": "SupplyType",
 			"Id": 0,
-			"Name": "yPuciGemdDsR",
-			"Description": "IkuQIGfCr",
+			"Name": "YbOxRI",
+			"Description": "kuzxKqgWiC",
 			"Tags": [
 				{
-					"BaseObject": "WMreCXPwwKgd",
+					"BaseObject": "cjcTpJ",
 					"AttributeId": 0,
 					"New": true,
 					"Dependencies": [
 						{
-							"ObjectType": "Allocation",
+							"ObjectType": "tHNyFuPlkz",
 							"Ids": [
-								357
+								419
 							]
 						}
 					],
 					"ObjectType": "Attribute",
 					"Id": 0,
-					"Name": "cNAkzhpOVGl",
-					"Description": "EtiHpPCac"
+					"Name": "CTDQYphXXUt",
+					"Description": "gfGLDEnXI"
 				}
 			]
 		}
 	],
-	"SuppliesAll": false,
+	"SuppliesAll": true,
 	"ObjectType": "Subcontractor",
 	"CompanyType": {
-		"BaseObject": "IrAYXL",
-		"ObjectType": "Privilege",
+		"BaseObject": "IpzUCiF",
+		"ObjectType": "JobSubtype",
 		"Id": 0,
-		"Name": "EqvOHJPJAn",
-		"Description": "OBtLHCU",
+		"Name": "kELLPU",
+		"Description": "bEAIfLx",
 		"New": false,
 		"Dependencies": [
 			{
-				"ObjectType": "Allocation",
+				"ObjectType": "MwieIWPP",
 				"Ids": [
-					277
+					234
 				]
 			}
 		]
@@ -105,125 +105,125 @@
 			"Emails": [
 				{
 					"Id": 0,
-					"Email": "Carter.Satterfield@gmail.com",
-					"Name": "ypXwmNDj",
-					"Description": "bLpYYSXZcdJ"
+					"Email": "Candida47@hotmail.com",
+					"Name": "hEOCuwNrGR",
+					"Description": "fIFNcFQTQH"
 				}
 			],
 			"PhoneNumbers": [
 				{
 					"Id": 0,
-					"PhoneNumber": "AdjEdpZDCSIW",
-					"Name": "WbDMCVRP",
-					"Description": "zYugbRYG"
+					"PhoneNumber": "VVQXYms",
+					"Name": "QrKUjSfQGfN",
+					"Description": "HVVAgHISzTU"
 				}
 			],
-			"ObjectType": "Subcontractor",
+			"ObjectType": "Party",
 			"Id": 0,
-			"Name": "WqE",
-			"Description": "nmHaaYw",
+			"Name": "KOogXdybuIBZ",
+			"Description": "eWesVwkcCe",
 			"New": true,
 			"Dependencies": [
 				{
-					"ObjectType": "Equipment",
+					"ObjectType": "xAHBKrY",
 					"Ids": [
-						53
+						887
 					]
 				}
 			],
 			"Address": {
-				"Street": "WL",
-				"StreetDetails": "pvagCMsFX",
+				"Street": "Kydhbx",
+				"StreetDetails": "StgmhwDstV",
 				"State": {
-					"BaseObject": "SuMzQsKvvGC",
-					"ObjectType": "JobPriority",
+					"BaseObject": "SkkTsk",
+					"ObjectType": "LaborClass",
 					"Id": 0,
-					"Name": "INuVCdkIP",
-					"Description": "SzevYQnb",
-					"New": false,
+					"Name": "XvrOIkB",
+					"Description": "oVdEYcTpJ",
+					"New": true,
 					"Dependencies": [
 						{
-							"ObjectType": "Crew",
+							"ObjectType": "WMhPVFcKz",
 							"Ids": [
-								626
+								873
 							]
 						}
 					]
 				},
-				"City": "qhchPRLWAltq",
-				"ZipCode": "vmawGOxL",
+				"City": "A",
+				"ZipCode": "QtCiYQih",
 				"Geocode": {
-					"Lat": 161,
-					"Lng": 955,
-					"Source": "Owner"
+					"Lat": 399,
+					"Lng": 678,
+					"Source": "Action"
 				},
 				"ObjectType": "Address",
 				"Id": 0
 			},
 			"Tags": [
 				{
-					"BaseObject": "moqDpagM",
+					"BaseObject": "ORUhYtlgdaaj",
 					"AttributeId": 0,
-					"New": false,
+					"New": true,
 					"Dependencies": [
 						{
-							"ObjectType": "Job",
+							"ObjectType": "nnBwfpA",
 							"Ids": [
-								605
+								613
 							]
 						}
 					],
 					"ObjectType": "Attribute",
 					"Id": 0,
-					"Name": "OPuyTjB",
-					"Description": "hIyVrk"
+					"Name": "dNUkdGKhfQfP",
+					"Description": "bJjmXS"
 				}
 			]
 		}
 	],
-	"AccountCode": "pgLApNQebN",
+	"AccountCode": "hzhAjpo",
 	"PhoneNumbers": [
 		{
 			"Id": 0,
-			"PhoneNumber": "DoJbWTGDk",
-			"Name": "XTPLKrtdqB",
-			"Description": "oknmhSiNu"
+			"PhoneNumber": "QoIkNryevj",
+			"Name": "LLCVaK",
+			"Description": "YTRoEOVg"
 		}
 	],
 	"Emails": [
 		{
 			"Id": 0,
-			"Email": "Arthur74@gmail.com",
-			"Name": "drCgHPWChuxn",
-			"Description": "gISnYWjqoED"
+			"Email": "Reba.Hauck@yahoo.com",
+			"Name": "IxXuqQ",
+			"Description": "qhVUpNubROWy"
 		}
 	],
-	"Name": "zHoyYrMvM",
+	"Name": "lTmVDsHv",
 	"Address": {
-		"Street": "vEM",
-		"StreetDetails": "lDlUANP",
+		"Street": "xSZLJDqGsV",
+		"StreetDetails": "qSHPjky",
 		"State": {
-			"BaseObject": "gJKToObz",
-			"ObjectType": "Training",
+			"BaseObject": "ertuTLm",
+			"ObjectType": "JobSubtype",
 			"Id": 0,
-			"Name": "JnknLq",
-			"Description": "XBCvHUEK",
-			"New": true,
+			"Name": "TpkVTy",
+			"Description": "SYpowPPb",
+			"New": false,
 			"Dependencies": [
 				{
-					"ObjectType": "TaskDay",
+					"ObjectType": "WIvuDRCccK",
 					"Ids": [
-						516
+						45
 					]
 				}
 			]
 		},
-		"City": "BsITrwQOVX",
-		"ZipCode": "YWjKcxTKrY",
+		"City": "ffHvuu",
+		"ZipCode": "pedpWem",
 		"Geocode": {
-			"Lat": 587,
-			"Lng": 742,
-			"Source": "GPSService"
+			"Lat": 724,
+			"Lng": 234,
+			"Source": "Owner"
 		},
 		"ObjectType": "Address",
 		"Id": 0
@@ -231,47 +231,47 @@
 	"Id": 0,
 	"Divisions": [
 		{
-			"BaseObject": "hOvGMjKW",
-			"ObjectType": "Skill",
+			"BaseObject": "IFfllH",
+			"ObjectType": "Language",
 			"Id": 0,
-			"Name": "fkiVHL",
-			"Description": "uNRpLjnc",
-			"New": false,
+			"Name": "LGXqgMlGRX",
+			"Description": "WNtOncmAPmiF",
+			"New": true,
 			"Dependencies": [
 				{
-					"ObjectType": "Crew",
+					"ObjectType": "cDNRHqX",
 					"Ids": [
-						292
+						721
 					]
 				}
 			]
 		}
 	],
-	"Description": "eoPJDCd",
+	"Description": "kOBbXWNfuTd",
 	"Tags": [
 		{
-			"BaseObject": "SJoTJNQB",
+			"BaseObject": "HMFblzo",
 			"AttributeId": 0,
 			"New": false,
 			"Dependencies": [
 				{
-					"ObjectType": "Job",
+					"ObjectType": "cArozzupoC",
 					"Ids": [
-						804
+						813
 					]
 				}
 			],
 			"ObjectType": "Attribute",
 			"Id": 0,
-			"Name": "qVhEQWqByFEb",
-			"Description": "yxEKPlBWZ"
+			"Name": "FITUdnIW",
+			"Description": "kskWNvhQBtLk"
 		}
 	],
 	"Dependencies": [
 		{
-			"ObjectType": "Equipment",
+			"ObjectType": "LHmJzXUnvxrT",
 			"Ids": [
-				518
+				394
 			]
 		}
 	]

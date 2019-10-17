@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 910,
-	"Minutes": 21,
+	"Hours": 963,
+	"Minutes": 170,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,22 +21,22 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 107
+					"Quantity": 328
 				},
-				"Notes": "IvzPSt"
+				"Notes": "biomDnfB"
 			},
-			"Global": true,
-			"BaseObject": "JeruWYRhZi",
+			"Global": false,
+			"BaseObject": "JLkYusr",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "EGSISqGVK",
-			"Description": "BaMGEpk",
+			"Name": "vgjXVSHD",
+			"Description": "zZpCVTGvJm",
 			"New": false,
 			"Dependencies": [
 				{
-					"ObjectType": "Allocation",
+					"ObjectType": "DGsZfstHw",
 					"Ids": [
-						16
+						159
 					]
 				}
 			]
@@ -53,32 +53,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": -9.6945,
-		"Lng": 14.0602,
-		"Source": "Owner"
+		"Lat": 28.244,
+		"Lng": -119.0763,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 16.4275,
-		"Lng": -77.629,
-		"Source": "GPSService"
+		"Lat": 30.8488,
+		"Lng": 156.9616,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 159
+		"Quantity": 228
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 650
+		"Quantity": 822
 	},
 	"Approvals": [
 		{
@@ -98,32 +98,24 @@
 			"Id": 1
 		}
 	],
-	"Description": "NDGDeir",
+	"Description": "VqarOUMeWUB",
 	"Tags": [
 		{
-			"BaseObject": "YCtoLDZ",
+			"BaseObject": "TZgquHviaoeh",
 			"AttributeId": 2,
 			"New": true,
 			"Dependencies": [
 				{
-					"ObjectType": "Job",
+					"ObjectType": "ldadzc",
 					"Ids": [
-						68
+						388
 					]
 				}
 			],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "uKYNdjQzRi"
-		}
-	],
-	"Dependencies": [
-		{
-			"ObjectType": "TaskDay",
-			"Ids": [
-				279
-			]
+			"Description": "lDMbmsMxO"
 		}
 	],
 	"__typename": "CxTimeEntry"

@@ -6,16 +6,7 @@
 			"type": "object",
 			"properties": {
 				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Allocation",
-						"TaskDay",
-						"Crew",
-						"Job",
-						"Employee",
-						"Equipment",
-						"Material"
-					]
+					"type": "string"
 				},
 				"Ids": {
 					"type": "array",
@@ -246,6 +237,7 @@
 		}
 	},
 	"immutable": [
+		"Dependencies",
 		"Dto"
 	],
 	"type": "object",

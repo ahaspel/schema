@@ -6,7 +6,7 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Company",
+		"ObjectType": "Plant",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
@@ -23,7 +23,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -34,7 +34,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Group",
+		"Family": "Labor",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -96,6 +96,5 @@
 	"Description": "",
 	"Name": "",
 	"Tags": [],
-	"Dependencies": [],
 	"__typename": "CxResource"
 }

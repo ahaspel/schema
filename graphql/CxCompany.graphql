@@ -37,23 +37,13 @@ enum CxCompanyObjectType {
 }
 
 type CxDependency {
-  ObjectType: CxDependencyObjectType
+  ObjectType: String
   Ids: [Int]
 }
 
 input CxDependencyInput {
-  ObjectType: CxDependencyObjectType!
+  ObjectType: String!
   Ids: [Int]!
-}
-
-enum CxDependencyObjectType {
-  Allocation
-  TaskDay
-  Crew
-  Job
-  Employee
-  Equipment
-  Material
 }
 
 input FilterInput {

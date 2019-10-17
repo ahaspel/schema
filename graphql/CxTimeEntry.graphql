@@ -1,21 +1,11 @@
 type CxDependency {
-  ObjectType: CxDependencyObjectType
+  ObjectType: String
   Ids: [Int]
 }
 
 input CxDependencyInput {
-  ObjectType: CxDependencyObjectType!
+  ObjectType: String!
   Ids: [Int]!
-}
-
-enum CxDependencyObjectType {
-  Allocation
-  TaskDay
-  Crew
-  Job
-  Employee
-  Equipment
-  Material
 }
 
 type CxTimeEntry {
@@ -73,7 +63,6 @@ input CxTimeEntryInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
-  Dependencies: [CxDependencyInput]
 }
 
 enum CxTimeEntryObjectType {
