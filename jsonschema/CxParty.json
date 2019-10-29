@@ -106,6 +106,53 @@
 				"Id"
 			]
 		},
+		"IxDocument": {
+			"superRequired": [
+				"FilePath",
+				"Id",
+				"Name"
+			],
+			"type": "object",
+			"properties": {
+				"Attached": {
+					"type": "boolean"
+				},
+				"FilePath": {
+					"type": "string"
+				},
+				"FullName": {
+					"type": "string"
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Document"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"FilePath",
+				"Id"
+			]
+		},
 		"IxEmail": {
 			"superRequired": [
 				"Id",
@@ -287,6 +334,15 @@
 			"items": {
 				"$ref": "#/definitions/CxDependency"
 			}
+		},
+		"Attachments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxDocument"
+			}
+		},
+		"HasAttachments": {
+			"type": "boolean"
 		}
 	},
 	"required": [

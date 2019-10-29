@@ -25,6 +25,8 @@ type CxUser {
   Divisions: [IxLookupValue]
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
 }
 
 input CxUserInput {
@@ -41,6 +43,8 @@ input CxUserInput {
   Id: ID!
   Divisions: [IxLookupValueDO]
   Tags: [IxAttribute__String__Input]
+  Attachments: [IxDocumentInput]
+  HasAttachments: Boolean
 }
 
 enum CxUserObjectType {
@@ -99,6 +103,34 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxDocument {
+  Attached: Boolean
+  FilePath: String
+  FullName: String
+  New: Boolean
+  Dependencies: [CxDependency]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxDocumentInput {
+  Attached: Boolean
+  FilePath: String!
+  FullName: String
+  New: Boolean
+  Dependencies: [CxDependencyInput]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+}
+
+enum IxDocumentObjectType {
+  Document
 }
 
 type IxEmail {

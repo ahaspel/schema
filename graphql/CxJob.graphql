@@ -34,13 +34,13 @@ type CxJob {
   TotalHours: Float
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
 }
 
 input CxJobInput {
@@ -67,11 +67,11 @@ input CxJobInput {
   JobCosts: [IxJobCostInput]
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
-  Attachments: [IxDocumentInput]
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
+  Attachments: [IxDocumentInput]
 }
 
 enum CxJobObjectType {

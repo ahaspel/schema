@@ -23,7 +23,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Action"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -34,7 +34,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Group",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -76,7 +76,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -91,10 +91,12 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Material",
+	"ObjectType": "Employee",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",
 	"Tags": [],
+	"Attachments": [],
+	"HasAttachments": false,
 	"__typename": "CxResource"
 }

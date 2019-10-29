@@ -12,6 +12,8 @@ type CxCompany {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
 }
 
 input CxCompanyInput {
@@ -28,6 +30,8 @@ input CxCompanyInput {
   Description: String
   Tags: [IxAttribute__String__Input]
   Dependencies: [CxDependencyInput]
+  Attachments: [IxDocumentInput]
+  HasAttachments: Boolean
 }
 
 enum CxCompanyObjectType {
@@ -103,6 +107,34 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxDocument {
+  Attached: Boolean
+  FilePath: String
+  FullName: String
+  New: Boolean
+  Dependencies: [CxDependency]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxDocumentInput {
+  Attached: Boolean
+  FilePath: String!
+  FullName: String
+  New: Boolean
+  Dependencies: [CxDependencyInput]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+}
+
+enum IxDocumentObjectType {
+  Document
 }
 
 type IxEmail {

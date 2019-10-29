@@ -1420,6 +1420,15 @@
 			"items": {
 				"$ref": "#/definitions/CxDependency"
 			}
+		},
+		"Attachments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxDocument"
+			}
+		},
+		"HasAttachments": {
+			"type": "boolean"
 		}
 	},
 	"required": [

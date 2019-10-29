@@ -801,15 +801,6 @@
 		"EstimatedEquipmentHours": {
 			"type": "number"
 		},
-		"Attachments": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxDocument"
-			}
-		},
-		"HasAttachments": {
-			"type": "boolean"
-		},
 		"Id": {
 			"type": "integer"
 		},
@@ -833,6 +824,15 @@
 			"items": {
 				"$ref": "#/definitions/CxDependency"
 			}
+		},
+		"Attachments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxDocument"
+			}
+		},
+		"HasAttachments": {
+			"type": "boolean"
 		}
 	},
 	"required": [
