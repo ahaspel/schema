@@ -153,10 +153,13 @@ enum IxGeocodeSource {
 }
 
 type IxLevel {
+  BaseObject: String
   ObjectType: IxLevelObjectType
   Id: ID!
   Name: String
   Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
 }
 
 input IxLevelDO {
@@ -182,6 +185,16 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  WebPrivilege
+  DocumentType
   JobPriority
   JobSubtype
   JobType
@@ -193,15 +206,6 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
-  State
-  Attribute
-  PurchaseOrderStatus
-  Privilege
-  TimeEntryType
-  CompanyType
-  JobStatus
-  JobCertification
-  WebPrivilege
 }
 
 type IxParty {

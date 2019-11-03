@@ -675,6 +675,16 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Level",
+						"Privilege",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"WebPrivilege",
+						"DocumentType",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -685,16 +695,7 @@
 						"Minority",
 						"Skill",
 						"Training",
-						"Union",
-						"State",
-						"Attribute",
-						"PurchaseOrderStatus",
-						"Privilege",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"JobCertification",
-						"WebPrivilege"
+						"Union"
 					]
 				},
 				"Id": {

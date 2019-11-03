@@ -20,11 +20,11 @@ type CxEmployee {
   Minority: [IxLookupValue]
   Unions: [IxLookupValue]
   Licenses: [IxLookupValue]
-  Machines: [IxResourceType]
   Languages: [IxLookupValue]
   TrainingCourses: [IxLookupValue]
   Skills: [IxLookupValue]
   LaborClassification: [IxLookupValue]
+  Machines: [IxResourceType]
   ObjectType: CxEmployeeObjectType
   Temporary: Boolean
   Owner: IxCompany
@@ -59,11 +59,11 @@ input CxEmployeeInput {
   Minority: [IxLookupValueDO]
   Unions: [IxLookupValueDO]
   Licenses: [IxLookupValueDO]
-  Machines: [IxResourceTypeDO]
   Languages: [IxLookupValueDO]
   TrainingCourses: [IxLookupValueDO]
   Skills: [IxLookupValueDO]
   LaborClassification: [IxLookupValueDO]
+  Machines: [IxResourceTypeDO]
   ObjectType: CxEmployeeObjectType
   Temporary: Boolean
   Owner: IxCompanyDO
@@ -252,6 +252,16 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  WebPrivilege
+  DocumentType
   JobPriority
   JobSubtype
   JobType
@@ -263,15 +273,6 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
-  State
-  Attribute
-  PurchaseOrderStatus
-  Privilege
-  TimeEntryType
-  CompanyType
-  JobStatus
-  JobCertification
-  WebPrivilege
 }
 
 type IxMoney {
