@@ -290,7 +290,7 @@
 		},
 		"IxDocument": {
 			"superRequired": [
-				"FilePath",
+				"FileLocation",
 				"Id",
 				"Name"
 			],
@@ -299,11 +299,14 @@
 				"Attached": {
 					"type": "boolean"
 				},
-				"FilePath": {
+				"FileLocation": {
 					"type": "string"
 				},
 				"FullName": {
 					"type": "string"
+				},
+				"DocumentType": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"New": {
 					"type": "boolean"
@@ -331,7 +334,7 @@
 				}
 			},
 			"required": [
-				"FilePath",
+				"FileLocation",
 				"Id"
 			]
 		},
@@ -695,7 +698,8 @@
 						"Minority",
 						"Skill",
 						"Training",
-						"Union"
+						"Union",
+						"JobCertification"
 					]
 				},
 				"Id": {

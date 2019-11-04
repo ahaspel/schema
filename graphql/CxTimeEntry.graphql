@@ -189,8 +189,9 @@ enum IxCostCodeObjectType {
 
 type IxDocument {
   Attached: Boolean
-  FilePath: String
+  FileLocation: String
   FullName: String
+  DocumentType: IxLookupValue
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
@@ -201,8 +202,9 @@ type IxDocument {
 
 input IxDocumentInput {
   Attached: Boolean
-  FilePath: String!
+  FileLocation: String!
   FullName: String
+  DocumentType: IxLookupValueDO
   New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
@@ -306,6 +308,7 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  JobCertification
 }
 
 type IxMoney {

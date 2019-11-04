@@ -77,8 +77,9 @@ enum IxAttributeStringObjectType {
 
 type IxDocument {
   Attached: Boolean
-  FilePath: String
+  FileLocation: String
   FullName: String
+  DocumentType: IxLookupValue
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
@@ -89,8 +90,9 @@ type IxDocument {
 
 input IxDocumentInput {
   Attached: Boolean
-  FilePath: String!
+  FileLocation: String!
   FullName: String
+  DocumentType: IxLookupValueDO
   New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
@@ -101,6 +103,45 @@ input IxDocumentInput {
 
 enum IxDocumentObjectType {
   Document
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  New: Boolean
+  Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  WebPrivilege
+  DocumentType
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  JobCertification
 }
 
 type IxPhoneNumber {
