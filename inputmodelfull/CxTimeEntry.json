@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 602,
-	"Minutes": 754,
+	"Hours": 357,
+	"Minutes": 11,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,17 +21,17 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 339
+					"Quantity": 547
 				},
-				"Notes": "lrfWpQA"
+				"Notes": "YIpblJUmsJ"
 			},
 			"Global": false,
-			"BaseObject": "BciytxedKult",
+			"BaseObject": "vAmfrxfoGYDP",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "oYJWCDN",
-			"Description": "pSinqKR",
-			"New": false,
+			"Name": "RavrecTjkz",
+			"Description": "buZfgq",
+			"New": true,
 			"Dependencies": []
 		}
 	],
@@ -46,32 +46,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
-	"Billable": true,
+	"IsVoid": false,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 35.1455,
-		"Lng": 29.8904,
-		"Source": "Owner"
+		"Lat": -77.4411,
+		"Lng": 179.1024,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 64.7818,
-		"Lng": -167.1999,
+		"Lat": 16.3869,
+		"Lng": -46.648,
 		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 628
+		"Quantity": 194
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 318
+		"Quantity": 12
 	},
 	"Approvals": [
 		{
@@ -91,33 +91,33 @@
 			"Id": 1
 		}
 	],
-	"Description": "kGYTFvaf",
+	"Description": "ILMhmb",
 	"Tags": [
 		{
-			"BaseObject": "NxPosi",
+			"BaseObject": "mBHrGX",
 			"AttributeId": 92,
 			"New": false,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "KYllxM"
+			"Description": "nKWYyMYsURn"
 		}
 	],
 	"Attachments": [
 		{
-			"Attached": true,
-			"FileLocation": "qsZsTfQQT",
-			"FullName": "VycHhLaA",
+			"Attached": false,
+			"FileLocation": "tmygOZdrfsj",
+			"FullName": "toKzqGTefkH",
 			"DocumentType": {
-				"Id": 1
+				"Id": 128
 			},
-			"New": true,
+			"New": false,
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "GukPIPKLmax",
-			"Description": "KBisLQm"
+			"Name": "iBoExA",
+			"Description": "MuzzUH"
 		}
 	],
 	"__typename": "CxTimeEntry"
