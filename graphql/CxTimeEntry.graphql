@@ -14,7 +14,7 @@ type CxTimeEntry {
   Minutes: Int
   Resource: IxResource
   EntryType: IxLookupValue
-  LaborClassification: IxLookupValue
+  EntryLaborClass: IxLookupValue
   CostCodes: [IxCostCode]
   AuxiliaryResources: [IxResource]
   JobActivity: IxJobActivity
@@ -45,7 +45,7 @@ input CxTimeEntryInput {
   Minutes: Int
   Resource: IxResourceDO!
   EntryType: IxLookupValueDO
-  LaborClassification: IxLookupValueDO
+  EntryLaborClass: IxLookupValueDO
   CostCodes: [IxCostCodeInput]
   AuxiliaryResources: [IxResourceDO]
   JobActivity: IxJobActivityDO!
@@ -297,6 +297,7 @@ enum IxLookupValueObjectType {
   JobStatus
   WebPrivilege
   DocumentType
+  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType

@@ -1,14 +1,14 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 357,
-	"Minutes": 11,
+	"Hours": 899,
+	"Minutes": 841,
 	"Resource": {
 		"Id": 6
 	},
 	"EntryType": {
 		"Id": 1
 	},
-	"LaborClassification": {
+	"EntryLaborClass": {
 		"Id": 1
 	},
 	"CostCodes": [
@@ -21,17 +21,17 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 547
+					"Quantity": 829
 				},
-				"Notes": "YIpblJUmsJ"
+				"Notes": "xUfRUiXPbR"
 			},
 			"Global": false,
-			"BaseObject": "vAmfrxfoGYDP",
+			"BaseObject": "hpnMxl",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "RavrecTjkz",
-			"Description": "buZfgq",
-			"New": true,
+			"Name": "XhsLZiZdWoTz",
+			"Description": "pDAajTXguhU",
+			"New": false,
 			"Dependencies": []
 		}
 	],
@@ -46,32 +46,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
+	"IsVoid": true,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": -77.4411,
-		"Lng": 179.1024,
+		"Lat": 50.5935,
+		"Lng": 97.9155,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 16.3869,
-		"Lng": -46.648,
-		"Source": "Action"
+		"Lat": 57.9319,
+		"Lng": 52.1177,
+		"Source": "Owner"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 194
+		"Quantity": 766
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 12
+		"Quantity": 26
 	},
 	"Approvals": [
 		{
@@ -91,24 +91,24 @@
 			"Id": 1
 		}
 	],
-	"Description": "ILMhmb",
+	"Description": "dFomySf",
 	"Tags": [
 		{
-			"BaseObject": "mBHrGX",
+			"BaseObject": "xgBuCheXvIg",
 			"AttributeId": 92,
-			"New": false,
+			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "nKWYyMYsURn"
+			"Description": "SRgqeD"
 		}
 	],
 	"Attachments": [
 		{
-			"Attached": false,
-			"FileLocation": "tmygOZdrfsj",
-			"FullName": "toKzqGTefkH",
+			"Attached": true,
+			"FileLocation": "PqPgsbGuu",
+			"FullName": "UfDurbAEr",
 			"DocumentType": {
 				"Id": 128
 			},
@@ -116,8 +116,8 @@
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "iBoExA",
-			"Description": "MuzzUH"
+			"Name": "nFvfKbTx",
+			"Description": "yZEivgq"
 		}
 	],
 	"__typename": "CxTimeEntry"

@@ -10,9 +10,6 @@ input CxDependencyInput {
 
 type CxUser {
   Party: IxParty
-  Username: String
-  Password: String
-  CognitoCode: String
   Level: IxLevel
   WebPrivileges: [IxLookupValue]
   Privileges: [IxLookupValue]
@@ -31,9 +28,6 @@ type CxUser {
 
 input CxUserInput {
   Party: IxPartyDO!
-  Username: String!
-  Password: String!
-  CognitoCode: String!
   Level: IxLevelDO!
   WebPrivileges: [IxLookupValueDO]
   Privileges: [IxLookupValueDO]
@@ -197,6 +191,7 @@ enum IxLookupValueObjectType {
   JobStatus
   WebPrivilege
   DocumentType
+  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType

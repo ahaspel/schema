@@ -260,6 +260,7 @@
 						"JobStatus",
 						"WebPrivilege",
 						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -394,18 +395,6 @@
 		"Party": {
 			"$ref": "#/definitions/IxParty"
 		},
-		"Username": {
-			"type": "string",
-			"minLength": 3
-		},
-		"Password": {
-			"type": "string",
-			"minLength": 3
-		},
-		"CognitoCode": {
-			"type": "string",
-			"minLength": 10
-		},
 		"Level": {
 			"$ref": "#/definitions/IxLevel"
 		},
@@ -476,11 +465,8 @@
 		}
 	},
 	"required": [
-		"CognitoCode",
 		"Id",
 		"Level",
-		"Party",
-		"Password",
-		"Username"
+		"Party"
 	]
 }

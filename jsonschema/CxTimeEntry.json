@@ -444,6 +444,7 @@
 						"JobStatus",
 						"WebPrivilege",
 						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -894,7 +895,7 @@
 		"EntryType": {
 			"$ref": "#/definitions/IxLookupValue"
 		},
-		"LaborClassification": {
+		"EntryLaborClass": {
 			"$ref": "#/definitions/IxLookupValue"
 		},
 		"CostCodes": {

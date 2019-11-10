@@ -3,9 +3,6 @@ const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   Party {
     Id
   }
-  Username
-  Password
-  CognitoCode
   Level {
     Id
   }
