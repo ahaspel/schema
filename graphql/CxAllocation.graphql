@@ -646,8 +646,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String], methods: [methodInput]): [CxAllocation]
+  cxAllocations_onSave(data: [CxAllocationInput], objectType: String = "Allocation", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAllocation]
   cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
 }
 

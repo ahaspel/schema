@@ -392,8 +392,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit", properties: [String], methods: [methodInput]): [CxMaterial]
+  cxMaterials_onSave(data: [CxMaterialInput], objectType: String = "Material", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxMaterial]
   cxMaterials_onDelete(data: [String], objectType: String = "Material", operation: String = "delete"): [CxMaterial]
 }
 

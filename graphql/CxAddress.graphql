@@ -104,8 +104,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String], methods: [methodInput]): [CxAddress]
+  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAddress]
   cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
 }
 

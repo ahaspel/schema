@@ -169,8 +169,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxTextMessages_onSave(data: [CxTextMessageInput], objectType: String = "TextMessage", operation: String = "edit", properties: [String], methods: [methodInput]): [CxTextMessage]
+  cxTextMessages_onSave(data: [CxTextMessageInput], objectType: String = "TextMessage", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxTextMessage]
   cxTextMessages_onDelete(data: [String], objectType: String = "TextMessage", operation: String = "delete"): [CxTextMessage]
 }
 

@@ -27,8 +27,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxRanges_onSave(data: [CxRangeInput], objectType: String, operation: String = "edit", properties: [String], methods: [methodInput]): [CxRange]
+  cxRanges_onSave(data: [CxRangeInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxRange]
   cxRanges_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxRange]
 }
 

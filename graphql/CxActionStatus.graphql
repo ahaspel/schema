@@ -59,8 +59,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxActionStatuss_onSave(data: [CxActionStatusInput], objectType: String = "ActionStatus", operation: String = "edit", properties: [String], methods: [methodInput]): [CxActionStatus]
+  cxActionStatuss_onSave(data: [CxActionStatusInput], objectType: String = "ActionStatus", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxActionStatus]
   cxActionStatuss_onDelete(data: [String], objectType: String = "ActionStatus", operation: String = "delete"): [CxActionStatus]
 }
 

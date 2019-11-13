@@ -67,8 +67,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String = "State", operation: String = "edit", properties: [String], methods: [methodInput]): [CxLookupValue]
+  cxLookupValues_onSave(data: [CxLookupValueInput], objectType: String = "State", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxLookupValue]
   cxLookupValues_onDelete(data: [String], objectType: String = "State", operation: String = "delete"): [CxLookupValue]
 }
 

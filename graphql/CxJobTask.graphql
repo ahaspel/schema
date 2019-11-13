@@ -173,8 +173,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxJobTasks_onSave(data: [CxJobTaskInput], objectType: String = "JobTask", operation: String = "edit", properties: [String], methods: [methodInput]): [CxJobTask]
+  cxJobTasks_onSave(data: [CxJobTaskInput], objectType: String = "JobTask", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxJobTask]
   cxJobTasks_onDelete(data: [String], objectType: String = "JobTask", operation: String = "delete"): [CxJobTask]
 }
 

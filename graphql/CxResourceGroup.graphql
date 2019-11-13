@@ -405,8 +405,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit", properties: [String], methods: [methodInput]): [CxResourceGroup]
+  cxResourceGroups_onSave(data: [CxResourceGroupInput], objectType: String = "Crew", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceGroup]
   cxResourceGroups_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResourceGroup]
 }
 

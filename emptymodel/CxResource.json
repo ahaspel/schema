@@ -23,7 +23,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -34,7 +34,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Equipment",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -76,7 +76,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -91,7 +91,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Crew",
+	"ObjectType": "Equipment",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

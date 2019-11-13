@@ -227,8 +227,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit", properties: [String], methods: [methodInput]): [CxParty]
+  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxParty]
   cxPartys_onDelete(data: [String], objectType: String = "Party", operation: String = "delete"): [CxParty]
 }
 

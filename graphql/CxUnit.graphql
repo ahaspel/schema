@@ -44,8 +44,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxUnits_onSave(data: [CxUnitDO], objectType: String = "Unit", operation: String = "edit", properties: [String], methods: [methodInput]): [CxUnit]
+  cxUnits_onSave(data: [CxUnitDO], objectType: String = "Unit", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxUnit]
   cxUnits_onDelete(data: [String], objectType: String = "Unit", operation: String = "delete"): [CxUnit]
 }
 

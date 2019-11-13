@@ -497,8 +497,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String], methods: [methodInput]): [CxTimeEntry]
+  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxTimeEntry]
   cxTimeEntrys_onDelete(data: [String], objectType: String = "TimeEntry", operation: String = "delete"): [CxTimeEntry]
 }
 

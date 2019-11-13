@@ -1,15 +1,15 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 899,
-	"Minutes": 841,
+	"Hours": 707,
+	"Minutes": 101,
 	"Resource": {
 		"Id": 6
 	},
 	"EntryType": {
-		"Id": 1
+		"Id": 114
 	},
 	"EntryLaborClass": {
-		"Id": 1
+		"Id": 129
 	},
 	"CostCodes": [
 		{
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 829
+					"Quantity": 585
 				},
-				"Notes": "xUfRUiXPbR"
+				"Notes": "AHohQgL"
 			},
-			"Global": false,
-			"BaseObject": "hpnMxl",
+			"Global": true,
+			"BaseObject": "vJVeSh",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "XhsLZiZdWoTz",
-			"Description": "pDAajTXguhU",
+			"Name": "dkYimW",
+			"Description": "QufonhW",
 			"New": false,
 			"Dependencies": []
 		}
@@ -46,18 +46,18 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
-	"Billable": false,
+	"IsVoid": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": 50.5935,
-		"Lng": 97.9155,
+		"Lat": 64.1872,
+		"Lng": 123.9521,
 		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 57.9319,
-		"Lng": 52.1177,
-		"Source": "Owner"
+		"Lat": 32.3476,
+		"Lng": 83.7505,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "PunchedOut",
@@ -65,13 +65,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 766
+		"Quantity": 644
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 26
+		"Quantity": 128
 	},
 	"Approvals": [
 		{
@@ -88,36 +88,36 @@
 	"Id": 0,
 	"Divisions": [
 		{
-			"Id": 1
+			"Id": 12
 		}
 	],
-	"Description": "dFomySf",
+	"Description": "GilAjNOFur",
 	"Tags": [
 		{
-			"BaseObject": "xgBuCheXvIg",
+			"BaseObject": "OXbvjcnjQ",
 			"AttributeId": 92,
 			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "SRgqeD"
+			"Description": "pAFoRFy"
 		}
 	],
 	"Attachments": [
 		{
 			"Attached": true,
-			"FileLocation": "PqPgsbGuu",
-			"FullName": "UfDurbAEr",
+			"FileLocation": "QqGRvWq",
+			"FullName": "HpOgiv",
 			"DocumentType": {
 				"Id": 128
 			},
-			"New": false,
+			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "nFvfKbTx",
-			"Description": "yZEivgq"
+			"Name": "BuVNmE",
+			"Description": "JMkNjL"
 		}
 	],
 	"__typename": "CxTimeEntry"

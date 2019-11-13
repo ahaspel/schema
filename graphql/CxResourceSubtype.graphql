@@ -147,8 +147,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxResourceSubtypes_onSave(data: [CxResourceSubtypeInput], objectType: String = "ResourceSubtype", operation: String = "edit", properties: [String], methods: [methodInput]): [CxResourceSubtype]
+  cxResourceSubtypes_onSave(data: [CxResourceSubtypeInput], objectType: String = "ResourceSubtype", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceSubtype]
   cxResourceSubtypes_onDelete(data: [String], objectType: String = "ResourceSubtype", operation: String = "delete"): [CxResourceSubtype]
 }
 

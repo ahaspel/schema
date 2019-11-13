@@ -165,8 +165,14 @@ input methodInput {
   args: JSONObject
 }
 
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String], methods: [methodInput]): [CxApplicationLicense]
+  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxApplicationLicense]
   cxApplicationLicenses_onDelete(data: [String], objectType: String = "ApplicationLicense", operation: String = "delete"): [CxApplicationLicense]
 }
 
