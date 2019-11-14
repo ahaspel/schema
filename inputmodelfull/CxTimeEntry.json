@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 511,
-	"Minutes": 958,
+	"Hours": 729,
+	"Minutes": 483,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,17 +21,17 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 587
+					"Quantity": 615
 				},
-				"Notes": "GOloNXrqjhxq"
+				"Notes": "XRrOVCfloL"
 			},
 			"Global": false,
-			"BaseObject": "LZRgaN",
+			"BaseObject": "VrCwjPayPemw",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "wHCBaviy",
-			"Description": "sUUBCqGcS",
-			"New": false,
+			"Name": "bWdyRNZvDXmX",
+			"Description": "SlJwhP",
+			"New": true,
 			"Dependencies": []
 		}
 	],
@@ -46,32 +46,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
+	"IsVoid": true,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": 58.6964,
-		"Lng": -90.1972,
+		"Lat": 66.286,
+		"Lng": -93.7746,
 		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -48.5074,
-		"Lng": 33.6108,
+		"Lat": 71.9812,
+		"Lng": -36.5765,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 689
+		"Quantity": 294
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 665
+		"Quantity": 18
 	},
 	"Approvals": [
 		{
@@ -91,33 +91,33 @@
 			"Id": 12
 		}
 	],
-	"Description": "egeXakU",
+	"Description": "aoGhjFvL",
 	"Tags": [
 		{
-			"BaseObject": "ZXEuEHjiTM",
+			"BaseObject": "wkQDXvroMEfz",
 			"AttributeId": 92,
 			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "jTFsEAbC"
+			"Description": "qZTBpetgIsfW"
 		}
 	],
 	"Attachments": [
 		{
-			"Attached": false,
-			"FileLocation": "fHGXsFYJO",
-			"FullName": "tnupufQWGpK",
+			"Attached": true,
+			"FileLocation": "WzbEnt",
+			"FullName": "nBbjUxr",
 			"DocumentType": {
 				"Id": 128
 			},
-			"New": true,
+			"New": false,
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "awvPEgwysyTA",
-			"Description": "ODCAMHcjgZ"
+			"Name": "zAOkgBrMggbd",
+			"Description": "kGhJKPSnptm"
 		}
 	],
 	"__typename": "CxTimeEntry"
