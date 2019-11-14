@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 292,
-	"Minutes": 961,
+	"Hours": 511,
+	"Minutes": 958,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,17 +21,17 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 739
+					"Quantity": 587
 				},
-				"Notes": "MpzHsUmPDmen"
+				"Notes": "GOloNXrqjhxq"
 			},
 			"Global": false,
-			"BaseObject": "wXclzNAufjM",
+			"BaseObject": "LZRgaN",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "LwzAjhRFVv",
-			"Description": "glvsTQZOn",
-			"New": true,
+			"Name": "wHCBaviy",
+			"Description": "sUUBCqGcS",
+			"New": false,
 			"Dependencies": []
 		}
 	],
@@ -47,31 +47,31 @@
 		"Id": 1
 	},
 	"IsVoid": false,
-	"Billable": false,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": -76.1483,
-		"Lng": 118.581,
-		"Source": "Owner"
+		"Lat": 58.6964,
+		"Lng": -90.1972,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": -67.5557,
-		"Lng": -158.9453,
+		"Lat": -48.5074,
+		"Lng": 33.6108,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 805
+		"Quantity": 689
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 875
+		"Quantity": 665
 	},
 	"Approvals": [
 		{
@@ -91,24 +91,24 @@
 			"Id": 12
 		}
 	],
-	"Description": "MigHHGGa",
+	"Description": "egeXakU",
 	"Tags": [
 		{
-			"BaseObject": "IdgdsS",
+			"BaseObject": "ZXEuEHjiTM",
 			"AttributeId": 92,
 			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "HlCIVCfKFQ"
+			"Description": "jTFsEAbC"
 		}
 	],
 	"Attachments": [
 		{
-			"Attached": true,
-			"FileLocation": "dkEvyasnfbv",
-			"FullName": "QRYsxDADTI",
+			"Attached": false,
+			"FileLocation": "fHGXsFYJO",
+			"FullName": "tnupufQWGpK",
 			"DocumentType": {
 				"Id": 128
 			},
@@ -116,8 +116,8 @@
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "qqFXhgbPh",
-			"Description": "XpNQHP"
+			"Name": "awvPEgwysyTA",
+			"Description": "ODCAMHcjgZ"
 		}
 	],
 	"__typename": "CxTimeEntry"
