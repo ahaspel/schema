@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 58,
-	"Minutes": 157,
+	"Hours": 292,
+	"Minutes": 961,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 760
+					"Quantity": 739
 				},
-				"Notes": "lCjmzQzk"
+				"Notes": "MpzHsUmPDmen"
 			},
 			"Global": false,
-			"BaseObject": "BOaTtL",
+			"BaseObject": "wXclzNAufjM",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "cJwIkYtRhqK",
-			"Description": "ooIOjGf",
+			"Name": "LwzAjhRFVv",
+			"Description": "glvsTQZOn",
 			"New": true,
 			"Dependencies": []
 		}
@@ -46,17 +46,17 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
+	"IsVoid": false,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": 11.0629,
-		"Lng": -96.5989,
-		"Source": "GPSService"
+		"Lat": -76.1483,
+		"Lng": 118.581,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 88.9892,
-		"Lng": 13.6688,
+		"Lat": -67.5557,
+		"Lng": -158.9453,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -65,13 +65,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 28
+		"Quantity": 805
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 627
+		"Quantity": 875
 	},
 	"Approvals": [
 		{
@@ -91,33 +91,33 @@
 			"Id": 12
 		}
 	],
-	"Description": "roNNKFoCdoz",
+	"Description": "MigHHGGa",
 	"Tags": [
 		{
-			"BaseObject": "fLiyosxQP",
+			"BaseObject": "IdgdsS",
 			"AttributeId": 92,
 			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "ENKNmsf"
+			"Description": "HlCIVCfKFQ"
 		}
 	],
 	"Attachments": [
 		{
 			"Attached": true,
-			"FileLocation": "OysThn",
-			"FullName": "LMRTPhmcRL",
+			"FileLocation": "dkEvyasnfbv",
+			"FullName": "QRYsxDADTI",
 			"DocumentType": {
 				"Id": 128
 			},
-			"New": false,
+			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "fVbfajSCh",
-			"Description": "iOfDdXQ"
+			"Name": "qqFXhgbPh",
+			"Description": "XpNQHP"
 		}
 	],
 	"__typename": "CxTimeEntry"

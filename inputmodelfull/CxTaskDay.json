@@ -1,13 +1,13 @@
 {
 	"ParentId": 0,
 	"ConflictIds": [
-		128
+		346
 	],
-	"ShiftSupervisor": false,
+	"ShiftSupervisor": true,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
@@ -28,11 +28,11 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 282
+			"Quantity": 696
 		}
 	},
-	"Completed": true,
-	"Cancelled": false,
+	"Completed": false,
+	"Cancelled": true,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -41,24 +41,24 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "wzuALjIogYR",
+	"Description": "kkDAGAWgKVPC",
 	"Tags": [
 		{
-			"BaseObject": "tHnrHJwbckuT",
+			"BaseObject": "LKqwhjvoGo",
 			"AttributeId": 92,
-			"New": true,
+			"New": false,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "oJVHVGv"
+			"Description": "mfrldM"
 		}
 	],
 	"Attachments": [
 		{
-			"Attached": false,
-			"FileLocation": "OWkwtSGaf",
-			"FullName": "uMNFoP",
+			"Attached": true,
+			"FileLocation": "bSUkyIxsKxYB",
+			"FullName": "vMMherDTLPpa",
 			"DocumentType": {
 				"Id": 128
 			},
@@ -66,8 +66,8 @@
 			"Dependencies": [],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "nzstBnenOQW",
-			"Description": "bmqPGRUcoqJ"
+			"Name": "aIlKuBEbdnx",
+			"Description": "amrntceOnbfn"
 		}
 	],
 	"HasAttachments": true,
