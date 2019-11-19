@@ -69,17 +69,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  Attribute
-  PurchaseOrderStatus
-  Level
-  Privilege
-  TimeEntryType
-  CompanyType
-  JobStatus
-  WebPrivilege
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -91,6 +80,17 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  WebPrivilege
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
 }
 

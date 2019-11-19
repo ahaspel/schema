@@ -1,6 +1,5 @@
 
 const CXDOCUMENTINPUTMIN = `fragment CXDOCUMENTINPUTMIN on CxDocument {
-  FileLocation
   Name
   Id
 }`;

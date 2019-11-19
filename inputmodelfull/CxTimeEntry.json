@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 729,
-	"Minutes": 483,
+	"Hours": 919,
+	"Minutes": 496,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,17 +21,17 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 615
+					"Quantity": 7
 				},
-				"Notes": "XRrOVCfloL"
+				"Notes": "qgYpbaRtL"
 			},
-			"Global": false,
-			"BaseObject": "VrCwjPayPemw",
+			"Global": true,
+			"BaseObject": "GyzwhZAiH",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "bWdyRNZvDXmX",
-			"Description": "SlJwhP",
-			"New": true,
+			"Name": "IpoXPZS",
+			"Description": "hoIQFvTqq",
+			"New": false,
 			"Dependencies": []
 		}
 	],
@@ -46,18 +46,18 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": true,
-	"Billable": true,
+	"IsVoid": false,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 66.286,
-		"Lng": -93.7746,
-		"Source": "GPSService"
+		"Lat": 69.8527,
+		"Lng": -152.7014,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 71.9812,
-		"Lng": -36.5765,
-		"Source": "GPSService"
+		"Lat": -85.9257,
+		"Lng": 110.0809,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "Manual",
@@ -65,13 +65,13 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 294
+		"Quantity": 105
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 18
+		"Quantity": 291
 	},
 	"Approvals": [
 		{
@@ -91,33 +91,22 @@
 			"Id": 12
 		}
 	],
-	"Description": "aoGhjFvL",
+	"Description": "YAnxfAlMH",
 	"Tags": [
 		{
-			"BaseObject": "wkQDXvroMEfz",
+			"BaseObject": "PXNqpgDLw",
 			"AttributeId": 92,
 			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "qZTBpetgIsfW"
+			"Description": "MgFLHJBF"
 		}
 	],
 	"Attachments": [
 		{
-			"Attached": true,
-			"FileLocation": "WzbEnt",
-			"FullName": "nBbjUxr",
-			"DocumentType": {
-				"Id": 128
-			},
-			"New": false,
-			"Dependencies": [],
-			"ObjectType": "Document",
-			"Id": 0,
-			"Name": "zAOkgBrMggbd",
-			"Description": "kGhJKPSnptm"
+			"Id": 0
 		}
 	],
 	"__typename": "CxTimeEntry"

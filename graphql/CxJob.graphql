@@ -194,9 +194,8 @@ enum IxCostCodeObjectType {
 
 type IxDocument {
   Attached: Boolean
-  FileLocation: String
   FullName: String
-  DocumentType: IxLookupValue
+  DocumentTypes: [IxLookupValue]
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
@@ -207,9 +206,8 @@ type IxDocument {
 
 input IxDocumentInput {
   Attached: Boolean
-  FileLocation: String!
   FullName: String
-  DocumentType: IxLookupValueDO
+  DocumentTypes: [IxLookupValueDO]
   New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
@@ -337,17 +335,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  Attribute
-  PurchaseOrderStatus
-  Level
-  Privilege
-  TimeEntryType
-  CompanyType
-  JobStatus
-  WebPrivilege
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -359,6 +346,17 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  WebPrivilege
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
 }
 

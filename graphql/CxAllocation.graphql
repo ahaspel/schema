@@ -45,7 +45,7 @@ input CxAllocationInput {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentInput]
+  Attachments: [IxDocumentDO]
   HasAttachments: Boolean
 }
 
@@ -187,9 +187,8 @@ enum IxCostCodeObjectType {
 
 type IxDocument {
   Attached: Boolean
-  FileLocation: String
   FullName: String
-  DocumentType: IxLookupValue
+  DocumentTypes: [IxLookupValue]
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
@@ -198,17 +197,8 @@ type IxDocument {
   Description: String
 }
 
-input IxDocumentInput {
-  Attached: Boolean
-  FileLocation: String!
-  FullName: String
-  DocumentType: IxLookupValueDO
-  New: Boolean
-  Dependencies: [CxDependencyInput]
-  ObjectType: IxDocumentObjectType
+input IxDocumentDO {
   Id: ID!
-  Name: String!
-  Description: String
 }
 
 enum IxDocumentObjectType {
@@ -331,22 +321,7 @@ type IxLookupValue {
   Dependencies: [CxDependency]
 }
 
-input IxLookupValueDO {
-  Id: ID!
-}
-
 enum IxLookupValueObjectType {
-  State
-  Attribute
-  PurchaseOrderStatus
-  Level
-  Privilege
-  TimeEntryType
-  CompanyType
-  JobStatus
-  WebPrivilege
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -358,6 +333,17 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  Privilege
+  TimeEntryType
+  CompanyType
+  JobStatus
+  WebPrivilege
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
 }
 

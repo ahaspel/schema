@@ -235,7 +235,6 @@
 		},
 		"IxDocument": {
 			"superRequired": [
-				"FileLocation",
 				"Id",
 				"Name"
 			],
@@ -244,15 +243,14 @@
 				"Attached": {
 					"type": "boolean"
 				},
-				"FileLocation": {
-					"type": "string",
-					"minLength": 1
-				},
 				"FullName": {
 					"type": "string"
 				},
-				"DocumentType": {
-					"$ref": "#/definitions/IxLookupValue"
+				"DocumentTypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
 				},
 				"New": {
 					"type": "boolean"
@@ -282,7 +280,6 @@
 			},
 			"required": [
 				"Id",
-				"FileLocation",
 				"Name"
 			]
 		},
@@ -461,17 +458,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"Attribute",
-						"PurchaseOrderStatus",
-						"Level",
-						"Privilege",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"WebPrivilege",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -483,6 +469,17 @@
 						"Skill",
 						"Training",
 						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Level",
+						"Privilege",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"WebPrivilege",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification"
 					]
 				},
