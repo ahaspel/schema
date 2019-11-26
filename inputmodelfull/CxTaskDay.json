@@ -1,9 +1,9 @@
 {
 	"ParentId": 0,
 	"ConflictIds": [
-		120
+		34
 	],
-	"ShiftSupervisor": true,
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
@@ -28,7 +28,7 @@
 			"Unit": {
 				"Id": 1
 			},
-			"Quantity": 59
+			"Quantity": 508
 		}
 	},
 	"Completed": false,
@@ -41,17 +41,17 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "UWXRzQJlDch",
+	"Description": "gAeRMyUUONQO",
 	"Tags": [
 		{
-			"BaseObject": "AELncUcQw",
+			"BaseObject": "PIayHuYzb",
 			"AttributeId": 92,
-			"New": false,
+			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "MvKsoCzKE"
+			"Description": "BZNhZbkDse"
 		}
 	],
 	"Attachments": [
@@ -59,6 +59,6 @@
 			"Id": 0
 		}
 	],
-	"HasAttachments": false,
+	"HasAttachments": true,
 	"__typename": "CxTaskDay"
 }
