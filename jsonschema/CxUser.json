@@ -20,6 +20,31 @@
 				"Ids"
 			]
 		},
+		"CxObjectPrivilege": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"ObjectPrivileges": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"None",
+							"Delete",
+							"Add",
+							"Edit",
+							"Read"
+						]
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"ObjectPrivileges"
+			]
+		},
 		"IxAddress": {
 			"superRequired": [
 				"Id",
@@ -202,6 +227,27 @@
 		"IxLevel": {
 			"type": "object",
 			"properties": {
+				"Privileges": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"None",
+							"SignTimesheets",
+							"SignPurchaseOrders",
+							"ViewAsManager"
+						]
+					}
+				},
+				"ObjectPrivileges": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxObjectPrivilege"
+					}
+				},
+				"Editable": {
+					"type": "boolean"
+				},
 				"BaseObject": {
 					"type": "string"
 				},
@@ -263,14 +309,14 @@
 						"Attribute",
 						"PurchaseOrderStatus",
 						"Level",
-						"Privilege",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"WebPrivilege",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"JobCertification"
+						"Privilege",
+						"JobCertification",
+						"WebPrivilege"
 					]
 				},
 				"Id": {
@@ -393,34 +439,32 @@
 		"Party": {
 			"$ref": "#/definitions/IxParty"
 		},
+		"Active": {
+			"type": "boolean"
+		},
 		"Level": {
 			"$ref": "#/definitions/IxLevel"
-		},
-		"WebPrivileges": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
 		},
 		"Privileges": {
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/IxLookupValue"
+				"type": "string",
+				"enum": [
+					"None",
+					"SignTimesheets",
+					"SignPurchaseOrders",
+					"ViewAsManager"
+				]
+			}
+		},
+		"ObjectPrivileges": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxObjectPrivilege"
 			}
 		},
 		"Administrator": {
 			"type": "boolean"
-		},
-		"ReadOnly": {
-			"type": "boolean"
-		},
-		"WebLevel": {
-			"type": "string",
-			"enum": [
-				"None",
-				"All",
-				"Personal"
-			]
 		},
 		"Description": {
 			"type": "string"

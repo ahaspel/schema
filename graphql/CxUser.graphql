@@ -8,14 +8,31 @@ input CxDependencyInput {
   Ids: [Int]!
 }
 
+type CxObjectPrivilege {
+  ObjectType: String
+  ObjectPrivileges: [CxObjectPrivilegeObjectPrivileges]
+}
+
+input CxObjectPrivilegeInput {
+  ObjectType: String!
+  ObjectPrivileges: [CxObjectPrivilegeObjectPrivileges]!
+}
+
+enum CxObjectPrivilegeObjectPrivileges {
+  None
+  Delete
+  Add
+  Edit
+  Read
+}
+
 type CxUser {
   Party: IxParty
+  Active: Boolean
   Level: IxLevel
-  WebPrivileges: [IxLookupValue]
-  Privileges: [IxLookupValue]
+  Privileges: [CxUserPrivileges]
+  ObjectPrivileges: [CxObjectPrivilege]
   Administrator: Boolean
-  ReadOnly: Boolean
-  WebLevel: CxUserWebLevel
   Description: String
   ObjectType: CxUserObjectType
   Id: ID!
@@ -28,10 +45,10 @@ type CxUser {
 
 input CxUserInput {
   Party: IxPartyDO!
+  Active: Boolean
   Level: IxLevelDO!
-  WebPrivileges: [IxLookupValueDO]
-  Privileges: [IxLookupValueDO]
-  WebLevel: CxUserWebLevel
+  Privileges: [CxUserPrivileges]
+  ObjectPrivileges: [CxObjectPrivilegeInput]
   Description: String
   ObjectType: CxUserObjectType
   Id: ID!
@@ -45,10 +62,11 @@ enum CxUserObjectType {
   User
 }
 
-enum CxUserWebLevel {
+enum CxUserPrivileges {
   None
-  All
-  Personal
+  SignTimesheets
+  SignPurchaseOrders
+  ViewAsManager
 }
 
 input FilterInput {
@@ -139,6 +157,9 @@ enum IxGeocodeSource {
 }
 
 type IxLevel {
+  Privileges: [IxLevelPrivileges]
+  ObjectPrivileges: [CxObjectPrivilege]
+  Editable: Boolean
   BaseObject: String
   ObjectType: IxLevelObjectType
   Id: ID!
@@ -154,6 +175,13 @@ input IxLevelDO {
 
 enum IxLevelObjectType {
   Level
+}
+
+enum IxLevelPrivileges {
+  None
+  SignTimesheets
+  SignPurchaseOrders
+  ViewAsManager
 }
 
 type IxLookupValue {
@@ -186,14 +214,14 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   Level
-  Privilege
   TimeEntryType
   CompanyType
   JobStatus
-  WebPrivilege
   DocumentType
   TimeEntryLaborClass
+  Privilege
   JobCertification
+  WebPrivilege
 }
 
 type IxParty {
