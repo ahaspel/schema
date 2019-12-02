@@ -43,8 +43,6 @@ type CxEmployee {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxEmployeeInput {
@@ -77,8 +75,6 @@ input CxEmployeeInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxEmployeeObjectType {
@@ -169,26 +165,6 @@ enum IxCompanyObjectType {
   Company
   Subcontractor
   Plant
-}
-
-type IxDocument {
-  Attached: Boolean
-  FullName: String
-  DocumentTypes: [IxLookupValue]
-  New: Boolean
-  Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
-}
-
-enum IxDocumentObjectType {
-  Document
 }
 
 type IxEmail {

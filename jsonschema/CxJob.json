@@ -745,6 +745,15 @@
 				"$ref": "#/definitions/IxParty"
 			}
 		},
+		"Attachments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxDocument"
+			}
+		},
+		"HasAttachments": {
+			"type": "boolean"
+		},
 		"Name": {
 			"type": "string",
 			"minLength": 1
@@ -827,15 +836,6 @@
 			"items": {
 				"$ref": "#/definitions/CxDependency"
 			}
-		},
-		"Attachments": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxDocument"
-			}
-		},
-		"HasAttachments": {
-			"type": "boolean"
 		}
 	},
 	"required": [

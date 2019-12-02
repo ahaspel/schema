@@ -35,8 +35,6 @@ type CxTimeEntry {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxTimeEntryInput {
@@ -65,7 +63,6 @@ input CxTimeEntryInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentDO]
 }
 
 enum CxTimeEntryObjectType {
@@ -185,26 +182,6 @@ input IxCostCodeInput {
 
 enum IxCostCodeObjectType {
   CostCode
-}
-
-type IxDocument {
-  Attached: Boolean
-  FullName: String
-  DocumentTypes: [IxLookupValue]
-  New: Boolean
-  Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
-}
-
-enum IxDocumentObjectType {
-  Document
 }
 
 type IxEmail {

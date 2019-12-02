@@ -10,8 +10,6 @@ type CxConfigValue {
   Name: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxConfigValueInput {
@@ -24,8 +22,6 @@ input CxConfigValueInput {
   Description: String
   Name: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxConfigValueObjectType {
@@ -73,26 +69,6 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
-}
-
-type IxDocument {
-  Attached: Boolean
-  FullName: String
-  DocumentTypes: [IxLookupValue]
-  New: Boolean
-  Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
-}
-
-enum IxDocumentObjectType {
-  Document
 }
 
 type IxLookupValue {

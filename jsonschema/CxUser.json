@@ -131,54 +131,6 @@
 				"Id"
 			]
 		},
-		"IxDocument": {
-			"superRequired": [
-				"Id",
-				"Name"
-			],
-			"type": "object",
-			"properties": {
-				"Attached": {
-					"type": "boolean"
-				},
-				"FullName": {
-					"type": "string"
-				},
-				"DocumentTypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"New": {
-					"type": "boolean"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Document"
-					]
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxEmail": {
 			"superRequired": [
 				"Id",
@@ -495,15 +447,6 @@
 			"items": {
 				"$ref": "#/definitions/CxDependency"
 			}
-		},
-		"Attachments": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxDocument"
-			}
-		},
-		"HasAttachments": {
-			"type": "boolean"
 		}
 	},
 	"required": [

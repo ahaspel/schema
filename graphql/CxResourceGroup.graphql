@@ -26,8 +26,6 @@ type CxResourceGroup {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxResourceGroupInput {
@@ -43,8 +41,6 @@ input CxResourceGroupInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxResourceGroupObjectType {
@@ -120,26 +116,6 @@ enum IxCompanyObjectType {
   Company
   Subcontractor
   Plant
-}
-
-type IxDocument {
-  Attached: Boolean
-  FullName: String
-  DocumentTypes: [IxLookupValue]
-  New: Boolean
-  Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
-}
-
-enum IxDocumentObjectType {
-  Document
 }
 
 type IxEmail {

@@ -16,8 +16,6 @@ type CxAllocation {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 enum CxAllocationActionType {
@@ -45,8 +43,6 @@ input CxAllocationInput {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxAllocationObjectType {
@@ -195,10 +191,6 @@ type IxDocument {
   Id: ID!
   Name: String
   Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
 }
 
 enum IxDocumentObjectType {

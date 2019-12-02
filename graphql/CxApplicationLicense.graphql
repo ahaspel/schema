@@ -14,8 +14,6 @@ type CxApplicationLicense {
   Name: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxApplicationLicenseInput {
@@ -34,8 +32,6 @@ input CxApplicationLicenseInput {
   Name: String
   Tags: [IxAttribute__String__Input]
   Dependencies: [CxDependencyInput]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxApplicationLicenseObjectType {
@@ -83,26 +79,6 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
-}
-
-type IxDocument {
-  Attached: Boolean
-  FullName: String
-  DocumentTypes: [IxLookupValue]
-  New: Boolean
-  Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
-}
-
-enum IxDocumentObjectType {
-  Document
 }
 
 type IxLookupValue {

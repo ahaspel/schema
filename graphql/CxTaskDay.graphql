@@ -30,8 +30,6 @@ type CxTaskDay {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 enum CxTaskDayActionType {
@@ -62,8 +60,6 @@ input CxTaskDayInput {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxTaskDayObjectType {
@@ -203,10 +199,6 @@ type IxDocument {
   Id: ID!
   Name: String
   Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
 }
 
 enum IxDocumentObjectType {

@@ -6,7 +6,7 @@
 		},
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Company",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
@@ -23,7 +23,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -34,7 +34,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Material",
+		"Family": "Equipment",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -76,7 +76,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "Action"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -96,7 +96,5 @@
 	"Description": "",
 	"Name": "",
 	"Tags": [],
-	"Attachments": [],
-	"HasAttachments": false,
 	"__typename": "CxResource"
 }

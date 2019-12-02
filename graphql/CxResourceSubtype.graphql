@@ -15,8 +15,6 @@ type CxResourceSubtype {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxResourceSubtypeInput {
@@ -26,8 +24,6 @@ input CxResourceSubtypeInput {
   Description: String
   Tags: [IxAttribute__String__Input]
   Dependencies: [CxDependencyInput]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
 }
 
 enum CxResourceSubtypeObjectType {
@@ -65,62 +61,6 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
-}
-
-type IxDocument {
-  Attached: Boolean
-  FullName: String
-  DocumentTypes: [IxLookupValue]
-  New: Boolean
-  Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxDocumentDO {
-  Id: ID!
-}
-
-enum IxDocumentObjectType {
-  Document
-}
-
-type IxLookupValue {
-  BaseObject: String
-  ObjectType: IxLookupValueObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  New: Boolean
-  Dependencies: [CxDependency]
-}
-
-enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  Division
-  LaborClass
-  Language
-  License
-  Minority
-  Skill
-  Training
-  Union
-  State
-  Attribute
-  PurchaseOrderStatus
-  Level
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
-  Privilege
-  JobCertification
-  WebPrivilege
 }
 
 """

@@ -1,5 +1,5 @@
 {
-	"Name": "hJrFYsLkMTje",
+	"Name": "fHYiPQi",
 	"JobActivity": {
 		"Id": 156
 	},
@@ -9,12 +9,12 @@
 	"TaskDays": [
 		{
 			"ParentId": 0,
-			"ShiftSupervisor": false,
+			"ShiftSupervisor": true,
 			"ActionStatus": {
 				"Id": 1
 			},
 			"ConflictIds": [
-				776
+				290
 			],
 			"ResourceQuantity": {
 				"Supplier": {
@@ -31,7 +31,7 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 301
+					"Quantity": 334
 				}
 			},
 			"JobActivity": {
@@ -46,22 +46,22 @@
 			"Dependencies": [],
 			"ObjectType": "ActualTaskDay",
 			"Id": 0,
-			"Name": "dYBaZPNTGi",
-			"Description": "YlMjpuVkuvt",
+			"Name": "XMPACdA",
+			"Description": "DnEhlbN",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
 				"End": "2018-12-14T00:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "jghxdVPDB",
+					"BaseObject": "fDlxhBtVUSf",
 					"AttributeId": 92,
-					"New": false,
+					"New": true,
 					"Dependencies": [],
 					"ObjectType": "Attribute",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "iXnbUZIged"
+					"Description": "WAIrnKZFJS"
 				}
 			]
 		}
@@ -76,24 +76,18 @@
 		"Id": 1
 	},
 	"Id": 0,
-	"Description": "CJKavWO",
+	"Description": "PeBfZZvbcAOT",
 	"Tags": [
 		{
-			"BaseObject": "NucLvWxtmXd",
+			"BaseObject": "XRUKotnl",
 			"AttributeId": 92,
-			"New": true,
+			"New": false,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "LxCmhGlPu"
+			"Description": "TgvoLoRdaKa"
 		}
 	],
-	"Attachments": [
-		{
-			"Id": 0
-		}
-	],
-	"HasAttachments": false,
 	"__typename": "CxAllocation"
 }

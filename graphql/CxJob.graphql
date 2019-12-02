@@ -18,6 +18,8 @@ type CxJob {
   Address: IxAddress
   AccountCode: String
   Contacts: [IxParty]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
   Name: String
   DisplayName: String
   Notes: String
@@ -39,8 +41,6 @@ type CxJob {
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
 }
 
 input CxJobInput {
@@ -53,6 +53,7 @@ input CxJobInput {
   Address: IxAddressInput!
   AccountCode: String!
   Contacts: [IxPartyInput]
+  Attachments: [IxDocumentInput]
   Name: String!
   Notes: String
   CurrentLifespan: IxRangeInput!
@@ -71,7 +72,6 @@ input CxJobInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
-  Attachments: [IxDocumentInput]
 }
 
 enum CxJobObjectType {
