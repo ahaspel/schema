@@ -92,10 +92,10 @@
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
+						"JobCertification",
 						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
-						"JobCertification",
 						"WebPrivilege"
 					]
 				},
@@ -148,6 +148,7 @@
 		}
 	},
 	"immutable": [
+		"CurrentLifespan",
 		"Dependencies",
 		"Dto"
 	],
