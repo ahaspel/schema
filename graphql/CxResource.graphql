@@ -118,6 +118,8 @@ enum IxAttributeStringObjectType {
 
 type IxCompany {
   CompanyType: IxLookupValue
+  Default: Boolean
+  Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxCompanyObjectType
@@ -135,6 +137,8 @@ type IxCompany {
 
 input IxCompanyInput {
   CompanyType: IxLookupValueDO!
+  Default: Boolean
+  Supplier: Boolean
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
   ObjectType: IxCompanyObjectType
@@ -233,10 +237,10 @@ enum IxLookupValueObjectType {
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
   Privilege
+  JobCertification
   WebPrivilege
 }
 

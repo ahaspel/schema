@@ -183,10 +183,10 @@
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"JobCertification",
 						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
+						"JobCertification",
 						"WebPrivilege"
 					]
 				},
@@ -474,7 +474,7 @@
 	"immutable": [
 		"Dependencies",
 		"Dto",
-		"SuppliesAll"
+		"Supplier"
 	],
 	"type": "object",
 	"properties": {
@@ -484,14 +484,14 @@
 		"IsMover": {
 			"type": "boolean"
 		},
+		"Supplier": {
+			"type": "boolean"
+		},
 		"SupplyTypes": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxSupplyType"
 			}
-		},
-		"SuppliesAll": {
-			"type": "boolean"
 		},
 		"ObjectType": {
 			"type": "string",
@@ -501,6 +501,9 @@
 		},
 		"CompanyType": {
 			"$ref": "#/definitions/IxLookupValue"
+		},
+		"Default": {
+			"type": "boolean"
 		},
 		"Contacts": {
 			"type": "array",

@@ -11,10 +11,11 @@ input CxDependencyInput {
 type CxSubcontractor {
   Preferred: Boolean
   IsMover: Boolean
+  Supplier: Boolean
   SupplyTypes: [IxSupplyType]
-  SuppliesAll: Boolean
   ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValue
+  Default: Boolean
   Contacts: [IxParty]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
@@ -34,6 +35,7 @@ input CxSubcontractorInput {
   SupplyTypes: [IxSupplyTypeInput]
   ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValueDO!
+  Default: Boolean
   Contacts: [IxPartyInput]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
@@ -174,10 +176,10 @@ enum IxLookupValueObjectType {
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
   Privilege
+  JobCertification
   WebPrivilege
 }
 

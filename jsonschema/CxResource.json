@@ -117,6 +117,12 @@
 				"CompanyType": {
 					"$ref": "#/definitions/IxLookupValue"
 				},
+				"Default": {
+					"type": "boolean"
+				},
+				"Supplier": {
+					"type": "boolean"
+				},
 				"Emails": {
 					"type": "array",
 					"items": {
@@ -279,10 +285,10 @@
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"JobCertification",
 						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
+						"JobCertification",
 						"WebPrivilege"
 					]
 				},

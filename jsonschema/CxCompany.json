@@ -183,10 +183,10 @@
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"JobCertification",
 						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
+						"JobCertification",
 						"WebPrivilege"
 					]
 				},
@@ -303,12 +303,20 @@
 	},
 	"immutable": [
 		"Dependencies",
-		"Dto"
+		"Default",
+		"Dto",
+		"Supplier"
 	],
 	"type": "object",
 	"properties": {
 		"CompanyType": {
 			"$ref": "#/definitions/IxLookupValue"
+		},
+		"Default": {
+			"type": "boolean"
+		},
+		"Supplier": {
+			"type": "boolean"
 		},
 		"Contacts": {
 			"type": "array",

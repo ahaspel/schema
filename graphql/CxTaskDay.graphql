@@ -33,16 +33,12 @@ type CxTaskDay {
 }
 
 enum CxTaskDayActionType {
-  Crew
   Employee
   Equipment
   Generic
+  Material
   Plant
   Subcontractor
-  Task
-  Material
-  Group
-  Move
 }
 
 input CxTaskDayInput {
@@ -148,6 +144,8 @@ enum IxAttributeStringObjectType {
 
 type IxCompany {
   CompanyType: IxLookupValue
+  Default: Boolean
+  Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxCompanyObjectType
@@ -340,10 +338,10 @@ enum IxLookupValueObjectType {
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
   Privilege
+  JobCertification
   WebPrivilege
 }
 
@@ -445,8 +443,8 @@ type IxResourceQuantity {
 input IxResourceQuantityInput {
   Supplier: IxCompanyDO!
   Id: ID!
-  ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO!
+  ResourceType: IxResourceTypeDO!
+  ResourceSubtype: IxResourceSubtypeDO
   Quantity: IxQuantityInput
 }
 

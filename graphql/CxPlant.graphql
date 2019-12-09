@@ -9,10 +9,12 @@ input CxDependencyInput {
 }
 
 type CxPlant {
+  Supplier: Boolean
   Capacities: [IxCapacity]
   DefaultCapacity: IxCapacity
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValue
+  Default: Boolean
   Contacts: [IxParty]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
@@ -31,6 +33,7 @@ input CxPlantInput {
   DefaultCapacity: IxCapacityInput
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValueDO!
+  Default: Boolean
   Contacts: [IxPartyDO]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
@@ -185,10 +188,10 @@ enum IxLookupValueObjectType {
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
   Privilege
+  JobCertification
   WebPrivilege
 }
 

@@ -1,5 +1,7 @@
 type CxCompany {
   CompanyType: IxLookupValue
+  Default: Boolean
+  Supplier: Boolean
   Contacts: [IxParty]
   AccountCode: String
   ObjectType: CxCompanyObjectType
@@ -169,10 +171,10 @@ enum IxLookupValueObjectType {
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
   Privilege
+  JobCertification
   WebPrivilege
 }
 
