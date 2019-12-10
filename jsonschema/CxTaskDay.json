@@ -948,31 +948,6 @@
 				"Id"
 			]
 		},
-		"IxResourceQuantity": {
-			"type": "object",
-			"properties": {
-				"Supplier": {
-					"$ref": "#/definitions/IxCompany"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"Quantity": {
-					"$ref": "#/definitions/IxQuantity"
-				}
-			},
-			"required": [
-				"Id",
-				"ResourceType",
-				"Supplier"
-			]
-		},
 		"IxResourceSubtype": {
 			"superRequired": [
 				"Id",
@@ -1175,10 +1150,22 @@
 				"type": "integer"
 			}
 		},
-		"ShiftSupervisor": {
-			"type": "boolean"
+		"ResourceType": {
+			"$ref": "#/definitions/IxResourceType"
+		},
+		"ResourceSubtype": {
+			"$ref": "#/definitions/IxResourceSubtype"
+		},
+		"Quantity": {
+			"$ref": "#/definitions/IxQuantity"
 		},
 		"Filled": {
+			"type": "boolean"
+		},
+		"Supplier": {
+			"$ref": "#/definitions/IxCompany"
+		},
+		"ShiftSupervisor": {
 			"type": "boolean"
 		},
 		"Job": {
@@ -1205,9 +1192,6 @@
 			"items": {
 				"$ref": "#/definitions/IxResource"
 			}
-		},
-		"ResourceQuantity": {
-			"$ref": "#/definitions/IxResourceQuantity"
 		},
 		"DisplayName": {
 			"type": "string"

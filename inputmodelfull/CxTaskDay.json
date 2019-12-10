@@ -1,38 +1,35 @@
 {
 	"ParentId": 0,
 	"ConflictIds": [
-		786
+		742
 	],
-	"ShiftSupervisor": true,
+	"ResourceType": {
+		"Id": 1
+	},
+	"ResourceSubtype": {
+		"Id": 29
+	},
+	"Quantity": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 645
+	},
+	"Supplier": {
+		"Id": 2
+	},
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "VirtualTaskDay",
+	"ObjectType": "ActualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
 		}
 	],
-	"ResourceQuantity": {
-		"Supplier": {
-			"Id": 2
-		},
-		"Id": 0,
-		"ResourceType": {
-			"Id": 1
-		},
-		"ResourceSubtype": {
-			"Id": 29
-		},
-		"Quantity": {
-			"Unit": {
-				"Id": 1
-			},
-			"Quantity": 599
-		}
-	},
 	"Completed": true,
-	"Cancelled": true,
+	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -41,17 +38,17 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "tiAlJAsieXv",
+	"Description": "LSrNASDepxs",
 	"Tags": [
 		{
-			"BaseObject": "mVwfgpcMy",
+			"BaseObject": "ZSGGKODM",
 			"AttributeId": 92,
 			"New": false,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "SWpwoy"
+			"Description": "ydVrUEPkIMf"
 		}
 	],
 	"__typename": "CxTaskDay"

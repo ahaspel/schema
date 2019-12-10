@@ -13,14 +13,17 @@ type CxTaskDay {
   ActionType: CxTaskDayActionType
   Location: IxLocation
   ConflictIds: [Int]
-  ShiftSupervisor: Boolean
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Quantity: IxQuantity
   Filled: Boolean
+  Supplier: IxCompany
+  ShiftSupervisor: Boolean
   Job: IxJob
   JobActivity: IxJobActivity
   ObjectType: CxTaskDayObjectType
   Divisions: [IxLookupValue]
   Resources: [IxResource]
-  ResourceQuantity: IxResourceQuantity
   DisplayName: String
   Completed: Boolean
   Cancelled: Boolean
@@ -44,11 +47,14 @@ enum CxTaskDayActionType {
 input CxTaskDayInput {
   ParentId: ID
   ConflictIds: [Int]
+  ResourceType: IxResourceTypeDO
+  ResourceSubtype: IxResourceSubtypeDO
+  Quantity: IxQuantityInput
+  Supplier: IxCompanyDO
   ShiftSupervisor: Boolean
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
-  ResourceQuantity: IxResourceQuantityInput
   Completed: Boolean
   Cancelled: Boolean
   ActionStatus: IxActionStatusDO
@@ -430,22 +436,6 @@ enum IxResourceObjectType {
   Employee
   Equipment
   Material
-}
-
-type IxResourceQuantity {
-  Supplier: IxCompany
-  Id: ID!
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Quantity: IxQuantity
-}
-
-input IxResourceQuantityInput {
-  Supplier: IxCompanyDO!
-  Id: ID!
-  ResourceType: IxResourceTypeDO!
-  ResourceSubtype: IxResourceSubtypeDO
-  Quantity: IxQuantityInput
 }
 
 type IxResourceSubtype {

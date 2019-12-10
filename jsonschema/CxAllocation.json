@@ -949,31 +949,6 @@
 				"Id"
 			]
 		},
-		"IxResourceQuantity": {
-			"type": "object",
-			"properties": {
-				"Supplier": {
-					"$ref": "#/definitions/IxCompany"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"Quantity": {
-					"$ref": "#/definitions/IxQuantity"
-				}
-			},
-			"required": [
-				"Id",
-				"ResourceType",
-				"Supplier"
-			]
-		},
 		"IxResourceSubtype": {
 			"superRequired": [
 				"Id",
@@ -1196,8 +1171,17 @@
 						"type": "integer"
 					}
 				},
-				"ResourceQuantity": {
-					"$ref": "#/definitions/IxResourceQuantity"
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Supplier": {
+					"$ref": "#/definitions/IxCompany"
+				},
+				"Quantity": {
+					"$ref": "#/definitions/IxQuantity"
 				},
 				"JobActivity": {
 					"$ref": "#/definitions/IxJobActivity"

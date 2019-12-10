@@ -427,22 +427,6 @@ enum IxResourceObjectType {
   Material
 }
 
-type IxResourceQuantity {
-  Supplier: IxCompany
-  Id: ID!
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Quantity: IxQuantity
-}
-
-input IxResourceQuantityInput {
-  Supplier: IxCompanyDO!
-  Id: ID!
-  ResourceType: IxResourceTypeDO!
-  ResourceSubtype: IxResourceSubtypeDO
-  Quantity: IxQuantityInput
-}
-
 type IxResourceSubtype {
   New: Boolean
   Dependencies: [CxDependency]
@@ -525,7 +509,10 @@ type IxTaskDay {
   Filled: Boolean
   ActionStatus: IxActionStatus
   ConflictIds: [Int]
-  ResourceQuantity: IxResourceQuantity
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Supplier: IxCompany
+  Quantity: IxQuantity
   JobActivity: IxJobActivity
   Job: IxJob
   Location: IxLocation
@@ -561,7 +548,10 @@ input IxTaskDayInput {
   ShiftSupervisor: Boolean
   ActionStatus: IxActionStatusDO
   ConflictIds: [Int]
-  ResourceQuantity: IxResourceQuantityInput
+  ResourceType: IxResourceTypeDO
+  ResourceSubtype: IxResourceSubtypeDO
+  Supplier: IxCompanyDO
+  Quantity: IxQuantityInput
   JobActivity: IxJobActivityDO!
   Resources: [IxResourceDO]!
   New: Boolean
