@@ -342,6 +342,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"ParentId": {
+					"type": "integer"
+				},
 				"New": {
 					"type": "boolean"
 				},

@@ -372,6 +372,13 @@ type IxPhoneNumber {
   Description: String
 }
 
+input IxPhoneNumberInput {
+  Id: ID!
+  PhoneNumber: String!
+  Name: String
+  Description: String
+}
+
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
@@ -428,6 +435,7 @@ enum IxResourceObjectType {
 }
 
 type IxResourceSubtype {
+  ParentId: ID
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
@@ -509,6 +517,7 @@ type IxTaskDay {
   Filled: Boolean
   ActionStatus: IxActionStatus
   ConflictIds: [Int]
+  PhoneNumbers: [IxPhoneNumber]
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Supplier: IxCompany
@@ -548,6 +557,7 @@ input IxTaskDayInput {
   ShiftSupervisor: Boolean
   ActionStatus: IxActionStatusDO
   ConflictIds: [Int]
+  PhoneNumbers: [IxPhoneNumberInput]
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO

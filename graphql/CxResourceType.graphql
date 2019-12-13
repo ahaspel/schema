@@ -76,6 +76,7 @@ enum IxAttributeStringObjectType {
 }
 
 type IxResourceSubtype {
+  ParentId: ID
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
@@ -85,6 +86,7 @@ type IxResourceSubtype {
 }
 
 input IxResourceSubtypeInput {
+  ParentId: ID
   New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxResourceSubtypeObjectType

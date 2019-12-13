@@ -10,6 +10,7 @@ input CxDependencyInput {
 
 type CxResourceSubtype {
   ObjectType: CxResourceSubtypeObjectType
+  ParentId: ID
   Name: String
   Id: ID!
   Description: String
@@ -19,6 +20,7 @@ type CxResourceSubtype {
 
 input CxResourceSubtypeInput {
   ObjectType: CxResourceSubtypeObjectType
+  ParentId: ID
   Name: String!
   Id: ID!
   Description: String

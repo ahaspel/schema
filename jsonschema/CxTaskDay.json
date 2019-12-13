@@ -955,6 +955,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"ParentId": {
+					"type": "integer"
+				},
 				"New": {
 					"type": "boolean"
 				},
@@ -1167,6 +1170,12 @@
 		},
 		"ShiftSupervisor": {
 			"type": "boolean"
+		},
+		"PhoneNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxPhoneNumber"
+			}
 		},
 		"Job": {
 			"$ref": "#/definitions/IxJob"

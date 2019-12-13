@@ -19,6 +19,7 @@ type CxTaskDay {
   Filled: Boolean
   Supplier: IxCompany
   ShiftSupervisor: Boolean
+  PhoneNumbers: [IxPhoneNumber]
   Job: IxJob
   JobActivity: IxJobActivity
   ObjectType: CxTaskDayObjectType
@@ -52,6 +53,7 @@ input CxTaskDayInput {
   Quantity: IxQuantityInput
   Supplier: IxCompanyDO
   ShiftSupervisor: Boolean
+  PhoneNumbers: [IxPhoneNumberInput]
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
@@ -383,6 +385,13 @@ type IxPhoneNumber {
   Description: String
 }
 
+input IxPhoneNumberInput {
+  Id: ID!
+  PhoneNumber: String!
+  Name: String
+  Description: String
+}
+
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
@@ -439,6 +448,7 @@ enum IxResourceObjectType {
 }
 
 type IxResourceSubtype {
+  ParentId: ID
   New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType

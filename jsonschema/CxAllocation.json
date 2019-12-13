@@ -956,6 +956,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"ParentId": {
+					"type": "integer"
+				},
 				"New": {
 					"type": "boolean"
 				},
@@ -1169,6 +1172,12 @@
 					"type": "array",
 					"items": {
 						"type": "integer"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
 				"ResourceType": {
