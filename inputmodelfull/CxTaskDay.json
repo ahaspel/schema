@@ -1,7 +1,7 @@
 {
 	"ParentId": 0,
 	"ConflictIds": [
-		768
+		590
 	],
 	"ResourceType": {
 		"Id": 1
@@ -13,31 +13,31 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 102
+		"Quantity": 818
 	},
 	"Supplier": {
 		"Id": 2
 	},
-	"ShiftSupervisor": true,
+	"ShiftSupervisor": false,
 	"PhoneNumbers": [
 		{
 			"Id": 0,
-			"PhoneNumber": "wSwREno",
-			"Name": "IJHZyCJpOj",
-			"Description": "vwawEORvJegI"
+			"PhoneNumber": "WMZjjKAXc",
+			"Name": "BhMwalGV",
+			"Description": "jDsVbx"
 		}
 	],
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Resources": [
 		{
 			"Id": 6
 		}
 	],
 	"Completed": false,
-	"Cancelled": true,
+	"Cancelled": false,
 	"ActionStatus": {
 		"Id": 1
 	},
@@ -46,17 +46,17 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "psAweOWPIU",
+	"Description": "PshkCRcAMtn",
 	"Tags": [
 		{
-			"BaseObject": "JqSziQCM",
+			"BaseObject": "NqokSWvK",
 			"AttributeId": 92,
-			"New": false,
+			"New": true,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "lxUdJExai"
+			"Description": "kkVWVzSDxh"
 		}
 	],
 	"__typename": "CxTaskDay"
