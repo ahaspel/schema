@@ -47,7 +47,6 @@ enum CxTaskDayActionType {
 
 input CxTaskDayInput {
   ParentId: ID
-  ConflictIds: [Int]
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO
   Quantity: IxQuantityInput
@@ -152,7 +151,6 @@ enum IxAttributeStringObjectType {
 
 type IxCompany {
   CompanyType: IxLookupValue
-  Default: Boolean
   Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]

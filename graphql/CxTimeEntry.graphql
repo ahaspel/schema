@@ -135,7 +135,6 @@ enum IxAttributeStringObjectType {
 
 type IxCompany {
   CompanyType: IxLookupValue
-  Default: Boolean
   Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]

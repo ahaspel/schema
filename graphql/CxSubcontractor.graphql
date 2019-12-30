@@ -15,7 +15,6 @@ type CxSubcontractor {
   SupplyTypes: [IxSupplyType]
   ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValue
-  Default: Boolean
   Contacts: [IxParty]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
@@ -35,7 +34,6 @@ input CxSubcontractorInput {
   SupplyTypes: [IxSupplyTypeInput]
   ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValueDO!
-  Default: Boolean
   Contacts: [IxPartyInput]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]

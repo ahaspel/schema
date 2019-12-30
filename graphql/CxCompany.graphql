@@ -1,6 +1,5 @@
 type CxCompany {
   CompanyType: IxLookupValue
-  Default: Boolean
   Supplier: Boolean
   Contacts: [IxParty]
   AccountCode: String

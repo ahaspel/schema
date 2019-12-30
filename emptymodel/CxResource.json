@@ -4,7 +4,6 @@
 		"CompanyType": {
 			"Id": 0
 		},
-		"Default": false,
 		"Supplier": false,
 		"Emails": [],
 		"PhoneNumbers": [],
@@ -25,7 +24,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -36,7 +35,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Equipment",
+		"Family": "Labor",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -78,7 +77,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0

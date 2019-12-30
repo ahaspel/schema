@@ -14,7 +14,6 @@ type CxPlant {
   DefaultCapacity: IxCapacity
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValue
-  Default: Boolean
   Contacts: [IxParty]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
@@ -33,7 +32,6 @@ input CxPlantInput {
   DefaultCapacity: IxCapacityInput
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValueDO!
-  Default: Boolean
   Contacts: [IxPartyDO]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
