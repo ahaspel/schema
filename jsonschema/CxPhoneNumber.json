@@ -3,18 +3,17 @@
 	"title": "com.congistics.cbrd.party.CxPhoneNumber",
 	"type": "object",
 	"properties": {
-		"Id": {
-			"type": "integer"
-		},
 		"PhoneNumber": {
 			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
 		},
 		"Name": {
 			"type": "string"
 		}
 	},
 	"required": [
-		"Id",
 		"PhoneNumber"
 	],
 	"definitions": {}

@@ -1,13 +1,13 @@
 type CxEmail {
-  Id: ID!
-  Name: String
   Email: String
+  Id: ID
+  Name: String
 }
 
 input CxEmailInput {
-  Id: ID!
-  Name: String
   Email: String!
+  Id: ID
+  Name: String
 }
 
 input FilterInput {

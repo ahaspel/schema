@@ -253,17 +253,16 @@
 		},
 		"IxEmail": {
 			"superRequired": [
-				"Id",
 				"Email"
 			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"Email": {
 					"type": "string",
 					"format": "email"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -273,8 +272,8 @@
 				}
 			},
 			"required": [
-				"Id",
-				"Email"
+				"Email",
+				"Id"
 			]
 		},
 		"IxGeocode": {
@@ -387,14 +386,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"PurchaseOrderStatus",
-						"Level",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -402,10 +393,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
-						"Minority",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Level",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
@@ -511,16 +511,15 @@
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"Id",
 				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"PhoneNumber": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -530,8 +529,8 @@
 				}
 			},
 			"required": [
-				"Id",
-				"PhoneNumber"
+				"PhoneNumber",
+				"Id"
 			]
 		},
 		"IxQuantity": {

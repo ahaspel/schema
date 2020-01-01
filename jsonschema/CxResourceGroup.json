@@ -189,17 +189,16 @@
 		},
 		"IxEmail": {
 			"superRequired": [
-				"Id",
 				"Email"
 			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"Email": {
 					"type": "string",
 					"format": "email"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -209,8 +208,171 @@
 				}
 			},
 			"required": [
+				"Email",
+				"Id"
+			]
+		},
+		"IxEmployee": {
+			"superRequired": [
+				"CurrentLifespan",
+				"FirstName",
 				"Id",
-				"Email"
+				"LastName",
+				"ResourceSubtype"
+			],
+			"type": "object",
+			"properties": {
+				"Person": {
+					"$ref": "#/definitions/IxParty"
+				},
+				"FirstName": {
+					"type": "string"
+				},
+				"LastName": {
+					"type": "string"
+				},
+				"MiddleName": {
+					"type": "string"
+				},
+				"BirthDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"PreviousExperience": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Minority": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Unions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Licenses": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Languages": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"TrainingCourses": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Skills": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"LaborClassification": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Machines": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceType"
+					}
+				},
+				"Owner": {
+					"$ref": "#/definitions/IxCompany"
+				},
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Temporary": {
+					"type": "boolean"
+				},
+				"UnitCost": {
+					"$ref": "#/definitions/IxUnitCost"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Employee"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"New": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"AccountCode": {
+					"type": "string"
+				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"IsMover": {
+					"type": "boolean"
+				},
+				"Contacts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				},
+				"InCrew": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"Id"
 			]
 		},
 		"IxGeocode": {
@@ -263,14 +425,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"PurchaseOrderStatus",
-						"Level",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -278,10 +432,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
-						"Minority",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"Level",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
@@ -387,16 +550,15 @@
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"Id",
 				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"PhoneNumber": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -406,8 +568,23 @@
 				}
 			},
 			"required": [
-				"Id",
-				"PhoneNumber"
+				"PhoneNumber",
+				"Id"
+			]
+		},
+		"IxQuantity": {
+			"type": "object",
+			"properties": {
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"Quantity": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"Unit",
+				"Quantity"
 			]
 		},
 		"IxRange": {
@@ -511,43 +688,6 @@
 				}
 			},
 			"required": [
-				"Id"
-			]
-		},
-		"IxResourceBlock": {
-			"type": "object",
-			"properties": {
-				"Resource": {
-					"$ref": "#/definitions/IxResource"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceBlock"
-					]
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"CurrentLifespan",
-				"Resource",
 				"Id"
 			]
 		},
@@ -732,11 +872,17 @@
 	],
 	"type": "object",
 	"properties": {
-		"Contact": {
-			"$ref": "#/definitions/IxParty"
+		"Foreman": {
+			"$ref": "#/definitions/IxEmployee"
 		},
-		"Count": {
-			"type": "integer"
+		"Manager": {
+			"$ref": "#/definitions/IxEmployee"
+		},
+		"Resources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
 		},
 		"Name": {
 			"type": "string",
@@ -744,12 +890,6 @@
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
-		},
-		"ResourceBlocks": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxResourceBlock"
-			}
 		},
 		"ObjectType": {
 			"type": "string",
@@ -801,9 +941,9 @@
 		}
 	},
 	"required": [
-		"Contact",
+		"Foreman",
 		"Id",
 		"Name",
-		"ResourceBlocks"
+		"Resources"
 	]
 }

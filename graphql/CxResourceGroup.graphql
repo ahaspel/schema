@@ -9,11 +9,11 @@ input CxDependencyInput {
 }
 
 type CxResourceGroup {
-  Contact: IxParty
-  Count: Int
+  Foreman: IxEmployee
+  Manager: IxEmployee
+  Resources: [IxResource]
   Name: String
   CurrentLifespan: IxRange
-  ResourceBlocks: [IxResourceBlock]
   ObjectType: CxResourceGroupObjectType
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
@@ -29,9 +29,10 @@ type CxResourceGroup {
 }
 
 input CxResourceGroupInput {
-  Contact: IxPartyDO!
+  Foreman: IxEmployeeDO!
+  Manager: IxEmployeeDO
+  Resources: [IxResourceDO]!
   Name: String!
-  ResourceBlocks: [IxResourceBlockInput]!
   ObjectType: CxResourceGroupObjectType
   ResourceSubtype: IxResourceSubtypeDO
   ForeColor: String
@@ -120,10 +121,57 @@ enum IxCompanyObjectType {
 }
 
 type IxEmail {
-  Id: ID!
   Email: String
+  Id: ID
   Name: String
   Description: String
+}
+
+type IxEmployee {
+  Person: IxParty
+  FirstName: String
+  LastName: String
+  MiddleName: String
+  BirthDate: String
+  PreviousExperience: IxQuantity
+  Minority: [IxLookupValue]
+  Unions: [IxLookupValue]
+  Licenses: [IxLookupValue]
+  Languages: [IxLookupValue]
+  TrainingCourses: [IxLookupValue]
+  Skills: [IxLookupValue]
+  LaborClassification: [IxLookupValue]
+  Machines: [IxResourceType]
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
+  ObjectType: IxEmployeeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+  New: Boolean
+  Dependencies: [CxDependency]
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+  IsMover: Boolean
+  Contacts: [IxParty]
+  InCrew: Boolean
+}
+
+input IxEmployeeDO {
+  Id: ID!
+}
+
+enum IxEmployeeObjectType {
+  Employee
 }
 
 type IxGeocode {
@@ -159,14 +207,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  PurchaseOrderStatus
-  Level
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -174,10 +214,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
-  Minority
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   Privilege
   JobCertification
   WebPrivilege
@@ -201,10 +250,6 @@ type IxParty {
   Tags: [IxAttribute__String__]
 }
 
-input IxPartyDO {
-  Id: ID!
-}
-
 enum IxPartyObjectType {
   Party
   Company
@@ -213,21 +258,20 @@ enum IxPartyObjectType {
 }
 
 type IxPhoneNumber {
-  Id: ID!
   PhoneNumber: String
+  Id: ID
   Name: String
   Description: String
+}
+
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
 }
 
 type IxRange {
   Start: String
   End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
   Duration: String
 }
 
@@ -251,30 +295,6 @@ type IxResource {
   Location: IxLocation
   ForeColor: String
   BackColor: String
-}
-
-type IxResourceBlock {
-  Resource: IxResource
-  CurrentLifespan: IxRange
-  ObjectType: IxResourceBlockObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__]
-}
-
-input IxResourceBlockInput {
-  Resource: IxResourceDO!
-  CurrentLifespan: IxRangeInput!
-  ObjectType: IxResourceBlockObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Tags: [IxAttribute__String__Input]
-}
-
-enum IxResourceBlockObjectType {
-  ResourceBlock
 }
 
 input IxResourceDO {

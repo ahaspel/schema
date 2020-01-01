@@ -106,15 +106,15 @@ enum IxAttributeStringObjectType {
 }
 
 type IxEmail {
-  Id: ID!
   Email: String
+  Id: ID
   Name: String
   Description: String
 }
 
 input IxEmailInput {
-  Id: ID!
   Email: String!
+  Id: ID
   Name: String
   Description: String
 }
@@ -152,14 +152,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  PurchaseOrderStatus
-  Level
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -167,10 +159,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
-  Minority
+  State
+  Attribute
+  PurchaseOrderStatus
+  Level
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   Privilege
   JobCertification
   WebPrivilege
@@ -210,15 +211,15 @@ enum IxPartyObjectType {
 }
 
 type IxPhoneNumber {
-  Id: ID!
   PhoneNumber: String
+  Id: ID
   Name: String
   Description: String
 }
 
 input IxPhoneNumberInput {
-  Id: ID!
   PhoneNumber: String!
+  Id: ID
   Name: String
   Description: String
 }

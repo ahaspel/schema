@@ -1,19 +1,12 @@
 
 const CXRESOURCEGROUPINPUTMIN = `fragment CXRESOURCEGROUPINPUTMIN on CxResourceGroup {
-  Contact {
+  Foreman {
+    Id
+  }
+  Resources {
     Id
   }
   Name
-  ResourceBlocks {
-    Resource {
-      Id
-    }
-    CurrentLifespan {
-      Start
-      End
-    }
-    Id
-  }
   Id
 }`;
 module.exports = { fragment: CXRESOURCEGROUPINPUTMIN,

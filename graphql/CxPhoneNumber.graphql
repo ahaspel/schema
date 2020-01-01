@@ -1,12 +1,12 @@
 type CxPhoneNumber {
-  Id: ID!
   PhoneNumber: String
+  Id: ID
   Name: String
 }
 
 input CxPhoneNumberInput {
-  Id: ID!
   PhoneNumber: String!
+  Id: ID
   Name: String
 }
 

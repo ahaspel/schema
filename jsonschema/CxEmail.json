@@ -3,18 +3,17 @@
 	"title": "com.congistics.cbrd.party.CxEmail",
 	"type": "object",
 	"properties": {
+		"Email": {
+			"type": "string"
+		},
 		"Id": {
 			"type": "integer"
 		},
 		"Name": {
 			"type": "string"
-		},
-		"Email": {
-			"type": "string"
 		}
 	},
 	"required": [
-		"Id",
 		"Email"
 	],
 	"definitions": {}

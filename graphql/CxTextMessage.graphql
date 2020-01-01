@@ -72,15 +72,15 @@ enum IxAttributeStringObjectType {
 }
 
 type IxPhoneNumber {
-  Id: ID!
   PhoneNumber: String
+  Id: ID
   Name: String
   Description: String
 }
 
 input IxPhoneNumberInput {
-  Id: ID!
   PhoneNumber: String!
+  Id: ID
   Name: String
   Description: String
 }
