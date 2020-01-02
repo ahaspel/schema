@@ -25,6 +25,7 @@ type CxTaskDay {
   ObjectType: CxTaskDayObjectType
   Divisions: [IxLookupValue]
   Resources: [IxResource]
+  ResourceId: ID
   DisplayName: String
   Completed: Boolean
   Cancelled: Boolean
@@ -56,6 +57,7 @@ input CxTaskDayInput {
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
+  ResourceId: ID
   Completed: Boolean
   Cancelled: Boolean
   ActionStatus: IxActionStatusDO
