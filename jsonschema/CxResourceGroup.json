@@ -864,7 +864,7 @@
 	"immutable": [
 		"Address",
 		"Count",
-		"CurrentLifespan",
+		"CurrentResources",
 		"Dependencies",
 		"Dto",
 		"Location",
@@ -884,12 +884,15 @@
 				"$ref": "#/definitions/IxResource"
 			}
 		},
+		"CurrentResources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
+		},
 		"Name": {
 			"type": "string",
 			"minLength": 1
-		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
 		},
 		"ObjectType": {
 			"type": "string",
@@ -914,6 +917,9 @@
 		},
 		"AccountCode": {
 			"type": "string"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"

@@ -12,8 +12,8 @@ type CxResourceGroup {
   Foreman: IxEmployee
   Manager: IxEmployee
   Resources: [IxResource]
+  CurrentResources: [IxResource]
   Name: String
-  CurrentLifespan: IxRange
   ObjectType: CxResourceGroupObjectType
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
@@ -21,6 +21,7 @@ type CxResourceGroup {
   BackColor: String
   Location: IxLocation
   AccountCode: String
+  CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -38,6 +39,7 @@ input CxResourceGroupInput {
   ForeColor: String
   BackColor: String
   AccountCode: String
+  CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
@@ -272,6 +274,12 @@ type IxQuantity {
 type IxRange {
   Start: String
   End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
   Duration: String
 }
 
