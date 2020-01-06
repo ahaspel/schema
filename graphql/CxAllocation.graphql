@@ -517,7 +517,6 @@ type IxTaskDay {
   ActionStatus: IxActionStatus
   ConflictIds: [Int]
   PhoneNumbers: [IxPhoneNumber]
-  ResourceId: ID
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Supplier: IxCompany
@@ -558,7 +557,6 @@ input IxTaskDayInput {
   ActionStatus: IxActionStatusDO
   ConflictIds: [Int]
   PhoneNumbers: [IxPhoneNumberInput]
-  ResourceId: ID
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
