@@ -60,7 +60,6 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -83,7 +82,6 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
-  Level
   TimeEntryType
   CompanyType
   JobStatus

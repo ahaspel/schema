@@ -7,11 +7,10 @@
 		"Supplier": false,
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Plant",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
-		"New": false,
 		"Dependencies": [],
 		"Address": {
 			"Street": "",
@@ -35,7 +34,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Material",
+		"Family": "Equipment",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -43,7 +42,6 @@
 		"Id": 0,
 		"Name": "",
 		"Description": "",
-		"New": false,
 		"Dependencies": [],
 		"Tags": []
 	},
@@ -77,7 +75,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -92,7 +90,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Employee",
+	"ObjectType": "Material",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",

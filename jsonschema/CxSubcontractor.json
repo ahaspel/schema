@@ -75,9 +75,6 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -178,7 +175,6 @@
 						"State",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"Level",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
@@ -197,9 +193,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -265,9 +258,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -323,9 +313,6 @@
 				"ParentId": {
 					"type": "integer"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -369,9 +356,6 @@
 				},
 				"Notes": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",

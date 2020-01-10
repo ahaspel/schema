@@ -75,9 +75,6 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -148,9 +145,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -331,9 +325,6 @@
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -441,7 +432,6 @@
 						"State",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"Level",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
@@ -460,9 +450,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -526,9 +513,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -623,9 +607,6 @@
 				"ParentId": {
 					"type": "integer"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -696,9 +677,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",

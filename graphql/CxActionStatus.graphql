@@ -9,7 +9,6 @@ type CxActionStatus {
   Dependencies: [CxDependency]
   Id: ID!
   Description: String
-  BaseObject: String
 }
 
 enum CxActionStatusActionStatusType {
@@ -30,7 +29,6 @@ input CxActionStatusInput {
   Name: String!
   Id: ID!
   Description: String
-  BaseObject: String
 }
 
 enum CxActionStatusObjectType {

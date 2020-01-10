@@ -58,7 +58,6 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -69,7 +68,6 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -87,7 +85,6 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -110,7 +107,6 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
-  Level
   TimeEntryType
   CompanyType
   JobStatus

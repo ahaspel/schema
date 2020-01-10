@@ -52,7 +52,6 @@ input FilterInput {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -63,7 +62,6 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -77,7 +75,6 @@ enum IxAttributeStringObjectType {
 
 type IxResourceSubtype {
   ParentId: ID
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
@@ -87,7 +84,6 @@ type IxResourceSubtype {
 
 input IxResourceSubtypeInput {
   ParentId: ID
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!

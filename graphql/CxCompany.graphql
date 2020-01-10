@@ -82,7 +82,6 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -93,7 +92,6 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -143,7 +141,6 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -166,7 +163,6 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
-  Level
   TimeEntryType
   CompanyType
   JobStatus
@@ -184,7 +180,6 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
@@ -197,7 +192,6 @@ input IxPartyInput {
   Id: ID!
   Name: String!
   Description: String
-  New: Boolean
   Dependencies: [CxDependencyInput]
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]

@@ -18,7 +18,6 @@ type CxJobCost {
   Description: String
   Dependencies: [CxDependency]
   Id: ID!
-  BaseObject: String
 }
 
 input CxJobCostInput {
@@ -31,7 +30,6 @@ input CxJobCostInput {
   Description: String
   Dependencies: [CxDependencyInput]
   Id: ID!
-  BaseObject: String
 }
 
 enum CxJobCostObjectType {
@@ -53,7 +51,6 @@ type IxCostCode {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -65,7 +62,6 @@ input IxCostCodeInput {
   Id: ID!
   Name: String!
   Description: String
-  New: Boolean
   Dependencies: [CxDependencyInput]
 }
 

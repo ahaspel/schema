@@ -114,7 +114,6 @@ enum IxAddressObjectType {
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -125,7 +124,6 @@ type IxAttribute__String__ {
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
@@ -146,7 +144,6 @@ type IxCompany {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
@@ -173,7 +170,6 @@ type IxCostCode {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -185,7 +181,6 @@ input IxCostCodeInput {
   Id: ID!
   Name: String!
   Description: String
-  New: Boolean
   Dependencies: [CxDependencyInput]
 }
 
@@ -197,7 +192,6 @@ type IxDocument {
   Attached: Boolean
   FullName: String
   DocumentTypes: [IxLookupValue]
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
   Id: ID!
@@ -209,7 +203,6 @@ input IxDocumentInput {
   Attached: Boolean
   FullName: String
   DocumentTypes: [IxLookupValueDO]
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
   Id: ID!
@@ -257,7 +250,6 @@ type IxJobActivity {
   ParentId: ID
   Completed: Boolean
   Priority: Int
-  New: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -273,7 +265,6 @@ input IxJobActivityInput {
   ParentId: ID
   Completed: Boolean
   Priority: Int
-  New: Boolean
   Dependencies: [CxDependencyInput]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -299,7 +290,6 @@ type IxJobCost {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -313,7 +303,6 @@ input IxJobCostInput {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependencyInput]
 }
 
@@ -327,7 +316,6 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
 }
 
@@ -350,7 +338,6 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
-  Level
   TimeEntryType
   CompanyType
   JobStatus
@@ -378,7 +365,6 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
-  New: Boolean
   Dependencies: [CxDependency]
   Address: IxAddress
   Tags: [IxAttribute__String__]
@@ -395,7 +381,6 @@ input IxPartyInput {
   Id: ID!
   Name: String!
   Description: String
-  New: Boolean
   Dependencies: [CxDependencyInput]
   Address: IxAddressInput
   Tags: [IxAttribute__String__Input]

@@ -75,9 +75,6 @@
 				"AttributeId": {
 					"type": "integer"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -149,9 +146,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -220,9 +214,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -254,9 +245,6 @@
 					"items": {
 						"$ref": "#/definitions/IxLookupValue"
 					}
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -346,9 +334,6 @@
 				"Priority": {
 					"type": "integer"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -430,9 +415,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"New": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -474,7 +456,6 @@
 						"State",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"Level",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
@@ -493,9 +474,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -559,9 +537,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"New": {
-					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
