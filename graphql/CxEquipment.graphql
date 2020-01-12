@@ -126,8 +126,9 @@ type IxCompany {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
@@ -270,8 +271,9 @@ type IxParty {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
 }
 
 enum IxPartyObjectType {

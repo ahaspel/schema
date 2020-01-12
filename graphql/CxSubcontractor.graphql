@@ -21,6 +21,7 @@ type CxSubcontractor {
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
+  CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -40,6 +41,7 @@ input CxSubcontractorInput {
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
+  CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
@@ -195,8 +197,9 @@ type IxParty {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
 }
 
 input IxPartyInput {
@@ -207,8 +210,9 @@ input IxPartyInput {
   Name: String!
   Description: String
   Dependencies: [CxDependencyInput]
-  Address: IxAddressInput
+  CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
+  Address: IxAddressInput
 }
 
 enum IxPartyObjectType {
@@ -230,6 +234,18 @@ input IxPhoneNumberInput {
   Id: ID
   Name: String
   Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 type IxResourceSubtype {

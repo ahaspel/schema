@@ -249,14 +249,17 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [
@@ -286,6 +289,30 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
+			]
+		},
+		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
 			]
 		}
 	},
@@ -338,6 +365,9 @@
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"

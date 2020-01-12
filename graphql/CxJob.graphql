@@ -145,8 +145,9 @@ type IxCompany {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
@@ -366,8 +367,9 @@ type IxParty {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
 }
 
 input IxPartyDO {
@@ -382,8 +384,9 @@ input IxPartyInput {
   Name: String!
   Description: String
   Dependencies: [CxDependencyInput]
-  Address: IxAddressInput
+  CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
+  Address: IxAddressInput
 }
 
 enum IxPartyObjectType {

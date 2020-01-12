@@ -205,8 +205,9 @@ type IxParty {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
 }
 
 input IxPartyDO {
@@ -225,6 +226,12 @@ type IxPhoneNumber {
   Id: ID
   Name: String
   Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
 }
 
 """

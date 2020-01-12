@@ -20,6 +20,7 @@ type CxPlant {
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
+  CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -38,6 +39,7 @@ input CxPlantInput {
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
+  CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
@@ -197,8 +199,9 @@ type IxParty {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
 }
 
 input IxPartyDO {
@@ -234,6 +237,18 @@ type IxQuantity {
 input IxQuantityInput {
   Unit: IxUnitDO!
   Quantity: Float!
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 type IxResourceSubtype {

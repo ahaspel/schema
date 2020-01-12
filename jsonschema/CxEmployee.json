@@ -152,14 +152,17 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
 				},
 				"AccountCode": {
 					"type": "string"
@@ -361,14 +364,17 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [

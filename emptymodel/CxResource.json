@@ -7,11 +7,17 @@
 		"Supplier": false,
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Plant",
+		"ObjectType": "Subcontractor",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
 		"Dependencies": [],
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"Tags": [],
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
@@ -23,18 +29,17 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
 		},
-		"Tags": [],
 		"AccountCode": "",
 		"Divisions": [],
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Equipment",
+		"Family": "Material",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",

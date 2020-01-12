@@ -36,7 +36,6 @@ type CxMaterial {
 
 input CxMaterialInput {
   ObjectType: CxMaterialObjectType
-  CurrentLifespan: IxRangeInput
   Inventory: IxInventoryInput!
   Unit: IxUnitDO!
   Reusable: Boolean!
@@ -112,8 +111,9 @@ type IxCompany {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
@@ -231,8 +231,9 @@ type IxParty {
   Name: String
   Description: String
   Dependencies: [CxDependency]
-  Address: IxAddress
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
+  Address: IxAddress
 }
 
 enum IxPartyObjectType {
@@ -257,12 +258,6 @@ type IxQuantity {
 type IxRange {
   Start: String
   End: String
-  Duration: String
-}
-
-input IxRangeInput {
-  Start: String!
-  End: String!
   Duration: String
 }
 

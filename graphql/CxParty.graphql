@@ -14,6 +14,7 @@ type CxParty {
   Name: String
   Address: IxAddress
   ObjectType: CxPartyObjectType
+  CurrentLifespan: IxRange
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -26,6 +27,7 @@ input CxPartyInput {
   Name: String!
   Address: IxAddressInput
   ObjectType: CxPartyObjectType
+  CurrentLifespan: IxRangeInput
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -177,6 +179,18 @@ input IxPhoneNumberInput {
   Id: ID
   Name: String
   Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
 }
 
 """

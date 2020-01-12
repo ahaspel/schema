@@ -13,11 +13,17 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Company",
+		"ObjectType": "Plant",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
 		"Dependencies": [],
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"Tags": [],
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
@@ -33,8 +39,7 @@
 			},
 			"ObjectType": "Address",
 			"Id": 0
-		},
-		"Tags": []
+		}
 	},
 	"Contacts": [],
 	"Minority": [],

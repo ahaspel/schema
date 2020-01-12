@@ -228,6 +228,30 @@
 				"PhoneNumber",
 				"Id"
 			]
+		},
+		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
 		}
 	},
 	"immutable": [
@@ -263,6 +287,9 @@
 				"Subcontractor",
 				"Plant"
 			]
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"
