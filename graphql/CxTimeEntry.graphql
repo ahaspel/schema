@@ -391,6 +391,8 @@ type IxResourceType {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
   Tags: [IxAttribute__String__]
 }
 

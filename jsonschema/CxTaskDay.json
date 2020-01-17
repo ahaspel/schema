@@ -1002,6 +1002,12 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1081,12 +1087,14 @@
 	},
 	"immutable": [
 		"ActionType",
+		"BackColor",
 		"ConflictIds",
 		"Dependencies",
 		"DisplayName",
 		"Divisions",
 		"Dto",
 		"Filled",
+		"ForeColor",
 		"Job",
 		"Location"
 	],
@@ -1114,6 +1122,12 @@
 			"items": {
 				"type": "integer"
 			}
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
 		},
 		"ResourceType": {
 			"$ref": "#/definitions/IxResourceType"

@@ -5,6 +5,8 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
+  ForeColor: String
+  BackColor: String
   CrewId: ID
   HasConflicts: Boolean
   CurrentLifespan: IxRange
@@ -449,6 +451,8 @@ type IxResourceType {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
   Tags: [IxAttribute__String__]
 }
 
@@ -522,6 +526,8 @@ type IxTaskDay {
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 enum IxTaskDayActionType {
@@ -555,6 +561,8 @@ input IxTaskDayInput {
   Description: String
   CurrentLifespan: IxRangeInput!
   Tags: [IxAttribute__String__Input]
+  ForeColor: String
+  BackColor: String
 }
 
 enum IxTaskDayObjectType {

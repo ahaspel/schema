@@ -1003,6 +1003,12 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1218,6 +1224,12 @@
 				},
 				"DisplayName": {
 					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -1293,9 +1305,11 @@
 	},
 	"immutable": [
 		"ActionType",
+		"BackColor",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
+		"ForeColor",
 		"HasConflicts",
 		"Job",
 		"JobCosts",
@@ -1323,6 +1337,12 @@
 			"items": {
 				"$ref": "#/definitions/IxTaskDay"
 			}
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
 		},
 		"CrewId": {
 			"type": "integer"

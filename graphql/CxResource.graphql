@@ -325,6 +325,8 @@ type IxResourceType {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
   Tags: [IxAttribute__String__]
 }
 
@@ -345,6 +347,8 @@ input IxResourceTypeInput {
   Name: String!
   Description: String
   Dependencies: [CxDependencyInput]
+  ForeColor: String
+  BackColor: String
   Tags: [IxAttribute__String__Input]
 }
 
