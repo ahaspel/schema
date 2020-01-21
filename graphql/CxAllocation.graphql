@@ -6,14 +6,16 @@ type CxAllocation {
   Shift: IxShift
   TaskDays: [IxTaskDay]
   ActionStatus: IxActionStatus
+  Cancelled: Boolean
+  Completed: Boolean
   ForeColor: String
-  BackColor: String
   CrewId: ID
   HasConflicts: Boolean
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
   DisplayName: String
+  BackColor: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]

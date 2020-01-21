@@ -1306,6 +1306,8 @@
 	"immutable": [
 		"ActionType",
 		"BackColor",
+		"Cancelled",
+		"Completed",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
@@ -1340,10 +1342,13 @@
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
 		},
-		"ForeColor": {
-			"type": "string"
+		"Cancelled": {
+			"type": "boolean"
 		},
-		"BackColor": {
+		"Completed": {
+			"type": "boolean"
+		},
+		"ForeColor": {
 			"type": "string"
 		},
 		"CrewId": {
@@ -1376,6 +1381,9 @@
 			]
 		},
 		"DisplayName": {
+			"type": "string"
+		},
+		"BackColor": {
 			"type": "string"
 		},
 		"Id": {

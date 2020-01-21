@@ -58,8 +58,6 @@ input CxTaskDayInput {
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
-  Completed: Boolean
-  Cancelled: Boolean
   ActionStatus: IxActionStatusDO
   CurrentLifespan: IxRangeInput!
   Id: ID!
