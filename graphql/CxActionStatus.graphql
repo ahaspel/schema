@@ -21,8 +21,6 @@ enum CxActionStatusActionStatusType {
 
 input CxActionStatusInput {
   ActionStatusType: CxActionStatusActionStatusType
-  Completed: Boolean
-  Cancelled: Boolean
   ObjectType: CxActionStatusObjectType
   ForeColor: String
   BackColor: String

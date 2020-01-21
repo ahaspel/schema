@@ -1129,9 +1129,6 @@
 				"Filled": {
 					"type": "boolean"
 				},
-				"ActionStatus": {
-					"$ref": "#/definitions/IxActionStatus"
-				},
 				"ConflictIds": {
 					"type": "array",
 					"items": {
@@ -1178,6 +1175,9 @@
 						"Group",
 						"Move"
 					]
+				},
+				"ActionStatus": {
+					"$ref": "#/definitions/IxActionStatus"
 				},
 				"Resources": {
 					"type": "array",
@@ -1312,7 +1312,6 @@
 		"ForeColor",
 		"HasConflicts",
 		"Job",
-		"JobCosts",
 		"Location"
 	],
 	"type": "object",
@@ -1337,6 +1336,9 @@
 			"items": {
 				"$ref": "#/definitions/IxTaskDay"
 			}
+		},
+		"ActionStatus": {
+			"$ref": "#/definitions/IxActionStatus"
 		},
 		"ForeColor": {
 			"type": "string"
@@ -1375,9 +1377,6 @@
 		},
 		"DisplayName": {
 			"type": "string"
-		},
-		"ActionStatus": {
-			"$ref": "#/definitions/IxActionStatus"
 		},
 		"Id": {
 			"type": "integer"

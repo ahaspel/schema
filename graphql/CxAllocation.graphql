@@ -5,6 +5,7 @@ type CxAllocation {
   JobActivity: IxJobActivity
   Shift: IxShift
   TaskDays: [IxTaskDay]
+  ActionStatus: IxActionStatus
   ForeColor: String
   BackColor: String
   CrewId: ID
@@ -13,7 +14,6 @@ type CxAllocation {
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
   DisplayName: String
-  ActionStatus: IxActionStatus
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -37,10 +37,10 @@ input CxAllocationInput {
   JobActivity: IxJobActivityDO!
   Shift: IxShiftDO
   TaskDays: [IxTaskDayInput]
+  ActionStatus: IxActionStatusDO
   CrewId: ID
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
-  ActionStatus: IxActionStatusDO
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -504,7 +504,6 @@ type IxTaskDay {
   ParentId: ID
   ShiftSupervisor: Boolean
   Filled: Boolean
-  ActionStatus: IxActionStatus
   ConflictIds: [Int]
   PhoneNumbers: [IxPhoneNumber]
   ResourceType: IxResourceType
@@ -515,6 +514,7 @@ type IxTaskDay {
   Job: IxJob
   Location: IxLocation
   ActionType: IxTaskDayActionType
+  ActionStatus: IxActionStatus
   Resources: [IxResource]
   Completed: Boolean
   Cancelled: Boolean
@@ -545,7 +545,6 @@ enum IxTaskDayActionType {
 input IxTaskDayInput {
   ParentId: ID
   ShiftSupervisor: Boolean
-  ActionStatus: IxActionStatusDO
   ConflictIds: [Int]
   PhoneNumbers: [IxPhoneNumberInput]
   ResourceType: IxResourceTypeDO
@@ -553,6 +552,7 @@ input IxTaskDayInput {
   Supplier: IxCompanyDO
   Quantity: IxQuantityInput
   JobActivity: IxJobActivityDO!
+  ActionStatus: IxActionStatusDO
   Resources: [IxResourceDO]!
   Dependencies: [CxDependencyInput]
   ObjectType: IxTaskDayObjectType
