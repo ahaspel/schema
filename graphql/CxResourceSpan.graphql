@@ -1,0 +1,53 @@
+type CxResourceSpan {
+  ResourceId: ID
+  Range: IxRange
+}
+
+input CxResourceSpanInput {
+  ResourceId: ID!
+  Range: IxRangeInput!
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxResourceSpans_onSave(data: [CxResourceSpanInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceSpan]
+  cxResourceSpans_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxResourceSpan]
+}
+
+extend type Query {
+  cxResourceSpans(filters: [FilterInput], objectType: String): [CxResourceSpan]
+}

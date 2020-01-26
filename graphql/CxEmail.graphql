@@ -2,12 +2,14 @@ type CxEmail {
   Email: String
   Id: ID
   Name: String
+  HasCustomName: Boolean
 }
 
 input CxEmailInput {
   Email: String!
   Id: ID
   Name: String
+  HasCustomName: Boolean
 }
 
 input FilterInput {

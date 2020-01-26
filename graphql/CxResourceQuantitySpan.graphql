@@ -1,0 +1,96 @@
+type CxResourceQuantitySpan {
+  ResourceSubtypeId: ID
+  SupplierId: ID
+  Quantity: IxQuantity
+  Range: IxRange
+}
+
+input CxResourceQuantitySpanInput {
+  ResourceSubtypeId: ID!
+  SupplierId: ID!
+  Quantity: IxQuantityInput
+  Range: IxRangeInput!
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxResourceQuantitySpans_onSave(data: [CxResourceQuantitySpanInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceQuantitySpan]
+  cxResourceQuantitySpans_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxResourceQuantitySpan]
+}
+
+extend type Query {
+  cxResourceQuantitySpans(filters: [FilterInput], objectType: String): [CxResourceQuantitySpan]
+}

@@ -1,0 +1,112 @@
+{
+	"id": "https://congistics.com/schema/CxResourceQuantitySpan",
+	"title": "com.congistics.cbrd.resource.CxResourceQuantitySpan",
+	"definitions": {
+		"IxQuantity": {
+			"type": "object",
+			"properties": {
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"Quantity": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"Unit",
+				"Quantity"
+			]
+		},
+		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		},
+		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
+			"type": "object",
+			"properties": {
+				"UnitType": {
+					"type": "string",
+					"enum": [
+						"Time",
+						"Length",
+						"Weight",
+						"Area",
+						"Volume",
+						"Money",
+						"Self"
+					]
+				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		}
+	},
+	"type": "object",
+	"properties": {
+		"ResourceSubtypeId": {
+			"type": "integer"
+		},
+		"SupplierId": {
+			"type": "integer"
+		},
+		"Quantity": {
+			"$ref": "#/definitions/IxQuantity"
+		},
+		"Range": {
+			"$ref": "#/definitions/IxRange"
+		}
+	},
+	"required": [
+		"ResourceSubtypeId",
+		"SupplierId",
+		"Range"
+	]
+}

@@ -2,12 +2,14 @@ type CxPhoneNumber {
   PhoneNumber: String
   Id: ID
   Name: String
+  HasCustomName: Boolean
 }
 
 input CxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID
   Name: String
+  HasCustomName: Boolean
 }
 
 input FilterInput {

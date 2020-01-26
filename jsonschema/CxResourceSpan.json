@@ -1,0 +1,43 @@
+{
+	"id": "https://congistics.com/schema/CxResourceSpan",
+	"title": "com.congistics.cbrd.resource.CxResourceSpan",
+	"definitions": {
+		"IxRange": {
+			"superRequired": [
+				"Start",
+				"End"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
+		}
+	},
+	"type": "object",
+	"properties": {
+		"ResourceId": {
+			"type": "integer"
+		},
+		"Range": {
+			"$ref": "#/definitions/IxRange"
+		}
+	},
+	"required": [
+		"ResourceId",
+		"Range"
+	]
+}
