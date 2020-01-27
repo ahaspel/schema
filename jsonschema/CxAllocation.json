@@ -20,6 +20,43 @@
 				"Ids"
 			]
 		},
+		"CxResourceQuantitySpan": {
+			"type": "object",
+			"properties": {
+				"ResourceSubtypeId": {
+					"type": "integer"
+				},
+				"SupplierId": {
+					"type": "integer"
+				},
+				"Quantity": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Range": {
+					"$ref": "#/definitions/IxRange"
+				}
+			},
+			"required": [
+				"ResourceSubtypeId",
+				"SupplierId",
+				"Range"
+			]
+		},
+		"CxResourceSpan": {
+			"type": "object",
+			"properties": {
+				"ResourceId": {
+					"type": "integer"
+				},
+				"Range": {
+					"$ref": "#/definitions/IxRange"
+				}
+			},
+			"required": [
+				"ResourceId",
+				"Range"
+			]
+		},
 		"IxActionStatus": {
 			"type": "object",
 			"properties": {
@@ -1306,15 +1343,15 @@
 	"immutable": [
 		"ActionType",
 		"BackColor",
-		"Cancelled",
-		"Completed",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
 		"ForeColor",
 		"HasConflicts",
 		"Job",
-		"Location"
+		"Location",
+		"ResourceQuantitySpans",
+		"ResourceSpans"
 	],
 	"type": "object",
 	"properties": {
@@ -1339,14 +1376,20 @@
 				"$ref": "#/definitions/IxTaskDay"
 			}
 		},
+		"ResourceSpans": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxResourceSpan"
+			}
+		},
+		"ResourceQuantitySpans": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxResourceQuantitySpan"
+			}
+		},
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
-		},
-		"Cancelled": {
-			"type": "boolean"
-		},
-		"Completed": {
-			"type": "boolean"
 		},
 		"ForeColor": {
 			"type": "string"
@@ -1382,6 +1425,12 @@
 		},
 		"DisplayName": {
 			"type": "string"
+		},
+		"Completed": {
+			"type": "boolean"
+		},
+		"Cancelled": {
+			"type": "boolean"
 		},
 		"BackColor": {
 			"type": "string"
