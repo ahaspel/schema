@@ -23,8 +23,14 @@
 		"CxResourceQuantitySpan": {
 			"type": "object",
 			"properties": {
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
 				"ResourceSubtypeId": {
 					"type": "integer"
+				},
+				"Supplier": {
+					"$ref": "#/definitions/IxCompany"
 				},
 				"SupplierId": {
 					"type": "integer"
@@ -45,6 +51,9 @@
 		"CxResourceSpan": {
 			"type": "object",
 			"properties": {
+				"Resource": {
+					"$ref": "#/definitions/IxResource"
+				},
 				"ResourceId": {
 					"type": "integer"
 				},
@@ -1222,12 +1231,6 @@
 						"$ref": "#/definitions/IxResource"
 					}
 				},
-				"Completed": {
-					"type": "boolean"
-				},
-				"Cancelled": {
-					"type": "boolean"
-				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -1425,12 +1428,6 @@
 		},
 		"DisplayName": {
 			"type": "string"
-		},
-		"Completed": {
-			"type": "boolean"
-		},
-		"Cancelled": {
-			"type": "boolean"
 		},
 		"BackColor": {
 			"type": "string"

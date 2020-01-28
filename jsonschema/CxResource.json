@@ -599,11 +599,6 @@
 			]
 		}
 	},
-	"immutable": [
-		"Dependencies",
-		"DisplayName",
-		"Dto"
-	],
 	"type": "object",
 	"properties": {
 		"Temporary": {
@@ -680,8 +675,6 @@
 		}
 	},
 	"required": [
-		"Id",
-		"ResourceSubtype",
-		"ResourceType"
+		"Id"
 	]
 }

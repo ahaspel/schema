@@ -15,8 +15,6 @@ type CxAllocation {
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
   DisplayName: String
-  Completed: Boolean
-  Cancelled: Boolean
   BackColor: String
   Id: ID!
   Description: String
@@ -45,8 +43,6 @@ input CxAllocationInput {
   CrewId: ID
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
-  Completed: Boolean
-  Cancelled: Boolean
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -67,13 +63,16 @@ input CxDependencyInput {
 }
 
 type CxResourceQuantitySpan {
+  ResourceSubtype: IxResourceSubtype
   ResourceSubtypeId: ID
+  Supplier: IxCompany
   SupplierId: ID
   Quantity: IxQuantity
   Range: IxRange
 }
 
 type CxResourceSpan {
+  Resource: IxResource
   ResourceId: ID
   Range: IxRange
 }
@@ -534,8 +533,6 @@ type IxTaskDay {
   ActionType: IxTaskDayActionType
   ActionStatus: IxActionStatus
   Resources: [IxResource]
-  Completed: Boolean
-  Cancelled: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxTaskDayObjectType
   Id: ID!
