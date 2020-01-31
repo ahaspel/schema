@@ -5,11 +5,8 @@ type CxConfigValue {
   Required: Boolean
   ObjectType: CxConfigValueObjectType
   Id: ID!
-  Divisions: [IxLookupValue]
   Description: String
   Name: String
-  Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
 }
 
 input CxConfigValueInput {
@@ -18,24 +15,12 @@ input CxConfigValueInput {
   Editable: Boolean
   ObjectType: CxConfigValueObjectType
   Id: ID!
-  Divisions: [IxLookupValueDO]
   Description: String
   Name: String
-  Tags: [IxAttribute__String__Input]
 }
 
 enum CxConfigValueObjectType {
   ConfigValue
-}
-
-type CxDependency {
-  ObjectType: String
-  Ids: [Int]
-}
-
-input CxDependencyInput {
-  ObjectType: String!
-  Ids: [Int]!
 }
 
 input FilterInput {
@@ -43,68 +28,6 @@ input FilterInput {
   values: [String]
   child: String
   invert: Boolean = false
-}
-
-type IxAttribute__String__ {
-  BaseObject: String
-  AttributeId: ID
-  Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxAttribute__String__Input {
-  BaseObject: String!
-  AttributeId: ID!
-  Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
-}
-
-type IxLookupValue {
-  BaseObject: String
-  ObjectType: IxLookupValueObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Dependencies: [CxDependency]
-}
-
-input IxLookupValueDO {
-  Id: ID!
-}
-
-enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  Division
-  LaborClass
-  Language
-  License
-  Minority
-  Skill
-  Training
-  Union
-  State
-  Attribute
-  PurchaseOrderStatus
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
-  Privilege
-  JobCertification
-  WebPrivilege
 }
 
 """

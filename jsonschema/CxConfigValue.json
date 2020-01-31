@@ -117,7 +117,6 @@
 		}
 	},
 	"immutable": [
-		"Dependencies",
 		"Dto",
 		"Required"
 	],
@@ -146,29 +145,11 @@
 		"Id": {
 			"type": "integer"
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
 		"Description": {
 			"type": "string"
 		},
 		"Name": {
 			"type": "string"
-		},
-		"Tags": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxAttribute__String__"
-			}
-		},
-		"Dependencies": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/CxDependency"
-			}
 		}
 	},
 	"required": [
