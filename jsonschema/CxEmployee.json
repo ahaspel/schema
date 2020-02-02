@@ -351,10 +351,6 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
 				"Description": {
 					"type": "string"
 				},
@@ -363,9 +359,6 @@
 					"items": {
 						"$ref": "#/definitions/CxDependency"
 					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"Tags": {
 					"type": "array",
@@ -378,8 +371,7 @@
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
+				"Id"
 			]
 		},
 		"IxPhoneNumber": {
