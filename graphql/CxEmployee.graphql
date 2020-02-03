@@ -52,8 +52,8 @@ input CxEmployeeInput {
   MiddleName: String
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
-  Person: IxPartyDO
-  Contacts: [IxPartyDO]
+  Person: IxPartyInput
+  Contacts: [IxPartyInput]
   Minority: [IxLookupValueDO]
   Unions: [IxLookupValueDO]
   Licenses: [IxLookupValueDO]
@@ -95,6 +95,17 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
   ObjectType: IxAddressObjectType
   Id: ID!
 }
@@ -162,7 +173,20 @@ type IxEmail {
   Description: String
 }
 
+input IxEmailInput {
+  Email: String!
+  Id: ID
+  Name: String
+  Description: String
+}
+
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -235,12 +259,21 @@ type IxParty {
   Id: ID!
   Description: String
   Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }
 
-input IxPartyDO {
+input IxPartyInput {
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  ObjectType: IxPartyObjectType
   Id: ID!
+  Description: String
+  Dependencies: [CxDependencyInput]
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttribute__String__Input]
+  Address: IxAddressInput
 }
 
 enum IxPartyObjectType {
@@ -252,6 +285,13 @@ enum IxPartyObjectType {
 
 type IxPhoneNumber {
   PhoneNumber: String
+  Id: ID
+  Name: String
+  Description: String
+}
+
+input IxPhoneNumberInput {
+  PhoneNumber: String!
   Id: ID
   Name: String
   Description: String

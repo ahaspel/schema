@@ -11,7 +11,34 @@
 	},
 	"IsMover": false,
 	"Person": {
-		"Id": 0
+		"Emails": [],
+		"PhoneNumbers": [],
+		"ObjectType": "Plant",
+		"Id": 0,
+		"Description": "",
+		"Dependencies": [],
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"Tags": [],
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "GPSService"
+			},
+			"ObjectType": "Address",
+			"Id": 0
+		}
 	},
 	"Contacts": [],
 	"Minority": [],
