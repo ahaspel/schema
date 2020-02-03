@@ -257,6 +257,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   ObjectType: IxPartyObjectType
   Id: ID!
+  Name: String
   Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
@@ -269,6 +270,7 @@ input IxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   ObjectType: IxPartyObjectType
   Id: ID!
+  Name: String!
   Description: String
   Dependencies: [CxDependencyInput]
   CurrentLifespan: IxRangeInput

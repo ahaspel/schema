@@ -39,7 +39,6 @@ input CxAllocationInput {
   JobActivity: IxJobActivityDO!
   Shift: IxShiftDO
   TaskDays: [IxTaskDayInput]
-  ActionStatus: IxActionStatusDO
   CrewId: ID
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType

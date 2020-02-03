@@ -351,6 +351,10 @@
 				"Id": {
 					"type": "integer"
 				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
+				},
 				"Description": {
 					"type": "string"
 				},
@@ -374,8 +378,8 @@
 				}
 			},
 			"required": [
-				"CurrentLifespan",
-				"Id"
+				"Id",
+				"Name"
 			]
 		},
 		"IxPhoneNumber": {
