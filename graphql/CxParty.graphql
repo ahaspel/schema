@@ -10,6 +10,8 @@ input CxDependencyInput {
 
 type CxParty {
   PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
@@ -23,6 +25,8 @@ type CxParty {
 
 input CxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumberInput
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
@@ -143,13 +147,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  PurchaseOrderStatus
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -157,10 +154,18 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
-  Minority
+  State
+  Attribute
+  PurchaseOrderStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   Privilege
   JobCertification
   WebPrivilege

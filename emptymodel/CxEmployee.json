@@ -13,7 +13,14 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"ObjectType": "Plant",
+		"HasSMSNumber": false,
+		"SMSNumber": {
+			"PhoneNumber": "",
+			"Id": 0,
+			"Name": "",
+			"Description": ""
+		},
+		"ObjectType": "Party",
 		"Id": 0,
 		"Name": "",
 		"Description": "",

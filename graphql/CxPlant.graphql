@@ -17,6 +17,8 @@ type CxPlant {
   Contacts: [IxParty]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
@@ -36,6 +38,8 @@ input CxPlantInput {
   Contacts: [IxPartyDO]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumberInput
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
@@ -167,13 +171,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  PurchaseOrderStatus
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -181,10 +178,18 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
-  Minority
+  State
+  Attribute
+  PurchaseOrderStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   Privilege
   JobCertification
   WebPrivilege
@@ -193,6 +198,8 @@ enum IxLookupValueObjectType {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String

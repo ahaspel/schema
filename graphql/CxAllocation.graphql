@@ -68,6 +68,7 @@ type CxResourceQuantitySpan {
   SupplierId: ID
   Quantity: IxQuantity
   Range: IxRange
+  ResourceIds: [Int]
 }
 
 type CxResourceSpan {
@@ -157,6 +158,8 @@ type IxCompany {
   Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
   ObjectType: IxCompanyObjectType
   Id: ID!
   Name: String
@@ -323,13 +326,6 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
-  State
-  PurchaseOrderStatus
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -337,10 +333,18 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
-  Minority
+  State
+  Attribute
+  PurchaseOrderStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   Privilege
   JobCertification
   WebPrivilege
@@ -354,6 +358,8 @@ type IxMoney {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String
@@ -564,7 +570,7 @@ input IxTaskDayInput {
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
   Quantity: IxQuantityInput
-  JobActivity: IxJobActivityDO!
+  JobActivity: IxJobActivityDO
   ActionStatus: IxActionStatusDO
   Resources: [IxResourceDO]!
   Dependencies: [CxDependencyInput]
@@ -572,7 +578,7 @@ input IxTaskDayInput {
   Id: ID!
   Name: String
   Description: String
-  CurrentLifespan: IxRangeInput!
+  CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
   ForeColor: String
   BackColor: String

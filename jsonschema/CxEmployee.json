@@ -129,6 +129,12 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"HasSMSNumber": {
+					"type": "boolean"
+				},
+				"SMSNumber": {
+					"$ref": "#/definitions/IxPhoneNumber"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -261,13 +267,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"PurchaseOrderStatus",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -275,10 +274,18 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
-						"Minority",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
@@ -337,6 +344,12 @@
 					"items": {
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
+				},
+				"HasSMSNumber": {
+					"type": "boolean"
+				},
+				"SMSNumber": {
+					"$ref": "#/definitions/IxPhoneNumber"
 				},
 				"ObjectType": {
 					"type": "string",

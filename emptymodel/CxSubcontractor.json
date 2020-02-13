@@ -9,6 +9,13 @@
 	"Contacts": [],
 	"AccountCode": "",
 	"PhoneNumbers": [],
+	"HasSMSNumber": false,
+	"SMSNumber": {
+		"PhoneNumber": "",
+		"Id": 0,
+		"Name": "",
+		"Description": ""
+	},
 	"Emails": [],
 	"Name": "",
 	"Address": {
@@ -22,7 +29,7 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "Action"
+			"Source": "Owner"
 		},
 		"ObjectType": "Address",
 		"Id": 0
