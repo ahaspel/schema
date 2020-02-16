@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 216,
-	"Minutes": 940,
+	"Hours": 244,
+	"Minutes": 425,
 	"Resource": {
 		"Id": 6
 	},
@@ -21,16 +21,16 @@
 					"Unit": {
 						"Id": 1
 					},
-					"Quantity": 449
+					"Quantity": 713
 				},
-				"Notes": "vuZfxJGImKY"
+				"Notes": "EcDjJeuT"
 			},
-			"Global": false,
-			"BaseObject": "TDDGgdk",
+			"Global": true,
+			"BaseObject": "STNoHRlI",
 			"ObjectType": "CostCode",
 			"Id": 0,
-			"Name": "uhMSvghCya",
-			"Description": "WIfeiGJQ",
+			"Name": "eGNdEHKUTjP",
+			"Description": "GAMitM",
 			"Dependencies": []
 		}
 	],
@@ -48,29 +48,29 @@
 	"IsVoid": false,
 	"Billable": true,
 	"StartLocation": {
-		"Lat": 35.1506,
-		"Lng": 146.5393,
-		"Source": "GPSService"
+		"Lat": 46.991,
+		"Lng": 20.2535,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 86.9863,
-		"Lng": 88.9494,
-		"Source": "Owner"
+		"Lat": -51.7884,
+		"Lng": 146.3542,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "Manual",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 143
+		"Quantity": 891
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 986
+		"Quantity": 802
 	},
 	"Approvals": [
 		{
@@ -90,16 +90,16 @@
 			"Id": 12
 		}
 	],
-	"Description": "AiyRiBQbmL",
+	"Description": "JkbxJnKPg",
 	"Tags": [
 		{
-			"BaseObject": "QaNCpOucro",
+			"BaseObject": "fnYruiPeO",
 			"AttributeId": 92,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "XRvbozUrbgIN"
+			"Description": "TFLcRzwSo"
 		}
 	],
 	"__typename": "CxTimeEntry"
