@@ -1,10 +1,10 @@
 
 const CXPARTYGROUPINPUTMIN = `fragment CXPARTYGROUPINPUTMIN on CxPartyGroup {
+  Name
   Parties {
     Id
   }
   Id
-  Name
 }`;
 module.exports = { fragment: CXPARTYGROUPINPUTMIN,
                    fragmentName: 'CXPARTYGROUPINPUTMIN',

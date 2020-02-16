@@ -3,6 +3,11 @@ type CxDependency {
   Ids: [Int]
 }
 
+input CxDependencyInput {
+  ObjectType: String!
+  Ids: [Int]!
+}
+
 type CxResource {
   Temporary: Boolean
   Owner: IxCompany
@@ -25,8 +30,26 @@ type CxResource {
   Dependencies: [CxDependency]
 }
 
-input CxResourceDO {
+input CxResourceInput {
+  Temporary: Boolean
+  Owner: IxCompanyInput
+  ResourceType: IxResourceTypeInput!
+  ResourceSubtype: IxResourceSubtypeDO!
+  UnitCost: IxUnitCostInput
+  InCrew: Boolean
+  ForeColor: String
+  BackColor: String
+  Location: IxLocationInput
+  DisplayName: String
+  AccountCode: String
+  CurrentLifespan: IxRangeInput
   Id: ID!
+  ObjectType: CxResourceObjectType
+  Divisions: [IxLookupValueDO]
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__Input]
+  Dependencies: [CxDependencyInput]
 }
 
 enum CxResourceObjectType {
@@ -54,6 +77,17 @@ type IxAddress {
   Id: ID!
 }
 
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
 enum IxAddressObjectType {
   Address
 }
@@ -62,6 +96,16 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: ID!
+  Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
   Name: String
@@ -92,6 +136,26 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
+input IxCompanyInput {
+  CompanyType: IxLookupValueDO!
+  Supplier: Boolean
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumberInput
+  ObjectType: IxCompanyObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+  Dependencies: [CxDependencyInput]
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttribute__String__Input]
+  Address: IxAddressInput
+  AccountCode: String
+  Divisions: [IxLookupValueDO]
+  Contacts: [IxPartyDO]
+}
+
 enum IxCompanyObjectType {
   Company
   Subcontractor
@@ -105,7 +169,20 @@ type IxEmail {
   Description: String
 }
 
+input IxEmailInput {
+  Email: String!
+  Id: ID
+  Name: String
+  Description: String
+}
+
 type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
@@ -123,6 +200,12 @@ type IxLocation {
   Description: String
 }
 
+input IxLocationInput {
+  Address: IxAddressInput!
+  Name: String
+  Description: String
+}
+
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
@@ -130,6 +213,10 @@ type IxLookupValue {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -162,6 +249,11 @@ type IxMoney {
   Quantity: Float
 }
 
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -175,6 +267,10 @@ type IxParty {
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
+}
+
+input IxPartyDO {
+  Id: ID!
 }
 
 enum IxPartyObjectType {
@@ -191,9 +287,22 @@ type IxPhoneNumber {
   Description: String
 }
 
+input IxPhoneNumberInput {
+  PhoneNumber: String!
+  Id: ID
+  Name: String
+  Description: String
+}
+
 type IxRange {
   Start: String
   End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
   Duration: String
 }
 
@@ -204,6 +313,10 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+}
+
+input IxResourceSubtypeDO {
+  Id: ID!
 }
 
 enum IxResourceSubtypeObjectType {
@@ -232,6 +345,21 @@ enum IxResourceTypeFamily {
   Group
 }
 
+input IxResourceTypeInput {
+  Family: IxResourceTypeFamily!
+  ResourceSubtypes: [IxResourceSubtypeDO]!
+  MoveVehicle: Boolean
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+  Dependencies: [CxDependencyInput]
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute__String__Input]
+}
+
 enum IxResourceTypeObjectType {
   ResourceType
 }
@@ -251,6 +379,16 @@ type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
   Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
 }
 
 enum IxUnitObjectType {
@@ -284,7 +422,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxResources_onSave(data: [CxResourceDO], objectType: String = "Crew", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResource]
+  cxResources_onSave(data: [CxResourceInput], objectType: String = "Crew", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResource]
   cxResources_onDelete(data: [String], objectType: String = "Crew", operation: String = "delete"): [CxResource]
 }
 

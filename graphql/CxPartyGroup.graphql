@@ -10,21 +10,21 @@ input CxDependencyInput {
 
 type CxPartyGroup {
   ObjectType: CxPartyGroupObjectType
+  Name: String
   Parties: [IxParty]
   SMSNumbers: [IxPhoneNumber]
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
 }
 
 input CxPartyGroupInput {
   ObjectType: CxPartyGroupObjectType
+  Name: String!
   Parties: [IxPartyDO]!
   Id: ID!
   Description: String
-  Name: String!
   Tags: [IxAttribute__String__Input]
 }
 

@@ -333,6 +333,10 @@
 				"PartyGroup"
 			]
 		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
 		"Parties": {
 			"type": "array",
 			"items": {
@@ -350,10 +354,6 @@
 		},
 		"Description": {
 			"type": "string"
-		},
-		"Name": {
-			"type": "string",
-			"minLength": 1
 		},
 		"Tags": {
 			"type": "array",
