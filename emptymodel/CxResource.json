@@ -14,7 +14,7 @@
 			"Name": "",
 			"Description": ""
 		},
-		"ObjectType": "Company",
+		"ObjectType": "Subcontractor",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
@@ -36,7 +36,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -46,7 +46,7 @@
 		"Contacts": []
 	},
 	"ResourceType": {
-		"Family": "Group",
+		"Family": "Equipment",
 		"ResourceSubtypes": [],
 		"MoveVehicle": false,
 		"BaseObject": "",
@@ -89,7 +89,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -105,7 +105,7 @@
 		"Duration": ""
 	},
 	"Id": 0,
-	"ObjectType": "Employee",
+	"ObjectType": "Equipment",
 	"Divisions": [],
 	"Description": "",
 	"Name": "",
