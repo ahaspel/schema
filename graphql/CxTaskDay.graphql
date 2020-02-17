@@ -55,11 +55,11 @@ input CxTaskDayInput {
   Supplier: IxCompanyDO
   ShiftSupervisor: Boolean
   PhoneNumbers: [IxPhoneNumberInput]
-  JobActivity: IxJobActivityDO
+  JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
   ActionStatus: IxActionStatusDO
-  CurrentLifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

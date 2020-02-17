@@ -1167,7 +1167,9 @@
 		},
 		"IxTaskDay": {
 			"superRequired": [
+				"CurrentLifespan",
 				"Id",
+				"JobActivity",
 				"Resources"
 			],
 			"immutable": [

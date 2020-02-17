@@ -570,7 +570,7 @@ input IxTaskDayInput {
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
   Quantity: IxQuantityInput
-  JobActivity: IxJobActivityDO
+  JobActivity: IxJobActivityDO!
   ActionStatus: IxActionStatusDO
   Resources: [IxResourceDO]!
   Dependencies: [CxDependencyInput]
@@ -578,7 +578,7 @@ input IxTaskDayInput {
   Id: ID!
   Name: String
   Description: String
-  CurrentLifespan: IxRangeInput
+  CurrentLifespan: IxRangeInput!
   Tags: [IxAttribute__String__Input]
   ForeColor: String
   BackColor: String
