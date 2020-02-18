@@ -36,9 +36,9 @@ enum CxLevelObjectType {
 
 enum CxLevelPrivileges {
   None
-  SignTimesheets
-  SignPurchaseOrders
-  ViewAsManager
+  DesktopUser
+  MobileUser
+  MobileManager
 }
 
 type CxObjectPrivilege {
