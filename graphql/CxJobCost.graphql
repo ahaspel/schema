@@ -49,8 +49,8 @@ type IxCostCode {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -60,8 +60,8 @@ input IxCostCodeInput {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
   Dependencies: [CxDependencyInput]
 }
 
@@ -86,8 +86,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

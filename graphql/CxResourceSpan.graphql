@@ -42,8 +42,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -59,8 +59,8 @@ type IxCompany {
   SMSNumber: IxPhoneNumber
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -79,8 +79,8 @@ enum IxCompanyObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -97,16 +97,16 @@ enum IxGeocodeSource {
 
 type IxLocation {
   Address: IxAddress
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -147,8 +147,8 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -165,8 +165,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
@@ -191,8 +191,8 @@ type IxResource {
   CurrentLifespan: IxRange
   ObjectType: IxResourceObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
   Divisions: [IxLookupValue]
@@ -214,8 +214,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -229,8 +229,8 @@ type IxResourceType {
   BaseObject: String
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
@@ -255,8 +255,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

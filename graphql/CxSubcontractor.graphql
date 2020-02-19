@@ -95,8 +95,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -105,8 +105,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -116,15 +116,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -149,8 +149,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -200,8 +200,8 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -215,8 +215,8 @@ input IxPartyInput {
   SMSNumber: IxPhoneNumberInput
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
   Dependencies: [CxDependencyInput]
   CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
@@ -233,15 +233,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
@@ -261,8 +261,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeDO {
@@ -281,8 +281,8 @@ type IxSupplyType {
   Dependencies: [CxDependency]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -294,8 +294,8 @@ input IxSupplyTypeInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -310,8 +310,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {
