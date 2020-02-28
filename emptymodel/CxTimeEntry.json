@@ -24,18 +24,16 @@
 	"StartLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Valid": false,
-		"Source": "GPSService"
+		"Source": "Owner"
 	},
 	"PunchStart": "",
 	"EndLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Valid": false,
-		"Source": "GPSService"
+		"Source": "Action"
 	},
 	"PunchEnd": "",
-	"Punch": "Manual",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
 			"Id": 0

@@ -202,7 +202,6 @@ enum IxEmployeeObjectType {
 type IxGeocode {
   Lat: Float
   Lng: Float
-  Valid: Boolean
   Source: IxGeocodeSource
 }
 
@@ -235,21 +234,22 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  Attribute
   PurchaseOrderStatus
-  Division
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  Minority
   Privilege
   JobCertification
   WebPrivilege

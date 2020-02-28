@@ -225,9 +225,6 @@
 				"Lng": {
 					"type": "number"
 				},
-				"Valid": {
-					"type": "boolean"
-				},
 				"Source": {
 					"type": "string",
 					"enum": [
@@ -236,7 +233,11 @@
 						"GPSService"
 					]
 				}
-			}
+			},
+			"required": [
+				"Lat",
+				"Lng"
+			]
 		},
 		"IxLocation": {
 			"type": "object",
@@ -272,21 +273,22 @@
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
+						"Division",
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
+						"Attribute",
 						"PurchaseOrderStatus",
-						"Division",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
