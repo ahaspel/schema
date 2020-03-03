@@ -666,25 +666,24 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Minority",
-						"Skill",
-						"Training",
-						"Union",
 						"State",
-						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"JobPriority",
+						"JobType",
+						"JobSubtype",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Skill",
+						"Training",
+						"Union",
+						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
@@ -1114,7 +1113,12 @@
 		"Filled",
 		"ForeColor",
 		"Job",
-		"Location"
+		"JobActivityId",
+		"JobId",
+		"Location",
+		"ResourceId",
+		"ResourceSubtypeId",
+		"ResourceTypeId"
 	],
 	"type": "object",
 	"properties": {
@@ -1150,8 +1154,14 @@
 		"ResourceType": {
 			"$ref": "#/definitions/IxResourceType"
 		},
+		"ResourceTypeId": {
+			"type": "integer"
+		},
 		"ResourceSubtype": {
 			"$ref": "#/definitions/IxResourceSubtype"
+		},
+		"ResourceSubtypeId": {
+			"type": "integer"
 		},
 		"Quantity": {
 			"$ref": "#/definitions/IxQuantity"
@@ -1195,6 +1205,9 @@
 			"items": {
 				"$ref": "#/definitions/IxResource"
 			}
+		},
+		"ResourceId": {
+			"type": "integer"
 		},
 		"DisplayName": {
 			"type": "string"

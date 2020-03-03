@@ -2,20 +2,23 @@ type CxAllocation {
   Name: String
   Location: IxLocation
   Job: IxJob
+  JobId: ID
   JobActivity: IxJobActivity
+  JobActivityId: ID
   Shift: IxShift
   TaskDays: [IxTaskDay]
   ResourceSpans: [CxResourceSpan]
   ResourceQuantitySpans: [CxResourceQuantitySpan]
   ActionStatus: IxActionStatus
   ForeColor: String
+  BackColor: String
+  ResourceIds: [Int]
   CrewId: ID
   HasConflicts: Boolean
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
   ObjectType: CxAllocationObjectType
   DisplayName: String
-  BackColor: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -326,25 +329,24 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  Division
-  LaborClass
-  Language
-  License
-  Minority
-  Skill
-  Training
-  Union
   State
-  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  JobPriority
+  JobType
+  JobSubtype
+  Division
+  LaborClass
+  Language
+  License
+  Skill
+  Training
+  Union
+  Minority
   Privilege
   JobCertification
   WebPrivilege
@@ -527,8 +529,11 @@ type IxTaskDay {
   Filled: Boolean
   ConflictIds: [Int]
   PhoneNumbers: [IxPhoneNumber]
+  ResourceId: ID
   ResourceType: IxResourceType
+  ResourceTypeId: ID
   ResourceSubtype: IxResourceSubtype
+  ResourceSubtypeId: ID
   Supplier: IxCompany
   Quantity: IxQuantity
   JobActivity: IxJobActivity
@@ -537,6 +542,7 @@ type IxTaskDay {
   ActionType: IxTaskDayActionType
   ActionStatus: IxActionStatus
   Resources: [IxResource]
+  ResourceIds: [Int]
   Dependencies: [CxDependency]
   ObjectType: IxTaskDayObjectType
   Id: ID!
@@ -573,6 +579,7 @@ input IxTaskDayInput {
   JobActivity: IxJobActivityDO!
   ActionStatus: IxActionStatusDO
   Resources: [IxResourceDO]!
+  ResourceIds: [Int]
   Dependencies: [CxDependencyInput]
   ObjectType: IxTaskDayObjectType
   Id: ID!

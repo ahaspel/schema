@@ -719,25 +719,24 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Minority",
-						"Skill",
-						"Training",
-						"Union",
 						"State",
-						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"JobPriority",
+						"JobType",
+						"JobSubtype",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Skill",
+						"Training",
+						"Union",
+						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
@@ -1184,7 +1183,12 @@
 				"Divisions",
 				"Filled",
 				"Job",
-				"Location"
+				"JobActivityId",
+				"JobId",
+				"Location",
+				"ResourceId",
+				"ResourceSubtypeId",
+				"ResourceTypeId"
 			],
 			"type": "object",
 			"properties": {
@@ -1209,11 +1213,20 @@
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
 				},
+				"ResourceId": {
+					"type": "integer"
+				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
 				},
+				"ResourceTypeId": {
+					"type": "integer"
+				},
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"ResourceSubtypeId": {
+					"type": "integer"
 				},
 				"Supplier": {
 					"$ref": "#/definitions/IxCompany"
@@ -1251,6 +1264,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxResource"
+					}
+				},
+				"ResourceIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
 					}
 				},
 				"Dependencies": {
@@ -1375,7 +1394,10 @@
 		"ForeColor",
 		"HasConflicts",
 		"Job",
+		"JobActivityId",
+		"JobId",
 		"Location",
+		"ResourceIds",
 		"ResourceQuantitySpans",
 		"ResourceSpans"
 	],
@@ -1390,8 +1412,14 @@
 		"Job": {
 			"$ref": "#/definitions/IxJob"
 		},
+		"JobId": {
+			"type": "integer"
+		},
 		"JobActivity": {
 			"$ref": "#/definitions/IxJobActivity"
+		},
+		"JobActivityId": {
+			"type": "integer"
 		},
 		"Shift": {
 			"$ref": "#/definitions/IxShift"
@@ -1419,6 +1447,15 @@
 		},
 		"ForeColor": {
 			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
+		},
+		"ResourceIds": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
 		},
 		"CrewId": {
 			"type": "integer"
@@ -1450,9 +1487,6 @@
 			]
 		},
 		"DisplayName": {
-			"type": "string"
-		},
-		"BackColor": {
 			"type": "string"
 		},
 		"Id": {
