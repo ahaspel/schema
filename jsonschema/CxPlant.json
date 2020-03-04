@@ -90,10 +90,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -138,10 +138,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -187,16 +187,9 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"PurchaseOrderStatus",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
-						"JobType",
 						"JobSubtype",
+						"JobType",
 						"Division",
 						"LaborClass",
 						"Language",
@@ -204,6 +197,14 @@
 						"Skill",
 						"Training",
 						"Union",
+						"State",
+						"Attribute",
+						"PurchaseOrderStatus",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"Minority",
 						"Privilege",
 						"JobCertification",
@@ -213,10 +214,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -267,10 +268,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -308,10 +309,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -384,10 +385,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -434,10 +435,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -499,10 +500,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},

@@ -1,5 +1,6 @@
 type CxActionStatus {
   ActionStatusType: CxActionStatusActionStatusType
+  Default: Boolean
   Completed: Boolean
   Cancelled: Boolean
   ObjectType: CxActionStatusObjectType
@@ -21,6 +22,7 @@ enum CxActionStatusActionStatusType {
 
 input CxActionStatusInput {
   ActionStatusType: CxActionStatusActionStatusType
+  Default: Boolean
   ObjectType: CxActionStatusObjectType
   ForeColor: String
   BackColor: String

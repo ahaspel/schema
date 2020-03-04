@@ -95,8 +95,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
@@ -105,8 +105,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -116,15 +116,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -149,8 +149,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -159,16 +159,9 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  PurchaseOrderStatus
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
-  JobType
   JobSubtype
+  JobType
   Division
   LaborClass
   Language
@@ -176,6 +169,14 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   Minority
   Privilege
   JobCertification
@@ -199,8 +200,8 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -214,8 +215,8 @@ input IxPartyInput {
   SMSNumber: IxPhoneNumberInput
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
   Dependencies: [CxDependencyInput]
   CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
@@ -232,15 +233,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {
@@ -260,8 +261,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxResourceSubtypeDO {
@@ -280,8 +281,8 @@ type IxSupplyType {
   Dependencies: [CxDependency]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -293,8 +294,8 @@ input IxSupplyTypeInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -309,8 +310,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxUnitCost {
