@@ -86,8 +86,8 @@ type IxActionStatus {
   Completed: Boolean
   Cancelled: Boolean
   BaseObject: String
-  ObjectType: IxActionStatusObjectType
   Id: ID!
+  ObjectType: IxActionStatusObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -118,8 +118,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -130,8 +130,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -140,8 +140,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -157,8 +157,8 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxCompanyObjectType
   Id: ID!
+  ObjectType: IxCompanyObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -184,8 +184,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -200,8 +200,8 @@ type IxDocument {
   FullName: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
-  ObjectType: IxDocumentObjectType
   Id: ID!
+  ObjectType: IxDocumentObjectType
   Description: String
   Name: String
 }
@@ -246,8 +246,8 @@ type IxJob {
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
   Dependencies: [CxDependency]
-  ObjectType: IxJobObjectType
   Id: ID!
+  ObjectType: IxJobObjectType
   Description: String
   Name: String
   AccountCode: String
@@ -268,8 +268,8 @@ type IxJobActivity {
   Completed: Boolean
   Priority: Int
   Dependencies: [CxDependency]
-  ObjectType: IxJobActivityObjectType
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Description: String
   Name: String
   CurrentLifespan: IxRange
@@ -292,8 +292,8 @@ type IxJobCost {
   TotalAmount: Float
   CompletedAmount: Float
   BaseObject: String
-  ObjectType: IxJobCostObjectType
   Id: ID!
+  ObjectType: IxJobCostObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -315,8 +315,8 @@ type IxLocation {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -334,7 +334,6 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
@@ -357,8 +356,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -418,8 +417,8 @@ type IxResource {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
-  ObjectType: IxResourceObjectType
   Id: ID!
+  ObjectType: IxResourceObjectType
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -445,8 +444,8 @@ enum IxResourceObjectType {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxResourceSubtypeObjectType
   Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
   Description: String
   Name: String
 }
@@ -464,8 +463,8 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  ObjectType: IxResourceTypeObjectType
   Id: ID!
+  ObjectType: IxResourceTypeObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -494,8 +493,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
