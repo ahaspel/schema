@@ -62,14 +62,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"

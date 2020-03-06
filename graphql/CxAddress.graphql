@@ -56,8 +56,8 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -75,17 +75,18 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  Minority
   Privilege
   JobCertification
   WebPrivilege

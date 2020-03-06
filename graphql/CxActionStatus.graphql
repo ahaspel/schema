@@ -22,7 +22,6 @@ enum CxActionStatusActionStatusType {
 
 input CxActionStatusInput {
   ActionStatusType: CxActionStatusActionStatusType
-  Default: Boolean
   ObjectType: CxActionStatusObjectType
   ForeColor: String
   BackColor: String

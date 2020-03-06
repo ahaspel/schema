@@ -64,8 +64,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -76,8 +76,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -86,8 +86,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -103,8 +103,8 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxCompanyObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -151,8 +151,8 @@ type IxEmployee {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
-  Id: ID!
   ObjectType: IxEmployeeObjectType
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -195,8 +195,8 @@ type IxLocation {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -214,17 +214,18 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  Minority
   Privilege
   JobCertification
   WebPrivilege
@@ -240,8 +241,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -289,8 +290,8 @@ type IxResource {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
-  Id: ID!
   ObjectType: IxResourceObjectType
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -316,8 +317,8 @@ enum IxResourceObjectType {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -335,8 +336,8 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -361,8 +362,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
+  Id: ID!
   Description: String
   Name: String
 }

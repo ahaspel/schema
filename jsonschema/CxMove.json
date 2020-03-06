@@ -49,14 +49,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -100,9 +100,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -113,21 +110,25 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
+						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
