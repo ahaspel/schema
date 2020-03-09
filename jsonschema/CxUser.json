@@ -31,7 +31,6 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"None",
 							"Delete",
 							"Add",
 							"Edit",
@@ -118,10 +117,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -144,10 +143,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -187,7 +186,6 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"None",
 							"DesktopUser",
 							"MobileUser",
 							"MobileManager"
@@ -215,10 +213,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -273,10 +271,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -327,10 +325,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -368,10 +366,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -427,7 +425,6 @@
 			"items": {
 				"type": "string",
 				"enum": [
-					"None",
 					"DesktopUser",
 					"MobileUser",
 					"MobileManager"
