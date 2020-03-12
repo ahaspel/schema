@@ -35,14 +35,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -67,6 +67,9 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -94,9 +97,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -140,6 +140,12 @@
 			]
 		}
 	},
+	"immutable": [
+		"CompletionStatus",
+		"Dependencies",
+		"Dto",
+		"PercentComplete"
+	],
 	"type": "object",
 	"properties": {
 		"ObjectType": {
@@ -149,7 +155,8 @@
 			]
 		},
 		"Name": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"CreatorId": {
 			"type": "integer"
@@ -196,8 +203,9 @@
 	},
 	"required": [
 		"CreatorId",
+		"Id",
 		"JobId",
-		"Status",
-		"Id"
+		"Name",
+		"Status"
 	]
 }

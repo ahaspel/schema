@@ -1,5 +1,6 @@
 
 const CXJOBTASKINPUTMIN = `fragment CXJOBTASKINPUTMIN on CxJobTask {
+  Name
   CreatorId
   JobId
   Status {
