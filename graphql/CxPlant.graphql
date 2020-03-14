@@ -120,7 +120,7 @@ type IxCapacity {
 
 input IxCapacityInput {
   Id: ID!
-  ResourceType: IxResourceTypeDO
+  ResourceType: IxResourceTypeInput
   ResourceSubtype: IxResourceSubtypeDO!
   Quantity: IxQuantityInput!
 }
@@ -288,15 +288,26 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceTypeDO {
-  Id: ID!
-}
-
 enum IxResourceTypeFamily {
   Labor
   Equipment
   Material
   Group
+}
+
+input IxResourceTypeInput {
+  Family: IxResourceTypeFamily!
+  ResourceSubtypes: [IxResourceSubtypeDO]!
+  MoveVehicle: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxResourceTypeObjectType
+  Description: String
+  Name: String!
+  Dependencies: [CxDependencyInput]
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute__String__Input]
 }
 
 enum IxResourceTypeObjectType {
