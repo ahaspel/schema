@@ -24,5 +24,6 @@ module.exports = { fragment: CXJOBCOSTINPUTMIN,
                    saveMutation :  'cxJobCosts_onSave',
                    deletionMutation :  'cxJobCosts_onDelete',
                    objectType: 'JobCost',
-                   clazz: 'CxJobCostInput'
+                   clazz: 'CxJobCostInput',
+                   entityClass: 'CxJobCost'
                  };

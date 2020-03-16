@@ -10,5 +10,6 @@ module.exports = { fragment: CXCONFIGVALUEINPUTMIN,
                    saveMutation :  'cxConfigValues_onSave',
                    deletionMutation :  'cxConfigValues_onDelete',
                    objectType: 'ConfigValue',
-                   clazz: 'CxConfigValueInput'
+                   clazz: 'CxConfigValueInput',
+                   entityClass: 'CxConfigValue'
                  };

@@ -12,5 +12,6 @@ module.exports = { fragment: CXAPPLICATIONLICENSEINPUTMIN,
                    saveMutation :  'cxApplicationLicenses_onSave',
                    deletionMutation :  'cxApplicationLicenses_onDelete',
                    objectType: 'ApplicationLicense',
-                   clazz: 'CxApplicationLicenseInput'
+                   clazz: 'CxApplicationLicenseInput',
+                   entityClass: 'CxApplicationLicense'
                  };

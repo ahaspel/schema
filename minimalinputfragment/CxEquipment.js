@@ -21,5 +21,6 @@ module.exports = { fragment: CXEQUIPMENTINPUTMIN,
                    saveMutation :  'cxEquipments_onSave',
                    deletionMutation :  'cxEquipments_onDelete',
                    objectType: 'Equipment',
-                   clazz: 'CxEquipmentInput'
+                   clazz: 'CxEquipmentInput',
+                   entityClass: 'CxEquipment'
                  };

@@ -22,5 +22,6 @@ module.exports = { fragment: CXMATERIALINPUTMIN,
                    saveMutation :  'cxMaterials_onSave',
                    deletionMutation :  'cxMaterials_onDelete',
                    objectType: 'Material',
-                   clazz: 'CxMaterialInput'
+                   clazz: 'CxMaterialInput',
+                   entityClass: 'CxMaterial'
                  };

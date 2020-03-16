@@ -13,5 +13,6 @@ module.exports = { fragment: CXCOMPANYINPUTMIN,
                    saveMutation :  'cxCompanys_onSave',
                    deletionMutation :  'cxCompanys_onDelete',
                    objectType: 'Company',
-                   clazz: 'CxCompanyInput'
+                   clazz: 'CxCompanyInput',
+                   entityClass: 'CxCompany'
                  };

@@ -9,5 +9,6 @@ module.exports = { fragment: CXPARTYINPUTMIN,
                    saveMutation :  'cxPartys_onSave',
                    deletionMutation :  'cxPartys_onDelete',
                    objectType: 'Party',
-                   clazz: 'CxPartyInput'
+                   clazz: 'CxPartyInput',
+                   entityClass: 'CxParty'
                  };

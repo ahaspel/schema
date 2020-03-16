@@ -10,5 +10,6 @@ module.exports = { fragment: CXLOOKUPVALUEINPUTMIN,
                    saveMutation :  'cxLookupValues_onSave',
                    deletionMutation :  'cxLookupValues_onDelete',
                    objectType: 'LookupValue',
-                   clazz: 'CxLookupValueInput'
+                   clazz: 'CxLookupValueInput',
+                   entityClass: 'CxLookupValue'
                  };

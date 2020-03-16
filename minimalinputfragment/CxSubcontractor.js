@@ -13,5 +13,6 @@ module.exports = { fragment: CXSUBCONTRACTORINPUTMIN,
                    saveMutation :  'cxSubcontractors_onSave',
                    deletionMutation :  'cxSubcontractors_onDelete',
                    objectType: 'Subcontractor',
-                   clazz: 'CxSubcontractorInput'
+                   clazz: 'CxSubcontractorInput',
+                   entityClass: 'CxSubcontractor'
                  };

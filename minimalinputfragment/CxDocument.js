@@ -9,5 +9,6 @@ module.exports = { fragment: CXDOCUMENTINPUTMIN,
                    saveMutation :  'cxDocuments_onSave',
                    deletionMutation :  'cxDocuments_onDelete',
                    objectType: 'Document',
-                   clazz: 'CxDocumentInput'
+                   clazz: 'CxDocumentInput',
+                   entityClass: 'CxDocument'
                  };

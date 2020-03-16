@@ -12,5 +12,6 @@ module.exports = { fragment: CXPARTYGROUPINPUTMIN,
                    saveMutation :  'cxPartyGroups_onSave',
                    deletionMutation :  'cxPartyGroups_onDelete',
                    objectType: 'PartyGroup',
-                   clazz: 'CxPartyGroupInput'
+                   clazz: 'CxPartyGroupInput',
+                   entityClass: 'CxPartyGroup'
                  };

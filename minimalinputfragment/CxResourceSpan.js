@@ -12,5 +12,6 @@ module.exports = { fragment: CXRESOURCESPANINPUTMIN,
                    saveMutation :  'cxResourceSpans_onSave',
                    deletionMutation :  'cxResourceSpans_onDelete',
                    objectType: 'ResourceSpan',
-                   clazz: 'CxResourceSpanInput'
+                   clazz: 'CxResourceSpanInput',
+                   entityClass: 'CxResourceSpan'
                  };

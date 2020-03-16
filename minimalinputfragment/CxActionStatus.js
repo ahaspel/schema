@@ -9,5 +9,6 @@ module.exports = { fragment: CXACTIONSTATUSINPUTMIN,
                    saveMutation :  'cxActionStatuss_onSave',
                    deletionMutation :  'cxActionStatuss_onDelete',
                    objectType: 'ActionStatus',
-                   clazz: 'CxActionStatusInput'
+                   clazz: 'CxActionStatusInput',
+                   entityClass: 'CxActionStatus'
                  };

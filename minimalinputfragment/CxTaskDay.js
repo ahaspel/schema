@@ -18,5 +18,6 @@ module.exports = { fragment: CXTASKDAYINPUTMIN,
                    saveMutation :  'cxTaskDays_onSave',
                    deletionMutation :  'cxTaskDays_onDelete',
                    objectType: 'TaskDay',
-                   clazz: 'CxTaskDayInput'
+                   clazz: 'CxTaskDayInput',
+                   entityClass: 'CxTaskDay'
                  };

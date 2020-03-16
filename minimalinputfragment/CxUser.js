@@ -14,5 +14,6 @@ module.exports = { fragment: CXUSERINPUTMIN,
                    saveMutation :  'cxUsers_onSave',
                    deletionMutation :  'cxUsers_onDelete',
                    objectType: 'User',
-                   clazz: 'CxUserInput'
+                   clazz: 'CxUserInput',
+                   entityClass: 'CxUser'
                  };

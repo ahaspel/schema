@@ -10,5 +10,6 @@ module.exports = { fragment: CXHOLIDAYINPUTMIN,
                    saveMutation :  'cxHolidays_onSave',
                    deletionMutation :  'cxHolidays_onDelete',
                    objectType: 'Holiday',
-                   clazz: 'CxHolidayInput'
+                   clazz: 'CxHolidayInput',
+                   entityClass: 'CxHoliday'
                  };

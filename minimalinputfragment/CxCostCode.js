@@ -20,5 +20,6 @@ module.exports = { fragment: CXCOSTCODEINPUTMIN,
                    saveMutation :  'cxCostCodes_onSave',
                    deletionMutation :  'cxCostCodes_onDelete',
                    objectType: 'CostCode',
-                   clazz: 'CxCostCodeInput'
+                   clazz: 'CxCostCodeInput',
+                   entityClass: 'CxCostCode'
                  };

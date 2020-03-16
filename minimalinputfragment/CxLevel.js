@@ -9,5 +9,6 @@ module.exports = { fragment: CXLEVELINPUTMIN,
                    saveMutation :  'cxLevels_onSave',
                    deletionMutation :  'cxLevels_onDelete',
                    objectType: 'Level',
-                   clazz: 'CxLevelInput'
+                   clazz: 'CxLevelInput',
+                   entityClass: 'CxLevel'
                  };

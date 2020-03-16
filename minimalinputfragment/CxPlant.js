@@ -13,5 +13,6 @@ module.exports = { fragment: CXPLANTINPUTMIN,
                    saveMutation :  'cxPlants_onSave',
                    deletionMutation :  'cxPlants_onDelete',
                    objectType: 'Plant',
-                   clazz: 'CxPlantInput'
+                   clazz: 'CxPlantInput',
+                   entityClass: 'CxPlant'
                  };

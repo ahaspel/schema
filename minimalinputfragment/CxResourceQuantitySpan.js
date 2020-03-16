@@ -13,5 +13,6 @@ module.exports = { fragment: CXRESOURCEQUANTITYSPANINPUTMIN,
                    saveMutation :  'cxResourceQuantitySpans_onSave',
                    deletionMutation :  'cxResourceQuantitySpans_onDelete',
                    objectType: 'ResourceQuantitySpan',
-                   clazz: 'CxResourceQuantitySpanInput'
+                   clazz: 'CxResourceQuantitySpanInput',
+                   entityClass: 'CxResourceQuantitySpan'
                  };

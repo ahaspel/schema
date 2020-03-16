@@ -14,5 +14,6 @@ module.exports = { fragment: CXSHIFTINPUTMIN,
                    saveMutation :  'cxShifts_onSave',
                    deletionMutation :  'cxShifts_onDelete',
                    objectType: 'Shift',
-                   clazz: 'CxShiftInput'
+                   clazz: 'CxShiftInput',
+                   entityClass: 'CxShift'
                  };

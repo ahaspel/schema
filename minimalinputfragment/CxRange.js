@@ -9,5 +9,6 @@ module.exports = { fragment: CXRANGEINPUTMIN,
                    saveMutation :  'cxRanges_onSave',
                    deletionMutation :  'cxRanges_onDelete',
                    objectType: 'Range',
-                   clazz: 'CxRangeInput'
+                   clazz: 'CxRangeInput',
+                   entityClass: 'CxRange'
                  };

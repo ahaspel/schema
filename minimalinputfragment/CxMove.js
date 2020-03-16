@@ -26,5 +26,6 @@ module.exports = { fragment: CXMOVEINPUTMIN,
                    saveMutation :  'cxMoves_onSave',
                    deletionMutation :  'cxMoves_onDelete',
                    objectType: 'Move',
-                   clazz: 'CxMoveInput'
+                   clazz: 'CxMoveInput',
+                   entityClass: 'CxMove'
                  };

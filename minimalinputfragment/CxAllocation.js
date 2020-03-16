@@ -11,5 +11,6 @@ module.exports = { fragment: CXALLOCATIONINPUTMIN,
                    saveMutation :  'cxAllocations_onSave',
                    deletionMutation :  'cxAllocations_onDelete',
                    objectType: 'Allocation',
-                   clazz: 'CxAllocationInput'
+                   clazz: 'CxAllocationInput',
+                   entityClass: 'CxAllocation'
                  };

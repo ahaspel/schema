@@ -15,5 +15,6 @@ module.exports = { fragment: CXTEXTMESSAGEINPUTMIN,
                    saveMutation :  'cxTextMessages_onSave',
                    deletionMutation :  'cxTextMessages_onDelete',
                    objectType: 'TextMessage',
-                   clazz: 'CxTextMessageInput'
+                   clazz: 'CxTextMessageInput',
+                   entityClass: 'CxTextMessage'
                  };

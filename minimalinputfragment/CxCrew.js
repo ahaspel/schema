@@ -15,5 +15,6 @@ module.exports = { fragment: CXCREWINPUTMIN,
                    saveMutation :  'cxCrews_onSave',
                    deletionMutation :  'cxCrews_onDelete',
                    objectType: 'Crew',
-                   clazz: 'CxCrewInput'
+                   clazz: 'CxCrewInput',
+                   entityClass: 'CxCrew'
                  };

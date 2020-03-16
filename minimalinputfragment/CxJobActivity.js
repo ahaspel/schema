@@ -9,5 +9,6 @@ module.exports = { fragment: CXJOBACTIVITYINPUTMIN,
                    saveMutation :  'cxJobActivitys_onSave',
                    deletionMutation :  'cxJobActivitys_onDelete',
                    objectType: 'JobActivity',
-                   clazz: 'CxJobActivityInput'
+                   clazz: 'CxJobActivityInput',
+                   entityClass: 'CxJobActivity'
                  };

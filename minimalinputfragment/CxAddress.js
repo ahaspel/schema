@@ -14,5 +14,6 @@ module.exports = { fragment: CXADDRESSINPUTMIN,
                    saveMutation :  'cxAddresss_onSave',
                    deletionMutation :  'cxAddresss_onDelete',
                    objectType: 'Address',
-                   clazz: 'CxAddressInput'
+                   clazz: 'CxAddressInput',
+                   entityClass: 'CxAddress'
                  };

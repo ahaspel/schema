@@ -21,5 +21,6 @@ module.exports = { fragment: CXTIMEENTRYINPUTMIN,
                    saveMutation :  'cxTimeEntrys_onSave',
                    deletionMutation :  'cxTimeEntrys_onDelete',
                    objectType: 'TimeEntry',
-                   clazz: 'CxTimeEntryInput'
+                   clazz: 'CxTimeEntryInput',
+                   entityClass: 'CxTimeEntry'
                  };

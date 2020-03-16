@@ -8,5 +8,6 @@ module.exports = { fragment: CXPHONENUMBERINPUTMIN,
                    saveMutation :  'cxPhoneNumbers_onSave',
                    deletionMutation :  'cxPhoneNumbers_onDelete',
                    objectType: 'PhoneNumber',
-                   clazz: 'CxPhoneNumberInput'
+                   clazz: 'CxPhoneNumberInput',
+                   entityClass: 'CxPhoneNumber'
                  };

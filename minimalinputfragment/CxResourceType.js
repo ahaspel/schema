@@ -14,5 +14,6 @@ module.exports = { fragment: CXRESOURCETYPEINPUTMIN,
                    saveMutation :  'cxResourceTypes_onSave',
                    deletionMutation :  'cxResourceTypes_onDelete',
                    objectType: 'ResourceType',
-                   clazz: 'CxResourceTypeInput'
+                   clazz: 'CxResourceTypeInput',
+                   entityClass: 'CxResourceType'
                  };

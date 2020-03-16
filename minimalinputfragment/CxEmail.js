@@ -8,5 +8,6 @@ module.exports = { fragment: CXEMAILINPUTMIN,
                    saveMutation :  'cxEmails_onSave',
                    deletionMutation :  'cxEmails_onDelete',
                    objectType: 'Email',
-                   clazz: 'CxEmailInput'
+                   clazz: 'CxEmailInput',
+                   entityClass: 'CxEmail'
                  };
