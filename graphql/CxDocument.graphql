@@ -10,24 +10,20 @@ input CxDependencyInput {
 
 type CxDocument {
   Attached: Boolean
-  FullName: String
   DocumentTypes: [IxLookupValue]
   ObjectType: CxDocumentObjectType
   Name: String
   Id: ID!
-  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
 }
 
 input CxDocumentInput {
-  FullName: String
   DocumentTypes: [IxLookupValueDO]
   ObjectType: CxDocumentObjectType
   Name: String!
   Id: ID!
-  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -47,8 +43,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -57,8 +53,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -69,8 +65,8 @@ enum IxAttributeStringObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -95,10 +91,10 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
+  DocumentType
   TimeEntryType
   CompanyType
   JobStatus
-  DocumentType
   TimeEntryLaborClass
   Privilege
   JobCertification
