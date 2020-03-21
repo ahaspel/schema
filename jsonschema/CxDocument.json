@@ -35,14 +35,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -67,6 +67,9 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -94,9 +97,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -132,6 +132,10 @@
 				"$ref": "#/definitions/IxLookupValue"
 			}
 		},
+		"Key": {
+			"type": "string",
+			"minLength": 1
+		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
@@ -163,6 +167,7 @@
 	},
 	"required": [
 		"Id",
+		"Key",
 		"Name"
 	]
 }

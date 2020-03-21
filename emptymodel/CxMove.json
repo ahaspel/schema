@@ -10,10 +10,10 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "Owner"
+			"Source": "GPSService"
 		},
-		"ObjectType": "Address",
-		"Id": 0
+		"Id": 0,
+		"ObjectType": "Address"
 	},
 	"Destination": {
 		"Street": "",
@@ -26,10 +26,10 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
-		"ObjectType": "Address",
-		"Id": 0
+		"Id": 0,
+		"ObjectType": "Address"
 	},
 	"Id": 0,
 	"__typename": "CxMove"

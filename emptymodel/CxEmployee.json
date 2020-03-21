@@ -20,8 +20,8 @@
 			"Description": "",
 			"Name": ""
 		},
-		"ObjectType": "Subcontractor",
 		"Id": 0,
+		"ObjectType": "Subcontractor",
 		"Description": "",
 		"Name": "",
 		"Dependencies": [],
@@ -42,10 +42,10 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
-			"ObjectType": "Address",
-			"Id": 0
+			"Id": 0,
+			"ObjectType": "Address"
 		}
 	},
 	"Contacts": [],
