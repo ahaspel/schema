@@ -55,8 +55,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -65,8 +65,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -77,8 +77,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -101,10 +101,10 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
-  DocumentType
   TimeEntryType
   CompanyType
   JobStatus
+  DocumentType
   TimeEntryLaborClass
   Privilege
   JobCertification

@@ -59,8 +59,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -69,8 +69,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -82,8 +82,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeInput {
@@ -91,8 +91,8 @@ input IxResourceSubtypeInput {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Description: String
   Name: String!
+  Description: String
 }
 
 enum IxResourceSubtypeObjectType {

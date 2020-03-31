@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -146,10 +146,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -203,10 +203,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -322,10 +322,10 @@
 						"Employee"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -352,10 +352,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
 				"IsMover": {
@@ -407,12 +407,12 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -451,20 +451,20 @@
 						"State",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"DocumentType",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
+						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -530,10 +530,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -571,10 +571,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -647,10 +647,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -697,10 +697,10 @@
 						"ResourceType"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -709,10 +709,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -762,10 +762,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},

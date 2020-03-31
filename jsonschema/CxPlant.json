@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -138,10 +138,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -204,20 +204,20 @@
 						"State",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"DocumentType",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
+						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -268,10 +268,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -309,10 +309,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -385,10 +385,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -435,10 +435,10 @@
 						"ResourceType"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -447,10 +447,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -500,10 +500,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},

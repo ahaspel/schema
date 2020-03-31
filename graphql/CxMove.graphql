@@ -70,8 +70,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -94,10 +94,10 @@ enum IxLookupValueObjectType {
   State
   Attribute
   PurchaseOrderStatus
-  DocumentType
   TimeEntryType
   CompanyType
   JobStatus
+  DocumentType
   TimeEntryLaborClass
   Privilege
   JobCertification
