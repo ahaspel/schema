@@ -54,10 +54,10 @@
 						"ActionStatus"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -66,10 +66,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				}
 			},
@@ -147,10 +147,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -203,10 +203,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -273,10 +273,10 @@
 						"CostCode"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -325,10 +325,10 @@
 						"Document"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -349,10 +349,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -477,10 +477,10 @@
 						"Job"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"AccountCode": {
@@ -495,10 +495,10 @@
 				"HasAttachments": {
 					"type": "boolean"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -564,10 +564,10 @@
 						"JobActivity"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -579,10 +579,10 @@
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				}
 			},
@@ -622,10 +622,10 @@
 						"JobCost"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -648,10 +648,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -700,10 +700,10 @@
 						"WebPrivilege"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -769,10 +769,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -810,10 +810,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -897,10 +897,10 @@
 						"Material"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Tags": {
@@ -927,10 +927,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				}
 			},
@@ -963,10 +963,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -1013,10 +1013,10 @@
 						"ResourceType"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -1025,10 +1025,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -1078,10 +1078,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},

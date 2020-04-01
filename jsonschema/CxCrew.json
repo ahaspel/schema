@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -146,10 +146,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -203,10 +203,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -322,10 +322,10 @@
 						"Employee"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Tags": {
@@ -352,10 +352,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
 				"IsMover": {
@@ -407,10 +407,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -459,10 +459,10 @@
 						"WebPrivilege"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -528,10 +528,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -569,10 +569,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -656,10 +656,10 @@
 						"Material"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Tags": {
@@ -686,10 +686,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				}
 			},
@@ -722,10 +722,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -772,10 +772,10 @@
 						"ResourceType"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -784,10 +784,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -837,10 +837,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
