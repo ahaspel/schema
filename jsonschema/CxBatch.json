@@ -1,6 +1,6 @@
 {
-	"id": "https://congistics.com/schema/CxEquipment",
-	"title": "com.congistics.cbrd.resource.CxEquipment",
+	"id": "https://congistics.com/schema/CxBatch",
+	"title": "com.congistics.cbrd.import.CxBatch",
 	"definitions": {
 		"CxDependency": {
 			"type": "object",
@@ -414,6 +414,7 @@
 				}
 			},
 			"required": [
+				"CompanyType",
 				"Id"
 			]
 		},
@@ -529,172 +530,6 @@
 			},
 			"required": [
 				"Email",
-				"Id"
-			]
-		},
-		"IxEmployee": {
-			"superRequired": [
-				"CurrentLifespan",
-				"FirstName",
-				"Id",
-				"LastName",
-				"ResourceSubtype"
-			],
-			"type": "object",
-			"properties": {
-				"Person": {
-					"$ref": "#/definitions/IxParty"
-				},
-				"FirstName": {
-					"type": "string"
-				},
-				"LastName": {
-					"type": "string"
-				},
-				"MiddleName": {
-					"type": "string"
-				},
-				"BirthDate": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"PreviousExperience": {
-					"$ref": "#/definitions/IxQuantity"
-				},
-				"Minority": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Unions": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Licenses": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Languages": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"TrainingCourses": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Skills": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"LaborClassification": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"Machines": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceType"
-					}
-				},
-				"Owner": {
-					"$ref": "#/definitions/IxCompany"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"Temporary": {
-					"type": "boolean"
-				},
-				"UnitCost": {
-					"$ref": "#/definitions/IxUnitCost"
-				},
-				"DisplayName": {
-					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Employee"
-					]
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"Allocations": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAllocation"
-					}
-				},
-				"Divisions": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"AccountCode": {
-					"type": "string"
-				},
-				"Location": {
-					"$ref": "#/definitions/IxLocation"
-				},
-				"BackColor": {
-					"type": "string"
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"IsMover": {
-					"type": "boolean"
-				},
-				"Contacts": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxParty"
-					}
-				},
-				"InCrew": {
-					"type": "boolean"
-				}
-			},
-			"required": [
 				"Id"
 			]
 		},
@@ -1007,15 +842,13 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Name",
 				"Address"
 			]
 		},
@@ -1411,6 +1244,8 @@
 				}
 			},
 			"required": [
+				"Family",
+				"ResourceSubtypes",
 				"Id"
 			]
 		},
@@ -1697,99 +1532,60 @@
 		}
 	},
 	"immutable": [
-		"Address",
-		"Allocations",
-		"DisplayName",
+		"ChangedItems",
 		"Dependencies",
 		"Dto",
-		"InCrew",
-		"Location",
-		"ResourceType",
-		"Returned"
+		"Errors",
+		"SummaryMessage",
+		"Warnings"
 	],
 	"type": "object",
 	"properties": {
-		"Model": {
-			"type": "string",
-			"minLength": 1
-		},
-		"Make": {
-			"type": "string",
-			"minLength": 1
-		},
-		"SerialNumber": {
-			"type": "string"
-		},
-		"Year": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"Height": {
-			"$ref": "#/definitions/IxQuantity"
-		},
-		"Weight": {
-			"$ref": "#/definitions/IxQuantity"
-		},
-		"Width": {
-			"$ref": "#/definitions/IxQuantity"
-		},
-		"Capacity": {
-			"$ref": "#/definitions/IxQuantity"
-		},
-		"MoveNotes": {
-			"type": "string"
-		},
-		"Operators": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxEmployee"
-			}
-		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
-				"Equipment"
+				"Batch"
 			]
 		},
-		"Returned": {
-			"type": "boolean"
-		},
-		"Temporary": {
-			"type": "boolean"
-		},
-		"Owner": {
-			"$ref": "#/definitions/IxCompany"
-		},
-		"ResourceType": {
-			"$ref": "#/definitions/IxResourceType"
-		},
-		"ResourceSubtype": {
-			"$ref": "#/definitions/IxResourceSubtype"
-		},
-		"UnitCost": {
-			"$ref": "#/definitions/IxUnitCost"
-		},
-		"InCrew": {
-			"type": "boolean"
-		},
-		"ForeColor": {
-			"type": "string"
-		},
-		"BackColor": {
-			"type": "string"
-		},
-		"Location": {
-			"$ref": "#/definitions/IxLocation"
-		},
-		"DisplayName": {
-			"type": "string"
-		},
-		"AccountCode": {
+		"ImportType": {
 			"type": "string",
-			"minLength": 1
+			"minLength": 1,
+			"enum": [
+				"Company",
+				"Employee",
+				"Equipment",
+				"Job"
+			]
 		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
+		"Overwrite": {
+			"type": "boolean"
+		},
+		"ChangedItems": {
+			"type": "integer"
+		},
+		"SummaryMessage": {
+			"type": "string"
+		},
+		"Errors": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"Warnings": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"Attachments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxDocument"
+			}
+		},
+		"HasAttachments": {
+			"type": "boolean"
 		},
 		"Id": {
 			"type": "integer"
@@ -1801,6 +1597,9 @@
 			}
 		},
 		"Description": {
+			"type": "string"
+		},
+		"Name": {
 			"type": "string"
 		},
 		"Tags": {
@@ -1823,12 +1622,6 @@
 		}
 	},
 	"required": [
-		"AccountCode",
-		"CurrentLifespan",
-		"Id",
-		"Make",
-		"Model",
-		"Owner",
-		"ResourceSubtype"
+		"ImportType"
 	]
 }

@@ -106,10 +106,10 @@
 						"ActionStatus"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -118,10 +118,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				}
 			},
@@ -175,6 +175,124 @@
 				"Id"
 			]
 		},
+		"IxAllocation": {
+			"type": "object",
+			"properties": {
+				"Shift": {
+					"$ref": "#/definitions/IxShift"
+				},
+				"JobActivity": {
+					"$ref": "#/definitions/IxJobActivity"
+				},
+				"JobActivityId": {
+					"type": "integer"
+				},
+				"Job": {
+					"$ref": "#/definitions/IxJob"
+				},
+				"JobId": {
+					"type": "integer"
+				},
+				"TaskDays": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxTaskDay"
+					}
+				},
+				"CrewId": {
+					"type": "integer"
+				},
+				"HasConflicts": {
+					"type": "boolean"
+				},
+				"ResourceSpans": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxResourceSpan"
+					}
+				},
+				"ResourceQuantitySpans": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxResourceQuantitySpan"
+					}
+				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
+				},
+				"ActionType": {
+					"type": "string",
+					"enum": [
+						"Crew",
+						"Employee",
+						"Equipment",
+						"Generic",
+						"Plant",
+						"Subcontractor",
+						"Material",
+						"Group",
+						"Move"
+					]
+				},
+				"ActionStatus": {
+					"$ref": "#/definitions/IxActionStatus"
+				},
+				"Resources": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResource"
+					}
+				},
+				"ResourceIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Allocation"
+					]
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -199,10 +317,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -255,10 +373,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -325,10 +443,10 @@
 						"CostCode"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -378,10 +496,10 @@
 						"Document"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -402,10 +520,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -515,6 +633,12 @@
 				"EstimatedEquipmentHours": {
 					"type": "number"
 				},
+				"Allocations": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAllocation"
+					}
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -530,10 +654,10 @@
 						"Job"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"AccountCode": {
@@ -548,10 +672,10 @@
 				"HasAttachments": {
 					"type": "boolean"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -617,10 +741,10 @@
 						"JobActivity"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -632,10 +756,16 @@
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
 				},
-				"ForeColor": {
-					"type": "string"
+				"Allocations": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAllocation"
+					}
 				},
 				"BackColor": {
+					"type": "string"
+				},
+				"ForeColor": {
 					"type": "string"
 				}
 			},
@@ -675,10 +805,10 @@
 						"JobCost"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -701,10 +831,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -753,10 +883,10 @@
 						"WebPrivilege"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -822,10 +952,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -863,10 +993,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -950,10 +1080,10 @@
 						"Material"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -968,6 +1098,12 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Allocations": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAllocation"
+					}
+				},
 				"Divisions": {
 					"type": "array",
 					"items": {
@@ -980,10 +1116,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				}
 			},
@@ -1016,10 +1152,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1066,11 +1202,17 @@
 						"ResourceType"
 					]
 				},
+				"Name": {
+					"type": "string"
+				},
 				"Description": {
 					"type": "string"
 				},
-				"Name": {
-					"type": "string"
+				"Allocations": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAllocation"
+					}
 				},
 				"Dependencies": {
 					"type": "array",
@@ -1078,10 +1220,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -1130,10 +1272,10 @@
 						"Shift"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1296,10 +1438,10 @@
 						"VirtualTaskDay"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -1314,10 +1456,10 @@
 				"DisplayName": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				}
 			},
@@ -1362,10 +1504,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1507,6 +1649,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
+		"Allocations": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAllocation"
 			}
 		},
 		"Dependencies": {
