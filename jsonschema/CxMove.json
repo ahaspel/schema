@@ -49,14 +49,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -100,9 +100,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -130,10 +127,13 @@
 						"WebPrivilege"
 					]
 				},
-				"Name": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {

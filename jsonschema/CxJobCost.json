@@ -37,19 +37,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"CostCode"
 					]
 				},
-				"Name": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -106,19 +106,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
 				},
-				"Name": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"Name": {
 					"type": "string"
 				}
 			},

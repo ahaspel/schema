@@ -48,10 +48,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 type IxUnitCost {

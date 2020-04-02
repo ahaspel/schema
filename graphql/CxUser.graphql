@@ -1,0 +1,260 @@
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: String!
+  Ids: [Int]!
+}
+
+type CxObjectPrivilege {
+  ObjectType: String
+  ObjectPrivileges: [CxObjectPrivilegeObjectPrivileges]
+  Editable: Boolean
+}
+
+input CxObjectPrivilegeInput {
+  ObjectType: String!
+  ObjectPrivileges: [CxObjectPrivilegeObjectPrivileges]!
+  Editable: Boolean
+}
+
+enum CxObjectPrivilegeObjectPrivileges {
+  Delete
+  Add
+  Edit
+  Read
+}
+
+type CxUser {
+  Party: IxParty
+  ResourceId: ID
+  Active: Boolean
+  Level: IxLevel
+  Privileges: [CxUserPrivileges]
+  ObjectPrivileges: [CxObjectPrivilege]
+  Administrator: Boolean
+  ObjectType: CxUserObjectType
+  Id: ID!
+  Divisions: [IxLookupValue]
+  Description: String
+  Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
+}
+
+input CxUserInput {
+  Party: IxPartyDO!
+  Active: Boolean
+  Level: IxLevelDO!
+  Privileges: [CxUserPrivileges]
+  ObjectPrivileges: [CxObjectPrivilegeInput]
+  ObjectType: CxUserObjectType
+  Id: ID!
+  Divisions: [IxLookupValueDO]
+  Description: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxUserObjectType {
+  User
+}
+
+enum CxUserPrivileges {
+  DesktopUser
+  MobileUser
+  MobileManager
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: ID
+  Dependencies: [CxDependency]
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: ID!
+  Dependencies: [CxDependencyInput]
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxEmail {
+  Email: String
+  Id: ID
+  Description: String
+  Name: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLevel {
+  Privileges: [IxLevelPrivileges]
+  ObjectPrivileges: [CxObjectPrivilege]
+  Editable: Boolean
+  BaseObject: String
+  ObjectType: IxLevelObjectType
+  Id: ID!
+  Description: String
+  Name: String
+  Dependencies: [CxDependency]
+}
+
+input IxLevelDO {
+  Id: ID!
+}
+
+enum IxLevelObjectType {
+  Level
+}
+
+enum IxLevelPrivileges {
+  DesktopUser
+  MobileUser
+  MobileManager
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Description: String
+  Name: String
+  Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  Attribute
+  PurchaseOrderStatus
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
+  Privilege
+  JobCertification
+  WebPrivilege
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Description: String
+  Name: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+}
+
+input IxPartyDO {
+  Id: ID!
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Subcontractor
+  Plant
+}
+
+type IxPhoneNumber {
+  PhoneNumber: String
+  Id: ID
+  Description: String
+  Name: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxUser]
+  cxUsers_onDelete(data: [String], objectType: String = "User", operation: String = "delete"): [CxUser]
+}
+
+extend type Query {
+  cxUsers(filters: [FilterInput], objectType: String = "User"): [CxUser]
+}

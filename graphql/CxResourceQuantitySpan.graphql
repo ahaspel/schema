@@ -35,8 +35,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -47,10 +47,10 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -64,10 +64,10 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxCompanyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -86,8 +86,8 @@ enum IxCompanyObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -104,10 +104,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -141,10 +141,10 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -161,8 +161,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxQuantity {
@@ -190,10 +190,10 @@ input IxRangeInput {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -205,10 +205,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Name: String
+  Id: ID!
   Description: String
+  Name: String
 }
 
 input IxUnitDO {
