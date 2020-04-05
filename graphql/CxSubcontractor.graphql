@@ -70,8 +70,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 input IxAddressInput {
@@ -81,8 +81,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -93,8 +93,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -103,8 +103,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -147,8 +147,8 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -198,8 +198,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -213,8 +213,8 @@ input IxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumberInput
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String!
   Dependencies: [CxDependencyInput]
@@ -259,8 +259,8 @@ input IxRangeInput {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxResourceSubtypeObjectType
   Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
   Description: String
   Name: String
 }
@@ -279,8 +279,8 @@ type IxSupplyType {
   AccrualNumber: String
   Notes: String
   Dependencies: [CxDependency]
-  ObjectType: IxSupplyTypeObjectType
   Id: ID!
+  ObjectType: IxSupplyTypeObjectType
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -292,8 +292,8 @@ input IxSupplyTypeInput {
   AccrualNumber: String
   Notes: String
   Dependencies: [CxDependencyInput]
-  ObjectType: IxSupplyTypeObjectType
   Id: ID!
+  ObjectType: IxSupplyTypeObjectType
   Description: String
   Name: String
   Tags: [IxAttribute__String__Input]
@@ -308,8 +308,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -361,7 +361,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxSubcontractors_onSave(data: [CxSubcontractorInput], objectType: String = "Subcontractor", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxSubcontractor]
+  cxSubcontractors_onSave(data: [CxSubcontractorInput], filters: [FilterInput], objectType: String = "Subcontractor", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxSubcontractor]
   cxSubcontractors_onDelete(data: [String], objectType: String = "Subcontractor", operation: String = "delete"): [CxSubcontractor]
 }
 

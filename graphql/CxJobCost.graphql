@@ -47,8 +47,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -58,8 +58,8 @@ input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Description: String
   Name: String!
   Dependencies: [CxDependencyInput]
@@ -84,8 +84,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -137,7 +137,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxJobCosts_onSave(data: [CxJobCostInput], objectType: String = "JobCost", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxJobCost]
+  cxJobCosts_onSave(data: [CxJobCostInput], filters: [FilterInput], objectType: String = "JobCost", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxJobCost]
   cxJobCosts_onDelete(data: [String], objectType: String = "JobCost", operation: String = "delete"): [CxJobCost]
 }
 

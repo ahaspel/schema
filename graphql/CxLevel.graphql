@@ -83,7 +83,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxLevels_onSave(data: [CxLevelInput], objectType: String = "Level", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxLevel]
+  cxLevels_onSave(data: [CxLevelInput], filters: [FilterInput], objectType: String = "Level", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxLevel]
   cxLevels_onDelete(data: [String], objectType: String = "Level", operation: String = "delete"): [CxLevel]
 }
 

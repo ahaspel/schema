@@ -29,8 +29,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 input IxAddressInput {
@@ -40,8 +40,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -68,8 +68,8 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -121,7 +121,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxMoves_onSave(data: [CxMoveInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxMove]
+  cxMoves_onSave(data: [CxMoveInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxMove]
   cxMoves_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxMove]
 }
 

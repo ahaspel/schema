@@ -43,8 +43,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -53,8 +53,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -80,7 +80,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxResourceSubtypes_onSave(data: [CxResourceSubtypeInput], objectType: String = "ResourceSubtype", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceSubtype]
+  cxResourceSubtypes_onSave(data: [CxResourceSubtypeInput], filters: [FilterInput], objectType: String = "ResourceSubtype", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceSubtype]
   cxResourceSubtypes_onDelete(data: [String], objectType: String = "ResourceSubtype", operation: String = "delete"): [CxResourceSubtype]
 }
 

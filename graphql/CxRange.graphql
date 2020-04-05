@@ -34,7 +34,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxRanges_onSave(data: [CxRangeInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxRange]
+  cxRanges_onSave(data: [CxRangeInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxRange]
   cxRanges_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxRange]
 }
 

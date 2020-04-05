@@ -48,8 +48,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -101,7 +101,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxCostCodes_onSave(data: [CxCostCodeInput], objectType: String = "CostCode", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxCostCode]
+  cxCostCodes_onSave(data: [CxCostCodeInput], filters: [FilterInput], objectType: String = "CostCode", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxCostCode]
   cxCostCodes_onDelete(data: [String], objectType: String = "CostCode", operation: String = "delete"): [CxCostCode]
 }
 

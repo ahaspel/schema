@@ -2,6 +2,10 @@
 	"id": "https://congistics.com/schema/CxBatch",
 	"title": "com.congistics.cbrd.import.CxBatch",
 	"definitions": {
+		"CxBatchRun": {
+			"type": "object",
+			"properties": {}
+		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -35,14 +39,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -83,14 +87,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Document"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -113,6 +117,9 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -140,9 +147,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -206,6 +210,12 @@
 			"type": "array",
 			"items": {
 				"type": "string"
+			}
+		},
+		"Runs": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxBatchRun"
 			}
 		},
 		"Attachments": {

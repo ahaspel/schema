@@ -34,7 +34,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxEmails_onSave(data: [CxEmailInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxEmail]
+  cxEmails_onSave(data: [CxEmailInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxEmail]
   cxEmails_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxEmail]
 }
 

@@ -54,6 +54,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -80,9 +83,6 @@
 						"JobCertification",
 						"WebPrivilege"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"Description": {
 					"type": "string"

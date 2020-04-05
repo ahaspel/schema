@@ -47,7 +47,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxConfigValues_onSave(data: [CxConfigValueInput], objectType: String = "ConfigValue", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxConfigValue]
+  cxConfigValues_onSave(data: [CxConfigValueInput], filters: [FilterInput], objectType: String = "ConfigValue", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxConfigValue]
   cxConfigValues_onDelete(data: [String], objectType: String = "ConfigValue", operation: String = "delete"): [CxConfigValue]
 }
 

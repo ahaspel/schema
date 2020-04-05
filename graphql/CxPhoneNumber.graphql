@@ -34,7 +34,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxPhoneNumbers_onSave(data: [CxPhoneNumberInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxPhoneNumber]
+  cxPhoneNumbers_onSave(data: [CxPhoneNumberInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxPhoneNumber]
   cxPhoneNumbers_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxPhoneNumber]
 }
 

@@ -56,8 +56,8 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -109,7 +109,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAddress]
+  cxAddresss_onSave(data: [CxAddressInput], filters: [FilterInput], objectType: String = "Address", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAddress]
   cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
 }
 

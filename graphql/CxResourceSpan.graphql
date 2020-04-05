@@ -28,8 +28,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -40,8 +40,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -57,8 +57,8 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxCompanyObjectType
   Id: ID!
+  ObjectType: IxCompanyObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -104,8 +104,8 @@ type IxLocation {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -146,8 +146,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -190,8 +190,8 @@ type IxResource {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
-  ObjectType: IxResourceObjectType
   Id: ID!
+  ObjectType: IxResourceObjectType
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -213,8 +213,8 @@ enum IxResourceObjectType {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxResourceSubtypeObjectType
   Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
   Description: String
   Name: String
 }
@@ -228,8 +228,8 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  ObjectType: IxResourceTypeObjectType
   Id: ID!
+  ObjectType: IxResourceTypeObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -254,8 +254,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -297,7 +297,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxResourceSpans_onSave(data: [CxResourceSpanInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceSpan]
+  cxResourceSpans_onSave(data: [CxResourceSpanInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxResourceSpan]
   cxResourceSpans_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxResourceSpan]
 }
 
