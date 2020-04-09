@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -116,10 +116,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -175,27 +175,26 @@
 						"LaborClass",
 						"Language",
 						"License",
-						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
-						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -261,12 +260,12 @@
 						"Plant"
 					]
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -304,10 +303,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -365,10 +364,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -409,10 +408,10 @@
 						"SupplyType"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -463,10 +462,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},

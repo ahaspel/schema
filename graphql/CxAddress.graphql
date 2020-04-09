@@ -58,8 +58,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -75,18 +75,17 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
-  Minority
   Skill
   Training
   Union
   State
-  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  Minority
   Privilege
   JobCertification
   WebPrivilege

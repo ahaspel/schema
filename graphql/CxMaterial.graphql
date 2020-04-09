@@ -83,8 +83,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -93,8 +93,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -110,8 +110,8 @@ type IxCompany {
   SMSNumber: IxPhoneNumber
   Id: ID!
   ObjectType: IxCompanyObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -134,8 +134,8 @@ enum IxCompanyObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -168,8 +168,8 @@ type IxInventoryItem {
   Start: String
   Vendor: IxCompany
   AccountCode: String
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxInventoryItemInput {
@@ -178,16 +178,16 @@ input IxInventoryItemInput {
   Start: String!
   Vendor: IxCompanyDO
   AccountCode: String
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -203,18 +203,17 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
-  Minority
   Skill
   Training
   Union
   State
-  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  Minority
   Privilege
   JobCertification
   WebPrivilege
@@ -232,8 +231,8 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   Id: ID!
   ObjectType: IxPartyObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -250,8 +249,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxQuantity {
@@ -270,8 +269,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeDO {
@@ -289,11 +288,11 @@ type IxResourceType {
   BaseObject: String
   Id: ID!
   ObjectType: IxResourceTypeObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
-  ForeColor: String
   BackColor: String
+  ForeColor: String
   Tags: [IxAttribute__String__]
 }
 
@@ -315,8 +314,8 @@ type IxUnit {
   BaseObject: String
   Id: ID!
   ObjectType: IxUnitObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

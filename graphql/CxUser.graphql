@@ -94,8 +94,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -104,8 +104,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -115,8 +115,8 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -138,8 +138,8 @@ type IxLevel {
   BaseObject: String
   Id: ID!
   ObjectType: IxLevelObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -161,8 +161,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -178,18 +178,17 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
-  Minority
   Skill
   Training
   Union
   State
-  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  Minority
   Privilege
   JobCertification
   WebPrivilege
@@ -202,8 +201,8 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   Id: ID!
   ObjectType: IxPartyObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -224,8 +223,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {

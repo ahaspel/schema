@@ -106,10 +106,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -162,10 +162,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -233,10 +233,10 @@
 						"CostCode"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -264,10 +264,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -330,10 +330,10 @@
 						"JobActivity"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -345,10 +345,10 @@
 						"$ref": "#/definitions/IxAttribute__String__"
 					}
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				}
 			},
@@ -365,10 +365,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -400,27 +400,26 @@
 						"LaborClass",
 						"Language",
 						"License",
-						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
-						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -486,10 +485,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -527,10 +526,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -614,10 +613,10 @@
 						"Material"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -644,10 +643,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				}
 			},
@@ -680,10 +679,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -730,10 +729,10 @@
 						"ResourceType"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -742,10 +741,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -795,10 +794,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
