@@ -54,22 +54,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Skill",
-						"Training",
-						"Union",
 						"State",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
@@ -77,11 +64,24 @@
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"JobPriority",
+						"JobType",
+						"JobSubtype",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Skill",
+						"Training",
+						"Union",
 						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"

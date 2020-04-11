@@ -46,8 +46,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -58,8 +58,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -68,8 +68,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Name: String
   Description: String
 }
@@ -99,24 +99,14 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
   Dependencies: [CxDependency]
 }
 
 enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  Division
-  LaborClass
-  Language
-  License
-  Skill
-  Training
-  Union
   State
   PurchaseOrderStatus
   TimeEntryType
@@ -124,6 +114,16 @@ enum IxLookupValueObjectType {
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  JobPriority
+  JobType
+  JobSubtype
+  Division
+  LaborClass
+  Language
+  License
+  Skill
+  Training
+  Union
   Minority
   Privilege
   JobCertification
@@ -135,8 +135,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Name: String
   Description: String
   Dependencies: [CxDependency]

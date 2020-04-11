@@ -49,14 +49,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -81,14 +81,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -135,9 +135,6 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -145,6 +142,9 @@
 						"Subcontractor",
 						"Plant"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -313,14 +313,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Employee"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -352,10 +352,10 @@
 				"Location": {
 					"$ref": "#/definitions/IxLocation"
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
 				"IsMover": {
@@ -431,22 +431,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Skill",
-						"Training",
-						"Union",
 						"State",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
@@ -454,11 +441,24 @@
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"JobPriority",
+						"JobType",
+						"JobSubtype",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Skill",
+						"Training",
+						"Union",
 						"Minority",
 						"Privilege",
 						"JobCertification",
 						"WebPrivilege"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -517,9 +517,6 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -528,6 +525,9 @@
 						"Subcontractor",
 						"Plant"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -637,14 +637,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -687,14 +687,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceType"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"
@@ -708,10 +708,10 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"BackColor": {
+				"ForeColor": {
 					"type": "string"
 				},
-				"ForeColor": {
+				"BackColor": {
 					"type": "string"
 				},
 				"Tags": {
@@ -752,14 +752,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string"

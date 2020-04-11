@@ -29,8 +29,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -40,8 +40,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -68,8 +68,8 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Name: String
   Description: String
   Dependencies: [CxDependency]
@@ -80,16 +80,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  Division
-  LaborClass
-  Language
-  License
-  Skill
-  Training
-  Union
   State
   PurchaseOrderStatus
   TimeEntryType
@@ -97,6 +87,16 @@ enum IxLookupValueObjectType {
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  JobPriority
+  JobType
+  JobSubtype
+  Division
+  LaborClass
+  Language
+  License
+  Skill
+  Training
+  Union
   Minority
   Privilege
   JobCertification
