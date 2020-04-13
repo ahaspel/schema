@@ -275,13 +275,12 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
+				"Key",
+				"Id"
 			]
 		},
 		"IxEmail": {

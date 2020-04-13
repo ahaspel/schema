@@ -27,8 +27,7 @@ input CxBatchInput {
   ImportType: CxBatchImportType!
   Overwrite: Boolean
   Runs: [CxBatchRunInput]
-  Attachments: [IxDocumentDO]
-  HasAttachments: Boolean
+  Attachments: [IxDocumentInput]
   Id: ID
   Description: String
   Name: String
@@ -99,8 +98,15 @@ type IxDocument {
   Name: String
 }
 
-input IxDocumentDO {
+input IxDocumentInput {
+  Attached: Boolean
+  Key: String!
+  DocumentTypes: [IxLookupValueDO]
+  Dependencies: [CxDependencyInput]
   Id: ID!
+  ObjectType: IxDocumentObjectType
+  Description: String
+  Name: String!
 }
 
 enum IxDocumentObjectType {
@@ -114,6 +120,10 @@ type IxLookupValue {
   Description: String
   Name: String
   Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
