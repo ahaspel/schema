@@ -210,7 +210,7 @@ input IxDocumentInput {
   Id: ID!
   ObjectType: IxDocumentObjectType
   Description: String
-  Name: String!
+  Name: String
 }
 
 enum IxDocumentObjectType {

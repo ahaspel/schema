@@ -24,7 +24,7 @@ input CxDocumentInput {
   DocumentTypes: [IxLookupValueDO]
   Key: String!
   ObjectType: CxDocumentObjectType
-  Name: String!
+  Name: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

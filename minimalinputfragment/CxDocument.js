@@ -1,7 +1,6 @@
 
 const CXDOCUMENTINPUTMIN = `fragment CXDOCUMENTINPUTMIN on CxDocument {
   Key
-  Name
   Id
 }`;
 module.exports = { fragment: CXDOCUMENTINPUTMIN,
