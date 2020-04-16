@@ -1,6 +1,7 @@
 
 const CXBATCHINPUTMIN = `fragment CXBATCHINPUTMIN on CxBatch {
   ImportType
+  Id
 }`;
 module.exports = { fragment: CXBATCHINPUTMIN,
                    fragmentName: 'CXBATCHINPUTMIN',

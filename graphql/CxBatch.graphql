@@ -9,7 +9,7 @@ type CxBatch {
   Runs: [CxBatchRun]
   Attachments: [IxDocument]
   HasAttachments: Boolean
-  Id: ID
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -26,9 +26,8 @@ input CxBatchInput {
   ObjectType: CxBatchObjectType
   ImportType: CxBatchImportType!
   Overwrite: Boolean
-  Runs: [CxBatchRunInput]
   Attachments: [IxDocumentInput]
-  Id: ID
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__Input]
@@ -39,11 +38,19 @@ enum CxBatchObjectType {
 }
 
 type CxBatchRun {
-  _typesWithoutFieldsAreNotAllowed_: String
+  Start: String
+  End: String
+  ErrorCount: Int
+  Success: Boolean
+  Overwrite: Boolean
+  ChangedItems: Int
+  SummaryMessage: String
+  Id: ID!
+  ObjectType: CxBatchRunObjectType
 }
 
-input CxBatchRunInput {
-  _typesWithoutFieldsAreNotAllowed_: String
+enum CxBatchRunObjectType {
+  BatchRun
 }
 
 type CxDependency {
@@ -127,27 +134,27 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
   State
+  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  JobPriority
-  JobType
-  JobSubtype
-  Division
-  LaborClass
-  Language
-  License
-  Skill
-  Training
-  Union
-  Minority
   Privilege
   JobCertification
-  WebPrivilege
 }
 
 """

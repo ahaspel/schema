@@ -25,27 +25,27 @@ input CxLookupValueInput {
 }
 
 enum CxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
   State
+  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  JobPriority
-  JobType
-  JobSubtype
-  Division
-  LaborClass
-  Language
-  License
-  Skill
-  Training
-  Union
-  Minority
   Privilege
   JobCertification
-  WebPrivilege
 }
 
 input FilterInput {
@@ -72,10 +72,10 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxLookupValues_onSave(data: [CxLookupValueInput], filters: [FilterInput], objectType: String = "State", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxLookupValue]
-  cxLookupValues_onDelete(data: [String], objectType: String = "State", operation: String = "delete"): [CxLookupValue]
+  cxLookupValues_onSave(data: [CxLookupValueInput], filters: [FilterInput], objectType: String = "JobPriority", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxLookupValue]
+  cxLookupValues_onDelete(data: [String], objectType: String = "JobPriority", operation: String = "delete"): [CxLookupValue]
 }
 
 extend type Query {
-  cxLookupValues(filters: [FilterInput], objectType: String = "State"): [CxLookupValue]
+  cxLookupValues(filters: [FilterInput], objectType: String = "JobPriority"): [CxLookupValue]
 }
