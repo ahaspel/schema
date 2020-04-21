@@ -36,6 +36,8 @@ type CxJob {
   TotalHours: Float
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
+  Start: String
+  End: String
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -68,6 +70,8 @@ input CxJobInput {
   JobCosts: [IxJobCostInput]
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
+  Start: String
+  End: String
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
@@ -148,6 +152,8 @@ type IxCompany {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
   AccountCode: String
@@ -259,6 +265,8 @@ type IxJobActivity {
   Description: String
   Name: String
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
@@ -274,6 +282,8 @@ input IxJobActivityInput {
   Description: String
   Name: String!
   CurrentLifespan: IxRangeInput
+  Start: String
+  End: String
   Tags: [IxAttribute__String__Input]
   ForeColor: String
   BackColor: String
@@ -371,6 +381,8 @@ type IxParty {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }
@@ -390,6 +402,8 @@ input IxPartyInput {
   Name: String!
   Dependencies: [CxDependencyInput]
   CurrentLifespan: IxRangeInput
+  Start: String
+  End: String
   Tags: [IxAttribute__String__Input]
   Address: IxAddressInput
 }

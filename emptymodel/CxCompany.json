@@ -4,7 +4,7 @@
 	},
 	"Contacts": [],
 	"AccountCode": "",
-	"ObjectType": "Plant",
+	"ObjectType": "Subcontractor",
 	"PhoneNumbers": [],
 	"HasSMSNumber": false,
 	"SMSNumber": {
@@ -26,11 +26,13 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
 		"Id": 0,
 		"ObjectType": "Address"
 	},
+	"Start": "",
+	"End": "",
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",

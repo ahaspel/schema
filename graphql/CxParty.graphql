@@ -16,6 +16,8 @@ type CxParty {
   Name: String
   Address: IxAddress
   ObjectType: CxPartyObjectType
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -31,6 +33,8 @@ input CxPartyInput {
   Name: String!
   Address: IxAddressInput
   ObjectType: CxPartyObjectType
+  Start: String
+  End: String
   CurrentLifespan: IxRangeInput
   Id: ID!
   Description: String

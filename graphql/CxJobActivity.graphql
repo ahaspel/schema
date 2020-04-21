@@ -16,6 +16,8 @@ type CxJobActivity {
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -31,6 +33,8 @@ input CxJobActivityInput {
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
+  Start: String
+  End: String
   CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]

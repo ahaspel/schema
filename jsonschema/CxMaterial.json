@@ -161,6 +161,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -269,6 +277,7 @@
 				},
 				"Start": {
 					"type": "string",
+					"minLength": 1,
 					"format": "date-time"
 				},
 				"Vendor": {
@@ -413,6 +422,14 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
+				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"Tags": {
 					"type": "array",
@@ -731,6 +748,14 @@
 		},
 		"AccountCode": {
 			"type": "string"
+		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
 		},
 		"Id": {
 			"type": "integer"

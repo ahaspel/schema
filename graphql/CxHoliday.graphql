@@ -12,6 +12,8 @@ type CxHoliday {
   Holiday: String
   Name: String
   ObjectType: CxHolidayObjectType
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -23,6 +25,8 @@ input CxHolidayInput {
   Holiday: String!
   Name: String!
   ObjectType: CxHolidayObjectType
+  Start: String
+  End: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

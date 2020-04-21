@@ -270,6 +270,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -557,6 +565,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -625,6 +641,14 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
+				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"Tags": {
 					"type": "array",
@@ -836,6 +860,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -936,6 +968,14 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
+				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"Id": {
 					"type": "integer"
@@ -1304,6 +1344,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1469,6 +1517,14 @@
 		},
 		"HasConflicts": {
 			"type": "boolean"
+		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

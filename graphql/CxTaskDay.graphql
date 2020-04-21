@@ -34,6 +34,8 @@ type CxTaskDay {
   Completed: Boolean
   Cancelled: Boolean
   ActionStatus: IxActionStatus
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -62,6 +64,8 @@ input CxTaskDayInput {
   ObjectType: CxTaskDayObjectType
   Resources: [IxResourceDO]!
   ActionStatus: IxActionStatusDO
+  Start: String
+  End: String
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
@@ -163,6 +167,8 @@ type IxCompany {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
   AccountCode: String
@@ -256,6 +262,8 @@ type IxJob {
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
   Divisions: [IxLookupValue]
@@ -273,6 +281,8 @@ type IxJobActivity {
   Description: String
   Name: String
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
@@ -363,6 +373,8 @@ type IxParty {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }
@@ -418,6 +430,8 @@ type IxResource {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Id: ID!
   ObjectType: IxResourceObjectType
   Description: String

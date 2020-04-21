@@ -24,16 +24,16 @@
 	"StartLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Source": "Action"
+		"Source": "GPSService"
 	},
 	"PunchStart": "",
 	"EndLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Source": "Action"
+		"Source": "GPSService"
 	},
 	"PunchEnd": "",
-	"Punch": "PunchedOut",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 0
@@ -47,6 +47,8 @@
 		"Quantity": 0
 	},
 	"Approvals": [],
+	"Start": "",
+	"End": "",
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",

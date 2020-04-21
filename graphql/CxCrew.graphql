@@ -11,6 +11,8 @@ type CxCrew {
   BackColor: String
   Location: IxLocation
   AccountCode: String
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -29,6 +31,8 @@ input CxCrewInput {
   ForeColor: String
   BackColor: String
   AccountCode: String
+  Start: String
+  End: String
   CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
@@ -109,6 +113,8 @@ type IxCompany {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
   AccountCode: String
@@ -151,6 +157,8 @@ type IxEmployee {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Id: ID!
   ObjectType: IxEmployeeObjectType
   Description: String
@@ -247,6 +255,8 @@ type IxParty {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }
@@ -290,6 +300,8 @@ type IxResource {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Id: ID!
   ObjectType: IxResourceObjectType
   Description: String

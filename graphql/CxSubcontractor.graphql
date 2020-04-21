@@ -23,6 +23,8 @@ type CxSubcontractor {
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -45,6 +47,8 @@ input CxSubcontractorInput {
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
+  Start: String
+  End: String
   CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
@@ -203,6 +207,8 @@ type IxParty {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }
@@ -218,6 +224,8 @@ input IxPartyInput {
   Name: String!
   Dependencies: [CxDependencyInput]
   CurrentLifespan: IxRangeInput
+  Start: String
+  End: String
   Tags: [IxAttribute__String__Input]
   Address: IxAddressInput
 }

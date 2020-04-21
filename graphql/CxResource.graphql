@@ -15,6 +15,8 @@ type CxResource {
   Location: IxLocation
   DisplayName: String
   AccountCode: String
+  Start: String
+  End: String
   CurrentLifespan: IxRange
   Id: ID!
   ObjectType: CxResourceObjectType
@@ -85,6 +87,8 @@ type IxCompany {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
   AccountCode: String
@@ -173,6 +177,8 @@ type IxParty {
   Name: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
+  Start: String
+  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }

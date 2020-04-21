@@ -297,6 +297,14 @@
 				"Plant"
 			]
 		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
+		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},

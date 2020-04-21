@@ -218,6 +218,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -504,6 +512,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -572,6 +588,14 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
+				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"Tags": {
 					"type": "array",
@@ -783,6 +807,14 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -883,6 +915,14 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
+				},
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"Id": {
 					"type": "integer"
@@ -1227,6 +1267,14 @@
 		},
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
+		},
+		"Start": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"format": "date-time"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
