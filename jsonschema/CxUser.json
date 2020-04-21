@@ -63,15 +63,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -88,8 +88,8 @@
 			},
 			"required": [
 				"Street",
-				"State",
 				"City",
+				"State",
 				"Id"
 			]
 		},

@@ -2,6 +2,7 @@ type CxBatch {
   ObjectType: CxBatchObjectType
   ImportType: CxBatchImportType
   Overwrite: Boolean
+  LastRun: String
   ChangedItems: Int
   SummaryMessage: String
   Errors: [String]
