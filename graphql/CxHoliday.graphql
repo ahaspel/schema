@@ -12,8 +12,6 @@ type CxHoliday {
   Holiday: String
   Name: String
   ObjectType: CxHolidayObjectType
-  Start: String
-  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -25,8 +23,6 @@ input CxHolidayInput {
   Holiday: String!
   Name: String!
   ObjectType: CxHolidayObjectType
-  Start: String
-  End: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -49,8 +45,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -59,8 +55,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {

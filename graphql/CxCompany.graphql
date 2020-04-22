@@ -10,8 +10,6 @@ type CxCompany {
   Emails: [IxEmail]
   Name: String
   Address: IxAddress
-  Start: String
-  End: String
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -31,8 +29,6 @@ input CxCompanyInput {
   Emails: [IxEmailInput]
   Name: String!
   Address: IxAddressInput
-  Start: String
-  End: String
   CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]
@@ -66,9 +62,9 @@ input FilterInput {
 type IxAddress {
   Street: String
   StreetDetails: String
-  ZipCode: String
-  City: String
   State: IxLookupValue
+  City: String
+  ZipCode: String
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -77,9 +73,9 @@ type IxAddress {
 input IxAddressInput {
   Street: String!
   StreetDetails: String
-  ZipCode: String
-  City: String!
   State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
   Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -95,8 +91,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -105,8 +101,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -116,15 +112,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -149,8 +145,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -189,12 +185,10 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   Id: ID!
   ObjectType: IxPartyObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
-  Start: String
-  End: String
   Tags: [IxAttribute__String__]
   Address: IxAddress
 }
@@ -206,12 +200,10 @@ input IxPartyInput {
   SMSNumber: IxPhoneNumberInput
   Id: ID!
   ObjectType: IxPartyObjectType
-  Description: String
   Name: String!
+  Description: String
   Dependencies: [CxDependencyInput]
   CurrentLifespan: IxRangeInput
-  Start: String
-  End: String
   Tags: [IxAttribute__String__Input]
   Address: IxAddressInput
 }
@@ -226,15 +218,15 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {

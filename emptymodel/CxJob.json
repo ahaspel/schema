@@ -17,15 +17,15 @@
 	"Address": {
 		"Street": "",
 		"StreetDetails": "",
-		"ZipCode": "",
-		"City": "",
 		"State": {
 			"Id": 0
 		},
+		"City": "",
+		"ZipCode": "",
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
 		"Id": 0,
 		"ObjectType": "Address"
@@ -57,8 +57,6 @@
 	"JobCosts": [],
 	"EstimatedLaborHours": 0,
 	"EstimatedEquipmentHours": 0,
-	"Start": "",
-	"End": "",
 	"Id": 0,
 	"Divisions": [],
 	"Description": "",

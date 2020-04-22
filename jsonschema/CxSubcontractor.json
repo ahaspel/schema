@@ -36,15 +36,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -61,8 +61,8 @@
 			},
 			"required": [
 				"Street",
-				"City",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -116,10 +116,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -191,10 +191,10 @@
 						"JobCertification"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -260,12 +260,12 @@
 						"Plant"
 					]
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -275,14 +275,6 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
 				},
 				"Tags": {
 					"type": "array",
@@ -311,10 +303,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -325,8 +317,8 @@
 		},
 		"IxRange": {
 			"superRequired": [
-				"Start",
-				"End"
+				"End",
+				"Start"
 			],
 			"type": "object",
 			"properties": {
@@ -341,11 +333,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
+			}
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
@@ -372,10 +360,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -416,10 +404,10 @@
 						"SupplyType"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -470,10 +458,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -564,14 +552,6 @@
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
-		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

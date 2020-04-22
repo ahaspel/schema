@@ -5,10 +5,12 @@
 	"properties": {
 		"Start": {
 			"type": "string",
+			"minLength": 1,
 			"format": "date-time"
 		},
 		"End": {
 			"type": "string",
+			"minLength": 1,
 			"format": "date-time"
 		},
 		"Duration": {
@@ -16,8 +18,8 @@
 		}
 	},
 	"required": [
-		"Start",
-		"End"
+		"End",
+		"Start"
 	],
 	"definitions": {}
 }

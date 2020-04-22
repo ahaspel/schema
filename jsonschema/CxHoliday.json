@@ -44,10 +44,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -97,10 +97,10 @@
 						"JobCertification"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -116,8 +116,8 @@
 		},
 		"IxRange": {
 			"superRequired": [
-				"Start",
-				"End"
+				"End",
+				"Start"
 			],
 			"type": "object",
 			"properties": {
@@ -132,11 +132,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
+			}
 		}
 	},
 	"immutable": [
@@ -160,14 +156,6 @@
 			"enum": [
 				"Holiday"
 			]
-		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

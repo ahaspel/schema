@@ -36,15 +36,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -61,8 +61,8 @@
 			},
 			"required": [
 				"Street",
-				"City",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -146,10 +146,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -160,14 +160,6 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
 				},
 				"Tags": {
 					"type": "array",
@@ -211,10 +203,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -286,10 +278,10 @@
 				"AccountCode": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -339,10 +331,10 @@
 						"JobCertification"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -408,10 +400,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -422,14 +414,6 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"Start": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"End": {
-					"type": "string",
-					"format": "date-time"
 				},
 				"Tags": {
 					"type": "array",
@@ -457,10 +441,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -486,8 +470,8 @@
 		},
 		"IxRange": {
 			"superRequired": [
-				"Start",
-				"End"
+				"End",
+				"Start"
 			],
 			"type": "object",
 			"properties": {
@@ -502,11 +486,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
+			}
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
@@ -533,10 +513,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -583,10 +563,10 @@
 						"ResourceType"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -648,10 +628,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -748,14 +728,6 @@
 		},
 		"AccountCode": {
 			"type": "string"
-		},
-		"Start": {
-			"type": "string",
-			"format": "date-time"
-		},
-		"End": {
-			"type": "string",
-			"format": "date-time"
 		},
 		"Id": {
 			"type": "integer"

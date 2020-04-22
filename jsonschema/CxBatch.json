@@ -84,10 +84,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -131,10 +131,10 @@
 						"Document"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -183,10 +183,10 @@
 						"JobCertification"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -199,14 +199,34 @@
 			"required": [
 				"Id"
 			]
+		},
+		"IxRange": {
+			"superRequired": [
+				"End",
+				"Start"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			}
 		}
 	},
 	"immutable": [
 		"ChangedItems",
+		"CurrentLifespan",
 		"Dto",
 		"Errors",
 		"HasAttachments",
-		"LastRun",
 		"Runs",
 		"SummaryMessage",
 		"Warnings"
@@ -232,9 +252,8 @@
 		"Overwrite": {
 			"type": "boolean"
 		},
-		"LastRun": {
-			"type": "string",
-			"format": "date-time"
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"ChangedItems": {
 			"type": "integer"

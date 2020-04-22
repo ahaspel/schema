@@ -2,7 +2,7 @@ type CxBatch {
   ObjectType: CxBatchObjectType
   ImportType: CxBatchImportType
   Overwrite: Boolean
-  LastRun: String
+  CurrentLifespan: IxRange
   ChangedItems: Int
   SummaryMessage: String
   Errors: [String]
@@ -77,8 +77,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -87,8 +87,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -102,8 +102,8 @@ type IxDocument {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxDocumentObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxDocumentInput {
@@ -113,8 +113,8 @@ input IxDocumentInput {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxDocumentObjectType
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxDocumentObjectType {
@@ -125,8 +125,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -156,6 +156,12 @@ enum IxLookupValueObjectType {
   TimeEntryLaborClass
   Privilege
   JobCertification
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
 }
 
 """

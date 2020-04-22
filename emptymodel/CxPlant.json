@@ -26,29 +26,27 @@
 	"SMSNumber": {
 		"PhoneNumber": "",
 		"Id": 0,
-		"Description": "",
-		"Name": ""
+		"Name": "",
+		"Description": ""
 	},
 	"Emails": [],
 	"Name": "",
 	"Address": {
 		"Street": "",
 		"StreetDetails": "",
-		"ZipCode": "",
-		"City": "",
 		"State": {
 			"Id": 0
 		},
+		"City": "",
+		"ZipCode": "",
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "Action"
+			"Source": "GPSService"
 		},
 		"Id": 0,
 		"ObjectType": "Address"
 	},
-	"Start": "",
-	"End": "",
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",
