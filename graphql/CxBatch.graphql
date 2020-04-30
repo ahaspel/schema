@@ -77,8 +77,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
@@ -87,8 +87,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -102,8 +102,8 @@ type IxDocument {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxDocumentObjectType
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxDocumentInput {
@@ -113,8 +113,8 @@ input IxDocumentInput {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxDocumentObjectType
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxDocumentObjectType {
@@ -125,8 +125,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 

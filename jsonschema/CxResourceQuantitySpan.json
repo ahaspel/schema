@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -146,10 +146,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -203,10 +203,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -278,10 +278,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -332,10 +332,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -373,10 +373,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -445,11 +445,79 @@
 						"ResourceSubtype"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxResourceType": {
+			"superRequired": [
+				"Family",
+				"Id",
+				"Name",
+				"ResourceSubtypes"
+			],
+			"type": "object",
+			"properties": {
+				"Family": {
+					"type": "string",
+					"enum": [
+						"Labor",
+						"Equipment",
+						"Material",
+						"Group"
+					]
+				},
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
+				},
+				"MoveVehicle": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceType"
+					]
 				},
 				"Description": {
 					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				}
 			},
 			"required": [
@@ -492,10 +560,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -506,6 +574,7 @@
 	},
 	"immutable": [
 		"ResourceSubtype",
+		"ResourceType",
 		"Supplier"
 	],
 	"type": "object",
@@ -515,6 +584,9 @@
 		},
 		"ResourceSubtypeId": {
 			"type": "integer"
+		},
+		"ResourceType": {
+			"$ref": "#/definitions/IxResourceType"
 		},
 		"Supplier": {
 			"$ref": "#/definitions/IxCompany"

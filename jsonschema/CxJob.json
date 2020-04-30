@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -146,10 +146,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -216,12 +216,12 @@
 						"CostCode"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -270,10 +270,10 @@
 						"Document"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -295,10 +295,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -361,12 +361,12 @@
 						"JobActivity"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -421,10 +421,10 @@
 						"JobCost"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -480,10 +480,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -549,10 +549,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -590,10 +590,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -658,10 +658,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},

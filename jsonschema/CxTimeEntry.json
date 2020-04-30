@@ -106,10 +106,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -162,10 +162,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -232,12 +232,12 @@
 						"CostCode"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -265,10 +265,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -331,10 +331,10 @@
 						"JobActivity"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -366,10 +366,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -417,10 +417,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -486,10 +486,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -527,10 +527,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -610,10 +610,10 @@
 						"Material"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Tags": {
@@ -676,10 +676,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -726,10 +726,10 @@
 						"ResourceType"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -791,10 +791,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
