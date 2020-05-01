@@ -1,3 +1,15 @@
+type CxChange {
+  Timestamp: String
+  UserName: String
+  Description: String
+}
+
+input CxChangeInput {
+  Timestamp: String!
+  UserName: String
+  Description: String
+}
+
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -14,6 +26,9 @@ type CxDocument {
   Key: String
   ObjectType: CxDocumentObjectType
   Name: String
+  ChangeHistory: [CxChange]
+  Created: String
+  LastModified: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -25,6 +40,7 @@ input CxDocumentInput {
   Key: String!
   ObjectType: CxDocumentObjectType
   Name: String
+  ChangeHistory: [CxChangeInput]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
