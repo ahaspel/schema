@@ -44,10 +44,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -97,10 +97,10 @@
 						"JobCertification"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -139,12 +139,12 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				}
 			},
 			"required": [

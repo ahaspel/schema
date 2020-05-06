@@ -17,13 +17,13 @@
 		"SMSNumber": {
 			"PhoneNumber": "",
 			"Id": 0,
-			"Description": "",
-			"Name": ""
+			"Name": "",
+			"Description": ""
 		},
 		"Id": 0,
-		"ObjectType": "Subcontractor",
-		"Description": "",
+		"ObjectType": "Company",
 		"Name": "",
+		"Description": "",
 		"Dependencies": [],
 		"CurrentLifespan": {
 			"Start": "",
@@ -42,7 +42,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "GPSService"
 			},
 			"Id": 0,
 			"ObjectType": "Address"

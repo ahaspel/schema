@@ -108,10 +108,10 @@
 						"Attribute"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -164,10 +164,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -234,12 +234,12 @@
 						"CostCode"
 					]
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -288,10 +288,10 @@
 						"Document"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"ChangeHistory": {
@@ -327,10 +327,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -393,12 +393,12 @@
 						"JobActivity"
 					]
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -453,10 +453,10 @@
 						"JobCost"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -512,10 +512,10 @@
 						"JobCertification"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -581,10 +581,10 @@
 						"Plant"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -622,10 +622,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -690,10 +690,10 @@
 						"Unit"
 					]
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
