@@ -108,10 +108,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -164,10 +164,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -234,12 +234,12 @@
 						"CostCode"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -288,10 +288,10 @@
 						"Document"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"ChangeHistory": {
@@ -327,10 +327,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -393,12 +393,12 @@
 						"JobActivity"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -453,10 +453,10 @@
 						"JobCost"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -470,6 +470,61 @@
 				"CostCode",
 				"Id",
 				"TotalAmount"
+			]
+		},
+		"IxJobTask": {
+			"type": "object",
+			"properties": {
+				"ParentId": {
+					"type": "integer"
+				},
+				"Priority": {
+					"type": "integer"
+				},
+				"Status": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"ResourceIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobTask"
+					]
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
 			]
 		},
 		"IxLookupValue": {
@@ -501,6 +556,7 @@
 						"Training",
 						"Union",
 						"State",
+						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
@@ -512,10 +568,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -581,10 +637,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -622,10 +678,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -690,10 +746,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -737,6 +793,12 @@
 		},
 		"TotalCost": {
 			"$ref": "#/definitions/IxMoney"
+		},
+		"JobTasks": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxJobTask"
+			}
 		},
 		"Types": {
 			"type": "array",

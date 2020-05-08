@@ -90,10 +90,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -146,10 +146,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -203,10 +203,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -322,10 +322,10 @@
 						"Employee"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Tags": {
@@ -407,12 +407,12 @@
 				"JobId": {
 					"type": "integer"
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
-				},
-				"Description": {
-					"type": "string"
 				}
 			},
 			"required": [
@@ -449,6 +449,7 @@
 						"Training",
 						"Union",
 						"State",
+						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
@@ -460,10 +461,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -529,10 +530,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -570,10 +571,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -642,10 +643,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -692,10 +693,10 @@
 						"ResourceType"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -757,10 +758,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},

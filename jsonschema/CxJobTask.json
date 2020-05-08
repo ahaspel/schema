@@ -44,10 +44,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -86,6 +86,7 @@
 						"Training",
 						"Union",
 						"State",
+						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
@@ -97,10 +98,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -136,13 +137,15 @@
 		}
 	},
 	"immutable": [
-		"CompletionStatus",
 		"Dependencies",
 		"Dto",
-		"PercentComplete"
+		"ParentId"
 	],
 	"type": "object",
 	"properties": {
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
@@ -153,11 +156,14 @@
 			"type": "string",
 			"minLength": 1
 		},
-		"CreatorId": {
+		"ParentId": {
 			"type": "integer"
 		},
-		"JobId": {
-			"type": "integer"
+		"ResourceIds": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
 		},
 		"Status": {
 			"$ref": "#/definitions/IxLookupValue"
@@ -165,20 +171,8 @@
 		"Priority": {
 			"type": "integer"
 		},
-		"PercentComplete": {
-			"type": "integer"
-		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
-		},
 		"Id": {
 			"type": "integer"
-		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
 		},
 		"Description": {
 			"type": "string"
@@ -197,10 +191,7 @@
 		}
 	},
 	"required": [
-		"CreatorId",
 		"Id",
-		"JobId",
-		"Name",
-		"Status"
+		"Name"
 	]
 }

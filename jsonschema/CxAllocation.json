@@ -127,10 +127,10 @@
 						"ActionStatus"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -220,10 +220,10 @@
 						"Attribute"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -276,10 +276,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -346,10 +346,10 @@
 						"CostCode"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -398,10 +398,10 @@
 						"Document"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"ChangeHistory": {
@@ -437,10 +437,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -499,6 +499,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"JobTasks": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxJobTask"
 					}
 				},
 				"Notes": {
@@ -565,10 +571,10 @@
 						"Job"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"AccountCode": {
@@ -652,10 +658,10 @@
 						"JobActivity"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -710,11 +716,64 @@
 						"JobCost"
 					]
 				},
+				"Description": {
+					"type": "string"
+				},
 				"Name": {
 					"type": "string"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxJobTask": {
+			"type": "object",
+			"properties": {
+				"ParentId": {
+					"type": "integer"
+				},
+				"Priority": {
+					"type": "integer"
+				},
+				"Status": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"ResourceIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobTask"
+					]
+				},
 				"Description": {
 					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				},
 				"Dependencies": {
 					"type": "array",
@@ -736,10 +795,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -776,6 +835,7 @@
 						"Training",
 						"Union",
 						"State",
+						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
@@ -787,10 +847,10 @@
 						"JobCertification"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -856,10 +916,10 @@
 						"Plant"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -897,10 +957,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -980,10 +1040,10 @@
 						"Material"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Tags": {
@@ -1046,10 +1106,10 @@
 						"ResourceSubtype"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -1096,10 +1156,10 @@
 						"ResourceType"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -1160,10 +1220,10 @@
 						"Shift"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -1323,10 +1383,10 @@
 						"VirtualTaskDay"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -1389,10 +1449,10 @@
 						"Unit"
 					]
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},

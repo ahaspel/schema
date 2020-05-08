@@ -1,12 +1,6 @@
 
 const CXJOBTASKINPUTMIN = `fragment CXJOBTASKINPUTMIN on CxJobTask {
   Name
-  CreatorId
-  JobId
-  Status {
-    Id
-    _ObjectType: ObjectType
-  }
   Id
 }`;
 module.exports = { fragment: CXJOBTASKINPUTMIN,

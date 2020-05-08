@@ -9,31 +9,27 @@ input CxDependencyInput {
 }
 
 type CxJobTask {
+  CurrentLifespan: IxRange
   ObjectType: CxJobTaskObjectType
   Name: String
-  CreatorId: ID
-  JobId: ID
+  ParentId: ID
+  ResourceIds: [Int]
   Status: IxLookupValue
   Priority: Int
-  PercentComplete: Int
-  CurrentLifespan: IxRange
   Id: ID!
-  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
 }
 
 input CxJobTaskInput {
+  CurrentLifespan: IxRangeInput
   ObjectType: CxJobTaskObjectType
   Name: String!
-  CreatorId: ID!
-  JobId: ID!
-  Status: IxLookupValueDO!
+  ResourceIds: [Int]
+  Status: IxLookupValueDO
   Priority: Int
-  CurrentLifespan: IxRangeInput
   Id: ID!
-  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -55,8 +51,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
@@ -65,8 +61,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -77,8 +73,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -99,6 +95,7 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  JobTaskStatus
   Attribute
   PurchaseOrderStatus
   TimeEntryType
