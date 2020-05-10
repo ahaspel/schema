@@ -14,11 +14,11 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   }
   Address {
     Street
-    City
     State {
       Id
       _ObjectType: ObjectType
     }
+    City
     Id
   }
   AccountCode

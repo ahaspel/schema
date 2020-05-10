@@ -111,15 +111,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -136,8 +136,8 @@
 			},
 			"required": [
 				"Street",
-				"City",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -767,26 +767,25 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Minority",
-						"Skill",
-						"Training",
-						"Union",
 						"State",
-						"JobTaskStatus",
-						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
+						"JobPriority",
+						"JobType",
+						"JobSubtype",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Skill",
+						"Training",
+						"Union",
+						"JobTaskStatus",
+						"Minority",
 						"Privilege",
 						"JobCertification"
 					]
