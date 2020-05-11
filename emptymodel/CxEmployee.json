@@ -21,7 +21,7 @@
 			"Name": ""
 		},
 		"Id": 0,
-		"ObjectType": "Plant",
+		"ObjectType": "Subcontractor",
 		"Description": "",
 		"Name": "",
 		"Dependencies": [],
@@ -34,15 +34,15 @@
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
+			"ZipCode": "",
+			"City": "",
 			"State": {
 				"Id": 0
 			},
-			"City": "",
-			"ZipCode": "",
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "Action"
 			},
 			"Id": 0,
 			"ObjectType": "Address"

@@ -7,6 +7,7 @@ type CxAllocation {
   JobActivityId: ID
   Shift: IxShift
   TaskDays: [IxTaskDay]
+  Dailies: [CxDaily]
   ResourceSpans: [CxResourceSpan]
   ResourceQuantitySpans: [CxResourceQuantitySpan]
   ActionStatus: IxActionStatus
@@ -58,6 +59,13 @@ type CxChange {
   Timestamp: String
   UserName: String
   Description: String
+}
+
+type CxDaily {
+  Day: String
+  HasConflicts: Boolean
+  Filled: Float
+  Needed: Float
 }
 
 type CxDependency {
@@ -128,9 +136,9 @@ enum IxActionStatusObjectType {
 type IxAddress {
   Street: String
   StreetDetails: String
-  State: IxLookupValue
-  City: String
   ZipCode: String
+  City: String
+  State: IxLookupValue
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType

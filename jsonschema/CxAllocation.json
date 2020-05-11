@@ -20,6 +20,24 @@
 				"Timestamp"
 			]
 		},
+		"CxDaily": {
+			"type": "object",
+			"properties": {
+				"Day": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"HasConflicts": {
+					"type": "boolean"
+				},
+				"Filled": {
+					"type": "number"
+				},
+				"Needed": {
+					"type": "number"
+				}
+			}
+		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -166,15 +184,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -191,8 +209,8 @@
 			},
 			"required": [
 				"Street",
-				"State",
 				"City",
+				"State",
 				"Id"
 			]
 		},
@@ -1482,6 +1500,7 @@
 		"ActionStatus",
 		"ActionType",
 		"BackColor",
+		"Dailies",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
@@ -1522,6 +1541,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxTaskDay"
+			}
+		},
+		"Dailies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDaily"
 			}
 		},
 		"ResourceSpans": {
