@@ -21,7 +21,7 @@
 			"Name": ""
 		},
 		"Id": 0,
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Company",
 		"Description": "",
 		"Name": "",
 		"Dependencies": [],
@@ -34,15 +34,15 @@
 		"Address": {
 			"Street": "",
 			"StreetDetails": "",
-			"ZipCode": "",
-			"City": "",
 			"State": {
 				"Id": 0
 			},
+			"City": "",
+			"ZipCode": "",
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
@@ -77,6 +77,8 @@
 		},
 		"Notes": ""
 	},
+	"Attachments": [],
+	"HasAttachments": false,
 	"ForeColor": "",
 	"BackColor": "",
 	"AccountCode": "",

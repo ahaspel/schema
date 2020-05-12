@@ -2,20 +2,20 @@
 const CXMOVEINPUTMIN = `fragment CXMOVEINPUTMIN on CxMove {
   Origin {
     Street
-    City
     State {
       Id
       _ObjectType: ObjectType
     }
+    City
     Id
   }
   Destination {
     Street
-    City
     State {
       Id
       _ObjectType: ObjectType
     }
+    City
     Id
   }
   Id

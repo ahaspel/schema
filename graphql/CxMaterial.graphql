@@ -1,3 +1,15 @@
+type CxChange {
+  Timestamp: String
+  UserName: String
+  Description: String
+}
+
+input CxChangeInput {
+  Timestamp: String!
+  UserName: String
+  Description: String
+}
+
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -22,6 +34,8 @@ type CxMaterial {
   ResourceSubtype: IxResourceSubtype
   UnitCost: IxUnitCost
   InCrew: Boolean
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
   ForeColor: String
   BackColor: String
   DisplayName: String
@@ -41,6 +55,8 @@ input CxMaterialInput {
   Reusable: Boolean!
   Owner: IxCompanyDO
   ResourceSubtype: IxResourceSubtypeDO!
+  Attachments: [IxDocumentInput]
+  HasAttachments: Boolean
   ForeColor: String
   BackColor: String
   DisplayName: String
@@ -65,9 +81,9 @@ input FilterInput {
 type IxAddress {
   Street: String
   StreetDetails: String
-  ZipCode: String
-  City: String
   State: IxLookupValue
+  City: String
+  ZipCode: String
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -129,6 +145,38 @@ enum IxCompanyObjectType {
   Company
   Subcontractor
   Plant
+}
+
+type IxDocument {
+  Attached: Boolean
+  Key: String
+  DocumentTypes: [IxLookupValue]
+  Dependencies: [CxDependency]
+  Id: ID!
+  ObjectType: IxDocumentObjectType
+  Description: String
+  Name: String
+  ChangeHistory: [CxChange]
+  Created: String
+  LastModified: String
+}
+
+input IxDocumentInput {
+  Attached: Boolean
+  Key: String!
+  DocumentTypes: [IxLookupValueDO]
+  Dependencies: [CxDependencyInput]
+  Id: ID!
+  ObjectType: IxDocumentObjectType
+  Description: String
+  Name: String
+  ChangeHistory: [CxChangeInput]
+  Created: String
+  LastModified: String
+}
+
+enum IxDocumentObjectType {
+  Document
 }
 
 type IxEmail {
@@ -196,25 +244,26 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
   State
+  JobTaskStatus
+  Attribute
   PurchaseOrderStatus
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  JobPriority
-  JobType
-  JobSubtype
-  Division
-  LaborClass
-  Language
-  License
-  Skill
-  Training
-  Union
-  JobTaskStatus
-  Minority
   Privilege
   JobCertification
 }

@@ -2,6 +2,24 @@
 	"id": "https://congistics.com/schema/CxTimeEntry",
 	"title": "com.congistics.cbrd.time.CxTimeEntry",
 	"definitions": {
+		"CxChange": {
+			"type": "object",
+			"properties": {
+				"Timestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"UserName": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Timestamp"
+			]
+		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -36,15 +54,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -61,8 +79,8 @@
 			},
 			"required": [
 				"Street",
-				"City",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -252,6 +270,66 @@
 				"UnitCost"
 			]
 		},
+		"IxDocument": {
+			"superRequired": [
+				"Id",
+				"Key"
+			],
+			"type": "object",
+			"properties": {
+				"Attached": {
+					"type": "boolean"
+				},
+				"Key": {
+					"type": "string"
+				},
+				"DocumentTypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Document"
+					]
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"ChangeHistory": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxChange"
+					}
+				},
+				"Created": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"LastModified": {
+					"type": "string",
+					"format": "date-time"
+				}
+			},
+			"required": [
+				"Key",
+				"Id"
+			]
+		},
 		"IxEmail": {
 			"superRequired": [
 				"Email"
@@ -394,25 +472,26 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
 						"State",
+						"JobTaskStatus",
+						"Attribute",
 						"PurchaseOrderStatus",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"JobPriority",
-						"JobType",
-						"JobSubtype",
-						"Division",
-						"LaborClass",
-						"Language",
-						"License",
-						"Skill",
-						"Training",
-						"Union",
-						"JobTaskStatus",
-						"Minority",
 						"Privilege",
 						"JobCertification"
 					]
@@ -627,6 +706,15 @@
 					"items": {
 						"$ref": "#/definitions/CxDependency"
 					}
+				},
+				"Attachments": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxDocument"
+					}
+				},
+				"HasAttachments": {
+					"type": "boolean"
 				},
 				"Divisions": {
 					"type": "array",
