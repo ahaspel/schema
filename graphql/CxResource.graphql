@@ -54,9 +54,9 @@ input FilterInput {
 type IxAddress {
   Street: String
   StreetDetails: String
-  State: IxLookupValue
-  City: String
   ZipCode: String
+  City: String
+  State: IxLookupValue
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
