@@ -21,7 +21,7 @@ type CxJobTask {
   ParentId: ID
   Resources: [IxResource]
   Status: IxLookupValue
-  Priority: Int
+  Priority: IxLookupValue
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -34,7 +34,7 @@ input CxJobTaskInput {
   Name: String!
   Resources: [IxResourceDO]
   Status: IxLookupValueDO
-  Priority: Int
+  Priority: IxLookupValueDO
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -189,6 +189,7 @@ enum IxLookupValueObjectType {
   JobTaskStatus
   Attribute
   PurchaseOrderStatus
+  JobTaskPriority
   TimeEntryType
   CompanyType
   JobStatus

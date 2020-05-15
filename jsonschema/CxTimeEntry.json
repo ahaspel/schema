@@ -391,7 +391,7 @@
 				"Completed": {
 					"type": "boolean"
 				},
-				"Priority": {
+				"SortOrder": {
 					"type": "integer"
 				},
 				"Dependencies": {
@@ -487,6 +487,7 @@
 						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
+						"JobTaskPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",

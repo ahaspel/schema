@@ -368,6 +368,7 @@
 						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
+						"JobTaskPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
@@ -808,7 +809,7 @@
 			"$ref": "#/definitions/IxLookupValue"
 		},
 		"Priority": {
-			"type": "integer"
+			"$ref": "#/definitions/IxLookupValue"
 		},
 		"Id": {
 			"type": "integer"

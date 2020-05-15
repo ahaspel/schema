@@ -292,7 +292,7 @@ type IxJob {
 type IxJobActivity {
   ParentId: ID
   Completed: Boolean
-  Priority: Int
+  SortOrder: Int
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxJobActivityObjectType
@@ -335,7 +335,7 @@ enum IxJobObjectType {
 
 type IxJobTask {
   ParentId: ID
-  Priority: Int
+  Priority: IxLookupValue
   Status: IxLookupValue
   Resources: [IxResource]
   CurrentLifespan: IxRange
@@ -383,6 +383,7 @@ enum IxLookupValueObjectType {
   JobTaskStatus
   Attribute
   PurchaseOrderStatus
+  JobTaskPriority
   TimeEntryType
   CompanyType
   JobStatus

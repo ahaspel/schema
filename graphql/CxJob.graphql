@@ -272,7 +272,7 @@ enum IxGeocodeSource {
 type IxJobActivity {
   ParentId: ID
   Completed: Boolean
-  Priority: Int
+  SortOrder: Int
   Dependencies: [CxDependency]
   Id: ID!
   ObjectType: IxJobActivityObjectType
@@ -287,7 +287,7 @@ type IxJobActivity {
 input IxJobActivityInput {
   ParentId: ID
   Completed: Boolean
-  Priority: Int
+  SortOrder: Int
   Dependencies: [CxDependencyInput]
   Id: ID!
   ObjectType: IxJobActivityObjectType
@@ -335,7 +335,7 @@ enum IxJobCostObjectType {
 
 type IxJobTask {
   ParentId: ID
-  Priority: Int
+  Priority: IxLookupValue
   Status: IxLookupValue
   Resources: [IxResource]
   CurrentLifespan: IxRange
@@ -349,7 +349,7 @@ type IxJobTask {
 
 input IxJobTaskInput {
   ParentId: ID
-  Priority: Int
+  Priority: IxLookupValueDO
   Status: IxLookupValueDO
   Resources: [IxResourceDO]
   CurrentLifespan: IxRangeInput
@@ -401,6 +401,7 @@ enum IxLookupValueObjectType {
   JobTaskStatus
   Attribute
   PurchaseOrderStatus
+  JobTaskPriority
   TimeEntryType
   CompanyType
   JobStatus

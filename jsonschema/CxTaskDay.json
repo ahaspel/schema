@@ -584,7 +584,7 @@
 				"Completed": {
 					"type": "boolean"
 				},
-				"Priority": {
+				"SortOrder": {
 					"type": "integer"
 				},
 				"Dependencies": {
@@ -684,7 +684,7 @@
 					"type": "integer"
 				},
 				"Priority": {
-					"type": "integer"
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"Status": {
 					"$ref": "#/definitions/IxLookupValue"
@@ -782,6 +782,7 @@
 						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
+						"JobTaskPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",

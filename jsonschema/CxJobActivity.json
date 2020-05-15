@@ -89,6 +89,7 @@
 						"JobTaskStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
+						"JobTaskPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
@@ -153,7 +154,7 @@
 		"Completed": {
 			"type": "boolean"
 		},
-		"Priority": {
+		"SortOrder": {
 			"type": "integer"
 		},
 		"ForeColor": {

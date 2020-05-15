@@ -12,7 +12,7 @@ type CxJobActivity {
   ParentId: ID
   Name: String
   Completed: Boolean
-  Priority: Int
+  SortOrder: Int
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
@@ -27,7 +27,7 @@ type CxJobActivity {
 input CxJobActivityInput {
   Name: String!
   Completed: Boolean
-  Priority: Int
+  SortOrder: Int
   ForeColor: String
   BackColor: String
   ObjectType: CxJobActivityObjectType
@@ -102,6 +102,7 @@ enum IxLookupValueObjectType {
   JobTaskStatus
   Attribute
   PurchaseOrderStatus
+  JobTaskPriority
   TimeEntryType
   CompanyType
   JobStatus
