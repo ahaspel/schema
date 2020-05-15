@@ -320,7 +320,7 @@ type IxJobTask {
   ParentId: ID
   Priority: Int
   Status: IxLookupValue
-  ResourceIds: [Int]
+  Resources: [IxResource]
   CurrentLifespan: IxRange
   Id: ID!
   ObjectType: IxJobTaskObjectType

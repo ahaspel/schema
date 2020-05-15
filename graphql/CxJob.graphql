@@ -337,7 +337,7 @@ type IxJobTask {
   ParentId: ID
   Priority: Int
   Status: IxLookupValue
-  ResourceIds: [Int]
+  Resources: [IxResource]
   CurrentLifespan: IxRange
   Id: ID!
   ObjectType: IxJobTaskObjectType
@@ -351,7 +351,7 @@ input IxJobTaskInput {
   ParentId: ID
   Priority: Int
   Status: IxLookupValueDO
-  ResourceIds: [Int]
+  Resources: [IxResourceDO]
   CurrentLifespan: IxRangeInput
   Id: ID!
   ObjectType: IxJobTaskObjectType
@@ -363,6 +363,13 @@ input IxJobTaskInput {
 
 enum IxJobTaskObjectType {
   JobTask
+}
+
+type IxLocation {
+  Address: IxAddress
+  JobId: ID
+  Description: String
+  Name: String
 }
 
 type IxLookupValue {
@@ -478,6 +485,79 @@ input IxRangeInput {
   Start: String!
   End: String!
   Duration: String
+}
+
+type IxResource {
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
+  Id: ID!
+  ObjectType: IxResourceObjectType
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+}
+
+input IxResourceDO {
+  Id: ID!
+}
+
+enum IxResourceObjectType {
+  Crew
+  Employee
+  Equipment
+  Material
+}
+
+type IxResourceSubtype {
+  ParentId: ID
+  Dependencies: [CxDependency]
+  Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
+  Description: String
+  Name: String
+}
+
+enum IxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  ResourceSubtypes: [IxResourceSubtype]
+  MoveVehicle: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxResourceTypeObjectType
+  Description: String
+  Name: String
+  Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute__String__]
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+enum IxResourceTypeObjectType {
+  ResourceType
 }
 
 type IxUnit {

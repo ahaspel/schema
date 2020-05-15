@@ -763,10 +763,10 @@
 				"Status": {
 					"$ref": "#/definitions/IxLookupValue"
 				},
-				"ResourceIds": {
+				"Resources": {
 					"type": "array",
 					"items": {
-						"type": "integer"
+						"$ref": "#/definitions/IxResource"
 					}
 				},
 				"CurrentLifespan": {
