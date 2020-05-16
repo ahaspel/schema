@@ -184,15 +184,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -209,8 +209,8 @@
 			},
 			"required": [
 				"Street",
-				"City",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -519,12 +519,6 @@
 						"$ref": "#/definitions/IxLookupValue"
 					}
 				},
-				"JobTasks": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxJobTask"
-					}
-				},
 				"Notes": {
 					"type": "string"
 				},
@@ -719,7 +713,7 @@
 				"TotalAmount": {
 					"type": "number"
 				},
-				"CompletedAmount": {
+				"ExpectedDailyAmount": {
 					"type": "number"
 				},
 				"BaseObject": {
@@ -739,59 +733,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxJobTask": {
-			"type": "object",
-			"properties": {
-				"ParentId": {
-					"type": "integer"
-				},
-				"Priority": {
-					"$ref": "#/definitions/IxLookupValue"
-				},
-				"Status": {
-					"$ref": "#/definitions/IxLookupValue"
-				},
-				"Resources": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResource"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"JobTask"
-					]
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				},
 				"Dependencies": {
 					"type": "array",
@@ -853,10 +794,10 @@
 						"Training",
 						"Union",
 						"State",
-						"JobTaskStatus",
+						"ToDoStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"JobTaskPriority",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",

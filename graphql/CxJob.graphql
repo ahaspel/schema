@@ -24,7 +24,6 @@ type CxJob {
   Priority: IxLookupValue
   Client: IxCompany
   TotalCost: IxMoney
-  JobTasks: [IxJobTask]
   Types: [IxLookupValue]
   Subtypes: [IxLookupValue]
   Certifications: [IxLookupValue]
@@ -60,7 +59,6 @@ input CxJobInput {
   Priority: IxLookupValueDO!
   Client: IxCompanyDO
   TotalCost: IxMoneyInput
-  JobTasks: [IxJobTaskInput]
   Types: [IxLookupValueDO]!
   Subtypes: [IxLookupValueDO]!
   Certifications: [IxLookupValueDO]
@@ -102,9 +100,9 @@ input FilterInput {
 type IxAddress {
   Street: String
   StreetDetails: String
-  ZipCode: String
-  City: String
   State: IxLookupValue
+  City: String
+  ZipCode: String
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -113,9 +111,9 @@ type IxAddress {
 input IxAddressInput {
   Street: String!
   StreetDetails: String
-  ZipCode: String
-  City: String!
   State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
   Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -307,7 +305,7 @@ type IxJobCost {
   CostCode: IxCostCode
   CostPerUnit: IxMoney
   TotalAmount: Float
-  CompletedAmount: Float
+  ExpectedDailyAmount: Float
   BaseObject: String
   Id: ID!
   ObjectType: IxJobCostObjectType
@@ -320,7 +318,7 @@ input IxJobCostInput {
   CostCode: IxCostCodeInput!
   CostPerUnit: IxMoneyInput
   TotalAmount: Float!
-  CompletedAmount: Float
+  ExpectedDailyAmount: Float
   BaseObject: String
   Id: ID!
   ObjectType: IxJobCostObjectType
@@ -331,45 +329,6 @@ input IxJobCostInput {
 
 enum IxJobCostObjectType {
   JobCost
-}
-
-type IxJobTask {
-  ParentId: ID
-  Priority: IxLookupValue
-  Status: IxLookupValue
-  Resources: [IxResource]
-  CurrentLifespan: IxRange
-  Id: ID!
-  ObjectType: IxJobTaskObjectType
-  Description: String
-  Name: String
-  Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
-}
-
-input IxJobTaskInput {
-  ParentId: ID
-  Priority: IxLookupValueDO
-  Status: IxLookupValueDO
-  Resources: [IxResourceDO]
-  CurrentLifespan: IxRangeInput
-  Id: ID!
-  ObjectType: IxJobTaskObjectType
-  Description: String
-  Name: String!
-  Tags: [IxAttribute__String__Input]
-  Dependencies: [CxDependencyInput]
-}
-
-enum IxJobTaskObjectType {
-  JobTask
-}
-
-type IxLocation {
-  Address: IxAddress
-  JobId: ID
-  Description: String
-  Name: String
 }
 
 type IxLookupValue {
@@ -398,10 +357,10 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  JobTaskStatus
+  ToDoStatus
   Attribute
   PurchaseOrderStatus
-  JobTaskPriority
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
@@ -486,79 +445,6 @@ input IxRangeInput {
   Start: String!
   End: String!
   Duration: String
-}
-
-type IxResource {
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Temporary: Boolean
-  UnitCost: IxUnitCost
-  DisplayName: String
-  CurrentLifespan: IxRange
-  Id: ID!
-  ObjectType: IxResourceObjectType
-  Description: String
-  Name: String
-  Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
-  Divisions: [IxLookupValue]
-  AccountCode: String
-  Location: IxLocation
-  ForeColor: String
-  BackColor: String
-}
-
-input IxResourceDO {
-  Id: ID!
-}
-
-enum IxResourceObjectType {
-  Crew
-  Employee
-  Equipment
-  Material
-}
-
-type IxResourceSubtype {
-  ParentId: ID
-  Dependencies: [CxDependency]
-  Id: ID!
-  ObjectType: IxResourceSubtypeObjectType
-  Description: String
-  Name: String
-}
-
-enum IxResourceSubtypeObjectType {
-  ResourceSubtype
-}
-
-type IxResourceType {
-  Family: IxResourceTypeFamily
-  ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxResourceTypeObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-  ForeColor: String
-  BackColor: String
-  Tags: [IxAttribute__String__]
-}
-
-enum IxResourceTypeFamily {
-  Labor
-  Equipment
-  Material
-  Group
-}
-
-enum IxResourceTypeObjectType {
-  ResourceType
 }
 
 type IxUnit {

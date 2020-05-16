@@ -32,9 +32,9 @@ input FilterInput {
 type IxAddress {
   Street: String
   StreetDetails: String
-  ZipCode: String
-  City: String
   State: IxLookupValue
+  City: String
+  ZipCode: String
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -125,10 +125,10 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  JobTaskStatus
+  ToDoStatus
   Attribute
   PurchaseOrderStatus
-  JobTaskPriority
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus

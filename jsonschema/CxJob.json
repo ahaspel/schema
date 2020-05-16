@@ -54,15 +54,15 @@
 				"StreetDetails": {
 					"type": "string"
 				},
-				"ZipCode": {
-					"type": "string"
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
 					"type": "string",
 					"minLength": 1
 				},
-				"State": {
-					"$ref": "#/definitions/IxLookupValue"
+				"ZipCode": {
+					"type": "string"
 				},
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
@@ -79,8 +79,8 @@
 			},
 			"required": [
 				"Street",
-				"City",
 				"State",
+				"City",
 				"Id"
 			]
 		},
@@ -438,7 +438,7 @@
 				"TotalAmount": {
 					"type": "number"
 				},
-				"CompletedAmount": {
+				"ExpectedDailyAmount": {
 					"type": "number"
 				},
 				"BaseObject": {
@@ -472,81 +472,6 @@
 				"TotalAmount"
 			]
 		},
-		"IxJobTask": {
-			"type": "object",
-			"properties": {
-				"ParentId": {
-					"type": "integer"
-				},
-				"Priority": {
-					"$ref": "#/definitions/IxLookupValue"
-				},
-				"Status": {
-					"$ref": "#/definitions/IxLookupValue"
-				},
-				"Resources": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResource"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"JobTask"
-					]
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				}
-			},
-			"required": [
-				"Id",
-				"Name"
-			]
-		},
-		"IxLocation": {
-			"type": "object",
-			"properties": {
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
-				},
-				"JobId": {
-					"type": "integer"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Address"
-			]
-		},
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
@@ -576,10 +501,10 @@
 						"Training",
 						"Union",
 						"State",
-						"JobTaskStatus",
+						"ToDoStatus",
 						"Attribute",
 						"PurchaseOrderStatus",
-						"JobTaskPriority",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
@@ -731,196 +656,6 @@
 				}
 			}
 		},
-		"IxResource": {
-			"type": "object",
-			"properties": {
-				"Owner": {
-					"$ref": "#/definitions/IxCompany"
-				},
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"Temporary": {
-					"type": "boolean"
-				},
-				"UnitCost": {
-					"$ref": "#/definitions/IxUnitCost"
-				},
-				"DisplayName": {
-					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Crew",
-						"Employee",
-						"Equipment",
-						"Material"
-					]
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"Attachments": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxDocument"
-					}
-				},
-				"HasAttachments": {
-					"type": "boolean"
-				},
-				"Divisions": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"AccountCode": {
-					"type": "string"
-				},
-				"Location": {
-					"$ref": "#/definitions/IxLocation"
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxResourceSubtype": {
-			"superRequired": [
-				"Id",
-				"Name"
-			],
-			"type": "object",
-			"properties": {
-				"ParentId": {
-					"type": "integer"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceSubtype"
-					]
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxResourceType": {
-			"superRequired": [
-				"Family",
-				"Id",
-				"Name",
-				"ResourceSubtypes"
-			],
-			"type": "object",
-			"properties": {
-				"Family": {
-					"type": "string",
-					"enum": [
-						"Labor",
-						"Equipment",
-						"Material",
-						"Group"
-					]
-				},
-				"ResourceSubtypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceSubtype"
-					}
-				},
-				"MoveVehicle": {
-					"type": "boolean"
-				},
-				"BaseObject": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceType"
-					]
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxUnit": {
 			"superRequired": [
 				"Id"
@@ -1004,12 +739,6 @@
 		},
 		"TotalCost": {
 			"$ref": "#/definitions/IxMoney"
-		},
-		"JobTasks": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxJobTask"
-			}
 		},
 		"Types": {
 			"type": "array",

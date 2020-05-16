@@ -14,34 +14,37 @@ input CxDependencyInput {
   Ids: [Int]!
 }
 
-type CxJobTask {
+type CxToDo {
   CurrentLifespan: IxRange
-  ObjectType: CxJobTaskObjectType
+  ObjectType: CxToDoObjectType
   Name: String
-  ParentId: ID
+  Job: IxJob
   Resources: [IxResource]
   Status: IxLookupValue
   Priority: IxLookupValue
+  FieldNotes: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
 }
 
-input CxJobTaskInput {
+input CxToDoInput {
   CurrentLifespan: IxRangeInput
-  ObjectType: CxJobTaskObjectType
+  ObjectType: CxToDoObjectType
   Name: String!
+  Job: IxJobDO
   Resources: [IxResourceDO]
   Status: IxLookupValueDO
   Priority: IxLookupValueDO
+  FieldNotes: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
 }
 
-enum CxJobTaskObjectType {
-  JobTask
+enum CxToDoObjectType {
+  ToDo
 }
 
 input FilterInput {
@@ -54,9 +57,9 @@ input FilterInput {
 type IxAddress {
   Street: String
   StreetDetails: String
-  ZipCode: String
-  City: String
   State: IxLookupValue
+  City: String
+  ZipCode: String
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
@@ -116,6 +119,21 @@ enum IxCompanyObjectType {
   Plant
 }
 
+type IxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxCostCodeObjectType
+  Description: String
+  Name: String
+  Dependencies: [CxDependency]
+}
+
+enum IxCostCodeObjectType {
+  CostCode
+}
+
 type IxDocument {
   Attached: Boolean
   Key: String
@@ -153,6 +171,84 @@ enum IxGeocodeSource {
   GPSService
 }
 
+type IxJob {
+  Client: IxCompany
+  Priority: IxLookupValue
+  Certifications: [IxLookupValue]
+  Notes: String
+  JobActivities: [IxJobActivity]
+  JobStatus: IxLookupValue
+  StatusDue: String
+  Types: [IxLookupValue]
+  Subtypes: [IxLookupValue]
+  Owner: IxParty
+  Manager: IxParty
+  JobCosts: [IxJobCost]
+  TotalCost: IxMoney
+  EstimatedLaborHours: Float
+  EstimatedEquipmentHours: Float
+  Dependencies: [CxDependency]
+  Id: ID!
+  ObjectType: IxJobObjectType
+  Description: String
+  Name: String
+  AccountCode: String
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  ForeColor: String
+  BackColor: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+  DisplayName: String
+}
+
+type IxJobActivity {
+  ParentId: ID
+  Completed: Boolean
+  SortOrder: Int
+  Dependencies: [CxDependency]
+  Id: ID!
+  ObjectType: IxJobActivityObjectType
+  Description: String
+  Name: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
+}
+
+type IxJobCost {
+  CostCode: IxCostCode
+  CostPerUnit: IxMoney
+  TotalAmount: Float
+  ExpectedDailyAmount: Float
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxJobCostObjectType
+  Description: String
+  Name: String
+  Dependencies: [CxDependency]
+}
+
+enum IxJobCostObjectType {
+  JobCost
+}
+
+input IxJobDO {
+  Id: ID!
+}
+
+enum IxJobObjectType {
+  Job
+}
+
 type IxLocation {
   Address: IxAddress
   JobId: ID
@@ -186,10 +282,10 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  JobTaskStatus
+  ToDoStatus
   Attribute
   PurchaseOrderStatus
-  JobTaskPriority
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
@@ -366,10 +462,10 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxJobTasks_onSave(data: [CxJobTaskInput], filters: [FilterInput], objectType: String = "JobTask", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxJobTask]
-  cxJobTasks_onDelete(data: [String], objectType: String = "JobTask", operation: String = "delete"): [CxJobTask]
+  cxToDos_onSave(data: [CxToDoInput], filters: [FilterInput], objectType: String = "ToDo", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxToDo]
+  cxToDos_onDelete(data: [String], objectType: String = "ToDo", operation: String = "delete"): [CxToDo]
 }
 
 extend type Query {
-  cxJobTasks(filters: [FilterInput], objectType: String = "JobTask"): [CxJobTask]
+  cxToDos(filters: [FilterInput], objectType: String = "ToDo"): [CxToDo]
 }

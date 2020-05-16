@@ -12,7 +12,7 @@ type CxJobCost {
   CostPerUnit: IxMoney
   CostCode: IxCostCode
   TotalAmount: Float
-  CompletedAmount: Float
+  ExpectedDailyAmount: Float
   ObjectType: CxJobCostObjectType
   Name: String
   Description: String
@@ -24,7 +24,7 @@ input CxJobCostInput {
   CostPerUnit: IxMoneyInput
   CostCode: IxCostCodeInput!
   TotalAmount: Float!
-  CompletedAmount: Float
+  ExpectedDailyAmount: Float
   ObjectType: CxJobCostObjectType
   Name: String
   Description: String
