@@ -58,8 +58,8 @@ type IxLookupValue {
   BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
