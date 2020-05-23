@@ -1,0 +1,106 @@
+{
+	"ObjectType": "TimeEntry",
+	"Hours": 101,
+	"Minutes": 378,
+	"Resource": {
+		"Id": 6
+	},
+	"EntryType": {
+		"Id": 114
+	},
+	"EntryLaborClass": {
+		"Id": 129
+	},
+	"CostCodes": [
+		{
+			"UnitCost": {
+				"Unit": {
+					"Id": 1
+				},
+				"Cost": {
+					"Unit": {
+						"Id": 1
+					},
+					"Quantity": 826
+				},
+				"Notes": "wsxosUK"
+			},
+			"Global": false,
+			"BaseObject": "jaydyFM",
+			"Id": 0,
+			"ObjectType": "CostCode",
+			"Description": "yKmDTZL",
+			"Name": "sXcnARQYM",
+			"Dependencies": []
+		}
+	],
+	"AuxiliaryResources": [
+		{
+			"Id": 6
+		}
+	],
+	"JobActivity": {
+		"Id": 156
+	},
+	"Owner": {
+		"Id": 1
+	},
+	"IsVoid": false,
+	"Billable": false,
+	"StartLocation": {
+		"Lat": -18.6172,
+		"Lng": -69.6294,
+		"Source": "Owner"
+	},
+	"PunchStart": "2019-01-14T08:00:00",
+	"EndLocation": {
+		"Lat": 18.8348,
+		"Lng": 40.9209,
+		"Source": "GPSService"
+	},
+	"PunchEnd": "2019-01-14T08:00:00",
+	"Punch": "Manual",
+	"StartDistance": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 344
+	},
+	"EndDistance": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 210
+	},
+	"Approvals": [
+		{
+			"Approver": {
+				"Id": 1
+			},
+			"AsOf": "2019-01-14T08:00:00"
+		}
+	],
+	"CurrentLifespan": {
+		"Start": "2018-01-14T00:00:00",
+		"End": "2018-12-14T00:00:00"
+	},
+	"Id": 0,
+	"Divisions": [
+		{
+			"Id": 12
+		}
+	],
+	"Description": "sxojcK",
+	"Tags": [
+		{
+			"BaseObject": "MGGlRRPGoZP",
+			"AttributeId": 92,
+			"Dependencies": [],
+			"Id": 0,
+			"ObjectType": "Attribute",
+			"Description": "PRCcjRRNtZn",
+			"Name": "Capacity"
+		}
+	],
+	"__typename": "CxTimeEntry"
+}
