@@ -489,6 +489,9 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
 						"Division",
 						"LaborClass",
 						"Language",
@@ -506,9 +509,6 @@
 						"TimeEntryLaborClass",
 						"ToDoStatus",
 						"ToDoPriority",
-						"JobPriority",
-						"JobSubtype",
-						"JobType",
 						"Minority",
 						"Privilege",
 						"JobCertification"
