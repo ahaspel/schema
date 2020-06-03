@@ -14,6 +14,7 @@ type CxAllocation {
   ForeColor: String
   BackColor: String
   ResourceIds: [Int]
+  Crew: IxCrew
   CrewId: ID
   HasConflicts: Boolean
   CurrentLifespan: IxRange
@@ -43,6 +44,7 @@ input CxAllocationInput {
   JobActivity: IxJobActivityDO!
   Shift: IxShiftDO
   TaskDays: [IxTaskDayInput]
+  Crew: IxCrewInput
   CrewId: ID
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
@@ -57,6 +59,12 @@ enum CxAllocationObjectType {
 
 type CxChange {
   Timestamp: String
+  UserName: String
+  Description: String
+}
+
+input CxChangeInput {
+  Timestamp: String!
   UserName: String
   Description: String
 }
@@ -144,6 +152,17 @@ type IxAddress {
   ObjectType: IxAddressObjectType
 }
 
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
 enum IxAddressObjectType {
   Address
 }
@@ -217,6 +236,64 @@ enum IxCostCodeObjectType {
   CostCode
 }
 
+type IxCrew {
+  Manager: IxEmployee
+  Foreman: IxEmployee
+  Resources: [IxResource]
+  CurrentResources: [IxResource]
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
+  Id: ID!
+  ObjectType: IxCrewObjectType
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+}
+
+input IxCrewInput {
+  Manager: IxEmployeeDO
+  Foreman: IxEmployeeDO!
+  Resources: [IxResourceDO]!
+  CurrentResources: [IxResourceDO]
+  Owner: IxCompanyDO
+  ResourceType: IxResourceTypeDO
+  ResourceSubtype: IxResourceSubtypeDO
+  Temporary: Boolean
+  UnitCost: IxUnitCostInput
+  DisplayName: String
+  CurrentLifespan: IxRangeInput
+  Id: ID!
+  ObjectType: IxCrewObjectType
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__Input]
+  Dependencies: [CxDependencyInput]
+  Attachments: [IxDocumentInput]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValueDO]
+  AccountCode: String
+  Location: IxLocationInput
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxCrewObjectType {
+  Crew
+}
+
 type IxDocument {
   Attached: Boolean
   Key: String
@@ -227,6 +304,20 @@ type IxDocument {
   Description: String
   Name: String
   ChangeHistory: [CxChange]
+  Created: String
+  LastModified: String
+}
+
+input IxDocumentInput {
+  Attached: Boolean
+  Key: String!
+  DocumentTypes: [IxLookupValueDO]
+  Dependencies: [CxDependencyInput]
+  Id: ID!
+  ObjectType: IxDocumentObjectType
+  Description: String
+  Name: String
+  ChangeHistory: [CxChangeInput]
   Created: String
   LastModified: String
 }
@@ -242,9 +333,63 @@ type IxEmail {
   Name: String
 }
 
+type IxEmployee {
+  Person: IxParty
+  FirstName: String
+  LastName: String
+  MiddleName: String
+  BirthDate: String
+  PreviousExperience: IxQuantity
+  Minority: [IxLookupValue]
+  Unions: [IxLookupValue]
+  Licenses: [IxLookupValue]
+  Languages: [IxLookupValue]
+  TrainingCourses: [IxLookupValue]
+  Skills: [IxLookupValue]
+  LaborClassification: [IxLookupValue]
+  Machines: [IxResourceType]
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
+  Id: ID!
+  ObjectType: IxEmployeeObjectType
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+  IsMover: Boolean
+  Contacts: [IxParty]
+  InCrew: Boolean
+}
+
+input IxEmployeeDO {
+  Id: ID!
+}
+
+enum IxEmployeeObjectType {
+  Employee
+}
+
 type IxGeocode {
   Lat: Float
   Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
+  Lat: Float!
+  Lng: Float!
   Source: IxGeocodeSource
 }
 
@@ -339,6 +484,13 @@ type IxLocation {
   Name: String
 }
 
+input IxLocationInput {
+  Address: IxAddressInput!
+  JobId: ID
+  Description: String
+  Name: String
+}
+
 type IxLookupValue {
   BaseObject: String
   Id: ID!
@@ -346,6 +498,10 @@ type IxLookupValue {
   Description: String
   Name: String
   Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -356,20 +512,20 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
-  Minority
   Skill
   Training
   Union
   State
-  ToDoStatus
   Attribute
   PurchaseOrderStatus
-  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
+  ToDoStatus
+  ToDoPriority
+  Minority
   Privilege
   JobCertification
 }
@@ -377,6 +533,11 @@ enum IxLookupValueObjectType {
 type IxMoney {
   Unit: IxUnit
   Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
 type IxParty {
@@ -634,6 +795,12 @@ type IxUnit {
 type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
+  Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
   Notes: String
 }
 
