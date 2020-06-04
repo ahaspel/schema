@@ -20,24 +20,6 @@
 				"Timestamp"
 			]
 		},
-		"CxDaily": {
-			"type": "object",
-			"properties": {
-				"Day": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"HasConflicts": {
-					"type": "boolean"
-				},
-				"Filled": {
-					"type": "number"
-				},
-				"Needed": {
-					"type": "number"
-				}
-			}
-		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -1765,12 +1747,6 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxTaskDay"
-			}
-		},
-		"Dailies": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/CxDaily"
 			}
 		},
 		"ResourceSpans": {

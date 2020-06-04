@@ -7,7 +7,6 @@ type CxAllocation {
   JobActivityId: ID
   Shift: IxShift
   TaskDays: [IxTaskDay]
-  Dailies: [CxDaily]
   ResourceSpans: [CxResourceSpan]
   ResourceQuantitySpans: [CxResourceQuantitySpan]
   ActionStatus: IxActionStatus
@@ -67,13 +66,6 @@ input CxChangeInput {
   Timestamp: String!
   UserName: String
   Description: String
-}
-
-type CxDaily {
-  Day: String
-  HasConflicts: Boolean
-  Filled: Float
-  Needed: Float
 }
 
 type CxDependency {
