@@ -67,14 +67,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -99,19 +99,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -153,9 +153,6 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -164,10 +161,13 @@
 						"Plant"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -225,21 +225,21 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"CostCode"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -279,19 +279,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Document"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"ChangeHistory": {
@@ -327,10 +327,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -384,21 +384,21 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobActivity"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -444,19 +444,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobCost"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -483,9 +483,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -505,19 +502,22 @@
 						"Attribute",
 						"PurchaseOrderStatus",
 						"ToDoPriority",
+						"DocumentType",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -571,9 +571,6 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -583,10 +580,13 @@
 						"Plant"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -624,10 +624,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -683,19 +683,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				}
 			},

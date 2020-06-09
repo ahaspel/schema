@@ -4,8 +4,8 @@
 	"SMSNumber": {
 		"PhoneNumber": "",
 		"Id": 0,
-		"Description": "",
-		"Name": ""
+		"Name": "",
+		"Description": ""
 	},
 	"Emails": [],
 	"Name": "",
@@ -20,12 +20,12 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "Owner"
+			"Source": "GPSService"
 		},
-		"Id": 0,
-		"ObjectType": "Address"
+		"ObjectType": "Address",
+		"Id": 0
 	},
-	"ObjectType": "Plant",
+	"ObjectType": "Party",
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",

@@ -58,8 +58,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -69,8 +69,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -81,20 +81,20 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -104,15 +104,15 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -135,10 +135,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -163,10 +163,10 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   ToDoPriority
+  DocumentType
   TimeEntryType
   CompanyType
   JobStatus
-  DocumentType
   TimeEntryLaborClass
   Privilege
   JobCertification
@@ -175,15 +175,15 @@ enum IxLookupValueObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {

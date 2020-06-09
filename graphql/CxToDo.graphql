@@ -61,8 +61,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -73,20 +73,20 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -100,10 +100,10 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxCompanyObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -123,10 +123,10 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -139,10 +139,10 @@ type IxDocument {
   Key: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxDocumentObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   ChangeHistory: [CxChange]
   Created: String
   LastModified: String
@@ -155,8 +155,8 @@ enum IxDocumentObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -188,10 +188,10 @@ type IxJob {
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxJobObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   AccountCode: String
   Attachments: [IxDocument]
   HasAttachments: Boolean
@@ -210,10 +210,10 @@ type IxJobActivity {
   Completed: Boolean
   SortOrder: Int
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxJobActivityObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   ForeColor: String
@@ -230,10 +230,10 @@ type IxJobCost {
   TotalAmount: Float
   ExpectedDailyAmount: Float
   BaseObject: String
-  Id: ID!
   ObjectType: IxJobCostObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -252,16 +252,16 @@ enum IxJobObjectType {
 type IxLocation {
   Address: IxAddress
   JobId: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -286,10 +286,10 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   ToDoPriority
+  DocumentType
   TimeEntryType
   CompanyType
   JobStatus
-  DocumentType
   TimeEntryLaborClass
   Privilege
   JobCertification
@@ -305,10 +305,10 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
   ObjectType: IxPartyObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -325,8 +325,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
@@ -349,10 +349,10 @@ type IxResource {
   UnitCost: IxUnitCost
   DisplayName: String
   CurrentLifespan: IxRange
-  Id: ID!
   ObjectType: IxResourceObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
   Attachments: [IxDocument]
@@ -378,10 +378,10 @@ enum IxResourceObjectType {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -393,10 +393,10 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
@@ -419,10 +419,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

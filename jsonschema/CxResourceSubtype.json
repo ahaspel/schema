@@ -35,19 +35,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -68,9 +68,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -90,19 +87,22 @@
 						"Attribute",
 						"PurchaseOrderStatus",
 						"ToDoPriority",
+						"DocumentType",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
