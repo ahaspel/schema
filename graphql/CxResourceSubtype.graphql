@@ -43,20 +43,20 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Name: String
+  ObjectType: IxAttributeStringObjectType
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Name: String
+  ObjectType: IxAttributeStringObjectType
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {

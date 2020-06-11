@@ -54,6 +54,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -73,22 +76,19 @@
 						"Attribute",
 						"PurchaseOrderStatus",
 						"ToDoPriority",
-						"DocumentType",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
+						"DocumentType",
 						"TimeEntryLaborClass",
 						"Privilege",
 						"JobCertification"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {

@@ -56,10 +56,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
+  ObjectType: IxLookupValueObjectType
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -84,10 +84,10 @@ enum IxLookupValueObjectType {
   Attribute
   PurchaseOrderStatus
   ToDoPriority
-  DocumentType
   TimeEntryType
   CompanyType
   JobStatus
+  DocumentType
   TimeEntryLaborClass
   Privilege
   JobCertification
