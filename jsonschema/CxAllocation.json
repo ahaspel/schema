@@ -1534,6 +1534,12 @@
 				"ResourceId": {
 					"type": "integer"
 				},
+				"AuxiliaryResources": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResource"
+					}
+				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
 				},

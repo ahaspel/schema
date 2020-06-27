@@ -1244,6 +1244,12 @@
 				"$ref": "#/definitions/IxLookupValue"
 			}
 		},
+		"AuxiliaryResources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
+		},
 		"Resources": {
 			"type": "array",
 			"items": {

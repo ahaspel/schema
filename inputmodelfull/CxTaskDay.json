@@ -10,16 +10,21 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 672
+		"Quantity": 631
 	},
 	"Supplier": {
 		"Id": 2
 	},
-	"ShiftSupervisor": false,
+	"ShiftSupervisor": true,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
+	"AuxiliaryResources": [
+		{
+			"Id": 6
+		}
+	],
 	"Resources": [
 		{
 			"Id": 6
@@ -33,15 +38,15 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "RjFWIS",
+	"Description": "VwFYahbJyBtU",
 	"Tags": [
 		{
-			"BaseObject": "pgJongVpHpm",
+			"BaseObject": "nVVOUOIu",
 			"AttributeId": 92,
 			"Dependencies": [],
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Description": "IrPKkyMu",
+			"Description": "mrmaHVCL",
 			"Name": "Capacity"
 		}
 	],

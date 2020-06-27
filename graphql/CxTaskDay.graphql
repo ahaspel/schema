@@ -34,6 +34,7 @@ type CxTaskDay {
   JobActivity: IxJobActivity
   ObjectType: CxTaskDayObjectType
   Divisions: [IxLookupValue]
+  AuxiliaryResources: [IxResource]
   Resources: [IxResource]
   ResourceId: ID
   DisplayName: String
@@ -65,6 +66,7 @@ input CxTaskDayInput {
   ShiftSupervisor: Boolean
   JobActivity: IxJobActivityDO!
   ObjectType: CxTaskDayObjectType
+  AuxiliaryResources: [IxResourceDO]
   Resources: [IxResourceDO]!
   ActionStatus: IxActionStatusDO
   CurrentLifespan: IxRangeInput!
