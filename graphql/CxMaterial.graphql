@@ -22,13 +22,13 @@ input CxDependencyInput {
 
 type CxMaterial {
   ObjectType: CxMaterialObjectType
-  Temporary: Boolean
   CurrentLifespan: IxRange
   Inventory: IxInventory
   Quantity: IxQuantity
   QuantityRemaining: IxQuantity
   Unit: IxUnit
   Reusable: Boolean
+  Temporary: Boolean
   Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype

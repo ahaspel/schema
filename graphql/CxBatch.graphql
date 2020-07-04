@@ -1,4 +1,5 @@
 type CxBatch {
+  Name: String
   ObjectType: CxBatchObjectType
   ImportType: CxBatchImportType
   Overwrite: Boolean
@@ -12,7 +13,6 @@ type CxBatch {
   HasAttachments: Boolean
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
 }
 
@@ -24,13 +24,13 @@ enum CxBatchImportType {
 }
 
 input CxBatchInput {
+  Name: String
   ObjectType: CxBatchObjectType
   ImportType: CxBatchImportType!
   Overwrite: Boolean
   Attachments: [IxDocumentInput]
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttribute__String__Input]
 }
 

@@ -267,6 +267,9 @@
 	],
 	"type": "object",
 	"properties": {
+		"Name": {
+			"type": "string"
+		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
@@ -326,9 +329,6 @@
 			"type": "integer"
 		},
 		"Description": {
-			"type": "string"
-		},
-		"Name": {
 			"type": "string"
 		},
 		"Tags": {
