@@ -38,8 +38,8 @@ input CxCompanyInput {
 
 enum CxCompanyObjectType {
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 type CxDependency {
@@ -213,8 +213,8 @@ input IxPartyInput {
 enum IxPartyObjectType {
   Party
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {

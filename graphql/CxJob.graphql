@@ -173,8 +173,8 @@ input IxCompanyDO {
 
 enum IxCompanyObjectType {
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 type IxCostCode {
@@ -417,8 +417,8 @@ input IxPartyInput {
 enum IxPartyObjectType {
   Party
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {

@@ -134,8 +134,8 @@ type IxCompany {
 
 enum IxCompanyObjectType {
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 type IxDocument {
@@ -306,8 +306,8 @@ type IxParty {
 enum IxPartyObjectType {
   Party
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {

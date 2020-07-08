@@ -21,6 +21,8 @@ enum CxBatchImportType {
   Employee
   Equipment
   Job
+  JobCost
+  JobActivity
 }
 
 input CxBatchInput {

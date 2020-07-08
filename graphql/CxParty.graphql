@@ -40,8 +40,8 @@ input CxPartyInput {
 enum CxPartyObjectType {
   Party
   Company
-  Subcontractor
   Plant
+  Subcontractor
 }
 
 input FilterInput {
