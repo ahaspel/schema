@@ -38,6 +38,29 @@
 				"Ids"
 			]
 		},
+		"CxResourceRole": {
+			"type": "object",
+			"properties": {
+				"Resource": {
+					"$ref": "#/definitions/IxResource"
+				},
+				"ResourceId": {
+					"type": "integer"
+				},
+				"Role": {
+					"type": "string",
+					"minLength": 1,
+					"enum": [
+						"Operator",
+						"Principal"
+					]
+				}
+			},
+			"required": [
+				"ResourceId",
+				"Role"
+			]
+		},
 		"IxActionStatus": {
 			"type": "object",
 			"properties": {
@@ -63,14 +86,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ActionStatus"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -124,14 +147,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -156,14 +179,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -210,9 +233,6 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -220,6 +240,9 @@
 						"Plant",
 						"Subcontractor"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -282,14 +305,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"CostCode"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -333,14 +356,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Document"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -500,14 +523,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Job"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -587,14 +610,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobActivity"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -645,14 +668,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"JobCost"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -702,9 +725,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -720,17 +740,21 @@
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"Attribute",
 						"PurchaseOrderStatus",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
 						"Privilege",
 						"JobCertification"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -789,9 +813,6 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -800,6 +821,9 @@
 						"Plant",
 						"Subcontractor"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -913,9 +937,6 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -924,6 +945,9 @@
 						"Equipment",
 						"Material"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -991,14 +1015,14 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -1041,14 +1065,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceType"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -1106,14 +1130,14 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"Description": {
 					"type": "string"
@@ -1161,6 +1185,9 @@
 		"JobActivityId",
 		"JobId",
 		"Location",
+		"Principal",
+		"PrincipalIds",
+		"Resource",
 		"ResourceId",
 		"ResourceSubtypeId",
 		"ResourceTypeId",
@@ -1243,10 +1270,28 @@
 				"$ref": "#/definitions/IxLookupValue"
 			}
 		},
-		"AuxiliaryResources": {
+		"Principals": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxResource"
+			}
+		},
+		"Auxiliaries": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
+		},
+		"ResourceRoles": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxResourceRole"
+			}
+		},
+		"PrincipalIds": {
+			"type": "array",
+			"items": {
+				"type": "integer"
 			}
 		},
 		"Resources": {
@@ -1254,6 +1299,9 @@
 			"items": {
 				"$ref": "#/definitions/IxResource"
 			}
+		},
+		"Resource": {
+			"$ref": "#/definitions/IxResource"
 		},
 		"ResourceId": {
 			"type": "integer"
@@ -1269,6 +1317,9 @@
 		},
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
+		},
+		"Principal": {
+			"$ref": "#/definitions/IxResource"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

@@ -1,5 +1,5 @@
 {
-	"Name": "XsRnKt",
+	"Name": "WJCdAC",
 	"JobActivity": {
 		"Id": 156
 	},
@@ -11,19 +11,17 @@
 			"ParentId": 0,
 			"ShiftSupervisor": true,
 			"ConflictIds": [
-				204
+				253
 			],
 			"SMSNumber": {
-				"PhoneNumber": "VTokVl",
+				"PhoneNumber": "Abhpcs",
 				"Id": 0,
-				"Description": "wKGfZc",
-				"Name": "bPzvYusVy"
+				"Description": "jEoefmWnS",
+				"Name": "GThdwxgdadpP"
 			},
-			"AuxiliaryResources": [
-				{
-					"Id": 6
-				}
-			],
+			"Resource": {
+				"Id": 6
+			},
 			"ResourceType": {
 				"Id": 1
 			},
@@ -37,7 +35,7 @@
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 926
+				"Quantity": 754
 			},
 			"JobActivity": {
 				"Id": 156
@@ -51,25 +49,50 @@
 				}
 			],
 			"ResourceIds": [
-				144
+				707
+			],
+			"Principal": {
+				"Id": 6
+			},
+			"PrincipalIds": [
+				303
+			],
+			"Auxiliaries": [
+				{
+					"Id": 6
+				}
+			],
+			"Principals": [
+				{
+					"Id": 6
+				}
+			],
+			"ResourceRoles": [
+				{
+					"Resource": {
+						"Id": 6
+					},
+					"ResourceId": 6,
+					"Role": "Operator"
+				}
 			],
 			"Dependencies": [],
+			"ObjectType": "VirtualTaskDay",
 			"Id": 0,
-			"ObjectType": "ActualTaskDay",
-			"Description": "iciGXzhXtzG",
-			"Name": "GPRZwYffoRlr",
+			"Description": "hpHeYtsplcU",
+			"Name": "HfRiUTTUAnhS",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
 				"End": "2018-12-14T00:00:00"
 			},
 			"Tags": [
 				{
-					"BaseObject": "XtfTRfpeSVYX",
+					"BaseObject": "OKYpoLMXkDI",
 					"AttributeId": 92,
 					"Dependencies": [],
-					"Id": 0,
 					"ObjectType": "Attribute",
-					"Description": "IukCQsQvdo",
+					"Id": 0,
+					"Description": "fsLXkdtv",
 					"Name": "Capacity"
 				}
 			],
@@ -112,27 +135,27 @@
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 165
+				"Quantity": 685
 			},
-			"Notes": "HIKmCjuUkA"
+			"Notes": "ENhDAXGbzIhv"
 		},
-		"DisplayName": "xZTPssdrZt",
+		"DisplayName": "VCzuaJECdovO",
 		"CurrentLifespan": {
 			"Start": "2018-01-14T00:00:00",
 			"End": "2018-12-14T00:00:00"
 		},
-		"Id": 0,
 		"ObjectType": "Crew",
-		"Description": "xcAfcODmLXK",
-		"Name": "SHnajYWgcXg",
+		"Id": 0,
+		"Description": "kKFTENtAfH",
+		"Name": "JdeaYEn",
 		"Tags": [
 			{
-				"BaseObject": "hpjgXO",
+				"BaseObject": "ZNYMPQBnc",
 				"AttributeId": 92,
 				"Dependencies": [],
-				"Id": 0,
 				"ObjectType": "Attribute",
-				"Description": "wxUoEviAozB",
+				"Id": 0,
+				"Description": "LhaRkxEGQ",
 				"Name": "Capacity"
 			}
 		],
@@ -140,55 +163,55 @@
 		"Attachments": [
 			{
 				"Attached": false,
-				"Key": "cXOdbE",
+				"Key": "fnzgRsM",
 				"DocumentTypes": [
 					{
 						"Id": 1
 					}
 				],
 				"Dependencies": [],
-				"Id": 0,
 				"ObjectType": "Document",
-				"Description": "gHqsnbVnXaks",
-				"Name": "SPzRMTKZcGQj",
+				"Id": 0,
+				"Description": "PwCfdNgqiDyf",
+				"Name": "TkraRgihKwVL",
 				"ChangeHistory": [
 					{
 						"Timestamp": "2019-01-14T08:00:00",
-						"UserName": "nGFarwSGozRZ",
-						"Description": "UsdyBuevn"
+						"UserName": "fpyJOR",
+						"Description": "izXYuHXIeRdk"
 					}
 				],
 				"Created": "2019-01-14T08:00:00",
 				"LastModified": "2019-01-14T08:00:00"
 			}
 		],
-		"HasAttachments": false,
+		"HasAttachments": true,
 		"Divisions": [
 			{
 				"Id": 12
 			}
 		],
-		"AccountCode": "VPvgwKcvu",
+		"AccountCode": "JIrzGcFLUJQ",
 		"Location": {
 			"Address": {
-				"Street": "bwviJfubwoaM",
-				"StreetDetails": "araQlZHxmirH",
+				"Street": "PRZI",
+				"StreetDetails": "xmWlkjY",
 				"State": {
 					"Id": 1
 				},
-				"City": "vBRCpIUY",
-				"ZipCode": "LXpjzbGxhqmH",
+				"City": "dRwYQyRktA",
+				"ZipCode": "NjJckPzwt",
 				"Geocode": {
-					"Lat": 37.2351,
-					"Lng": -155.8199,
-					"Source": "Action"
+					"Lat": -9.0978,
+					"Lng": -116.99,
+					"Source": "GPSService"
 				},
-				"Id": 0,
-				"ObjectType": "Address"
+				"ObjectType": "Address",
+				"Id": 0
 			},
 			"JobId": 0,
-			"Description": "GxEzinSeDWS",
-			"Name": "WWWIWebBqJjc"
+			"Description": "WqTJaHe",
+			"Name": "wiWugSdre"
 		},
 		"ForeColor": "#008000",
 		"BackColor": "#FFFFFF"
@@ -200,15 +223,15 @@
 	},
 	"ObjectType": "Allocation",
 	"Id": 0,
-	"Description": "roeyuHOEZot",
+	"Description": "FoyhWtEghPR",
 	"Tags": [
 		{
-			"BaseObject": "hVSwDu",
+			"BaseObject": "KolXPXLuZKb",
 			"AttributeId": 92,
 			"Dependencies": [],
-			"Id": 0,
 			"ObjectType": "Attribute",
-			"Description": "ZqqRXwvxx",
+			"Id": 0,
+			"Description": "sgZAGu",
 			"Name": "Capacity"
 		}
 	],
