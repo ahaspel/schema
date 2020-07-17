@@ -56,10 +56,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxLookupValueObjectType
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 

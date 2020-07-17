@@ -53,19 +53,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -85,6 +85,9 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -114,13 +117,10 @@
 						"JobCertification"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {

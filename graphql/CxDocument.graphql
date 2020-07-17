@@ -61,20 +61,20 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxAttributeStringObjectType
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxAttributeStringObjectType
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -83,10 +83,10 @@ enum IxAttributeStringObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxLookupValueObjectType
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 

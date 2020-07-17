@@ -54,6 +54,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -82,13 +85,10 @@
 						"JobCertification"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {

@@ -36,8 +36,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -48,10 +48,10 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxAttributeStringObjectType
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -65,10 +65,11 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxCompanyObjectType
+  Title: String
   Id: ID!
-  Description: String
+  ObjectType: IxCompanyObjectType
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -87,8 +88,8 @@ enum IxCompanyObjectType {
 type IxEmail {
   Email: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -105,10 +106,10 @@ enum IxGeocodeSource {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxLookupValueObjectType
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -143,10 +144,11 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  ObjectType: IxPartyObjectType
+  Title: String
   Id: ID!
-  Description: String
+  ObjectType: IxPartyObjectType
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
@@ -163,8 +165,8 @@ enum IxPartyObjectType {
 type IxPhoneNumber {
   PhoneNumber: String
   Id: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxQuantity {
@@ -192,10 +194,10 @@ input IxRangeInput {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxResourceSubtypeObjectType
   Name: String
+  Description: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -207,10 +209,10 @@ type IxResourceType {
   ResourceSubtypes: [IxResourceSubtype]
   MoveVehicle: Boolean
   BaseObject: String
-  ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxResourceTypeObjectType
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
@@ -233,10 +235,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
+  ObjectType: IxUnitObjectType
   Name: String
+  Description: String
 }
 
 input IxUnitDO {

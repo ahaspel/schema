@@ -49,14 +49,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				}
 			},
 			"required": [
@@ -81,19 +81,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -116,10 +116,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -162,6 +162,9 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -190,13 +193,10 @@
 						"JobCertification"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -250,6 +250,12 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -259,15 +265,12 @@
 						"Subcontractor"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -305,10 +308,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -353,19 +356,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"ResourceSubtype"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -397,19 +400,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"SupplyType"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -451,19 +454,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -551,6 +554,9 @@
 		"Name": {
 			"type": "string",
 			"minLength": 1
+		},
+		"Title": {
+			"type": "string"
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"

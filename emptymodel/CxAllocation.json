@@ -1,5 +1,8 @@
 {
 	"Name": "",
+	"Job": {
+		"Id": 0
+	},
 	"JobActivity": {
 		"Id": 0
 	},
@@ -44,10 +47,10 @@
 			"End": "",
 			"Duration": ""
 		},
-		"ObjectType": "Crew",
 		"Id": 0,
-		"Description": "",
+		"ObjectType": "Crew",
 		"Name": "",
+		"Description": "",
 		"Tags": [],
 		"Dependencies": [],
 		"Attachments": [],
@@ -68,12 +71,12 @@
 					"Lng": 0,
 					"Source": "Action"
 				},
-				"ObjectType": "Address",
-				"Id": 0
+				"Id": 0,
+				"ObjectType": "Address"
 			},
 			"JobId": 0,
-			"Description": "",
-			"Name": ""
+			"Name": "",
+			"Description": ""
 		},
 		"ForeColor": "",
 		"BackColor": ""

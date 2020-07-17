@@ -76,14 +76,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
-				},
-				"Id": {
-					"type": "integer"
 				}
 			},
 			"required": [
@@ -108,19 +108,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -143,10 +143,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -204,19 +204,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Level"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -240,6 +240,9 @@
 			"properties": {
 				"BaseObject": {
 					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -269,13 +272,10 @@
 						"JobCertification"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -314,6 +314,12 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -323,13 +329,10 @@
 						"Subcontractor"
 					]
 				},
-				"Id": {
-					"type": "integer"
-				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -367,10 +370,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
