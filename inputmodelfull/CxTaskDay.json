@@ -10,35 +10,23 @@
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 962
+		"Quantity": 189
 	},
 	"Supplier": {
 		"Id": 2
 	},
-	"ShiftSupervisor": true,
+	"ShiftSupervisor": false,
 	"JobActivity": {
 		"Id": 156
 	},
-	"ObjectType": "ActualTaskDay",
+	"ObjectType": "VirtualTaskDay",
 	"Principals": [
 		{
 			"Id": 6
 		}
 	],
-	"Auxiliaries": [
-		{
-			"Id": 6
-		}
-	],
-	"ResourceRoles": [
-		{
-			"Resource": {
-				"Id": 6
-			},
-			"ResourceId": 6,
-			"Role": "Operator"
-		}
-	],
+	"Auxiliaries": [],
+	"ResourceRoles": [],
 	"Resources": [
 		{
 			"Id": 6
@@ -52,16 +40,16 @@
 		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "jByPuwgA",
+	"Description": "uWLogMrTNkaN",
 	"Tags": [
 		{
-			"BaseObject": "SCunOaCoX",
+			"BaseObject": "YcIUjLbIOBz",
 			"AttributeId": 92,
 			"Dependencies": [],
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Name": "Capacity",
-			"Description": "KlEzCisrTCj"
+			"Description": "yyYLyMfEAY",
+			"Name": "Capacity"
 		}
 	],
 	"__typename": "CxTaskDay"
