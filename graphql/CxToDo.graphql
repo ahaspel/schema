@@ -155,6 +155,7 @@ enum IxDocumentObjectType {
 
 type IxEmail {
   Email: String
+  Valid: Boolean
   Id: ID
   Description: String
   Name: String

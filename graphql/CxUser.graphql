@@ -29,6 +29,7 @@ enum CxObjectPrivilegeObjectPrivileges {
 
 type CxUser {
   Party: IxParty
+  Login: String
   ResourceId: ID
   Active: Boolean
   Level: IxLevel
@@ -45,6 +46,7 @@ type CxUser {
 
 input CxUserInput {
   Party: IxPartyDO!
+  Login: String!
   Active: Boolean
   Level: IxLevelDO!
   Privileges: [CxUserPrivileges]
@@ -114,6 +116,7 @@ enum IxAttributeStringObjectType {
 
 type IxEmail {
   Email: String
+  Valid: Boolean
   Id: ID
   Description: String
   Name: String

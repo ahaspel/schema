@@ -140,6 +140,9 @@
 					"type": "string",
 					"format": "email"
 				},
+				"Valid": {
+					"type": "boolean"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -415,6 +418,10 @@
 		"Party": {
 			"$ref": "#/definitions/IxParty"
 		},
+		"Login": {
+			"type": "string",
+			"minLength": 1
+		},
 		"ResourceId": {
 			"type": "integer"
 		},
@@ -478,6 +485,7 @@
 	"required": [
 		"Id",
 		"Level",
+		"Login",
 		"Party"
 	]
 }

@@ -8,7 +8,6 @@ type CxAllocation {
   Shift: IxShift
   TaskDays: [IxTaskDay]
   Auxiliaries: [IxResource]
-  Principals: [IxResource]
   ResourceRoles: [CxResourceRole]
   ResourceSpans: [CxResourceSpan]
   ResourceQuantitySpans: [CxResourceQuantitySpan]
@@ -21,10 +20,9 @@ type CxAllocation {
   HasConflicts: Boolean
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType
-  PrincipalIds: [Int]
   ObjectType: CxAllocationObjectType
   DisplayName: String
-  Principal: IxResource
+  Principals: [IxResource]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -344,6 +342,7 @@ enum IxDocumentObjectType {
 
 type IxEmail {
   Email: String
+  Valid: Boolean
   Id: ID
   Description: String
   Name: String
@@ -735,8 +734,6 @@ type IxTaskDay {
   Filled: Boolean
   ConflictIds: [Int]
   SMSNumber: IxPhoneNumber
-  Resource: IxResource
-  ResourceId: ID
   ResourceType: IxResourceType
   ResourceTypeId: ID
   ResourceSubtype: IxResourceSubtype
@@ -750,8 +747,6 @@ type IxTaskDay {
   ActionStatus: IxActionStatus
   Resources: [IxResource]
   ResourceIds: [Int]
-  Principal: IxResource
-  PrincipalIds: [Int]
   Auxiliaries: [IxResource]
   Principals: [IxResource]
   ResourceRoles: [CxResourceRole]
@@ -784,19 +779,16 @@ input IxTaskDayInput {
   ShiftSupervisor: Boolean
   ConflictIds: [Int]
   SMSNumber: IxPhoneNumberInput
-  Resource: IxResourceDO
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
   Quantity: IxQuantityInput
   JobActivity: IxJobActivityDO!
   ActionStatus: IxActionStatusDO
-  Resources: [IxResourceDO]!
+  Resources: [IxResourceDO]
   ResourceIds: [Int]
-  Principal: IxResourceDO
-  PrincipalIds: [Int]
   Auxiliaries: [IxResourceDO]
-  Principals: [IxResourceDO]
+  Principals: [IxResourceDO]!
   ResourceRoles: [CxResourceRoleInput]
   Dependencies: [CxDependencyInput]
   Id: ID!

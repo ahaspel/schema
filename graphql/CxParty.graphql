@@ -105,6 +105,7 @@ enum IxAttributeStringObjectType {
 
 type IxEmail {
   Email: String
+  Valid: Boolean
   Id: ID
   Description: String
   Name: String
@@ -112,6 +113,7 @@ type IxEmail {
 
 input IxEmailInput {
   Email: String!
+  Valid: Boolean
   Id: ID
   Description: String
   Name: String

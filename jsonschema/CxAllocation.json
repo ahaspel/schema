@@ -561,6 +561,9 @@
 					"type": "string",
 					"format": "email"
 				},
+				"Valid": {
+					"type": "boolean"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -1521,12 +1524,10 @@
 				"CurrentLifespan",
 				"Id",
 				"JobActivity",
-				"Resources"
+				"Principals"
 			],
 			"immutable": [
 				"ActionType",
-				"Cancelled",
-				"Completed",
 				"DisplayName",
 				"Divisions",
 				"Filled",
@@ -1534,7 +1535,6 @@
 				"JobActivityId",
 				"JobId",
 				"Location",
-				"ResourceId",
 				"ResourceSubtypeId",
 				"ResourceTypeId"
 			],
@@ -1557,12 +1557,6 @@
 				},
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
-				},
-				"Resource": {
-					"$ref": "#/definitions/IxResource"
-				},
-				"ResourceId": {
-					"type": "integer"
 				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
@@ -1615,15 +1609,6 @@
 					}
 				},
 				"ResourceIds": {
-					"type": "array",
-					"items": {
-						"type": "integer"
-					}
-				},
-				"Principal": {
-					"$ref": "#/definitions/IxResource"
-				},
-				"PrincipalIds": {
 					"type": "array",
 					"items": {
 						"type": "integer"
@@ -1773,10 +1758,10 @@
 		"JobActivityId",
 		"JobId",
 		"Location",
-		"Principal",
 		"Principals",
 		"PrincipalIds",
 		"ResourceIds",
+		"Resources",
 		"ResourceQuantitySpans",
 		"ResourceRoles",
 		"ResourceSpans"
@@ -1811,12 +1796,6 @@
 			}
 		},
 		"Auxiliaries": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxResource"
-			}
-		},
-		"Principals": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxResource"
@@ -1881,12 +1860,6 @@
 				"Move"
 			]
 		},
-		"PrincipalIds": {
-			"type": "array",
-			"items": {
-				"type": "integer"
-			}
-		},
 		"ObjectType": {
 			"type": "string",
 			"enum": [
@@ -1896,8 +1869,11 @@
 		"DisplayName": {
 			"type": "string"
 		},
-		"Principal": {
-			"$ref": "#/definitions/IxResource"
+		"Principals": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
 		},
 		"Id": {
 			"type": "integer"

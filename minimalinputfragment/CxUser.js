@@ -3,6 +3,7 @@ const CXUSERINPUTMIN = `fragment CXUSERINPUTMIN on CxUser {
   Party {
     Id
   }
+  Login
   Level {
     Id
   }

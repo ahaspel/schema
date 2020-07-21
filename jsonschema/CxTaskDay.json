@@ -404,6 +404,9 @@
 					"type": "string",
 					"format": "email"
 				},
+				"Valid": {
+					"type": "boolean"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -1178,8 +1181,6 @@
 	"immutable": [
 		"ActionType",
 		"BackColor",
-		"Cancelled",
-		"Completed",
 		"ConflictIds",
 		"Dependencies",
 		"DisplayName",
@@ -1191,10 +1192,8 @@
 		"JobActivityId",
 		"JobId",
 		"Location",
-		"Principal",
-		"PrincipalIds",
-		"Resource",
-		"ResourceId",
+		"Resources",
+		"ResourceIds",
 		"ResourceSubtypeId",
 		"ResourceTypeId",
 		"SMSNumber"
@@ -1276,12 +1275,6 @@
 				"$ref": "#/definitions/IxLookupValue"
 			}
 		},
-		"Principals": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxResource"
-			}
-		},
 		"Auxiliaries": {
 			"type": "array",
 			"items": {
@@ -1294,11 +1287,17 @@
 				"$ref": "#/definitions/CxResourceRole"
 			}
 		},
-		"PrincipalIds": {
+		"ResourceIds": {
 			"type": "array",
 			"items": {
 				"type": "integer"
 			}
+		},
+		"DisplayName": {
+			"type": "string"
+		},
+		"ActionStatus": {
+			"$ref": "#/definitions/IxActionStatus"
 		},
 		"Resources": {
 			"type": "array",
@@ -1306,26 +1305,11 @@
 				"$ref": "#/definitions/IxResource"
 			}
 		},
-		"Resource": {
-			"$ref": "#/definitions/IxResource"
-		},
-		"ResourceId": {
-			"type": "integer"
-		},
-		"DisplayName": {
-			"type": "string"
-		},
-		"Completed": {
-			"type": "boolean"
-		},
-		"Cancelled": {
-			"type": "boolean"
-		},
-		"ActionStatus": {
-			"$ref": "#/definitions/IxActionStatus"
-		},
-		"Principal": {
-			"$ref": "#/definitions/IxResource"
+		"Principals": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
@@ -1353,6 +1337,6 @@
 		"CurrentLifespan",
 		"Id",
 		"JobActivity",
-		"Resources"
+		"Principals"
 	]
 }
