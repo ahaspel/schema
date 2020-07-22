@@ -283,6 +283,7 @@ type IxJobActivity {
   Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
+  DisplayName: String
 }
 
 input IxJobActivityInput {
@@ -298,6 +299,7 @@ input IxJobActivityInput {
   Tags: [IxAttribute__String__Input]
   ForeColor: String
   BackColor: String
+  DisplayName: String
 }
 
 enum IxJobActivityObjectType {

@@ -247,6 +247,7 @@ type IxJobActivity {
   Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
+  DisplayName: String
 }
 
 input IxJobActivityDO {

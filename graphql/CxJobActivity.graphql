@@ -15,6 +15,7 @@ type CxJobActivity {
   SortOrder: Int
   ForeColor: String
   BackColor: String
+  DisplayName: String
   ObjectType: CxJobActivityObjectType
   CurrentLifespan: IxRange
   Id: ID!
@@ -30,6 +31,7 @@ input CxJobActivityInput {
   SortOrder: Int
   ForeColor: String
   BackColor: String
+  DisplayName: String
   ObjectType: CxJobActivityObjectType
   CurrentLifespan: IxRangeInput
   Id: ID!
