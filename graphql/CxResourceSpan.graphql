@@ -13,11 +13,13 @@ type CxResourceSpan {
   Resource: IxResource
   ResourceId: ID
   Range: IxRange
+  AuxiliaryIds: [Int]
 }
 
 input CxResourceSpanInput {
   ResourceId: ID!
   Range: IxRangeInput!
+  AuxiliaryIds: [Int]
 }
 
 input FilterInput {

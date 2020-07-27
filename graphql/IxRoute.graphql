@@ -1,73 +1,5 @@
-type CxAllocation {
-  Name: String
-  Location: IxLocation
-  Job: IxJob
-  JobId: ID
-  JobActivity: IxJobActivity
-  JobActivityId: ID
-  Shift: IxShift
-  TaskDays: [IxTaskDay]
-  Auxiliaries: [IxResource]
-  ResourceRoles: [CxResourceRole]
-  ResourceSpans: [CxResourceSpan]
-  ResourceQuantitySpans: [CxResourceQuantitySpan]
-  ActionStatus: IxActionStatus
-  ForeColor: String
-  BackColor: String
-  ResourceIds: [Int]
-  Crew: IxCrew
-  CrewId: ID
-  HasConflicts: Boolean
-  CurrentLifespan: IxRange
-  ActionType: CxAllocationActionType
-  ObjectType: CxAllocationObjectType
-  DisplayName: String
-  Principals: [IxResource]
-  Id: ID!
-  Description: String
-  Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
-}
-
-enum CxAllocationActionType {
-  Crew
-  Employee
-  Equipment
-  Generic
-  Plant
-  Subcontractor
-  Material
-  Group
-  Move
-}
-
-input CxAllocationInput {
-  Name: String
-  Job: IxJobDO
-  JobActivity: IxJobActivityDO!
-  Shift: IxShiftDO
-  TaskDays: [IxTaskDayInput]
-  Crew: IxCrewInput
-  CrewId: ID
-  CurrentLifespan: IxRangeInput
-  ObjectType: CxAllocationObjectType
-  Id: ID!
-  Description: String
-  Tags: [IxAttribute__String__Input]
-}
-
-enum CxAllocationObjectType {
-  Allocation
-}
-
 type CxChange {
   Timestamp: String
-  UserName: String
-  Description: String
-}
-
-input CxChangeInput {
-  Timestamp: String!
   UserName: String
   Description: String
 }
@@ -80,17 +12,6 @@ type CxDependency {
 input CxDependencyInput {
   ObjectType: String!
   Ids: [Int]!
-}
-
-type CxResourceQuantitySpan {
-  ResourceSubtype: IxResourceSubtype
-  ResourceSubtypeId: ID
-  ResourceType: IxResourceType
-  Supplier: IxCompany
-  SupplierId: ID
-  Quantity: IxQuantity
-  Range: IxRange
-  ResourceIds: [Int]
 }
 
 type CxResourceRole {
@@ -108,13 +29,6 @@ input CxResourceRoleInput {
 enum CxResourceRoleRole {
   Operator
   Principal
-}
-
-type CxResourceSpan {
-  Resource: IxResource
-  ResourceId: ID
-  Range: IxRange
-  AuxiliaryIds: [Int]
 }
 
 input FilterInput {
@@ -226,87 +140,10 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
-input IxCompanyDO {
-  Id: ID!
-}
-
 enum IxCompanyObjectType {
   Company
   Plant
   Subcontractor
-}
-
-type IxCostCode {
-  UnitCost: IxUnitCost
-  Global: Boolean
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxCostCodeObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-}
-
-enum IxCostCodeObjectType {
-  CostCode
-}
-
-type IxCrew {
-  Manager: IxEmployee
-  Foreman: IxEmployee
-  Resources: [IxResource]
-  CurrentResources: [IxResource]
-  Owner: IxCompany
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  Temporary: Boolean
-  UnitCost: IxUnitCost
-  DisplayName: String
-  CurrentLifespan: IxRange
-  Id: ID!
-  ObjectType: IxCrewObjectType
-  Description: String
-  Name: String
-  Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
-  Divisions: [IxLookupValue]
-  AccountCode: String
-  Location: IxLocation
-  ForeColor: String
-  BackColor: String
-}
-
-input IxCrewInput {
-  Manager: IxEmployeeDO
-  Foreman: IxEmployeeDO!
-  Resources: [IxResourceDO]!
-  CurrentResources: [IxResourceDO]
-  Owner: IxCompanyDO
-  ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO
-  Temporary: Boolean
-  UnitCost: IxUnitCostInput
-  DisplayName: String
-  CurrentLifespan: IxRangeInput
-  Id: ID!
-  ObjectType: IxCrewObjectType
-  Description: String
-  Name: String
-  Tags: [IxAttribute__String__Input]
-  Dependencies: [CxDependencyInput]
-  Attachments: [IxDocumentInput]
-  HasAttachments: Boolean
-  Divisions: [IxLookupValueDO]
-  AccountCode: String
-  Location: IxLocationInput
-  ForeColor: String
-  BackColor: String
-}
-
-enum IxCrewObjectType {
-  Crew
 }
 
 type IxDocument {
@@ -319,20 +156,6 @@ type IxDocument {
   Description: String
   Name: String
   ChangeHistory: [CxChange]
-  Created: String
-  LastModified: String
-}
-
-input IxDocumentInput {
-  Attached: Boolean
-  Key: String!
-  DocumentTypes: [IxLookupValueDO]
-  Dependencies: [CxDependencyInput]
-  Id: ID!
-  ObjectType: IxDocumentObjectType
-  Description: String
-  Name: String
-  ChangeHistory: [CxChangeInput]
   Created: String
   LastModified: String
 }
@@ -389,12 +212,51 @@ type IxEmployee {
   InCrew: Boolean
 }
 
-input IxEmployeeDO {
+enum IxEmployeeObjectType {
+  Employee
+}
+
+type IxEquipment {
+  Year: String
+  Model: String
+  Make: String
+  SerialNumber: String
+  Height: IxQuantity
+  Weight: IxQuantity
+  Width: IxQuantity
+  Returned: Boolean
+  MoveNotes: String
+  Capacity: IxQuantity
+  Operators: [IxEmployee]
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  DisplayName: String
+  CurrentLifespan: IxRange
+  Id: ID!
+  ObjectType: IxEquipmentObjectType
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+  InCrew: Boolean
+}
+
+input IxEquipmentDO {
   Id: ID!
 }
 
-enum IxEmployeeObjectType {
-  Employee
+enum IxEquipmentObjectType {
+  Equipment
 }
 
 type IxGeocode {
@@ -413,89 +275,6 @@ enum IxGeocodeSource {
   Action
   Owner
   GPSService
-}
-
-type IxJob {
-  Client: IxCompany
-  Priority: IxLookupValue
-  Certifications: [IxLookupValue]
-  Notes: String
-  JobActivities: [IxJobActivity]
-  JobStatus: IxLookupValue
-  StatusDue: String
-  Types: [IxLookupValue]
-  Subtypes: [IxLookupValue]
-  Owner: IxParty
-  Manager: IxParty
-  JobCosts: [IxJobCost]
-  TotalCost: IxMoney
-  EstimatedLaborHours: Float
-  EstimatedEquipmentHours: Float
-  Dependencies: [CxDependency]
-  Id: ID!
-  ObjectType: IxJobObjectType
-  Description: String
-  Name: String
-  AccountCode: String
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
-  ForeColor: String
-  BackColor: String
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
-  Divisions: [IxLookupValue]
-  Contacts: [IxParty]
-  DisplayName: String
-}
-
-type IxJobActivity {
-  ParentId: ID
-  Completed: Boolean
-  SortOrder: Int
-  Dependencies: [CxDependency]
-  Id: ID!
-  ObjectType: IxJobActivityObjectType
-  Description: String
-  Name: String
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  ForeColor: String
-  BackColor: String
-  DisplayName: String
-}
-
-input IxJobActivityDO {
-  Id: ID!
-}
-
-enum IxJobActivityObjectType {
-  JobActivity
-}
-
-type IxJobCost {
-  CostCode: IxCostCode
-  CostPerUnit: IxMoney
-  TotalAmount: Float
-  ExpectedDailyAmount: Float
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxJobCostObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-}
-
-enum IxJobCostObjectType {
-  JobCost
-}
-
-input IxJobDO {
-  Id: ID!
-}
-
-enum IxJobObjectType {
-  Job
 }
 
 type IxLocation {
@@ -556,11 +335,6 @@ type IxMoney {
   Quantity: Float
 }
 
-input IxMoneyInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
-}
-
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -577,6 +351,10 @@ type IxParty {
   Address: IxAddress
 }
 
+input IxPartyDO {
+  Id: ID!
+}
+
 enum IxPartyObjectType {
   Party
   Company
@@ -591,11 +369,20 @@ type IxPhoneNumber {
   Name: String
 }
 
-input IxPhoneNumberInput {
-  PhoneNumber: String!
+type IxPickupItem {
   Id: ID
+  ResourceId: ID
+  Quantity: IxQuantity
   Description: String
-  Name: String
+  Start: String
+}
+
+input IxPickupItemInput {
+  Id: ID
+  ResourceId: ID
+  Quantity: IxQuantityInput
+  Description: String
+  Start: String
 }
 
 type IxQuantity {
@@ -663,10 +450,6 @@ type IxResourceSubtype {
   Name: String
 }
 
-input IxResourceSubtypeDO {
-  Id: ID!
-}
-
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -686,10 +469,6 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceTypeDO {
-  Id: ID!
-}
-
 enum IxResourceTypeFamily {
   Labor
   Equipment
@@ -701,51 +480,44 @@ enum IxResourceTypeObjectType {
   ResourceType
 }
 
-type IxShift {
-  Days: [IxShiftDay]
-  Default: Boolean
-  UseHolidays: Boolean
+type IxRoute {
+  Driver: IxParty
+  Stops: [IxStop]
+  Rig: [IxEquipment]
   Dependencies: [CxDependency]
   Id: ID!
-  ObjectType: IxShiftObjectType
+  ObjectType: IxRouteObjectType
   Description: String
   Name: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
 }
 
-type IxShiftDay {
-  Day: Int
-  DayByName: String
-  Start: String
-  Duration: String
-  Valid: Boolean
-  End: String
-  Included: Boolean
-}
-
-input IxShiftDO {
+input IxRouteInput {
+  Driver: IxPartyDO!
+  Stops: [IxStopInput]
+  Rig: [IxEquipmentDO]
+  Dependencies: [CxDependencyInput]
   Id: ID!
+  ObjectType: IxRouteObjectType
+  Description: String
+  Name: String
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttribute__String__Input]
 }
 
-enum IxShiftObjectType {
-  Shift
+enum IxRouteObjectType {
+  Route
 }
 
-type IxTaskDay {
-  ParentId: ID
-  ShiftSupervisor: Boolean
-  Filled: Boolean
-  ConflictIds: [Int]
-  SMSNumber: IxPhoneNumber
-  ResourceType: IxResourceType
-  ResourceTypeId: ID
-  ResourceSubtype: IxResourceSubtype
-  ResourceSubtypeId: ID
-  Supplier: IxCompany
-  Quantity: IxQuantity
-  JobActivity: IxJobActivity
-  Job: IxJob
+type IxStop {
+  Address: IxAddress
+  JobId: ID
+  Dropoffs: [IxPickupItem]
+  Pickups: [IxPickupItem]
+  Repeats: Int
   Location: IxLocation
-  ActionType: IxTaskDayActionType
+  ActionType: IxStopActionType
   ActionStatus: IxActionStatus
   Resources: [IxResource]
   ResourceIds: [Int]
@@ -754,7 +526,7 @@ type IxTaskDay {
   ResourceRoles: [CxResourceRole]
   Dependencies: [CxDependency]
   Id: ID!
-  ObjectType: IxTaskDayObjectType
+  ObjectType: IxStopObjectType
   Description: String
   Name: String
   CurrentLifespan: IxRange
@@ -764,7 +536,7 @@ type IxTaskDay {
   BackColor: String
 }
 
-enum IxTaskDayActionType {
+enum IxStopActionType {
   Crew
   Employee
   Equipment
@@ -776,36 +548,34 @@ enum IxTaskDayActionType {
   Move
 }
 
-input IxTaskDayInput {
-  ParentId: ID
-  ShiftSupervisor: Boolean
-  ConflictIds: [Int]
-  SMSNumber: IxPhoneNumberInput
-  ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO
-  Supplier: IxCompanyDO
-  Quantity: IxQuantityInput
-  JobActivity: IxJobActivityDO!
+input IxStopInput {
+  Address: IxAddressInput!
+  JobId: ID
+  Dropoffs: [IxPickupItemInput]
+  Pickups: [IxPickupItemInput]
+  Repeats: Int
+  Location: IxLocationInput
+  ActionType: IxStopActionType
   ActionStatus: IxActionStatusDO
   Resources: [IxResourceDO]
   ResourceIds: [Int]
   Auxiliaries: [IxResourceDO]
-  Principals: [IxResourceDO]!
+  Principals: [IxResourceDO]
   ResourceRoles: [CxResourceRoleInput]
   Dependencies: [CxDependencyInput]
   Id: ID!
-  ObjectType: IxTaskDayObjectType
+  ObjectType: IxStopObjectType
   Description: String
   Name: String
-  CurrentLifespan: IxRangeInput!
+  CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
+  DisplayName: String
   ForeColor: String
   BackColor: String
 }
 
-enum IxTaskDayObjectType {
-  ActualTaskDay
-  VirtualTaskDay
+enum IxStopObjectType {
+  Stop
 }
 
 type IxUnit {
@@ -822,12 +592,6 @@ type IxUnit {
 type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
-  Notes: String
-}
-
-input IxUnitCostInput {
-  Unit: IxUnitDO!
-  Cost: IxMoneyInput!
   Notes: String
 }
 
@@ -866,10 +630,10 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxAllocations_onSave(data: [CxAllocationInput], filters: [FilterInput], objectType: String = "Allocation", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAllocation]
-  cxAllocations_onDelete(data: [String], objectType: String = "Allocation", operation: String = "delete"): [CxAllocation]
+  ixRoutes_onSave(data: [IxRouteInput], filters: [FilterInput], objectType: String = "Route", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [IxRoute]
+  ixRoutes_onDelete(data: [String], objectType: String = "Route", operation: String = "delete"): [IxRoute]
 }
 
 extend type Query {
-  cxAllocations(filters: [FilterInput], objectType: String = "Allocation"): [CxAllocation]
+  ixRoutes(filters: [FilterInput], objectType: String = "Route"): [IxRoute]
 }

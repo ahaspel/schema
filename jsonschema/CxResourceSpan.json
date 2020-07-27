@@ -798,6 +798,12 @@
 		},
 		"Range": {
 			"$ref": "#/definitions/IxRange"
+		},
+		"AuxiliaryIds": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
 		}
 	},
 	"required": [

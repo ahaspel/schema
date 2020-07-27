@@ -1,0 +1,144 @@
+{
+	"Driver": {
+		"Id": 1
+	},
+	"Stops": [
+		{
+			"Address": {
+				"Street": "s",
+				"StreetDetails": "zMAcwlZ",
+				"State": {
+					"Id": 1
+				},
+				"City": "toB",
+				"ZipCode": "PCbohQRF",
+				"Geocode": {
+					"Lat": -24.1008,
+					"Lng": 132.573,
+					"Source": "Action"
+				},
+				"Id": 0,
+				"ObjectType": "Address"
+			},
+			"JobId": 0,
+			"Dropoffs": [
+				{
+					"Id": 0,
+					"ResourceId": 6,
+					"Quantity": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 262
+					},
+					"Description": "PLfDLXuQw",
+					"Start": "2019-01-14T08:00:00"
+				}
+			],
+			"Pickups": [
+				{
+					"Id": 0,
+					"ResourceId": 6,
+					"Quantity": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 510
+					},
+					"Description": "lIKrFn",
+					"Start": "2019-01-14T08:00:00"
+				}
+			],
+			"Repeats": 95,
+			"Location": {
+				"Address": {
+					"Street": "op",
+					"StreetDetails": "UdaxQRCXeSNZ",
+					"State": {
+						"Id": 1
+					},
+					"City": "DeT",
+					"ZipCode": "xbrkcBq",
+					"Geocode": {
+						"Lat": 73.105,
+						"Lng": -19.4789,
+						"Source": "Owner"
+					},
+					"Id": 0,
+					"ObjectType": "Address"
+				},
+				"JobId": 0,
+				"Description": "cHDjXywEbU",
+				"Name": "ljcyVvZmt"
+			},
+			"ActionType": "Material",
+			"ActionStatus": {
+				"Id": 1
+			},
+			"Resources": [
+				{
+					"Id": 6
+				}
+			],
+			"ResourceIds": [
+				556
+			],
+			"Auxiliaries": [],
+			"Principals": [
+				{
+					"Id": 6
+				}
+			],
+			"ResourceRoles": [],
+			"Dependencies": [],
+			"Id": 0,
+			"ObjectType": "Stop",
+			"Description": "TYIHdyXRgSD",
+			"Name": "kwhcVUgjOxOf",
+			"CurrentLifespan": {
+				"Start": "2018-01-14T00:00:00",
+				"End": "2018-12-14T00:00:00"
+			},
+			"Tags": [
+				{
+					"BaseObject": "dTxUxnaBi",
+					"AttributeId": 92,
+					"Dependencies": [],
+					"Id": 0,
+					"ObjectType": "Attribute",
+					"Description": "qRRyzIYQGoI",
+					"Name": "Capacity"
+				}
+			],
+			"DisplayName": "HGNvSEfQRXbe",
+			"ForeColor": "#008000",
+			"BackColor": "#FFFFFF"
+		}
+	],
+	"Rig": [
+		{
+			"Id": 2
+		}
+	],
+	"Dependencies": [],
+	"Id": 0,
+	"ObjectType": "Route",
+	"Description": "syozZvgy",
+	"Name": "YuZlbiI",
+	"CurrentLifespan": {
+		"Start": "2018-01-14T00:00:00",
+		"End": "2018-12-14T00:00:00"
+	},
+	"Tags": [
+		{
+			"BaseObject": "DTcWtLf",
+			"AttributeId": 92,
+			"Dependencies": [],
+			"Id": 0,
+			"ObjectType": "Attribute",
+			"Description": "jhFCXgKyGtHz",
+			"Name": "Capacity"
+		}
+	],
+	"__typename": "IxRoute"
+}
