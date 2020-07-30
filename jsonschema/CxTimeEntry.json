@@ -280,9 +280,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"Attached": {
-					"type": "boolean"
-				},
 				"Key": {
 					"type": "string"
 				},
@@ -391,29 +388,11 @@
 			],
 			"type": "object",
 			"properties": {
-				"ParentId": {
-					"type": "integer"
-				},
 				"Completed": {
 					"type": "boolean"
 				},
-				"SortOrder": {
-					"type": "integer"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"JobActivity"
-					]
 				},
 				"Description": {
 					"type": "string"
@@ -423,12 +402,6 @@
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				},
 				"ForeColor": {
 					"type": "string"
@@ -472,9 +445,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -495,7 +465,6 @@
 						"State",
 						"ToDoStatus",
 						"Attribute",
-						"PurchaseOrderStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -511,12 +480,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -563,44 +526,14 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Title": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Party",
-						"Company",
-						"Plant",
-						"Subcontractor"
-					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [
@@ -669,26 +602,17 @@
 		"IxResource": {
 			"type": "object",
 			"properties": {
-				"Owner": {
-					"$ref": "#/definitions/IxCompany"
-				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
 				},
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
-				"Temporary": {
+				"HasAuxiliaries": {
 					"type": "boolean"
-				},
-				"UnitCost": {
-					"$ref": "#/definitions/IxUnitCost"
 				},
 				"DisplayName": {
 					"type": "string"
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
 				},
 				"Id": {
 					"type": "integer"
@@ -701,45 +625,6 @@
 						"Equipment",
 						"Material"
 					]
-				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"Attachments": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxDocument"
-					}
-				},
-				"HasAttachments": {
-					"type": "boolean"
-				},
-				"Divisions": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxLookupValue"
-					}
-				},
-				"AccountCode": {
-					"type": "string"
-				},
-				"Location": {
-					"$ref": "#/definitions/IxLocation"
 				},
 				"ForeColor": {
 					"type": "string"
@@ -806,14 +691,14 @@
 						"Group"
 					]
 				},
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
 				"ResourceSubtypes": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxResourceSubtype"
 					}
-				},
-				"MoveVehicle": {
-					"type": "boolean"
 				},
 				"BaseObject": {
 					"type": "string"

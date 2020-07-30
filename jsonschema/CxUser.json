@@ -241,9 +241,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -264,7 +261,6 @@
 						"State",
 						"ToDoStatus",
 						"Attribute",
-						"PurchaseOrderStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -280,12 +276,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -317,44 +307,14 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Title": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Party",
-						"Company",
-						"Plant",
-						"Subcontractor"
-					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [

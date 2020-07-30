@@ -117,6 +117,7 @@ type IxCapacity {
   Id: ID!
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
+  Amount: Float
   Quantity: IxQuantity
 }
 
@@ -124,7 +125,7 @@ input IxCapacityInput {
   Id: ID!
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO!
-  Quantity: IxQuantityInput!
+  Amount: Float!
 }
 
 type IxEmail {
@@ -162,12 +163,10 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -189,7 +188,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -205,26 +203,13 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Title: String
   Id: ID!
-  ObjectType: IxPartyObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
 }
 
 input IxPartyDO {
   Id: ID!
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
 }
 
 type IxPhoneNumber {
@@ -244,11 +229,6 @@ input IxPhoneNumberInput {
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
-}
-
-input IxQuantityInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
 }
 
 type IxRange {
@@ -282,8 +262,8 @@ enum IxResourceSubtypeObjectType {
 
 type IxResourceType {
   Family: IxResourceTypeFamily
+  Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
   BaseObject: String
   Id: ID!
   ObjectType: IxResourceTypeObjectType
@@ -319,10 +299,6 @@ type IxUnit {
   ObjectType: IxUnitObjectType
   Description: String
   Name: String
-}
-
-input IxUnitDO {
-  Id: ID!
 }
 
 enum IxUnitObjectType {

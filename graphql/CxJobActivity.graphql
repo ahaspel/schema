@@ -76,12 +76,10 @@ enum IxAttributeStringObjectType {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -103,7 +101,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType

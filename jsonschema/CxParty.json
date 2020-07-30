@@ -162,9 +162,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -185,7 +182,6 @@
 						"State",
 						"ToDoStatus",
 						"Attribute",
-						"PurchaseOrderStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -201,12 +197,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [

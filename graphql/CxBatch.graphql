@@ -110,7 +110,6 @@ enum IxAttributeStringObjectType {
 }
 
 type IxDocument {
-  Attached: Boolean
   Key: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
@@ -124,7 +123,6 @@ type IxDocument {
 }
 
 input IxDocumentInput {
-  Attached: Boolean
   Key: String!
   DocumentTypes: [IxLookupValueDO]
   Dependencies: [CxDependencyInput]
@@ -142,12 +140,10 @@ enum IxDocumentObjectType {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -169,7 +165,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType

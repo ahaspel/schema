@@ -1,6 +1,8 @@
 
 const CXRESOURCESPANINPUTMIN = `fragment CXRESOURCESPANINPUTMIN on CxResourceSpan {
-  ResourceId
+  Principal {
+    Id
+  }
   Range {
     Start
     End

@@ -65,9 +65,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -88,7 +85,6 @@
 						"State",
 						"ToDoStatus",
 						"Attribute",
-						"PurchaseOrderStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -104,12 +100,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -153,6 +143,53 @@
 				"Id",
 				"Name"
 			]
+		},
+		"IxUnit": {
+			"superRequired": [
+				"Id"
+			],
+			"type": "object",
+			"properties": {
+				"UnitType": {
+					"type": "string",
+					"enum": [
+						"Time",
+						"Length",
+						"Weight",
+						"Area",
+						"Volume",
+						"Money",
+						"Self"
+					]
+				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
 		}
 	},
 	"immutable": [
@@ -171,14 +208,14 @@
 				"Group"
 			]
 		},
+		"Unit": {
+			"$ref": "#/definitions/IxUnit"
+		},
 		"ResourceSubtypes": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxResourceSubtype"
 			}
-		},
-		"MoveVehicle": {
-			"type": "boolean"
 		},
 		"ForeColor": {
 			"type": "string"

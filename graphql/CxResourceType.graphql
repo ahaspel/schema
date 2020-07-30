@@ -10,8 +10,8 @@ input CxDependencyInput {
 
 type CxResourceType {
   Family: CxResourceTypeFamily
+  Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
   ForeColor: String
   BackColor: String
   Name: String
@@ -31,8 +31,8 @@ enum CxResourceTypeFamily {
 
 input CxResourceTypeInput {
   Family: CxResourceTypeFamily!
+  Unit: IxUnitDO
   ResourceSubtypes: [IxResourceSubtypeInput]!
-  MoveVehicle: Boolean
   ForeColor: String
   BackColor: String
   Name: String!
@@ -97,6 +97,35 @@ input IxResourceSubtypeInput {
 
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  Id: ID!
+  ObjectType: IxUnitObjectType
+  Description: String
+  Name: String
+}
+
+input IxUnitDO {
+  Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
 }
 
 """

@@ -2,6 +2,7 @@
 const CXRESOURCEQUANTITYSPANINPUTMIN = `fragment CXRESOURCEQUANTITYSPANINPUTMIN on CxResourceQuantitySpan {
   ResourceSubtypeId
   SupplierId
+  Amount
   Range {
     Start
     End

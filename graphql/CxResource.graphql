@@ -16,6 +16,8 @@ type CxResource {
   ResourceSubtype: IxResourceSubtype
   UnitCost: IxUnitCost
   InCrew: Boolean
+  HasAuxiliaries: Boolean
+  Auxiliaries: [IxResource]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   ForeColor: String
@@ -108,7 +110,6 @@ enum IxCompanyObjectType {
 }
 
 type IxDocument {
-  Attached: Boolean
   Key: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
@@ -153,12 +154,10 @@ type IxLocation {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 enum IxLookupValueObjectType {
@@ -176,7 +175,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -197,22 +195,9 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Title: String
   Id: ID!
-  ObjectType: IxPartyObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
 }
 
 type IxPhoneNumber {
@@ -226,6 +211,24 @@ type IxRange {
   Start: String
   End: String
   Duration: String
+}
+
+type IxResource {
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  HasAuxiliaries: Boolean
+  DisplayName: String
+  Id: ID!
+  ObjectType: IxResourceObjectType
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxResourceObjectType {
+  Crew
+  Employee
+  Equipment
+  Material
 }
 
 type IxResourceSubtype {
@@ -243,8 +246,8 @@ enum IxResourceSubtypeObjectType {
 
 type IxResourceType {
   Family: IxResourceTypeFamily
+  Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
   BaseObject: String
   Id: ID!
   ObjectType: IxResourceTypeObjectType

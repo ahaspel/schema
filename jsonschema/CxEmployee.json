@@ -218,9 +218,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"Attached": {
-					"type": "boolean"
-				},
 				"Key": {
 					"type": "string"
 				},
@@ -352,9 +349,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -375,7 +369,6 @@
 						"State",
 						"ToDoStatus",
 						"Attribute",
-						"PurchaseOrderStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -391,12 +384,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -443,50 +430,18 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
-				"Title": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Party",
-						"Company",
-						"Plant",
-						"Subcontractor"
-					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"CurrentLifespan": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Address": {
-					"$ref": "#/definitions/IxAddress"
+					"type": "string"
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
+				"Id"
 			]
 		},
 		"IxPhoneNumber": {
@@ -548,6 +503,44 @@
 				}
 			}
 		},
+		"IxResource": {
+			"type": "object",
+			"properties": {
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"HasAuxiliaries": {
+					"type": "boolean"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Crew",
+						"Employee",
+						"Equipment",
+						"Material"
+					]
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxResourceSubtype": {
 			"superRequired": [
 				"Id",
@@ -602,14 +595,14 @@
 						"Group"
 					]
 				},
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
 				"ResourceSubtypes": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxResourceSubtype"
 					}
-				},
-				"MoveVehicle": {
-					"type": "boolean"
 				},
 				"BaseObject": {
 					"type": "string"
@@ -719,6 +712,7 @@
 		}
 	},
 	"immutable": [
+		"Auxiliaries",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
@@ -829,6 +823,15 @@
 		},
 		"InCrew": {
 			"type": "boolean"
+		},
+		"HasAuxiliaries": {
+			"type": "boolean"
+		},
+		"Auxiliaries": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
 		},
 		"Attachments": {
 			"type": "array",

@@ -44,6 +44,8 @@ type CxEmployee {
   ResourceSubtype: IxResourceSubtype
   UnitCost: IxUnitCost
   InCrew: Boolean
+  HasAuxiliaries: Boolean
+  Auxiliaries: [IxResource]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   ForeColor: String
@@ -66,8 +68,8 @@ input CxEmployeeInput {
   MiddleName: String
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
-  Person: IxPartyInput
-  Contacts: [IxPartyInput]
+  Person: IxPartyDO
+  Contacts: [IxPartyDO]
   Minority: [IxLookupValueDO]
   Unions: [IxLookupValueDO]
   Licenses: [IxLookupValueDO]
@@ -81,6 +83,7 @@ input CxEmployeeInput {
   Owner: IxCompanyDO
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCost: IxUnitCostInput
+  HasAuxiliaries: Boolean
   Attachments: [IxDocumentInput]
   HasAttachments: Boolean
   ForeColor: String
@@ -111,17 +114,6 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
-  ObjectType: IxAddressObjectType
-}
-
-input IxAddressInput {
-  Street: String!
-  StreetDetails: String
-  State: IxLookupValueDO!
-  City: String!
-  ZipCode: String
-  Geocode: IxGeocodeInput
   Id: ID!
   ObjectType: IxAddressObjectType
 }
@@ -186,7 +178,6 @@ enum IxCompanyObjectType {
 }
 
 type IxDocument {
-  Attached: Boolean
   Key: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
@@ -200,7 +191,6 @@ type IxDocument {
 }
 
 input IxDocumentInput {
-  Attached: Boolean
   Key: String!
   DocumentTypes: [IxLookupValueDO]
   Dependencies: [CxDependencyInput]
@@ -225,23 +215,9 @@ type IxEmail {
   Name: String
 }
 
-input IxEmailInput {
-  Email: String!
-  Valid: Boolean
-  Id: ID
-  Description: String
-  Name: String
-}
-
 type IxGeocode {
   Lat: Float
   Lng: Float
-  Source: IxGeocodeSource
-}
-
-input IxGeocodeInput {
-  Lat: Float!
-  Lng: Float!
   Source: IxGeocodeSource
 }
 
@@ -259,12 +235,10 @@ type IxLocation {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -286,7 +260,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -312,49 +285,17 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Title: String
   Id: ID!
-  ObjectType: IxPartyObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
 }
 
-input IxPartyInput {
-  Emails: [IxEmailInput]
-  PhoneNumbers: [IxPhoneNumberInput]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumberInput
-  Title: String
+input IxPartyDO {
   Id: ID!
-  ObjectType: IxPartyObjectType
-  Description: String
-  Name: String!
-  Dependencies: [CxDependencyInput]
-  CurrentLifespan: IxRangeInput
-  Tags: [IxAttribute__String__Input]
-  Address: IxAddressInput
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
 }
 
 type IxPhoneNumber {
   PhoneNumber: String
-  Id: ID
-  Description: String
-  Name: String
-}
-
-input IxPhoneNumberInput {
-  PhoneNumber: String!
   Id: ID
   Description: String
   Name: String
@@ -382,6 +323,24 @@ input IxRangeInput {
   Duration: String
 }
 
+type IxResource {
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  HasAuxiliaries: Boolean
+  DisplayName: String
+  Id: ID!
+  ObjectType: IxResourceObjectType
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxResourceObjectType {
+  Crew
+  Employee
+  Equipment
+  Material
+}
+
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
@@ -401,8 +360,8 @@ enum IxResourceSubtypeObjectType {
 
 type IxResourceType {
   Family: IxResourceTypeFamily
+  Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
   BaseObject: String
   Id: ID!
   ObjectType: IxResourceTypeObjectType

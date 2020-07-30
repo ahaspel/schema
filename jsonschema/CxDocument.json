@@ -106,7 +106,6 @@
 						"State",
 						"ToDoStatus",
 						"Attribute",
-						"PurchaseOrderStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -144,9 +143,6 @@
 	],
 	"type": "object",
 	"properties": {
-		"Attached": {
-			"type": "boolean"
-		},
 		"DocumentTypes": {
 			"type": "array",
 			"items": {

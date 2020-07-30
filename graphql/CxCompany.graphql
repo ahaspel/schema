@@ -21,7 +21,7 @@ type CxCompany {
 
 input CxCompanyInput {
   CompanyType: IxLookupValueDO!
-  Contacts: [IxPartyInput]
+  Contacts: [IxPartyDO]
   AccountCode: String
   ObjectType: CxCompanyObjectType
   PhoneNumbers: [IxPhoneNumberInput]
@@ -146,12 +146,10 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -173,7 +171,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -189,38 +186,13 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Title: String
   Id: ID!
-  ObjectType: IxPartyObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
 }
 
-input IxPartyInput {
-  Emails: [IxEmailInput]
-  PhoneNumbers: [IxPhoneNumberInput]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumberInput
-  Title: String
+input IxPartyDO {
   Id: ID!
-  ObjectType: IxPartyObjectType
-  Description: String
-  Name: String!
-  Dependencies: [CxDependencyInput]
-  CurrentLifespan: IxRangeInput
-  Tags: [IxAttribute__String__Input]
-  Address: IxAddressInput
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
 }
 
 type IxPhoneNumber {

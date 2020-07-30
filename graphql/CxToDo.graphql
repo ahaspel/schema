@@ -1,9 +1,3 @@
-type CxChange {
-  Timestamp: String
-  UserName: String
-  Description: String
-}
-
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -54,21 +48,6 @@ input FilterInput {
   invert: Boolean = false
 }
 
-type IxAddress {
-  Street: String
-  StreetDetails: String
-  State: IxLookupValue
-  City: String
-  ZipCode: String
-  Geocode: IxGeocode
-  Id: ID!
-  ObjectType: IxAddressObjectType
-}
-
-enum IxAddressObjectType {
-  Address
-}
-
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
@@ -93,179 +72,38 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxCompany {
-  CompanyType: IxLookupValue
-  Supplier: Boolean
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
-  Title: String
-  Id: ID!
-  ObjectType: IxCompanyObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
-  AccountCode: String
-  Divisions: [IxLookupValue]
-  Contacts: [IxParty]
-}
-
-enum IxCompanyObjectType {
-  Company
-  Plant
-  Subcontractor
-}
-
-type IxCostCode {
-  UnitCost: IxUnitCost
-  Global: Boolean
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxCostCodeObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-}
-
-enum IxCostCodeObjectType {
-  CostCode
-}
-
-type IxDocument {
-  Attached: Boolean
-  Key: String
-  DocumentTypes: [IxLookupValue]
-  Dependencies: [CxDependency]
-  Id: ID!
-  ObjectType: IxDocumentObjectType
-  Description: String
-  Name: String
-  ChangeHistory: [CxChange]
-  Created: String
-  LastModified: String
-}
-
-enum IxDocumentObjectType {
-  Document
-}
-
-type IxEmail {
-  Email: String
-  Valid: Boolean
-  Id: ID
-  Description: String
-  Name: String
-}
-
-type IxGeocode {
-  Lat: Float
-  Lng: Float
-  Source: IxGeocodeSource
-}
-
-enum IxGeocodeSource {
-  Action
-  Owner
-  GPSService
-}
-
 type IxJob {
-  Client: IxCompany
-  Priority: IxLookupValue
-  Certifications: [IxLookupValue]
-  Notes: String
   JobActivities: [IxJobActivity]
-  JobStatus: IxLookupValue
-  StatusDue: String
-  Types: [IxLookupValue]
-  Subtypes: [IxLookupValue]
-  Owner: IxParty
-  Manager: IxParty
-  JobCosts: [IxJobCost]
-  TotalCost: IxMoney
-  EstimatedLaborHours: Float
-  EstimatedEquipmentHours: Float
-  Dependencies: [CxDependency]
   Id: ID!
-  ObjectType: IxJobObjectType
   Description: String
   Name: String
   AccountCode: String
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
-  Divisions: [IxLookupValue]
-  Contacts: [IxParty]
   DisplayName: String
 }
 
 type IxJobActivity {
-  ParentId: ID
   Completed: Boolean
-  SortOrder: Int
-  Dependencies: [CxDependency]
   Id: ID!
-  ObjectType: IxJobActivityObjectType
   Description: String
   Name: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
   DisplayName: String
-}
-
-enum IxJobActivityObjectType {
-  JobActivity
-}
-
-type IxJobCost {
-  CostCode: IxCostCode
-  CostPerUnit: IxMoney
-  TotalAmount: Float
-  ExpectedDailyAmount: Float
-  BaseObject: String
-  Id: ID!
-  ObjectType: IxJobCostObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-}
-
-enum IxJobCostObjectType {
-  JobCost
 }
 
 input IxJobDO {
   Id: ID!
 }
 
-enum IxJobObjectType {
-  Job
-}
-
-type IxLocation {
-  Address: IxAddress
-  JobId: ID
-  Description: String
-  Name: String
-}
-
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -287,7 +125,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -296,41 +133,6 @@ enum IxLookupValueObjectType {
   TimeEntryLaborClass
   JobCertification
   Privilege
-}
-
-type IxMoney {
-  Unit: IxUnit
-  Quantity: Float
-}
-
-type IxParty {
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
-  Title: String
-  Id: ID!
-  ObjectType: IxPartyObjectType
-  Description: String
-  Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
-}
-
-type IxPhoneNumber {
-  PhoneNumber: String
-  Id: ID
-  Description: String
-  Name: String
 }
 
 type IxRange {
@@ -346,24 +148,12 @@ input IxRangeInput {
 }
 
 type IxResource {
-  Owner: IxCompany
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
-  Temporary: Boolean
-  UnitCost: IxUnitCost
+  HasAuxiliaries: Boolean
   DisplayName: String
-  CurrentLifespan: IxRange
   Id: ID!
   ObjectType: IxResourceObjectType
-  Description: String
-  Name: String
-  Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
-  Attachments: [IxDocument]
-  HasAttachments: Boolean
-  Divisions: [IxLookupValue]
-  AccountCode: String
-  Location: IxLocation
   ForeColor: String
   BackColor: String
 }
@@ -394,8 +184,8 @@ enum IxResourceSubtypeObjectType {
 
 type IxResourceType {
   Family: IxResourceTypeFamily
+  Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  MoveVehicle: Boolean
   BaseObject: String
   Id: ID!
   ObjectType: IxResourceTypeObjectType
@@ -427,12 +217,6 @@ type IxUnit {
   ObjectType: IxUnitObjectType
   Description: String
   Name: String
-}
-
-type IxUnitCost {
-  Unit: IxUnit
-  Cost: IxMoney
-  Notes: String
 }
 
 enum IxUnitObjectType {

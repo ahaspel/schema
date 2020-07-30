@@ -75,21 +75,6 @@ input FilterInput {
   invert: Boolean = false
 }
 
-type IxAddress {
-  Street: String
-  StreetDetails: String
-  State: IxLookupValue
-  City: String
-  ZipCode: String
-  Geocode: IxGeocode
-  Id: ID!
-  ObjectType: IxAddressObjectType
-}
-
-enum IxAddressObjectType {
-  Address
-}
-
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
@@ -122,18 +107,6 @@ type IxEmail {
   Name: String
 }
 
-type IxGeocode {
-  Lat: Float
-  Lng: Float
-  Source: IxGeocodeSource
-}
-
-enum IxGeocodeSource {
-  Action
-  Owner
-  GPSService
-}
-
 type IxLevel {
   Privileges: [IxLevelPrivileges]
   ObjectPrivileges: [CxObjectPrivilege]
@@ -161,12 +134,10 @@ enum IxLevelPrivileges {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -188,7 +159,6 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   Attribute
-  PurchaseOrderStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -204,26 +174,13 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Title: String
   Id: ID!
-  ObjectType: IxPartyObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
-  Address: IxAddress
 }
 
 input IxPartyDO {
   Id: ID!
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
 }
 
 type IxPhoneNumber {
@@ -231,12 +188,6 @@ type IxPhoneNumber {
   Id: ID
   Description: String
   Name: String
-}
-
-type IxRange {
-  Start: String
-  End: String
-  Duration: String
 }
 
 """
