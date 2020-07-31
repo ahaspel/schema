@@ -104,9 +104,6 @@
 			]
 		},
 		"IxCapacity": {
-			"immutable": [
-				"Quantity"
-			],
 			"type": "object",
 			"properties": {
 				"Id": {
@@ -120,9 +117,6 @@
 				},
 				"Amount": {
 					"type": "number"
-				},
-				"Quantity": {
-					"$ref": "#/definitions/IxQuantity"
 				}
 			},
 			"required": [
@@ -294,21 +288,6 @@
 				"Id"
 			]
 		},
-		"IxQuantity": {
-			"type": "object",
-			"properties": {
-				"Unit": {
-					"$ref": "#/definitions/IxUnit"
-				},
-				"Quantity": {
-					"type": "number"
-				}
-			},
-			"required": [
-				"Unit",
-				"Quantity"
-			]
-		},
 		"IxRange": {
 			"superRequired": [
 				"End",
@@ -386,47 +365,14 @@
 				"Unit": {
 					"$ref": "#/definitions/IxUnit"
 				},
-				"ResourceSubtypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceSubtype"
-					}
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceType"
-					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [

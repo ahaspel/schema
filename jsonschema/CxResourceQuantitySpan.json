@@ -318,6 +318,9 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -354,21 +357,6 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
-			]
-		},
-		"IxQuantity": {
-			"type": "object",
-			"properties": {
-				"Unit": {
-					"$ref": "#/definitions/IxUnit"
-				},
-				"Quantity": {
-					"type": "number"
-				}
-			},
-			"required": [
-				"Unit",
-				"Quantity"
 			]
 		},
 		"IxRange": {
@@ -544,7 +532,6 @@
 		}
 	},
 	"immutable": [
-		"Quantity",
 		"ResourceSubtype",
 		"ResourceType",
 		"Supplier"
@@ -568,9 +555,6 @@
 		},
 		"Amount": {
 			"type": "number"
-		},
-		"Quantity": {
-			"$ref": "#/definitions/IxQuantity"
 		},
 		"Range": {
 			"$ref": "#/definitions/IxRange"

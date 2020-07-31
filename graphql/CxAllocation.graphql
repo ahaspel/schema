@@ -77,7 +77,6 @@ type CxResourceQuantitySpan {
   Supplier: IxCompany
   SupplierId: ID
   Amount: Float
-  Quantity: IxQuantity
   Range: IxRange
   ResourceIds: [Int]
 }
@@ -321,6 +320,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
+  Title: String
   Id: ID!
   Description: String
   Name: String
@@ -338,16 +338,6 @@ input IxPhoneNumberInput {
   Id: ID
   Description: String
   Name: String
-}
-
-type IxQuantity {
-  Unit: IxUnit
-  Quantity: Float
-}
-
-input IxQuantityInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
 }
 
 type IxRange {
@@ -404,16 +394,9 @@ enum IxResourceSubtypeObjectType {
 type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
-  ResourceSubtypes: [IxResourceSubtype]
-  BaseObject: String
   Id: ID!
-  ObjectType: IxResourceTypeObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  ForeColor: String
-  BackColor: String
-  Tags: [IxAttribute__String__]
 }
 
 input IxResourceTypeDO {
@@ -425,10 +408,6 @@ enum IxResourceTypeFamily {
   Equipment
   Material
   Group
-}
-
-enum IxResourceTypeObjectType {
-  ResourceType
 }
 
 type IxShift {
@@ -472,7 +451,6 @@ type IxTaskDay {
   ResourceSubtypeId: ID
   Supplier: IxCompany
   Amount: Float
-  Quantity: IxQuantity
   JobActivity: IxJobActivity
   Job: IxJob
   Location: IxLocation
@@ -516,7 +494,6 @@ input IxTaskDayInput {
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
   Amount: Float
-  Quantity: IxQuantityInput
   JobActivity: IxJobActivityDO!
   ActionStatus: IxActionStatusDO
   Resources: [IxResourceDO]
@@ -549,10 +526,6 @@ type IxUnit {
   ObjectType: IxUnitObjectType
   Description: String
   Name: String
-}
-
-input IxUnitDO {
-  Id: ID!
 }
 
 enum IxUnitObjectType {

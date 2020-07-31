@@ -10,7 +10,6 @@ type CxResourceQuantitySpan {
   Supplier: IxCompany
   SupplierId: ID
   Amount: Float
-  Quantity: IxQuantity
   Range: IxRange
   ResourceIds: [Int]
 }
@@ -143,6 +142,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
+  Title: String
   Id: ID!
   Description: String
   Name: String
@@ -153,11 +153,6 @@ type IxPhoneNumber {
   Id: ID
   Description: String
   Name: String
-}
-
-type IxQuantity {
-  Unit: IxUnit
-  Quantity: Float
 }
 
 type IxRange {

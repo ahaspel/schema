@@ -688,6 +688,9 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -724,21 +727,6 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
-			]
-		},
-		"IxQuantity": {
-			"type": "object",
-			"properties": {
-				"Unit": {
-					"$ref": "#/definitions/IxUnit"
-				},
-				"Quantity": {
-					"type": "number"
-				}
-			},
-			"required": [
-				"Unit",
-				"Quantity"
 			]
 		},
 		"IxRange": {
@@ -856,47 +844,14 @@
 				"Unit": {
 					"$ref": "#/definitions/IxUnit"
 				},
-				"ResourceSubtypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceSubtype"
-					}
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceType"
-					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [
@@ -983,7 +938,6 @@
 		"JobActivityId",
 		"JobId",
 		"Location",
-		"Quantity",
 		"Resources",
 		"ResourceIds",
 		"ResourceSubtypeId",
@@ -1032,9 +986,6 @@
 		},
 		"ResourceSubtypeId": {
 			"type": "integer"
-		},
-		"Quantity": {
-			"$ref": "#/definitions/IxQuantity"
 		},
 		"Amount": {
 			"type": "number"

@@ -385,6 +385,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
+  Title: String
   Id: ID!
   Description: String
   Name: String
@@ -399,6 +400,7 @@ input IxPartyInput {
   PhoneNumbers: [IxPhoneNumberInput]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumberInput
+  Title: String
   Id: ID!
   Description: String
   Name: String!

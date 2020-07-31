@@ -1,144 +1,97 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 54,
-	"Minutes": 848,
+	"Hours": 362,
+	"Minutes": 690,
 	"Resource": {
 		"ResourceType": {
-			"Family": "Material",
+			"Family": "Equipment",
 			"Unit": {
-				"UnitType": "Time",
-				"Scalar": 269,
-				"Integral": true,
-				"BaseObject": "fsdnxQUceo",
+				"UnitType": "Length",
+				"Scalar": 474,
+				"Integral": false,
+				"BaseObject": "vHHDrBW",
 				"Id": 0,
 				"ObjectType": "Unit",
-				"Description": "YeLdNNG",
-				"Name": "sQXSCOsfPmuZ"
+				"Description": "yLzibhJA",
+				"Name": "FnOCsQAThA"
 			},
-			"ResourceSubtypes": [
-				{
-					"ParentId": 0,
-					"Dependencies": [
-						{
-							"ObjectType": "mqPdTinEMFIc",
-							"Ids": [
-								909
-							]
-						}
-					],
-					"Id": 0,
-					"ObjectType": "ResourceSubtype",
-					"Description": "YTDCgNnGWX",
-					"Name": "itPEvqvQQ"
-				}
-			],
-			"BaseObject": "mkJbXXxpI",
 			"Id": 0,
-			"ObjectType": "ResourceType",
-			"Description": "vctSmz",
-			"Name": "OmVZOWH",
-			"Dependencies": [
-				{
-					"ObjectType": "uRgFyxEnyH",
-					"Ids": [
-						915
-					]
-				}
-			],
-			"ForeColor": "zPBhjYzZi",
-			"BackColor": "hnUSdpHVmQI",
-			"Tags": [
-				{
-					"BaseObject": "VtDRWPGnXAFv",
-					"AttributeId": 0,
-					"Dependencies": [
-						{
-							"ObjectType": "hBPRWZhdRAIy",
-							"Ids": [
-								819
-							]
-						}
-					],
-					"Id": 0,
-					"ObjectType": "Attribute",
-					"Description": "BdSCAVFBEhje",
-					"Name": "qxZlVzZJPJ"
-				}
-			]
+			"Description": "SgCzRVES",
+			"Name": "ETiRyTTJ"
 		},
 		"ResourceSubtype": {
 			"ParentId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "ZwHAcqfekpp",
+					"ObjectType": "FwVfZHtSmHG",
 					"Ids": [
-						70
+						110
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "ResourceSubtype",
-			"Description": "DcvJZj",
-			"Name": "xHxRiFmRzU"
+			"Description": "UuABQNjAR",
+			"Name": "ioBvTNYDqJ"
 		},
-		"HasAuxiliaries": false,
-		"DisplayName": "bpScySebbDzu",
+		"HasAuxiliaries": true,
+		"DisplayName": "AgvxAozfsmyf",
 		"Id": 0,
-		"ObjectType": "Crew",
-		"ForeColor": "qmcbfoSkiA",
-		"BackColor": "ncTFSzi"
+		"ObjectType": "Material",
+		"ForeColor": "sWCQFxOGv",
+		"BackColor": "SiMSoddDsmeW"
 	},
 	"EntryType": {
 		"Id": 0,
-		"ObjectType": "ToDoStatus",
-		"Description": "FvQMFxntMWOA",
-		"Name": "ddBEhnOzU"
+		"ObjectType": "DocumentType",
+		"Description": "gMmEJY",
+		"Name": "jecUGOGOHDFm"
 	},
 	"EntryLaborClass": {
 		"Id": 0,
-		"ObjectType": "Training",
-		"Description": "AGcCHWjD",
-		"Name": "xnibaRnoTh"
+		"ObjectType": "Attribute",
+		"Description": "QOFHaPPuMVi",
+		"Name": "WjhgPDnmcZwv"
 	},
 	"CostCodes": [
 		{
 			"UnitCost": {
 				"Unit": {
-					"UnitType": "Weight",
-					"Scalar": 495,
-					"Integral": false,
-					"BaseObject": "MqNDEj",
+					"UnitType": "Self",
+					"Scalar": 57,
+					"Integral": true,
+					"BaseObject": "EFqtxt",
 					"Id": 0,
 					"ObjectType": "Unit",
-					"Description": "CjbLbcwXy",
-					"Name": "wbPuRpCTjR"
+					"Description": "FbWKIrNQYrF",
+					"Name": "JfRmKgBdT"
 				},
 				"Cost": {
 					"Unit": {
-						"UnitType": "Time",
-						"Scalar": 565,
+						"UnitType": "Area",
+						"Scalar": 655,
 						"Integral": false,
-						"BaseObject": "wIHlpFKrUVa",
+						"BaseObject": "DsntMqNLJSc",
 						"Id": 0,
 						"ObjectType": "Unit",
-						"Description": "DZArewjCsI",
-						"Name": "HJCoyFzlJrM"
+						"Description": "KmwcYe",
+						"Name": "pFnlHNxKP"
 					},
-					"Quantity": 371
+					"Quantity": 654
 				},
-				"Notes": "pQZcdp"
+				"Notes": "PxPZByyQTnCZ"
 			},
-			"Global": false,
-			"BaseObject": "RFrHcfK",
+			"Global": true,
+			"BaseObject": "HvFmDXj",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Description": "grKBYH",
-			"Name": "fqqW",
+			"Description": "HAQxtDHMrs",
+			"Name": "FdCctlxJAwE",
 			"Dependencies": [
 				{
-					"ObjectType": "JUGEJZ",
+					"ObjectType": "TFhGkafEq",
 					"Ids": [
-						680
+						403
 					]
 				}
 			]
@@ -147,205 +100,160 @@
 	"Auxiliaries": [
 		{
 			"ResourceType": {
-				"Family": "Labor",
+				"Family": "Material",
 				"Unit": {
-					"UnitType": "Self",
-					"Scalar": 470,
-					"Integral": false,
-					"BaseObject": "nQeYgPSfdZd",
+					"UnitType": "Length",
+					"Scalar": 963,
+					"Integral": true,
+					"BaseObject": "EGIGXNWyzOmm",
 					"Id": 0,
 					"ObjectType": "Unit",
-					"Description": "dhOJJQ",
-					"Name": "buJNCqFNtiY"
+					"Description": "THHJBe",
+					"Name": "ILVYyfrbL"
 				},
-				"ResourceSubtypes": [
-					{
-						"ParentId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "jkSFjk",
-								"Ids": [
-									409
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "ResourceSubtype",
-						"Description": "LEMPuoHHRRoV",
-						"Name": "TVADMyMAeyN"
-					}
-				],
-				"BaseObject": "qRSYMLtGB",
 				"Id": 0,
-				"ObjectType": "ResourceType",
-				"Description": "TTMewhDLb",
-				"Name": "upUpoiC",
-				"Dependencies": [
-					{
-						"ObjectType": "lePUioCVSdf",
-						"Ids": [
-							163
-						]
-					}
-				],
-				"ForeColor": "qbZovYLCXZdO",
-				"BackColor": "SgOGjM",
-				"Tags": [
-					{
-						"BaseObject": "qLVfsqgQBl",
-						"AttributeId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "LcFotEDlyA",
-								"Ids": [
-									341
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "Attribute",
-						"Description": "JNmQgMBIh",
-						"Name": "cOhVnubkBKg"
-					}
-				]
+				"Description": "yJpLJJQlATa",
+				"Name": "WQKfEZ"
 			},
 			"ResourceSubtype": {
 				"ParentId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "faQXAMaAU",
+						"ObjectType": "JesyuLVnAQr",
 						"Ids": [
-							404
+							620
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "ResourceSubtype",
-				"Description": "nqFOzLT",
-				"Name": "hneYHckx"
+				"Description": "qsWFuhA",
+				"Name": "cHUspfAJRERq"
 			},
 			"HasAuxiliaries": false,
-			"DisplayName": "fdZyQUlULLq",
+			"DisplayName": "nAaESBpucu",
 			"Id": 0,
-			"ObjectType": "Material",
-			"ForeColor": "ipERvw",
-			"BackColor": "ecyvuzwV"
+			"ObjectType": "Employee",
+			"ForeColor": "ldKHUvzc",
+			"BackColor": "MXUIfivPn"
 		}
 	],
 	"JobActivity": {
-		"Completed": false,
+		"Completed": true,
 		"Id": 0,
-		"Description": "KPSfecT",
-		"Name": "JLnqURdF",
+		"Description": "NyWRBlDA",
+		"Name": "dcMijzqbOOK",
 		"CurrentLifespan": {
 			"Start": "2019-01-14T08:00:00",
 			"End": "2019-01-14T08:00:00",
-			"Duration": "BrowMM"
+			"Duration": "fXqlFcjYnFy"
 		},
-		"ForeColor": "nEcFhsIwFRM",
-		"BackColor": "siZDVIZjOTBx",
-		"DisplayName": "RrLlkTu"
+		"ForeColor": "soAjnJrPKe",
+		"BackColor": "BuCwUXDeA",
+		"DisplayName": "asBdZjVOS"
 	},
 	"Owner": {
 		"Emails": [
 			{
-				"Email": "Presley_Ritchie22@yahoo.com",
+				"Email": "Lennie1@yahoo.com",
 				"Valid": false,
 				"Id": 0,
-				"Description": "YrKijAsFTF",
-				"Name": "WEezSbtRwwt"
+				"Description": "bDRLeCS",
+				"Name": "KYPvXgLw"
 			}
 		],
 		"PhoneNumbers": [
 			{
-				"PhoneNumber": "ndcgvbNMP",
+				"PhoneNumber": "TNpewxkpQ",
 				"Id": 0,
-				"Description": "OyrjNyrTU",
-				"Name": "XEavup"
+				"Description": "wyROXp",
+				"Name": "SQyCjWxxN"
 			}
 		],
-		"HasSMSNumber": false,
+		"HasSMSNumber": true,
 		"SMSNumber": {
-			"PhoneNumber": "OCVZPjQucqT",
+			"PhoneNumber": "qNyWezDXWeR",
 			"Id": 0,
-			"Description": "NBXAeUCAW",
-			"Name": "scxvtx"
+			"Description": "YFWjdQNOgIZm",
+			"Name": "xtdRsKL"
 		},
+		"Title": "JVGMrmlpGOYf",
 		"Id": 0,
-		"Description": "AyGUFukl",
-		"Name": "ZkPuEIBSL"
+		"Description": "lqYkXmHxP",
+		"Name": "sIhaWHJJF"
 	},
-	"IsVoid": false,
-	"Billable": false,
+	"IsVoid": true,
+	"Billable": true,
 	"StartLocation": {
-		"Lat": 674,
-		"Lng": 330,
+		"Lat": 259,
+		"Lng": 983,
 		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 598,
-		"Lng": 783,
-		"Source": "Action"
+		"Lat": 587,
+		"Lng": 235,
+		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
-			"UnitType": "Money",
-			"Scalar": 993,
-			"Integral": true,
-			"BaseObject": "FBIyAfvGwb",
+			"UnitType": "Length",
+			"Scalar": 509,
+			"Integral": false,
+			"BaseObject": "TGykCMrqvcBl",
 			"Id": 0,
 			"ObjectType": "Unit",
-			"Description": "VrbjFttWw",
-			"Name": "GGiiGtaO"
+			"Description": "NdZSEFcy",
+			"Name": "BGgwxu"
 		},
-		"Quantity": 239
+		"Quantity": 37
 	},
 	"EndDistance": {
 		"Unit": {
-			"UnitType": "Length",
-			"Scalar": 202,
+			"UnitType": "Volume",
+			"Scalar": 819,
 			"Integral": true,
-			"BaseObject": "SxtzdsM",
+			"BaseObject": "hqoodPOPpJZ",
 			"Id": 0,
 			"ObjectType": "Unit",
-			"Description": "hbOWBSY",
-			"Name": "qyUQIXVA"
+			"Description": "URIYOsw",
+			"Name": "AqXlPwX"
 		},
-		"Quantity": 396
+		"Quantity": 490
 	},
 	"Approvals": [
 		{
 			"Approver": {
 				"Emails": [
 					{
-						"Email": "Dayna_Stiedemann0@hotmail.com",
-						"Valid": true,
+						"Email": "Kaylee79@gmail.com",
+						"Valid": false,
 						"Id": 0,
-						"Description": "kfMDHA",
-						"Name": "pdYLJP"
+						"Description": "CWSiqLC",
+						"Name": "bmjYxGPG"
 					}
 				],
 				"PhoneNumbers": [
 					{
-						"PhoneNumber": "gHarRwfOucVV",
+						"PhoneNumber": "XgPEpVhES",
 						"Id": 0,
-						"Description": "brTYtTMuY",
-						"Name": "KWoCaaojNfM"
+						"Description": "SlWItdG",
+						"Name": "WxvSJQxSWopQ"
 					}
 				],
-				"HasSMSNumber": false,
+				"HasSMSNumber": true,
 				"SMSNumber": {
-					"PhoneNumber": "NKIHSdfIytOW",
+					"PhoneNumber": "BQfArqud",
 					"Id": 0,
-					"Description": "vOqOQuCb",
-					"Name": "qfJLsDSiGpBY"
+					"Description": "jpMRoYwLtMq",
+					"Name": "SuZnWtkteOZe"
 				},
+				"Title": "yYnxKcdCijN",
 				"Id": 0,
-				"Description": "SqkklNSy",
-				"Name": "nWaYDeiNBtx"
+				"Description": "AGTMTGxz",
+				"Name": "EjXqJVUnWET"
 			},
 			"AsOf": "2019-01-14T08:00:00"
 		}
@@ -353,41 +261,41 @@
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "KnFFzpMSQLQ"
+		"Duration": "ZWovutYw"
 	},
 	"Id": 0,
 	"Divisions": [
 		{
 			"Id": 0,
-			"ObjectType": "ToDoStatus",
-			"Description": "TiJzWVFIHobX",
-			"Name": "ZMxuproJNFj"
+			"ObjectType": "Division",
+			"Description": "dTZHhgOOoVc",
+			"Name": "FSIJBormBoeN"
 		}
 	],
-	"Description": "HMYhGQ",
+	"Description": "ocRfeKvLbtr",
 	"Tags": [
 		{
-			"BaseObject": "yXqszniP",
+			"BaseObject": "SrpZrkk",
 			"AttributeId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "pvordcL",
+					"ObjectType": "bVoJYzJdZppU",
 					"Ids": [
-						400
+						53
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Description": "UQEAKPgXtfnG",
-			"Name": "fgeVudwE"
+			"Description": "tamIInJhrVW",
+			"Name": "KXSYDq"
 		}
 	],
 	"Dependencies": [
 		{
-			"ObjectType": "chLTpMMXuYK",
+			"ObjectType": "FinExWROZ",
 			"Ids": [
-				769
+				495
 			]
 		}
 	]

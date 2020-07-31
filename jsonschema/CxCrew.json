@@ -470,6 +470,9 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -638,47 +641,14 @@
 				"Unit": {
 					"$ref": "#/definitions/IxUnit"
 				},
-				"ResourceSubtypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceSubtype"
-					}
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceType"
-					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [

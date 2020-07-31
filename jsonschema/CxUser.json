@@ -307,6 +307,9 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},

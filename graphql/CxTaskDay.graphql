@@ -36,7 +36,6 @@ type CxTaskDay {
   ResourceTypeId: ID
   ResourceSubtype: IxResourceSubtype
   ResourceSubtypeId: ID
-  Quantity: IxQuantity
   Amount: Float
   Filled: Boolean
   Supplier: IxCompany
@@ -292,6 +291,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
+  Title: String
   Id: ID!
   Description: String
   Name: String
@@ -302,11 +302,6 @@ type IxPhoneNumber {
   Id: ID
   Description: String
   Name: String
-}
-
-type IxQuantity {
-  Unit: IxUnit
-  Quantity: Float
 }
 
 type IxRange {
@@ -363,16 +358,9 @@ enum IxResourceSubtypeObjectType {
 type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
-  ResourceSubtypes: [IxResourceSubtype]
-  BaseObject: String
   Id: ID!
-  ObjectType: IxResourceTypeObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  ForeColor: String
-  BackColor: String
-  Tags: [IxAttribute__String__]
 }
 
 input IxResourceTypeDO {
@@ -384,10 +372,6 @@ enum IxResourceTypeFamily {
   Equipment
   Material
   Group
-}
-
-enum IxResourceTypeObjectType {
-  ResourceType
 }
 
 type IxUnit {

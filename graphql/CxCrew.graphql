@@ -269,16 +269,9 @@ enum IxResourceSubtypeObjectType {
 type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
-  ResourceSubtypes: [IxResourceSubtype]
-  BaseObject: String
   Id: ID!
-  ObjectType: IxResourceTypeObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  ForeColor: String
-  BackColor: String
-  Tags: [IxAttribute__String__]
 }
 
 enum IxResourceTypeFamily {
@@ -286,10 +279,6 @@ enum IxResourceTypeFamily {
   Equipment
   Material
   Group
-}
-
-enum IxResourceTypeObjectType {
-  ResourceType
 }
 
 type IxUnit {

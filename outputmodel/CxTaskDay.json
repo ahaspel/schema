@@ -1,729 +1,482 @@
 {
 	"ParentId": 0,
-	"ActionType": "Employee",
+	"ActionType": "Equipment",
 	"Location": {
 		"Address": {
-			"Street": "plILo",
-			"StreetDetails": "hKipcgl",
+			"Street": "Fsz",
+			"StreetDetails": "RuKBKEDTbJ",
 			"State": {
 				"Id": 0,
-				"ObjectType": "Division",
-				"Description": "loxRtBXkRkYQ",
-				"Name": "PYztoeClkx"
+				"ObjectType": "Language",
+				"Description": "qSldqDI",
+				"Name": "PbbphPII"
 			},
-			"City": "UCKNmfJUWW",
-			"ZipCode": "ukjImgRFbUTp",
+			"City": "HwNnSsnEjWuG",
+			"ZipCode": "oKAtihS",
 			"Geocode": {
-				"Lat": 640,
-				"Lng": 225,
-				"Source": "GPSService"
+				"Lat": 983,
+				"Lng": 204,
+				"Source": "Action"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
 		},
 		"JobId": 0,
-		"Description": "mtVinTad",
-		"Name": "AjQlRdoO"
+		"Description": "YwPnCJMe",
+		"Name": "USdEsHTVMgwr"
 	},
 	"ConflictIds": [
-		66
+		926
 	],
-	"ForeColor": "SWkqAHy",
-	"BackColor": "eUTsYZ",
+	"ForeColor": "aHBGoO",
+	"BackColor": "nfIBfJvBBm",
 	"ResourceType": {
-		"Family": "Labor",
+		"Family": "Material",
 		"Unit": {
-			"UnitType": "Length",
-			"Scalar": 533,
+			"UnitType": "Money",
+			"Scalar": 776,
 			"Integral": true,
-			"BaseObject": "wJRXJNnA",
+			"BaseObject": "wMEADrv",
 			"Id": 0,
 			"ObjectType": "Unit",
-			"Description": "MTwgYVseXWia",
-			"Name": "cTxqLNnFmQL"
+			"Description": "ieLCyYWTranG",
+			"Name": "beAAcIh"
 		},
-		"ResourceSubtypes": [
-			{
-				"ParentId": 0,
-				"Dependencies": [
-					{
-						"ObjectType": "GFPnogRMOH",
-						"Ids": [
-							375
-						]
-					}
-				],
-				"Id": 0,
-				"ObjectType": "ResourceSubtype",
-				"Description": "NQbmYdXf",
-				"Name": "pdUpgM"
-			}
-		],
-		"BaseObject": "LMJJApuVWr",
 		"Id": 0,
-		"ObjectType": "ResourceType",
-		"Description": "UERVvjCL",
-		"Name": "nlpQyEYYZA",
-		"Dependencies": [
-			{
-				"ObjectType": "xcfBfsv",
-				"Ids": [
-					486
-				]
-			}
-		],
-		"ForeColor": "coMVKFAkck",
-		"BackColor": "uemNhQdVZTh",
-		"Tags": [
-			{
-				"BaseObject": "aqntPLqGQy",
-				"AttributeId": 0,
-				"Dependencies": [
-					{
-						"ObjectType": "vxiMnh",
-						"Ids": [
-							791
-						]
-					}
-				],
-				"Id": 0,
-				"ObjectType": "Attribute",
-				"Description": "fwTnGpjL",
-				"Name": "ljQNwk"
-			}
-		]
+		"Description": "hNsqGweTFbon",
+		"Name": "vxMtnwec"
 	},
 	"ResourceTypeId": 0,
 	"ResourceSubtype": {
 		"ParentId": 0,
 		"Dependencies": [
 			{
-				"ObjectType": "IZHdAacLF",
+				"ObjectType": "QwSUmCSrfkPi",
 				"Ids": [
-					252
+					785
 				]
 			}
 		],
 		"Id": 0,
 		"ObjectType": "ResourceSubtype",
-		"Description": "CxQmeAxfzxrU",
-		"Name": "xLvFibzgyFjT"
+		"Description": "PMGkMRLaJkDb",
+		"Name": "bNLsESJy"
 	},
 	"ResourceSubtypeId": 0,
-	"Quantity": {
-		"Unit": {
-			"UnitType": "Self",
-			"Scalar": 71,
-			"Integral": false,
-			"BaseObject": "cZIqFvMXkfT",
-			"Id": 0,
-			"ObjectType": "Unit",
-			"Description": "qiZzSOrY",
-			"Name": "awVcBvISAtvt"
-		},
-		"Quantity": 49
-	},
-	"Amount": 161,
-	"Filled": true,
+	"Amount": 30,
+	"Filled": false,
 	"Supplier": {
 		"CompanyType": {
 			"Id": 0,
-			"ObjectType": "Skill",
-			"Description": "TTTGNx",
-			"Name": "YmoXEaMNIAmP"
+			"ObjectType": "Training",
+			"Description": "GLnXgD",
+			"Name": "pXQJGphzY"
 		},
 		"Supplier": false,
 		"Emails": [
 			{
-				"Email": "Zion_Adams@hotmail.com",
-				"Valid": true,
+				"Email": "Jarrell_Leannon@yahoo.com",
+				"Valid": false,
 				"Id": 0,
-				"Description": "REsaIbbLqS",
-				"Name": "JivxttFMn"
+				"Description": "BMzgzIzZ",
+				"Name": "FUlsFhd"
 			}
 		],
 		"PhoneNumbers": [
 			{
-				"PhoneNumber": "twEVixM",
+				"PhoneNumber": "IHcdmMnXL",
 				"Id": 0,
-				"Description": "psOzdggHvAp",
-				"Name": "hgBJyc"
+				"Description": "DAjGrxkkoct",
+				"Name": "dvztJlIq"
 			}
 		],
-		"HasSMSNumber": false,
+		"HasSMSNumber": true,
 		"SMSNumber": {
-			"PhoneNumber": "yENqeAa",
+			"PhoneNumber": "JCAVNqVNjlef",
 			"Id": 0,
-			"Description": "nxurHmCKdZN",
-			"Name": "qzLXfbVVUpp"
+			"Description": "gRSqqkERkA",
+			"Name": "FeMxuFoOFo"
 		},
-		"Title": "HNrMXa",
+		"Title": "fZXxwlM",
 		"Id": 0,
-		"ObjectType": "Subcontractor",
-		"Description": "aqTLMrZmwoz",
-		"Name": "hWbULQOHPx",
+		"ObjectType": "Company",
+		"Description": "inAQkfljo",
+		"Name": "pgYvOzfxH",
 		"Dependencies": [
 			{
-				"ObjectType": "uzBTEZLQ",
+				"ObjectType": "FaMiUbiuRGS",
 				"Ids": [
-					932
+					327
 				]
 			}
 		],
 		"CurrentLifespan": {
 			"Start": "2019-01-14T08:00:00",
 			"End": "2019-01-14T08:00:00",
-			"Duration": "NvYELJPWYLfo"
+			"Duration": "nTMRGiaZw"
 		},
 		"Tags": [
 			{
-				"BaseObject": "CCChJow",
+				"BaseObject": "btnGaJ",
 				"AttributeId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "qthjCyrUqDeC",
+						"ObjectType": "RntBtidW",
 						"Ids": [
-							268
+							67
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "Attribute",
-				"Description": "UCOuhijPqBdK",
-				"Name": "HtOUfdYyey"
+				"Description": "nclmKCBvf",
+				"Name": "NHaBRIsHeJ"
 			}
 		],
 		"Address": {
-			"Street": "LLlg",
-			"StreetDetails": "RPxeCSzsbR",
+			"Street": "V",
+			"StreetDetails": "pxesmAtS",
 			"State": {
 				"Id": 0,
-				"ObjectType": "Language",
-				"Description": "netiWwfdxxK",
-				"Name": "KXdnhptxNT"
+				"ObjectType": "JobCertification",
+				"Description": "TLSAIi",
+				"Name": "TPIwSv"
 			},
-			"City": "VwBKNJqMGFcb",
-			"ZipCode": "vFawpSUsQh",
+			"City": "Mjp",
+			"ZipCode": "MLwqhRITKbU",
 			"Geocode": {
-				"Lat": 203,
-				"Lng": 876,
+				"Lat": 549,
+				"Lng": 430,
 				"Source": "GPSService"
 			},
 			"Id": 0,
 			"ObjectType": "Address"
 		},
-		"AccountCode": "wKVFYx",
+		"AccountCode": "tEukNuwXqDe",
 		"Divisions": [
 			{
 				"Id": 0,
-				"ObjectType": "Privilege",
-				"Description": "QpsKAgOxnTVH",
-				"Name": "jeBkGozzFA"
+				"ObjectType": "Language",
+				"Description": "ROsGmRY",
+				"Name": "XDCxVgU"
 			}
 		],
 		"Contacts": [
 			{
 				"Emails": [
 					{
-						"Email": "Jordan.Dickens17@gmail.com",
+						"Email": "Aidan_Hane@yahoo.com",
 						"Valid": true,
 						"Id": 0,
-						"Description": "lkTFvceYcCwP",
-						"Name": "roVHPFHKuJxL"
+						"Description": "tKyWWMH",
+						"Name": "gzKRQBw"
 					}
 				],
 				"PhoneNumbers": [
 					{
-						"PhoneNumber": "GorkkqVPdE",
+						"PhoneNumber": "nGRkAEqESqCi",
 						"Id": 0,
-						"Description": "lnrQUspjcBz",
-						"Name": "vHMJOyys"
+						"Description": "viphZbk",
+						"Name": "BRIcsafSvrxW"
 					}
 				],
 				"HasSMSNumber": true,
 				"SMSNumber": {
-					"PhoneNumber": "tiboSjS",
+					"PhoneNumber": "zXrNnyWmkx",
 					"Id": 0,
-					"Description": "yFvpUQMmgrOJ",
-					"Name": "WlLSUFRuPUmW"
+					"Description": "LHQLshEXqCJ",
+					"Name": "jrwVKSe"
 				},
+				"Title": "tEpDgUEgOazw",
 				"Id": 0,
-				"Description": "FcXTXSuS",
-				"Name": "bKkIQwo"
+				"Description": "BfEwTPnd",
+				"Name": "sFalCQkcUd"
 			}
 		]
 	},
 	"ShiftSupervisor": true,
 	"SMSNumber": {
-		"PhoneNumber": "kEdUFmC",
+		"PhoneNumber": "ZoOTguxUbH",
 		"Id": 0,
-		"Description": "cvGPejMOQNj",
-		"Name": "GrrToqpHBNpy"
+		"Description": "EUxjHCQujxMc",
+		"Name": "HiSaoYr"
 	},
 	"Job": {
 		"JobActivities": [
 			{
-				"Completed": true,
+				"Completed": false,
 				"Id": 0,
-				"Description": "YjBxaWQlQf",
-				"Name": "PHTNZOd",
+				"Description": "xLYdQxw",
+				"Name": "plbNgCJPP",
 				"CurrentLifespan": {
 					"Start": "2019-01-14T08:00:00",
 					"End": "2019-01-14T08:00:00",
-					"Duration": "MjWrvQVmPpX"
+					"Duration": "JjMosYZ"
 				},
-				"ForeColor": "xKxyGDjqPvv",
-				"BackColor": "gFjZuONiYb",
-				"DisplayName": "IQlWzyLqgDi"
+				"ForeColor": "IrFTiOYqb",
+				"BackColor": "hzkEtDui",
+				"DisplayName": "rnxcRi"
 			}
 		],
 		"Id": 0,
-		"Description": "ENmakli",
-		"Name": "dxrNRlbxnz",
-		"AccountCode": "udTPpliXPA",
-		"ForeColor": "UEQCpBGTeM",
-		"BackColor": "UJnFNu",
+		"Description": "ppYBUMp",
+		"Name": "OBHJkFavbsCn",
+		"AccountCode": "zRMOzx",
+		"ForeColor": "yMcBVEi",
+		"BackColor": "LROiuZvKl",
 		"CurrentLifespan": {
 			"Start": "2019-01-14T08:00:00",
 			"End": "2019-01-14T08:00:00",
-			"Duration": "gpPjYa"
+			"Duration": "wxlywWtyRB"
 		},
-		"DisplayName": "hNCCvCE"
+		"DisplayName": "YTjKfZ"
 	},
 	"JobActivity": {
-		"Completed": false,
+		"Completed": true,
 		"Id": 0,
-		"Description": "OCzFmZiI",
-		"Name": "qUZdWNudBfz",
+		"Description": "aQuPAJfzFqw",
+		"Name": "KloDXpowbb",
 		"CurrentLifespan": {
 			"Start": "2019-01-14T08:00:00",
 			"End": "2019-01-14T08:00:00",
-			"Duration": "qMRoaCxonZ"
+			"Duration": "QRBntzs"
 		},
-		"ForeColor": "dKQHpcNXZYI",
-		"BackColor": "nxppoJxmYUnW",
-		"DisplayName": "nzxlHkiu"
+		"ForeColor": "RfKofdl",
+		"BackColor": "qwaxMILISN",
+		"DisplayName": "DyXsGTykCgP"
 	},
-	"ObjectType": "VirtualTaskDay",
+	"ObjectType": "ActualTaskDay",
 	"Divisions": [
 		{
 			"Id": 0,
-			"ObjectType": "Skill",
-			"Description": "bIooqAqDAX",
-			"Name": "wpqvdLpPE"
+			"ObjectType": "ToDoStatus",
+			"Description": "wYtwfjlpl",
+			"Name": "VolnoRBzX"
 		}
 	],
 	"Auxiliaries": [
 		{
 			"ResourceType": {
-				"Family": "Material",
+				"Family": "Equipment",
 				"Unit": {
-					"UnitType": "Length",
-					"Scalar": 427,
+					"UnitType": "Weight",
+					"Scalar": 376,
 					"Integral": true,
-					"BaseObject": "uyNwbOvEPl",
+					"BaseObject": "eyCVXVWuYeC",
 					"Id": 0,
 					"ObjectType": "Unit",
-					"Description": "GSzBarFoyZKn",
-					"Name": "gQEhmV"
+					"Description": "nfZYVAKnwBK",
+					"Name": "JvQElNXJW"
 				},
-				"ResourceSubtypes": [
-					{
-						"ParentId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "bULoEHwxVxAU",
-								"Ids": [
-									550
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "ResourceSubtype",
-						"Description": "ZzCnBQLGsis",
-						"Name": "NamZZPo"
-					}
-				],
-				"BaseObject": "BBzTqsqMaxVO",
 				"Id": 0,
-				"ObjectType": "ResourceType",
-				"Description": "GlhjMHwBgwa",
-				"Name": "eSnCnXMsE",
-				"Dependencies": [
-					{
-						"ObjectType": "LEXvLqx",
-						"Ids": [
-							294
-						]
-					}
-				],
-				"ForeColor": "LRtNHlmxSw",
-				"BackColor": "uGkJKk",
-				"Tags": [
-					{
-						"BaseObject": "LblDQjYUn",
-						"AttributeId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "dAJibaeIDKR",
-								"Ids": [
-									447
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "Attribute",
-						"Description": "vsNwcYXcYDa",
-						"Name": "GrYrqwgDM"
-					}
-				]
+				"Description": "rLKdENErD",
+				"Name": "NTuVRHDLm"
 			},
 			"ResourceSubtype": {
 				"ParentId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "IdwAGdx",
+						"ObjectType": "VbVxAfmOokwZ",
 						"Ids": [
-							88
+							563
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "ResourceSubtype",
-				"Description": "nchGoe",
-				"Name": "aVIKCSjIvB"
+				"Description": "MMPszfn",
+				"Name": "rBuNfk"
 			},
 			"HasAuxiliaries": true,
-			"DisplayName": "JKUfrBTJLuT",
+			"DisplayName": "ZvvzLUFoD",
 			"Id": 0,
 			"ObjectType": "Crew",
-			"ForeColor": "YoroWlSxBP",
-			"BackColor": "NdfkevJUP"
+			"ForeColor": "WrWizE",
+			"BackColor": "xVaOaTNDIs"
 		}
 	],
 	"ResourceRoles": [
 		{
 			"Resource": {
 				"ResourceType": {
-					"Family": "Group",
+					"Family": "Equipment",
 					"Unit": {
 						"UnitType": "Length",
-						"Scalar": 188,
+						"Scalar": 766,
 						"Integral": false,
-						"BaseObject": "gKCGgtNvUP",
+						"BaseObject": "QPFxQlzAN",
 						"Id": 0,
 						"ObjectType": "Unit",
-						"Description": "fAEBiPiLzB",
-						"Name": "FIkslV"
+						"Description": "lhQxainEHvmO",
+						"Name": "GNYwETMeC"
 					},
-					"ResourceSubtypes": [
-						{
-							"ParentId": 0,
-							"Dependencies": [
-								{
-									"ObjectType": "ZNytttR",
-									"Ids": [
-										402
-									]
-								}
-							],
-							"Id": 0,
-							"ObjectType": "ResourceSubtype",
-							"Description": "YwzWUygtpNS",
-							"Name": "uyjgPbTcuUk"
-						}
-					],
-					"BaseObject": "KUcdAmj",
 					"Id": 0,
-					"ObjectType": "ResourceType",
-					"Description": "QoOXbh",
-					"Name": "sYlzBm",
-					"Dependencies": [
-						{
-							"ObjectType": "FQcQGtBVkKCB",
-							"Ids": [
-								852
-							]
-						}
-					],
-					"ForeColor": "yEEvAyCqZZg",
-					"BackColor": "DqnZFtt",
-					"Tags": [
-						{
-							"BaseObject": "jVurjq",
-							"AttributeId": 0,
-							"Dependencies": [
-								{
-									"ObjectType": "KwiCtLBevk",
-									"Ids": [
-										229
-									]
-								}
-							],
-							"Id": 0,
-							"ObjectType": "Attribute",
-							"Description": "UgKkfkAeBoH",
-							"Name": "xTvyhrnzPWI"
-						}
-					]
+					"Description": "obRXdQ",
+					"Name": "qQgxCTksyaOB"
 				},
 				"ResourceSubtype": {
 					"ParentId": 0,
 					"Dependencies": [
 						{
-							"ObjectType": "qZEYiuSmerz",
+							"ObjectType": "YzspLL",
 							"Ids": [
-								833
+								606
 							]
 						}
 					],
 					"Id": 0,
 					"ObjectType": "ResourceSubtype",
-					"Description": "YAhkGHtMkG",
-					"Name": "YhxsxKa"
+					"Description": "OCQkGRCC",
+					"Name": "lvwAEdbUibA"
 				},
 				"HasAuxiliaries": false,
-				"DisplayName": "DZnChiwfvpt",
+				"DisplayName": "CLFTtB",
 				"Id": 0,
-				"ObjectType": "Equipment",
-				"ForeColor": "mDHdztJLYd",
-				"BackColor": "cMETlbGLCg"
+				"ObjectType": "Employee",
+				"ForeColor": "MEqxQMrIkft",
+				"BackColor": "fWpRFwOLejQt"
 			},
 			"ResourceId": 0,
-			"Role": "Operator"
+			"Role": "Principal"
 		}
 	],
 	"ResourceIds": [
-		978
+		806
 	],
-	"DisplayName": "gGjrWy",
+	"DisplayName": "OOcSVhwg",
 	"ActionStatus": {
-		"ActionStatusType": "Overallocated",
-		"Default": true,
+		"ActionStatusType": "Cancelled",
+		"Default": false,
 		"Completed": true,
 		"Cancelled": true,
-		"BaseObject": "ZoGabEYXE",
+		"BaseObject": "KBgqVW",
 		"Id": 0,
 		"ObjectType": "ActionStatus",
-		"Description": "OrNagB",
-		"Name": "RwQEsVyxliir",
+		"Description": "wXFgyWKdyARV",
+		"Name": "RaEJzzZvaMkR",
 		"Dependencies": [
 			{
-				"ObjectType": "PDwxadsSzYSs",
+				"ObjectType": "vcGxrIiET",
 				"Ids": [
-					792
+					166
 				]
 			}
 		],
-		"ForeColor": "ZQjpKu",
-		"BackColor": "rjrzLC"
+		"ForeColor": "YjFCjmGqYryq",
+		"BackColor": "UQGaqAA"
 	},
 	"Resources": [
 		{
 			"ResourceType": {
-				"Family": "Equipment",
+				"Family": "Material",
 				"Unit": {
 					"UnitType": "Money",
-					"Scalar": 334,
+					"Scalar": 289,
 					"Integral": false,
-					"BaseObject": "znEFLkdsQEVi",
+					"BaseObject": "NSuTCWzy",
 					"Id": 0,
 					"ObjectType": "Unit",
-					"Description": "KpsimeZyEBr",
-					"Name": "cVjnYxhIZghI"
+					"Description": "ohqANOL",
+					"Name": "zSnDmFWKeTma"
 				},
-				"ResourceSubtypes": [
-					{
-						"ParentId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "pHJdjKBomw",
-								"Ids": [
-									620
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "ResourceSubtype",
-						"Description": "xuVuqxPo",
-						"Name": "BAlpDrmeFCau"
-					}
-				],
-				"BaseObject": "MXKsYYSR",
 				"Id": 0,
-				"ObjectType": "ResourceType",
-				"Description": "YDwQuc",
-				"Name": "KKdfTfmk",
-				"Dependencies": [
-					{
-						"ObjectType": "PqMfvh",
-						"Ids": [
-							706
-						]
-					}
-				],
-				"ForeColor": "sXGKCG",
-				"BackColor": "GXcEBQhdFl",
-				"Tags": [
-					{
-						"BaseObject": "QsFvLt",
-						"AttributeId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "pxJnLns",
-								"Ids": [
-									440
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "Attribute",
-						"Description": "JLpARyW",
-						"Name": "FLGpXAg"
-					}
-				]
+				"Description": "TmFJZb",
+				"Name": "boHjfAadI"
 			},
 			"ResourceSubtype": {
 				"ParentId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "vWQYGp",
+						"ObjectType": "MVRyNHI",
 						"Ids": [
-							762
+							197
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "ResourceSubtype",
-				"Description": "neMHNvAI",
-				"Name": "SdaAmQPX"
+				"Description": "FUKNxGLdZn",
+				"Name": "brgEuwKXfcfg"
 			},
-			"HasAuxiliaries": false,
-			"DisplayName": "BeFwPum",
+			"HasAuxiliaries": true,
+			"DisplayName": "pXBGvghuEGT",
 			"Id": 0,
-			"ObjectType": "Equipment",
-			"ForeColor": "DmehyBwnn",
-			"BackColor": "kfAZbHpl"
+			"ObjectType": "Employee",
+			"ForeColor": "AFEFZXDUlP",
+			"BackColor": "FqUixDVt"
 		}
 	],
 	"Principals": [
 		{
 			"ResourceType": {
-				"Family": "Group",
+				"Family": "Labor",
 				"Unit": {
-					"UnitType": "Weight",
-					"Scalar": 597,
+					"UnitType": "Money",
+					"Scalar": 112,
 					"Integral": false,
-					"BaseObject": "dkFtpum",
+					"BaseObject": "FkRSQnsD",
 					"Id": 0,
 					"ObjectType": "Unit",
-					"Description": "EovsWvRrWBn",
-					"Name": "PXtrWFJfq"
+					"Description": "laEXRS",
+					"Name": "wizSJNDpXt"
 				},
-				"ResourceSubtypes": [
-					{
-						"ParentId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "kIWsiGa",
-								"Ids": [
-									752
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "ResourceSubtype",
-						"Description": "ISHjYWtQfAy",
-						"Name": "ByFfWlHR"
-					}
-				],
-				"BaseObject": "aJQEpL",
 				"Id": 0,
-				"ObjectType": "ResourceType",
-				"Description": "wdMkvuJt",
-				"Name": "jRgryG",
-				"Dependencies": [
-					{
-						"ObjectType": "AbGFMzWRkO",
-						"Ids": [
-							833
-						]
-					}
-				],
-				"ForeColor": "pSCMMfEplQH",
-				"BackColor": "CMWruxeuimPt",
-				"Tags": [
-					{
-						"BaseObject": "plLTmLhFsVm",
-						"AttributeId": 0,
-						"Dependencies": [
-							{
-								"ObjectType": "MEMheo",
-								"Ids": [
-									933
-								]
-							}
-						],
-						"Id": 0,
-						"ObjectType": "Attribute",
-						"Description": "wGBbzzRGrF",
-						"Name": "bNbFCwfJM"
-					}
-				]
+				"Description": "OSJyjxB",
+				"Name": "kzjvlBxT"
 			},
 			"ResourceSubtype": {
 				"ParentId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "HnXPMqDM",
+						"ObjectType": "mRfPtcBRbO",
 						"Ids": [
-							516
+							658
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "ResourceSubtype",
-				"Description": "FfovOX",
-				"Name": "fxzdkWLcKp"
+				"Description": "VJJlNCOoM",
+				"Name": "zYvVgJSyTX"
 			},
-			"HasAuxiliaries": false,
-			"DisplayName": "nsXItK",
+			"HasAuxiliaries": true,
+			"DisplayName": "xNFVKJcMz",
 			"Id": 0,
-			"ObjectType": "Employee",
-			"ForeColor": "hiLFJIoeanzL",
-			"BackColor": "cVgYyjuX"
+			"ObjectType": "Equipment",
+			"ForeColor": "zpTZiD",
+			"BackColor": "esbGwuaoxhqk"
 		}
 	],
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "ruaHmzcBpC"
+		"Duration": "ArEZUD"
 	},
 	"Id": 0,
-	"Description": "bHIsfxYbcae",
+	"Description": "vNfZgZFWMhW",
 	"Tags": [
 		{
-			"BaseObject": "TzEVYnpbg",
+			"BaseObject": "ZbcZDr",
 			"AttributeId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "xOAZRJ",
+					"ObjectType": "BWGuElAWTH",
 					"Ids": [
-						684
+						296
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Description": "QILwgKDHi",
-			"Name": "UisnPTRwyWN"
+			"Description": "tyHxfEKm",
+			"Name": "pTNDlMBF"
 		}
 	],
 	"Dependencies": [
 		{
-			"ObjectType": "TRqjoTYP",
+			"ObjectType": "nDxViYpNUI",
 			"Ids": [
-				785
+				770
 			]
 		}
 	]
