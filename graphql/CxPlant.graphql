@@ -202,9 +202,11 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
+  Title: String
   Id: ID!
   Description: String
   Name: String
+  Address: IxAddress
 }
 
 input IxPartyDO {

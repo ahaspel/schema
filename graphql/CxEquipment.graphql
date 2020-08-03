@@ -269,6 +269,7 @@ type IxParty {
   Id: ID!
   Description: String
   Name: String
+  Address: IxAddress
 }
 
 type IxPhoneNumber {

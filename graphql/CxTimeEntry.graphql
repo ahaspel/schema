@@ -82,6 +82,21 @@ input FilterInput {
   invert: Boolean = false
 }
 
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
 type IxApproval {
   Approver: IxParty
   AsOf: String
@@ -236,6 +251,7 @@ type IxParty {
   Id: ID!
   Description: String
   Name: String
+  Address: IxAddress
 }
 
 input IxPartyDO {

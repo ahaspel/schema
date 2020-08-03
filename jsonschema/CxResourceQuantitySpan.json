@@ -331,6 +331,9 @@
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [
@@ -370,6 +373,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"End",
+				"Start"
+			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -383,11 +390,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
+			}
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
@@ -494,6 +497,11 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id",
+				"Name",
+				"UnitType"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {

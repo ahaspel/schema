@@ -382,6 +382,7 @@ type IxParty {
   Id: ID!
   Description: String
   Name: String
+  Address: IxAddress
 }
 
 input IxPartyDO {
@@ -397,6 +398,7 @@ input IxPartyInput {
   Id: ID!
   Description: String
   Name: String!
+  Address: IxAddressInput
 }
 
 type IxPhoneNumber {

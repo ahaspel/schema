@@ -190,6 +190,7 @@ type IxParty {
   Id: ID!
   Description: String
   Name: String
+  Address: IxAddress
 }
 
 input IxPartyDO {

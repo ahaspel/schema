@@ -36,6 +36,11 @@
 			]
 		},
 		"IxUnit": {
+			"superRequired": [
+				"Id",
+				"Name",
+				"UnitType"
+			],
 			"type": "object",
 			"properties": {
 				"UnitType": {

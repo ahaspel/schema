@@ -39,6 +39,21 @@ input FilterInput {
   invert: Boolean = false
 }
 
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
@@ -71,6 +86,50 @@ type IxEmail {
   Name: String
 }
 
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLookupValue {
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Description: String
+  Name: String
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  ToDoStatus
+  Attribute
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
+  JobCertification
+  Privilege
+}
+
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
@@ -80,6 +139,7 @@ type IxParty {
   Id: ID!
   Description: String
   Name: String
+  Address: IxAddress
 }
 
 input IxPartyDO {

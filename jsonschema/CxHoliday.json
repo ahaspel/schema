@@ -107,6 +107,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"End",
+				"Start"
+			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -120,11 +124,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"required": [
-				"Start",
-				"End"
-			]
+			}
 		}
 	},
 	"immutable": [
