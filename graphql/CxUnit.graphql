@@ -1,4 +1,5 @@
 type CxUnit {
+  ObjectType: CxUnitObjectType
   Scalar: Float
   UnitType: CxUnitUnitType
   Id: ID!
@@ -7,11 +8,16 @@ type CxUnit {
 }
 
 input CxUnitInput {
+  ObjectType: CxUnitObjectType
   Scalar: Float
   UnitType: CxUnitUnitType!
   Id: ID!
   Name: String!
   Description: String
+}
+
+enum CxUnitObjectType {
+  Unit
 }
 
 enum CxUnitUnitType {
@@ -48,10 +54,10 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxUnits_onSave(data: [CxUnitInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxUnit]
-  cxUnits_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxUnit]
+  cxUnits_onSave(data: [CxUnitInput], filters: [FilterInput], objectType: String = "Unit", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxUnit]
+  cxUnits_onDelete(data: [String], objectType: String = "Unit", operation: String = "delete"): [CxUnit]
 }
 
 extend type Query {
-  cxUnits(filters: [FilterInput], objectType: String): [CxUnit]
+  cxUnits(filters: [FilterInput], objectType: String = "Unit"): [CxUnit]
 }

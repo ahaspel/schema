@@ -32,7 +32,6 @@ input CxPartyInput {
   Name: String!
   Title: String
   Address: IxAddressInput
-  ObjectType: CxPartyObjectType
   CurrentLifespan: IxRangeInput
   Id: ID!
   Description: String
@@ -72,7 +71,7 @@ input IxAddressInput {
   ZipCode: String
   Geocode: IxGeocodeInput
   Id: ID!
-  ObjectType: IxAddressObjectType
+  ObjectType: IxAddressObjectType!
 }
 
 enum IxAddressObjectType {

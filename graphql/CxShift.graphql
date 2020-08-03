@@ -25,7 +25,6 @@ input CxShiftInput {
   Default: Boolean
   UseHolidays: Boolean
   Name: String!
-  ObjectType: CxShiftObjectType
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

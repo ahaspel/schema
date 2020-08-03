@@ -51,7 +51,6 @@ input CxUserInput {
   Level: IxLevelDO!
   Privileges: [CxUserPrivileges]
   ObjectPrivileges: [CxObjectPrivilegeInput]
-  ObjectType: CxUserObjectType
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String

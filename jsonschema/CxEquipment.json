@@ -40,10 +40,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -659,6 +660,7 @@
 		"Dto",
 		"InCrew",
 		"Location",
+		"ObjectType",
 		"ResourceType",
 		"Returned"
 	],

@@ -40,10 +40,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -375,6 +376,7 @@
 				"JobStatus",
 				"Manager",
 				"Name",
+				"ObjectType",
 				"Owner",
 				"Priority",
 				"Subtypes",
@@ -882,7 +884,8 @@
 	},
 	"immutable": [
 		"Dependencies",
-		"Dto"
+		"Dto",
+		"ObjectType"
 	],
 	"type": "object",
 	"properties": {

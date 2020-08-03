@@ -120,10 +120,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -424,6 +425,7 @@
 				"JobStatus",
 				"Manager",
 				"Name",
+				"ObjectType",
 				"Owner",
 				"Priority",
 				"Subtypes",
@@ -908,6 +910,7 @@
 		"JobActivityId",
 		"JobId",
 		"Location",
+		"ObjectType",
 		"Resources",
 		"ResourceIds",
 		"ResourceSubtypeId",

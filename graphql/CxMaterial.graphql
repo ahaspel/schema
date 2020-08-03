@@ -50,7 +50,6 @@ type CxMaterial {
 }
 
 input CxMaterialInput {
-  ObjectType: CxMaterialObjectType
   Inventory: IxInventoryInput!
   Reusable: Boolean!
   Owner: IxCompanyDO

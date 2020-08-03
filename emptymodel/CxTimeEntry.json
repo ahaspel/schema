@@ -1,5 +1,4 @@
 {
-	"ObjectType": "TimeEntry",
 	"Hours": 0,
 	"Minutes": 0,
 	"Resource": {
@@ -24,7 +23,7 @@
 	"StartLocation": {
 		"Lat": 0,
 		"Lng": 0,
-		"Source": "Action"
+		"Source": "GPSService"
 	},
 	"PunchStart": "",
 	"EndLocation": {
@@ -33,7 +32,7 @@
 		"Source": "GPSService"
 	},
 	"PunchEnd": "",
-	"Punch": "PunchedOut",
+	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
 			"Id": 0

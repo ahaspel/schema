@@ -78,7 +78,6 @@ input CxEmployeeInput {
   Skills: [IxLookupValueDO]
   LaborClassification: [IxLookupValueDO]
   Machines: [IxResourceTypeDO]
-  ObjectType: CxEmployeeObjectType
   Temporary: Boolean
   Owner: IxCompanyDO
   ResourceSubtype: IxResourceSubtypeDO!

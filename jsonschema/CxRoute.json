@@ -40,10 +40,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -770,7 +771,8 @@
 	"immutable": [
 		"Dependencies",
 		"DisplayName",
-		"Dto"
+		"Dto",
+		"ObjectType"
 	],
 	"type": "object",
 	"properties": {

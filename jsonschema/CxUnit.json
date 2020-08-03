@@ -3,6 +3,12 @@
 	"title": "com.congistics.cbrd.util.CxUnit",
 	"type": "object",
 	"properties": {
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"Unit"
+			]
+		},
 		"Scalar": {
 			"type": "number"
 		},

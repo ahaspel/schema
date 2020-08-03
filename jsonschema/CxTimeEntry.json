@@ -40,10 +40,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -779,6 +780,7 @@
 		"DisplayName",
 		"Dto",
 		"HasAttachments",
+		"ObjectType",
 		"TotalHours"
 	],
 	"type": "object",

@@ -34,7 +34,6 @@ type CxSubcontractor {
 input CxSubcontractorInput {
   Preferred: Boolean
   SupplyTypes: [IxSupplyTypeInput]
-  ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
@@ -82,7 +81,7 @@ input IxAddressInput {
   ZipCode: String
   Geocode: IxGeocodeInput
   Id: ID!
-  ObjectType: IxAddressObjectType
+  ObjectType: IxAddressObjectType!
 }
 
 enum IxAddressObjectType {

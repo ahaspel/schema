@@ -40,10 +40,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -698,7 +699,9 @@
 		}
 	},
 	"immutable": [
-		"Auxiliaries"
+		"Auxiliaries",
+		"HasAuxiliaries",
+		"ObjectType"
 	],
 	"type": "object",
 	"properties": {

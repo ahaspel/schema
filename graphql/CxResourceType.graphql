@@ -36,7 +36,6 @@ input CxResourceTypeInput {
   ForeColor: String
   BackColor: String
   Name: String!
-  ObjectType: CxResourceTypeObjectType
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

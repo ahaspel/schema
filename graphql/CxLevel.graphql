@@ -21,7 +21,6 @@ type CxLevel {
 
 input CxLevelInput {
   Privileges: [CxLevelPrivileges]
-  ObjectType: CxLevelObjectType
   ObjectPrivileges: [CxObjectPrivilegeInput]
   Editable: Boolean
   Name: String!

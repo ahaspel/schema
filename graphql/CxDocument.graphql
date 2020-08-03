@@ -37,7 +37,6 @@ type CxDocument {
 input CxDocumentInput {
   DocumentTypes: [IxLookupValueDO]
   Key: String!
-  ObjectType: CxDocumentObjectType
   Name: String
   ChangeHistory: [CxChangeInput]
   Id: ID!

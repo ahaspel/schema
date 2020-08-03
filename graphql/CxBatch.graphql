@@ -27,7 +27,6 @@ enum CxBatchImportType {
 
 input CxBatchInput {
   Name: String
-  ObjectType: CxBatchObjectType
   ImportType: CxBatchImportType!
   Overwrite: Boolean
   Attachments: [IxDocumentInput]

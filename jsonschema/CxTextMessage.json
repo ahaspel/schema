@@ -149,6 +149,7 @@
 		}
 	},
 	"immutable": [
+		"ObjectType",
 		"Sent",
 		"Received"
 	],
@@ -202,8 +203,8 @@
 	},
 	"required": [
 		"Id",
-		"Text",
+		"Recipient",
 		"Sender",
-		"Recipient"
+		"Text"
 	]
 }

@@ -40,7 +40,6 @@ input CxCrewInput {
   Manager: IxEmployeeDO
   Resources: [IxResourceDO]!
   Name: String!
-  ObjectType: CxCrewObjectType
   ResourceSubtype: IxResourceSubtypeDO
   HasAuxiliaries: Boolean
   Attachments: [IxDocumentInput]

@@ -51,7 +51,6 @@ input CxAllocationInput {
   Crew: IxCrewDO
   CrewId: ID
   CurrentLifespan: IxRangeInput
-  ObjectType: CxAllocationObjectType
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

@@ -22,10 +22,11 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"Id",
-				"Street",
 				"City",
-				"State"
+				"Id",
+				"ObjectType",
+				"State",
+				"Street"
 			],
 			"type": "object",
 			"properties": {
@@ -307,6 +308,7 @@
 		"Dependencies",
 		"Default",
 		"Dto",
+		"ObjectType",
 		"Supplier"
 	],
 	"type": "object",
