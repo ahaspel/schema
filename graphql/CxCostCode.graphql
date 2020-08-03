@@ -45,11 +45,7 @@ input IxMoneyInput {
 
 type IxUnit {
   UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
   Id: ID!
-  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -68,10 +64,6 @@ input IxUnitCostInput {
 
 input IxUnitDO {
   Id: ID!
-}
-
-enum IxUnitObjectType {
-  Unit
 }
 
 enum IxUnitUnitType {

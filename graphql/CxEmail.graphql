@@ -1,15 +1,14 @@
 type CxEmail {
   Email: String
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Name: String
 }
 
 input CxEmailInput {
   Email: String!
-  Valid: Boolean
-  Id: ID
-  Name: String
+  Id: ID!
+  Name: String!
 }
 
 input FilterInput {

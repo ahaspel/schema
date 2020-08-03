@@ -195,7 +195,9 @@
 		},
 		"IxEmail": {
 			"superRequired": [
-				"Email"
+				"Email",
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -337,12 +339,20 @@
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber"
+				"PhoneNumber",
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
 				"PhoneNumber": {
 					"type": "string"
+				},
+				"NumericPhoneNumber": {
+					"type": "string"
+				},
+				"Valid": {
+					"type": "boolean"
 				},
 				"Id": {
 					"type": "integer"
@@ -360,10 +370,6 @@
 			]
 		},
 		"IxRange": {
-			"superRequired": [
-				"End",
-				"Start"
-			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -377,7 +383,11 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"required": [
+				"Start",
+				"End"
+			]
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
@@ -484,9 +494,6 @@
 			]
 		},
 		"IxUnit": {
-			"superRequired": [
-				"Id"
-			],
 			"type": "object",
 			"properties": {
 				"UnitType": {
@@ -501,23 +508,8 @@
 						"Self"
 					]
 				},
-				"Scalar": {
-					"type": "number"
-				},
-				"Integral": {
-					"type": "boolean"
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Unit"
-					]
 				},
 				"Description": {
 					"type": "string"

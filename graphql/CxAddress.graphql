@@ -24,11 +24,6 @@ enum CxAddressObjectType {
   Address
 }
 
-type CxDependency {
-  ObjectType: String
-  Ids: [Int]
-}
-
 input FilterInput {
   name: String!
   values: [String]
@@ -55,12 +50,10 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  BaseObject: String
   Id: ID!
   ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {

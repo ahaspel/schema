@@ -51,9 +51,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -89,12 +86,6 @@
 				},
 				"Name": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -114,7 +105,8 @@
 			]
 		},
 		"Street": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"StreetDetails": {
 			"type": "string"
@@ -123,7 +115,8 @@
 			"type": "string"
 		},
 		"City": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"State": {
 			"$ref": "#/definitions/IxLookupValue"

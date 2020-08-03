@@ -34,9 +34,6 @@
 				"Global": {
 					"type": "boolean"
 				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
@@ -50,7 +47,8 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Dependencies": {
 					"type": "array",
@@ -60,8 +58,9 @@
 				}
 			},
 			"required": [
-				"UnitCost",
-				"Id"
+				"Id",
+				"Name",
+				"UnitCost"
 			]
 		},
 		"IxMoney": {
@@ -80,9 +79,6 @@
 			]
 		},
 		"IxUnit": {
-			"superRequired": [
-				"Id"
-			],
 			"type": "object",
 			"properties": {
 				"UnitType": {
@@ -97,23 +93,8 @@
 						"Self"
 					]
 				},
-				"Scalar": {
-					"type": "number"
-				},
-				"Integral": {
-					"type": "boolean"
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Unit"
-					]
 				},
 				"Description": {
 					"type": "string"
@@ -145,6 +126,12 @@
 			]
 		}
 	},
+	"immutable": [
+		"Dependencies",
+		"Description",
+		"Dto",
+		"Name"
+	],
 	"type": "object",
 	"properties": {
 		"CostPerUnit": {
@@ -183,7 +170,7 @@
 	},
 	"required": [
 		"CostCode",
-		"TotalAmount",
-		"Id"
+		"Id",
+		"TotalAmount"
 	]
 }

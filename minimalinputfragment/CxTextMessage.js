@@ -3,9 +3,13 @@ const CXTEXTMESSAGEINPUTMIN = `fragment CXTEXTMESSAGEINPUTMIN on CxTextMessage {
   Text
   Sender {
     PhoneNumber
+    Id
+    Name
   }
   Recipient {
     PhoneNumber
+    Id
+    Name
   }
   Id
 }`;

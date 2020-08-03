@@ -1,10 +1,15 @@
 {
 	"id": "https://congistics.com/schema/CxEmail",
 	"title": "com.congistics.cbrd.party.CxEmail",
+	"immutable": [
+		"New",
+		"Valid"
+	],
 	"type": "object",
 	"properties": {
 		"Email": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"Valid": {
 			"type": "boolean"
@@ -13,11 +18,14 @@
 			"type": "integer"
 		},
 		"Name": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		}
 	},
 	"required": [
-		"Email"
+		"Email",
+		"Id",
+		"Name"
 	],
 	"definitions": {}
 }

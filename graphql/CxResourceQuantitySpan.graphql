@@ -88,7 +88,7 @@ enum IxCompanyObjectType {
 type IxEmail {
   Email: String
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Description: String
   Name: String
 }
@@ -150,7 +150,9 @@ type IxParty {
 
 type IxPhoneNumber {
   PhoneNumber: String
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
   Name: String
 }
@@ -208,17 +210,9 @@ enum IxResourceTypeObjectType {
 
 type IxUnit {
   UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
   Id: ID!
-  ObjectType: IxUnitObjectType
   Description: String
   Name: String
-}
-
-enum IxUnitObjectType {
-  Unit
 }
 
 enum IxUnitUnitType {

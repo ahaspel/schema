@@ -1,0 +1,315 @@
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: String!
+  Ids: [Int]!
+}
+
+type CxRoute {
+  Driver: IxParty
+  ObjectType: CxRouteObjectType
+  Stops: [IxStop]
+  Rig: [IxEquipment]
+  Iterations: Int
+  CurrentLifespan: IxRange
+  Id: ID!
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__]
+  Dependencies: [CxDependency]
+}
+
+input CxRouteInput {
+  Driver: IxPartyDO!
+  ObjectType: CxRouteObjectType
+  Stops: [IxStopDO]!
+  Rig: [IxEquipmentDO]!
+  Iterations: Int
+  CurrentLifespan: IxRangeInput
+  Id: ID!
+  Description: String
+  Name: String
+  Tags: [IxAttribute__String__Input]
+}
+
+enum CxRouteObjectType {
+  Route
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  Id: ID!
+  ObjectType: IxAddressObjectType
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: ID
+  Dependencies: [CxDependency]
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Description: String
+  Name: String
+}
+
+input IxAttribute__String__Input {
+  BaseObject: String!
+  AttributeId: ID!
+  Dependencies: [CxDependencyInput]
+  Id: ID!
+  ObjectType: IxAttributeStringObjectType
+  Description: String
+  Name: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxEmail {
+  Email: String
+  Valid: Boolean
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+type IxEquipment {
+  Model: String
+  Make: String
+  SerialNumber: String
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  DisplayName: String
+  Id: ID!
+  Description: String
+  AccountCode: String
+  ForeColor: String
+  BackColor: String
+}
+
+input IxEquipmentDO {
+  Id: ID!
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxLookupValue {
+  Id: ID!
+  ObjectType: IxLookupValueObjectType
+  Description: String
+  Name: String
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  ToDoStatus
+  Attribute
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
+  JobCertification
+  Privilege
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
+  Title: String
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+input IxPartyDO {
+  Id: ID!
+}
+
+type IxPhoneNumber {
+  PhoneNumber: String
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+type IxPickupItem {
+  Resources: [IxResource]
+  Quantity: IxQuantity
+  Description: String
+  Id: ID!
+  ObjectType: IxPickupItemObjectType
+}
+
+enum IxPickupItemObjectType {
+  PickupItem
+}
+
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+input IxRangeInput {
+  Start: String!
+  End: String!
+  Duration: String
+}
+
+type IxResource {
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  HasAuxiliaries: Boolean
+  DisplayName: String
+  Id: ID!
+  ObjectType: IxResourceObjectType
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxResourceObjectType {
+  Crew
+  Employee
+  Equipment
+  Material
+}
+
+type IxResourceSubtype {
+  ParentId: ID
+  Dependencies: [CxDependency]
+  Id: ID!
+  ObjectType: IxResourceSubtypeObjectType
+  Description: String
+  Name: String
+}
+
+enum IxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  Unit: IxUnit
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+type IxStop {
+  JobId: ID
+  Dropoffs: [IxPickupItem]
+  Pickups: [IxPickupItem]
+  Start: String
+  Address: IxAddress
+  Id: ID!
+  ObjectType: IxStopObjectType
+}
+
+input IxStopDO {
+  Id: ID!
+}
+
+enum IxStopObjectType {
+  Stop
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxRoutes_onSave(data: [CxRouteInput], filters: [FilterInput], objectType: String = "Route", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxRoute]
+  cxRoutes_onDelete(data: [String], objectType: String = "Route", operation: String = "delete"): [CxRoute]
+}
+
+extend type Query {
+  cxRoutes(filters: [FilterInput], objectType: String = "Route"): [CxRoute]
+}

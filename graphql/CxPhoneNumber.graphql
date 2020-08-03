@@ -1,13 +1,15 @@
 type CxPhoneNumber {
   PhoneNumber: String
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Name: String
 }
 
 input CxPhoneNumberInput {
   PhoneNumber: String!
-  Id: ID
-  Name: String
+  Id: ID!
+  Name: String!
 }
 
 input FilterInput {

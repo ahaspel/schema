@@ -71,16 +71,20 @@ enum IxAttributeStringObjectType {
 
 type IxPhoneNumber {
   PhoneNumber: String
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
   Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
-  Name: String
+  Name: String!
 }
 
 """

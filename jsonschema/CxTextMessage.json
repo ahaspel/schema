@@ -117,12 +117,20 @@
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber"
+				"PhoneNumber",
+				"Id",
+				"Name"
 			],
 			"type": "object",
 			"properties": {
 				"PhoneNumber": {
 					"type": "string"
+				},
+				"NumericPhoneNumber": {
+					"type": "string"
+				},
+				"Valid": {
+					"type": "boolean"
 				},
 				"Id": {
 					"type": "integer"

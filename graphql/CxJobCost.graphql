@@ -26,9 +26,6 @@ input CxJobCostInput {
   TotalAmount: Float!
   ExpectedDailyAmount: Float
   ObjectType: CxJobCostObjectType
-  Name: String
-  Description: String
-  Dependencies: [CxDependencyInput]
   Id: ID!
 }
 
@@ -46,7 +43,6 @@ input FilterInput {
 type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
-  BaseObject: String
   Id: ID!
   ObjectType: IxCostCodeObjectType
   Description: String
@@ -57,7 +53,6 @@ type IxCostCode {
 input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
-  BaseObject: String
   Id: ID!
   ObjectType: IxCostCodeObjectType
   Description: String
@@ -81,11 +76,7 @@ input IxMoneyInput {
 
 type IxUnit {
   UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
   Id: ID!
-  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -104,10 +95,6 @@ input IxUnitCostInput {
 
 input IxUnitDO {
   Id: ID!
-}
-
-enum IxUnitObjectType {
-  Unit
 }
 
 enum IxUnitUnitType {

@@ -1,97 +1,84 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 362,
-	"Minutes": 690,
+	"Hours": 373,
+	"Minutes": 288,
 	"Resource": {
 		"ResourceType": {
-			"Family": "Equipment",
+			"Family": "Material",
 			"Unit": {
-				"UnitType": "Length",
-				"Scalar": 474,
-				"Integral": false,
-				"BaseObject": "vHHDrBW",
+				"UnitType": "Area",
 				"Id": 0,
-				"ObjectType": "Unit",
-				"Description": "yLzibhJA",
-				"Name": "FnOCsQAThA"
+				"Description": "zecLmztNJgqF",
+				"Name": "KhUTNzput"
 			},
 			"Id": 0,
-			"Description": "SgCzRVES",
-			"Name": "ETiRyTTJ"
+			"Description": "oUdNBSm",
+			"Name": "YVFTMZR"
 		},
 		"ResourceSubtype": {
 			"ParentId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "FwVfZHtSmHG",
+					"ObjectType": "spKhbupVU",
 					"Ids": [
-						110
+						729
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "ResourceSubtype",
-			"Description": "UuABQNjAR",
-			"Name": "ioBvTNYDqJ"
+			"Description": "XxpNEwqX",
+			"Name": "VnCcDuLRgtF"
 		},
-		"HasAuxiliaries": true,
-		"DisplayName": "AgvxAozfsmyf",
+		"HasAuxiliaries": false,
+		"DisplayName": "OMWegeUfl",
 		"Id": 0,
-		"ObjectType": "Material",
-		"ForeColor": "sWCQFxOGv",
-		"BackColor": "SiMSoddDsmeW"
+		"ObjectType": "Employee",
+		"ForeColor": "iKvWqTRi",
+		"BackColor": "AsTbKyTztY"
 	},
 	"EntryType": {
 		"Id": 0,
-		"ObjectType": "DocumentType",
-		"Description": "gMmEJY",
-		"Name": "jecUGOGOHDFm"
+		"ObjectType": "Language",
+		"Description": "RkDagd",
+		"Name": "NgzMSYs"
 	},
 	"EntryLaborClass": {
 		"Id": 0,
-		"ObjectType": "Attribute",
-		"Description": "QOFHaPPuMVi",
-		"Name": "WjhgPDnmcZwv"
+		"ObjectType": "ToDoStatus",
+		"Description": "bFtsxXudnm",
+		"Name": "sdPiDb"
 	},
 	"CostCodes": [
 		{
 			"UnitCost": {
 				"Unit": {
-					"UnitType": "Self",
-					"Scalar": 57,
-					"Integral": true,
-					"BaseObject": "EFqtxt",
+					"UnitType": "Time",
 					"Id": 0,
-					"ObjectType": "Unit",
-					"Description": "FbWKIrNQYrF",
-					"Name": "JfRmKgBdT"
+					"Description": "NLFwnoESMQ",
+					"Name": "rYwoqxvcO"
 				},
 				"Cost": {
 					"Unit": {
-						"UnitType": "Area",
-						"Scalar": 655,
-						"Integral": false,
-						"BaseObject": "DsntMqNLJSc",
+						"UnitType": "Time",
 						"Id": 0,
-						"ObjectType": "Unit",
-						"Description": "KmwcYe",
-						"Name": "pFnlHNxKP"
+						"Description": "xzzcxQ",
+						"Name": "OdPTPrQ"
 					},
-					"Quantity": 654
+					"Quantity": 125
 				},
-				"Notes": "PxPZByyQTnCZ"
+				"Notes": "uHIbEKLA"
 			},
 			"Global": true,
-			"BaseObject": "HvFmDXj",
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Description": "HAQxtDHMrs",
-			"Name": "FdCctlxJAwE",
+			"Description": "cuVfLUCLWbIZ",
+			"Name": "mEBwtowue",
 			"Dependencies": [
 				{
-					"ObjectType": "TFhGkafEq",
+					"ObjectType": "sprVGSI",
 					"Ids": [
-						403
+						200
 					]
 				}
 			]
@@ -100,160 +87,156 @@
 	"Auxiliaries": [
 		{
 			"ResourceType": {
-				"Family": "Material",
+				"Family": "Group",
 				"Unit": {
-					"UnitType": "Length",
-					"Scalar": 963,
-					"Integral": true,
-					"BaseObject": "EGIGXNWyzOmm",
+					"UnitType": "Area",
 					"Id": 0,
-					"ObjectType": "Unit",
-					"Description": "THHJBe",
-					"Name": "ILVYyfrbL"
+					"Description": "USLsLirmlxZD",
+					"Name": "WeoKQVMn"
 				},
 				"Id": 0,
-				"Description": "yJpLJJQlATa",
-				"Name": "WQKfEZ"
+				"Description": "ormurG",
+				"Name": "asmVlkQ"
 			},
 			"ResourceSubtype": {
 				"ParentId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "JesyuLVnAQr",
+						"ObjectType": "uVJkneFSO",
 						"Ids": [
-							620
+							489
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "ResourceSubtype",
-				"Description": "qsWFuhA",
-				"Name": "cHUspfAJRERq"
+				"Description": "ETbbmIJklsWM",
+				"Name": "QTKPVJtwBlhy"
 			},
-			"HasAuxiliaries": false,
-			"DisplayName": "nAaESBpucu",
+			"HasAuxiliaries": true,
+			"DisplayName": "gBAIlKZwDkxK",
 			"Id": 0,
-			"ObjectType": "Employee",
-			"ForeColor": "ldKHUvzc",
-			"BackColor": "MXUIfivPn"
+			"ObjectType": "Equipment",
+			"ForeColor": "LBmlFUv",
+			"BackColor": "Ceendiev"
 		}
 	],
 	"JobActivity": {
 		"Completed": true,
 		"Id": 0,
-		"Description": "NyWRBlDA",
-		"Name": "dcMijzqbOOK",
+		"Description": "FSdmObLT",
+		"Name": "JkEUrtIajE",
 		"CurrentLifespan": {
 			"Start": "2019-01-14T08:00:00",
 			"End": "2019-01-14T08:00:00",
-			"Duration": "fXqlFcjYnFy"
+			"Duration": "CKBQfxmne"
 		},
-		"ForeColor": "soAjnJrPKe",
-		"BackColor": "BuCwUXDeA",
-		"DisplayName": "asBdZjVOS"
+		"ForeColor": "aNOlQTiqc",
+		"BackColor": "eVbHFB",
+		"DisplayName": "eTfauNokZsA"
 	},
 	"Owner": {
 		"Emails": [
 			{
-				"Email": "Lennie1@yahoo.com",
+				"Email": "Josefa.Torp16@gmail.com",
 				"Valid": false,
 				"Id": 0,
-				"Description": "bDRLeCS",
-				"Name": "KYPvXgLw"
+				"Description": "BethONXvViX",
+				"Name": "CVhlOz"
 			}
 		],
 		"PhoneNumbers": [
 			{
-				"PhoneNumber": "TNpewxkpQ",
+				"PhoneNumber": "nIAJlpUYQ",
+				"NumericPhoneNumber": "ZQYDSouR",
+				"Valid": false,
 				"Id": 0,
-				"Description": "wyROXp",
-				"Name": "SQyCjWxxN"
+				"Description": "bylfvUICPkt",
+				"Name": "qKaeKe"
 			}
 		],
 		"HasSMSNumber": true,
 		"SMSNumber": {
-			"PhoneNumber": "qNyWezDXWeR",
+			"PhoneNumber": "YsOyBaekjXGT",
+			"NumericPhoneNumber": "bxFnlWLPWHS",
+			"Valid": true,
 			"Id": 0,
-			"Description": "YFWjdQNOgIZm",
-			"Name": "xtdRsKL"
+			"Description": "CRWofSATqat",
+			"Name": "yqiaqwHe"
 		},
-		"Title": "JVGMrmlpGOYf",
+		"Title": "vUotdrjwS",
 		"Id": 0,
-		"Description": "lqYkXmHxP",
-		"Name": "sIhaWHJJF"
+		"Description": "XRrrNNpTsV",
+		"Name": "iycqjSZqj"
 	},
 	"IsVoid": true,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 259,
-		"Lng": 983,
-		"Source": "Owner"
+		"Lat": 427,
+		"Lng": 40,
+		"Source": "GPSService"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 587,
-		"Lng": 235,
+		"Lat": 546,
+		"Lng": 459,
 		"Source": "GPSService"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
 	"Punch": "Manual",
 	"StartDistance": {
 		"Unit": {
-			"UnitType": "Length",
-			"Scalar": 509,
-			"Integral": false,
-			"BaseObject": "TGykCMrqvcBl",
+			"UnitType": "Self",
 			"Id": 0,
-			"ObjectType": "Unit",
-			"Description": "NdZSEFcy",
-			"Name": "BGgwxu"
+			"Description": "NykcIYVoxh",
+			"Name": "cLHbiuFxGyi"
 		},
-		"Quantity": 37
+		"Quantity": 889
 	},
 	"EndDistance": {
 		"Unit": {
-			"UnitType": "Volume",
-			"Scalar": 819,
-			"Integral": true,
-			"BaseObject": "hqoodPOPpJZ",
+			"UnitType": "Time",
 			"Id": 0,
-			"ObjectType": "Unit",
-			"Description": "URIYOsw",
-			"Name": "AqXlPwX"
+			"Description": "VdMULwiKpXI",
+			"Name": "ApEXVK"
 		},
-		"Quantity": 490
+		"Quantity": 473
 	},
 	"Approvals": [
 		{
 			"Approver": {
 				"Emails": [
 					{
-						"Email": "Kaylee79@gmail.com",
+						"Email": "Stephen56@yahoo.com",
 						"Valid": false,
 						"Id": 0,
-						"Description": "CWSiqLC",
-						"Name": "bmjYxGPG"
+						"Description": "UWnQkGOwNF",
+						"Name": "aYnLYIi"
 					}
 				],
 				"PhoneNumbers": [
 					{
-						"PhoneNumber": "XgPEpVhES",
+						"PhoneNumber": "zmkduk",
+						"NumericPhoneNumber": "fgdZeaOC",
+						"Valid": false,
 						"Id": 0,
-						"Description": "SlWItdG",
-						"Name": "WxvSJQxSWopQ"
+						"Description": "BdqbRdIVZD",
+						"Name": "muuHGfFaYK"
 					}
 				],
-				"HasSMSNumber": true,
+				"HasSMSNumber": false,
 				"SMSNumber": {
-					"PhoneNumber": "BQfArqud",
+					"PhoneNumber": "yhvRjud",
+					"NumericPhoneNumber": "PZWIpNyWHvxK",
+					"Valid": true,
 					"Id": 0,
-					"Description": "jpMRoYwLtMq",
-					"Name": "SuZnWtkteOZe"
+					"Description": "CUHsaCncEehx",
+					"Name": "ACPMQuMX"
 				},
-				"Title": "yYnxKcdCijN",
+				"Title": "nfCjoB",
 				"Id": 0,
-				"Description": "AGTMTGxz",
-				"Name": "EjXqJVUnWET"
+				"Description": "Dshmjxi",
+				"Name": "ldCdMK"
 			},
 			"AsOf": "2019-01-14T08:00:00"
 		}
@@ -261,41 +244,41 @@
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "ZWovutYw"
+		"Duration": "eIGVOLPt"
 	},
 	"Id": 0,
 	"Divisions": [
 		{
 			"Id": 0,
-			"ObjectType": "Division",
-			"Description": "dTZHhgOOoVc",
-			"Name": "FSIJBormBoeN"
+			"ObjectType": "License",
+			"Description": "kJllAuhjA",
+			"Name": "TuJEtTekwTft"
 		}
 	],
-	"Description": "ocRfeKvLbtr",
+	"Description": "lXniOpwi",
 	"Tags": [
 		{
-			"BaseObject": "SrpZrkk",
+			"BaseObject": "lpwwTyFz",
 			"AttributeId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "bVoJYzJdZppU",
+					"ObjectType": "brSPJumRyHTG",
 					"Ids": [
-						53
+						305
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Description": "tamIInJhrVW",
-			"Name": "KXSYDq"
+			"Description": "NMvvyuIYD",
+			"Name": "ZXSmzOMM"
 		}
 	],
 	"Dependencies": [
 		{
-			"ObjectType": "FinExWROZ",
+			"ObjectType": "gUkQzjWxOXfS",
 			"Ids": [
-				495
+				600
 			]
 		}
 	]

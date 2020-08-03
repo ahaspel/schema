@@ -106,7 +106,7 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Description: String
   Name: String
 }
@@ -114,9 +114,9 @@ type IxEmail {
 input IxEmailInput {
   Email: String!
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Description: String
-  Name: String
+  Name: String!
 }
 
 type IxGeocode {
@@ -175,16 +175,20 @@ enum IxLookupValueObjectType {
 
 type IxPhoneNumber {
   PhoneNumber: String
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
   Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
-  Name: String
+  Name: String!
 }
 
 type IxRange {

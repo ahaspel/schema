@@ -148,23 +148,16 @@ enum IxAttributeStringObjectType {
 }
 
 type IxCompany {
-  CompanyType: IxLookupValue
-  Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Title: String
   Id: ID!
   ObjectType: IxCompanyObjectType
   Description: String
   Name: String
-  Dependencies: [CxDependency]
-  CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
   Address: IxAddress
   AccountCode: String
-  Divisions: [IxLookupValue]
   Contacts: [IxParty]
 }
 
@@ -237,7 +230,7 @@ enum IxDocumentObjectType {
 type IxEmail {
   Email: String
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Description: String
   Name: String
 }
@@ -245,9 +238,9 @@ type IxEmail {
 input IxEmailInput {
   Email: String!
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Description: String
-  Name: String
+  Name: String!
 }
 
 type IxGeocode {
@@ -408,16 +401,20 @@ input IxPartyInput {
 
 type IxPhoneNumber {
   PhoneNumber: String
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
   Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
-  Name: String
+  Name: String!
 }
 
 type IxRange {
@@ -434,11 +431,7 @@ input IxRangeInput {
 
 type IxUnit {
   UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
   Id: ID!
-  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -457,10 +450,6 @@ input IxUnitCostInput {
 
 input IxUnitDO {
   Id: ID!
-}
-
-enum IxUnitObjectType {
-  Unit
 }
 
 enum IxUnitUnitType {

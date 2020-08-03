@@ -66,7 +66,7 @@ enum IxAttributeStringObjectType {
 type IxEmail {
   Email: String
   Valid: Boolean
-  Id: ID
+  Id: ID!
   Description: String
   Name: String
 }
@@ -88,7 +88,9 @@ input IxPartyDO {
 
 type IxPhoneNumber {
   PhoneNumber: String
-  Id: ID
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
   Description: String
   Name: String
 }

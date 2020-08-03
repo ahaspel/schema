@@ -1,20 +1,35 @@
 {
 	"id": "https://congistics.com/schema/CxPhoneNumber",
 	"title": "com.congistics.cbrd.party.CxPhoneNumber",
+	"immutable": [
+		"New",
+		"NumericPhoneNumber",
+		"Valid"
+	],
 	"type": "object",
 	"properties": {
 		"PhoneNumber": {
+			"type": "string",
+			"minLength": 1
+		},
+		"NumericPhoneNumber": {
 			"type": "string"
+		},
+		"Valid": {
+			"type": "boolean"
 		},
 		"Id": {
 			"type": "integer"
 		},
 		"Name": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		}
 	},
 	"required": [
-		"PhoneNumber"
+		"PhoneNumber",
+		"Id",
+		"Name"
 	],
 	"definitions": {}
 }

@@ -1,6 +1,8 @@
 
 const CXEMAILINPUTMIN = `fragment CXEMAILINPUTMIN on CxEmail {
   Email
+  Id
+  Name
 }`;
 module.exports = { fragment: CXEMAILINPUTMIN,
                    fragmentName: 'CXEMAILINPUTMIN',

@@ -9,6 +9,8 @@
 	"HasSMSNumber": false,
 	"SMSNumber": {
 		"PhoneNumber": "",
+		"NumericPhoneNumber": "",
+		"Valid": false,
 		"Id": 0,
 		"Description": "",
 		"Name": ""
@@ -27,7 +29,7 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Action"
 		},
 		"Id": 0,
 		"ObjectType": "Address"

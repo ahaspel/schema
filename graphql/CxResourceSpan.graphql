@@ -111,17 +111,9 @@ enum IxResourceTypeObjectType {
 
 type IxUnit {
   UnitType: IxUnitUnitType
-  Scalar: Float
-  Integral: Boolean
-  BaseObject: String
   Id: ID!
-  ObjectType: IxUnitObjectType
   Description: String
   Name: String
-}
-
-enum IxUnitObjectType {
-  Unit
 }
 
 enum IxUnitUnitType {
