@@ -154,24 +154,8 @@ type IxPhoneNumber {
   Name: String
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxPartyGroups_onSave(data: [CxPartyGroupInput], filters: [FilterInput], objectType: String = "PartyGroup", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxPartyGroup]
+  cxPartyGroups_onSave(data: [CxPartyGroupInput], objectType: String = "PartyGroup", operation: String = "edit", properties: [String]): [CxPartyGroup]
   cxPartyGroups_onDelete(data: [String], objectType: String = "PartyGroup", operation: String = "delete"): [CxPartyGroup]
 }
 

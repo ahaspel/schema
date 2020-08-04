@@ -181,11 +181,16 @@ enum IxGeocodeSource {
 }
 
 type IxJobActivity {
+  ParentId: ID
   Completed: Boolean
+  SortOrder: Int
+  Dependencies: [CxDependency]
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Description: String
   Name: String
   CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
   DisplayName: String
@@ -193,6 +198,10 @@ type IxJobActivity {
 
 input IxJobActivityDO {
   Id: ID!
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
 }
 
 type IxLookupValue {
@@ -371,24 +380,8 @@ enum IxUnitUnitType {
   Self
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxTimeEntrys_onSave(data: [CxTimeEntryInput], filters: [FilterInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxTimeEntry]
+  cxTimeEntrys_onSave(data: [CxTimeEntryInput], objectType: String = "TimeEntry", operation: String = "edit", properties: [String]): [CxTimeEntry]
   cxTimeEntrys_onDelete(data: [String], objectType: String = "TimeEntry", operation: String = "delete"): [CxTimeEntry]
 }
 

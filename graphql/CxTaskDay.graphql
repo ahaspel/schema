@@ -225,11 +225,16 @@ type IxJob {
 }
 
 type IxJobActivity {
+  ParentId: ID
   Completed: Boolean
+  SortOrder: Int
+  Dependencies: [CxDependency]
   Id: ID!
+  ObjectType: IxJobActivityObjectType
   Description: String
   Name: String
   CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   ForeColor: String
   BackColor: String
   DisplayName: String
@@ -237,6 +242,10 @@ type IxJobActivity {
 
 input IxJobActivityDO {
   Id: ID!
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
 }
 
 type IxLocation {
@@ -386,24 +395,8 @@ enum IxUnitUnitType {
   Self
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxTaskDays_onSave(data: [CxTaskDayInput], filters: [FilterInput], objectType: String = "ActualTaskDay", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxTaskDay]
+  cxTaskDays_onSave(data: [CxTaskDayInput], objectType: String = "ActualTaskDay", operation: String = "edit", properties: [String]): [CxTaskDay]
   cxTaskDays_onDelete(data: [String], objectType: String = "ActualTaskDay", operation: String = "delete"): [CxTaskDay]
 }
 

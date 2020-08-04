@@ -318,24 +318,8 @@ enum IxUnitUnitType {
   Self
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxPlants_onSave(data: [CxPlantInput], filters: [FilterInput], objectType: String = "Plant", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxPlant]
+  cxPlants_onSave(data: [CxPlantInput], objectType: String = "Plant", operation: String = "edit", properties: [String]): [CxPlant]
   cxPlants_onDelete(data: [String], objectType: String = "Plant", operation: String = "delete"): [CxPlant]
 }
 

@@ -85,24 +85,8 @@ enum IxLookupValueObjectType {
   Privilege
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxAddresss_onSave(data: [CxAddressInput], filters: [FilterInput], objectType: String = "Address", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAddress]
+  cxAddresss_onSave(data: [CxAddressInput], objectType: String = "Address", operation: String = "edit", properties: [String]): [CxAddress]
   cxAddresss_onDelete(data: [String], objectType: String = "Address", operation: String = "delete"): [CxAddress]
 }
 

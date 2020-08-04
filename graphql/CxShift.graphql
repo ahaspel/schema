@@ -83,24 +83,8 @@ input IxShiftDayInput {
   Included: Boolean
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxShifts_onSave(data: [CxShiftInput], filters: [FilterInput], objectType: String = "Shift", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxShift]
+  cxShifts_onSave(data: [CxShiftInput], objectType: String = "Shift", operation: String = "edit", properties: [String]): [CxShift]
   cxShifts_onDelete(data: [String], objectType: String = "Shift", operation: String = "delete"): [CxShift]
 }
 

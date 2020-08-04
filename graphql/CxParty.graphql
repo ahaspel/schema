@@ -202,24 +202,8 @@ input IxRangeInput {
   Duration: String
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxPartys_onSave(data: [CxPartyInput], filters: [FilterInput], objectType: String = "Party", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxParty]
+  cxPartys_onSave(data: [CxPartyInput], objectType: String = "Party", operation: String = "edit", properties: [String]): [CxParty]
   cxPartys_onDelete(data: [String], objectType: String = "Party", operation: String = "delete"): [CxParty]
 }
 

@@ -18,24 +18,8 @@ input FilterInput {
   invert: Boolean = false
 }
 
-"""
-The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSONObject
-
-input methodInput {
-  name: String!
-  args: JSONObject
-}
-
-input methodsByItemInput {
-  indices: [Int]
-  methods: [methodInput]
-  noEdit: String
-}
-
 extend type Mutation {
-  cxEmails_onSave(data: [CxEmailInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxEmail]
+  cxEmails_onSave(data: [CxEmailInput], objectType: String, operation: String = "edit", properties: [String]): [CxEmail]
   cxEmails_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxEmail]
 }
 
