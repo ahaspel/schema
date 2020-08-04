@@ -350,6 +350,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -385,6 +388,12 @@
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -437,11 +446,35 @@
 				"Id": {
 					"type": "integer"
 				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Party",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
@@ -503,44 +536,6 @@
 				}
 			}
 		},
-		"IxResource": {
-			"type": "object",
-			"properties": {
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
-				},
-				"ResourceSubtype": {
-					"$ref": "#/definitions/IxResourceSubtype"
-				},
-				"HasAuxiliaries": {
-					"type": "boolean"
-				},
-				"DisplayName": {
-					"type": "string"
-				},
-				"Id": {
-					"type": "integer"
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Crew",
-						"Employee",
-						"Equipment",
-						"Material"
-					]
-				},
-				"ForeColor": {
-					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxResourceSubtype": {
 			"superRequired": [
 				"Id",
@@ -548,8 +543,8 @@
 			],
 			"type": "object",
 			"properties": {
-				"ParentId": {
-					"type": "integer"
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -665,8 +660,23 @@
 						"Self"
 					]
 				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
 				},
 				"Description": {
 					"type": "string"
@@ -725,12 +735,6 @@
 		},
 		"HasAuxiliaries": {
 			"type": "boolean"
-		},
-		"Auxiliaries": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxResource"
-			}
 		},
 		"Attachments": {
 			"type": "array",

@@ -165,6 +165,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -200,6 +203,12 @@
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -351,8 +360,8 @@
 			],
 			"type": "object",
 			"properties": {
-				"ParentId": {
-					"type": "integer"
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -374,6 +383,74 @@
 				},
 				"Name": {
 					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxResourceType": {
+			"superRequired": [
+				"Family",
+				"Id",
+				"Name",
+				"ResourceSubtypes"
+			],
+			"type": "object",
+			"properties": {
+				"Family": {
+					"type": "string",
+					"enum": [
+						"Labor",
+						"Equipment",
+						"Material",
+						"Group"
+					]
+				},
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceType"
+					]
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				}
 			},
 			"required": [
@@ -451,8 +528,23 @@
 						"Self"
 					]
 				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
 				},
 				"Description": {
 					"type": "string"

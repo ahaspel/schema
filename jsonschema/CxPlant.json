@@ -187,6 +187,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -222,6 +225,12 @@
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -272,8 +281,7 @@
 					"type": "string"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -295,8 +303,7 @@
 				}
 			},
 			"required": [
-				"Id",
-				"Name"
+				"Id"
 			]
 		},
 		"IxPhoneNumber": {
@@ -358,8 +365,8 @@
 			],
 			"type": "object",
 			"properties": {
-				"ParentId": {
-					"type": "integer"
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -408,14 +415,47 @@
 				"Unit": {
 					"$ref": "#/definitions/IxUnit"
 				},
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
+				},
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceType"
+					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				}
 			},
 			"required": [
@@ -442,8 +482,23 @@
 						"Self"
 					]
 				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
 				},
 				"Description": {
 					"type": "string"

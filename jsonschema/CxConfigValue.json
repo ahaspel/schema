@@ -65,6 +65,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -100,6 +103,12 @@
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [

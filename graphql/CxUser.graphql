@@ -81,8 +81,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  ObjectType: IxAddressObjectType
   Id: ID!
+  ObjectType: IxAddressObjectType
 }
 
 enum IxAddressObjectType {
@@ -93,8 +93,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -103,8 +103,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
   Id: ID!
+  ObjectType: IxAttributeStringObjectType
   Description: String
   Name: String
 }
@@ -138,8 +138,8 @@ type IxLevel {
   ObjectPrivileges: [CxObjectPrivilege]
   Editable: Boolean
   BaseObject: String
-  ObjectType: IxLevelObjectType
   Id: ID!
+  ObjectType: IxLevelObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -161,8 +161,8 @@ enum IxLevelPrivileges {
 
 type IxLookupValue {
   BaseObject: String
-  ObjectType: IxLookupValueObjectType
   Id: ID!
+  ObjectType: IxLookupValueObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -203,8 +203,8 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
-  ObjectType: IxPartyObjectType
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -239,8 +239,24 @@ type IxRange {
   Duration: String
 }
 
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxUsers_onSave(data: [CxUserInput], objectType: String = "User", operation: String = "edit", properties: [String]): [CxUser]
+  cxUsers_onSave(data: [CxUserInput], filters: [FilterInput], objectType: String = "User", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxUser]
   cxUsers_onDelete(data: [String], objectType: String = "User", operation: String = "delete"): [CxUser]
 }
 

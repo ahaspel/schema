@@ -130,6 +130,12 @@
 			],
 			"type": "object",
 			"properties": {
+				"CompanyType": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"Supplier": {
+					"type": "boolean"
+				},
 				"Emails": {
 					"type": "array",
 					"items": {
@@ -148,6 +154,9 @@
 				"SMSNumber": {
 					"$ref": "#/definitions/IxPhoneNumber"
 				},
+				"Title": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -165,11 +174,32 @@
 				"Name": {
 					"type": "string"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				},
 				"AccountCode": {
 					"type": "string"
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
 				},
 				"Contacts": {
 					"type": "array",
@@ -281,6 +311,10 @@
 			],
 			"type": "object",
 			"properties": {
+				"Year": {
+					"type": "string",
+					"format": "date"
+				},
 				"Model": {
 					"type": "string"
 				},
@@ -290,29 +324,104 @@
 				"SerialNumber": {
 					"type": "string"
 				},
+				"Height": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Weight": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Width": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Returned": {
+					"type": "boolean"
+				},
+				"MoveNotes": {
+					"type": "string"
+				},
+				"Capacity": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Owner": {
+					"$ref": "#/definitions/IxCompany"
+				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
 				},
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
+				"Temporary": {
+					"type": "boolean"
+				},
+				"UnitCost": {
+					"$ref": "#/definitions/IxUnitCost"
+				},
+				"HasAuxiliaries": {
+					"type": "boolean"
+				},
 				"DisplayName": {
 					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Id": {
 					"type": "integer"
 				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Equipment"
+					]
+				},
 				"Description": {
 					"type": "string"
 				},
+				"Name": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"Attachments": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxDocument"
+					}
+				},
+				"HasAttachments": {
+					"type": "boolean"
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
 				"AccountCode": {
 					"type": "string"
+				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
 				},
 				"ForeColor": {
 					"type": "string"
 				},
 				"BackColor": {
 					"type": "string"
+				},
+				"InCrew": {
+					"type": "boolean"
 				}
 			},
 			"required": [
@@ -370,6 +479,9 @@
 			],
 			"type": "object",
 			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
 				},
@@ -405,6 +517,12 @@
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				}
 			},
 			"required": [
@@ -457,11 +575,35 @@
 				"Id": {
 					"type": "integer"
 				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Party",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
@@ -570,17 +712,29 @@
 		"IxResource": {
 			"type": "object",
 			"properties": {
+				"Owner": {
+					"$ref": "#/definitions/IxCompany"
+				},
 				"ResourceType": {
 					"$ref": "#/definitions/IxResourceType"
 				},
 				"ResourceSubtype": {
 					"$ref": "#/definitions/IxResourceSubtype"
 				},
+				"Temporary": {
+					"type": "boolean"
+				},
+				"UnitCost": {
+					"$ref": "#/definitions/IxUnitCost"
+				},
 				"HasAuxiliaries": {
 					"type": "boolean"
 				},
 				"DisplayName": {
 					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Id": {
 					"type": "integer"
@@ -593,6 +747,45 @@
 						"Equipment",
 						"Material"
 					]
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"Attachments": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxDocument"
+					}
+				},
+				"HasAttachments": {
+					"type": "boolean"
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"AccountCode": {
+					"type": "string"
+				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
 				},
 				"ForeColor": {
 					"type": "string"
@@ -612,8 +805,8 @@
 			],
 			"type": "object",
 			"properties": {
-				"ParentId": {
-					"type": "integer"
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -662,14 +855,47 @@
 				"Unit": {
 					"$ref": "#/definitions/IxUnit"
 				},
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
+				},
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceType"
+					]
 				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
 					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				}
 			},
 			"required": [
@@ -735,8 +961,23 @@
 						"Self"
 					]
 				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
 				"Id": {
 					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
 				},
 				"Description": {
 					"type": "string"

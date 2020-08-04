@@ -43,8 +43,8 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -54,8 +54,8 @@ input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  ObjectType: IxCostCodeObjectType
   Id: ID!
+  ObjectType: IxCostCodeObjectType
   Description: String
   Name: String!
   Dependencies: [CxDependencyInput]
@@ -80,8 +80,8 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  ObjectType: IxUnitObjectType
   Id: ID!
+  ObjectType: IxUnitObjectType
   Description: String
   Name: String
 }
@@ -116,8 +116,24 @@ enum IxUnitUnitType {
   Self
 }
 
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
 extend type Mutation {
-  cxJobCosts_onSave(data: [CxJobCostInput], objectType: String = "JobCost", operation: String = "edit", properties: [String]): [CxJobCost]
+  cxJobCosts_onSave(data: [CxJobCostInput], filters: [FilterInput], objectType: String = "JobCost", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxJobCost]
   cxJobCosts_onDelete(data: [String], objectType: String = "JobCost", operation: String = "delete"): [CxJobCost]
 }
 
