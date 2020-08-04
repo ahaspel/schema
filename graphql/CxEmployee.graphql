@@ -45,7 +45,6 @@ type CxEmployee {
   UnitCost: IxUnitCost
   InCrew: Boolean
   HasAuxiliaries: Boolean
-  Auxiliaries: [IxResource]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   ForeColor: String
@@ -112,8 +111,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -123,8 +122,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType!
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -135,8 +134,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -145,8 +144,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -156,16 +155,23 @@ enum IxAttributeStringObjectType {
 }
 
 type IxCompany {
+  CompanyType: IxLookupValue
+  Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
-  Id: ID!
+  Title: String
   ObjectType: IxCompanyObjectType
+  Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   Address: IxAddress
   AccountCode: String
+  Divisions: [IxLookupValue]
   Contacts: [IxParty]
 }
 
@@ -183,8 +189,8 @@ type IxDocument {
   Key: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxDocumentObjectType
+  Id: ID!
   Description: String
   Name: String
   ChangeHistory: [CxChange]
@@ -196,8 +202,8 @@ input IxDocumentInput {
   Key: String!
   DocumentTypes: [IxLookupValueDO]
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxDocumentObjectType
+  Id: ID!
   Description: String
   Name: String
   ChangeHistory: [CxChangeInput]
@@ -251,10 +257,12 @@ type IxLocation {
 }
 
 type IxLookupValue {
-  Id: ID!
+  BaseObject: String
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -302,8 +310,8 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -318,8 +326,8 @@ input IxPartyInput {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumberInput
   Title: String
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Description: String
   Name: String!
   Dependencies: [CxDependencyInput]
@@ -375,29 +383,11 @@ input IxRangeInput {
   Duration: String
 }
 
-type IxResource {
-  ResourceType: IxResourceType
-  ResourceSubtype: IxResourceSubtype
-  HasAuxiliaries: Boolean
-  DisplayName: String
-  Id: ID!
-  ObjectType: IxResourceObjectType
-  ForeColor: String
-  BackColor: String
-}
-
-enum IxResourceObjectType {
-  Crew
-  Employee
-  Equipment
-  Material
-}
-
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -413,9 +403,16 @@ enum IxResourceSubtypeObjectType {
 type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
+  ResourceSubtypes: [IxResourceSubtype]
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
   Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute__String__]
 }
 
 input IxResourceTypeDO {
@@ -429,8 +426,16 @@ enum IxResourceTypeFamily {
   Group
 }
 
+enum IxResourceTypeObjectType {
+  ResourceType
+}
+
 type IxUnit {
   UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
   Id: ID!
   Description: String
   Name: String
@@ -450,6 +455,10 @@ input IxUnitCostInput {
 
 input IxUnitDO {
   Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
 }
 
 enum IxUnitUnitType {

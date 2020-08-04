@@ -45,8 +45,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -57,8 +57,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -67,8 +67,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -98,10 +98,12 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  Id: ID!
+  BaseObject: String
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
 }
 
 enum IxLookupValueObjectType {
@@ -135,14 +137,25 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  ObjectType: IxPartyObjectType
   Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   Address: IxAddress
 }
 
 input IxPartyDO {
   Id: ID!
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {
@@ -152,6 +165,12 @@ type IxPhoneNumber {
   Id: ID!
   Description: String
   Name: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
 }
 
 extend type Mutation {

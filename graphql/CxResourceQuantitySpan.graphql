@@ -36,8 +36,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -48,8 +48,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -66,8 +66,8 @@ type IxCompany {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
-  Id: ID!
   ObjectType: IxCompanyObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -106,10 +106,12 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  Id: ID!
+  BaseObject: String
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
 }
 
 enum IxLookupValueObjectType {
@@ -143,10 +145,21 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  ObjectType: IxPartyObjectType
   Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   Address: IxAddress
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {
@@ -173,8 +186,8 @@ input IxRangeInput {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -188,8 +201,8 @@ type IxResourceType {
   Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
   BaseObject: String
-  Id: ID!
   ObjectType: IxResourceTypeObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -211,9 +224,17 @@ enum IxResourceTypeObjectType {
 
 type IxUnit {
   UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
   Id: ID!
   Description: String
   Name: String
+}
+
+enum IxUnitObjectType {
+  Unit
 }
 
 enum IxUnitUnitType {

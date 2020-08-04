@@ -69,8 +69,8 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
-  Id: ID!
   ObjectType: IxAddressObjectType
+  Id: ID!
 }
 
 input IxAddressInput {
@@ -80,8 +80,8 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  Id: ID!
   ObjectType: IxAddressObjectType!
+  Id: ID!
 }
 
 enum IxAddressObjectType {
@@ -92,8 +92,8 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -102,8 +102,8 @@ input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -147,10 +147,12 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  Id: ID!
+  BaseObject: String
   ObjectType: IxLookupValueObjectType
+  Id: ID!
   Description: String
   Name: String
+  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -198,8 +200,8 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -214,8 +216,8 @@ input IxPartyInput {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumberInput
   Title: String
-  Id: ID!
   ObjectType: IxPartyObjectType
+  Id: ID!
   Description: String
   Name: String!
   Dependencies: [CxDependencyInput]
@@ -264,8 +266,8 @@ input IxRangeInput {
 type IxResourceSubtype {
   ParentId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
   Description: String
   Name: String
 }
@@ -284,8 +286,8 @@ type IxSupplyType {
   AccrualNumber: String
   Notes: String
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxSupplyTypeObjectType
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -297,8 +299,8 @@ input IxSupplyTypeInput {
   AccrualNumber: String
   Notes: String
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxSupplyTypeObjectType
+  Id: ID!
   Description: String
   Name: String
   Tags: [IxAttribute__String__Input]
@@ -310,6 +312,10 @@ enum IxSupplyTypeObjectType {
 
 type IxUnit {
   UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
   Id: ID!
   Description: String
   Name: String
@@ -329,6 +335,10 @@ input IxUnitCostInput {
 
 input IxUnitDO {
   Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
 }
 
 enum IxUnitUnitType {

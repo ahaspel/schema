@@ -11,7 +11,76 @@
 	},
 	"TaskDays": [],
 	"Crew": {
-		"Id": 0
+		"Manager": {
+			"Id": 0
+		},
+		"Foreman": {
+			"Id": 0
+		},
+		"Resources": [],
+		"CurrentResources": [],
+		"Owner": {
+			"Id": 0
+		},
+		"ResourceType": {
+			"Id": 0
+		},
+		"ResourceSubtype": {
+			"Id": 0
+		},
+		"Temporary": false,
+		"UnitCost": {
+			"Unit": {
+				"Id": 0
+			},
+			"Cost": {
+				"Unit": {
+					"Id": 0
+				},
+				"Quantity": 0
+			},
+			"Notes": ""
+		},
+		"HasAuxiliaries": false,
+		"DisplayName": "",
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"ObjectType": "Crew",
+		"Id": 0,
+		"Description": "",
+		"Name": "",
+		"Tags": [],
+		"Dependencies": [],
+		"Attachments": [],
+		"HasAttachments": false,
+		"Divisions": [],
+		"AccountCode": "",
+		"Location": {
+			"Address": {
+				"Street": "",
+				"StreetDetails": "",
+				"State": {
+					"Id": 0
+				},
+				"City": "",
+				"ZipCode": "",
+				"Geocode": {
+					"Lat": 0,
+					"Lng": 0,
+					"Source": "GPSService"
+				},
+				"ObjectType": "Address",
+				"Id": 0
+			},
+			"JobId": 0,
+			"Description": "",
+			"Name": ""
+		},
+		"ForeColor": "",
+		"BackColor": ""
 	},
 	"CrewId": 0,
 	"CurrentLifespan": {

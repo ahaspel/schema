@@ -42,8 +42,9 @@ input FilterInput {
 type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
-  Id: ID!
+  BaseObject: String
   ObjectType: IxCostCodeObjectType
+  Id: ID!
   Description: String
   Name: String
   Dependencies: [CxDependency]
@@ -52,8 +53,9 @@ type IxCostCode {
 input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
-  Id: ID!
+  BaseObject: String
   ObjectType: IxCostCodeObjectType
+  Id: ID!
   Description: String
   Name: String!
   Dependencies: [CxDependencyInput]
@@ -75,6 +77,10 @@ input IxMoneyInput {
 
 type IxUnit {
   UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
   Id: ID!
   Description: String
   Name: String
@@ -94,6 +100,10 @@ input IxUnitCostInput {
 
 input IxUnitDO {
   Id: ID!
+}
+
+enum IxUnitObjectType {
+  Unit
 }
 
 enum IxUnitUnitType {
