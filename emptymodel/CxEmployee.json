@@ -11,7 +11,45 @@
 	},
 	"IsMover": false,
 	"Person": {
-		"Id": 0
+		"Emails": [],
+		"PhoneNumbers": [],
+		"HasSMSNumber": false,
+		"SMSNumber": {
+			"PhoneNumber": "",
+			"NumericPhoneNumber": "",
+			"Valid": false,
+			"Id": 0,
+			"Description": "",
+			"Name": ""
+		},
+		"Title": "",
+		"Id": 0,
+		"ObjectType": "Subcontractor",
+		"Description": "",
+		"Name": "",
+		"Dependencies": [],
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"Tags": [],
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "GPSService"
+			},
+			"Id": 0,
+			"ObjectType": "Address"
+		}
 	},
 	"Contacts": [],
 	"Minority": [],
@@ -41,7 +79,6 @@
 		},
 		"Notes": ""
 	},
-	"HasAuxiliaries": false,
 	"Attachments": [],
 	"HasAttachments": false,
 	"ForeColor": "",

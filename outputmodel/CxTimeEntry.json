@@ -1,53 +1,53 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 864,
-	"Minutes": 971,
+	"Hours": 398,
+	"Minutes": 203,
 	"Resource": {
 		"ResourceType": {
-			"Family": "Group",
+			"Family": "Labor",
 			"Unit": {
-				"UnitType": "Money",
+				"UnitType": "Self",
 				"Id": 0,
-				"Description": "yzKRpE",
-				"Name": "rBUkAZiNZfH"
+				"Description": "inPYogHdocVu",
+				"Name": "KOfWaxFe"
 			},
 			"Id": 0,
-			"Description": "GKtJeVDY",
-			"Name": "LsEkZTj"
+			"Description": "vpVDoJZ",
+			"Name": "CgFiAKmCrkDG"
 		},
 		"ResourceSubtype": {
 			"ParentId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "KxDcPY",
+					"ObjectType": "hVlFXjxW",
 					"Ids": [
-						271
+						897
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "ResourceSubtype",
-			"Description": "FYalaUTt",
-			"Name": "bkOgzzNB"
+			"Description": "sGftVsvGWoJi",
+			"Name": "LyfylDrIOfg"
 		},
-		"HasAuxiliaries": false,
-		"DisplayName": "aeAseEo",
+		"HasAuxiliaries": true,
+		"DisplayName": "OIoHYwIEBN",
 		"Id": 0,
-		"ObjectType": "Equipment",
-		"ForeColor": "nMrnCGZQNc",
-		"BackColor": "BSCbWZiqC"
+		"ObjectType": "Crew",
+		"ForeColor": "bJlPNXmgpM",
+		"BackColor": "RtIDkL"
 	},
 	"EntryType": {
 		"Id": 0,
-		"ObjectType": "Language",
-		"Description": "KHFcGasu",
-		"Name": "waZbvIgZ"
+		"ObjectType": "Division",
+		"Description": "DcsSRArBKlI",
+		"Name": "tXawsSjnqPoC"
 	},
 	"EntryLaborClass": {
 		"Id": 0,
-		"ObjectType": "Skill",
-		"Description": "LMIFcFg",
-		"Name": "sGsXPqv"
+		"ObjectType": "TimeEntryType",
+		"Description": "RJoWspTrLV",
+		"Name": "ykwVFaP"
 	},
 	"CostCodes": [
 		{
@@ -55,30 +55,30 @@
 				"Unit": {
 					"UnitType": "Weight",
 					"Id": 0,
-					"Description": "rcrqWBdlvR",
-					"Name": "wblZYHEM"
+					"Description": "WMUREdx",
+					"Name": "iIYVDD"
 				},
 				"Cost": {
 					"Unit": {
-						"UnitType": "Weight",
+						"UnitType": "Area",
 						"Id": 0,
-						"Description": "ZhPyDQSelc",
-						"Name": "sZLyxoFuQZo"
+						"Description": "NfqUrsbscRED",
+						"Name": "StSDkuzX"
 					},
-					"Quantity": 105
+					"Quantity": 655
 				},
-				"Notes": "OygsqSjVut"
+				"Notes": "xsyJBJjTJkGb"
 			},
 			"Global": true,
 			"Id": 0,
 			"ObjectType": "CostCode",
-			"Description": "lLgXcROebvM",
-			"Name": "DADx",
+			"Description": "hnThhjXX",
+			"Name": "zlxfKUEINV",
 			"Dependencies": [
 				{
-					"ObjectType": "AKVtwOf",
+					"ObjectType": "TZDrXWeJwDw",
 					"Ids": [
-						585
+						461
 					]
 				}
 			]
@@ -87,101 +87,101 @@
 	"Auxiliaries": [
 		{
 			"ResourceType": {
-				"Family": "Labor",
+				"Family": "Material",
 				"Unit": {
-					"UnitType": "Length",
+					"UnitType": "Time",
 					"Id": 0,
-					"Description": "goUQoM",
-					"Name": "HJZkkyTXHKk"
+					"Description": "TXCvwi",
+					"Name": "pQiYLIuHiSsa"
 				},
 				"Id": 0,
-				"Description": "quhPUBdi",
-				"Name": "JriSRdtP"
+				"Description": "UMdEbgheCo",
+				"Name": "rAwGsX"
 			},
 			"ResourceSubtype": {
 				"ParentId": 0,
 				"Dependencies": [
 					{
-						"ObjectType": "wrvkCvUD",
+						"ObjectType": "TCxMreMbI",
 						"Ids": [
-							498
+							939
 						]
 					}
 				],
 				"Id": 0,
 				"ObjectType": "ResourceSubtype",
-				"Description": "tvphEfMwtynG",
-				"Name": "IutkErB"
+				"Description": "tVZNoiixV",
+				"Name": "eSJPLnGVr"
 			},
 			"HasAuxiliaries": false,
-			"DisplayName": "ZiBjkoDom",
+			"DisplayName": "YxBJKV",
 			"Id": 0,
-			"ObjectType": "Crew",
-			"ForeColor": "jyqxCvffgewj",
-			"BackColor": "huwHHPkLy"
+			"ObjectType": "Equipment",
+			"ForeColor": "oaoHwjRFrw",
+			"BackColor": "DUkfVdxk"
 		}
 	],
 	"JobActivity": {
-		"Completed": false,
+		"Completed": true,
 		"Id": 0,
-		"Description": "yDIAPiUTml",
-		"Name": "VPquhNjT",
+		"Description": "LnCLANA",
+		"Name": "qthiXJaRf",
 		"CurrentLifespan": {
 			"Start": "2019-01-14T08:00:00",
 			"End": "2019-01-14T08:00:00",
-			"Duration": "zXAkgsvf"
+			"Duration": "ZUiVBCw"
 		},
-		"ForeColor": "ePqDfb",
-		"BackColor": "BmcJZmAk",
-		"DisplayName": "WfSQoYOI"
+		"ForeColor": "zLcsdxusiwBk",
+		"BackColor": "LnCuqPFD",
+		"DisplayName": "PapBlJOL"
 	},
 	"Owner": {
 		"Emails": [
 			{
-				"Email": "Edyth_Rempel83@yahoo.com",
+				"Email": "Henriette_Okuneva61@gmail.com",
 				"Valid": false,
 				"Id": 0,
-				"Description": "koXlliQ",
-				"Name": "kMcWSZ"
+				"Description": "HfjBhurHzoZo",
+				"Name": "SMGISfPw"
 			}
 		],
 		"PhoneNumbers": [
 			{
-				"PhoneNumber": "MsnujlpRTpYk",
-				"NumericPhoneNumber": "xBSusS",
+				"PhoneNumber": "IlnjfETLUiuh",
+				"NumericPhoneNumber": "WhyrIZttFbH",
 				"Valid": true,
 				"Id": 0,
-				"Description": "CMogTIhHRR",
-				"Name": "mZZtAqJZ"
+				"Description": "dWGcUg",
+				"Name": "nkhWkYe"
 			}
 		],
 		"HasSMSNumber": true,
 		"SMSNumber": {
-			"PhoneNumber": "GVgIGf",
-			"NumericPhoneNumber": "FRjeTSXUnP",
+			"PhoneNumber": "YRBBrcFEoeN",
+			"NumericPhoneNumber": "AjvmxeOTMY",
 			"Valid": false,
 			"Id": 0,
-			"Description": "RtGxPkNX",
-			"Name": "lMKvDn"
+			"Description": "tDtjazwn",
+			"Name": "dqZzmwOBknO"
 		},
-		"Title": "QUNSDjb",
+		"Title": "xkKASjf",
 		"Id": 0,
-		"Description": "XeNrDcw",
-		"Name": "fFExfACG",
+		"Description": "EUGqGSW",
+		"Name": "HhmZxdewWR",
 		"Address": {
-			"Street": "XmIAFJgRoN",
-			"StreetDetails": "XvqqNRiuhmYg",
+			"Street": "pszNNQze",
+			"StreetDetails": "qfbMCLOXzUFo",
 			"State": {
 				"Id": 0,
-				"ObjectType": "Training",
-				"Description": "NnkfcY",
-				"Name": "UEdHVKIy"
+				"ObjectType": "ToDoPriority",
+				"Description": "OEUHFoesfzDO",
+				"Name": "YGeyGnZZj"
 			},
-			"City": "CVl",
-			"ZipCode": "mCuAiMNC",
+			"City": "SSrzczhdQC",
+			"ZipCode": "RFqMLwtUGKR",
 			"Geocode": {
-				"Lat": 28,
-				"Lng": 203,
+				"Lat": 204,
+				"Lng": 950,
 				"Source": "Owner"
 			},
 			"Id": 0,
@@ -189,88 +189,88 @@
 		}
 	},
 	"IsVoid": true,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 101,
-		"Lng": 928,
-		"Source": "Action"
+		"Lat": 246,
+		"Lng": 390,
+		"Source": "Owner"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 24,
-		"Lng": 806,
-		"Source": "Owner"
+		"Lat": 479,
+		"Lng": 97,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedIn",
+	"Punch": "PunchedOut",
 	"StartDistance": {
 		"Unit": {
-			"UnitType": "Time",
+			"UnitType": "Weight",
 			"Id": 0,
-			"Description": "CRDtoryAdzEw",
-			"Name": "APnvIsxYNqLP"
+			"Description": "hnpnDm",
+			"Name": "dtfoBos"
 		},
-		"Quantity": 398
+		"Quantity": 125
 	},
 	"EndDistance": {
 		"Unit": {
-			"UnitType": "Area",
+			"UnitType": "Volume",
 			"Id": 0,
-			"Description": "HzHbahQK",
-			"Name": "qMxeBLSPrRa"
+			"Description": "VzirrSWxkTd",
+			"Name": "BPqBgmfoqBMy"
 		},
-		"Quantity": 761
+		"Quantity": 999
 	},
 	"Approvals": [
 		{
 			"Approver": {
 				"Emails": [
 					{
-						"Email": "Diamond14@gmail.com",
-						"Valid": false,
+						"Email": "Aurelie.Hettinger@hotmail.com",
+						"Valid": true,
 						"Id": 0,
-						"Description": "JhcbDtlbIfbo",
-						"Name": "kathBseXw"
+						"Description": "twXTFxFWh",
+						"Name": "uvIxeL"
 					}
 				],
 				"PhoneNumbers": [
 					{
-						"PhoneNumber": "vJaWmhWHEhBl",
-						"NumericPhoneNumber": "OTTehH",
-						"Valid": true,
+						"PhoneNumber": "ElwjmQ",
+						"NumericPhoneNumber": "wvTxsyRJbjS",
+						"Valid": false,
 						"Id": 0,
-						"Description": "THbhHd",
-						"Name": "CGhajrhuQP"
+						"Description": "YMlQQn",
+						"Name": "NtPLrunCOeVa"
 					}
 				],
 				"HasSMSNumber": true,
 				"SMSNumber": {
-					"PhoneNumber": "sYlTLDnIha",
-					"NumericPhoneNumber": "SRjeCAuYW",
+					"PhoneNumber": "TmgxBw",
+					"NumericPhoneNumber": "BqGEDJDOSuo",
 					"Valid": true,
 					"Id": 0,
-					"Description": "YjPjirW",
-					"Name": "lzKditZ"
+					"Description": "KaDSsuQhXGCW",
+					"Name": "btPAoXNV"
 				},
-				"Title": "JPdgSgNlq",
+				"Title": "aJHPJnfTPa",
 				"Id": 0,
-				"Description": "uzAFZNmirk",
-				"Name": "TbiSHd",
+				"Description": "VTaQZEAkc",
+				"Name": "iQEwuukwZjXH",
 				"Address": {
-					"Street": "qNpCyBz",
-					"StreetDetails": "pQNqEe",
+					"Street": "XIWjRjcXYfk",
+					"StreetDetails": "GvdxELfhcsa",
 					"State": {
 						"Id": 0,
-						"ObjectType": "TimeEntryLaborClass",
-						"Description": "SPcFCdy",
-						"Name": "hzfBrLXW"
+						"ObjectType": "CompanyType",
+						"Description": "zrThnaw",
+						"Name": "fiapwniEClx"
 					},
-					"City": "iovk",
-					"ZipCode": "WUHOtux",
+					"City": "Ncs",
+					"ZipCode": "OaDTgtxuBXyz",
 					"Geocode": {
-						"Lat": 594,
-						"Lng": 933,
-						"Source": "GPSService"
+						"Lat": 871,
+						"Lng": 510,
+						"Source": "Owner"
 					},
 					"Id": 0,
 					"ObjectType": "Address"
@@ -282,41 +282,41 @@
 	"CurrentLifespan": {
 		"Start": "2019-01-14T08:00:00",
 		"End": "2019-01-14T08:00:00",
-		"Duration": "eYNYMJqRFGXM"
+		"Duration": "LIlRtg"
 	},
 	"Id": 0,
 	"Divisions": [
 		{
 			"Id": 0,
-			"ObjectType": "TimeEntryType",
-			"Description": "PqVTJu",
-			"Name": "hNoVvSuIZ"
+			"ObjectType": "Minority",
+			"Description": "szBeRJiT",
+			"Name": "TGxLcfiW"
 		}
 	],
-	"Description": "dmLcGXjemXB",
+	"Description": "TpVbogZTrKj",
 	"Tags": [
 		{
-			"BaseObject": "xjtrLMYmiMj",
+			"BaseObject": "lQxHTzN",
 			"AttributeId": 0,
 			"Dependencies": [
 				{
-					"ObjectType": "jMKswLlyf",
+					"ObjectType": "vKxvfIPk",
 					"Ids": [
-						484
+						928
 					]
 				}
 			],
 			"Id": 0,
 			"ObjectType": "Attribute",
-			"Description": "BldhlGmHEa",
-			"Name": "jTwoUrxq"
+			"Description": "Xmxnpu",
+			"Name": "UWpSthIIuh"
 		}
 	],
 	"Dependencies": [
 		{
-			"ObjectType": "RdNzfHavzf",
+			"ObjectType": "XntoXZrMV",
 			"Ids": [
-				643
+				84
 			]
 		}
 	]

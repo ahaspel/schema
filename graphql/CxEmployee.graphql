@@ -68,8 +68,8 @@ input CxEmployeeInput {
   MiddleName: String
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
-  Person: IxPartyDO
-  Contacts: [IxPartyDO]
+  Person: IxPartyInput
+  Contacts: [IxPartyInput]
   Minority: [IxLookupValueDO]
   Unions: [IxLookupValueDO]
   Licenses: [IxLookupValueDO]
@@ -82,7 +82,6 @@ input CxEmployeeInput {
   Owner: IxCompanyDO
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCost: IxUnitCostInput
-  HasAuxiliaries: Boolean
   Attachments: [IxDocumentInput]
   HasAttachments: Boolean
   ForeColor: String
@@ -115,6 +114,17 @@ type IxAddress {
   Geocode: IxGeocode
   Id: ID!
   ObjectType: IxAddressObjectType
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
+  Id: ID!
+  ObjectType: IxAddressObjectType!
 }
 
 enum IxAddressObjectType {
@@ -207,9 +217,23 @@ type IxEmail {
   Name: String
 }
 
+input IxEmailInput {
+  Email: String!
+  Valid: Boolean
+  Id: ID!
+  Description: String
+  Name: String!
+}
+
 type IxGeocode {
   Lat: Float
   Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
+  Lat: Float!
+  Lng: Float!
   Source: IxGeocodeSource
 }
 
@@ -279,13 +303,36 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   Title: String
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   Address: IxAddress
 }
 
-input IxPartyDO {
+input IxPartyInput {
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumberInput
+  Title: String
   Id: ID!
+  ObjectType: IxPartyObjectType
+  Description: String
+  Name: String!
+  Dependencies: [CxDependencyInput]
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttribute__String__Input]
+  Address: IxAddressInput
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {
@@ -295,6 +342,15 @@ type IxPhoneNumber {
   Id: ID!
   Description: String
   Name: String
+}
+
+input IxPhoneNumberInput {
+  PhoneNumber: String!
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
+  Description: String
+  Name: String!
 }
 
 type IxQuantity {

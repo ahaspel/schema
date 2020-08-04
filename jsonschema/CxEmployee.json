@@ -409,18 +409,44 @@
 				"Id": {
 					"type": "integer"
 				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Party",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
 				"Description": {
 					"type": "string"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
 				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				}
 			},
 			"required": [
-				"Id"
+				"Id",
+				"Name"
 			]
 		},
 		"IxPhoneNumber": {
@@ -657,6 +683,7 @@
 		"Dependencies",
 		"DisplayName",
 		"Dto",
+		"HasAuxiliaries",
 		"InCrew",
 		"Location",
 		"ObjectType",

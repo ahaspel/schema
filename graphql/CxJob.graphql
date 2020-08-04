@@ -70,8 +70,8 @@ input CxJobInput {
   Notes: String
   CurrentLifespan: IxRangeInput!
   JobActivities: [IxJobActivityInput]!
-  Owner: IxPartyDO!
-  Manager: IxPartyDO!
+  Owner: IxPartyInput!
+  Manager: IxPartyInput!
   JobStatus: IxLookupValueDO!
   StatusDue: String
   ForeColor: String
@@ -380,13 +380,13 @@ type IxParty {
   SMSNumber: IxPhoneNumber
   Title: String
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
   Address: IxAddress
-}
-
-input IxPartyDO {
-  Id: ID!
 }
 
 input IxPartyInput {
@@ -396,9 +396,20 @@ input IxPartyInput {
   SMSNumber: IxPhoneNumberInput
   Title: String
   Id: ID!
+  ObjectType: IxPartyObjectType
   Description: String
   Name: String!
+  Dependencies: [CxDependencyInput]
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttribute__String__Input]
   Address: IxAddressInput
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {

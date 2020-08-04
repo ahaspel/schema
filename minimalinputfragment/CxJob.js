@@ -34,9 +34,11 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   }
   Owner {
     Id
+    Name
   }
   Manager {
     Id
+    Name
   }
   JobStatus {
     Id
