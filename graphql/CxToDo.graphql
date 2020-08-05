@@ -32,7 +32,7 @@ type CxToDo {
 input CxToDoInput {
   CurrentLifespan: IxRangeInput
   Name: String!
-  Job: IxJobDO
+  Job: IxJobDO!
   Resources: [IxResourceDO]
   Status: IxLookupValueDO
   Priority: IxLookupValueDO
@@ -381,7 +381,7 @@ enum IxResourceObjectType {
 }
 
 type IxResourceSubtype {
-  ParentId: ID
+  ResourceType: IxResourceType
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!

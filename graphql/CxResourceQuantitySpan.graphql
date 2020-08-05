@@ -184,7 +184,7 @@ input IxRangeInput {
 }
 
 type IxResourceSubtype {
-  ParentId: ID
+  ResourceType: IxResourceType
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!

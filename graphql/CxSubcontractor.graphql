@@ -264,7 +264,7 @@ input IxRangeInput {
 }
 
 type IxResourceSubtype {
-  ParentId: ID
+  ResourceType: IxResourceType
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
@@ -278,6 +278,32 @@ input IxResourceSubtypeDO {
 
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  Unit: IxUnit
+  ResourceSubtypes: [IxResourceSubtype]
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute__String__]
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+enum IxResourceTypeObjectType {
+  ResourceType
 }
 
 type IxSupplyType {

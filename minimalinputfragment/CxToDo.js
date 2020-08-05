@@ -1,6 +1,9 @@
 
 const CXTODOINPUTMIN = `fragment CXTODOINPUTMIN on CxToDo {
   Name
+  Job {
+    Id
+  }
   Id
 }`;
 module.exports = { fragment: CXTODOINPUTMIN,

@@ -10,7 +10,7 @@ input CxDependencyInput {
 
 type CxResourceSubtype {
   ObjectType: CxResourceSubtypeObjectType
-  ParentId: ID
+  ResourceType: IxResourceType
   Name: String
   Id: ID!
   Description: String
@@ -59,6 +59,70 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxResourceSubtype {
+  ResourceType: IxResourceType
+  Dependencies: [CxDependency]
+  ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  Unit: IxUnit
+  ResourceSubtypes: [IxResourceSubtype]
+  BaseObject: String
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute__String__]
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+enum IxResourceTypeObjectType {
+  ResourceType
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
 }
 
 """
