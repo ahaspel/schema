@@ -43,10 +43,10 @@ type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -54,10 +54,10 @@ input IxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxCostCodeObjectType
-  Description: String
+  Id: ID!
   Name: String!
+  Description: String
   Dependencies: [CxDependencyInput]
 }
 
@@ -80,10 +80,10 @@ type IxUnit {
   Scalar: Float
   Integral: Boolean
   BaseObject: String
-  Id: ID!
   ObjectType: IxUnitObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

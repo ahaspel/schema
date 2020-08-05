@@ -50,14 +50,14 @@
 				"Geocode": {
 					"$ref": "#/definitions/IxGeocode"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Address"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -82,19 +82,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Attribute"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -122,10 +122,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -168,9 +168,6 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -198,10 +195,13 @@
 						"Privilege"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -258,9 +258,6 @@
 				"Title": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -270,12 +267,15 @@
 						"Subcontractor"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -321,10 +321,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -360,17 +360,14 @@
 			],
 			"type": "object",
 			"properties": {
-				"ResourceType": {
-					"$ref": "#/definitions/IxResourceType"
+				"ParentId": {
+					"type": "integer"
 				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/CxDependency"
 					}
-				},
-				"Id": {
-					"type": "integer"
 				},
 				"ObjectType": {
 					"type": "string",
@@ -378,79 +375,14 @@
 						"ResourceSubtype"
 					]
 				},
-				"Description": {
-					"type": "string"
-				},
-				"Name": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
-		"IxResourceType": {
-			"superRequired": [
-				"Family",
-				"Id",
-				"Name",
-				"ResourceSubtypes"
-			],
-			"type": "object",
-			"properties": {
-				"Family": {
-					"type": "string",
-					"enum": [
-						"Labor",
-						"Equipment",
-						"Material",
-						"Group"
-					]
-				},
-				"Unit": {
-					"$ref": "#/definitions/IxUnit"
-				},
-				"ResourceSubtypes": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResourceSubtype"
-					}
-				},
-				"BaseObject": {
-					"type": "string"
-				},
 				"Id": {
 					"type": "integer"
 				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"ResourceType"
-					]
-				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string"
 				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ForeColor": {
+				"Description": {
 					"type": "string"
-				},
-				"BackColor": {
-					"type": "string"
-				},
-				"Tags": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
-					}
 				}
 			},
 			"required": [
@@ -481,19 +413,19 @@
 						"$ref": "#/definitions/CxDependency"
 					}
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"SupplyType"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -537,19 +469,19 @@
 				"BaseObject": {
 					"type": "string"
 				},
-				"Id": {
-					"type": "integer"
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
 						"Unit"
 					]
 				},
-				"Description": {
-					"type": "string"
+				"Id": {
+					"type": "integer"
 				},
 				"Name": {
+					"type": "string"
+				},
+				"Description": {
 					"type": "string"
 				}
 			},

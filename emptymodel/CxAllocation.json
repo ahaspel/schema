@@ -1,0 +1,96 @@
+{
+	"Name": "",
+	"Job": {
+		"Id": 0
+	},
+	"JobActivity": {
+		"Id": 0
+	},
+	"Shift": {
+		"Id": 0
+	},
+	"TaskDays": [],
+	"Crew": {
+		"Manager": {
+			"Id": 0
+		},
+		"Foreman": {
+			"Id": 0
+		},
+		"Resources": [],
+		"CurrentResources": [],
+		"Owner": {
+			"Id": 0
+		},
+		"ResourceType": {
+			"Id": 0
+		},
+		"ResourceSubtype": {
+			"Id": 0
+		},
+		"Temporary": false,
+		"UnitCost": {
+			"Unit": {
+				"Id": 0
+			},
+			"Cost": {
+				"Unit": {
+					"Id": 0
+				},
+				"Quantity": 0
+			},
+			"Notes": ""
+		},
+		"Auxiliaries": [],
+		"HasAuxiliaries": false,
+		"DisplayName": "",
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"ObjectType": "Crew",
+		"Id": 0,
+		"Name": "",
+		"Description": "",
+		"Tags": [],
+		"Dependencies": [],
+		"Attachments": [],
+		"HasAttachments": false,
+		"Divisions": [],
+		"AccountCode": "",
+		"Location": {
+			"Address": {
+				"Street": "",
+				"StreetDetails": "",
+				"State": {
+					"Id": 0
+				},
+				"City": "",
+				"ZipCode": "",
+				"Geocode": {
+					"Lat": 0,
+					"Lng": 0,
+					"Source": "Action"
+				},
+				"ObjectType": "Address",
+				"Id": 0
+			},
+			"JobId": 0,
+			"Name": "",
+			"Description": ""
+		},
+		"ForeColor": "",
+		"BackColor": ""
+	},
+	"CrewId": 0,
+	"CurrentLifespan": {
+		"Start": "",
+		"End": "",
+		"Duration": ""
+	},
+	"Id": 0,
+	"Description": "",
+	"Tags": [],
+	"__typename": "CxAllocation"
+}

@@ -1,0 +1,59 @@
+{
+	"Hours": 0,
+	"Minutes": 0,
+	"Resource": {
+		"Id": 0
+	},
+	"EntryType": {
+		"Id": 0
+	},
+	"EntryLaborClass": {
+		"Id": 0
+	},
+	"CostCodes": [],
+	"Auxiliaries": [],
+	"JobActivity": {
+		"Id": 0
+	},
+	"Owner": {
+		"Id": 0
+	},
+	"IsVoid": false,
+	"Billable": false,
+	"StartLocation": {
+		"Lat": 0,
+		"Lng": 0,
+		"Source": "GPSService"
+	},
+	"PunchStart": "",
+	"EndLocation": {
+		"Lat": 0,
+		"Lng": 0,
+		"Source": "Action"
+	},
+	"PunchEnd": "",
+	"Punch": "PunchedIn",
+	"StartDistance": {
+		"Unit": {
+			"Id": 0
+		},
+		"Quantity": 0
+	},
+	"EndDistance": {
+		"Unit": {
+			"Id": 0
+		},
+		"Quantity": 0
+	},
+	"Approvals": [],
+	"CurrentLifespan": {
+		"Start": "",
+		"End": "",
+		"Duration": ""
+	},
+	"Id": 0,
+	"Divisions": [],
+	"Description": "",
+	"Tags": [],
+	"__typename": "CxTimeEntry"
+}

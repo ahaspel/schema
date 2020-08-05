@@ -1,3 +1,9 @@
+type CxChange {
+  Timestamp: String
+  UserName: String
+  Description: String
+}
+
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -9,7 +15,7 @@ input CxDependencyInput {
 }
 
 type CxJobActivity {
-  ParentId: ID
+  Job: IxJob
   Name: String
   Completed: Boolean
   SortOrder: Int
@@ -50,36 +56,205 @@ input FilterInput {
   invert: Boolean = false
 }
 
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
 type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
   Attribute
 }
 
+type IxCompany {
+  CompanyType: IxLookupValue
+  Supplier: Boolean
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
+  Title: String
+  ObjectType: IxCompanyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+  AccountCode: String
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+}
+
+enum IxCompanyObjectType {
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  BaseObject: String
+  ObjectType: IxCostCodeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+}
+
+enum IxCostCodeObjectType {
+  CostCode
+}
+
+type IxDocument {
+  Key: String
+  DocumentTypes: [IxLookupValue]
+  Dependencies: [CxDependency]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  ChangeHistory: [CxChange]
+  Created: String
+  LastModified: String
+}
+
+enum IxDocumentObjectType {
+  Document
+}
+
+type IxEmail {
+  Email: String
+  Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxJob {
+  Client: IxCompany
+  Priority: IxLookupValue
+  Certifications: [IxLookupValue]
+  Notes: String
+  JobActivities: [IxJobActivity]
+  JobStatus: IxLookupValue
+  StatusDue: String
+  Types: [IxLookupValue]
+  Subtypes: [IxLookupValue]
+  Owner: IxParty
+  Manager: IxParty
+  JobCosts: [IxJobCost]
+  TotalCost: IxMoney
+  EstimatedLaborHours: Float
+  EstimatedEquipmentHours: Float
+  Dependencies: [CxDependency]
+  ObjectType: IxJobObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  AccountCode: String
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  ForeColor: String
+  BackColor: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+  DisplayName: String
+}
+
+type IxJobActivity {
+  Job: IxJob
+  Completed: Boolean
+  SortOrder: Int
+  Dependencies: [CxDependency]
+  ObjectType: IxJobActivityObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  ForeColor: String
+  BackColor: String
+  DisplayName: String
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
+}
+
+type IxJobCost {
+  CostCode: IxCostCode
+  CostPerUnit: IxMoney
+  TotalAmount: Float
+  ExpectedDailyAmount: Float
+  BaseObject: String
+  ObjectType: IxJobCostObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+}
+
+enum IxJobCostObjectType {
+  JobCost
+}
+
+enum IxJobObjectType {
+  Job
+}
+
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -112,6 +287,43 @@ enum IxLookupValueObjectType {
   Privilege
 }
 
+type IxMoney {
+  Unit: IxUnit
+  Quantity: Float
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  HasSMSNumber: Boolean
+  SMSNumber: IxPhoneNumber
+  Title: String
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxPhoneNumber {
+  PhoneNumber: String
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
 type IxRange {
   Start: String
   End: String
@@ -122,6 +334,37 @@ input IxRangeInput {
   Start: String!
   End: String!
   Duration: String
+}
+
+type IxUnit {
+  UnitType: IxUnitUnitType
+  Scalar: Float
+  Integral: Boolean
+  BaseObject: String
+  ObjectType: IxUnitObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxUnitCost {
+  Unit: IxUnit
+  Cost: IxMoney
+  Notes: String
+}
+
+enum IxUnitObjectType {
+  Unit
+}
+
+enum IxUnitUnitType {
+  Time
+  Length
+  Weight
+  Area
+  Volume
+  Money
+  Self
 }
 
 """

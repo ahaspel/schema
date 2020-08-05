@@ -1,0 +1,101 @@
+{
+	"Hours": 929,
+	"Minutes": 697,
+	"Resource": {
+		"Id": 6
+	},
+	"EntryType": {
+		"Id": 114
+	},
+	"EntryLaborClass": {
+		"Id": 129
+	},
+	"CostCodes": [
+		{
+			"UnitCost": {
+				"Unit": {
+					"Id": 1
+				},
+				"Cost": {
+					"Unit": {
+						"Id": 1
+					},
+					"Quantity": 267
+				},
+				"Notes": "tBqXkqk"
+			},
+			"Global": true,
+			"BaseObject": "dzIrFWwZskE",
+			"ObjectType": "CostCode",
+			"Id": 0,
+			"Name": "E",
+			"Description": "NVkkyXpDx",
+			"Dependencies": []
+		}
+	],
+	"Auxiliaries": [],
+	"JobActivity": {
+		"Id": 156
+	},
+	"Owner": {
+		"Id": 1
+	},
+	"IsVoid": false,
+	"Billable": false,
+	"StartLocation": {
+		"Lat": -63.5189,
+		"Lng": -14.5062,
+		"Source": "GPSService"
+	},
+	"PunchStart": "2019-01-14T08:00:00",
+	"EndLocation": {
+		"Lat": -66.7507,
+		"Lng": -2.4495,
+		"Source": "Owner"
+	},
+	"PunchEnd": "2019-01-14T08:00:00",
+	"Punch": "PunchedOut",
+	"StartDistance": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 878
+	},
+	"EndDistance": {
+		"Unit": {
+			"Id": 1
+		},
+		"Quantity": 319
+	},
+	"Approvals": [
+		{
+			"Approver": {
+				"Id": 1
+			},
+			"AsOf": "2019-01-14T08:00:00"
+		}
+	],
+	"CurrentLifespan": {
+		"Start": "2018-01-14T00:00:00",
+		"End": "2018-12-14T00:00:00"
+	},
+	"Id": 0,
+	"Divisions": [
+		{
+			"Id": 12
+		}
+	],
+	"Description": "euFVsg",
+	"Tags": [
+		{
+			"BaseObject": "wyFfDTrCwhN",
+			"AttributeId": 92,
+			"Dependencies": [],
+			"ObjectType": "Attribute",
+			"Id": 0,
+			"Name": "Capacity",
+			"Description": "GHsxPauv"
+		}
+	],
+	"__typename": "CxTimeEntry"
+}

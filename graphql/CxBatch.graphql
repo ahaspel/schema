@@ -88,20 +88,20 @@ type IxAttribute__String__ {
   BaseObject: String
   AttributeId: ID
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
   BaseObject: String!
   AttributeId: ID!
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxAttributeStringObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -112,10 +112,10 @@ type IxDocument {
   Key: String
   DocumentTypes: [IxLookupValue]
   Dependencies: [CxDependency]
-  Id: ID!
   ObjectType: IxDocumentObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   ChangeHistory: [CxChange]
   Created: String
   LastModified: String
@@ -125,10 +125,10 @@ input IxDocumentInput {
   Key: String!
   DocumentTypes: [IxLookupValueDO]
   Dependencies: [CxDependencyInput]
-  Id: ID!
   ObjectType: IxDocumentObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   ChangeHistory: [CxChangeInput]
   Created: String
   LastModified: String
@@ -140,10 +140,10 @@ enum IxDocumentObjectType {
 
 type IxLookupValue {
   BaseObject: String
-  Id: ID!
   ObjectType: IxLookupValueObjectType
-  Description: String
+  Id: ID!
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
