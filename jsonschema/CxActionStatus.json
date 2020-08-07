@@ -19,6 +19,33 @@
 				"ObjectType",
 				"Ids"
 			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
 		}
 	},
 	"immutable": [
