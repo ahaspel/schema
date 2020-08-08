@@ -1,7 +1,9 @@
 type CxUnit {
   ObjectType: CxUnitObjectType
+  BaseObject: String
   Scalar: Float
   UnitType: CxUnitUnitType
+  Integral: Boolean
   Id: ID!
   Name: String
   Description: String
@@ -9,11 +11,8 @@ type CxUnit {
 
 input CxUnitInput {
   ObjectType: CxUnitObjectType
-  Scalar: Float
-  UnitType: CxUnitUnitType!
-  Id: ID!
-  Name: String!
-  Description: String
+  BaseObject: String
+  Integral: Boolean
 }
 
 enum CxUnitObjectType {

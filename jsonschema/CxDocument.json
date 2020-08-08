@@ -105,8 +105,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -166,8 +165,7 @@
 		"Created",
 		"Dependencies",
 		"Dto",
-		"LastModified",
-		"ObjectType"
+		"LastModified"
 	],
 	"type": "object",
 	"properties": {
@@ -190,6 +188,18 @@
 		"Name": {
 			"type": "string"
 		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
 		"ChangeHistory": {
 			"type": "array",
 			"items": {
@@ -203,18 +213,6 @@
 		"LastModified": {
 			"type": "string",
 			"format": "date-time"
-		},
-		"Id": {
-			"type": "integer"
-		},
-		"Description": {
-			"type": "string"
-		},
-		"Tags": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxAttribute__String__"
-			}
 		},
 		"Dependencies": {
 			"type": "array",

@@ -22,6 +22,7 @@ type CxHoliday {
 input CxHolidayInput {
   Holiday: String!
   Name: String!
+  ObjectType: CxHolidayObjectType
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]

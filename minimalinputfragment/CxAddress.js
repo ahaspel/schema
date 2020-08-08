@@ -1,7 +1,6 @@
 
 const CXADDRESSINPUTMIN = `fragment CXADDRESSINPUTMIN on CxAddress {
   Id
-  ObjectType
   Street
   City
   State {

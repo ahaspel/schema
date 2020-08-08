@@ -42,7 +42,6 @@
 			"superRequired": [
 				"City",
 				"Id",
-				"ObjectType",
 				"State",
 				"Street"
 			],
@@ -507,8 +506,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -1051,8 +1049,7 @@
 	"immutable": [
 		"Dependencies",
 		"DisplayName",
-		"Dto",
-		"ObjectType"
+		"Dto"
 	],
 	"type": "object",
 	"properties": {

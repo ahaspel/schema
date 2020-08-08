@@ -25,6 +25,7 @@ input CxJobCostInput {
   CostCode: IxCostCodeInput!
   TotalAmount: Float!
   ExpectedDailyAmount: Float
+  ObjectType: CxJobCostObjectType
   Id: ID!
 }
 

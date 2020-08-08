@@ -30,6 +30,7 @@ type CxRoute {
 
 input CxRouteInput {
   Driver: IxPartyDO!
+  ObjectType: CxRouteObjectType
   Stops: [IxStopDO]!
   Rig: [IxEquipmentDO]!
   Iterations: Int

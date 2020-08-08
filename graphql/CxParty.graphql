@@ -32,6 +32,7 @@ input CxPartyInput {
   Name: String!
   Title: String
   Address: IxAddressInput
+  ObjectType: CxPartyObjectType
   CurrentLifespan: IxRangeInput
   Id: ID!
   Description: String
@@ -70,7 +71,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

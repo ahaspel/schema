@@ -51,6 +51,7 @@ input CxAllocationInput {
   Crew: IxCrewInput
   CrewId: ID
   CurrentLifespan: IxRangeInput
+  ObjectType: CxAllocationObjectType
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
@@ -172,7 +173,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

@@ -19,7 +19,6 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
       _ObjectType: ObjectType
     }
     City
-    ObjectType
     Id
   }
   AccountCode
@@ -42,7 +41,6 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
     Id
     _ObjectType: ObjectType
   }
-  ObjectType
   Id
 }`;
 module.exports = { fragment: CXJOBINPUTMIN,

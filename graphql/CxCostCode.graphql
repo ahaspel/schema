@@ -11,6 +11,7 @@ type CxCostCode {
 input CxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
+  ObjectType: CxCostCodeObjectType
   Name: String!
   Id: ID!
   Description: String

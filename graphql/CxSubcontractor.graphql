@@ -34,6 +34,7 @@ type CxSubcontractor {
 input CxSubcontractorInput {
   Preferred: Boolean
   SupplyTypes: [IxSupplyTypeInput]
+  ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyInput]
   AccountCode: String
@@ -80,7 +81,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

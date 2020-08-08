@@ -2,6 +2,24 @@
 	"id": "https://congistics.com/schema/CxApplicationLicense",
 	"title": "com.congistics.cbrd.security.CxApplicationLicense",
 	"definitions": {
+		"CxChange": {
+			"type": "object",
+			"properties": {
+				"Timestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"UserName": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Timestamp"
+			]
+		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -87,8 +105,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {

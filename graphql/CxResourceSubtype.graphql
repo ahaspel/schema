@@ -19,6 +19,7 @@ type CxResourceSubtype {
 }
 
 input CxResourceSubtypeInput {
+  ObjectType: CxResourceSubtypeObjectType
   Name: String!
   Id: ID!
   Description: String

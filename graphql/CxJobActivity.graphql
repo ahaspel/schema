@@ -38,6 +38,7 @@ input CxJobActivityInput {
   ForeColor: String
   BackColor: String
   DisplayName: String
+  ObjectType: CxJobActivityObjectType
   CurrentLifespan: IxRangeInput
   Id: ID!
   Divisions: [IxLookupValueDO]

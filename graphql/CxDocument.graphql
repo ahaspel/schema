@@ -25,23 +25,24 @@ type CxDocument {
   Key: String
   ObjectType: CxDocumentObjectType
   Name: String
-  ChangeHistory: [CxChange]
-  Created: String
-  LastModified: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
+  ChangeHistory: [CxChange]
+  Created: String
+  LastModified: String
   Dependencies: [CxDependency]
 }
 
 input CxDocumentInput {
   DocumentTypes: [IxLookupValueDO]
   Key: String!
+  ObjectType: CxDocumentObjectType
   Name: String
-  ChangeHistory: [CxChangeInput]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
+  ChangeHistory: [CxChangeInput]
 }
 
 enum CxDocumentObjectType {

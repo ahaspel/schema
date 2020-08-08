@@ -2,7 +2,6 @@
 const CXLOOKUPVALUEINPUTMIN = `fragment CXLOOKUPVALUEINPUTMIN on CxLookupValue {
   Name
   Id
-  ObjectType
 }`;
 module.exports = { fragment: CXLOOKUPVALUEINPUTMIN,
                    fragmentName: 'CXLOOKUPVALUEINPUTMIN',

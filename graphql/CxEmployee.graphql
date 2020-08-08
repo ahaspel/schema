@@ -78,6 +78,7 @@ input CxEmployeeInput {
   Skills: [IxLookupValueDO]
   LaborClassification: [IxLookupValueDO]
   Machines: [IxResourceTypeDO]
+  ObjectType: CxEmployeeObjectType
   Temporary: Boolean
   Owner: IxCompanyDO
   ResourceSubtype: IxResourceSubtypeDO!
@@ -124,7 +125,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

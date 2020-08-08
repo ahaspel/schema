@@ -31,6 +31,7 @@ type CxToDo {
 
 input CxToDoInput {
   CurrentLifespan: IxRangeInput
+  ObjectType: CxToDoObjectType
   Name: String!
   Job: IxJobDO!
   Resources: [IxResourceDO]

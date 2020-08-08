@@ -42,7 +42,6 @@
 			"superRequired": [
 				"City",
 				"Id",
-				"ObjectType",
 				"State",
 				"Street"
 			],
@@ -421,7 +420,6 @@
 				"JobStatus",
 				"Manager",
 				"Name",
-				"ObjectType",
 				"Owner",
 				"Priority",
 				"Subtypes",
@@ -695,8 +693,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -1173,7 +1170,6 @@
 		"DisplayName",
 		"Dto",
 		"HasAttachments",
-		"ObjectType",
 		"TotalHours"
 	],
 	"type": "object",
@@ -1277,6 +1273,20 @@
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
 			}
+		},
+		"ChangeHistory": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxChange"
+			}
+		},
+		"Created": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"LastModified": {
+			"type": "string",
+			"format": "date-time"
 		},
 		"Dependencies": {
 			"type": "array",

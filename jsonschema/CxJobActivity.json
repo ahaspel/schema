@@ -42,7 +42,6 @@
 			"superRequired": [
 				"City",
 				"Id",
-				"ObjectType",
 				"State",
 				"Street"
 			],
@@ -403,7 +402,6 @@
 				"JobStatus",
 				"Manager",
 				"Name",
-				"ObjectType",
 				"Owner",
 				"Priority",
 				"Subtypes",
@@ -657,8 +655,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -919,8 +916,7 @@
 	"immutable": [
 		"Dependencies",
 		"Dto",
-		"Job",
-		"ObjectType"
+		"Job"
 	],
 	"type": "object",
 	"properties": {

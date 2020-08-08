@@ -42,7 +42,6 @@
 			"superRequired": [
 				"City",
 				"Id",
-				"ObjectType",
 				"State",
 				"Street"
 			],
@@ -405,7 +404,6 @@
 				"JobStatus",
 				"Manager",
 				"Name",
-				"ObjectType",
 				"Owner",
 				"Priority",
 				"Subtypes",
@@ -661,8 +659,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -1018,7 +1015,6 @@
 		},
 		"ObjectType": {
 			"type": "string",
-			"minLength": 1,
 			"enum": [
 				"Job"
 			]
@@ -1072,7 +1068,6 @@
 		"JobStatus",
 		"Manager",
 		"Name",
-		"ObjectType",
 		"Owner",
 		"Priority",
 		"Subtypes",

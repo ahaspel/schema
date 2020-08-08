@@ -65,6 +65,7 @@ input CxEquipmentInput {
   Width: IxQuantityInput
   Capacity: IxQuantityInput
   MoveNotes: String
+  ObjectType: CxEquipmentObjectType
   Temporary: Boolean
   Owner: IxCompanyDO!
   ResourceSubtype: IxResourceSubtypeDO!

@@ -23,6 +23,7 @@ type CxTextMessage {
 }
 
 input CxTextMessageInput {
+  ObjectType: CxTextMessageObjectType
   Name: String
   Text: String!
   Sender: IxPhoneNumberInput!

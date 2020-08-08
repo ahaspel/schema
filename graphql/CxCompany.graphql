@@ -23,6 +23,7 @@ input CxCompanyInput {
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyInput]
   AccountCode: String
+  ObjectType: CxCompanyObjectType
   PhoneNumbers: [IxPhoneNumberInput]
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumberInput
@@ -78,7 +79,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

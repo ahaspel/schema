@@ -23,7 +23,7 @@
 			"Description": ""
 		},
 		"Title": "",
-		"ObjectType": "Company",
+		"ObjectType": "Subcontractor",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
@@ -45,7 +45,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "GPSService"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -60,6 +60,7 @@
 	"Skills": [],
 	"LaborClassification": [],
 	"Machines": [],
+	"ObjectType": "Employee",
 	"Temporary": false,
 	"Owner": {
 		"Id": 0

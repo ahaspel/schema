@@ -4,6 +4,12 @@ type CxChange {
   Description: String
 }
 
+input CxChangeInput {
+  Timestamp: String!
+  UserName: String
+  Description: String
+}
+
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -40,10 +46,14 @@ type CxTimeEntry {
   Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
+  ChangeHistory: [CxChange]
+  Created: String
+  LastModified: String
   Dependencies: [CxDependency]
 }
 
 input CxTimeEntryInput {
+  ObjectType: CxTimeEntryObjectType
   Hours: Float
   Minutes: Int
   Resource: IxResourceDO!
@@ -68,6 +78,9 @@ input CxTimeEntryInput {
   Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
+  ChangeHistory: [CxChangeInput]
+  Created: String
+  LastModified: String
 }
 
 enum CxTimeEntryObjectType {

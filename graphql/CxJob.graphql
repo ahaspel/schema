@@ -76,7 +76,7 @@ input CxJobInput {
   StatusDue: String
   ForeColor: String
   BackColor: String
-  ObjectType: CxJobObjectType!
+  ObjectType: CxJobObjectType
   JobCosts: [IxJobCostInput]
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
@@ -115,7 +115,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

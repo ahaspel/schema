@@ -1,8 +1,6 @@
 
 const CXUNITINPUTMIN = `fragment CXUNITINPUTMIN on CxUnit {
-  UnitType
-  Id
-  Name
+  
 }`;
 module.exports = { fragment: CXUNITINPUTMIN,
                    fragmentName: 'CXUNITINPUTMIN',

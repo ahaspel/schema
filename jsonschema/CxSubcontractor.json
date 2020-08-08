@@ -2,6 +2,24 @@
 	"id": "https://congistics.com/schema/CxSubcontractor",
 	"title": "com.congistics.cbrd.party.CxSubcontractor",
 	"definitions": {
+		"CxChange": {
+			"type": "object",
+			"properties": {
+				"Timestamp": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"UserName": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Timestamp"
+			]
+		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -24,7 +42,6 @@
 			"superRequired": [
 				"City",
 				"Id",
-				"ObjectType",
 				"State",
 				"Street"
 			],
@@ -187,8 +204,7 @@
 		"IxLookupValue": {
 			"superRequired": [
 				"Id",
-				"Name",
-				"ObjectType"
+				"Name"
 			],
 			"type": "object",
 			"properties": {
@@ -606,7 +622,6 @@
 	"immutable": [
 		"Dependencies",
 		"Dto",
-		"ObjectType",
 		"Supplier"
 	],
 	"type": "object",

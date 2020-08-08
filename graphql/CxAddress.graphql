@@ -11,7 +11,7 @@ type CxAddress {
 
 input CxAddressInput {
   Id: ID!
-  ObjectType: CxAddressObjectType!
+  ObjectType: CxAddressObjectType
   Street: String!
   StreetDetails: String
   ZipCode: String

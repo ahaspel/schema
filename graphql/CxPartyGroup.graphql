@@ -20,6 +20,7 @@ type CxPartyGroup {
 }
 
 input CxPartyGroupInput {
+  ObjectType: CxPartyGroupObjectType
   Name: String!
   Parties: [IxPartyDO]!
   Id: ID!

@@ -34,6 +34,7 @@ type CxPlant {
 input CxPlantInput {
   Capacities: [IxCapacityInput]
   DefaultCapacity: IxCapacityInput
+  ObjectType: CxPlantObjectType
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
   AccountCode: String
@@ -80,7 +81,7 @@ input IxAddressInput {
   City: String!
   ZipCode: String
   Geocode: IxGeocodeInput
-  ObjectType: IxAddressObjectType!
+  ObjectType: IxAddressObjectType
   Id: ID!
 }
 

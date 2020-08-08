@@ -1,6 +1,13 @@
 {
 	"id": "https://congistics.com/schema/CxUnit",
 	"title": "com.congistics.cbrd.util.CxUnit",
+	"immutable": [
+		"Description",
+		"Id",
+		"Name",
+		"Scalar",
+		"UnitType"
+	],
 	"type": "object",
 	"properties": {
 		"ObjectType": {
@@ -9,11 +16,15 @@
 				"Unit"
 			]
 		},
+		"BaseObject": {
+			"type": "string"
+		},
 		"Scalar": {
 			"type": "number"
 		},
 		"UnitType": {
 			"type": "string",
+			"minLength": 1,
 			"enum": [
 				"Time",
 				"Length",
@@ -24,11 +35,15 @@
 				"Self"
 			]
 		},
+		"Integral": {
+			"type": "boolean"
+		},
 		"Id": {
 			"type": "integer"
 		},
 		"Name": {
-			"type": "string"
+			"type": "string",
+			"minLength": 1
 		},
 		"Description": {
 			"type": "string"
