@@ -142,11 +142,11 @@ type IxCompany {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -276,11 +276,11 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -334,12 +334,12 @@ type IxResource {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  Dependencies: [CxDependency]
   ObjectType: IxResourceObjectType
   Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   Divisions: [IxLookupValue]

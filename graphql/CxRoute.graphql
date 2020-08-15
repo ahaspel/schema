@@ -31,7 +31,7 @@ type CxRoute {
 input CxRouteInput {
   Driver: IxPartyDO!
   ObjectType: CxRouteObjectType
-  Stops: [IxStopDO]!
+  Stops: [IxStopInput]!
   Rig: [IxEquipmentDO]!
   Iterations: Int
   CurrentLifespan: IxRangeInput
@@ -59,6 +59,17 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
   ObjectType: IxAddressObjectType
   Id: ID!
 }
@@ -99,11 +110,11 @@ type IxCompany {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -116,6 +127,21 @@ enum IxCompanyObjectType {
   Company
   Plant
   Subcontractor
+}
+
+type IxCostCode {
+  UnitCost: IxUnitCost
+  Global: Boolean
+  BaseObject: String
+  ObjectType: IxCostCodeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+}
+
+enum IxCostCodeObjectType {
+  CostCode
 }
 
 type IxDocument {
@@ -163,12 +189,12 @@ type IxEquipment {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  Dependencies: [CxDependency]
   ObjectType: IxEquipmentObjectType
   Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   Divisions: [IxLookupValue]
@@ -193,10 +219,95 @@ type IxGeocode {
   Source: IxGeocodeSource
 }
 
+input IxGeocodeInput {
+  Lat: Float!
+  Lng: Float!
+  Source: IxGeocodeSource
+}
+
 enum IxGeocodeSource {
   Action
   Owner
   GPSService
+}
+
+type IxJob {
+  Client: IxCompany
+  Priority: IxLookupValue
+  Certifications: [IxLookupValue]
+  Notes: String
+  JobActivities: [IxJobActivity]
+  JobStatus: IxLookupValue
+  StatusDue: String
+  Types: [IxLookupValue]
+  Subtypes: [IxLookupValue]
+  Owner: IxParty
+  Manager: IxParty
+  JobCosts: [IxJobCost]
+  TotalCost: IxMoney
+  EstimatedLaborHours: Float
+  EstimatedEquipmentHours: Float
+  AccountCode: String
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+  ObjectType: IxJobObjectType
+  Id: ID!
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  ForeColor: String
+  BackColor: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+  DisplayName: String
+}
+
+type IxJobActivity {
+  Job: IxJob
+  Completed: Boolean
+  SortOrder: Int
+  Dependencies: [CxDependency]
+  ObjectType: IxJobActivityObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  ForeColor: String
+  BackColor: String
+  DisplayName: String
+}
+
+enum IxJobActivityObjectType {
+  JobActivity
+}
+
+type IxJobCost {
+  CostCode: IxCostCode
+  CostPerUnit: IxMoney
+  TotalAmount: Float
+  ExpectedDailyAmount: Float
+  BaseObject: String
+  ObjectType: IxJobCostObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+}
+
+enum IxJobCostObjectType {
+  JobCost
+}
+
+input IxJobDO {
+  Id: ID!
+}
+
+enum IxJobObjectType {
+  Job
 }
 
 type IxLocation {
@@ -213,6 +324,10 @@ type IxLookupValue {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -251,11 +366,11 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -289,6 +404,14 @@ type IxPickupItem {
   Id: ID!
 }
 
+input IxPickupItemInput {
+  Resources: [IxResourceDO]
+  Quantity: IxQuantityInput!
+  Description: String
+  ObjectType: IxPickupItemObjectType
+  Id: ID!
+}
+
 enum IxPickupItemObjectType {
   PickupItem
 }
@@ -296,6 +419,11 @@ enum IxPickupItemObjectType {
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
+}
+
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
 type IxRange {
@@ -320,12 +448,12 @@ type IxResource {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  Dependencies: [CxDependency]
   ObjectType: IxResourceObjectType
   Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   Divisions: [IxLookupValue]
@@ -333,6 +461,10 @@ type IxResource {
   Location: IxLocation
   ForeColor: String
   BackColor: String
+}
+
+input IxResourceDO {
+  Id: ID!
 }
 
 enum IxResourceObjectType {
@@ -382,16 +514,25 @@ enum IxResourceTypeObjectType {
 }
 
 type IxStop {
-  JobId: ID
+  Jobs: [IxJob]
   Dropoffs: [IxPickupItem]
   Pickups: [IxPickupItem]
   Start: String
+  SortOrder: Int
+  Description: String
   Address: IxAddress
   ObjectType: IxStopObjectType
   Id: ID!
 }
 
-input IxStopDO {
+input IxStopInput {
+  Jobs: [IxJobDO]
+  Dropoffs: [IxPickupItemInput]
+  Pickups: [IxPickupItemInput]
+  Start: String
+  Description: String
+  Address: IxAddressInput!
+  ObjectType: IxStopObjectType
   Id: ID!
 }
 
@@ -414,6 +555,10 @@ type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
   Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
 }
 
 enum IxUnitObjectType {

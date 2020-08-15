@@ -4,6 +4,15 @@ const CXROUTEINPUTMIN = `fragment CXROUTEINPUTMIN on CxRoute {
     Id
   }
   Stops {
+    Address {
+      Street
+      State {
+        Id
+        _ObjectType: ObjectType
+      }
+      City
+      Id
+    }
     Id
   }
   Rig {

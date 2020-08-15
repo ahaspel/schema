@@ -156,6 +156,12 @@
 				"Title": {
 					"type": "string"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -172,12 +178,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -468,6 +468,12 @@
 				"Title": {
 					"type": "string"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -485,12 +491,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -594,6 +594,12 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -616,12 +622,6 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
 					}
 				},
 				"Attachments": {

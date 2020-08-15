@@ -182,11 +182,11 @@ type IxCompany {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -273,12 +273,12 @@ type IxJob {
   TotalCost: IxMoney
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
+  AccountCode: String
+  Name: String
+  Description: String
   Dependencies: [CxDependency]
   ObjectType: IxJobObjectType
   Id: ID!
-  Name: String
-  Description: String
-  AccountCode: String
   Attachments: [IxDocument]
   HasAttachments: Boolean
   ForeColor: String
@@ -388,11 +388,11 @@ type IxParty {
   HasSMSNumber: Boolean
   SMSNumber: IxPhoneNumber
   Title: String
+  Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -436,12 +436,12 @@ type IxResource {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  Dependencies: [CxDependency]
   ObjectType: IxResourceObjectType
   Id: ID!
   Name: String
   Description: String
   Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   Divisions: [IxLookupValue]

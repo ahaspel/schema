@@ -5,6 +5,66 @@
 	"ObjectType": "Route",
 	"Stops": [
 		{
+			"Jobs": [
+				{
+					"Id": 0
+				}
+			],
+			"Dropoffs": [
+				{
+					"Resources": [
+						{
+							"Id": 6
+						}
+					],
+					"Quantity": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 507
+					},
+					"Description": "bEMpqnZoE",
+					"ObjectType": "PickupItem",
+					"Id": 0
+				}
+			],
+			"Pickups": [
+				{
+					"Resources": [
+						{
+							"Id": 6
+						}
+					],
+					"Quantity": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 386
+					},
+					"Description": "SDIaxzR",
+					"ObjectType": "PickupItem",
+					"Id": 0
+				}
+			],
+			"Start": "2019-01-14T08:00:00",
+			"Description": "vBGTIwg",
+			"Address": {
+				"Street": "NKNCQXXK",
+				"StreetDetails": "nFEDzWvv",
+				"State": {
+					"Id": 1
+				},
+				"City": "lKNUwbPt",
+				"ZipCode": "xrnecQIjsT",
+				"Geocode": {
+					"Lat": 43.2019,
+					"Lng": 67.2821,
+					"Source": "Owner"
+				},
+				"ObjectType": "Address",
+				"Id": 0
+			},
+			"ObjectType": "Stop",
 			"Id": 0
 		}
 	],
@@ -13,23 +73,23 @@
 			"Id": 2
 		}
 	],
-	"Iterations": 519,
+	"Iterations": 340,
 	"CurrentLifespan": {
-		"Start": "2018-01-14T00:00:00",
-		"End": "2018-12-14T00:00:00"
+		"Start": "2018-01-14T08:00:00",
+		"End": "2018-01-14T17:00:00"
 	},
 	"Id": 0,
-	"Description": "YsYXGlCWejEo",
-	"Name": "GuzeXNtiJxRP",
+	"Description": "GEyuhW",
+	"Name": "xivkqa",
 	"Tags": [
 		{
-			"BaseObject": "mKFGpZKdK",
+			"BaseObject": "CvxIWjfCS",
 			"AttributeId": 92,
 			"Dependencies": [],
 			"ObjectType": "Attribute",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "sjeMFRYRo"
+			"Description": "XYedYKshXx"
 		}
 	],
 	"__typename": "CxRoute"

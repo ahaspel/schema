@@ -156,6 +156,12 @@
 				"Title": {
 					"type": "string"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -172,12 +178,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -470,6 +470,15 @@
 				"EstimatedEquipmentHours": {
 					"type": "number"
 				},
+				"AccountCode": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -484,15 +493,6 @@
 				},
 				"Id": {
 					"type": "integer"
-				},
-				"Name": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				},
-				"AccountCode": {
-					"type": "string"
 				},
 				"Attachments": {
 					"type": "array",
@@ -772,6 +772,12 @@
 				"Title": {
 					"type": "string"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -789,12 +795,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -898,6 +898,12 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -920,12 +926,6 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute__String__"
-					}
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
 					}
 				},
 				"Attachments": {
