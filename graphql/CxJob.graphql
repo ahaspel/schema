@@ -129,8 +129,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttribute__String__Input {
@@ -139,8 +139,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxAttributeStringObjectType {
@@ -158,8 +158,8 @@ type IxCompany {
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -184,8 +184,8 @@ type IxCostCode {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -195,8 +195,8 @@ input IxCostCodeInput {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
   Dependencies: [CxDependencyInput]
 }
 
@@ -210,8 +210,8 @@ type IxDocument {
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   ChangeHistory: [CxChange]
   Created: String
   LastModified: String
@@ -223,8 +223,8 @@ input IxDocumentInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   ChangeHistory: [CxChangeInput]
   Created: String
   LastModified: String
@@ -238,16 +238,16 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Email: String!
   Valid: Boolean
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
 }
 
 type IxGeocode {
@@ -285,8 +285,8 @@ type IxJob {
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
   AccountCode: String
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
   ObjectType: IxJobObjectType
   Id: ID!
@@ -309,8 +309,8 @@ type IxJobActivity {
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   ForeColor: String
@@ -325,8 +325,8 @@ input IxJobActivityInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxJobActivityObjectType
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
   CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
   ForeColor: String
@@ -339,28 +339,32 @@ enum IxJobActivityObjectType {
 }
 
 type IxJobCost {
+  Job: IxJob
   CostCode: IxCostCode
   CostPerUnit: IxMoney
   TotalAmount: Float
   ExpectedDailyAmount: Float
+  CompletedAmount: Float
   BaseObject: String
   ObjectType: IxJobCostObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
 input IxJobCostInput {
+  Job: IxJobDO
   CostCode: IxCostCodeInput!
   CostPerUnit: IxMoneyInput
   TotalAmount: Float!
   ExpectedDailyAmount: Float
+  CompletedAmount: Float
   BaseObject: String
   ObjectType: IxJobCostObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependencyInput]
 }
 
@@ -380,8 +384,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -433,8 +437,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -453,8 +457,8 @@ input IxPartyInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
   CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
   Address: IxAddressInput
@@ -472,8 +476,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
@@ -481,8 +485,8 @@ input IxPhoneNumberInput {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
 }
 
 type IxRange {
@@ -504,8 +508,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxUnitCost {
