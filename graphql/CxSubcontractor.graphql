@@ -17,8 +17,7 @@ type CxSubcontractor {
   Contacts: [IxParty]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
+  SMSNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
   Name: String
   Title: String
@@ -39,8 +38,6 @@ input CxSubcontractorInput {
   Contacts: [IxPartyInput]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumberInput
   Emails: [IxEmailInput]
   Name: String!
   Title: String
@@ -95,8 +92,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -105,8 +102,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -117,16 +114,16 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Email: String!
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
 }
 
 type IxGeocode {
@@ -151,8 +148,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -198,14 +195,13 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
+  SMSNumbers: [IxPhoneNumber]
   Title: String
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -214,14 +210,13 @@ type IxParty {
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumberInput
+  SMSNumbers: [IxPhoneNumberInput]
   Title: String
   Dependencies: [CxDependencyInput]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
   CurrentLifespan: IxRangeInput
   Tags: [IxAttribute__String__Input]
   Address: IxAddressInput
@@ -239,8 +234,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
@@ -248,8 +243,8 @@ input IxPhoneNumberInput {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
 }
 
 type IxRange {
@@ -269,8 +264,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeDO {
@@ -288,8 +283,8 @@ type IxResourceType {
   BaseObject: String
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
@@ -315,8 +310,8 @@ type IxSupplyType {
   Dependencies: [CxDependency]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
 }
 
@@ -328,8 +323,8 @@ input IxSupplyTypeInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__Input]
 }
 
@@ -344,8 +339,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

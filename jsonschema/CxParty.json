@@ -108,10 +108,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -166,10 +166,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -241,10 +241,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -278,10 +278,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -313,7 +313,8 @@
 	},
 	"immutable": [
 		"Dependencies",
-		"Dto"
+		"Dto",
+		"SMSNumbers"
 	],
 	"type": "object",
 	"properties": {
@@ -323,11 +324,11 @@
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
 		},
-		"HasSMSNumber": {
-			"type": "boolean"
-		},
-		"SMSNumber": {
-			"$ref": "#/definitions/IxPhoneNumber"
+		"SMSNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxPhoneNumber"
+			}
 		},
 		"Emails": {
 			"type": "array",

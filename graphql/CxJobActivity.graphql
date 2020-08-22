@@ -78,8 +78,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -88,8 +88,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -101,14 +101,13 @@ type IxCompany {
   Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
+  SMSNumbers: [IxPhoneNumber]
   Title: String
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -129,8 +128,8 @@ type IxCostCode {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -144,8 +143,8 @@ type IxDocument {
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   ChangeHistory: [CxChange]
   Created: String
   LastModified: String
@@ -159,8 +158,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -192,8 +191,8 @@ type IxJob {
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
   AccountCode: String
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ObjectType: IxJobObjectType
   Id: ID!
@@ -216,8 +215,8 @@ type IxJobActivity {
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   ForeColor: String
@@ -239,8 +238,8 @@ type IxJobCost {
   BaseObject: String
   ObjectType: IxJobCostObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -256,8 +255,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -298,14 +297,13 @@ type IxMoney {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
+  SMSNumbers: [IxPhoneNumber]
   Title: String
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -323,8 +321,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
@@ -346,8 +344,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

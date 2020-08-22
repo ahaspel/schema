@@ -24,6 +24,7 @@ type CxAllocation {
   DisplayName: String
   Resources: [IxResource]
   Principals: [IxResource]
+  SMSNumbers: [IxPhoneNumber]
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
@@ -132,8 +133,8 @@ type IxActionStatus {
   BaseObject: String
   ObjectType: IxActionStatusObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
@@ -187,8 +188,8 @@ type IxAttribute__String__ {
   Dependencies: [CxDependency]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttribute__String__Input {
@@ -197,8 +198,8 @@ input IxAttribute__String__Input {
   Dependencies: [CxDependencyInput]
   ObjectType: IxAttributeStringObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxAttributeStringObjectType {
@@ -210,14 +211,13 @@ type IxCompany {
   Supplier: Boolean
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
+  SMSNumbers: [IxPhoneNumber]
   Title: String
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -242,8 +242,8 @@ type IxCostCode {
   BaseObject: String
   ObjectType: IxCostCodeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -268,8 +268,8 @@ type IxCrew {
   Dependencies: [CxDependency]
   ObjectType: IxCrewObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
   Attachments: [IxDocument]
   HasAttachments: Boolean
@@ -297,8 +297,8 @@ input IxCrewInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxCrewObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__Input]
   Attachments: [IxDocumentInput]
   HasAttachments: Boolean
@@ -319,8 +319,8 @@ type IxDocument {
   Dependencies: [CxDependency]
   ObjectType: IxDocumentObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   ChangeHistory: [CxChange]
   Created: String
   LastModified: String
@@ -332,8 +332,8 @@ input IxDocumentInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   ChangeHistory: [CxChangeInput]
   Created: String
   LastModified: String
@@ -347,8 +347,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxEmployee {
@@ -378,8 +378,8 @@ type IxEmployee {
   Dependencies: [CxDependency]
   ObjectType: IxEmployeeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
   Attachments: [IxDocument]
   HasAttachments: Boolean
@@ -435,8 +435,8 @@ type IxJob {
   EstimatedLaborHours: Float
   EstimatedEquipmentHours: Float
   AccountCode: String
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ObjectType: IxJobObjectType
   Id: ID!
@@ -459,8 +459,8 @@ type IxJobActivity {
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   ForeColor: String
@@ -486,8 +486,8 @@ type IxJobCost {
   BaseObject: String
   ObjectType: IxJobCostObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -506,23 +506,23 @@ enum IxJobObjectType {
 type IxLocation {
   Address: IxAddress
   JobId: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxLocationInput {
   Address: IxAddressInput!
   JobId: ID
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -568,14 +568,13 @@ input IxMoneyInput {
 type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
-  HasSMSNumber: Boolean
-  SMSNumber: IxPhoneNumber
+  SMSNumbers: [IxPhoneNumber]
   Title: String
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
@@ -593,8 +592,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
@@ -602,8 +601,8 @@ input IxPhoneNumberInput {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String!
+  Description: String
 }
 
 type IxQuantity {
@@ -636,8 +635,8 @@ type IxResource {
   Dependencies: [CxDependency]
   ObjectType: IxResourceObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Tags: [IxAttribute__String__]
   Attachments: [IxDocument]
   HasAttachments: Boolean
@@ -664,8 +663,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeDO {
@@ -683,8 +682,8 @@ type IxResourceType {
   BaseObject: String
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
@@ -713,8 +712,8 @@ type IxShift {
   Dependencies: [CxDependency]
   ObjectType: IxShiftObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxShiftDay {
@@ -740,7 +739,6 @@ type IxTaskDay {
   ShiftSupervisor: Boolean
   Filled: Boolean
   ConflictIds: [Int]
-  SMSNumber: IxPhoneNumber
   ResourceType: IxResourceType
   ResourceTypeId: ID
   ResourceSubtype: IxResourceSubtype
@@ -757,11 +755,12 @@ type IxTaskDay {
   Auxiliaries: [IxResource]
   Principals: [IxResource]
   ResourceRoles: [CxResourceRole]
+  SMSNumbers: [IxPhoneNumber]
   Dependencies: [CxDependency]
   ObjectType: IxTaskDayObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   DisplayName: String
@@ -785,7 +784,6 @@ input IxTaskDayInput {
   ParentId: ID
   ShiftSupervisor: Boolean
   ConflictIds: [Int]
-  SMSNumber: IxPhoneNumberInput
   ResourceType: IxResourceTypeDO
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
@@ -797,11 +795,12 @@ input IxTaskDayInput {
   Auxiliaries: [IxResourceDO]
   Principals: [IxResourceDO]!
   ResourceRoles: [CxResourceRoleInput]
+  SMSNumbers: [IxPhoneNumberInput]
   Dependencies: [CxDependencyInput]
   ObjectType: IxTaskDayObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRangeInput!
   Tags: [IxAttribute__String__Input]
   ForeColor: String
@@ -820,8 +819,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {

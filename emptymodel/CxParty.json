@@ -1,14 +1,5 @@
 {
 	"PhoneNumbers": [],
-	"HasSMSNumber": false,
-	"SMSNumber": {
-		"PhoneNumber": "",
-		"NumericPhoneNumber": "",
-		"Valid": false,
-		"Id": 0,
-		"Description": "",
-		"Name": ""
-	},
 	"Emails": [],
 	"Name": "",
 	"Title": "",
@@ -23,12 +14,12 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Action"
 		},
 		"ObjectType": "Address",
 		"Id": 0
 	},
-	"ObjectType": "Subcontractor",
+	"ObjectType": "Company",
 	"CurrentLifespan": {
 		"Start": "",
 		"End": "",

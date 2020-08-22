@@ -13,21 +13,13 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"HasSMSNumber": false,
-		"SMSNumber": {
-			"PhoneNumber": "",
-			"NumericPhoneNumber": "",
-			"Valid": false,
-			"Id": 0,
-			"Description": "",
-			"Name": ""
-		},
+		"SMSNumbers": [],
 		"Title": "",
 		"Dependencies": [],
 		"ObjectType": "Party",
 		"Id": 0,
-		"Description": "",
 		"Name": "",
+		"Description": "",
 		"CurrentLifespan": {
 			"Start": "",
 			"End": "",
@@ -45,7 +37,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "Owner"
 			},
 			"ObjectType": "Address",
 			"Id": 0
