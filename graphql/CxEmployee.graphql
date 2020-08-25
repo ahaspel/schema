@@ -324,9 +324,7 @@ type IxParty {
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  SMSNumbers: [IxPhoneNumberInput]
   Title: String
-  Dependencies: [CxDependencyInput]
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String!

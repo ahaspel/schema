@@ -739,6 +739,10 @@
 				"Id",
 				"Name"
 			],
+			"immutable": [
+				"Dependencies",
+				"SMSNumbers"
+			],
 			"type": "object",
 			"properties": {
 				"Emails": {
@@ -781,7 +785,8 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -800,7 +805,8 @@
 				}
 			},
 			"required": [
-				"Id"
+				"Id",
+				"Name"
 			]
 		},
 		"IxPhoneNumber": {

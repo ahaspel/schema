@@ -70,8 +70,8 @@ input CxJobInput {
   Notes: String
   CurrentLifespan: IxRangeInput!
   JobActivities: [IxJobActivityInput]!
-  Owner: IxPartyDO!
-  Manager: IxPartyDO!
+  Owner: IxPartyInput!
+  Manager: IxPartyInput!
   JobStatus: IxLookupValueDO!
   StatusDue: String
   ForeColor: String
@@ -442,16 +442,10 @@ type IxParty {
   Address: IxAddress
 }
 
-input IxPartyDO {
-  Id: ID!
-}
-
 input IxPartyInput {
   Emails: [IxEmailInput]
   PhoneNumbers: [IxPhoneNumberInput]
-  SMSNumbers: [IxPhoneNumberInput]
   Title: String
-  Dependencies: [CxDependencyInput]
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String!

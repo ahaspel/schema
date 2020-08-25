@@ -13,10 +13,8 @@
 	"Person": {
 		"Emails": [],
 		"PhoneNumbers": [],
-		"SMSNumbers": [],
 		"Title": "",
-		"Dependencies": [],
-		"ObjectType": "Company",
+		"ObjectType": "Party",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
@@ -37,7 +35,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Action"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0

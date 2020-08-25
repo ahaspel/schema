@@ -25,7 +25,7 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService"
+			"Source": "Owner"
 		},
 		"ObjectType": "Address",
 		"Id": 0
@@ -42,10 +42,66 @@
 	},
 	"JobActivities": [],
 	"Owner": {
-		"Id": 0
+		"Emails": [],
+		"PhoneNumbers": [],
+		"Title": "",
+		"ObjectType": "Party",
+		"Id": 0,
+		"Name": "",
+		"Description": "",
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"Tags": [],
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "GPSService"
+			},
+			"ObjectType": "Address",
+			"Id": 0
+		}
 	},
 	"Manager": {
-		"Id": 0
+		"Emails": [],
+		"PhoneNumbers": [],
+		"Title": "",
+		"ObjectType": "Party",
+		"Id": 0,
+		"Name": "",
+		"Description": "",
+		"CurrentLifespan": {
+			"Start": "",
+			"End": "",
+			"Duration": ""
+		},
+		"Tags": [],
+		"Address": {
+			"Street": "",
+			"StreetDetails": "",
+			"State": {
+				"Id": 0
+			},
+			"City": "",
+			"ZipCode": "",
+			"Geocode": {
+				"Lat": 0,
+				"Lng": 0,
+				"Source": "Owner"
+			},
+			"ObjectType": "Address",
+			"Id": 0
+		}
 	},
 	"JobStatus": {
 		"Id": 0
