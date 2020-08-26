@@ -2,24 +2,6 @@
 	"id": "https://congistics.com/schema/CxResourceType",
 	"title": "com.congistics.cbrd.resource.CxResourceType",
 	"definitions": {
-		"CxChange": {
-			"type": "object",
-			"properties": {
-				"Timestamp": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"UserName": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Timestamp"
-			]
-		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -103,10 +85,6 @@
 			]
 		},
 		"IxLookupValue": {
-			"superRequired": [
-				"Id",
-				"Name"
-			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -266,11 +244,6 @@
 			]
 		},
 		"IxUnit": {
-			"superRequired": [
-				"Id",
-				"Name",
-				"UnitType"
-			],
 			"type": "object",
 			"properties": {
 				"UnitType": {
@@ -344,6 +317,9 @@
 			"type": "string"
 		},
 		"BackColor": {
+			"type": "string"
+		},
+		"BaseObject": {
 			"type": "string"
 		},
 		"Name": {

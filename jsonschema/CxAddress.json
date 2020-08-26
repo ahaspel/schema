@@ -48,6 +48,10 @@
 			]
 		},
 		"IxGeocode": {
+			"superRequired": [
+				"Lat",
+				"Lng"
+			],
 			"type": "object",
 			"properties": {
 				"Lat": {
@@ -71,10 +75,6 @@
 			]
 		},
 		"IxLookupValue": {
-			"superRequired": [
-				"Id",
-				"Name"
-			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {

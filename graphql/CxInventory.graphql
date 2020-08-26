@@ -1,0 +1,218 @@
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+type CxInventory {
+  Items: [IxInventoryItem]
+  Empty: Boolean
+  Total: Float
+}
+
+input CxInventoryInput {
+  Items: [IxInventoryItemInput]
+  Empty: Boolean
+  Total: Float
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
+}
+
+type IxAttribute__String__ {
+  BaseObject: String
+  AttributeId: ID
+  Dependencies: [CxDependency]
+  ObjectType: IxAttributeStringObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxAttributeStringObjectType {
+  Attribute
+}
+
+type IxCompany {
+  CompanyType: IxLookupValue
+  Supplier: Boolean
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
+  Title: String
+  Dependencies: [CxDependency]
+  ObjectType: IxCompanyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+  AccountCode: String
+  Divisions: [IxLookupValue]
+  Contacts: [IxParty]
+}
+
+input IxCompanyDO {
+  Id: ID!
+}
+
+enum IxCompanyObjectType {
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxEmail {
+  Email: String
+  Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
+}
+
+type IxInventoryItem {
+  Id: ID
+  Amount: Float
+  Start: String
+  Vendor: IxCompany
+  AccountCode: String
+  Name: String
+  Description: String
+}
+
+input IxInventoryItemInput {
+  Id: ID
+  Amount: Float
+  Start: String
+  Vendor: IxCompanyDO
+  AccountCode: String
+  Name: String
+  Description: String
+}
+
+type IxLookupValue {
+  BaseObject: String
+  ObjectType: IxLookupValueObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Dependencies: [CxDependency]
+}
+
+enum IxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  ToDoStatus
+  Attribute
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
+  JobCertification
+  Privilege
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
+  Title: String
+  Dependencies: [CxDependency]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxPhoneNumber {
+  PhoneNumber: String
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxInventorys_onSave(data: [CxInventoryInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxInventory]
+  cxInventorys_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxInventory]
+}
+
+extend type Query {
+  cxInventorys(filters: [FilterInput], objectType: String): [CxInventory]
+}

@@ -1,0 +1,26 @@
+{
+	"id": "https://congistics.com/schema/CxGeocode",
+	"title": "com.congistics.cbrd.address.CxGeocode",
+	"type": "object",
+	"properties": {
+		"Lat": {
+			"type": "number"
+		},
+		"Lng": {
+			"type": "number"
+		},
+		"Source": {
+			"type": "string",
+			"enum": [
+				"Action",
+				"Owner",
+				"GPSService"
+			]
+		}
+	},
+	"required": [
+		"Lat",
+		"Lng"
+	],
+	"definitions": {}
+}

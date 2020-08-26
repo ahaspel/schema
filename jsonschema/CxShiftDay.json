@@ -1,0 +1,34 @@
+{
+	"id": "https://congistics.com/schema/CxShiftDay",
+	"title": "com.congistics.cbrd.time.CxShiftDay",
+	"type": "object",
+	"properties": {
+		"Day": {
+			"type": "integer"
+		},
+		"DayByName": {
+			"type": "string"
+		},
+		"Start": {
+			"type": "string"
+		},
+		"Duration": {
+			"type": "string"
+		},
+		"End": {
+			"type": "string"
+		},
+		"Included": {
+			"type": "boolean"
+		},
+		"Valid": {
+			"type": "boolean"
+		}
+	},
+	"required": [
+		"Day",
+		"Start",
+		"Duration"
+	],
+	"definitions": {}
+}

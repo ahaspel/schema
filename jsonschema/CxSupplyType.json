@@ -1,0 +1,385 @@
+{
+	"id": "https://congistics.com/schema/CxSupplyType",
+	"title": "com.congistics.cbrd.resource.CxSupplyType",
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"BaseObject",
+				"AttributeId",
+				"Id"
+			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
+		},
+		"IxLookupValue": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"ToDoStatus",
+						"Attribute",
+						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
+						"JobCertification",
+						"Privilege"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxMoney": {
+			"superRequired": [
+				"Unit",
+				"Quantity"
+			],
+			"type": "object",
+			"properties": {
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"Quantity": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"Unit",
+				"Quantity"
+			]
+		},
+		"IxResourceSubtype": {
+			"superRequired": [
+				"Id",
+				"Name"
+			],
+			"type": "object",
+			"properties": {
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceSubtype"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxResourceType": {
+			"superRequired": [
+				"Family",
+				"Id",
+				"Name",
+				"ResourceSubtypes"
+			],
+			"type": "object",
+			"properties": {
+				"Family": {
+					"type": "string",
+					"enum": [
+						"Labor",
+						"Equipment",
+						"Material",
+						"Group"
+					]
+				},
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"ResourceSubtypes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceSubtype"
+					}
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"ResourceType"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxUnit": {
+			"type": "object",
+			"properties": {
+				"UnitType": {
+					"type": "string",
+					"enum": [
+						"Time",
+						"Length",
+						"Weight",
+						"Area",
+						"Volume",
+						"Money",
+						"Self"
+					]
+				},
+				"Scalar": {
+					"type": "number"
+				},
+				"Integral": {
+					"type": "boolean"
+				},
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Unit"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxUnitCost": {
+			"superRequired": [
+				"Cost",
+				"Unit"
+			],
+			"type": "object",
+			"properties": {
+				"Unit": {
+					"$ref": "#/definitions/IxUnit"
+				},
+				"Cost": {
+					"$ref": "#/definitions/IxMoney"
+				},
+				"Notes": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Unit",
+				"Cost"
+			]
+		}
+	},
+	"type": "object",
+	"properties": {
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"SupplyType"
+			]
+		},
+		"ResourceSubtype": {
+			"$ref": "#/definitions/IxResourceSubtype"
+		},
+		"UnitCosts": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxUnitCost"
+			}
+		},
+		"AccrualNumber": {
+			"type": "string"
+		},
+		"Notes": {
+			"type": "string"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
+		}
+	},
+	"required": [
+		"ResourceSubtype",
+		"Id"
+	]
+}

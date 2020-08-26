@@ -2,24 +2,6 @@
 	"id": "https://congistics.com/schema/CxJobCost",
 	"title": "com.congistics.cbrd.cost.CxJobCost",
 	"definitions": {
-		"CxChange": {
-			"type": "object",
-			"properties": {
-				"Timestamp": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"UserName": {
-					"type": "string"
-				},
-				"Description": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"Timestamp"
-			]
-		},
 		"CxDependency": {
 			"type": "object",
 			"properties": {
@@ -122,11 +104,6 @@
 			]
 		},
 		"IxCompany": {
-			"superRequired": [
-				"CompanyType",
-				"Id",
-				"Name"
-			],
 			"type": "object",
 			"properties": {
 				"CompanyType": {
@@ -294,16 +271,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"ChangeHistory": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxChange"
-					}
-				},
-				"Created": {
-					"type": "string",
-					"format": "date-time"
-				},
 				"LastModified": {
 					"type": "string",
 					"format": "date-time"
@@ -372,6 +339,10 @@
 			]
 		},
 		"IxGeocode": {
+			"superRequired": [
+				"Lat",
+				"Lng"
+			],
 			"type": "object",
 			"properties": {
 				"Lat": {
@@ -395,20 +366,6 @@
 			]
 		},
 		"IxJob": {
-			"superRequired": [
-				"AccountCode",
-				"Address",
-				"CurrentLifespan",
-				"Id",
-				"JobActivities",
-				"JobStatus",
-				"Manager",
-				"Name",
-				"Owner",
-				"Priority",
-				"Subtypes",
-				"Types"
-			],
 			"type": "object",
 			"properties": {
 				"Client": {
@@ -661,10 +618,6 @@
 			]
 		},
 		"IxLookupValue": {
-			"superRequired": [
-				"Id",
-				"Name"
-			],
 			"type": "object",
 			"properties": {
 				"BaseObject": {
@@ -718,6 +671,10 @@
 			]
 		},
 		"IxMoney": {
+			"superRequired": [
+				"Unit",
+				"Quantity"
+			],
 			"type": "object",
 			"properties": {
 				"Unit": {
@@ -854,11 +811,6 @@
 			}
 		},
 		"IxUnit": {
-			"superRequired": [
-				"Id",
-				"Name",
-				"UnitType"
-			],
 			"type": "object",
 			"properties": {
 				"UnitType": {
@@ -903,6 +855,10 @@
 			]
 		},
 		"IxUnitCost": {
+			"superRequired": [
+				"Cost",
+				"Unit"
+			],
 			"type": "object",
 			"properties": {
 				"Unit": {

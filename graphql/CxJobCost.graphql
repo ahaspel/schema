@@ -1,9 +1,3 @@
-type CxChange {
-  Timestamp: String
-  UserName: String
-  Description: String
-}
-
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -138,8 +132,6 @@ type IxDocument {
   Id: ID!
   Name: String
   Description: String
-  ChangeHistory: [CxChange]
-  Created: String
   LastModified: String
 }
 

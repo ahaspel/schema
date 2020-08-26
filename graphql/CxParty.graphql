@@ -110,7 +110,6 @@ type IxEmail {
 
 input IxEmailInput {
   Email: String!
-  Valid: Boolean
   Id: ID!
   Name: String!
   Description: String
@@ -183,8 +182,6 @@ type IxPhoneNumber {
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
-  NumericPhoneNumber: String
-  Valid: Boolean
   Id: ID!
   Name: String!
   Description: String

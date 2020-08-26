@@ -1,15 +1,3 @@
-type CxChange {
-  Timestamp: String
-  UserName: String
-  Description: String
-}
-
-input CxChangeInput {
-  Timestamp: String!
-  UserName: String
-  Description: String
-}
-
 type CxDependency {
   ObjectType: String
   Ids: [Int]
@@ -23,14 +11,12 @@ input CxDependencyInput {
 type CxDocument {
   DocumentTypes: [IxLookupValue]
   Key: String
+  LastModified: String
   ObjectType: CxDocumentObjectType
   Name: String
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__]
-  ChangeHistory: [CxChange]
-  Created: String
-  LastModified: String
   Dependencies: [CxDependency]
 }
 
@@ -42,7 +28,6 @@ input CxDocumentInput {
   Id: ID!
   Description: String
   Tags: [IxAttribute__String__Input]
-  ChangeHistory: [CxChangeInput]
 }
 
 enum CxDocumentObjectType {
