@@ -1,0 +1,476 @@
+{
+	"id": "https://congistics.com/schema/CxCompany",
+	"title": "com.congistics.cbrd.party.CxCompany",
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
+		"IxAddress": {
+			"superRequired": [
+				"City",
+				"Id",
+				"State",
+				"Street"
+			],
+			"type": "object",
+			"properties": {
+				"Street": {
+					"type": "string",
+					"minLength": 1
+				},
+				"StreetDetails": {
+					"type": "string"
+				},
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"City": {
+					"type": "string",
+					"minLength": 1
+				},
+				"ZipCode": {
+					"type": "string"
+				},
+				"Geocode": {
+					"$ref": "#/definitions/IxGeocode"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Address"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"Street",
+				"State",
+				"City",
+				"Id"
+			]
+		},
+		"IxAttribute__String__": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"AttributeId": {
+					"type": "integer"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Attribute"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"BaseObject",
+				"AttributeId",
+				"Id"
+			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
+		},
+		"IxEmail": {
+			"superRequired": [
+				"Email",
+				"Id",
+				"Name"
+			],
+			"immutable": [
+				"Valid"
+			],
+			"type": "object",
+			"properties": {
+				"Email": {
+					"type": "string",
+					"minLength": 1,
+					"format": "email"
+				},
+				"Valid": {
+					"type": "boolean"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"Email",
+				"Name"
+			]
+		},
+		"IxGeocode": {
+			"superRequired": [
+				"Lat",
+				"Lng"
+			],
+			"type": "object",
+			"properties": {
+				"Lat": {
+					"type": "number"
+				},
+				"Lng": {
+					"type": "number"
+				},
+				"Source": {
+					"type": "string",
+					"enum": [
+						"Action",
+						"Owner",
+						"GPSService"
+					]
+				}
+			},
+			"required": [
+				"Lat",
+				"Lng"
+			]
+		},
+		"IxLookupValue": {
+			"type": "object",
+			"properties": {
+				"BaseObject": {
+					"type": "string"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"JobPriority",
+						"JobSubtype",
+						"JobType",
+						"Division",
+						"LaborClass",
+						"Language",
+						"License",
+						"Minority",
+						"Skill",
+						"Training",
+						"Union",
+						"State",
+						"ToDoStatus",
+						"Attribute",
+						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
+						"JobCertification",
+						"Privilege"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
+		"IxParty": {
+			"superRequired": [
+				"Id",
+				"Name"
+			],
+			"immutable": [
+				"Dependencies",
+				"SMSNumbers"
+			],
+			"type": "object",
+			"properties": {
+				"Emails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"Title": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Party",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				}
+			},
+			"required": [
+				"Id",
+				"Name"
+			]
+		},
+		"IxPhoneNumber": {
+			"superRequired": [
+				"PhoneNumber",
+				"Id",
+				"Name"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
+			],
+			"type": "object",
+			"properties": {
+				"PhoneNumber": {
+					"type": "string",
+					"minLength": 1
+				},
+				"NumericPhoneNumber": {
+					"type": "string"
+				},
+				"Valid": {
+					"type": "boolean"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"Name",
+				"PhoneNumber"
+			]
+		},
+		"IxRange": {
+			"superRequired": [
+				"End",
+				"Start"
+			],
+			"type": "object",
+			"properties": {
+				"Start": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"End": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Duration": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"immutable": [
+		"Dependencies",
+		"Default",
+		"Dto",
+		"Supplier"
+	],
+	"type": "object",
+	"properties": {
+		"CompanyType": {
+			"$ref": "#/definitions/IxLookupValue"
+		},
+		"Supplier": {
+			"type": "boolean"
+		},
+		"Contacts": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxParty"
+			}
+		},
+		"AccountCode": {
+			"type": "string"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"Company",
+				"Plant",
+				"Subcontractor"
+			]
+		},
+		"PhoneNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxPhoneNumber"
+			}
+		},
+		"SMSNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxPhoneNumber"
+			}
+		},
+		"Emails": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxEmail"
+			}
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Title": {
+			"type": "string"
+		},
+		"Address": {
+			"$ref": "#/definitions/IxAddress"
+		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Divisions": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxLookupValue"
+			}
+		},
+		"Description": {
+			"type": "string"
+		},
+		"Tags": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxAttribute__String__"
+			}
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
+		}
+	},
+	"required": [
+		"CompanyType",
+		"Id",
+		"Name"
+	]
+}

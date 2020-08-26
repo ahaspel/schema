@@ -1,0 +1,82 @@
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: String!
+  Ids: [Int]!
+}
+
+type CxLookupValue {
+  Name: String
+  Dependencies: [CxDependency]
+  Id: ID!
+  Description: String
+  ObjectType: CxLookupValueObjectType
+}
+
+input CxLookupValueInput {
+  Name: String!
+  Dependencies: [CxDependencyInput]
+  Id: ID!
+  Description: String
+  ObjectType: CxLookupValueObjectType
+}
+
+enum CxLookupValueObjectType {
+  JobPriority
+  JobSubtype
+  JobType
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  State
+  ToDoStatus
+  Attribute
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
+  JobCertification
+  Privilege
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxLookupValues_onSave(data: [CxLookupValueInput], filters: [FilterInput], objectType: String = "JobPriority", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxLookupValue]
+  cxLookupValues_onDelete(data: [String], objectType: String = "JobPriority", operation: String = "delete"): [CxLookupValue]
+}
+
+extend type Query {
+  cxLookupValues(filters: [FilterInput], objectType: String = "JobPriority"): [CxLookupValue]
+}

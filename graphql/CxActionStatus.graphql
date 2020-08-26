@@ -1,0 +1,72 @@
+type CxActionStatus {
+  ActionStatusType: CxActionStatusActionStatusType
+  Default: Boolean
+  Completed: Boolean
+  Cancelled: Boolean
+  ObjectType: CxActionStatusObjectType
+  ForeColor: String
+  BackColor: String
+  Name: String
+  Dependencies: [CxDependency]
+  Id: ID!
+  Description: String
+}
+
+enum CxActionStatusActionStatusType {
+  Active
+  Inactive
+  Completed
+  Cancelled
+  Overallocated
+}
+
+input CxActionStatusInput {
+  ActionStatusType: CxActionStatusActionStatusType
+  ObjectType: CxActionStatusObjectType
+  ForeColor: String
+  BackColor: String
+  Name: String!
+  Id: ID!
+  Description: String
+}
+
+enum CxActionStatusObjectType {
+  ActionStatus
+}
+
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxActionStatuss_onSave(data: [CxActionStatusInput], filters: [FilterInput], objectType: String = "ActionStatus", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxActionStatus]
+  cxActionStatuss_onDelete(data: [String], objectType: String = "ActionStatus", operation: String = "delete"): [CxActionStatus]
+}
+
+extend type Query {
+  cxActionStatuss(filters: [FilterInput], objectType: String = "ActionStatus"): [CxActionStatus]
+}

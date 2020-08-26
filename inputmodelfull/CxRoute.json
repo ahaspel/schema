@@ -1,0 +1,96 @@
+{
+	"Driver": {
+		"Id": 1
+	},
+	"ObjectType": "Route",
+	"Stops": [
+		{
+			"Jobs": [
+				{
+					"Id": 0
+				}
+			],
+			"Dropoffs": [
+				{
+					"Resources": [
+						{
+							"Id": 6
+						}
+					],
+					"Quantity": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 669
+					},
+					"Description": "pvGnISYanhQZ",
+					"ObjectType": "PickupItem",
+					"Id": 0
+				}
+			],
+			"Pickups": [
+				{
+					"Resources": [
+						{
+							"Id": 6
+						}
+					],
+					"Quantity": {
+						"Unit": {
+							"Id": 1
+						},
+						"Quantity": 505
+					},
+					"Description": "MVaebx",
+					"ObjectType": "PickupItem",
+					"Id": 0
+				}
+			],
+			"Start": "2019-01-14T08:00:00",
+			"Description": "GVfEAv",
+			"Address": {
+				"Street": "AB",
+				"StreetDetails": "uorrHh",
+				"State": {
+					"Id": 1
+				},
+				"City": "GaCoPaqD",
+				"ZipCode": "FeuPFN",
+				"Geocode": {
+					"Lat": -44.9829,
+					"Lng": 118.5528,
+					"Source": "Action"
+				},
+				"ObjectType": "Address",
+				"Id": 0
+			},
+			"ObjectType": "Stop",
+			"Id": 0
+		}
+	],
+	"Rig": [
+		{
+			"Id": 2
+		}
+	],
+	"Iterations": 812,
+	"CurrentLifespan": {
+		"Start": "2018-01-14T08:00:00",
+		"End": "2018-01-14T17:00:00"
+	},
+	"Id": 0,
+	"Description": "SKcJGh",
+	"Name": "ipUpKUV",
+	"Tags": [
+		{
+			"BaseObject": "oxAQOERE",
+			"AttributeId": 92,
+			"Dependencies": [],
+			"ObjectType": "Attribute",
+			"Id": 0,
+			"Name": "Capacity",
+			"Description": "yKOknKku"
+		}
+	],
+	"__typename": "CxRoute"
+}

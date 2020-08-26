@@ -1,0 +1,56 @@
+type CxConfigValue {
+  Key: String
+  Value: String
+  Editable: Boolean
+  Required: Boolean
+  ObjectType: CxConfigValueObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+input CxConfigValueInput {
+  Key: String!
+  Value: String!
+  Editable: Boolean
+  ObjectType: CxConfigValueObjectType
+  Id: ID!
+  Description: String
+  Name: String
+}
+
+enum CxConfigValueObjectType {
+  ConfigValue
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxConfigValues_onSave(data: [CxConfigValueInput], filters: [FilterInput], objectType: String = "ConfigValue", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxConfigValue]
+  cxConfigValues_onDelete(data: [String], objectType: String = "ConfigValue", operation: String = "delete"): [CxConfigValue]
+}
+
+extend type Query {
+  cxConfigValues(filters: [FilterInput], objectType: String = "ConfigValue"): [CxConfigValue]
+}

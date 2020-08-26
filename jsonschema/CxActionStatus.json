@@ -1,0 +1,112 @@
+{
+	"id": "https://congistics.com/schema/CxActionStatus",
+	"title": "com.congistics.cbrd.action.CxActionStatus",
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
+		}
+	},
+	"immutable": [
+		"Cancelled",
+		"Completed",
+		"Default",
+		"Dependencies",
+		"Dto"
+	],
+	"type": "object",
+	"properties": {
+		"ActionStatusType": {
+			"type": "string",
+			"enum": [
+				"Active",
+				"Inactive",
+				"Completed",
+				"Cancelled",
+				"Overallocated"
+			]
+		},
+		"Default": {
+			"type": "boolean"
+		},
+		"Completed": {
+			"type": "boolean"
+		},
+		"Cancelled": {
+			"type": "boolean"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"ActionStatus"
+			]
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"Id",
+		"Name"
+	]
+}
