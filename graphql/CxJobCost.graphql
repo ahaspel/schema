@@ -3,11 +3,6 @@ type CxDependency {
   Ids: [Int]
 }
 
-input CxDependencyInput {
-  ObjectType: String!
-  Ids: [Int]!
-}
-
 type CxJobCost {
   Job: IxJob
   CostPerUnit: IxMoney
@@ -117,7 +112,6 @@ input IxCostCodeInput {
   Id: ID!
   Name: String!
   Description: String
-  Dependencies: [CxDependencyInput]
 }
 
 enum IxCostCodeObjectType {

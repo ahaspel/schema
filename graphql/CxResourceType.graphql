@@ -89,7 +89,6 @@ type IxResourceSubtype {
 }
 
 input IxResourceSubtypeInput {
-  ResourceType: IxResourceTypeDO
   Dependencies: [CxDependencyInput]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
@@ -114,10 +113,6 @@ type IxResourceType {
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
 }
 
 enum IxResourceTypeFamily {

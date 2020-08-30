@@ -1,17 +1,13 @@
 type CxCapacity {
   ResourceId: ID
-  Id: ID
+  Id: ID!
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Amount: Float
 }
 
-input CxCapacityInput {
-  ResourceId: ID
-  Id: ID
-  ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO
-  Amount: Float
+input CxCapacityDO {
+  Id: ID!
 }
 
 type CxDependency {
@@ -49,10 +45,6 @@ type IxResourceSubtype {
   Description: String
 }
 
-input IxResourceSubtypeDO {
-  Id: ID!
-}
-
 enum IxResourceSubtypeObjectType {
   ResourceSubtype
 }
@@ -70,10 +62,6 @@ type IxResourceType {
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute__String__]
-}
-
-input IxResourceTypeDO {
-  Id: ID!
 }
 
 enum IxResourceTypeFamily {
@@ -129,7 +117,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxCapacitys_onSave(data: [CxCapacityInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxCapacity]
+  cxCapacitys_onSave(data: [CxCapacityDO], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxCapacity]
   cxCapacitys_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxCapacity]
 }
 

@@ -21,14 +21,12 @@
 			"type": "integer"
 		},
 		"Name": {
-			"type": "string",
-			"minLength": 1
+			"type": "string"
 		}
 	},
 	"required": [
-		"PhoneNumber",
 		"Id",
-		"Name"
+		"PhoneNumber"
 	],
 	"definitions": {}
 }

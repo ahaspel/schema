@@ -133,17 +133,12 @@
 		"IxEmail": {
 			"superRequired": [
 				"Email",
-				"Id",
-				"Name"
-			],
-			"immutable": [
-				"Valid"
+				"Id"
 			],
 			"type": "object",
 			"properties": {
 				"Email": {
 					"type": "string",
-					"minLength": 1,
 					"format": "email"
 				},
 				"Valid": {
@@ -153,17 +148,18 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Id",
 				"Email",
-				"Name"
+				"Id"
+			],
+			"immutable": [
+				"Valid"
 			]
 		},
 		"IxGeocode": {
@@ -248,19 +244,13 @@
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber",
 				"Id",
-				"Name"
-			],
-			"immutable": [
-				"NumericPhoneNumber",
-				"Valid"
+				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
 				"PhoneNumber": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"NumericPhoneNumber": {
 					"type": "string"
@@ -272,17 +262,19 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Id",
-				"Name",
-				"PhoneNumber"
+				"PhoneNumber",
+				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		},
 		"IxRange": {
@@ -303,7 +295,10 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"immutable": [
+				"Duration"
+			]
 		}
 	},
 	"immutable": [

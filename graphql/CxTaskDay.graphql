@@ -74,12 +74,12 @@ input CxTaskDayInput {
   Amount: Float
   Supplier: IxCompanyDO
   ShiftSupervisor: Boolean
-  JobActivity: IxJobActivityDO!
+  JobActivity: IxJobActivityDO
   ObjectType: CxTaskDayObjectType
   Auxiliaries: [IxResourceDO]
   ResourceRoles: [CxResourceRoleInput]
   ActionStatus: IxActionStatusDO
-  Principals: [IxResourceDO]!
+  Principals: [IxResourceDO]
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
@@ -415,7 +415,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResource {

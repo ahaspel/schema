@@ -1,3 +1,32 @@
 {
+	"Id": 0,
+	"Address": {
+		"Street": "",
+		"StreetDetails": "",
+		"State": {
+			"Id": 0
+		},
+		"City": "",
+		"ZipCode": "",
+		"Geocode": {
+			"Lat": 0,
+			"Lng": 0,
+			"Source": "GPSService"
+		},
+		"ObjectType": "Address",
+		"Id": 0
+	},
+	"ObjectType": "Stop",
+	"Dropoffs": [],
+	"Pickups": [],
+	"Jobs": [],
+	"Quantity": {
+		"Unit": {
+			"Id": 0
+		},
+		"Quantity": 0
+	},
+	"Start": "",
+	"Description": "",
 	"__typename": "CxStop"
 }

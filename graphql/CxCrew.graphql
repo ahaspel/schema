@@ -144,12 +144,10 @@ type IxDocument {
 input IxDocumentInput {
   Key: String!
   DocumentTypes: [IxLookupValueDO]
-  Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
   Id: ID!
   Name: String
   Description: String
-  LastModified: String
 }
 
 enum IxDocumentObjectType {
@@ -320,7 +318,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResource {

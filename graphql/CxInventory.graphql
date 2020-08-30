@@ -10,7 +10,7 @@ type CxInventory {
 }
 
 input CxInventoryInput {
-  Items: [IxInventoryItemInput]
+  Items: [IxInventoryItemDO]
   Empty: Boolean
   Total: Float
 }
@@ -71,10 +71,6 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
-input IxCompanyDO {
-  Id: ID!
-}
-
 enum IxCompanyObjectType {
   Company
   Plant
@@ -102,23 +98,17 @@ enum IxGeocodeSource {
 }
 
 type IxInventoryItem {
-  Id: ID
   Amount: Float
   Start: String
   Vendor: IxCompany
+  Id: ID!
   AccountCode: String
   Name: String
   Description: String
 }
 
-input IxInventoryItemInput {
-  Id: ID
-  Amount: Float
-  Start: String
-  Vendor: IxCompanyDO
-  AccountCode: String
-  Name: String
-  Description: String
+input IxInventoryItemDO {
+  Id: ID!
 }
 
 type IxLookupValue {

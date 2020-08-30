@@ -1,11 +1,5 @@
 
 const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
-  JobActivity {
-    Id
-  }
-  Principals {
-    Id
-  }
   CurrentLifespan {
     Start
     End

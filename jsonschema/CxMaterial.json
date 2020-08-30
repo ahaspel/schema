@@ -233,6 +233,13 @@
 			"required": [
 				"Key",
 				"Id"
+			],
+			"immutable": [
+				"Attached",
+				"Created",
+				"Dependencies",
+				"Dto",
+				"LastModified"
 			]
 		},
 		"IxDto": {
@@ -265,8 +272,7 @@
 		"IxEmail": {
 			"superRequired": [
 				"Email",
-				"Id",
-				"Name"
+				"Id"
 			],
 			"type": "object",
 			"properties": {
@@ -290,6 +296,9 @@
 			"required": [
 				"Email",
 				"Id"
+			],
+			"immutable": [
+				"Valid"
 			]
 		},
 		"IxGeocode": {
@@ -340,11 +349,11 @@
 			]
 		},
 		"IxInventoryItem": {
+			"superRequired": [
+				"Id"
+			],
 			"type": "object",
 			"properties": {
-				"Id": {
-					"type": "integer"
-				},
 				"Amount": {
 					"type": "number"
 				},
@@ -355,6 +364,9 @@
 				},
 				"Vendor": {
 					"$ref": "#/definitions/IxCompany"
+				},
+				"Id": {
+					"type": "integer"
 				},
 				"AccountCode": {
 					"type": "string"
@@ -531,13 +543,17 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"SMSNumbers"
 			]
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber",
 				"Id",
-				"Name"
+				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
@@ -563,6 +579,10 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		},
 		"IxQuantity": {
@@ -602,7 +622,10 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"immutable": [
+				"Duration"
+			]
 		},
 		"IxResource": {
 			"type": "object",
@@ -733,6 +756,9 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"ResourceType"
 			]
 		},
 		"IxResourceType": {
@@ -801,6 +827,10 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto"
 			]
 		},
 		"IxUnit": {

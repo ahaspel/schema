@@ -190,6 +190,9 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"ResourceType"
 			]
 		},
 		"IxResourceType": {
@@ -258,6 +261,10 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto"
 			]
 		},
 		"IxUnit": {
@@ -343,9 +350,6 @@
 			"items": {
 				"$ref": "#/definitions/IxUnitCost"
 			}
-		},
-		"AccrualNumber": {
-			"type": "string"
 		},
 		"Notes": {
 			"type": "string"

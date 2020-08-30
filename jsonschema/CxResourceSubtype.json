@@ -171,6 +171,9 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"ResourceType"
 			]
 		},
 		"IxResourceType": {
@@ -239,6 +242,10 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto"
 			]
 		},
 		"IxUnit": {

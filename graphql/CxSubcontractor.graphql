@@ -12,6 +12,7 @@ type CxSubcontractor {
   Preferred: Boolean
   Supplier: Boolean
   SupplyTypes: [IxSupplyType]
+  DefaultSupplyType: IxSupplyType
   ObjectType: CxSubcontractorObjectType
   CompanyType: IxLookupValue
   Contacts: [IxParty]
@@ -121,7 +122,7 @@ type IxEmail {
 input IxEmailInput {
   Email: String!
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -238,7 +239,7 @@ type IxPhoneNumber {
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -251,7 +252,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResourceSubtype {
@@ -300,7 +300,6 @@ enum IxResourceTypeObjectType {
 type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
   UnitCosts: [IxUnitCost]
-  AccrualNumber: String
   Notes: String
   Dependencies: [CxDependency]
   ObjectType: IxSupplyTypeObjectType
@@ -313,7 +312,6 @@ type IxSupplyType {
 input IxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCosts: [IxUnitCostInput]
-  AccrualNumber: String
   Notes: String
   Dependencies: [CxDependencyInput]
   ObjectType: IxSupplyTypeObjectType

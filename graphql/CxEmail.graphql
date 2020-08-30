@@ -8,7 +8,7 @@ type CxEmail {
 input CxEmailInput {
   Email: String!
   Id: ID!
-  Name: String!
+  Name: String
 }
 
 input FilterInput {

@@ -139,9 +139,8 @@
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber",
 				"Id",
-				"Name"
+				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
@@ -167,6 +166,10 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		}
 	},

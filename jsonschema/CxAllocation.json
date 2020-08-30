@@ -366,6 +366,10 @@
 			"required": [
 				"UnitCost",
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto"
 			]
 		},
 		"IxCrew": {
@@ -523,6 +527,13 @@
 			"required": [
 				"Key",
 				"Id"
+			],
+			"immutable": [
+				"Attached",
+				"Created",
+				"Dependencies",
+				"Dto",
+				"LastModified"
 			]
 		},
 		"IxDto": {
@@ -555,8 +566,7 @@
 		"IxEmail": {
 			"superRequired": [
 				"Email",
-				"Id",
-				"Name"
+				"Id"
 			],
 			"type": "object",
 			"properties": {
@@ -580,6 +590,9 @@
 			"required": [
 				"Email",
 				"Id"
+			],
+			"immutable": [
+				"Valid"
 			]
 		},
 		"IxEmployee": {
@@ -970,6 +983,11 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"Job"
 			]
 		},
 		"IxJobCost": {
@@ -1025,6 +1043,13 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"CompletedAmount",
+				"Dependencies",
+				"Description",
+				"Dto",
+				"Name"
 			]
 		},
 		"IxLocation": {
@@ -1186,13 +1211,17 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"SMSNumbers"
 			]
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber",
 				"Id",
-				"Name"
+				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
@@ -1218,6 +1247,10 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		},
 		"IxQuantity": {
@@ -1257,7 +1290,10 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"immutable": [
+				"Duration"
+			]
 		},
 		"IxResource": {
 			"type": "object",
@@ -1388,6 +1424,9 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"ResourceType"
 			]
 		},
 		"IxResourceType": {
@@ -1456,6 +1495,10 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto"
 			]
 		},
 		"IxShift": {
@@ -1542,25 +1585,7 @@
 		"IxTaskDay": {
 			"superRequired": [
 				"CurrentLifespan",
-				"Id",
-				"JobActivity",
-				"Principals"
-			],
-			"immutable": [
-				"ActionType",
-				"BackColor",
-				"ConflictIds",
-				"DisplayName",
-				"Divisions",
-				"Filled",
-				"ForeColor",
-				"Job",
-				"JobActivityId",
-				"JobId",
-				"Location",
-				"ResourceSubtypeId",
-				"ResourceTypeId",
-				"SMSNumbers"
+				"Id"
 			],
 			"type": "object",
 			"properties": {
@@ -1703,6 +1728,26 @@
 			"required": [
 				"CurrentLifespan",
 				"Id"
+			],
+			"immutable": [
+				"ActionType",
+				"BackColor",
+				"ConflictIds",
+				"Dependencies",
+				"DisplayName",
+				"Divisions",
+				"Dto",
+				"Filled",
+				"ForeColor",
+				"Job",
+				"JobActivityId",
+				"JobId",
+				"Location",
+				"Resources",
+				"ResourceIds",
+				"ResourceSubtypeId",
+				"ResourceTypeId",
+				"SMSNumbers"
 			]
 		},
 		"IxUnit": {

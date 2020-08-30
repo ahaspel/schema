@@ -9,7 +9,7 @@ type CxPhoneNumber {
 input CxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String!
+  Name: String
 }
 
 input FilterInput {

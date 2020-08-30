@@ -133,17 +133,12 @@
 		"IxEmail": {
 			"superRequired": [
 				"Email",
-				"Id",
-				"Name"
-			],
-			"immutable": [
-				"Valid"
+				"Id"
 			],
 			"type": "object",
 			"properties": {
 				"Email": {
 					"type": "string",
-					"minLength": 1,
 					"format": "email"
 				},
 				"Valid": {
@@ -153,17 +148,18 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Id",
 				"Email",
-				"Name"
+				"Id"
+			],
+			"immutable": [
+				"Valid"
 			]
 		},
 		"IxGeocode": {
@@ -270,10 +266,6 @@
 				"Id",
 				"Name"
 			],
-			"immutable": [
-				"Dependencies",
-				"SMSNumbers"
-			],
 			"type": "object",
 			"properties": {
 				"Emails": {
@@ -338,23 +330,22 @@
 			"required": [
 				"Id",
 				"Name"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"SMSNumbers"
 			]
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber",
 				"Id",
-				"Name"
-			],
-			"immutable": [
-				"NumericPhoneNumber",
-				"Valid"
+				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
 				"PhoneNumber": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"NumericPhoneNumber": {
 					"type": "string"
@@ -366,17 +357,19 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"Description": {
 					"type": "string"
 				}
 			},
 			"required": [
-				"Id",
-				"Name",
-				"PhoneNumber"
+				"PhoneNumber",
+				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		},
 		"IxRange": {
@@ -397,7 +390,10 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"immutable": [
+				"Duration"
+			]
 		},
 		"IxResourceSubtype": {
 			"superRequired": [
@@ -433,6 +429,9 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"ResourceType"
 			]
 		},
 		"IxResourceType": {
@@ -501,6 +500,10 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto"
 			]
 		},
 		"IxSupplyType": {
@@ -518,9 +521,6 @@
 					"items": {
 						"$ref": "#/definitions/IxUnitCost"
 					}
-				},
-				"AccrualNumber": {
-					"type": "string"
 				},
 				"Notes": {
 					"type": "string"
@@ -626,6 +626,7 @@
 		}
 	},
 	"immutable": [
+		"DefaultSupplyType",
 		"Dependencies",
 		"Dto",
 		"SMSNumbers",
@@ -644,6 +645,9 @@
 			"items": {
 				"$ref": "#/definitions/IxSupplyType"
 			}
+		},
+		"DefaultSupplyType": {
+			"$ref": "#/definitions/IxSupplyType"
 		},
 		"ObjectType": {
 			"type": "string",

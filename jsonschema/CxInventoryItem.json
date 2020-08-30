@@ -218,8 +218,7 @@
 		"IxEmail": {
 			"superRequired": [
 				"Email",
-				"Id",
-				"Name"
+				"Id"
 			],
 			"type": "object",
 			"properties": {
@@ -243,6 +242,9 @@
 			"required": [
 				"Email",
 				"Id"
+			],
+			"immutable": [
+				"Valid"
 			]
 		},
 		"IxGeocode": {
@@ -392,13 +394,17 @@
 			},
 			"required": [
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"SMSNumbers"
 			]
 		},
 		"IxPhoneNumber": {
 			"superRequired": [
-				"PhoneNumber",
 				"Id",
-				"Name"
+				"PhoneNumber"
 			],
 			"type": "object",
 			"properties": {
@@ -424,6 +430,10 @@
 			"required": [
 				"PhoneNumber",
 				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		},
 		"IxRange": {
@@ -444,7 +454,10 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"immutable": [
+				"Duration"
+			]
 		}
 	},
 	"type": "object",
@@ -471,5 +484,8 @@
 		"Description": {
 			"type": "string"
 		}
-	}
+	},
+	"required": [
+		"Id"
+	]
 }

@@ -16,8 +16,16 @@ type CxStop {
   SortOrder: Int
 }
 
-input CxStopDO {
+input CxStopInput {
   Id: ID!
+  Address: IxAddressInput!
+  ObjectType: CxStopObjectType
+  Dropoffs: [IxPickupItemDO]
+  Pickups: [IxPickupItemDO]
+  Jobs: [IxJobDO]
+  Quantity: IxQuantityInput
+  Start: String
+  Description: String
 }
 
 enum CxStopObjectType {
@@ -38,6 +46,17 @@ type IxAddress {
   City: String
   ZipCode: String
   Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+input IxAddressInput {
+  Street: String!
+  StreetDetails: String
+  State: IxLookupValueDO!
+  City: String!
+  ZipCode: String
+  Geocode: IxGeocodeInput
   ObjectType: IxAddressObjectType
   Id: ID!
 }
@@ -130,6 +149,12 @@ type IxGeocode {
   Source: IxGeocodeSource
 }
 
+input IxGeocodeInput {
+  Lat: Float!
+  Lng: Float!
+  Source: IxGeocodeSource
+}
+
 enum IxGeocodeSource {
   Action
   Owner
@@ -209,6 +234,10 @@ enum IxJobCostObjectType {
   JobCost
 }
 
+input IxJobDO {
+  Id: ID!
+}
+
 enum IxJobObjectType {
   Job
 }
@@ -227,6 +256,10 @@ type IxLookupValue {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -298,6 +331,10 @@ type IxPickupItem {
   Id: ID!
 }
 
+input IxPickupItemDO {
+  Id: ID!
+}
+
 enum IxPickupItemObjectType {
   PickupItem
 }
@@ -305,6 +342,11 @@ enum IxPickupItemObjectType {
 type IxQuantity {
   Unit: IxUnit
   Quantity: Float
+}
+
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
 type IxRange {
@@ -401,6 +443,10 @@ type IxUnitCost {
   Notes: String
 }
 
+input IxUnitDO {
+  Id: ID!
+}
+
 enum IxUnitObjectType {
   Unit
 }
@@ -432,7 +478,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxStops_onSave(data: [CxStopDO], filters: [FilterInput], objectType: String = "Stop", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxStop]
+  cxStops_onSave(data: [CxStopInput], filters: [FilterInput], objectType: String = "Stop", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxStop]
   cxStops_onDelete(data: [String], objectType: String = "Stop", operation: String = "delete"): [CxStop]
 }
 

@@ -80,10 +80,8 @@ type IxPhoneNumber {
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
-  NumericPhoneNumber: String
-  Valid: Boolean
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 

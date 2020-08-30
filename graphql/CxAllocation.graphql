@@ -519,7 +519,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResource {
@@ -687,14 +686,11 @@ input IxTaskDayInput {
   ResourceSubtype: IxResourceSubtypeDO
   Supplier: IxCompanyDO
   Amount: Float
-  JobActivity: IxJobActivityDO!
+  JobActivity: IxJobActivityDO
   ActionStatus: IxActionStatusDO
-  Resources: [IxResourceDO]
-  ResourceIds: [Int]
   Auxiliaries: [IxResourceDO]
-  Principals: [IxResourceDO]!
+  Principals: [IxResourceDO]
   ResourceRoles: [CxResourceRoleInput]
-  Dependencies: [CxDependencyInput]
   ObjectType: IxTaskDayObjectType
   Id: ID!
   Name: String

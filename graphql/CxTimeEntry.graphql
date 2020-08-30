@@ -177,7 +177,6 @@ input IxCostCodeInput {
   Id: ID!
   Name: String!
   Description: String
-  Dependencies: [CxDependencyInput]
 }
 
 enum IxCostCodeObjectType {
@@ -415,7 +414,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResource {

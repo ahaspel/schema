@@ -151,12 +151,10 @@ type IxDocument {
 input IxDocumentInput {
   Key: String!
   DocumentTypes: [IxLookupValueDO]
-  Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
   Id: ID!
   Name: String
   Description: String
-  LastModified: String
 }
 
 enum IxDocumentObjectType {
@@ -196,20 +194,20 @@ input IxInventoryInput {
 }
 
 type IxInventoryItem {
-  Id: ID!
   Amount: Float
   Start: String
   Vendor: IxCompany
+  Id: ID!
   AccountCode: String
   Name: String
   Description: String
 }
 
 input IxInventoryItemInput {
-  Id: ID!
-  Amount: Float!
-  Start: String!
+  Amount: Float
+  Start: String
   Vendor: IxCompanyDO
+  Id: ID!
   AccountCode: String
   Name: String
   Description: String

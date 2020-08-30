@@ -32,7 +32,6 @@ type CxPlant {
 
 input CxPlantInput {
   Capacities: [IxCapacityInput]
-  DefaultCapacity: IxCapacityInput
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValueDO!
   Contacts: [IxPartyDO]
@@ -111,17 +110,17 @@ enum IxAttributeStringObjectType {
 }
 
 type IxCapacity {
-  Id: ID!
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   Amount: Float
+  Id: ID!
 }
 
 input IxCapacityInput {
-  Id: ID!
   ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO!
-  Amount: Float!
+  ResourceSubtype: IxResourceSubtypeDO
+  Amount: Float
+  Id: ID!
 }
 
 type IxEmail {
@@ -135,7 +134,7 @@ type IxEmail {
 input IxEmailInput {
   Email: String!
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -233,7 +232,7 @@ type IxPhoneNumber {
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -246,7 +245,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResourceSubtype {

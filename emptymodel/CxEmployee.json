@@ -14,14 +14,13 @@
 		"Emails": [],
 		"PhoneNumbers": [],
 		"Title": "",
-		"ObjectType": "Subcontractor",
+		"ObjectType": "Company",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
 		"CurrentLifespan": {
 			"Start": "",
-			"End": "",
-			"Duration": ""
+			"End": ""
 		},
 		"Tags": [],
 		"Address": {
@@ -35,7 +34,7 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner"
+				"Source": "GPSService"
 			},
 			"ObjectType": "Address",
 			"Id": 0
@@ -78,8 +77,7 @@
 	"AccountCode": "",
 	"CurrentLifespan": {
 		"Start": "",
-		"End": "",
-		"Duration": ""
+		"End": ""
 	},
 	"Id": 0,
 	"Divisions": [],

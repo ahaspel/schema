@@ -12,6 +12,7 @@ type CxToDo {
   CurrentLifespan: IxRange
   ObjectType: CxToDoObjectType
   Name: String
+  Divisions: [IxLookupValue]
   Job: IxJob
   Resources: [IxResource]
   Status: IxLookupValue
@@ -334,7 +335,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 type IxResource {

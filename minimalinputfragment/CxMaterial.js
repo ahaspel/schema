@@ -3,8 +3,6 @@ const CXMATERIALINPUTMIN = `fragment CXMATERIALINPUTMIN on CxMaterial {
   Inventory {
     Items {
     Id
-    Amount
-    Start
   }
   }
   Reusable

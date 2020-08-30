@@ -17,14 +17,12 @@
 			"type": "integer"
 		},
 		"Name": {
-			"type": "string",
-			"minLength": 1
+			"type": "string"
 		}
 	},
 	"required": [
 		"Email",
-		"Id",
-		"Name"
+		"Id"
 	],
 	"definitions": {}
 }

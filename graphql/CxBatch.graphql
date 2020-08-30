@@ -111,12 +111,10 @@ type IxDocument {
 input IxDocumentInput {
   Key: String!
   DocumentTypes: [IxLookupValueDO]
-  Dependencies: [CxDependencyInput]
   ObjectType: IxDocumentObjectType
   Id: ID!
   Name: String
   Description: String
-  LastModified: String
 }
 
 enum IxDocumentObjectType {

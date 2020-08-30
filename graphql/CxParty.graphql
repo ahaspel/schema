@@ -111,7 +111,7 @@ type IxEmail {
 input IxEmailInput {
   Email: String!
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -183,7 +183,7 @@ type IxPhoneNumber {
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String!
+  Name: String
   Description: String
 }
 
@@ -196,7 +196,6 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
-  Duration: String
 }
 
 """

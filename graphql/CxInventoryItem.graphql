@@ -4,7 +4,7 @@ type CxDependency {
 }
 
 type CxInventoryItem {
-  Id: ID
+  Id: ID!
   Amount: Float
   Start: String
   Vendor: IxCompany
@@ -13,14 +13,8 @@ type CxInventoryItem {
   Description: String
 }
 
-input CxInventoryItemInput {
-  Id: ID
-  Amount: Float
-  Start: String
-  Vendor: IxCompanyDO
-  AccountCode: String
-  Name: String
-  Description: String
+input CxInventoryItemDO {
+  Id: ID!
 }
 
 input FilterInput {
@@ -77,10 +71,6 @@ type IxCompany {
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
-}
-
-input IxCompanyDO {
-  Id: ID!
 }
 
 enum IxCompanyObjectType {
@@ -197,7 +187,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxInventoryItems_onSave(data: [CxInventoryItemInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxInventoryItem]
+  cxInventoryItems_onSave(data: [CxInventoryItemDO], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxInventoryItem]
   cxInventoryItems_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxInventoryItem]
 }
 

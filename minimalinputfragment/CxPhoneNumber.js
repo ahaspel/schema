@@ -2,7 +2,6 @@
 const CXPHONENUMBERINPUTMIN = `fragment CXPHONENUMBERINPUTMIN on CxPhoneNumber {
   PhoneNumber
   Id
-  Name
 }`;
 module.exports = { fragment: CXPHONENUMBERINPUTMIN,
                    fragmentName: 'CXPHONENUMBERINPUTMIN',
