@@ -508,8 +508,8 @@
 		},
 		"IxSupplyType": {
 			"superRequired": [
-				"ResourceSubtype",
-				"Id"
+				"Id",
+				"ResourceSubtype"
 			],
 			"type": "object",
 			"properties": {
@@ -521,9 +521,6 @@
 					"items": {
 						"$ref": "#/definitions/IxUnitCost"
 					}
-				},
-				"Notes": {
-					"type": "string"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -556,6 +553,11 @@
 			"required": [
 				"ResourceSubtype",
 				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"Name"
 			]
 		},
 		"IxUnit": {

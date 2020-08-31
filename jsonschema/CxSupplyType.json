@@ -334,6 +334,11 @@
 			]
 		}
 	},
+	"immutable": [
+		"Dependencies",
+		"Dto",
+		"Name"
+	],
 	"type": "object",
 	"properties": {
 		"ObjectType": {
@@ -350,9 +355,6 @@
 			"items": {
 				"$ref": "#/definitions/IxUnitCost"
 			}
-		},
-		"Notes": {
-			"type": "string"
 		},
 		"Id": {
 			"type": "integer"
@@ -383,7 +385,7 @@
 		}
 	},
 	"required": [
-		"ResourceSubtype",
-		"Id"
+		"Id",
+		"ResourceSubtype"
 	]
 }

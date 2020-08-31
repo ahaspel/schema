@@ -143,10 +143,6 @@
 				"Start",
 				"Duration"
 			],
-			"immutable": [
-				"DayByName",
-				"End"
-			],
 			"type": "object",
 			"properties": {
 				"Day": {
@@ -177,8 +173,8 @@
 			},
 			"required": [
 				"Day",
-				"Duration",
-				"Start"
+				"Start",
+				"Duration"
 			]
 		}
 	},

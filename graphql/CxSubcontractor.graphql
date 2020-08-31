@@ -300,7 +300,6 @@ enum IxResourceTypeObjectType {
 type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
   UnitCosts: [IxUnitCost]
-  Notes: String
   Dependencies: [CxDependency]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
@@ -312,11 +311,8 @@ type IxSupplyType {
 input IxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCosts: [IxUnitCostInput]
-  Notes: String
-  Dependencies: [CxDependencyInput]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Name: String
   Description: String
   Tags: [IxAttribute__String__Input]
 }

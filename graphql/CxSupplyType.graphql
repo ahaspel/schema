@@ -12,7 +12,6 @@ type CxSupplyType {
   ObjectType: CxSupplyTypeObjectType
   ResourceSubtype: IxResourceSubtype
   UnitCosts: [IxUnitCost]
-  Notes: String
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -25,13 +24,10 @@ input CxSupplyTypeInput {
   ObjectType: CxSupplyTypeObjectType
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCosts: [IxUnitCostInput]
-  Notes: String
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String
-  Name: String
   Tags: [IxAttribute__String__Input]
-  Dependencies: [CxDependencyInput]
 }
 
 enum CxSupplyTypeObjectType {
