@@ -199,6 +199,7 @@ type IxDocument {
   Name: String
   Description: String
   LastModified: String
+  Creator: IxParty
 }
 
 input IxDocumentInput {
@@ -208,6 +209,7 @@ input IxDocumentInput {
   Id: ID!
   Name: String
   Description: String
+  Creator: IxPartyDO
 }
 
 enum IxDocumentObjectType {

@@ -11,6 +11,7 @@ input CxDependencyInput {
 type CxDocument {
   DocumentTypes: [IxLookupValue]
   Key: String
+  Creator: IxParty
   LastModified: String
   ObjectType: CxDocumentObjectType
   Name: String
@@ -23,6 +24,7 @@ type CxDocument {
 input CxDocumentInput {
   DocumentTypes: [IxLookupValueDO]
   Key: String!
+  Creator: IxPartyDO
   ObjectType: CxDocumentObjectType
   Name: String
   Id: ID!
@@ -39,6 +41,21 @@ input FilterInput {
   values: [String]
   child: String
   invert: Boolean = false
+}
+
+type IxAddress {
+  Street: String
+  StreetDetails: String
+  State: IxLookupValue
+  City: String
+  ZipCode: String
+  Geocode: IxGeocode
+  ObjectType: IxAddressObjectType
+  Id: ID!
+}
+
+enum IxAddressObjectType {
+  Address
 }
 
 type IxAttribute__String__ {
@@ -63,6 +80,26 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxEmail {
+  Email: String
+  Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxGeocode {
+  Lat: Float
+  Lng: Float
+  Source: IxGeocodeSource
+}
+
+enum IxGeocodeSource {
+  Action
+  Owner
+  GPSService
 }
 
 type IxLookupValue {
@@ -101,6 +138,47 @@ enum IxLookupValueObjectType {
   TimeEntryLaborClass
   JobCertification
   Privilege
+}
+
+type IxParty {
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
+  Title: String
+  Dependencies: [CxDependency]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute__String__]
+  Address: IxAddress
+}
+
+input IxPartyDO {
+  Id: ID!
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxPhoneNumber {
+  PhoneNumber: String
+  NumericPhoneNumber: String
+  Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+type IxRange {
+  Start: String
+  End: String
+  Duration: String
 }
 
 """

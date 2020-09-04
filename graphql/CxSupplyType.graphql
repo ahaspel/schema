@@ -13,7 +13,6 @@ type CxSupplyType {
   ResourceSubtype: IxResourceSubtype
   UnitCosts: [IxUnitCost]
   Id: ID!
-  Divisions: [IxLookupValue]
   Description: String
   Name: String
   Tags: [IxAttribute__String__]
@@ -25,7 +24,6 @@ input CxSupplyTypeInput {
   ResourceSubtype: IxResourceSubtypeDO!
   UnitCosts: [IxUnitCostInput]
   Id: ID!
-  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
@@ -63,44 +61,6 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
-}
-
-type IxLookupValue {
-  BaseObject: String
-  ObjectType: IxLookupValueObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Dependencies: [CxDependency]
-}
-
-input IxLookupValueDO {
-  Id: ID!
-}
-
-enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  Division
-  LaborClass
-  Language
-  License
-  Minority
-  Skill
-  Training
-  Union
-  State
-  ToDoStatus
-  Attribute
-  ToDoPriority
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
-  JobCertification
-  Privilege
 }
 
 type IxMoney {

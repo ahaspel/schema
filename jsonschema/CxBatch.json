@@ -60,6 +60,52 @@
 				"Ids"
 			]
 		},
+		"IxAddress": {
+			"superRequired": [
+				"City",
+				"Id",
+				"State",
+				"Street"
+			],
+			"type": "object",
+			"properties": {
+				"Street": {
+					"type": "string",
+					"minLength": 1
+				},
+				"StreetDetails": {
+					"type": "string"
+				},
+				"State": {
+					"$ref": "#/definitions/IxLookupValue"
+				},
+				"City": {
+					"type": "string",
+					"minLength": 1
+				},
+				"ZipCode": {
+					"type": "string"
+				},
+				"Geocode": {
+					"$ref": "#/definitions/IxGeocode"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Address"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"Street",
+				"State",
+				"City",
+				"Id"
+			]
+		},
 		"IxAttribute__String__": {
 			"type": "object",
 			"properties": {
@@ -137,6 +183,9 @@
 				"LastModified": {
 					"type": "string",
 					"format": "date-time"
+				},
+				"Creator": {
+					"$ref": "#/definitions/IxParty"
 				}
 			},
 			"required": [
@@ -176,6 +225,65 @@
 			"required": [
 				"ValidationStatus",
 				"ErrorMessage"
+			]
+		},
+		"IxEmail": {
+			"superRequired": [
+				"Email",
+				"Id"
+			],
+			"type": "object",
+			"properties": {
+				"Email": {
+					"type": "string",
+					"format": "email"
+				},
+				"Valid": {
+					"type": "boolean"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Email",
+				"Id"
+			],
+			"immutable": [
+				"Valid"
+			]
+		},
+		"IxGeocode": {
+			"superRequired": [
+				"Lat",
+				"Lng"
+			],
+			"type": "object",
+			"properties": {
+				"Lat": {
+					"type": "number"
+				},
+				"Lng": {
+					"type": "number"
+				},
+				"Source": {
+					"type": "string",
+					"enum": [
+						"Action",
+						"Owner",
+						"GPSService"
+					]
+				}
+			},
+			"required": [
+				"Lat",
+				"Lng"
 			]
 		},
 		"IxLookupValue": {
@@ -229,6 +337,115 @@
 			},
 			"required": [
 				"Id"
+			]
+		},
+		"IxParty": {
+			"superRequired": [
+				"Id",
+				"Name"
+			],
+			"type": "object",
+			"properties": {
+				"Emails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"Title": {
+					"type": "string"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Party",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute__String__"
+					}
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				}
+			},
+			"required": [
+				"Id"
+			],
+			"immutable": [
+				"Dependencies",
+				"Dto",
+				"SMSNumbers"
+			]
+		},
+		"IxPhoneNumber": {
+			"superRequired": [
+				"Id",
+				"PhoneNumber"
+			],
+			"type": "object",
+			"properties": {
+				"PhoneNumber": {
+					"type": "string"
+				},
+				"NumericPhoneNumber": {
+					"type": "string"
+				},
+				"Valid": {
+					"type": "boolean"
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"PhoneNumber",
+				"Id"
+			],
+			"immutable": [
+				"NumericPhoneNumber",
+				"Valid"
 			]
 		},
 		"IxRange": {

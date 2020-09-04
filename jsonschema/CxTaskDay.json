@@ -355,6 +355,9 @@
 				"LastModified": {
 					"type": "string",
 					"format": "date-time"
+				},
+				"Creator": {
+					"$ref": "#/definitions/IxParty"
 				}
 			},
 			"required": [

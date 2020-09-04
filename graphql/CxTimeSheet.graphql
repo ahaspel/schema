@@ -8,87 +8,49 @@ input CxDependencyInput {
   Ids: [Int]!
 }
 
-type CxResourceRole {
-  Resource: IxResource
-  ResourceId: ID
-  Role: CxResourceRoleRole
-}
-
-input CxResourceRoleInput {
-  Resource: IxResourceDO
-  ResourceId: ID!
-  Role: CxResourceRoleRole!
-}
-
-enum CxResourceRoleRole {
-  Operator
-  Principal
-}
-
-type CxTaskDay {
-  ParentId: ID
-  ActionType: CxTaskDayActionType
-  Location: IxLocation
-  ConflictIds: [Int]
-  ForeColor: String
-  BackColor: String
-  ResourceType: IxResourceType
-  ResourceTypeId: ID
-  ResourceSubtype: IxResourceSubtype
-  ResourceSubtypeId: ID
-  Amount: Float
-  Filled: Boolean
-  Supplier: IxCompany
-  ShiftSupervisor: Boolean
+type CxTimeSheet {
+  Criteria: [IxCriterion]
   Job: IxJob
-  JobActivity: IxJobActivity
-  ObjectType: CxTaskDayObjectType
-  Auxiliaries: [IxResource]
-  ResourceRoles: [CxResourceRole]
-  ResourceIds: [Int]
+  Period: CxTimeSheetPeriod
+  CurrentEntries: [IxTimeEntry]
+  Entries: [IxTimeEntry]
+  ObjectType: CxTimeSheetObjectType
+  ScheduledEntries: [IxTimeEntry]
+  Approvers: [IxParty]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
   DisplayName: String
-  ActionStatus: IxActionStatus
-  Resources: [IxResource]
-  Principals: [IxResource]
-  SMSNumbers: [IxPhoneNumber]
   CurrentLifespan: IxRange
   Id: ID!
+  Divisions: [IxLookupValue]
   Description: String
   Tags: [IxAttribute__String__]
   Dependencies: [CxDependency]
 }
 
-enum CxTaskDayActionType {
-  Employee
-  Equipment
-  Generic
-  Material
-  Plant
-  Subcontractor
-}
-
-input CxTaskDayInput {
-  ParentId: ID
-  ResourceType: IxResourceTypeDO
-  ResourceSubtype: IxResourceSubtypeDO
-  Amount: Float
-  Supplier: IxCompanyDO
-  ShiftSupervisor: Boolean
-  JobActivity: IxJobActivityDO
-  ObjectType: CxTaskDayObjectType
-  Auxiliaries: [IxResourceDO]
-  ResourceRoles: [CxResourceRoleInput]
-  ActionStatus: IxActionStatusDO
-  Principals: [IxResourceDO]
+input CxTimeSheetInput {
+  Criteria: [IxCriterionInput]
+  Job: IxJobDO!
+  Period: CxTimeSheetPeriod
+  Entries: [IxTimeEntryDO]
+  ObjectType: CxTimeSheetObjectType
+  Approvers: [IxPartyDO]
+  Attachments: [IxDocumentInput]
   CurrentLifespan: IxRangeInput!
   Id: ID!
+  Divisions: [IxLookupValueDO]
   Description: String
   Tags: [IxAttribute__String__Input]
 }
 
-enum CxTaskDayObjectType {
-  ActualTaskDay
-  VirtualTaskDay
+enum CxTimeSheetObjectType {
+  TimeSheet
+}
+
+enum CxTimeSheetPeriod {
+  Daily
+  Weekly
+  Monthly
 }
 
 input FilterInput {
@@ -96,37 +58,6 @@ input FilterInput {
   values: [String]
   child: String
   invert: Boolean = false
-}
-
-type IxActionStatus {
-  ActionStatusType: IxActionStatusActionStatusType
-  Default: Boolean
-  Completed: Boolean
-  Cancelled: Boolean
-  BaseObject: String
-  ObjectType: IxActionStatusObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Dependencies: [CxDependency]
-  ForeColor: String
-  BackColor: String
-}
-
-enum IxActionStatusActionStatusType {
-  Active
-  Inactive
-  Completed
-  Cancelled
-  Overallocated
-}
-
-input IxActionStatusDO {
-  Id: ID!
-}
-
-enum IxActionStatusObjectType {
-  ActionStatus
 }
 
 type IxAddress {
@@ -142,6 +73,11 @@ type IxAddress {
 
 enum IxAddressObjectType {
   Address
+}
+
+type IxApproval {
+  Approver: IxParty
+  AsOf: String
 }
 
 type IxAttribute__String__ {
@@ -188,10 +124,6 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
-input IxCompanyDO {
-  Id: ID!
-}
-
 enum IxCompanyObjectType {
   Company
   Plant
@@ -213,6 +145,20 @@ enum IxCostCodeObjectType {
   CostCode
 }
 
+type IxCriterion {
+  Batchable: Boolean
+  PropertyName: String
+  Range: IxRange
+  ControlsRange: Boolean
+}
+
+input IxCriterionInput {
+  Batchable: Boolean
+  PropertyName: String
+  Range: IxRangeInput
+  ControlsRange: Boolean
+}
+
 type IxDocument {
   Key: String
   DocumentTypes: [IxLookupValue]
@@ -223,6 +169,16 @@ type IxDocument {
   Description: String
   LastModified: String
   Creator: IxParty
+}
+
+input IxDocumentInput {
+  Key: String!
+  DocumentTypes: [IxLookupValueDO]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Creator: IxPartyDO
 }
 
 enum IxDocumentObjectType {
@@ -299,10 +255,6 @@ type IxJobActivity {
   DisplayName: String
 }
 
-input IxJobActivityDO {
-  Id: ID!
-}
-
 enum IxJobActivityObjectType {
   JobActivity
 }
@@ -326,6 +278,10 @@ enum IxJobCostObjectType {
   JobCost
 }
 
+input IxJobDO {
+  Id: ID!
+}
+
 enum IxJobObjectType {
   Job
 }
@@ -344,6 +300,10 @@ type IxLookupValue {
   Name: String
   Description: String
   Dependencies: [CxDependency]
+}
+
+input IxLookupValueDO {
+  Id: ID!
 }
 
 enum IxLookupValueObjectType {
@@ -391,6 +351,10 @@ type IxParty {
   Address: IxAddress
 }
 
+input IxPartyDO {
+  Id: ID!
+}
+
 enum IxPartyObjectType {
   Party
   Company
@@ -405,6 +369,11 @@ type IxPhoneNumber {
   Id: ID!
   Name: String
   Description: String
+}
+
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
 }
 
 type IxRange {
@@ -443,10 +412,6 @@ type IxResource {
   BackColor: String
 }
 
-input IxResourceDO {
-  Id: ID!
-}
-
 enum IxResourceObjectType {
   Crew
   Employee
@@ -461,10 +426,6 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
-}
-
-input IxResourceSubtypeDO {
-  Id: ID!
 }
 
 enum IxResourceSubtypeObjectType {
@@ -486,10 +447,6 @@ type IxResourceType {
   Tags: [IxAttribute__String__]
 }
 
-input IxResourceTypeDO {
-  Id: ID!
-}
-
 enum IxResourceTypeFamily {
   Labor
   Equipment
@@ -499,6 +456,52 @@ enum IxResourceTypeFamily {
 
 enum IxResourceTypeObjectType {
   ResourceType
+}
+
+type IxTimeEntry {
+  Resource: IxResource
+  EntryType: IxLookupValue
+  EntryLaborClass: IxLookupValue
+  CostCodes: [IxCostCode]
+  Hours: Float
+  Minutes: Int
+  JobActivity: IxJobActivity
+  Owner: IxParty
+  Auxiliaries: [IxResource]
+  Billable: Boolean
+  IsVoid: Boolean
+  ApprovedByOwner: Boolean
+  Punch: IxTimeEntryPunch
+  StartLocation: IxGeocode
+  EndLocation: IxGeocode
+  PunchStart: String
+  StartDistance: IxQuantity
+  PunchEnd: String
+  EndDistance: IxQuantity
+  CurrentLifespan: IxRange
+  Dependencies: [CxDependency]
+  ObjectType: IxTimeEntryObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__]
+  Approvals: [IxApproval]
+  LastModified: String
+  Creator: IxParty
+}
+
+input IxTimeEntryDO {
+  Id: ID!
+}
+
+enum IxTimeEntryObjectType {
+  TimeEntry
+}
+
+enum IxTimeEntryPunch {
+  Manual
+  PunchedIn
+  PunchedOut
 }
 
 type IxUnit {
@@ -549,10 +552,10 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxTaskDays_onSave(data: [CxTaskDayInput], filters: [FilterInput], objectType: String = "ActualTaskDay", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxTaskDay]
-  cxTaskDays_onDelete(data: [String], objectType: String = "ActualTaskDay", operation: String = "delete"): [CxTaskDay]
+  cxTimeSheets_onSave(data: [CxTimeSheetInput], filters: [FilterInput], objectType: String = "TimeSheet", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxTimeSheet]
+  cxTimeSheets_onDelete(data: [String], objectType: String = "TimeSheet", operation: String = "delete"): [CxTimeSheet]
 }
 
 extend type Query {
-  cxTaskDays(filters: [FilterInput], objectType: String = "ActualTaskDay"): [CxTaskDay]
+  cxTimeSheets(filters: [FilterInput], objectType: String = "TimeSheet"): [CxTimeSheet]
 }

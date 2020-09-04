@@ -22,6 +22,7 @@ type CxTimeEntry {
   IsVoid: Boolean
   Billable: Boolean
   LastModified: String
+  Creator: IxParty
   StartLocation: IxGeocode
   PunchStart: String
   EndLocation: IxGeocode
@@ -30,6 +31,7 @@ type CxTimeEntry {
   StartDistance: IxQuantity
   EndDistance: IxQuantity
   Approvals: [IxApproval]
+  ApprovedByOwner: Boolean
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -51,6 +53,7 @@ input CxTimeEntryInput {
   Owner: IxPartyDO!
   IsVoid: Boolean
   Billable: Boolean
+  Creator: IxPartyDO
   StartLocation: IxGeocodeInput
   PunchStart: String
   EndLocation: IxGeocodeInput
@@ -192,6 +195,7 @@ type IxDocument {
   Name: String
   Description: String
   LastModified: String
+  Creator: IxParty
 }
 
 enum IxDocumentObjectType {

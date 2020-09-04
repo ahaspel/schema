@@ -140,6 +140,7 @@ type IxDocument {
   Name: String
   Description: String
   LastModified: String
+  Creator: IxParty
 }
 
 enum IxDocumentObjectType {
