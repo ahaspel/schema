@@ -14,7 +14,7 @@ type CxParty {
   Emails: [IxEmail]
   Name: String
   Title: String
-  ContactOf: [IxCacheable]
+  ContactOf: [IxPersistable]
   IsContact: Boolean
   Address: IxAddress
   ObjectType: CxPartyObjectType
@@ -102,15 +102,6 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxCacheable {
-  ObjectType: IxCacheableObjectType
-  Id: ID!
-}
-
-enum IxCacheableObjectType {
-  Cacheable
-}
-
 type IxEmail {
   Email: String
   Valid: Boolean
@@ -180,6 +171,21 @@ enum IxLookupValueObjectType {
   TimeEntryLaborClass
   JobCertification
   Privilege
+}
+
+type IxPersistable {
+  ObjectType: IxPersistableObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxPersistableObjectType {
+  Employee
+  Job
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxPhoneNumber {

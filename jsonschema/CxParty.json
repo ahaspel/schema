@@ -103,23 +103,6 @@
 				"Id"
 			]
 		},
-		"IxCacheable": {
-			"type": "object",
-			"properties": {
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Cacheable"
-					]
-				},
-				"Id": {
-					"type": "integer"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxDto": {
 			"type": "object",
 			"properties": {
@@ -262,6 +245,33 @@
 				"Id"
 			]
 		},
+		"IxPersistable": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Employee",
+						"Job",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxPhoneNumber": {
 			"superRequired": [
 				"Id",
@@ -358,7 +368,7 @@
 		"ContactOf": {
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/IxCacheable"
+				"$ref": "#/definitions/IxPersistable"
 			}
 		},
 		"IsContact": {

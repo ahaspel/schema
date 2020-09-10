@@ -89,15 +89,6 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxCacheable {
-  ObjectType: IxCacheableObjectType
-  Id: ID!
-}
-
-enum IxCacheableObjectType {
-  Cacheable
-}
-
 type IxCompany {
   CompanyType: IxLookupValue
   Supplier: Boolean
@@ -105,7 +96,7 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
-  ContactOf: [IxCacheable]
+  ContactOf: [IxPersistable]
   IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
@@ -302,7 +293,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
-  ContactOf: [IxCacheable]
+  ContactOf: [IxPersistable]
   IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
@@ -316,6 +307,22 @@ type IxParty {
 
 enum IxPartyObjectType {
   Party
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxPersistable {
+  Dependencies: [CxDependency]
+  ObjectType: IxPersistableObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxPersistableObjectType {
+  Employee
+  Job
   Company
   Plant
   Subcontractor

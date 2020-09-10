@@ -143,23 +143,6 @@
 				"Id"
 			]
 		},
-		"IxCacheable": {
-			"type": "object",
-			"properties": {
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Cacheable"
-					]
-				},
-				"Id": {
-					"type": "integer"
-				}
-			},
-			"required": [
-				"Id"
-			]
-		},
 		"IxDocument": {
 			"superRequired": [
 				"Id",
@@ -390,7 +373,7 @@
 				"ContactOf": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/IxCacheable"
+						"$ref": "#/definitions/IxPersistable"
 					}
 				},
 				"IsContact": {
@@ -442,6 +425,39 @@
 				"Dto",
 				"IsContact",
 				"SMSNumbers"
+			]
+		},
+		"IxPersistable": {
+			"type": "object",
+			"properties": {
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Employee",
+						"Job",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
 			]
 		},
 		"IxPhoneNumber": {

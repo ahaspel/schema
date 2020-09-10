@@ -9,7 +9,7 @@ type CxCompany {
   Emails: [IxEmail]
   Name: String
   Title: String
-  ContactOf: [IxCacheable]
+  ContactOf: [IxPersistable]
   IsContact: Boolean
   Address: IxAddress
   CurrentLifespan: IxRange
@@ -30,7 +30,7 @@ input CxCompanyInput {
   Emails: [IxEmailInput]
   Name: String!
   Title: String
-  ContactOf: [IxCacheableDO]
+  ContactOf: [IxPersistableDO]
   IsContact: Boolean
   Address: IxAddressInput
   CurrentLifespan: IxRangeInput
@@ -113,19 +113,6 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxCacheable {
-  ObjectType: IxCacheableObjectType
-  Id: ID!
-}
-
-input IxCacheableDO {
-  Id: ID!
-}
-
-enum IxCacheableObjectType {
-  Cacheable
-}
-
 type IxEmail {
   Email: String
   Valid: Boolean
@@ -202,7 +189,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
-  ContactOf: [IxCacheable]
+  ContactOf: [IxPersistable]
   IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
@@ -229,6 +216,26 @@ input IxPartyInput {
 
 enum IxPartyObjectType {
   Party
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxPersistable {
+  Dependencies: [CxDependency]
+  ObjectType: IxPersistableObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxPersistableDO {
+  Id: ID!
+}
+
+enum IxPersistableObjectType {
+  Employee
+  Job
   Company
   Plant
   Subcontractor

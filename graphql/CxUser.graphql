@@ -114,15 +114,6 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
-type IxCacheable {
-  ObjectType: IxCacheableObjectType
-  Id: ID!
-}
-
-enum IxCacheableObjectType {
-  Cacheable
-}
-
 type IxEmail {
   Email: String
   Valid: Boolean
@@ -212,7 +203,7 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
-  ContactOf: [IxCacheable]
+  ContactOf: [IxPersistable]
   IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
@@ -230,6 +221,22 @@ input IxPartyDO {
 
 enum IxPartyObjectType {
   Party
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxPersistable {
+  Dependencies: [CxDependency]
+  ObjectType: IxPersistableObjectType
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+enum IxPersistableObjectType {
+  Employee
+  Job
   Company
   Plant
   Subcontractor
