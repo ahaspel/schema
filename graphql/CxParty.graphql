@@ -14,6 +14,8 @@ type CxParty {
   Emails: [IxEmail]
   Name: String
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Address: IxAddress
   ObjectType: CxPartyObjectType
   CurrentLifespan: IxRange
@@ -98,6 +100,15 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxCacheable {
+  ObjectType: IxCacheableObjectType
+  Id: ID!
+}
+
+enum IxCacheableObjectType {
+  Cacheable
 }
 
 type IxEmail {

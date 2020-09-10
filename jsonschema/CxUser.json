@@ -130,6 +130,23 @@
 				"Id"
 			]
 		},
+		"IxCacheable": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Cacheable"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxDto": {
 			"type": "object",
 			"properties": {
@@ -352,6 +369,15 @@
 				"Title": {
 					"type": "string"
 				},
+				"ContactOf": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCacheable"
+					}
+				},
+				"IsContact": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -393,8 +419,10 @@
 				"Id"
 			],
 			"immutable": [
+				"ContactOf",
 				"Dependencies",
 				"Dto",
+				"IsContact",
 				"SMSNumbers"
 			]
 		},

@@ -21,6 +21,8 @@ type CxPlant {
   Emails: [IxEmail]
   Name: String
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Address: IxAddress
   CurrentLifespan: IxRange
   Id: ID!
@@ -40,6 +42,8 @@ input CxPlantInput {
   Emails: [IxEmailInput]
   Name: String!
   Title: String
+  ContactOf: [IxCacheableDO]
+  IsContact: Boolean
   Address: IxAddressInput
   CurrentLifespan: IxRangeInput
   Id: ID!
@@ -107,6 +111,19 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
+}
+
+type IxCacheable {
+  ObjectType: IxCacheableObjectType
+  Id: ID!
+}
+
+input IxCacheableDO {
+  Id: ID!
+}
+
+enum IxCacheableObjectType {
+  Cacheable
 }
 
 type IxCapacity {
@@ -199,6 +216,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!

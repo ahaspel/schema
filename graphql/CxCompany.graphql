@@ -9,6 +9,8 @@ type CxCompany {
   Emails: [IxEmail]
   Name: String
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Address: IxAddress
   CurrentLifespan: IxRange
   Id: ID!
@@ -28,6 +30,8 @@ input CxCompanyInput {
   Emails: [IxEmailInput]
   Name: String!
   Title: String
+  ContactOf: [IxCacheableDO]
+  IsContact: Boolean
   Address: IxAddressInput
   CurrentLifespan: IxRangeInput
   Id: ID!
@@ -109,6 +113,19 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
+type IxCacheable {
+  ObjectType: IxCacheableObjectType
+  Id: ID!
+}
+
+input IxCacheableDO {
+  Id: ID!
+}
+
+enum IxCacheableObjectType {
+  Cacheable
+}
+
 type IxEmail {
   Email: String
   Valid: Boolean
@@ -185,6 +202,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!

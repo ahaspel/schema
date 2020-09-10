@@ -15,6 +15,8 @@ type CxRoute {
   Stops: [IxStop]
   Rig: [IxEquipment]
   Iterations: Int
+  ForeColor: String
+  BackColor: String
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -29,6 +31,8 @@ input CxRouteInput {
   Stops: [IxStopInput]!
   Rig: [IxEquipmentDO]!
   Iterations: Int
+  ForeColor: String
+  BackColor: String
   CurrentLifespan: IxRangeInput
   Id: ID!
   Description: String
@@ -97,6 +101,15 @@ enum IxAttributeStringObjectType {
   Attribute
 }
 
+type IxCacheable {
+  ObjectType: IxCacheableObjectType
+  Id: ID!
+}
+
+enum IxCacheableObjectType {
+  Cacheable
+}
+
 type IxCompany {
   CompanyType: IxLookupValue
   Supplier: Boolean
@@ -104,6 +117,8 @@ type IxCompany {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
@@ -360,6 +375,8 @@ type IxParty {
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Title: String
+  ContactOf: [IxCacheable]
+  IsContact: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
