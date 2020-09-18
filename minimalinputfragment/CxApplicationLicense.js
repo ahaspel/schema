@@ -2,9 +2,9 @@
 const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on CxApplicationLicense {
   Id
   Expiration
-  AllowedUsers
-  AllowedWebUsers
-  SerialNumber
+  AllowedFullUsers
+  AllowedReadOnlyUsers
+  AllowedMobileUsers
 }`;
 module.exports = { fragment: CXAPPLICATIONLICENSEINPUTMIN,
                    fragmentName: 'CXAPPLICATIONLICENSEINPUTMIN',

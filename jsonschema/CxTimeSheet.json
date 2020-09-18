@@ -265,23 +265,6 @@
 				"Dto"
 			]
 		},
-		"IxCriterion": {
-			"type": "object",
-			"properties": {
-				"Batchable": {
-					"type": "boolean"
-				},
-				"PropertyName": {
-					"type": "string"
-				},
-				"Range": {
-					"$ref": "#/definitions/IxRange"
-				},
-				"ControlsRange": {
-					"type": "boolean"
-				}
-			}
-		},
 		"IxDocument": {
 			"superRequired": [
 				"Id",
@@ -333,7 +316,7 @@
 			],
 			"immutable": [
 				"Attached",
-				"Created",
+				"Creator",
 				"Dependencies",
 				"Dto",
 				"LastModified"
@@ -725,6 +708,7 @@
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
+						"Division",
 						"LaborClass",
 						"Language",
 						"License",
@@ -733,15 +717,14 @@
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"Attribute",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
-						"Attribute",
-						"Division",
 						"JobCertification",
 						"Privilege"
 					]
@@ -1311,11 +1294,15 @@
 				}
 			},
 			"required": [
-				"Id"
+				"CurrentLifespan",
+				"Id",
+				"JobActivity",
+				"Owner",
+				"Resource"
 			],
 			"immutable": [
 				"ApprovedByOwner",
-				"Created",
+				"Creator",
 				"Dependencies",
 				"DisplayName",
 				"Dto",
@@ -1393,38 +1380,18 @@
 	},
 	"immutable": [
 		"ApprovedByOwner",
-		"Created",
-		"CurrentEntries",
+		"Creator",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
 		"HasAttachments",
+		"LastModified",
 		"ScheduledEntries"
 	],
 	"type": "object",
 	"properties": {
-		"Criteria": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxCriterion"
-			}
-		},
 		"Job": {
 			"$ref": "#/definitions/IxJob"
-		},
-		"Period": {
-			"type": "string",
-			"enum": [
-				"Daily",
-				"Weekly",
-				"Monthly"
-			]
-		},
-		"CurrentEntries": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxTimeEntry"
-			}
 		},
 		"Entries": {
 			"type": "array",
@@ -1444,6 +1411,12 @@
 				"$ref": "#/definitions/IxTimeEntry"
 			}
 		},
+		"Resources": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxResource"
+			}
+		},
 		"Approvers": {
 			"type": "array",
 			"items": {
@@ -1461,6 +1434,13 @@
 		},
 		"DisplayName": {
 			"type": "string"
+		},
+		"LastModified": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Creator": {
+			"$ref": "#/definitions/IxParty"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"
@@ -1491,6 +1471,7 @@
 		}
 	},
 	"required": [
+		"Approvers",
 		"CurrentLifespan",
 		"Id",
 		"Job"

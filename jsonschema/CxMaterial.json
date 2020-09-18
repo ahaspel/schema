@@ -248,7 +248,7 @@
 			],
 			"immutable": [
 				"Attached",
-				"Created",
+				"Creator",
 				"Dependencies",
 				"Dto",
 				"LastModified"
@@ -344,6 +344,9 @@
 			]
 		},
 		"IxInventory": {
+			"superRequired": [
+				"Items"
+			],
 			"type": "object",
 			"properties": {
 				"Items": {
@@ -361,11 +364,17 @@
 			},
 			"required": [
 				"Items"
+			],
+			"immutable": [
+				"Empty",
+				"Total"
 			]
 		},
 		"IxInventoryItem": {
 			"superRequired": [
-				"Id"
+				"Amount",
+				"Id",
+				"Start"
 			],
 			"type": "object",
 			"properties": {
@@ -394,8 +403,8 @@
 				}
 			},
 			"required": [
-				"Id",
 				"Amount",
+				"Id",
 				"Start"
 			]
 		},
@@ -431,6 +440,7 @@
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
+						"Division",
 						"LaborClass",
 						"Language",
 						"License",
@@ -439,15 +449,14 @@
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"Attribute",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
-						"Attribute",
-						"Division",
 						"JobCertification",
 						"Privilege"
 					]

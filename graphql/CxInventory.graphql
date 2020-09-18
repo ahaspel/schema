@@ -10,9 +10,7 @@ type CxInventory {
 }
 
 input CxInventoryInput {
-  Items: [IxInventoryItemDO]
-  Empty: Boolean
-  Total: Float
+  Items: [IxInventoryItemInput]!
 }
 
 input FilterInput {
@@ -73,6 +71,10 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
+input IxCompanyDO {
+  Id: ID!
+}
+
 enum IxCompanyObjectType {
   Company
   Plant
@@ -109,8 +111,14 @@ type IxInventoryItem {
   Description: String
 }
 
-input IxInventoryItemDO {
+input IxInventoryItemInput {
+  Amount: Float!
+  Start: String!
+  Vendor: IxCompanyDO
   Id: ID!
+  AccountCode: String
+  Name: String
+  Description: String
 }
 
 type IxLookupValue {
@@ -126,6 +134,7 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
@@ -134,15 +143,14 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  ToDoStatus
+  Attribute
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
   JobCertification
   Privilege
 }

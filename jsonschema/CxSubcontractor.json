@@ -204,6 +204,7 @@
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
+						"Division",
 						"LaborClass",
 						"Language",
 						"License",
@@ -212,15 +213,14 @@
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"Attribute",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
-						"Attribute",
-						"Division",
 						"JobCertification",
 						"Privilege"
 					]
@@ -569,12 +569,6 @@
 						"$ref": "#/definitions/IxUnitCost"
 					}
 				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
 				"ObjectType": {
 					"type": "string",
 					"enum": [
@@ -583,9 +577,6 @@
 				},
 				"Id": {
 					"type": "integer"
-				},
-				"Name": {
-					"type": "string"
 				},
 				"Description": {
 					"type": "string"
@@ -598,13 +589,8 @@
 				}
 			},
 			"required": [
-				"ResourceSubtype",
-				"Id"
-			],
-			"immutable": [
-				"Dependencies",
-				"Dto",
-				"Name"
+				"Id",
+				"ResourceSubtype"
 			]
 		},
 		"IxUnit": {
@@ -675,6 +661,7 @@
 		}
 	},
 	"immutable": [
+		"ContactOf",
 		"DefaultSupplyType",
 		"Dependencies",
 		"Dto",

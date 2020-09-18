@@ -99,6 +99,7 @@
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
+						"Division",
 						"LaborClass",
 						"Language",
 						"License",
@@ -107,15 +108,14 @@
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"Attribute",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
-						"Attribute",
-						"Division",
 						"JobCertification",
 						"Privilege"
 					]
@@ -141,6 +141,9 @@
 			]
 		}
 	},
+	"immutable": [
+		"Dto"
+	],
 	"type": "object",
 	"properties": {
 		"Id": {
@@ -151,21 +154,17 @@
 			"minLength": 1,
 			"format": "date-time"
 		},
-		"AllowedUsers": {
+		"AllowedFullUsers": {
 			"type": "integer"
 		},
-		"AllowedWebUsers": {
+		"AllowedReadOnlyUsers": {
 			"type": "integer"
 		},
-		"SerialNumber": {
-			"type": "string",
-			"minLength": 1
+		"AllowedMobileUsers": {
+			"type": "integer"
 		},
 		"Valid": {
 			"type": "boolean"
-		},
-		"MachineCode": {
-			"type": "string"
 		},
 		"Nag": {
 			"type": "boolean"
@@ -179,36 +178,18 @@
 				"ApplicationLicense"
 			]
 		},
-		"Divisions": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxLookupValue"
-			}
-		},
-		"Description": {
-			"type": "string"
-		},
-		"Name": {
-			"type": "string"
-		},
 		"Tags": {
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute__String__"
 			}
-		},
-		"Dependencies": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/CxDependency"
-			}
 		}
 	},
 	"required": [
-		"AllowedUsers",
-		"AllowedWebUsers",
+		"AllowedFullUsers",
+		"AllowedMobileUsers",
+		"AllowedReadOnlyUsers",
 		"Expiration",
-		"Id",
-		"SerialNumber"
+		"Id"
 	]
 }

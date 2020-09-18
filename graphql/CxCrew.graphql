@@ -151,7 +151,6 @@ input IxDocumentInput {
   Id: ID!
   Name: String
   Description: String
-  Creator: IxPartyDO
 }
 
 enum IxDocumentObjectType {
@@ -251,6 +250,7 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
@@ -259,15 +259,14 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  ToDoStatus
+  Attribute
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
   JobCertification
   Privilege
 }
@@ -292,10 +291,6 @@ type IxParty {
   CurrentLifespan: IxRange
   Tags: [IxAttribute__String__]
   Address: IxAddress
-}
-
-input IxPartyDO {
-  Id: ID!
 }
 
 enum IxPartyObjectType {

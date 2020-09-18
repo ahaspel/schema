@@ -1,6 +1,10 @@
 
 const CXINVENTORYINPUTMIN = `fragment CXINVENTORYINPUTMIN on CxInventory {
-  
+  Items {
+    Amount
+    Start
+    Id
+  }
 }`;
 module.exports = { fragment: CXINVENTORYINPUTMIN,
                    fragmentName: 'CXINVENTORYINPUTMIN',

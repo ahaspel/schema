@@ -9,17 +9,17 @@ input CxDependencyInput {
 }
 
 type CxTimeSheet {
-  Criteria: [IxCriterion]
   Job: IxJob
-  Period: CxTimeSheetPeriod
-  CurrentEntries: [IxTimeEntry]
   Entries: [IxTimeEntry]
   ObjectType: CxTimeSheetObjectType
   ScheduledEntries: [IxTimeEntry]
+  Resources: [IxResource]
   Approvers: [IxParty]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   DisplayName: String
+  LastModified: String
+  Creator: IxParty
   CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
@@ -29,12 +29,11 @@ type CxTimeSheet {
 }
 
 input CxTimeSheetInput {
-  Criteria: [IxCriterionInput]
   Job: IxJobDO!
-  Period: CxTimeSheetPeriod
-  Entries: [IxTimeEntryDO]
+  Entries: [IxTimeEntryInput]
   ObjectType: CxTimeSheetObjectType
-  Approvers: [IxPartyDO]
+  Resources: [IxResourceDO]
+  Approvers: [IxPartyDO]!
   Attachments: [IxDocumentInput]
   CurrentLifespan: IxRangeInput!
   Id: ID!
@@ -45,12 +44,6 @@ input CxTimeSheetInput {
 
 enum CxTimeSheetObjectType {
   TimeSheet
-}
-
-enum CxTimeSheetPeriod {
-  Daily
-  Weekly
-  Monthly
 }
 
 input FilterInput {
@@ -78,6 +71,11 @@ enum IxAddressObjectType {
 type IxApproval {
   Approver: IxParty
   AsOf: String
+}
+
+input IxApprovalInput {
+  Approver: IxPartyDO!
+  AsOf: String!
 }
 
 type IxAttribute__String__ {
@@ -143,22 +141,18 @@ type IxCostCode {
   Dependencies: [CxDependency]
 }
 
+input IxCostCodeInput {
+  UnitCost: IxUnitCostInput!
+  Global: Boolean
+  BaseObject: String
+  ObjectType: IxCostCodeObjectType
+  Id: ID!
+  Name: String!
+  Description: String
+}
+
 enum IxCostCodeObjectType {
   CostCode
-}
-
-type IxCriterion {
-  Batchable: Boolean
-  PropertyName: String
-  Range: IxRange
-  ControlsRange: Boolean
-}
-
-input IxCriterionInput {
-  Batchable: Boolean
-  PropertyName: String
-  Range: IxRangeInput
-  ControlsRange: Boolean
 }
 
 type IxDocument {
@@ -180,7 +174,6 @@ input IxDocumentInput {
   Id: ID!
   Name: String
   Description: String
-  Creator: IxPartyDO
 }
 
 enum IxDocumentObjectType {
@@ -198,6 +191,12 @@ type IxEmail {
 type IxGeocode {
   Lat: Float
   Lng: Float
+  Source: IxGeocodeSource
+}
+
+input IxGeocodeInput {
+  Lat: Float!
+  Lng: Float!
   Source: IxGeocodeSource
 }
 
@@ -257,6 +256,10 @@ type IxJobActivity {
   DisplayName: String
 }
 
+input IxJobActivityDO {
+  Id: ID!
+}
+
 enum IxJobActivityObjectType {
   JobActivity
 }
@@ -312,6 +315,7 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
@@ -320,15 +324,14 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  ToDoStatus
+  Attribute
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
   JobCertification
   Privilege
 }
@@ -336,6 +339,11 @@ enum IxLookupValueObjectType {
 type IxMoney {
   Unit: IxUnit
   Quantity: Float
+}
+
+input IxMoneyInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
 }
 
 type IxParty {
@@ -396,6 +404,11 @@ type IxQuantity {
   Quantity: Float
 }
 
+input IxQuantityInput {
+  Unit: IxUnitDO!
+  Quantity: Float!
+}
+
 type IxRange {
   Start: String
   End: String
@@ -430,6 +443,10 @@ type IxResource {
   Location: IxLocation
   ForeColor: String
   BackColor: String
+}
+
+input IxResourceDO {
+  Id: ID!
 }
 
 enum IxResourceObjectType {
@@ -510,8 +527,32 @@ type IxTimeEntry {
   Creator: IxParty
 }
 
-input IxTimeEntryDO {
+input IxTimeEntryInput {
+  Resource: IxResourceDO!
+  EntryType: IxLookupValueDO
+  EntryLaborClass: IxLookupValueDO
+  CostCodes: [IxCostCodeInput]
+  Hours: Float
+  Minutes: Int
+  JobActivity: IxJobActivityDO!
+  Owner: IxPartyDO!
+  Auxiliaries: [IxResourceDO]
+  Billable: Boolean
+  IsVoid: Boolean
+  Punch: IxTimeEntryPunch
+  StartLocation: IxGeocodeInput
+  EndLocation: IxGeocodeInput
+  PunchStart: String
+  StartDistance: IxQuantityInput
+  PunchEnd: String
+  EndDistance: IxQuantityInput
+  CurrentLifespan: IxRangeInput!
+  ObjectType: IxTimeEntryObjectType
   Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute__String__Input]
+  Approvals: [IxApprovalInput]
 }
 
 enum IxTimeEntryObjectType {
@@ -539,6 +580,16 @@ type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
   Notes: String
+}
+
+input IxUnitCostInput {
+  Unit: IxUnitDO!
+  Cost: IxMoneyInput!
+  Notes: String
+}
+
+input IxUnitDO {
+  Id: ID!
 }
 
 enum IxUnitObjectType {

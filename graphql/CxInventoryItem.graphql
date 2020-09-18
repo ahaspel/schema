@@ -13,8 +13,14 @@ type CxInventoryItem {
   Description: String
 }
 
-input CxInventoryItemDO {
+input CxInventoryItemInput {
   Id: ID!
+  Amount: Float!
+  Start: String!
+  Vendor: IxCompanyDO
+  AccountCode: String
+  Name: String
+  Description: String
 }
 
 input FilterInput {
@@ -75,6 +81,10 @@ type IxCompany {
   Contacts: [IxParty]
 }
 
+input IxCompanyDO {
+  Id: ID!
+}
+
 enum IxCompanyObjectType {
   Company
   Plant
@@ -114,6 +124,7 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
@@ -122,15 +133,14 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  ToDoStatus
+  Attribute
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
   JobCertification
   Privilege
 }
@@ -207,7 +217,7 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxInventoryItems_onSave(data: [CxInventoryItemDO], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxInventoryItem]
+  cxInventoryItems_onSave(data: [CxInventoryItemInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxInventoryItem]
   cxInventoryItems_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxInventoryItem]
 }
 

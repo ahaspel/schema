@@ -44,7 +44,6 @@ input CxSubcontractorInput {
   Emails: [IxEmailInput]
   Name: String!
   Title: String
-  ContactOf: [IxPersistableDO]
   IsContact: Boolean
   Address: IxAddressInput
   CurrentLifespan: IxRangeInput
@@ -165,6 +164,7 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
@@ -173,15 +173,14 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  ToDoStatus
+  Attribute
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
   JobCertification
   Privilege
 }
@@ -239,10 +238,6 @@ type IxPersistable {
   Id: ID!
   Name: String
   Description: String
-}
-
-input IxPersistableDO {
-  Id: ID!
 }
 
 enum IxPersistableObjectType {
@@ -326,10 +321,8 @@ enum IxResourceTypeObjectType {
 type IxSupplyType {
   ResourceSubtype: IxResourceSubtype
   UnitCosts: [IxUnitCost]
-  Dependencies: [CxDependency]
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
-  Name: String
   Description: String
   Tags: [IxAttribute__String__]
 }

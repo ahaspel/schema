@@ -14,9 +14,7 @@ type CxSupplyType {
   UnitCosts: [IxUnitCost]
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
 }
 
 input CxSupplyTypeInput {

@@ -1,37 +1,27 @@
 type CxApplicationLicense {
   Id: ID!
   Expiration: String
-  AllowedUsers: Int
-  AllowedWebUsers: Int
-  SerialNumber: String
+  AllowedFullUsers: Int
+  AllowedReadOnlyUsers: Int
+  AllowedMobileUsers: Int
   Valid: Boolean
-  MachineCode: String
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
-  Divisions: [IxLookupValue]
-  Description: String
-  Name: String
   Tags: [IxAttribute__String__]
-  Dependencies: [CxDependency]
 }
 
 input CxApplicationLicenseInput {
   Id: ID!
   Expiration: String!
-  AllowedUsers: Int!
-  AllowedWebUsers: Int!
-  SerialNumber: String!
+  AllowedFullUsers: Int!
+  AllowedReadOnlyUsers: Int!
+  AllowedMobileUsers: Int!
   Valid: Boolean
-  MachineCode: String
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
-  Divisions: [IxLookupValueDO]
-  Description: String
-  Name: String
   Tags: [IxAttribute__String__Input]
-  Dependencies: [CxDependencyInput]
 }
 
 enum CxApplicationLicenseObjectType {
@@ -77,44 +67,6 @@ input IxAttribute__String__Input {
 
 enum IxAttributeStringObjectType {
   Attribute
-}
-
-type IxLookupValue {
-  BaseObject: String
-  ObjectType: IxLookupValueObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  Dependencies: [CxDependency]
-}
-
-input IxLookupValueDO {
-  Id: ID!
-}
-
-enum IxLookupValueObjectType {
-  JobPriority
-  JobSubtype
-  JobType
-  LaborClass
-  Language
-  License
-  Minority
-  Skill
-  Training
-  Union
-  State
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
-  JobCertification
-  Privilege
 }
 
 """

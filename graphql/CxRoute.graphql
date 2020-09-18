@@ -191,7 +191,6 @@ type IxEquipment {
   Dependencies: [CxDependency]
   ObjectType: IxEquipmentObjectType
   Id: ID!
-  Name: String
   Description: String
   Tags: [IxAttribute__String__]
   Attachments: [IxDocument]
@@ -335,6 +334,7 @@ enum IxLookupValueObjectType {
   JobPriority
   JobSubtype
   JobType
+  Division
   LaborClass
   Language
   License
@@ -343,15 +343,14 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
+  ToDoStatus
+  Attribute
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Attribute
-  Division
   JobCertification
   Privilege
 }

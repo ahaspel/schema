@@ -3,6 +3,9 @@ const CXTIMESHEETINPUTMIN = `fragment CXTIMESHEETINPUTMIN on CxTimeSheet {
   Job {
     Id
   }
+  Approvers {
+    Id
+  }
   CurrentLifespan {
     Start
     End
