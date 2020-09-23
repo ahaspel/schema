@@ -1,7 +1,6 @@
 
 const CXATTRIBUTEINPUTMIN = `fragment CXATTRIBUTEINPUTMIN on CxAttribute {
   Id
-  Name
   Value
   AttributeId
 }`;

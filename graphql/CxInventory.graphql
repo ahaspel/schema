@@ -39,8 +39,8 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxCompany {
@@ -55,8 +55,8 @@ type IxCompany {
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -79,8 +79,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -101,8 +101,8 @@ type IxInventoryItem {
   Vendor: IxCompany
   Id: ID!
   AccountCode: String
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxInventoryItemInput {
@@ -111,16 +111,16 @@ input IxInventoryItemInput {
   Vendor: IxCompanyDO
   Id: ID!
   AccountCode: String
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -137,8 +137,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  Attribute
   ToDoStatus
+  Attribute
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -159,8 +159,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -177,8 +177,8 @@ type IxPersistable {
   Dependencies: [CxDependency]
   ObjectType: IxPersistableObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxPersistableObjectType {
@@ -194,8 +194,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {

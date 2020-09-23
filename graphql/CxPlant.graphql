@@ -87,15 +87,14 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttributeInput {
   AttributeId: ID!
   Value: String!
   Id: ID!
-  Name: String!
   Description: String
 }
 
@@ -117,15 +116,15 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -150,8 +149,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -172,8 +171,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  Attribute
   ToDoStatus
+  Attribute
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -194,8 +193,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -216,8 +215,8 @@ type IxPersistable {
   Dependencies: [CxDependency]
   ObjectType: IxPersistableObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxPersistableObjectType {
@@ -233,15 +232,15 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {
@@ -260,8 +259,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxResourceSubtypeDO {
@@ -279,8 +278,8 @@ type IxResourceType {
   Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]
@@ -308,8 +307,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxUnitObjectType {

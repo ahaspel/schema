@@ -77,15 +77,14 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttributeInput {
   AttributeId: ID!
   Value: String!
   Id: ID!
-  Name: String!
   Description: String
 }
 
@@ -93,15 +92,15 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -126,8 +125,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -148,8 +147,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  Attribute
   ToDoStatus
+  Attribute
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -163,8 +162,8 @@ enum IxLookupValueObjectType {
 type IxPersistable {
   ObjectType: IxPersistableObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 enum IxPersistableObjectType {
@@ -180,15 +179,15 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {

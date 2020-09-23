@@ -70,7 +70,6 @@
 			"superRequired": [
 				"AttributeId",
 				"Id",
-				"Name",
 				"Value"
 			],
 			"type": "object",
@@ -84,10 +83,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -95,6 +94,9 @@
 				"AttributeId",
 				"Value",
 				"Id"
+			],
+			"immutable": [
+				"Name"
 			]
 		},
 		"IxDto": {
@@ -144,10 +146,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -207,8 +209,8 @@
 						"Training",
 						"Union",
 						"State",
-						"Attribute",
 						"ToDoStatus",
+						"Attribute",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -222,10 +224,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -255,10 +257,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -285,10 +287,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},

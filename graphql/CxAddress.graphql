@@ -58,8 +58,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   Dependencies: [CxDependency]
 }
 
@@ -80,8 +80,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  Attribute
   ToDoStatus
+  Attribute
   ToDoPriority
   TimeEntryType
   CompanyType

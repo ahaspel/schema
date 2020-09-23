@@ -9,7 +9,6 @@ type CxAttribute {
 
 input CxAttributeInput {
   Id: ID!
-  Name: String!
   Value: String!
   AttributeId: ID!
   Description: String

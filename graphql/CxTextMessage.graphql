@@ -49,15 +49,14 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttributeInput {
   AttributeId: ID!
   Value: String!
   Id: ID!
-  Name: String!
   Description: String
 }
 
@@ -66,15 +65,15 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 """

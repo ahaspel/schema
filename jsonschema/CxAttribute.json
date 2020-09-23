@@ -1,14 +1,16 @@
 {
 	"id": "https://congistics.com/schema/CxAttribute",
 	"title": "com.congistics.cbrd.util.CxAttribute",
+	"immutable": [
+		"Name"
+	],
 	"type": "object",
 	"properties": {
 		"Id": {
 			"type": "integer"
 		},
 		"Name": {
-			"type": "string",
-			"minLength": 1
+			"type": "string"
 		},
 		"Value": {
 			"type": "string",
@@ -30,7 +32,6 @@
 	"required": [
 		"AttributeId",
 		"Id",
-		"Name",
 		"Value"
 	],
 	"definitions": {}
