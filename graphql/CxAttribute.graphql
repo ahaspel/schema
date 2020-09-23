@@ -1,0 +1,53 @@
+type CxAttribute {
+  Id: ID!
+  Name: String
+  Value: String
+  AttributeId: ID
+  Description: String
+  ObjectType: CxAttributeObjectType
+}
+
+input CxAttributeInput {
+  Id: ID!
+  Name: String!
+  Value: String!
+  AttributeId: ID!
+  Description: String
+  ObjectType: CxAttributeObjectType
+}
+
+enum CxAttributeObjectType {
+  Attribute
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxAttributes_onSave(data: [CxAttributeInput], filters: [FilterInput], objectType: String = "Attribute", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAttribute]
+  cxAttributes_onDelete(data: [String], objectType: String = "Attribute", operation: String = "delete"): [CxAttribute]
+}
+
+extend type Query {
+  cxAttributes(filters: [FilterInput], objectType: String = "Attribute"): [CxAttribute]
+}

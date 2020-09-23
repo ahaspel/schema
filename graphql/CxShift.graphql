@@ -3,11 +3,6 @@ type CxDependency {
   Ids: [Int]
 }
 
-input CxDependencyInput {
-  ObjectType: String!
-  Ids: [Int]!
-}
-
 type CxShift {
   Days: [IxShiftDay]
   Default: Boolean
@@ -16,7 +11,7 @@ type CxShift {
   ObjectType: CxShiftObjectType
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
 
@@ -28,7 +23,7 @@ input CxShiftInput {
   ObjectType: CxShiftObjectType
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttributeInput]
 }
 
 enum CxShiftObjectType {
@@ -42,28 +37,20 @@ input FilterInput {
   invert: Boolean = false
 }
 
-type IxAttribute__String__ {
-  BaseObject: String
+type IxAttribute {
   AttributeId: ID
-  Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
+  Value: String
   Id: ID!
   Name: String
   Description: String
 }
 
-input IxAttribute__String__Input {
-  BaseObject: String!
+input IxAttributeInput {
   AttributeId: ID!
-  Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
+  Value: String!
   Id: ID!
-  Name: String
+  Name: String!
   Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
 }
 
 type IxShiftDay {

@@ -14,7 +14,7 @@ type CxResourceSubtype {
   Name: String
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
 
@@ -23,7 +23,7 @@ input CxResourceSubtypeInput {
   Name: String!
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttributeInput]
   Dependencies: [CxDependencyInput]
 }
 
@@ -38,28 +38,20 @@ input FilterInput {
   invert: Boolean = false
 }
 
-type IxAttribute__String__ {
-  BaseObject: String
+type IxAttribute {
   AttributeId: ID
-  Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
+  Value: String
   Id: ID!
   Name: String
   Description: String
 }
 
-input IxAttribute__String__Input {
-  BaseObject: String!
+input IxAttributeInput {
   AttributeId: ID!
-  Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
+  Value: String!
   Id: ID!
-  Name: String
+  Name: String!
   Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
 }
 
 type IxResourceSubtype {
@@ -79,15 +71,14 @@ type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
 }
 
 enum IxResourceTypeFamily {

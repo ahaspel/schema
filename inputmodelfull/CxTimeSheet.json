@@ -15,28 +15,11 @@
 			},
 			"CostCodes": [
 				{
-					"UnitCost": {
-						"Unit": {
-							"Id": 1
-						},
-						"Cost": {
-							"Unit": {
-								"Id": 1
-							},
-							"Quantity": 871
-						},
-						"Notes": "xgfsWvSWx"
-					},
-					"Global": true,
-					"BaseObject": "cZZAHAFdI",
-					"ObjectType": "CostCode",
-					"Id": 0,
-					"Name": "nIKSkYvY",
-					"Description": "SsjHMspYbkY"
+					"Id": 2
 				}
 			],
-			"Hours": 153,
-			"Minutes": 709,
+			"Hours": 773,
+			"Minutes": 672,
 			"JobActivity": {
 				"Id": 156
 			},
@@ -44,32 +27,32 @@
 				"Id": 1
 			},
 			"Auxiliaries": [],
-			"Billable": true,
-			"IsVoid": false,
-			"Punch": "Manual",
+			"Billable": false,
+			"IsVoid": true,
+			"Punch": "PunchedIn",
 			"StartLocation": {
-				"Lat": -40.9907,
-				"Lng": -52.4226,
+				"Lat": -87.5142,
+				"Lng": 77.1936,
 				"Source": "Action"
 			},
 			"EndLocation": {
-				"Lat": -38.9175,
-				"Lng": -68.9351,
-				"Source": "Action"
+				"Lat": -83.8215,
+				"Lng": 129.2984,
+				"Source": "Owner"
 			},
 			"PunchStart": "2019-01-14T08:00:00",
 			"StartDistance": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 383
+				"Quantity": 247
 			},
 			"PunchEnd": "2019-01-14T08:00:00",
 			"EndDistance": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 678
+				"Quantity": 485
 			},
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
@@ -77,17 +60,15 @@
 			},
 			"ObjectType": "TimeEntry",
 			"Id": 0,
-			"Name": "SqaJWBKZjb",
-			"Description": "uRpFQAAIXk",
+			"Name": "kVEAyjiexCA",
+			"Description": "LPlsrWMNJs",
 			"Tags": [
 				{
-					"BaseObject": "NDYzur",
-					"AttributeId": 92,
-					"Dependencies": [],
-					"ObjectType": "Attribute",
+					"AttributeId": 0,
+					"Value": "zDKJfY",
 					"Id": 0,
-					"Name": "Capacity",
-					"Description": "CWymvt"
+					"Name": "wYLxHQQnc",
+					"Description": "LhTusKrAAoyM"
 				}
 			],
 			"Approvals": [
@@ -113,7 +94,7 @@
 	],
 	"Attachments": [
 		{
-			"Key": "iKWCWUl",
+			"Key": "Ssezks",
 			"DocumentTypes": [
 				{
 					"Id": 1
@@ -121,8 +102,8 @@
 			],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "GakqRny",
-			"Description": "qhWgpRn"
+			"Name": "ugZoeWaUe",
+			"Description": "TXBLeNGRlXmC"
 		}
 	],
 	"CurrentLifespan": {
@@ -135,16 +116,14 @@
 			"Id": 12
 		}
 	],
-	"Description": "xJimiaszCUo",
+	"Description": "eTKVJrVKCX",
 	"Tags": [
 		{
-			"BaseObject": "gUJMnDUSFo",
-			"AttributeId": 92,
-			"Dependencies": [],
-			"ObjectType": "Attribute",
+			"AttributeId": 0,
+			"Value": "HbCaSOOxpSiU",
 			"Id": 0,
-			"Name": "Capacity",
-			"Description": "ocwseIJRJ"
+			"Name": "oVUoEvfeFPb",
+			"Description": "OloypRi"
 		}
 	],
 	"__typename": "CxTimeSheet"

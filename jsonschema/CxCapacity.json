@@ -20,26 +20,20 @@
 				"Ids"
 			]
 		},
-		"IxAttribute__String__": {
+		"IxAttribute": {
+			"superRequired": [
+				"AttributeId",
+				"Id",
+				"Name",
+				"Value"
+			],
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
-				},
 				"AttributeId": {
 					"type": "integer"
 				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
-				"ObjectType": {
-					"type": "string",
-					"enum": [
-						"Attribute"
-					]
+				"Value": {
+					"type": "string"
 				},
 				"Id": {
 					"type": "integer"
@@ -52,8 +46,8 @@
 				}
 			},
 			"required": [
-				"BaseObject",
 				"AttributeId",
+				"Value",
 				"Id"
 			]
 		},
@@ -153,8 +147,11 @@
 						"$ref": "#/definitions/IxResourceSubtype"
 					}
 				},
-				"BaseObject": {
-					"type": "string"
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -171,12 +168,6 @@
 				"Description": {
 					"type": "string"
 				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
-				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -186,7 +177,7 @@
 				"Tags": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/IxAttribute__String__"
+						"$ref": "#/definitions/IxAttribute"
 					}
 				}
 			},

@@ -3,11 +3,6 @@ type CxDependency {
   Ids: [Int]
 }
 
-input CxDependencyInput {
-  ObjectType: String!
-  Ids: [Int]!
-}
-
 type CxResourceRole {
   Resource: IxResource
   ResourceId: ID
@@ -54,7 +49,7 @@ type CxTaskDay {
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
 
@@ -83,7 +78,7 @@ input CxTaskDayInput {
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttributeInput]
 }
 
 enum CxTaskDayObjectType {
@@ -144,28 +139,20 @@ enum IxAddressObjectType {
   Address
 }
 
-type IxAttribute__String__ {
-  BaseObject: String
+type IxAttribute {
   AttributeId: ID
-  Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
+  Value: String
   Id: ID!
   Name: String
   Description: String
 }
 
-input IxAttribute__String__Input {
-  BaseObject: String!
+input IxAttributeInput {
   AttributeId: ID!
-  Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
+  Value: String!
   Id: ID!
-  Name: String
+  Name: String!
   Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
 }
 
 type IxCompany {
@@ -183,7 +170,7 @@ type IxCompany {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Address: IxAddress
   AccountCode: String
   Divisions: [IxLookupValue]
@@ -278,7 +265,7 @@ type IxJob {
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Address: IxAddress
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
@@ -295,7 +282,7 @@ type IxJobActivity {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   ForeColor: String
   BackColor: String
   DisplayName: String
@@ -361,8 +348,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  ToDoStatus
   Attribute
+  ToDoStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -391,7 +378,7 @@ type IxParty {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Address: IxAddress
 }
 
@@ -453,7 +440,7 @@ type IxResource {
   Id: ID!
   Name: String
   Description: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Attachments: [IxDocument]
   HasAttachments: Boolean
   Divisions: [IxLookupValue]
@@ -495,15 +482,14 @@ type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
 }
 
 input IxResourceTypeDO {

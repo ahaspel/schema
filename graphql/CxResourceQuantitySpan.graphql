@@ -44,18 +44,12 @@ enum IxAddressObjectType {
   Address
 }
 
-type IxAttribute__String__ {
-  BaseObject: String
+type IxAttribute {
   AttributeId: ID
-  Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
+  Value: String
   Id: ID!
   Name: String
   Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
 }
 
 type IxCompany {
@@ -73,7 +67,7 @@ type IxCompany {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Address: IxAddress
   AccountCode: String
   Divisions: [IxLookupValue]
@@ -128,8 +122,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  ToDoStatus
   Attribute
+  ToDoStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -153,7 +147,7 @@ type IxParty {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Address: IxAddress
 }
 
@@ -217,15 +211,14 @@ type IxResourceType {
   Family: IxResourceTypeFamily
   Unit: IxUnit
   ResourceSubtypes: [IxResourceSubtype]
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
   ForeColor: String
   BackColor: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
 }
 
 enum IxResourceTypeFamily {

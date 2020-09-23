@@ -3,11 +3,6 @@ type CxDependency {
   Ids: [Int]
 }
 
-input CxDependencyInput {
-  ObjectType: String!
-  Ids: [Int]!
-}
-
 type CxPartyGroup {
   ObjectType: CxPartyGroupObjectType
   Name: String
@@ -15,7 +10,7 @@ type CxPartyGroup {
   SMSNumbers: [IxPhoneNumber]
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
 
@@ -25,7 +20,7 @@ input CxPartyGroupInput {
   Parties: [IxPartyDO]!
   Id: ID!
   Description: String
-  Tags: [IxAttribute__String__Input]
+  Tags: [IxAttributeInput]
 }
 
 enum CxPartyGroupObjectType {
@@ -54,28 +49,20 @@ enum IxAddressObjectType {
   Address
 }
 
-type IxAttribute__String__ {
-  BaseObject: String
+type IxAttribute {
   AttributeId: ID
-  Dependencies: [CxDependency]
-  ObjectType: IxAttributeStringObjectType
+  Value: String
   Id: ID!
   Name: String
   Description: String
 }
 
-input IxAttribute__String__Input {
-  BaseObject: String!
+input IxAttributeInput {
   AttributeId: ID!
-  Dependencies: [CxDependencyInput]
-  ObjectType: IxAttributeStringObjectType
+  Value: String!
   Id: ID!
-  Name: String
+  Name: String!
   Description: String
-}
-
-enum IxAttributeStringObjectType {
-  Attribute
 }
 
 type IxEmail {
@@ -120,8 +107,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  ToDoStatus
   Attribute
+  ToDoStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -145,7 +132,7 @@ type IxParty {
   Name: String
   Description: String
   CurrentLifespan: IxRange
-  Tags: [IxAttribute__String__]
+  Tags: [IxAttribute]
   Address: IxAddress
 }
 
