@@ -39,16 +39,16 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -67,8 +67,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -107,8 +107,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -129,8 +129,8 @@ type IxPersistable {
   Dependencies: [CxDependency]
   ObjectType: IxPersistableObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxPersistableObjectType {
@@ -146,8 +146,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {

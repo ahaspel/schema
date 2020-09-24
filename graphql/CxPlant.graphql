@@ -87,8 +87,8 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttributeInput {
@@ -116,15 +116,15 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxEmailInput {
   Email: String!
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -149,8 +149,8 @@ type IxLookupValue {
   BaseObject: String
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   Dependencies: [CxDependency]
 }
 
@@ -193,8 +193,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -215,8 +215,8 @@ type IxPersistable {
   Dependencies: [CxDependency]
   ObjectType: IxPersistableObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxPersistableObjectType {
@@ -232,15 +232,15 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxPhoneNumberInput {
   PhoneNumber: String!
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
@@ -259,8 +259,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxResourceSubtypeDO {
@@ -278,8 +278,8 @@ type IxResourceType {
   Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]
@@ -307,8 +307,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 enum IxUnitObjectType {
