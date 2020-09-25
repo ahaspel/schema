@@ -210,9 +210,8 @@ type IxRange {
 }
 
 input IxRangeInput {
-  Start: String
-  End: String
-  Duration: String
+  Start: String!
+  End: String!
 }
 
 type IxResource {

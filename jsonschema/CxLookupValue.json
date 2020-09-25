@@ -1,0 +1,107 @@
+{
+	"id": "https://congistics.com/schema/CxLookupValue",
+	"title": "com.congistics.cbrd.util.CxLookupValue",
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"ErrorDetail": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
+		}
+	},
+	"immutable": [
+		"Dto"
+	],
+	"type": "object",
+	"properties": {
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"JobPriority",
+				"JobSubtype",
+				"JobType",
+				"Division",
+				"LaborClass",
+				"Language",
+				"License",
+				"Minority",
+				"Skill",
+				"Training",
+				"Union",
+				"State",
+				"Attribute",
+				"ToDoStatus",
+				"ToDoPriority",
+				"TimeEntryType",
+				"CompanyType",
+				"JobStatus",
+				"DocumentType",
+				"TimeEntryLaborClass",
+				"JobCertification",
+				"Privilege"
+			]
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
+		}
+	},
+	"required": [
+		"Id",
+		"Name"
+	]
+}

@@ -94,6 +94,11 @@
 			]
 		},
 		"IxAttribute": {
+			"superRequired": [
+				"AttributeId",
+				"Id",
+				"Value"
+			],
 			"type": "object",
 			"properties": {
 				"AttributeId": {
@@ -116,6 +121,9 @@
 				"AttributeId",
 				"Value",
 				"Id"
+			],
+			"immutable": [
+				"Name"
 			]
 		},
 		"IxDto": {
@@ -460,6 +468,10 @@
 			]
 		},
 		"IxRange": {
+			"superRequired": [
+				"End",
+				"Start"
+			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -473,7 +485,10 @@
 				"Duration": {
 					"type": "string"
 				}
-			}
+			},
+			"immutable": [
+				"Duration"
+			]
 		}
 	},
 	"immutable": [

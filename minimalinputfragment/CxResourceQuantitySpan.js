@@ -4,7 +4,8 @@ const CXRESOURCEQUANTITYSPANINPUTMIN = `fragment CXRESOURCEQUANTITYSPANINPUTMIN 
   SupplierId
   Amount
   Range {
-    
+    Start
+    End
   }
 }`;
 module.exports = { fragment: CXRESOURCEQUANTITYSPANINPUTMIN,

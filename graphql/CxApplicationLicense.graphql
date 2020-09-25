@@ -1,0 +1,76 @@
+type CxApplicationLicense {
+  Id: ID!
+  Expiration: String
+  AllowedFullUsers: Int
+  AllowedReadOnlyUsers: Int
+  AllowedMobileUsers: Int
+  Valid: Boolean
+  Nag: Boolean
+  ErrorMessage: String
+  ObjectType: CxApplicationLicenseObjectType
+  Tags: [IxAttribute]
+}
+
+input CxApplicationLicenseInput {
+  Id: ID!
+  Expiration: String!
+  AllowedFullUsers: Int!
+  AllowedReadOnlyUsers: Int!
+  AllowedMobileUsers: Int!
+  Valid: Boolean
+  Nag: Boolean
+  ErrorMessage: String
+  ObjectType: CxApplicationLicenseObjectType
+  Tags: [IxAttributeInput]
+}
+
+enum CxApplicationLicenseObjectType {
+  ApplicationLicense
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAttribute {
+  AttributeId: ID
+  Value: String
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttributeInput {
+  AttributeId: ID!
+  Value: String!
+  Id: ID!
+  Description: String
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxApplicationLicenses_onSave(data: [CxApplicationLicenseInput], filters: [FilterInput], objectType: String = "ApplicationLicense", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxApplicationLicense]
+  cxApplicationLicenses_onDelete(data: [String], objectType: String = "ApplicationLicense", operation: String = "delete"): [CxApplicationLicense]
+}
+
+extend type Query {
+  cxApplicationLicenses(filters: [FilterInput], objectType: String = "ApplicationLicense"): [CxApplicationLicense]
+}

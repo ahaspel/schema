@@ -1,7 +1,8 @@
 
 const CXTASKDAYINPUTMIN = `fragment CXTASKDAYINPUTMIN on CxTaskDay {
   CurrentLifespan {
-    
+    Start
+    End
   }
   Id
 }`;

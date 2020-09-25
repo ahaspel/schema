@@ -1,0 +1,98 @@
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+type CxShift {
+  Days: [IxShiftDay]
+  Default: Boolean
+  UseHolidays: Boolean
+  Name: String
+  ObjectType: CxShiftObjectType
+  Id: ID!
+  Description: String
+  Tags: [IxAttribute]
+  Dependencies: [CxDependency]
+}
+
+input CxShiftInput {
+  Days: [IxShiftDayInput]!
+  Default: Boolean
+  UseHolidays: Boolean
+  Name: String!
+  ObjectType: CxShiftObjectType
+  Id: ID!
+  Description: String
+  Tags: [IxAttributeInput]
+}
+
+enum CxShiftObjectType {
+  Shift
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+type IxAttribute {
+  AttributeId: ID
+  Value: String
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxAttributeInput {
+  AttributeId: ID!
+  Value: String!
+  Id: ID!
+  Description: String
+}
+
+type IxShiftDay {
+  Day: Int
+  DayByName: String
+  Start: String
+  Duration: String
+  Valid: Boolean
+  End: String
+  Included: Boolean
+}
+
+input IxShiftDayInput {
+  Day: Int!
+  DayByName: String
+  Start: String!
+  Duration: String!
+  Valid: Boolean
+  End: String
+  Included: Boolean
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxShifts_onSave(data: [CxShiftInput], filters: [FilterInput], objectType: String = "Shift", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxShift]
+  cxShifts_onDelete(data: [String], objectType: String = "Shift", operation: String = "delete"): [CxShift]
+}
+
+extend type Query {
+  cxShifts(filters: [FilterInput], objectType: String = "Shift"): [CxShift]
+}

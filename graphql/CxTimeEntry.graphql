@@ -117,7 +117,6 @@ input IxAttributeInput {
   AttributeId: ID!
   Value: String!
   Id: ID!
-  Name: String
   Description: String
 }
 
@@ -408,9 +407,8 @@ type IxRange {
 }
 
 input IxRangeInput {
-  Start: String
-  End: String
-  Duration: String
+  Start: String!
+  End: String!
 }
 
 type IxResource {

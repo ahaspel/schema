@@ -1,7 +1,7 @@
 
 const CXLEVELINPUTMIN = `fragment CXLEVELINPUTMIN on CxLevel {
-  Name
   Id
+  Name
 }`;
 module.exports = { fragment: CXLEVELINPUTMIN,
                    fragmentName: 'CXLEVELINPUTMIN',

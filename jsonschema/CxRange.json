@@ -1,0 +1,28 @@
+{
+	"id": "https://congistics.com/schema/CxRange",
+	"title": "com.congistics.cbrd.time.CxRange",
+	"immutable": [
+		"Duration"
+	],
+	"type": "object",
+	"properties": {
+		"Start": {
+			"type": "string",
+			"minLength": 1,
+			"format": "date-time"
+		},
+		"End": {
+			"type": "string",
+			"minLength": 1,
+			"format": "date-time"
+		},
+		"Duration": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"End",
+		"Start"
+	],
+	"definitions": {}
+}

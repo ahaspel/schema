@@ -24,7 +24,8 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
   AccountCode
   Name
   CurrentLifespan {
-    
+    Start
+    End
   }
   JobActivities {
     Id

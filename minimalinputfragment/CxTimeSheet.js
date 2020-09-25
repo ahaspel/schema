@@ -7,7 +7,8 @@ const CXTIMESHEETINPUTMIN = `fragment CXTIMESHEETINPUTMIN on CxTimeSheet {
     Id
   }
   CurrentLifespan {
-    
+    Start
+    End
   }
   Id
 }`;

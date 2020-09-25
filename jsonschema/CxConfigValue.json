@@ -21,6 +21,11 @@
 			]
 		},
 		"IxAttribute": {
+			"superRequired": [
+				"AttributeId",
+				"Id",
+				"Value"
+			],
 			"type": "object",
 			"properties": {
 				"AttributeId": {
@@ -43,6 +48,9 @@
 				"AttributeId",
 				"Value",
 				"Id"
+			],
+			"immutable": [
+				"Name"
 			]
 		},
 		"IxDto": {

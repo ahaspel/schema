@@ -4,7 +4,8 @@ const CXRESOURCESPANINPUTMIN = `fragment CXRESOURCESPANINPUTMIN on CxResourceSpa
     Id
   }
   Range {
-    
+    Start
+    End
   }
 }`;
 module.exports = { fragment: CXRESOURCESPANINPUTMIN,

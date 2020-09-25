@@ -1,7 +1,7 @@
 
 const CXLOOKUPVALUEINPUTMIN = `fragment CXLOOKUPVALUEINPUTMIN on CxLookupValue {
-  Name
   Id
+  Name
 }`;
 module.exports = { fragment: CXLOOKUPVALUEINPUTMIN,
                    fragmentName: 'CXLOOKUPVALUEINPUTMIN',
