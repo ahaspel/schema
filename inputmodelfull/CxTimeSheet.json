@@ -18,8 +18,8 @@
 					"Id": 2
 				}
 			],
-			"Hours": 103,
-			"Minutes": 932,
+			"Hours": 532,
+			"Minutes": 600,
 			"JobActivity": {
 				"Id": 156
 			},
@@ -27,32 +27,32 @@
 				"Id": 1
 			},
 			"Auxiliaries": [],
-			"Billable": false,
-			"IsVoid": false,
-			"Punch": "PunchedIn",
+			"Billable": true,
+			"IsVoid": true,
+			"Punch": "Manual",
 			"StartLocation": {
-				"Lat": 56.9543,
-				"Lng": -168.1557,
-				"Source": "GPSService"
+				"Lat": 72.6411,
+				"Lng": -158.4009,
+				"Source": "Owner"
 			},
 			"EndLocation": {
-				"Lat": -68.9365,
-				"Lng": 90.986,
-				"Source": "Action"
+				"Lat": 84.052,
+				"Lng": 101.6385,
+				"Source": "Owner"
 			},
 			"PunchStart": "2019-01-14T08:00:00",
 			"StartDistance": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 514
+				"Quantity": 395
 			},
 			"PunchEnd": "2019-01-14T08:00:00",
 			"EndDistance": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 114
+				"Quantity": 426
 			},
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
@@ -60,15 +60,15 @@
 			},
 			"ObjectType": "TimeEntry",
 			"Id": 0,
-			"Name": "KGpJGDrtWA",
-			"Description": "TsyCdKA",
+			"Name": "fheiMGWyp",
+			"Description": "BNOwTxWiagV",
 			"Tags": [
 				{
 					"AttributeId": 92,
-					"Value": "JAIyRwUknX",
+					"Value": "yHYYuFREJ",
 					"Id": 0,
 					"Name": "Capacity",
-					"Description": "MsgVmOR"
+					"Description": "YFjPvclEOy"
 				}
 			],
 			"Approvals": [
@@ -94,7 +94,7 @@
 	],
 	"Attachments": [
 		{
-			"Key": "FMmBKNkhS",
+			"Key": "yTrXLEChpCTK",
 			"DocumentTypes": [
 				{
 					"Id": 1
@@ -102,8 +102,8 @@
 			],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "DqllSuzStTS",
-			"Description": "EHTqEISn"
+			"Name": "HnCVLuAJk",
+			"Description": "VmjaUYyUCyAN"
 		}
 	],
 	"CurrentLifespan": {
@@ -116,14 +116,14 @@
 			"Id": 12
 		}
 	],
-	"Description": "rrgdVfELBJ",
+	"Description": "GmZcqf",
 	"Tags": [
 		{
 			"AttributeId": 92,
-			"Value": "mbTeeteRTk",
+			"Value": "jhMqNsLpathj",
 			"Id": 0,
 			"Name": "Capacity",
-			"Description": "OVjrpLHo"
+			"Description": "ldDSAmL"
 		}
 	],
 	"__typename": "CxTimeSheet"
