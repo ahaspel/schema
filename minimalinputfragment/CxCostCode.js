@@ -11,8 +11,8 @@ const CXCOSTCODEINPUTMIN = `fragment CXCOSTCODEINPUTMIN on CxCostCode {
       Quantity
     }
   }
-  Name
   Id
+  Name
 }`;
 module.exports = { fragment: CXCOSTCODEINPUTMIN,
                    fragmentName: 'CXCOSTCODEINPUTMIN',

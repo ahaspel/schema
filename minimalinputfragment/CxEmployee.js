@@ -6,8 +6,7 @@ const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
     Id
   }
   CurrentLifespan {
-    Start
-    End
+    
   }
   Id
 }`;

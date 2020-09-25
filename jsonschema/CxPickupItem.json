@@ -67,11 +67,6 @@
 			]
 		},
 		"IxAttribute": {
-			"superRequired": [
-				"AttributeId",
-				"Id",
-				"Value"
-			],
 			"type": "object",
 			"properties": {
 				"AttributeId": {
@@ -94,9 +89,6 @@
 				"AttributeId",
 				"Value",
 				"Id"
-			],
-			"immutable": [
-				"Name"
 			]
 		},
 		"IxCompany": {
@@ -362,8 +354,11 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -380,8 +375,8 @@
 						"Training",
 						"Union",
 						"State",
-						"ToDoStatus",
 						"Attribute",
+						"ToDoStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -400,12 +395,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -585,10 +574,6 @@
 			]
 		},
 		"IxQuantity": {
-			"superRequired": [
-				"Unit",
-				"Quantity"
-			],
 			"type": "object",
 			"properties": {
 				"Unit": {
@@ -604,10 +589,6 @@
 			]
 		},
 		"IxRange": {
-			"superRequired": [
-				"End",
-				"Start"
-			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -621,10 +602,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"immutable": [
-				"Duration"
-			]
+			}
 		},
 		"IxResource": {
 			"type": "object",

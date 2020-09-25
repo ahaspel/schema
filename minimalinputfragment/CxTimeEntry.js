@@ -10,8 +10,7 @@ const CXTIMEENTRYINPUTMIN = `fragment CXTIMEENTRYINPUTMIN on CxTimeEntry {
     Id
   }
   CurrentLifespan {
-    Start
-    End
+    
   }
   Id
 }`;

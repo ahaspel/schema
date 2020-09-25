@@ -2,19 +2,19 @@ type CxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
   ObjectType: CxCostCodeObjectType
-  Name: String
-  Dependencies: [CxDependency]
   Id: ID!
   Description: String
+  Name: String
+  Dependencies: [CxDependency]
 }
 
 input CxCostCodeInput {
   UnitCost: IxUnitCostInput!
   Global: Boolean
   ObjectType: CxCostCodeObjectType
-  Name: String!
   Id: ID!
   Description: String
+  Name: String!
 }
 
 enum CxCostCodeObjectType {

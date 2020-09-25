@@ -64,6 +64,7 @@ input IxAttributeInput {
   AttributeId: ID!
   Value: String!
   Id: ID!
+  Name: String
   Description: String
 }
 
@@ -88,12 +89,11 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -113,8 +113,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  ToDoStatus
   Attribute
+  ToDoStatus
   ToDoPriority
   TimeEntryType
   CompanyType

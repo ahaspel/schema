@@ -72,6 +72,7 @@ input IxAttributeInput {
   AttributeId: ID!
   Value: String!
   Id: ID!
+  Name: String
   Description: String
 }
 
@@ -106,12 +107,11 @@ enum IxCompanyObjectType {
 type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxCostCodeObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
 }
 
 enum IxCostCodeObjectType {
@@ -215,12 +215,11 @@ type IxJobCost {
   TotalAmount: Float
   ExpectedDailyAmount: Float
   CompletedAmount: Float
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxJobCostObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
 }
 
 enum IxJobCostObjectType {
@@ -232,12 +231,11 @@ enum IxJobObjectType {
 }
 
 type IxLookupValue {
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
 }
 
 input IxLookupValueDO {
@@ -257,8 +255,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  ToDoStatus
   Attribute
+  ToDoStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -330,8 +328,9 @@ type IxRange {
 }
 
 input IxRangeInput {
-  Start: String!
-  End: String!
+  Start: String
+  End: String
+  Duration: String
 }
 
 type IxUnit {

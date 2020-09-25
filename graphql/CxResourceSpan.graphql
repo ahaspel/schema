@@ -117,12 +117,11 @@ type IxLocation {
 }
 
 type IxLookupValue {
-  BaseObject: String
+  Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
   Name: String
   Description: String
-  Dependencies: [CxDependency]
 }
 
 enum IxLookupValueObjectType {
@@ -138,8 +137,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  ToDoStatus
   Attribute
+  ToDoStatus
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -211,8 +210,9 @@ type IxRange {
 }
 
 input IxRangeInput {
-  Start: String!
-  End: String!
+  Start: String
+  End: String
+  Duration: String
 }
 
 type IxResource {

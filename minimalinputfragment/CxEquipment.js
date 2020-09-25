@@ -10,8 +10,7 @@ const CXEQUIPMENTINPUTMIN = `fragment CXEQUIPMENTINPUTMIN on CxEquipment {
   }
   AccountCode
   CurrentLifespan {
-    Start
-    End
+    
   }
   Id
 }`;

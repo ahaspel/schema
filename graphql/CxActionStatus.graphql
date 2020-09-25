@@ -6,10 +6,10 @@ type CxActionStatus {
   ObjectType: CxActionStatusObjectType
   ForeColor: String
   BackColor: String
-  Name: String
-  Dependencies: [CxDependency]
   Id: ID!
   Description: String
+  Name: String
+  Dependencies: [CxDependency]
 }
 
 enum CxActionStatusActionStatusType {
@@ -25,9 +25,9 @@ input CxActionStatusInput {
   ObjectType: CxActionStatusObjectType
   ForeColor: String
   BackColor: String
-  Name: String!
   Id: ID!
   Description: String
+  Name: String!
 }
 
 enum CxActionStatusObjectType {

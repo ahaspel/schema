@@ -67,11 +67,6 @@
 			]
 		},
 		"IxAttribute": {
-			"superRequired": [
-				"AttributeId",
-				"Id",
-				"Value"
-			],
 			"type": "object",
 			"properties": {
 				"AttributeId": {
@@ -94,9 +89,6 @@
 				"AttributeId",
 				"Value",
 				"Id"
-			],
-			"immutable": [
-				"Name"
 			]
 		},
 		"IxCompany": {
@@ -207,8 +199,11 @@
 				"Global": {
 					"type": "boolean"
 				},
-				"BaseObject": {
-					"type": "string"
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -224,12 +219,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -613,8 +602,11 @@
 				"CompletedAmount": {
 					"type": "number"
 				},
-				"BaseObject": {
-					"type": "string"
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -630,12 +622,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -654,8 +640,11 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -672,8 +661,8 @@
 						"Training",
 						"Union",
 						"State",
-						"ToDoStatus",
 						"Attribute",
+						"ToDoStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -692,12 +681,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [
@@ -877,10 +860,6 @@
 			]
 		},
 		"IxRange": {
-			"superRequired": [
-				"End",
-				"Start"
-			],
 			"type": "object",
 			"properties": {
 				"Start": {
@@ -894,10 +873,7 @@
 				"Duration": {
 					"type": "string"
 				}
-			},
-			"immutable": [
-				"Duration"
-			]
+			}
 		},
 		"IxUnit": {
 			"type": "object",

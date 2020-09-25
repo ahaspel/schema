@@ -80,8 +80,11 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
-				"BaseObject": {
-					"type": "string"
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
 				},
 				"ObjectType": {
 					"type": "string",
@@ -98,8 +101,8 @@
 						"Training",
 						"Union",
 						"State",
-						"ToDoStatus",
 						"Attribute",
+						"ToDoStatus",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -118,12 +121,6 @@
 				},
 				"Description": {
 					"type": "string"
-				},
-				"Dependencies": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/CxDependency"
-					}
 				}
 			},
 			"required": [

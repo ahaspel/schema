@@ -1,7 +1,7 @@
 
 const CXACTIONSTATUSINPUTMIN = `fragment CXACTIONSTATUSINPUTMIN on CxActionStatus {
-  Name
   Id
+  Name
 }`;
 module.exports = { fragment: CXACTIONSTATUSINPUTMIN,
                    fragmentName: 'CXACTIONSTATUSINPUTMIN',
