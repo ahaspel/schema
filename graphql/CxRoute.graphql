@@ -8,6 +8,7 @@ type CxRoute {
   SMSNumbers: [IxPhoneNumber]
   ObjectType: CxRouteObjectType
   Stops: [IxStop]
+  Jobs: [IxJob]
   Rig: [IxEquipment]
   Iterations: Int
   ForeColor: String
@@ -326,8 +327,8 @@ enum IxLookupValueObjectType {
   Training
   Union
   State
-  Attribute
   ToDoStatus
+  Attribute
   ToDoPriority
   TimeEntryType
   CompanyType

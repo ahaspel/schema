@@ -810,8 +810,8 @@
 						"Training",
 						"Union",
 						"State",
-						"Attribute",
 						"ToDoStatus",
+						"Attribute",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -1413,6 +1413,7 @@
 		"Dependencies",
 		"DisplayName",
 		"Dto",
+		"Jobs",
 		"SMSNumbers"
 	],
 	"type": "object",
@@ -1436,6 +1437,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxStop"
+			}
+		},
+		"Jobs": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxJob"
 			}
 		},
 		"Rig": {
