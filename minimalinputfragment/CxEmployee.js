@@ -2,12 +2,12 @@
 const CXEMPLOYEEINPUTMIN = `fragment CXEMPLOYEEINPUTMIN on CxEmployee {
   LastName
   FirstName
-  ResourceSubtype {
-    Id
-  }
   CurrentLifespan {
     Start
     End
+  }
+  ResourceSubtype {
+    Id
   }
   Id
 }`;

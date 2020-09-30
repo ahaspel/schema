@@ -11,6 +11,7 @@ type CxEmployee {
   PreviousExperience: IxQuantity
   IsMover: Boolean
   Person: IxParty
+  CurrentLifespan: IxRange
   Contacts: [IxParty]
   Minority: [IxLookupValue]
   Unions: [IxLookupValue]
@@ -36,7 +37,6 @@ type CxEmployee {
   Location: IxLocation
   DisplayName: String
   AccountCode: String
-  CurrentLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -52,6 +52,7 @@ input CxEmployeeInput {
   PreviousExperience: IxQuantityInput
   IsMover: Boolean
   Person: IxPartyInput
+  CurrentLifespan: IxRangeInput!
   Contacts: [IxPartyInput]
   Minority: [IxLookupValueDO]
   Unions: [IxLookupValueDO]
@@ -72,7 +73,6 @@ input CxEmployeeInput {
   ForeColor: String
   BackColor: String
   AccountCode: String
-  CurrentLifespan: IxRangeInput!
   Id: ID!
   Divisions: [IxLookupValueDO]
   Description: String

@@ -932,6 +932,9 @@
 		"Person": {
 			"$ref": "#/definitions/IxParty"
 		},
+		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
 		"Contacts": {
 			"type": "array",
 			"items": {
@@ -1042,9 +1045,6 @@
 		},
 		"AccountCode": {
 			"type": "string"
-		},
-		"CurrentLifespan": {
-			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"
