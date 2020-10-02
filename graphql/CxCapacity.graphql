@@ -37,6 +37,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -52,6 +53,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]

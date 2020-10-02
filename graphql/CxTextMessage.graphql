@@ -18,6 +18,7 @@ type CxTextMessage {
   Received: String
   Id: ID!
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
@@ -30,6 +31,7 @@ input CxTextMessageInput {
   Recipient: IxPhoneNumberInput!
   Id: ID!
   Description: String
+  DisplayName: String
   Tags: [IxAttributeInput]
   Dependencies: [CxDependencyInput]
 }

@@ -11,6 +11,7 @@ type CxShift {
   ObjectType: CxShiftObjectType
   Id: ID!
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }

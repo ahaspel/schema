@@ -16,6 +16,7 @@ type CxCompany {
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
@@ -137,6 +138,9 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 input IxLookupValueDO {
@@ -180,6 +184,7 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -211,6 +216,7 @@ type IxPersistable {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxPersistableObjectType {

@@ -64,6 +64,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 input IxResourceSubtypeDO {
@@ -83,6 +84,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]

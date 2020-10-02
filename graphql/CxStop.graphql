@@ -87,6 +87,7 @@ type IxCompany {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -109,6 +110,9 @@ type IxCostCode {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 enum IxCostCodeObjectType {
@@ -123,6 +127,7 @@ type IxDocument {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   LastModified: String
   Creator: IxParty
 }
@@ -179,6 +184,7 @@ type IxJob {
   Dependencies: [CxDependency]
   ObjectType: IxJobObjectType
   Id: ID!
+  DisplayName: String
   Attachments: [IxDocument]
   HasAttachments: Boolean
   ForeColor: String
@@ -188,7 +194,6 @@ type IxJob {
   Address: IxAddress
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
-  DisplayName: String
 }
 
 type IxJobActivity {
@@ -200,11 +205,11 @@ type IxJobActivity {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   ForeColor: String
   BackColor: String
-  DisplayName: String
 }
 
 enum IxJobActivityObjectType {
@@ -223,6 +228,9 @@ type IxJobCost {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 enum IxJobCostObjectType {
@@ -250,6 +258,9 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 input IxLookupValueDO {
@@ -298,6 +309,7 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -316,6 +328,7 @@ type IxPersistable {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxPersistableObjectType {
@@ -406,6 +419,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -421,6 +435,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]

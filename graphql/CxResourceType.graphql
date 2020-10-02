@@ -18,6 +18,7 @@ type CxResourceType {
   Name: String
   Id: ID!
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
@@ -75,6 +76,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 input IxResourceSubtypeInput {
@@ -98,6 +100,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]

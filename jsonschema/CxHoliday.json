@@ -50,6 +50,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -127,6 +128,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -160,6 +170,7 @@
 	"immutable": [
 		"CurrentLifespan",
 		"Dependencies",
+		"DisplayName",
 		"Dto"
 	],
 	"type": "object",
@@ -186,6 +197,9 @@
 			"type": "integer"
 		},
 		"Description": {
+			"type": "string"
+		},
+		"DisplayName": {
 			"type": "string"
 		},
 		"Tags": {

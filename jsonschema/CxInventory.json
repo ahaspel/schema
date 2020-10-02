@@ -96,6 +96,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -159,6 +160,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -364,6 +368,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -431,6 +444,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -450,6 +466,7 @@
 			"immutable": [
 				"ContactOf",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"IsContact",
 				"SMSNumbers"
@@ -481,6 +498,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				}
 			},

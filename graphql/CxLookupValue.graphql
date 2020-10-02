@@ -12,14 +12,19 @@ type CxLookupValue {
   Id: ID!
   Description: String
   ObjectType: CxLookupValueObjectType
+  ForeColor: String
+  BackColor: String
   Name: String
   Dependencies: [CxDependency]
+  DisplayName: String
 }
 
 input CxLookupValueInput {
   Id: ID!
   Description: String
   ObjectType: CxLookupValueObjectType
+  ForeColor: String
+  BackColor: String
   Name: String!
   Dependencies: [CxDependencyInput]
 }

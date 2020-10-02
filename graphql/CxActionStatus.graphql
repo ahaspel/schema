@@ -4,12 +4,13 @@ type CxActionStatus {
   Completed: Boolean
   Cancelled: Boolean
   ObjectType: CxActionStatusObjectType
-  ForeColor: String
-  BackColor: String
   Id: ID!
   Description: String
+  ForeColor: String
+  BackColor: String
   Name: String
   Dependencies: [CxDependency]
+  DisplayName: String
 }
 
 enum CxActionStatusActionStatusType {
@@ -23,10 +24,10 @@ enum CxActionStatusActionStatusType {
 input CxActionStatusInput {
   ActionStatusType: CxActionStatusActionStatusType
   ObjectType: CxActionStatusObjectType
-  ForeColor: String
-  BackColor: String
   Id: ID!
   Description: String
+  ForeColor: String
+  BackColor: String
   Name: String!
 }
 

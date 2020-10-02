@@ -4,8 +4,11 @@ type CxCostCode {
   ObjectType: CxCostCodeObjectType
   Id: ID!
   Description: String
+  ForeColor: String
+  BackColor: String
   Name: String
   Dependencies: [CxDependency]
+  DisplayName: String
 }
 
 input CxCostCodeInput {
@@ -14,6 +17,8 @@ input CxCostCodeInput {
   ObjectType: CxCostCodeObjectType
   Id: ID!
   Description: String
+  ForeColor: String
+  BackColor: String
   Name: String!
 }
 

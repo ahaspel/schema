@@ -63,6 +63,7 @@ type IxCompany {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -85,6 +86,7 @@ type IxDocument {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   LastModified: String
   Creator: IxParty
 }
@@ -126,6 +128,9 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 enum IxLookupValueObjectType {
@@ -170,6 +175,7 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -188,6 +194,7 @@ type IxPersistable {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxPersistableObjectType {
@@ -257,6 +264,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxResourceSubtypeObjectType {
@@ -272,6 +280,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]

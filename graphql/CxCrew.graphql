@@ -19,6 +19,7 @@ type CxCrew {
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
@@ -104,6 +105,7 @@ type IxCompany {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -126,6 +128,7 @@ type IxDocument {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   LastModified: String
   Creator: IxParty
 }
@@ -225,6 +228,9 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 input IxLookupValueDO {
@@ -273,6 +279,7 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -291,6 +298,7 @@ type IxPersistable {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxPersistableObjectType {
@@ -369,6 +377,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 input IxResourceSubtypeDO {
@@ -388,6 +397,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]

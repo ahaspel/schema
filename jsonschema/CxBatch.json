@@ -136,6 +136,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -176,6 +177,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"LastModified": {
 					"type": "string",
 					"format": "date-time"
@@ -192,6 +196,7 @@
 				"Attached",
 				"Creator",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"LastModified"
 			]
@@ -329,6 +334,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -396,6 +410,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -415,6 +432,7 @@
 			"immutable": [
 				"ContactOf",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"IsContact",
 				"SMSNumbers"
@@ -446,6 +464,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				}
 			},
@@ -515,6 +536,7 @@
 	"immutable": [
 		"ChangedItems",
 		"CurrentLifespan",
+		"DisplayName",
 		"Dto",
 		"Errors",
 		"HasAttachments",

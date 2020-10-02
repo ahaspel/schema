@@ -15,8 +15,11 @@ type CxLevel {
   Editable: Boolean
   Id: ID!
   Description: String
+  ForeColor: String
+  BackColor: String
   Name: String
   Dependencies: [CxDependency]
+  DisplayName: String
 }
 
 input CxLevelInput {
@@ -26,6 +29,8 @@ input CxLevelInput {
   Editable: Boolean
   Id: ID!
   Description: String
+  ForeColor: String
+  BackColor: String
   Name: String!
   Dependencies: [CxDependencyInput]
 }

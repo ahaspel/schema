@@ -60,6 +60,9 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 input IxLookupValueDO {

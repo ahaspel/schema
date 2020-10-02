@@ -50,6 +50,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -126,6 +127,15 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
 					"type": "string"
 				}
 			},

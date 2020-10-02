@@ -52,6 +52,7 @@
 		}
 	},
 	"immutable": [
+		"DisplayName",
 		"Dto"
 	],
 	"type": "object",
@@ -89,6 +90,12 @@
 				"Privilege"
 			]
 		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
+		},
 		"Name": {
 			"type": "string",
 			"minLength": 1
@@ -98,6 +105,9 @@
 			"items": {
 				"$ref": "#/definitions/CxDependency"
 			}
+		},
+		"DisplayName": {
+			"type": "string"
 		}
 	},
 	"required": [

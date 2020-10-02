@@ -50,6 +50,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -127,6 +128,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -164,6 +174,9 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -171,6 +184,7 @@
 				"Name"
 			],
 			"immutable": [
+				"DisplayName",
 				"ResourceType"
 			]
 		},
@@ -222,6 +236,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -240,6 +257,7 @@
 			],
 			"immutable": [
 				"Dependencies",
+				"DisplayName",
 				"Dto"
 			]
 		},
@@ -290,6 +308,7 @@
 	},
 	"immutable": [
 		"Dependencies",
+		"DisplayName",
 		"Dto"
 	],
 	"type": "object",
@@ -333,6 +352,9 @@
 			"type": "integer"
 		},
 		"Description": {
+			"type": "string"
+		},
+		"DisplayName": {
 			"type": "string"
 		},
 		"Tags": {

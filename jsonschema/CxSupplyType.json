@@ -50,6 +50,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -127,6 +128,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -182,12 +192,16 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
 				}
 			},
 			"required": [
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"ResourceType"
 			]
 		},
@@ -239,6 +253,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -257,6 +274,7 @@
 			],
 			"immutable": [
 				"Dependencies",
+				"DisplayName",
 				"Dto"
 			]
 		},

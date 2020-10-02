@@ -96,6 +96,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -159,6 +160,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -230,6 +234,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"LastModified": {
 					"type": "string",
 					"format": "date-time"
@@ -246,6 +253,7 @@
 				"Attached",
 				"Creator",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"LastModified"
 			]
@@ -405,6 +413,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -492,6 +509,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -512,6 +532,7 @@
 			"immutable": [
 				"ContactOf",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"IsContact",
 				"SMSNumbers"
@@ -543,6 +564,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				}
 			},
@@ -752,12 +776,16 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
 				}
 			},
 			"required": [
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"ResourceType"
 			]
 		},
@@ -809,6 +837,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -827,6 +858,7 @@
 			],
 			"immutable": [
 				"Dependencies",
+				"DisplayName",
 				"Dto"
 			]
 		},
@@ -1040,9 +1072,6 @@
 		"Location": {
 			"$ref": "#/definitions/IxLocation"
 		},
-		"DisplayName": {
-			"type": "string"
-		},
 		"AccountCode": {
 			"type": "string"
 		},
@@ -1056,6 +1085,9 @@
 			}
 		},
 		"Description": {
+			"type": "string"
+		},
+		"DisplayName": {
 			"type": "string"
 		},
 		"Tags": {

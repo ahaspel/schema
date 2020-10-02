@@ -86,6 +86,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -173,6 +176,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -236,6 +240,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				},
 				"CurrentLifespan": {
@@ -304,6 +311,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -311,6 +327,7 @@
 			],
 			"immutable": [
 				"Dependencies",
+				"DisplayName",
 				"Dto"
 			]
 		},
@@ -351,6 +368,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"LastModified": {
 					"type": "string",
 					"format": "date-time"
@@ -367,6 +387,7 @@
 				"Attached",
 				"Creator",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"LastModified"
 			]
@@ -548,6 +569,9 @@
 				"Id": {
 					"type": "integer"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"Attachments": {
 					"type": "array",
 					"items": {
@@ -586,9 +610,6 @@
 					"items": {
 						"$ref": "#/definitions/IxParty"
 					}
-				},
-				"DisplayName": {
-					"type": "string"
 				}
 			},
 			"required": [
@@ -632,6 +653,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -646,9 +670,6 @@
 				},
 				"BackColor": {
 					"type": "string"
-				},
-				"DisplayName": {
-					"type": "string"
 				}
 			},
 			"required": [
@@ -656,6 +677,7 @@
 			],
 			"immutable": [
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"Job",
 				"SortOrder"
@@ -707,6 +729,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -716,6 +747,7 @@
 				"CompletedAmount",
 				"Dependencies",
 				"Description",
+				"DisplayName",
 				"Dto",
 				"Name"
 			]
@@ -783,6 +815,15 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
 					"type": "string"
 				}
 			},
@@ -870,6 +911,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -889,6 +933,7 @@
 			"immutable": [
 				"ContactOf",
 				"Dependencies",
+				"DisplayName",
 				"Dto",
 				"IsContact",
 				"SMSNumbers"
@@ -920,6 +965,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				}
 			},
@@ -1110,12 +1158,16 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
 				}
 			},
 			"required": [
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"ResourceType"
 			]
 		},
@@ -1167,6 +1219,9 @@
 				"Description": {
 					"type": "string"
 				},
+				"DisplayName": {
+					"type": "string"
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -1185,6 +1240,7 @@
 			],
 			"immutable": [
 				"Dependencies",
+				"DisplayName",
 				"Dto"
 			]
 		},
@@ -1361,9 +1417,6 @@
 				"type": "integer"
 			}
 		},
-		"DisplayName": {
-			"type": "string"
-		},
 		"ActionStatus": {
 			"$ref": "#/definitions/IxActionStatus"
 		},
@@ -1392,6 +1445,9 @@
 			"type": "integer"
 		},
 		"Description": {
+			"type": "string"
+		},
+		"DisplayName": {
 			"type": "string"
 		},
 		"Tags": {

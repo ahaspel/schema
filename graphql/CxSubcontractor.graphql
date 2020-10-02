@@ -24,6 +24,7 @@ type CxSubcontractor {
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
@@ -139,6 +140,9 @@ type IxLookupValue {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
 }
 
 input IxLookupValueDO {
@@ -192,6 +196,7 @@ type IxParty {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   Address: IxAddress
@@ -223,6 +228,7 @@ type IxPersistable {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 enum IxPersistableObjectType {
@@ -267,6 +273,7 @@ type IxResourceSubtype {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
 }
 
 input IxResourceSubtypeDO {
@@ -286,6 +293,7 @@ type IxResourceType {
   Id: ID!
   Name: String
   Description: String
+  DisplayName: String
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]
@@ -308,6 +316,7 @@ type IxSupplyType {
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
   Description: String
+  DisplayName: String
   Tags: [IxAttribute]
 }
 
@@ -317,6 +326,7 @@ input IxSupplyTypeInput {
   ObjectType: IxSupplyTypeObjectType
   Id: ID!
   Description: String
+  DisplayName: String
   Tags: [IxAttributeInput]
 }
 

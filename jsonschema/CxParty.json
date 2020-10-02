@@ -96,6 +96,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -232,6 +233,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -258,6 +268,9 @@
 					"type": "string"
 				},
 				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
 					"type": "string"
 				}
 			},
@@ -327,6 +340,7 @@
 	"immutable": [
 		"ContactOf",
 		"Dependencies",
+		"DisplayName",
 		"Dto",
 		"IsContact",
 		"SMSNumbers"
@@ -386,6 +400,9 @@
 			"type": "integer"
 		},
 		"Description": {
+			"type": "string"
+		},
+		"DisplayName": {
 			"type": "string"
 		},
 		"Tags": {

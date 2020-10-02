@@ -50,6 +50,7 @@
 				"Id"
 			],
 			"immutable": [
+				"DisplayName",
 				"Name"
 			]
 		},
@@ -127,6 +128,15 @@
 				},
 				"Description": {
 					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
 				}
 			},
 			"required": [
@@ -135,6 +145,7 @@
 		}
 	},
 	"immutable": [
+		"DisplayName",
 		"Dto",
 		"Required"
 	],
@@ -167,6 +178,9 @@
 			"type": "string"
 		},
 		"Name": {
+			"type": "string"
+		},
+		"DisplayName": {
 			"type": "string"
 		}
 	},
