@@ -1507,6 +1507,15 @@
 		"Iterations": {
 			"type": "integer"
 		},
+		"Attachments": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxDocument"
+			}
+		},
+		"HasAttachments": {
+			"type": "boolean"
+		},
 		"ForeColor": {
 			"type": "string"
 		},

@@ -11,6 +11,8 @@ type CxRoute {
   Jobs: [IxJob]
   Rig: [IxEquipment]
   Iterations: Int
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRange
@@ -28,6 +30,8 @@ input CxRouteInput {
   Stops: [IxStopInput]!
   Rig: [IxEquipmentDO]!
   Iterations: Int
+  Attachments: [IxDocumentInput]
+  HasAttachments: Boolean
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRangeInput
@@ -146,6 +150,15 @@ type IxDocument {
   DisplayName: String
   LastModified: String
   Creator: IxParty
+}
+
+input IxDocumentInput {
+  Key: String!
+  DocumentTypes: [IxLookupValueDO]
+  ObjectType: IxDocumentObjectType
+  Id: ID!
+  Name: String
+  Description: String
 }
 
 enum IxDocumentObjectType {
