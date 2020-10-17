@@ -31,7 +31,6 @@ input CxCompanyInput {
   Emails: [IxEmailInput]
   Name: String!
   Title: String
-  IsContact: Boolean
   Address: IxAddressInput
   CurrentLifespan: IxRangeInput
   Id: ID!

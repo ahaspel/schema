@@ -36,7 +36,6 @@ input CxRouteInput {
   CurrentLifespan: IxRangeInput
   Id: ID!
   Description: String
-  Name: String
   Tags: [IxAttributeInput]
 }
 
