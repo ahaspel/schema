@@ -39,7 +39,6 @@ enum CxAllocationActionType {
   Subcontractor
   Material
   Group
-  Move
 }
 
 input CxAllocationInput {
@@ -695,7 +694,6 @@ enum IxTaskDayActionType {
   Subcontractor
   Material
   Group
-  Move
 }
 
 input IxTaskDayInput {

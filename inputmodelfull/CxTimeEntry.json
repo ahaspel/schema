@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 555,
-	"Minutes": 915,
+	"Hours": 429,
+	"Minutes": 904,
 	"Resource": {
 		"Id": 6
 	},
@@ -23,32 +23,32 @@
 	"Owner": {
 		"Id": 1
 	},
-	"IsVoid": false,
+	"IsVoid": true,
 	"Billable": false,
 	"StartLocation": {
-		"Lat": -56.4085,
-		"Lng": -14.4025,
-		"Source": "GPSService"
+		"Lat": -22.5586,
+		"Lng": 83.4454,
+		"Source": "Action"
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 12.7751,
-		"Lng": -20.7112,
-		"Source": "GPSService"
+		"Lat": 12.9009,
+		"Lng": 113.1889,
+		"Source": "Action"
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
-	"Punch": "PunchedOut",
+	"Punch": "PunchedIn",
 	"StartDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 888
+		"Quantity": 685
 	},
 	"EndDistance": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 372
+		"Quantity": 298
 	},
 	"Approvals": [
 		{
@@ -68,13 +68,13 @@
 			"Id": 12
 		}
 	],
-	"Description": "BgZtnQCZp",
+	"Description": "UotIvauKsm",
 	"Tags": [
 		{
 			"AttributeId": 92,
-			"Value": "loFWQBFsRbQN",
+			"Value": "ySbTNbcCSo",
 			"Id": 0,
-			"Description": "LIJbrtkxwk"
+			"Description": "EpgWsID"
 		}
 	],
 	"__typename": "CxTimeEntry"
