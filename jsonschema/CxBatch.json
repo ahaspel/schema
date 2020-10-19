@@ -560,11 +560,13 @@
 			"minLength": 1,
 			"enum": [
 				"Company",
+				"Document",
 				"Employee",
 				"Equipment",
 				"Job",
 				"JobCost",
-				"JobActivity"
+				"JobActivity",
+				"ProductionQuantity"
 			]
 		},
 		"Overwrite": {
