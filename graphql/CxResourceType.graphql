@@ -58,8 +58,8 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttributeInput {
@@ -74,8 +74,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
 }
 
@@ -83,8 +83,8 @@ input IxResourceSubtypeInput {
   Dependencies: [CxDependencyInput]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Name: String!
   Description: String
+  Name: String!
 }
 
 enum IxResourceSubtypeObjectType {
@@ -98,8 +98,8 @@ type IxResourceType {
   Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -124,8 +124,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxUnitDO {
