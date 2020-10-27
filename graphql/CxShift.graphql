@@ -42,8 +42,8 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttributeInput {

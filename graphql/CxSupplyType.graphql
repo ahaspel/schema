@@ -36,8 +36,8 @@ type IxAttribute {
   AttributeId: ID
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxAttributeInput {
@@ -62,8 +62,8 @@ type IxResourceSubtype {
   Dependencies: [CxDependency]
   ObjectType: IxResourceSubtypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
 }
 
@@ -82,8 +82,8 @@ type IxResourceType {
   Dependencies: [CxDependency]
   ObjectType: IxResourceTypeObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -108,8 +108,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxUnitCost {
