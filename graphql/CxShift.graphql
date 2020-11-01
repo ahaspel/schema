@@ -12,7 +12,6 @@ type CxShift {
   Id: ID!
   Description: String
   DisplayName: String
-  Tags: [IxAttribute]
   Dependencies: [CxDependency]
 }
 
@@ -24,7 +23,6 @@ input CxShiftInput {
   ObjectType: CxShiftObjectType
   Id: ID!
   Description: String
-  Tags: [IxAttributeInput]
 }
 
 enum CxShiftObjectType {
@@ -36,21 +34,6 @@ input FilterInput {
   values: [String]
   child: String
   invert: Boolean = false
-}
-
-type IxAttribute {
-  AttributeId: ID
-  Value: String
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxAttributeInput {
-  AttributeId: ID!
-  Value: String!
-  Id: ID!
-  Description: String
 }
 
 type IxShiftDay {

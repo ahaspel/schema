@@ -210,14 +210,14 @@
 		},
 		"IxAttribute": {
 			"superRequired": [
-				"AttributeId",
+				"CustomProperty",
 				"Id",
 				"Value"
 			],
 			"type": "object",
 			"properties": {
-				"AttributeId": {
-					"type": "integer"
+				"CustomProperty": {
+					"$ref": "#/definitions/IxCustomProperty"
 				},
 				"Value": {
 					"type": "string"
@@ -233,7 +233,7 @@
 				}
 			},
 			"required": [
-				"AttributeId",
+				"CustomProperty",
 				"Value",
 				"Id"
 			],
@@ -314,6 +314,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxAttribute"
+					}
+				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
 					}
 				},
 				"Address": {
@@ -472,6 +478,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"Attachments": {
 					"type": "array",
 					"items": {
@@ -502,6 +514,159 @@
 			},
 			"required": [
 				"Id"
+			]
+		},
+		"IxCustomProperty": {
+			"superRequired": [
+				"Id",
+				"Name"
+			],
+			"type": "object",
+			"properties": {
+				"SupportedTypes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"Allocation",
+							"Task",
+							"Job",
+							"JobActivity",
+							"JobPriority",
+							"JobType",
+							"JobSubtype",
+							"Resource",
+							"Party",
+							"User",
+							"Employee",
+							"Equipment",
+							"Crew",
+							"ResourceSchedule",
+							"GroupAllocation",
+							"Address",
+							"Shift",
+							"Level",
+							"ResourceType",
+							"CostCode",
+							"JobCost",
+							"Company",
+							"Subcontractor",
+							"Plant",
+							"State",
+							"Division",
+							"LaborClass",
+							"Language",
+							"License",
+							"Minority",
+							"Skill",
+							"Training",
+							"Union",
+							"ApplicationLicense",
+							"VirtualResource",
+							"ResourceRole",
+							"Cell",
+							"TimeLineItem",
+							"Material",
+							"JobStatus",
+							"TypedItem",
+							"Unit",
+							"Lookup",
+							"Attribute",
+							"ResourceSubtype",
+							"PurchaseOrder",
+							"SupplyType",
+							"LineItem",
+							"Attachment",
+							"Requisition",
+							"TaskDay",
+							"PurchaseOrderStatus",
+							"Holiday",
+							"ResourceLocation",
+							"Contact",
+							"Route",
+							"Error",
+							"TemplateJobActivity",
+							"Privilege",
+							"TimeEntryType",
+							"TimeEntry",
+							"CompanyType",
+							"ConfigValue",
+							"ActionStatus",
+							"Document",
+							"None",
+							"JobCertification",
+							"WebPrivilege",
+							"ToDo",
+							"ActualTaskDay",
+							"VirtualTaskDay",
+							"TextMessage",
+							"DocumentType",
+							"TimeEntryLaborClass",
+							"ResourceSpan",
+							"ResourceQuantitySpan",
+							"PartyGroup",
+							"Batch",
+							"BatchRun",
+							"ToDoStatus",
+							"ToDoPriority",
+							"ProductionQuantity",
+							"PickupItem",
+							"Stop",
+							"TimeSheet",
+							"CustomProperty"
+						]
+					}
+				},
+				"Global": {
+					"type": "boolean"
+				},
+				"AttributeType": {
+					"type": "string",
+					"enum": [
+						"String",
+						"Int",
+						"Double",
+						"Range",
+						"Lookup"
+					]
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"CustomProperty"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			],
+			"immutable": [
+				"DisplayName",
+				"Dto"
 			]
 		},
 		"IxDocument": {
@@ -559,6 +724,7 @@
 			"immutable": [
 				"Attached",
 				"Creator",
+				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
 				"Dto",
@@ -754,6 +920,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"Attachments": {
 					"type": "array",
 					"items": {
@@ -937,6 +1109,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				},
@@ -1006,6 +1184,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -1017,6 +1201,7 @@
 				"Id"
 			],
 			"immutable": [
+				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
 				"Dto",
@@ -1138,7 +1323,6 @@
 						"Union",
 						"State",
 						"ToDoStatus",
-						"Attribute",
 						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
@@ -1264,6 +1448,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				}
@@ -1273,6 +1463,7 @@
 			],
 			"immutable": [
 				"ContactOf",
+				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
 				"Dto",
@@ -1456,6 +1647,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"Attachments": {
 					"type": "array",
 					"items": {
@@ -1593,12 +1790,19 @@
 					"items": {
 						"$ref": "#/definitions/IxAttribute"
 					}
+				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
 				}
 			},
 			"required": [
 				"Id"
 			],
 			"immutable": [
+				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
 				"Dto"
@@ -1823,6 +2027,12 @@
 						"$ref": "#/definitions/IxAttribute"
 					}
 				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
 				"ForeColor": {
 					"type": "string"
 				},
@@ -1838,6 +2048,7 @@
 				"ActionType",
 				"BackColor",
 				"ConflictIds",
+				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
 				"Divisions",
@@ -1928,7 +2139,7 @@
 		"ActionType",
 		"Auxiliaries",
 		"BackColor",
-		"Dailies",
+		"CustomProperties",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
@@ -2073,6 +2284,12 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/IxAttribute"
+			}
+		},
+		"CustomProperties": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxCustomProperty"
 			}
 		},
 		"Dependencies": {

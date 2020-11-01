@@ -20,6 +20,7 @@ type CxTextMessage {
   Description: String
   DisplayName: String
   Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
   Dependencies: [CxDependency]
 }
 
@@ -33,6 +34,7 @@ input CxTextMessageInput {
   Description: String
   DisplayName: String
   Tags: [IxAttributeInput]
+  CustomProperties: [IxCustomPropertyDO]
   Dependencies: [CxDependencyInput]
 }
 
@@ -48,7 +50,7 @@ input FilterInput {
 }
 
 type IxAttribute {
-  AttributeId: ID
+  CustomProperty: IxCustomProperty
   Value: String
   Id: ID!
   Name: String
@@ -56,10 +58,129 @@ type IxAttribute {
 }
 
 input IxAttributeInput {
-  AttributeId: ID!
+  CustomProperty: IxCustomPropertyDO!
   Value: String!
   Id: ID!
   Description: String
+}
+
+type IxCustomProperty {
+  SupportedTypes: [IxCustomPropertySupportedTypes]
+  Global: Boolean
+  AttributeType: IxCustomPropertyAttributeType
+  Dependencies: [CxDependency]
+  ObjectType: IxCustomPropertyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxCustomPropertyAttributeType {
+  String
+  Int
+  Double
+  Range
+  Lookup
+}
+
+input IxCustomPropertyDO {
+  Id: ID!
+}
+
+enum IxCustomPropertyObjectType {
+  CustomProperty
+}
+
+enum IxCustomPropertySupportedTypes {
+  Allocation
+  Task
+  Job
+  JobActivity
+  JobPriority
+  JobType
+  JobSubtype
+  Resource
+  Party
+  User
+  Employee
+  Equipment
+  Crew
+  ResourceSchedule
+  GroupAllocation
+  Address
+  Shift
+  Level
+  ResourceType
+  CostCode
+  JobCost
+  Company
+  Subcontractor
+  Plant
+  State
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  ApplicationLicense
+  VirtualResource
+  ResourceRole
+  Cell
+  TimeLineItem
+  Material
+  JobStatus
+  TypedItem
+  Unit
+  Lookup
+  Attribute
+  ResourceSubtype
+  PurchaseOrder
+  SupplyType
+  LineItem
+  Attachment
+  Requisition
+  TaskDay
+  PurchaseOrderStatus
+  Holiday
+  ResourceLocation
+  Contact
+  Route
+  Error
+  TemplateJobActivity
+  Privilege
+  TimeEntryType
+  TimeEntry
+  CompanyType
+  ConfigValue
+  ActionStatus
+  Document
+  None
+  JobCertification
+  WebPrivilege
+  ToDo
+  ActualTaskDay
+  VirtualTaskDay
+  TextMessage
+  DocumentType
+  TimeEntryLaborClass
+  ResourceSpan
+  ResourceQuantitySpan
+  PartyGroup
+  Batch
+  BatchRun
+  ToDoStatus
+  ToDoPriority
+  ProductionQuantity
+  PickupItem
+  Stop
+  TimeSheet
+  CustomProperty
 }
 
 type IxPhoneNumber {

@@ -1,0 +1,203 @@
+{
+	"id": "https://congistics.com/schema/CxCustomProperty",
+	"title": "com.congistics.cbrd.util.CxCustomProperty",
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"ErrorDetail": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
+		}
+	},
+	"immutable": [
+		"DisplayName",
+		"Dto"
+	],
+	"type": "object",
+	"properties": {
+		"Global": {
+			"type": "boolean"
+		},
+		"SupportedTypes": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"enum": [
+					"Allocation",
+					"Task",
+					"Job",
+					"JobActivity",
+					"JobPriority",
+					"JobType",
+					"JobSubtype",
+					"Resource",
+					"Party",
+					"User",
+					"Employee",
+					"Equipment",
+					"Crew",
+					"ResourceSchedule",
+					"GroupAllocation",
+					"Address",
+					"Shift",
+					"Level",
+					"ResourceType",
+					"CostCode",
+					"JobCost",
+					"Company",
+					"Subcontractor",
+					"Plant",
+					"State",
+					"Division",
+					"LaborClass",
+					"Language",
+					"License",
+					"Minority",
+					"Skill",
+					"Training",
+					"Union",
+					"ApplicationLicense",
+					"VirtualResource",
+					"ResourceRole",
+					"Cell",
+					"TimeLineItem",
+					"Material",
+					"JobStatus",
+					"TypedItem",
+					"Unit",
+					"Lookup",
+					"Attribute",
+					"ResourceSubtype",
+					"PurchaseOrder",
+					"SupplyType",
+					"LineItem",
+					"Attachment",
+					"Requisition",
+					"TaskDay",
+					"PurchaseOrderStatus",
+					"Holiday",
+					"ResourceLocation",
+					"Contact",
+					"Route",
+					"Error",
+					"TemplateJobActivity",
+					"Privilege",
+					"TimeEntryType",
+					"TimeEntry",
+					"CompanyType",
+					"ConfigValue",
+					"ActionStatus",
+					"Document",
+					"None",
+					"JobCertification",
+					"WebPrivilege",
+					"ToDo",
+					"ActualTaskDay",
+					"VirtualTaskDay",
+					"TextMessage",
+					"DocumentType",
+					"TimeEntryLaborClass",
+					"ResourceSpan",
+					"ResourceQuantitySpan",
+					"PartyGroup",
+					"Batch",
+					"BatchRun",
+					"ToDoStatus",
+					"ToDoPriority",
+					"ProductionQuantity",
+					"PickupItem",
+					"Stop",
+					"TimeSheet",
+					"CustomProperty"
+				]
+			}
+		},
+		"AttributeType": {
+			"type": "string",
+			"enum": [
+				"String",
+				"Int",
+				"Double",
+				"Range",
+				"Lookup"
+			]
+		},
+		"ObjectType": {
+			"type": "string",
+			"enum": [
+				"CustomProperty"
+			]
+		},
+		"Id": {
+			"type": "integer"
+		},
+		"Description": {
+			"type": "string"
+		},
+		"ForeColor": {
+			"type": "string"
+		},
+		"BackColor": {
+			"type": "string"
+		},
+		"Name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"Dependencies": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/CxDependency"
+			}
+		},
+		"DisplayName": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"Id",
+		"Name"
+	]
+}

@@ -1,0 +1,169 @@
+type CxCustomProperty {
+  Global: Boolean
+  SupportedTypes: [CxCustomPropertySupportedTypes]
+  AttributeType: CxCustomPropertyAttributeType
+  ObjectType: CxCustomPropertyObjectType
+  Id: ID!
+  Description: String
+  ForeColor: String
+  BackColor: String
+  Name: String
+  Dependencies: [CxDependency]
+  DisplayName: String
+}
+
+enum CxCustomPropertyAttributeType {
+  String
+  Int
+  Double
+  Range
+  Lookup
+}
+
+input CxCustomPropertyInput {
+  Global: Boolean
+  SupportedTypes: [CxCustomPropertySupportedTypes]
+  AttributeType: CxCustomPropertyAttributeType
+  ObjectType: CxCustomPropertyObjectType
+  Id: ID!
+  Description: String
+  ForeColor: String
+  BackColor: String
+  Name: String!
+  Dependencies: [CxDependencyInput]
+}
+
+enum CxCustomPropertyObjectType {
+  CustomProperty
+}
+
+enum CxCustomPropertySupportedTypes {
+  Allocation
+  Task
+  Job
+  JobActivity
+  JobPriority
+  JobType
+  JobSubtype
+  Resource
+  Party
+  User
+  Employee
+  Equipment
+  Crew
+  ResourceSchedule
+  GroupAllocation
+  Address
+  Shift
+  Level
+  ResourceType
+  CostCode
+  JobCost
+  Company
+  Subcontractor
+  Plant
+  State
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  ApplicationLicense
+  VirtualResource
+  ResourceRole
+  Cell
+  TimeLineItem
+  Material
+  JobStatus
+  TypedItem
+  Unit
+  Lookup
+  Attribute
+  ResourceSubtype
+  PurchaseOrder
+  SupplyType
+  LineItem
+  Attachment
+  Requisition
+  TaskDay
+  PurchaseOrderStatus
+  Holiday
+  ResourceLocation
+  Contact
+  Route
+  Error
+  TemplateJobActivity
+  Privilege
+  TimeEntryType
+  TimeEntry
+  CompanyType
+  ConfigValue
+  ActionStatus
+  Document
+  None
+  JobCertification
+  WebPrivilege
+  ToDo
+  ActualTaskDay
+  VirtualTaskDay
+  TextMessage
+  DocumentType
+  TimeEntryLaborClass
+  ResourceSpan
+  ResourceQuantitySpan
+  PartyGroup
+  Batch
+  BatchRun
+  ToDoStatus
+  ToDoPriority
+  ProductionQuantity
+  PickupItem
+  Stop
+  TimeSheet
+  CustomProperty
+}
+
+type CxDependency {
+  ObjectType: String
+  Ids: [Int]
+}
+
+input CxDependencyInput {
+  ObjectType: String!
+  Ids: [Int]!
+}
+
+input FilterInput {
+  name: String!
+  values: [String]
+  child: String
+  invert: Boolean = false
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+input methodInput {
+  name: String!
+  args: JSONObject
+}
+
+input methodsByItemInput {
+  indices: [Int]
+  methods: [methodInput]
+  noEdit: String
+}
+
+extend type Mutation {
+  cxCustomPropertys_onSave(data: [CxCustomPropertyInput], filters: [FilterInput], objectType: String = "CustomProperty", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxCustomProperty]
+  cxCustomPropertys_onDelete(data: [String], objectType: String = "CustomProperty", operation: String = "delete"): [CxCustomProperty]
+}
+
+extend type Query {
+  cxCustomPropertys(filters: [FilterInput], objectType: String = "CustomProperty"): [CxCustomProperty]
+}

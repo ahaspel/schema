@@ -1,19 +1,26 @@
 {
 	"Id": 0,
 	"Expiration": "2019-01-14T08:00:00",
-	"AllowedFullUsers": 900,
-	"AllowedReadOnlyUsers": 730,
-	"AllowedMobileUsers": 558,
-	"Valid": true,
+	"AllowedFullUsers": 325,
+	"AllowedReadOnlyUsers": 870,
+	"AllowedMobileUsers": 692,
+	"Valid": false,
 	"Nag": true,
-	"ErrorMessage": "BfwwZKiERI",
+	"ErrorMessage": "ZSvQUlyE",
 	"ObjectType": "ApplicationLicense",
 	"Tags": [
 		{
-			"AttributeId": 92,
-			"Value": "CQQdEPQnEZK",
+			"CustomProperty": {
+				"Id": 92
+			},
+			"Value": "fjGVmcKyfveW",
 			"Id": 0,
-			"Description": "GsNQNYYwN"
+			"Description": "wPtLjP"
+		}
+	],
+	"CustomProperties": [
+		{
+			"Id": 92
 		}
 	],
 	"__typename": "CxApplicationLicense"

@@ -45,7 +45,7 @@ enum IxAddressObjectType {
 }
 
 type IxAttribute {
-  AttributeId: ID
+  CustomProperty: IxCustomProperty
   Value: String
   Id: ID!
   Name: String
@@ -69,6 +69,7 @@ type IxCompany {
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
   Address: IxAddress
   AccountCode: String
   Divisions: [IxLookupValue]
@@ -79,6 +80,121 @@ enum IxCompanyObjectType {
   Company
   Plant
   Subcontractor
+}
+
+type IxCustomProperty {
+  SupportedTypes: [IxCustomPropertySupportedTypes]
+  Global: Boolean
+  AttributeType: IxCustomPropertyAttributeType
+  Dependencies: [CxDependency]
+  ObjectType: IxCustomPropertyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxCustomPropertyAttributeType {
+  String
+  Int
+  Double
+  Range
+  Lookup
+}
+
+enum IxCustomPropertyObjectType {
+  CustomProperty
+}
+
+enum IxCustomPropertySupportedTypes {
+  Allocation
+  Task
+  Job
+  JobActivity
+  JobPriority
+  JobType
+  JobSubtype
+  Resource
+  Party
+  User
+  Employee
+  Equipment
+  Crew
+  ResourceSchedule
+  GroupAllocation
+  Address
+  Shift
+  Level
+  ResourceType
+  CostCode
+  JobCost
+  Company
+  Subcontractor
+  Plant
+  State
+  Division
+  LaborClass
+  Language
+  License
+  Minority
+  Skill
+  Training
+  Union
+  ApplicationLicense
+  VirtualResource
+  ResourceRole
+  Cell
+  TimeLineItem
+  Material
+  JobStatus
+  TypedItem
+  Unit
+  Lookup
+  Attribute
+  ResourceSubtype
+  PurchaseOrder
+  SupplyType
+  LineItem
+  Attachment
+  Requisition
+  TaskDay
+  PurchaseOrderStatus
+  Holiday
+  ResourceLocation
+  Contact
+  Route
+  Error
+  TemplateJobActivity
+  Privilege
+  TimeEntryType
+  TimeEntry
+  CompanyType
+  ConfigValue
+  ActionStatus
+  Document
+  None
+  JobCertification
+  WebPrivilege
+  ToDo
+  ActualTaskDay
+  VirtualTaskDay
+  TextMessage
+  DocumentType
+  TimeEntryLaborClass
+  ResourceSpan
+  ResourceQuantitySpan
+  PartyGroup
+  Batch
+  BatchRun
+  ToDoStatus
+  ToDoPriority
+  ProductionQuantity
+  PickupItem
+  Stop
+  TimeSheet
+  CustomProperty
 }
 
 type IxEmail {
@@ -126,7 +242,6 @@ enum IxLookupValueObjectType {
   Union
   State
   ToDoStatus
-  Attribute
   ToDoPriority
   TimeEntryType
   CompanyType
@@ -152,6 +267,7 @@ type IxParty {
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
   Address: IxAddress
 }
 
@@ -226,6 +342,7 @@ type IxResourceType {
   ForeColor: String
   BackColor: String
   Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
 }
 
 enum IxResourceTypeFamily {

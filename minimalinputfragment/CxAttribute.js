@@ -2,7 +2,9 @@
 const CXATTRIBUTEINPUTMIN = `fragment CXATTRIBUTEINPUTMIN on CxAttribute {
   Id
   Value
-  AttributeId
+  CustomProperty {
+    Id
+  }
 }`;
 module.exports = { fragment: CXATTRIBUTEINPUTMIN,
                    fragmentName: 'CXATTRIBUTEINPUTMIN',

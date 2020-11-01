@@ -1,6 +1,209 @@
 {
 	"id": "https://congistics.com/schema/CxAttribute",
 	"title": "com.congistics.cbrd.util.CxAttribute",
+	"definitions": {
+		"CxDependency": {
+			"type": "object",
+			"properties": {
+				"ObjectType": {
+					"type": "string"
+				},
+				"Ids": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				}
+			},
+			"required": [
+				"ObjectType",
+				"Ids"
+			]
+		},
+		"IxCustomProperty": {
+			"superRequired": [
+				"Id",
+				"Name"
+			],
+			"type": "object",
+			"properties": {
+				"SupportedTypes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"Allocation",
+							"Task",
+							"Job",
+							"JobActivity",
+							"JobPriority",
+							"JobType",
+							"JobSubtype",
+							"Resource",
+							"Party",
+							"User",
+							"Employee",
+							"Equipment",
+							"Crew",
+							"ResourceSchedule",
+							"GroupAllocation",
+							"Address",
+							"Shift",
+							"Level",
+							"ResourceType",
+							"CostCode",
+							"JobCost",
+							"Company",
+							"Subcontractor",
+							"Plant",
+							"State",
+							"Division",
+							"LaborClass",
+							"Language",
+							"License",
+							"Minority",
+							"Skill",
+							"Training",
+							"Union",
+							"ApplicationLicense",
+							"VirtualResource",
+							"ResourceRole",
+							"Cell",
+							"TimeLineItem",
+							"Material",
+							"JobStatus",
+							"TypedItem",
+							"Unit",
+							"Lookup",
+							"Attribute",
+							"ResourceSubtype",
+							"PurchaseOrder",
+							"SupplyType",
+							"LineItem",
+							"Attachment",
+							"Requisition",
+							"TaskDay",
+							"PurchaseOrderStatus",
+							"Holiday",
+							"ResourceLocation",
+							"Contact",
+							"Route",
+							"Error",
+							"TemplateJobActivity",
+							"Privilege",
+							"TimeEntryType",
+							"TimeEntry",
+							"CompanyType",
+							"ConfigValue",
+							"ActionStatus",
+							"Document",
+							"None",
+							"JobCertification",
+							"WebPrivilege",
+							"ToDo",
+							"ActualTaskDay",
+							"VirtualTaskDay",
+							"TextMessage",
+							"DocumentType",
+							"TimeEntryLaborClass",
+							"ResourceSpan",
+							"ResourceQuantitySpan",
+							"PartyGroup",
+							"Batch",
+							"BatchRun",
+							"ToDoStatus",
+							"ToDoPriority",
+							"ProductionQuantity",
+							"PickupItem",
+							"Stop",
+							"TimeSheet",
+							"CustomProperty"
+						]
+					}
+				},
+				"Global": {
+					"type": "boolean"
+				},
+				"AttributeType": {
+					"type": "string",
+					"enum": [
+						"String",
+						"Int",
+						"Double",
+						"Range",
+						"Lookup"
+					]
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"CustomProperty"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			],
+			"immutable": [
+				"DisplayName",
+				"Dto"
+			]
+		},
+		"IxDto": {
+			"type": "object",
+			"properties": {
+				"ValidationStatus": {
+					"type": "string",
+					"enum": [
+						"New",
+						"Updated",
+						"Deleted",
+						"None",
+						"SerializationFailure",
+						"DatabaseFailure",
+						"ValidationFailure"
+					]
+				},
+				"ErrorMessage": {
+					"type": "string"
+				},
+				"ErrorDetail": {
+					"type": "string"
+				},
+				"IsValid": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"ValidationStatus",
+				"ErrorMessage"
+			]
+		}
+	},
 	"immutable": [
 		"DisplayName",
 		"Name"
@@ -17,8 +220,8 @@
 			"type": "string",
 			"minLength": 1
 		},
-		"AttributeId": {
-			"type": "integer"
+		"CustomProperty": {
+			"$ref": "#/definitions/IxCustomProperty"
 		},
 		"Description": {
 			"type": "string"
@@ -31,9 +234,8 @@
 		}
 	},
 	"required": [
-		"AttributeId",
+		"CustomProperty",
 		"Id",
 		"Value"
-	],
-	"definitions": {}
+	]
 }
