@@ -1,6 +1,5 @@
 type CxCustomProperty {
-  Global: Boolean
-  SupportedTypes: [CxCustomPropertySupportedTypes]
+  SupportedTypes: CxCustomPropertySupportedTypes
   AttributeType: CxCustomPropertyAttributeType
   ObjectType: CxCustomPropertyObjectType
   Id: ID!
@@ -21,8 +20,7 @@ enum CxCustomPropertyAttributeType {
 }
 
 input CxCustomPropertyInput {
-  Global: Boolean
-  SupportedTypes: [CxCustomPropertySupportedTypes]
+  SupportedTypes: CxCustomPropertySupportedTypes
   AttributeType: CxCustomPropertyAttributeType
   ObjectType: CxCustomPropertyObjectType
   Id: ID!
@@ -38,92 +36,14 @@ enum CxCustomPropertyObjectType {
 }
 
 enum CxCustomPropertySupportedTypes {
+  ActualTaskDay
   Allocation
-  Task
-  Job
-  JobActivity
-  JobPriority
-  JobType
-  JobSubtype
-  Resource
-  Party
-  User
   Employee
   Equipment
-  Crew
-  ResourceSchedule
-  GroupAllocation
-  Address
-  Shift
-  Level
-  ResourceType
-  CostCode
-  JobCost
-  Company
-  Subcontractor
-  Plant
-  State
-  Division
-  LaborClass
-  Language
-  License
-  Minority
-  Skill
-  Training
-  Union
-  ApplicationLicense
-  VirtualResource
-  ResourceRole
-  Cell
-  TimeLineItem
+  Job
+  JobActivity
   Material
-  JobStatus
-  TypedItem
-  Unit
-  Lookup
-  Attribute
-  ResourceSubtype
-  PurchaseOrder
-  SupplyType
-  LineItem
-  Attachment
-  Requisition
-  TaskDay
-  PurchaseOrderStatus
-  Holiday
-  ResourceLocation
-  Contact
-  Route
-  Error
-  TemplateJobActivity
-  Privilege
-  TimeEntryType
-  TimeEntry
-  CompanyType
-  ConfigValue
-  ActionStatus
-  Document
-  None
-  JobCertification
-  WebPrivilege
-  ToDo
-  ActualTaskDay
   VirtualTaskDay
-  TextMessage
-  DocumentType
-  TimeEntryLaborClass
-  ResourceSpan
-  ResourceQuantitySpan
-  PartyGroup
-  Batch
-  BatchRun
-  ToDoStatus
-  ToDoPriority
-  ProductionQuantity
-  PickupItem
-  Stop
-  TimeSheet
-  CustomProperty
 }
 
 type CxDependency {
