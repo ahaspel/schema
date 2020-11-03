@@ -135,17 +135,20 @@
 			"type": "object",
 			"properties": {
 				"SupportedTypes": {
-					"type": "string",
-					"enum": [
-						"ActualTaskDay",
-						"Allocation",
-						"Employee",
-						"Equipment",
-						"Job",
-						"JobActivity",
-						"Material",
-						"VirtualTaskDay"
-					]
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"ActualTaskDay",
+							"Allocation",
+							"Employee",
+							"Equipment",
+							"Job",
+							"JobActivity",
+							"Material",
+							"VirtualTaskDay"
+						]
+					}
 				},
 				"AttributeType": {
 					"type": "string",

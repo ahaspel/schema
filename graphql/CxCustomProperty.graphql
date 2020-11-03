@@ -1,5 +1,5 @@
 type CxCustomProperty {
-  SupportedTypes: CxCustomPropertySupportedTypes
+  SupportedTypes: [CxCustomPropertySupportedTypes]
   AttributeType: CxCustomPropertyAttributeType
   ObjectType: CxCustomPropertyObjectType
   Id: ID!
@@ -20,7 +20,7 @@ enum CxCustomPropertyAttributeType {
 }
 
 input CxCustomPropertyInput {
-  SupportedTypes: CxCustomPropertySupportedTypes
+  SupportedTypes: [CxCustomPropertySupportedTypes]
   AttributeType: CxCustomPropertyAttributeType
   ObjectType: CxCustomPropertyObjectType
   Id: ID!

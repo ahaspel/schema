@@ -32,7 +32,7 @@ input FilterInput {
 }
 
 type IxCustomProperty {
-  SupportedTypes: IxCustomPropertySupportedTypes
+  SupportedTypes: [IxCustomPropertySupportedTypes]
   AttributeType: IxCustomPropertyAttributeType
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
