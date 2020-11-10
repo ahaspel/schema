@@ -17,6 +17,8 @@ enum CxCustomPropertyAttributeType {
   Double
   Range
   Lookup
+  DateTime
+  Boolean
 }
 
 input CxCustomPropertyInput {

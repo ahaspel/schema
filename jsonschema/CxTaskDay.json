@@ -368,7 +368,9 @@
 						"Int",
 						"Double",
 						"Range",
-						"Lookup"
+						"Lookup",
+						"DateTime",
+						"Boolean"
 					]
 				},
 				"Dependencies": {
@@ -877,15 +879,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"JobCertification",
-						"DocumentType",
-						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -893,10 +886,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
-						"Minority",
+						"State",
+						"ToDoStatus",
+						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
+						"JobCertification",
 						"Privilege"
 					]
 				},

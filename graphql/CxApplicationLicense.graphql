@@ -76,6 +76,8 @@ enum IxCustomPropertyAttributeType {
   Double
   Range
   Lookup
+  DateTime
+  Boolean
 }
 
 input IxCustomPropertyDO {

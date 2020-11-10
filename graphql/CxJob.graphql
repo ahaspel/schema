@@ -203,6 +203,8 @@ enum IxCustomPropertyAttributeType {
   Double
   Range
   Lookup
+  DateTime
+  Boolean
 }
 
 input IxCustomPropertyDO {
@@ -409,15 +411,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  TimeEntryType
-  CompanyType
-  JobStatus
-  JobCertification
-  DocumentType
-  TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
   JobPriority
   JobSubtype
   JobType
@@ -425,10 +418,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
-  Minority
+  State
+  ToDoStatus
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
+  JobCertification
   Privilege
 }
 
