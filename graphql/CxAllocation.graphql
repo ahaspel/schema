@@ -489,25 +489,25 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
+  State
+  TimeEntryType
+  CompanyType
+  JobStatus
+  JobCertification
+  DocumentType
+  TimeEntryLaborClass
+  ToDoStatus
+  ToDoPriority
   JobPriority
   JobSubtype
-  Union
   JobType
+  Division
   LaborClass
   Language
   License
   Skill
   Training
-  State
-  ToDoStatus
-  ToDoPriority
-  JobStatus
-  TimeEntryType
-  CompanyType
-  DocumentType
-  TimeEntryLaborClass
-  Division
-  JobCertification
+  Union
   Minority
   Privilege
 }
