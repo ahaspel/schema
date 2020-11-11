@@ -18,8 +18,8 @@
 					"Id": 2
 				}
 			],
-			"Hours": 603,
-			"Minutes": 618,
+			"Hours": 924,
+			"Minutes": 689,
 			"JobActivity": {
 				"Id": 156
 			},
@@ -27,32 +27,32 @@
 				"Id": 1
 			},
 			"Auxiliaries": [],
-			"Billable": false,
-			"IsVoid": true,
-			"Punch": "PunchedIn",
+			"Billable": true,
+			"IsVoid": false,
+			"Punch": "PunchedOut",
 			"StartLocation": {
-				"Lat": -64.4328,
-				"Lng": -100.3809,
-				"Source": "Action"
+				"Lat": 63.9564,
+				"Lng": -89.9525,
+				"Source": "GPSService"
 			},
 			"EndLocation": {
-				"Lat": 38.7314,
-				"Lng": 170.1528,
-				"Source": "GPSService"
+				"Lat": 31.2597,
+				"Lng": 179.5155,
+				"Source": "Owner"
 			},
 			"PunchStart": "2019-01-14T08:00:00",
 			"StartDistance": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 765
+				"Quantity": 551
 			},
 			"PunchEnd": "2019-01-14T08:00:00",
 			"EndDistance": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 996
+				"Quantity": 758
 			},
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
@@ -60,16 +60,16 @@
 			},
 			"ObjectType": "TimeEntry",
 			"Id": 0,
-			"Name": "wKZqAvnfM",
-			"Description": "NKVIPZc",
+			"Name": "BgaAzb",
+			"Description": "gXosWDtGIwY",
 			"Tags": [
 				{
 					"CustomProperty": {
 						"Id": 92
 					},
-					"Value": "XVqTgww",
+					"Value": "rcnTWSNqhCe",
 					"Id": 0,
-					"Description": "rogoToRSURgw"
+					"Description": "ysUNah"
 				}
 			],
 			"Approvals": [
@@ -95,7 +95,7 @@
 	],
 	"Attachments": [
 		{
-			"Key": "DZCcCeNo",
+			"Key": "lrQOYYpJSad",
 			"DocumentTypes": [
 				{
 					"Id": 1
@@ -103,8 +103,8 @@
 			],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "SwpaBSpTbRK",
-			"Description": "NNGJjJiSo"
+			"Name": "OSVSxOeaLfr",
+			"Description": "ZCWVcVP"
 		}
 	],
 	"CurrentLifespan": {
@@ -117,15 +117,15 @@
 			"Id": 12
 		}
 	],
-	"Description": "sIcYSUjKuW",
+	"Description": "wPfrttX",
 	"Tags": [
 		{
 			"CustomProperty": {
 				"Id": 92
 			},
-			"Value": "XQXokew",
+			"Value": "zrgqWY",
 			"Id": 0,
-			"Description": "xvaMTIDPnlAq"
+			"Description": "MVuDXpZd"
 		}
 	],
 	"__typename": "CxTimeSheet"

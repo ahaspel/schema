@@ -15,10 +15,10 @@ enum CxCustomPropertyAttributeType {
   String
   Int
   Double
-  Range
   Lookup
   DateTime
   Boolean
+  Date
 }
 
 input CxCustomPropertyInput {
