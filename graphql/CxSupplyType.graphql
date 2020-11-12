@@ -9,7 +9,6 @@ type CxSupplyType {
   UnitCosts: [IxUnitCost]
   Id: ID!
   Description: String
-  Tags: [IxAttribute]
 }
 
 input CxSupplyTypeInput {
@@ -18,7 +17,6 @@ input CxSupplyTypeInput {
   UnitCosts: [IxUnitCostInput]
   Id: ID!
   Description: String
-  Tags: [IxAttributeInput]
 }
 
 enum CxSupplyTypeObjectType {
@@ -37,13 +35,6 @@ type IxAttribute {
   Value: String
   Id: ID!
   Name: String
-  Description: String
-}
-
-input IxAttributeInput {
-  CustomProperty: IxCustomPropertyDO!
-  Value: String!
-  Id: ID!
   Description: String
 }
 
@@ -68,10 +59,6 @@ enum IxCustomPropertyAttributeType {
   DateTime
   Boolean
   Date
-}
-
-input IxCustomPropertyDO {
-  Id: ID!
 }
 
 enum IxCustomPropertyObjectType {

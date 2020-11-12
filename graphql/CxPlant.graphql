@@ -33,7 +33,7 @@ input CxPlantInput {
   Capacities: [IxCapacityInput]
   ObjectType: CxPlantObjectType
   CompanyType: IxLookupValueDO!
-  Contacts: [IxPartyDO]
+  Contacts: [IxPartyInput]
   AccountCode: String
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
@@ -247,8 +247,17 @@ type IxParty {
   Address: IxAddress
 }
 
-input IxPartyDO {
+input IxPartyInput {
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
+  Title: String
+  ObjectType: IxPartyObjectType
   Id: ID!
+  Name: String!
+  Description: String
+  CurrentLifespan: IxRangeInput
+  Tags: [IxAttributeInput]
+  Address: IxAddressInput
 }
 
 enum IxPartyObjectType {

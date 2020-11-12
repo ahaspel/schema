@@ -403,7 +403,8 @@
 					"type": "integer"
 				},
 				"Name": {
-					"type": "string"
+					"type": "string",
+					"minLength": 1
 				},
 				"Description": {
 					"type": "string"
@@ -431,7 +432,8 @@
 				}
 			},
 			"required": [
-				"Id"
+				"Id",
+				"Name"
 			],
 			"immutable": [
 				"ContactOf",

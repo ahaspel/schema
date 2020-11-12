@@ -8,7 +8,6 @@ type CxApplicationLicense {
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
-  Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
 }
 
@@ -22,7 +21,6 @@ input CxApplicationLicenseInput {
   Nag: Boolean
   ErrorMessage: String
   ObjectType: CxApplicationLicenseObjectType
-  Tags: [IxAttributeInput]
   CustomProperties: [IxCustomPropertyDO]
 }
 
@@ -40,21 +38,6 @@ input FilterInput {
   values: [String]
   child: String
   invert: Boolean = false
-}
-
-type IxAttribute {
-  CustomProperty: IxCustomProperty
-  Value: String
-  Id: ID!
-  Name: String
-  Description: String
-}
-
-input IxAttributeInput {
-  CustomProperty: IxCustomPropertyDO!
-  Value: String!
-  Id: ID!
-  Description: String
 }
 
 type IxCustomProperty {
