@@ -436,11 +436,6 @@ type IxQuantity {
   Quantity: Float
 }
 
-input IxQuantityInput {
-  Unit: IxUnitDO!
-  Quantity: Float!
-}
-
 type IxRange {
   Start: String
   End: String
@@ -580,9 +575,7 @@ input IxTimeEntryInput {
   StartLocation: IxGeocodeInput
   EndLocation: IxGeocodeInput
   PunchStart: String
-  StartDistance: IxQuantityInput
   PunchEnd: String
-  EndDistance: IxQuantityInput
   CurrentLifespan: IxRangeInput!
   ObjectType: IxTimeEntryObjectType
   Id: ID!
@@ -617,10 +610,6 @@ type IxUnitCost {
   Unit: IxUnit
   Cost: IxMoney
   Notes: String
-}
-
-input IxUnitDO {
-  Id: ID!
 }
 
 enum IxUnitObjectType {
