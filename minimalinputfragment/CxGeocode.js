@@ -2,6 +2,7 @@
 const CXGEOCODEINPUTMIN = `fragment CXGEOCODEINPUTMIN on CxGeocode {
   Lat
   Lng
+  Id
 }`;
 module.exports = { fragment: CXGEOCODEINPUTMIN,
                    fragmentName: 'CXGEOCODEINPUTMIN',

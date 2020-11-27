@@ -175,12 +175,14 @@ type IxGeocode {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
+  Id: ID!
 }
 
 input IxGeocodeInput {
   Lat: Float!
   Lng: Float!
   Source: IxGeocodeSource
+  Id: ID!
 }
 
 enum IxGeocodeSource {

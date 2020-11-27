@@ -892,7 +892,8 @@
 		"IxGeocode": {
 			"superRequired": [
 				"Lat",
-				"Lng"
+				"Lng",
+				"Id"
 			],
 			"type": "object",
 			"properties": {
@@ -909,11 +910,15 @@
 						"Owner",
 						"GPSService"
 					]
+				},
+				"Id": {
+					"type": "integer"
 				}
 			},
 			"required": [
 				"Lat",
-				"Lng"
+				"Lng",
+				"Id"
 			]
 		},
 		"IxJob": {

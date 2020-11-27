@@ -16,11 +16,15 @@
 				"Owner",
 				"GPSService"
 			]
+		},
+		"Id": {
+			"type": "integer"
 		}
 	},
 	"required": [
 		"Lat",
-		"Lng"
+		"Lng",
+		"Id"
 	],
 	"definitions": {}
 }

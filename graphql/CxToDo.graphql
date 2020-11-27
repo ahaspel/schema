@@ -195,6 +195,7 @@ type IxGeocode {
   Lat: Float
   Lng: Float
   Source: IxGeocodeSource
+  Id: ID!
 }
 
 enum IxGeocodeSource {

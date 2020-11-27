@@ -2,12 +2,14 @@ type CxGeocode {
   Lat: Float
   Lng: Float
   Source: CxGeocodeSource
+  Id: ID!
 }
 
 input CxGeocodeInput {
   Lat: Float!
   Lng: Float!
   Source: CxGeocodeSource
+  Id: ID!
 }
 
 enum CxGeocodeSource {
