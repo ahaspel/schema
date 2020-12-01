@@ -1,7 +1,7 @@
 {
 	"ObjectType": "TimeEntry",
-	"Hours": 131,
-	"Minutes": 213,
+	"Hours": 698,
+	"Minutes": 568,
 	"Resource": {
 		"Id": 6
 	},
@@ -24,18 +24,18 @@
 		"Id": 1
 	},
 	"IsVoid": true,
-	"Billable": true,
+	"Billable": false,
 	"StartLocation": {
-		"Lat": 84.678,
-		"Lng": 14.8237,
-		"Source": "GPSService",
+		"Lat": -7.0106,
+		"Lng": -111.4467,
+		"Source": "Owner",
 		"Id": 0
 	},
 	"PunchStart": "2019-01-14T08:00:00",
 	"EndLocation": {
-		"Lat": 65.6642,
-		"Lng": -127.9306,
-		"Source": "GPSService",
+		"Lat": 50.6242,
+		"Lng": 142.1473,
+		"Source": "Action",
 		"Id": 0
 	},
 	"PunchEnd": "2019-01-14T08:00:00",
@@ -58,15 +58,15 @@
 			"Id": 12
 		}
 	],
-	"Description": "jBzbgfRSQ",
+	"Description": "QtaOMB",
 	"Tags": [
 		{
 			"CustomProperty": {
 				"Id": 92
 			},
-			"Value": "TwVVubYhf",
+			"Value": "yiYxBiBlYi",
 			"Id": 0,
-			"Description": "aLxuOLqHHhLL"
+			"Description": "LmJbsMCtNoc"
 		}
 	],
 	"__typename": "CxTimeEntry"
