@@ -72,10 +72,10 @@ type IxAddress {
 }
 
 input IxAddressInput {
-  Street: String!
+  Street: String
   StreetDetails: String
   State: IxLookupValueDO!
-  City: String!
+  City: String
   ZipCode: String
   Geocode: IxGeocodeInput
   ObjectType: IxAddressObjectType
@@ -202,19 +202,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  ToDoStatus
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Minority
+  JobCertification
   Privilege
 }
 

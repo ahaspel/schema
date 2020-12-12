@@ -62,6 +62,7 @@ enum CxUserPrivileges {
   DesktopUser
   MobileUser
   MobileManager
+  MobileJobManager
 }
 
 input FilterInput {
@@ -191,6 +192,7 @@ enum IxLevelPrivileges {
   DesktopUser
   MobileUser
   MobileManager
+  MobileJobManager
 }
 
 type IxLookupValue {
@@ -216,19 +218,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  ToDoStatus
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
-  JobCertification
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
-  Minority
+  JobCertification
   Privilege
 }
 

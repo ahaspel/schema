@@ -13,12 +13,10 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
     _ObjectType: ObjectType
   }
   Address {
-    Street
     State {
       Id
       _ObjectType: ObjectType
     }
-    City
     Id
   }
   AccountCode

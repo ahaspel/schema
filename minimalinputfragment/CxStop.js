@@ -2,12 +2,10 @@
 const CXSTOPINPUTMIN = `fragment CXSTOPINPUTMIN on CxStop {
   Id
   Address {
-    Street
     State {
       Id
       _ObjectType: ObjectType
     }
-    City
     Id
   }
 }`;

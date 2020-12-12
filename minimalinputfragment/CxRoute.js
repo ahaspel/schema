@@ -5,12 +5,10 @@ const CXROUTEINPUTMIN = `fragment CXROUTEINPUTMIN on CxRoute {
   }
   Stops {
     Address {
-      Street
       State {
         Id
         _ObjectType: ObjectType
       }
-      City
       Id
     }
     Id

@@ -101,19 +101,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"JobCertification",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
-						"Minority",
+						"JobCertification",
 						"Privilege"
 					]
 				},
@@ -153,8 +153,7 @@
 			]
 		},
 		"Street": {
-			"type": "string",
-			"minLength": 1
+			"type": "string"
 		},
 		"StreetDetails": {
 			"type": "string"
@@ -163,8 +162,7 @@
 			"type": "string"
 		},
 		"City": {
-			"type": "string",
-			"minLength": 1
+			"type": "string"
 		},
 		"State": {
 			"$ref": "#/definitions/IxLookupValue"
@@ -174,9 +172,7 @@
 		}
 	},
 	"required": [
-		"City",
 		"Id",
-		"State",
-		"Street"
+		"State"
 	]
 }

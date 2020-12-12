@@ -62,16 +62,13 @@
 		},
 		"IxAddress": {
 			"superRequired": [
-				"City",
 				"Id",
-				"State",
-				"Street"
+				"State"
 			],
 			"type": "object",
 			"properties": {
 				"Street": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"StreetDetails": {
 					"type": "string"
@@ -80,8 +77,7 @@
 					"$ref": "#/definitions/IxLookupValue"
 				},
 				"City": {
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"ZipCode": {
 					"type": "string"
@@ -100,9 +96,7 @@
 				}
 			},
 			"required": [
-				"Street",
 				"State",
-				"City",
 				"Id"
 			]
 		},
@@ -390,19 +384,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
+						"ToDoStatus",
+						"ToDoPriority",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
-						"JobCertification",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"ToDoStatus",
-						"ToDoPriority",
-						"Minority",
+						"JobCertification",
 						"Privilege"
 					]
 				},
