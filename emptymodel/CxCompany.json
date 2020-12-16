@@ -4,7 +4,8 @@
 	},
 	"Contacts": [],
 	"AccountCode": "",
-	"ObjectType": "Company",
+	"ObjectType": "Plant",
+	"Default": false,
 	"PhoneNumbers": [],
 	"SMSNumbers": [],
 	"Emails": [],
@@ -21,7 +22,7 @@
 		"Geocode": {
 			"Lat": 0,
 			"Lng": 0,
-			"Source": "GPSService",
+			"Source": "Owner",
 			"Id": 0
 		},
 		"ObjectType": "Address",

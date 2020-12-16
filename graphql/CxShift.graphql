@@ -5,8 +5,8 @@ type CxDependency {
 
 type CxShift {
   Days: [IxShiftDay]
-  Default: Boolean
   UseHolidays: Boolean
+  Default: Boolean
   Name: String
   ObjectType: CxShiftObjectType
   Id: ID!
@@ -17,8 +17,8 @@ type CxShift {
 
 input CxShiftInput {
   Days: [IxShiftDayInput]!
-  Default: Boolean
   UseHolidays: Boolean
+  Default: Boolean
   Name: String!
   ObjectType: CxShiftObjectType
   Id: ID!

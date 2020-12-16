@@ -23,6 +23,7 @@ enum CxActionStatusActionStatusType {
 
 input CxActionStatusInput {
   ActionStatusType: CxActionStatusActionStatusType
+  Default: Boolean
   ObjectType: CxActionStatusObjectType
   Id: ID!
   Description: String
