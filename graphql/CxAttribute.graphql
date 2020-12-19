@@ -37,8 +37,8 @@ type IxCustomProperty {
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String

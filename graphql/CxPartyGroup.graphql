@@ -52,8 +52,8 @@ type IxAttribute {
   CustomProperty: IxCustomProperty
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxCustomProperty {
@@ -62,8 +62,8 @@ type IxCustomProperty {
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -99,8 +99,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -120,8 +120,8 @@ type IxLookupValue {
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -161,8 +161,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
@@ -185,8 +185,8 @@ type IxPersistable {
   Dependencies: [CxDependency]
   ObjectType: IxPersistableObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
 }
 
@@ -203,8 +203,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {
