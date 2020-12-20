@@ -414,6 +414,14 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
+  State
+  TimeEntryType
+  CompanyType
+  JobStatus
+  ToDoStatus
+  ToDoPriority
+  DocumentType
+  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -425,14 +433,6 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
-  State
-  ToDoStatus
-  ToDoPriority
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobCertification
   Privilege
 }
