@@ -69,12 +69,11 @@ type IxAttribute {
 type IxCompany {
   CompanyType: IxLookupValue
   Supplier: Boolean
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
-  SMSNumbers: [IxPhoneNumber]
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
+  PartyGroups: [IxPartyGroup]
+  SMSGroupNumbers: [IxPhoneNumber]
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
@@ -85,9 +84,13 @@ type IxCompany {
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
+  Parties: [IxParty]
   Default: Boolean
 }
 
@@ -299,14 +302,6 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
-  State
-  TimeEntryType
-  CompanyType
-  JobStatus
-  ToDoStatus
-  ToDoPriority
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -318,6 +313,14 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  ToDoStatus
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
   Privilege
 }
@@ -333,12 +336,11 @@ input IxMoneyInput {
 }
 
 type IxParty {
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
-  SMSNumbers: [IxPhoneNumber]
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
+  PartyGroups: [IxPartyGroup]
+  SMSGroupNumbers: [IxPhoneNumber]
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
@@ -349,6 +351,15 @@ type IxParty {
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
+}
+
+type IxPartyGroup {
+  Parties: [IxParty]
+  SMSNumbers: [IxPhoneNumber]
+  SMSGroupNumbers: [IxPhoneNumber]
 }
 
 enum IxPartyObjectType {

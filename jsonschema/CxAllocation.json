@@ -245,24 +245,6 @@
 				"Supplier": {
 					"type": "boolean"
 				},
-				"Emails": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxEmail"
-					}
-				},
-				"PhoneNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
-				"SMSNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
 				"Title": {
 					"type": "string"
 				},
@@ -274,6 +256,18 @@
 				},
 				"IsContact": {
 					"type": "boolean"
+				},
+				"PartyGroups": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPartyGroup"
+					}
+				},
+				"SMSGroupNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
 				},
 				"Dependencies": {
 					"type": "array",
@@ -319,6 +313,24 @@
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
 				},
+				"Emails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
 				"AccountCode": {
 					"type": "string"
 				},
@@ -329,6 +341,12 @@
 					}
 				},
 				"Contacts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				},
+				"Parties": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/IxParty"
@@ -1234,14 +1252,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"ToDoStatus",
-						"ToDoPriority",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -1253,6 +1263,14 @@
 						"Skill",
 						"Training",
 						"Union",
+						"State",
+						"ToDoStatus",
+						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
 						"Privilege"
 					]
@@ -1306,24 +1324,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"Emails": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxEmail"
-					}
-				},
-				"PhoneNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
-				"SMSNumbers": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxPhoneNumber"
-					}
-				},
 				"Title": {
 					"type": "string"
 				},
@@ -1335,6 +1335,18 @@
 				},
 				"IsContact": {
 					"type": "boolean"
+				},
+				"PartyGroups": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPartyGroup"
+					}
+				},
+				"SMSGroupNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
 				},
 				"Dependencies": {
 					"type": "array",
@@ -1380,6 +1392,24 @@
 				},
 				"Address": {
 					"$ref": "#/definitions/IxAddress"
+				},
+				"Emails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
 				}
 			},
 			"required": [
@@ -1392,8 +1422,33 @@
 				"DisplayName",
 				"Dto",
 				"IsContact",
+				"PartyGroups",
+				"SMSGroupNumbers",
 				"SMSNumbers"
 			]
+		},
+		"IxPartyGroup": {
+			"type": "object",
+			"properties": {
+				"Parties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSGroupNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				}
+			}
 		},
 		"IxPersistable": {
 			"type": "object",

@@ -11,6 +11,8 @@ type CxParty {
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
+  PartyGroups: [IxPartyGroup]
+  SMSGroupNumbers: [IxPhoneNumber]
   Address: IxAddress
   ObjectType: CxPartyObjectType
   CurrentLifespan: IxRange
@@ -184,14 +186,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  TimeEntryType
-  CompanyType
-  JobStatus
-  ToDoStatus
-  ToDoPriority
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -203,8 +197,50 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  ToDoStatus
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
   Privilege
+}
+
+type IxParty {
+  Title: String
+  ContactOf: [IxPersistable]
+  IsContact: Boolean
+  PartyGroups: [IxPartyGroup]
+  SMSGroupNumbers: [IxPhoneNumber]
+  Dependencies: [CxDependency]
+  ObjectType: IxPartyObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  CurrentLifespan: IxRange
+  Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
+  Address: IxAddress
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
+}
+
+type IxPartyGroup {
+  Parties: [IxParty]
+  SMSNumbers: [IxPhoneNumber]
+  SMSGroupNumbers: [IxPhoneNumber]
+}
+
+enum IxPartyObjectType {
+  Party
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxPersistable {

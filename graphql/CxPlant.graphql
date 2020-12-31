@@ -12,6 +12,8 @@ type CxPlant {
   Contacts: [IxParty]
   AccountCode: String
   Default: Boolean
+  Parties: [IxParty]
+  SMSGroupNumbers: [IxPhoneNumber]
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
   Emails: [IxEmail]
@@ -19,6 +21,7 @@ type CxPlant {
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
+  PartyGroups: [IxPartyGroup]
   Address: IxAddress
   CurrentLifespan: IxRange
   Id: ID!
@@ -37,6 +40,7 @@ input CxPlantInput {
   Contacts: [IxPartyInput]
   AccountCode: String
   Default: Boolean
+  Parties: [IxPartyInput]
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!
@@ -209,14 +213,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  State
-  TimeEntryType
-  CompanyType
-  JobStatus
-  ToDoStatus
-  ToDoPriority
-  DocumentType
-  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -228,17 +224,24 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
+  State
+  ToDoStatus
+  ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
   Privilege
 }
 
 type IxParty {
-  Emails: [IxEmail]
-  PhoneNumbers: [IxPhoneNumber]
-  SMSNumbers: [IxPhoneNumber]
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
+  PartyGroups: [IxPartyGroup]
+  SMSGroupNumbers: [IxPhoneNumber]
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
@@ -249,11 +252,18 @@ type IxParty {
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
+  Emails: [IxEmail]
+  PhoneNumbers: [IxPhoneNumber]
+  SMSNumbers: [IxPhoneNumber]
+}
+
+type IxPartyGroup {
+  Parties: [IxParty]
+  SMSNumbers: [IxPhoneNumber]
+  SMSGroupNumbers: [IxPhoneNumber]
 }
 
 input IxPartyInput {
-  Emails: [IxEmailInput]
-  PhoneNumbers: [IxPhoneNumberInput]
   Title: String
   ObjectType: IxPartyObjectType
   Id: ID!
@@ -262,6 +272,8 @@ input IxPartyInput {
   CurrentLifespan: IxRangeInput
   Tags: [IxAttributeInput]
   Address: IxAddressInput
+  Emails: [IxEmailInput]
+  PhoneNumbers: [IxPhoneNumberInput]
 }
 
 enum IxPartyObjectType {

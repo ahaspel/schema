@@ -11,10 +11,8 @@
 	},
 	"IsMover": false,
 	"Person": {
-		"Emails": [],
-		"PhoneNumbers": [],
 		"Title": "",
-		"ObjectType": "Plant",
+		"ObjectType": "Subcontractor",
 		"Id": 0,
 		"Name": "",
 		"Description": "",
@@ -34,12 +32,14 @@
 			"Geocode": {
 				"Lat": 0,
 				"Lng": 0,
-				"Source": "Owner",
+				"Source": "Action",
 				"Id": 0
 			},
 			"ObjectType": "Address",
 			"Id": 0
-		}
+		},
+		"Emails": [],
+		"PhoneNumbers": []
 	},
 	"CurrentLifespan": {
 		"Start": "",

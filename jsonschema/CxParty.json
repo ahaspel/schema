@@ -275,14 +275,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"ToDoStatus",
-						"ToDoPriority",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -294,6 +286,14 @@
 						"Skill",
 						"Training",
 						"Union",
+						"State",
+						"ToDoStatus",
+						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
 						"Privilege"
 					]
@@ -320,6 +320,139 @@
 			"required": [
 				"Id"
 			]
+		},
+		"IxParty": {
+			"superRequired": [
+				"Id",
+				"Name"
+			],
+			"type": "object",
+			"properties": {
+				"Title": {
+					"type": "string"
+				},
+				"ContactOf": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPersistable"
+					}
+				},
+				"IsContact": {
+					"type": "boolean"
+				},
+				"PartyGroups": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPartyGroup"
+					}
+				},
+				"SMSGroupNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Party",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute"
+					}
+				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
+				"Address": {
+					"$ref": "#/definitions/IxAddress"
+				},
+				"Emails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxEmail"
+					}
+				},
+				"PhoneNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				}
+			},
+			"required": [
+				"Id"
+			],
+			"immutable": [
+				"ContactOf",
+				"CustomProperties",
+				"Dependencies",
+				"DisplayName",
+				"Dto",
+				"IsContact",
+				"PartyGroups",
+				"SMSGroupNumbers",
+				"SMSNumbers"
+			]
+		},
+		"IxPartyGroup": {
+			"type": "object",
+			"properties": {
+				"Parties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				},
+				"SMSNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				},
+				"SMSGroupNumbers": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxPhoneNumber"
+					}
+				}
+			}
 		},
 		"IxPersistable": {
 			"type": "object",
@@ -417,6 +550,8 @@
 		"DisplayName",
 		"Dto",
 		"IsContact",
+		"PartyGroups",
+		"SMSGroupNumbers",
 		"SMSNumbers"
 	],
 	"type": "object",
@@ -454,6 +589,18 @@
 		},
 		"IsContact": {
 			"type": "boolean"
+		},
+		"PartyGroups": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxPartyGroup"
+			}
+		},
+		"SMSGroupNumbers": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IxPhoneNumber"
+			}
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"
