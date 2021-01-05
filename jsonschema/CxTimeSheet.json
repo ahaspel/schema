@@ -1386,12 +1386,6 @@
 			],
 			"type": "object",
 			"properties": {
-				"Hours": {
-					"type": "number"
-				},
-				"Minutes": {
-					"type": "integer"
-				},
 				"Resource": {
 					"$ref": "#/definitions/IxResource"
 				},
@@ -1407,11 +1401,11 @@
 						"$ref": "#/definitions/IxCostCode"
 					}
 				},
-				"Auxiliaries": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResource"
-					}
+				"Hours": {
+					"type": "number"
+				},
+				"Minutes": {
+					"type": "integer"
 				},
 				"JobActivity": {
 					"$ref": "#/definitions/IxJobActivity"
@@ -1419,25 +1413,20 @@
 				"Owner": {
 					"$ref": "#/definitions/IxParty"
 				},
-				"IsVoid": {
-					"type": "boolean"
+				"Auxiliaries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResource"
+					}
 				},
 				"Billable": {
 					"type": "boolean"
 				},
-				"StartLocation": {
-					"$ref": "#/definitions/IxGeocode"
+				"IsVoid": {
+					"type": "boolean"
 				},
-				"PunchStart": {
-					"type": "string",
-					"format": "date-time"
-				},
-				"EndLocation": {
-					"$ref": "#/definitions/IxGeocode"
-				},
-				"PunchEnd": {
-					"type": "string",
-					"format": "date-time"
+				"ApprovedByOwner": {
+					"type": "boolean"
 				},
 				"Punch": {
 					"type": "string",
@@ -1447,14 +1436,25 @@
 						"PunchedOut"
 					]
 				},
+				"StartLocation": {
+					"$ref": "#/definitions/IxGeocode"
+				},
+				"EndLocation": {
+					"$ref": "#/definitions/IxGeocode"
+				},
+				"PunchStart": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"StartDistance": {
 					"$ref": "#/definitions/IxQuantity"
 				},
+				"PunchEnd": {
+					"type": "string",
+					"format": "date-time"
+				},
 				"EndDistance": {
 					"$ref": "#/definitions/IxQuantity"
-				},
-				"ApprovedByOwner": {
-					"type": "boolean"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
