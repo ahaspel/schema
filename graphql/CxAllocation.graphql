@@ -400,6 +400,7 @@ type IxJob {
   Subtypes: [IxLookupValue]
   Owner: IxParty
   Manager: IxParty
+  DefaultShift: IxShift
   JobCosts: [IxJobCost]
   TotalCost: IxMoney
   EstimatedLaborHours: Float
@@ -427,6 +428,7 @@ type IxJobActivity {
   Job: IxJob
   Completed: Boolean
   SortOrder: Int
+  DefaultShift: IxShift
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!

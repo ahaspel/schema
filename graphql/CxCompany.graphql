@@ -5,7 +5,6 @@ type CxCompany {
   AccountCode: String
   ObjectType: CxCompanyObjectType
   Default: Boolean
-  Parties: [IxParty]
   SMSGroupNumbers: [IxPhoneNumber]
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
@@ -14,7 +13,6 @@ type CxCompany {
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
-  PartyGroups: [IxPartyGroup]
   Address: IxAddress
   CurrentLifespan: IxRange
   Id: ID!
@@ -32,7 +30,6 @@ input CxCompanyInput {
   AccountCode: String
   ObjectType: CxCompanyObjectType
   Default: Boolean
-  Parties: [IxPartyInput]
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!

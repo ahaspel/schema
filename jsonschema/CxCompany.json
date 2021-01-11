@@ -558,7 +558,6 @@
 		"DisplayName",
 		"Dto",
 		"IsContact",
-		"PartyGroups",
 		"SMSGroupNumbers",
 		"SMSNumbers",
 		"Supplier"
@@ -590,12 +589,6 @@
 		},
 		"Default": {
 			"type": "boolean"
-		},
-		"Parties": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxParty"
-			}
 		},
 		"SMSGroupNumbers": {
 			"type": "array",
@@ -636,12 +629,6 @@
 		},
 		"IsContact": {
 			"type": "boolean"
-		},
-		"PartyGroups": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/IxPartyGroup"
-			}
 		},
 		"Address": {
 			"$ref": "#/definitions/IxAddress"

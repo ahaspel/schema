@@ -12,7 +12,6 @@ type CxPlant {
   Contacts: [IxParty]
   AccountCode: String
   Default: Boolean
-  Parties: [IxParty]
   SMSGroupNumbers: [IxPhoneNumber]
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
@@ -21,7 +20,6 @@ type CxPlant {
   Title: String
   ContactOf: [IxPersistable]
   IsContact: Boolean
-  PartyGroups: [IxPartyGroup]
   Address: IxAddress
   CurrentLifespan: IxRange
   Id: ID!
@@ -40,7 +38,6 @@ input CxPlantInput {
   Contacts: [IxPartyInput]
   AccountCode: String
   Default: Boolean
-  Parties: [IxPartyInput]
   PhoneNumbers: [IxPhoneNumberInput]
   Emails: [IxEmailInput]
   Name: String!

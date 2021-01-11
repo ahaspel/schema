@@ -552,6 +552,9 @@
 				"Manager": {
 					"$ref": "#/definitions/IxParty"
 				},
+				"DefaultShift": {
+					"$ref": "#/definitions/IxShift"
+				},
 				"JobCosts": {
 					"type": "array",
 					"items": {
@@ -659,6 +662,9 @@
 				},
 				"SortOrder": {
 					"type": "integer"
+				},
+				"DefaultShift": {
+					"$ref": "#/definitions/IxShift"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -1090,6 +1096,91 @@
 				}
 			},
 			"immutable": [
+				"Duration"
+			]
+		},
+		"IxShift": {
+			"type": "object",
+			"properties": {
+				"Days": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxShiftDay"
+					}
+				},
+				"UseHolidays": {
+					"type": "boolean"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Shift"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"Default": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"Days",
+				"Id"
+			]
+		},
+		"IxShiftDay": {
+			"superRequired": [
+				"Day",
+				"Start",
+				"Duration"
+			],
+			"type": "object",
+			"properties": {
+				"Day": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 6
+				},
+				"DayByName": {
+					"type": "string"
+				},
+				"Start": {
+					"type": "string",
+					"minLength": 5
+				},
+				"Duration": {
+					"type": "string",
+					"minLength": 5
+				},
+				"Valid": {
+					"type": "boolean"
+				},
+				"End": {
+					"type": "string"
+				},
+				"Included": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"Day",
+				"Start",
 				"Duration"
 			]
 		},

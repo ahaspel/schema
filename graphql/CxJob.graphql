@@ -11,6 +11,7 @@ type CxJob {
   Subtypes: [IxLookupValue]
   Certifications: [IxLookupValue]
   Address: IxAddress
+  DefaultShift: IxShift
   AccountCode: String
   Contacts: [IxParty]
   Attachments: [IxDocument]
@@ -47,6 +48,7 @@ input CxJobInput {
   Subtypes: [IxLookupValueDO]!
   Certifications: [IxLookupValueDO]
   Address: IxAddressInput!
+  DefaultShift: IxShiftDO
   AccountCode: String!
   Contacts: [IxPartyInput]
   Attachments: [IxDocumentInput]
@@ -304,6 +306,7 @@ type IxJob {
   Subtypes: [IxLookupValue]
   Owner: IxParty
   Manager: IxParty
+  DefaultShift: IxShift
   JobCosts: [IxJobCost]
   TotalCost: IxMoney
   EstimatedLaborHours: Float
@@ -331,6 +334,7 @@ type IxJobActivity {
   Job: IxJob
   Completed: Boolean
   SortOrder: Int
+  DefaultShift: IxShift
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -346,6 +350,7 @@ type IxJobActivity {
 
 input IxJobActivityInput {
   Completed: Boolean
+  DefaultShift: IxShiftDO
   ObjectType: IxJobActivityObjectType
   Id: ID!
   Name: String!
@@ -543,6 +548,36 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
+}
+
+type IxShift {
+  Days: [IxShiftDay]
+  UseHolidays: Boolean
+  Dependencies: [CxDependency]
+  ObjectType: IxShiftObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  Default: Boolean
+}
+
+type IxShiftDay {
+  Day: Int
+  DayByName: String
+  Start: String
+  Duration: String
+  Valid: Boolean
+  End: String
+  Included: Boolean
+}
+
+input IxShiftDO {
+  Id: ID!
+}
+
+enum IxShiftObjectType {
+  Shift
 }
 
 type IxUnit {

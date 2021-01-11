@@ -985,6 +985,9 @@
 				"Manager": {
 					"$ref": "#/definitions/IxParty"
 				},
+				"DefaultShift": {
+					"$ref": "#/definitions/IxShift"
+				},
 				"JobCosts": {
 					"type": "array",
 					"items": {
@@ -1092,6 +1095,9 @@
 				},
 				"SortOrder": {
 					"type": "integer"
+				},
+				"DefaultShift": {
+					"$ref": "#/definitions/IxShift"
 				},
 				"Dependencies": {
 					"type": "array",

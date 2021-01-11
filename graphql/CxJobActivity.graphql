@@ -10,6 +10,7 @@ type CxJobActivity {
   SortOrder: Int
   ForeColor: String
   BackColor: String
+  DefaultShift: IxShift
   ObjectType: CxJobActivityObjectType
   CurrentLifespan: IxRange
   Id: ID!
@@ -26,6 +27,7 @@ input CxJobActivityInput {
   Completed: Boolean
   ForeColor: String
   BackColor: String
+  DefaultShift: IxShiftDO
   ObjectType: CxJobActivityObjectType
   CurrentLifespan: IxRangeInput
   Id: ID!
@@ -219,6 +221,7 @@ type IxJob {
   Subtypes: [IxLookupValue]
   Owner: IxParty
   Manager: IxParty
+  DefaultShift: IxShift
   JobCosts: [IxJobCost]
   TotalCost: IxMoney
   EstimatedLaborHours: Float
@@ -246,6 +249,7 @@ type IxJobActivity {
   Job: IxJob
   Completed: Boolean
   SortOrder: Int
+  DefaultShift: IxShift
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -401,6 +405,36 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
+}
+
+type IxShift {
+  Days: [IxShiftDay]
+  UseHolidays: Boolean
+  Dependencies: [CxDependency]
+  ObjectType: IxShiftObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  Default: Boolean
+}
+
+type IxShiftDay {
+  Day: Int
+  DayByName: String
+  Start: String
+  Duration: String
+  Valid: Boolean
+  End: String
+  Included: Boolean
+}
+
+input IxShiftDO {
+  Id: ID!
+}
+
+enum IxShiftObjectType {
+  Shift
 }
 
 type IxUnit {

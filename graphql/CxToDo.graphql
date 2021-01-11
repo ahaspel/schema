@@ -220,6 +220,7 @@ type IxJob {
   Subtypes: [IxLookupValue]
   Owner: IxParty
   Manager: IxParty
+  DefaultShift: IxShift
   JobCosts: [IxJobCost]
   TotalCost: IxMoney
   EstimatedLaborHours: Float
@@ -247,6 +248,7 @@ type IxJobActivity {
   Job: IxJob
   Completed: Boolean
   SortOrder: Int
+  DefaultShift: IxShift
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -491,6 +493,32 @@ enum IxResourceTypeFamily {
 
 enum IxResourceTypeObjectType {
   ResourceType
+}
+
+type IxShift {
+  Days: [IxShiftDay]
+  UseHolidays: Boolean
+  Dependencies: [CxDependency]
+  ObjectType: IxShiftObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  Default: Boolean
+}
+
+type IxShiftDay {
+  Day: Int
+  DayByName: String
+  Start: String
+  Duration: String
+  Valid: Boolean
+  End: String
+  Included: Boolean
+}
+
+enum IxShiftObjectType {
+  Shift
 }
 
 type IxUnit {
