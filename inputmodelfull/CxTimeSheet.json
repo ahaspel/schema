@@ -18,8 +18,8 @@
 					"Id": 2
 				}
 			],
-			"Hours": 329,
-			"Minutes": 181,
+			"Hours": 193,
+			"Minutes": 368,
 			"JobActivity": {
 				"Id": 156
 			},
@@ -27,19 +27,19 @@
 				"Id": 1
 			},
 			"Auxiliaries": [],
-			"Billable": true,
-			"IsVoid": true,
-			"Punch": "Manual",
+			"Billable": false,
+			"IsVoid": false,
+			"Punch": "PunchedOut",
 			"StartLocation": {
-				"Lat": 8.412,
-				"Lng": 115.1663,
-				"Source": "Owner",
+				"Lat": -39.3743,
+				"Lng": -27.9004,
+				"Source": "GPSService",
 				"Id": 0
 			},
 			"EndLocation": {
-				"Lat": 9.41,
-				"Lng": 63.3926,
-				"Source": "GPSService",
+				"Lat": -1.5811,
+				"Lng": -120.0949,
+				"Source": "Action",
 				"Id": 0
 			},
 			"PunchStart": "2019-01-14T08:00:00",
@@ -50,16 +50,16 @@
 			},
 			"ObjectType": "TimeEntry",
 			"Id": 0,
-			"Name": "kIqFEBZVSd",
-			"Description": "YmJvbMotY",
+			"Name": "jTNZAeYzqc",
+			"Description": "dZYBUvhjGyf",
 			"Tags": [
 				{
 					"CustomProperty": {
 						"Id": 92
 					},
-					"Value": "iDGEmjWn",
+					"Value": "daTFmMTpQ",
 					"Id": 0,
-					"Description": "LwwABkC"
+					"Description": "htfusqWOfgO"
 				}
 			],
 			"Approvals": [
@@ -85,7 +85,7 @@
 	],
 	"Attachments": [
 		{
-			"Key": "ZSxCJeVOOHb",
+			"Key": "AtNEkWbwVo",
 			"DocumentTypes": [
 				{
 					"Id": 1
@@ -93,8 +93,8 @@
 			],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "OCESEDEw",
-			"Description": "TAoGdYgPTOqA"
+			"Name": "WZzHRbOyGA",
+			"Description": "URArbJ"
 		}
 	],
 	"CurrentLifespan": {
@@ -107,15 +107,15 @@
 			"Id": 12
 		}
 	],
-	"Description": "FvSOTTjCTg",
+	"Description": "HqelECWFFW",
 	"Tags": [
 		{
 			"CustomProperty": {
 				"Id": 92
 			},
-			"Value": "RZishOEKpDB",
+			"Value": "XRBslibBr",
 			"Id": 0,
-			"Description": "hrjemMbEMOm"
+			"Description": "CtoVpcZpAVR"
 		}
 	],
 	"__typename": "CxTimeSheet"
