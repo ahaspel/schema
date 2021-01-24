@@ -18,7 +18,7 @@ type CxPlant {
   Emails: [IxEmail]
   Name: String
   Title: String
-  ContactOf: [IxPersistable]
+  ContactOf: [IxContacts]
   IsContact: Boolean
   Address: IxAddress
   CurrentLifespan: IxRange
@@ -114,6 +114,24 @@ input IxCapacityInput {
   ResourceSubtype: IxResourceSubtypeDO
   Amount: Float
   Id: ID!
+}
+
+type IxContacts {
+  Contacts: [IxParty]
+  Dependencies: [CxDependency]
+  ObjectType: IxContactsObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+}
+
+enum IxContactsObjectType {
+  Employee
+  Job
+  Company
+  Plant
+  Subcontractor
 }
 
 type IxCustomProperty {
@@ -235,7 +253,7 @@ enum IxLookupValueObjectType {
 
 type IxParty {
   Title: String
-  ContactOf: [IxPersistable]
+  ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
   SMSGroupNumbers: [IxPhoneNumber]
@@ -258,10 +276,25 @@ type IxPartyGroup {
   Parties: [IxParty]
   SMSNumbers: [IxPhoneNumber]
   SMSGroupNumbers: [IxPhoneNumber]
+  Dependencies: [CxDependency]
+  ObjectType: IxPartyGroupObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+}
+
+input IxPartyGroupDO {
+  Id: ID!
+}
+
+enum IxPartyGroupObjectType {
+  PartyGroup
 }
 
 input IxPartyInput {
   Title: String
+  PartyGroups: [IxPartyGroupDO]
   ObjectType: IxPartyObjectType
   Id: ID!
   Name: String!
@@ -275,23 +308,6 @@ input IxPartyInput {
 
 enum IxPartyObjectType {
   Party
-  Company
-  Plant
-  Subcontractor
-}
-
-type IxPersistable {
-  Dependencies: [CxDependency]
-  ObjectType: IxPersistableObjectType
-  Id: ID!
-  Name: String
-  Description: String
-  DisplayName: String
-}
-
-enum IxPersistableObjectType {
-  Employee
-  Job
   Company
   Plant
   Subcontractor

@@ -47,7 +47,7 @@ type IxCompany {
   CompanyType: IxLookupValue
   Supplier: Boolean
   Title: String
-  ContactOf: [IxPersistable]
+  ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
   SMSGroupNumbers: [IxPhoneNumber]
@@ -67,7 +67,6 @@ type IxCompany {
   AccountCode: String
   Divisions: [IxLookupValue]
   Contacts: [IxParty]
-  Parties: [IxParty]
   Default: Boolean
 }
 
@@ -76,6 +75,24 @@ input IxCompanyDO {
 }
 
 enum IxCompanyObjectType {
+  Company
+  Plant
+  Subcontractor
+}
+
+type IxContacts {
+  Contacts: [IxParty]
+  Dependencies: [CxDependency]
+  ObjectType: IxContactsObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+}
+
+enum IxContactsObjectType {
+  Employee
+  Job
   Company
   Plant
   Subcontractor
@@ -198,7 +215,7 @@ enum IxLookupValueObjectType {
 
 type IxParty {
   Title: String
-  ContactOf: [IxPersistable]
+  ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
   SMSGroupNumbers: [IxPhoneNumber]
@@ -221,27 +238,20 @@ type IxPartyGroup {
   Parties: [IxParty]
   SMSNumbers: [IxPhoneNumber]
   SMSGroupNumbers: [IxPhoneNumber]
-}
-
-enum IxPartyObjectType {
-  Party
-  Company
-  Plant
-  Subcontractor
-}
-
-type IxPersistable {
   Dependencies: [CxDependency]
-  ObjectType: IxPersistableObjectType
+  ObjectType: IxPartyGroupObjectType
   Id: ID!
   Name: String
   Description: String
   DisplayName: String
 }
 
-enum IxPersistableObjectType {
-  Employee
-  Job
+enum IxPartyGroupObjectType {
+  PartyGroup
+}
+
+enum IxPartyObjectType {
+  Party
   Company
   Plant
   Subcontractor

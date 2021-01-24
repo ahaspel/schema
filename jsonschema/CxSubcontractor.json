@@ -94,6 +94,48 @@
 				"Name"
 			]
 		},
+		"IxContacts": {
+			"type": "object",
+			"properties": {
+				"Contacts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Employee",
+						"Job",
+						"Company",
+						"Plant",
+						"Subcontractor"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"DisplayName": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxCustomProperty": {
 			"superRequired": [
 				"Id",
@@ -353,7 +395,7 @@
 				"ContactOf": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/IxPersistable"
+						"$ref": "#/definitions/IxContacts"
 					}
 				},
 				"IsContact": {
@@ -447,7 +489,6 @@
 				"DisplayName",
 				"Dto",
 				"IsContact",
-				"PartyGroups",
 				"SMSGroupNumbers",
 				"SMSNumbers"
 			]
@@ -472,12 +513,7 @@
 					"items": {
 						"$ref": "#/definitions/IxPhoneNumber"
 					}
-				}
-			}
-		},
-		"IxPersistable": {
-			"type": "object",
-			"properties": {
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -487,11 +523,7 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"Employee",
-						"Job",
-						"Company",
-						"Plant",
-						"Subcontractor"
+						"PartyGroup"
 					]
 				},
 				"Id": {
@@ -880,7 +912,7 @@
 		"ContactOf": {
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/IxPersistable"
+				"$ref": "#/definitions/IxContacts"
 			}
 		},
 		"IsContact": {
