@@ -25,6 +25,7 @@ enum CxObjectPrivilegeObjectPrivileges {
 type CxUser {
   Party: IxParty
   Login: String
+  PartyGroups: [IxPartyGroup]
   ResourceId: ID
   Active: Boolean
   Level: IxLevel
@@ -43,6 +44,7 @@ type CxUser {
 input CxUserInput {
   Party: IxPartyDO!
   Login: String!
+  PartyGroups: [IxPartyGroupDO]
   Active: Boolean
   Level: IxLevelDO!
   Privileges: [CxUserPrivileges]
@@ -91,8 +93,8 @@ type IxAttribute {
   CustomProperty: IxCustomProperty
   Value: String
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 input IxAttributeInput {
@@ -107,8 +109,8 @@ type IxContacts {
   Dependencies: [CxDependency]
   ObjectType: IxContactsObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
 }
 
@@ -126,8 +128,8 @@ type IxCustomProperty {
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -167,8 +169,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxGeocode {
@@ -191,8 +193,8 @@ type IxLevel {
   Dependencies: [CxDependency]
   ObjectType: IxLevelObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -217,8 +219,8 @@ type IxLookupValue {
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -261,8 +263,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
@@ -284,9 +286,13 @@ type IxPartyGroup {
   Dependencies: [CxDependency]
   ObjectType: IxPartyGroupObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
   DisplayName: String
+}
+
+input IxPartyGroupDO {
+  Id: ID!
 }
 
 enum IxPartyGroupObjectType {
@@ -305,8 +311,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxRange {
