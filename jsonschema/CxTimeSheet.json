@@ -97,10 +97,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -164,10 +164,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -260,10 +260,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -303,10 +303,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -379,10 +379,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -434,10 +434,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -512,10 +512,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -629,10 +629,10 @@
 				"AccountCode": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Dependencies": {
@@ -737,10 +737,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -821,10 +821,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -860,10 +860,10 @@
 				"JobId": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -909,10 +909,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -997,10 +997,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -1093,10 +1093,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -1126,10 +1126,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -1235,10 +1235,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"Tags": {
@@ -1310,10 +1310,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -1370,10 +1370,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -1435,10 +1435,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -1503,6 +1503,12 @@
 			],
 			"type": "object",
 			"properties": {
+				"Hours": {
+					"type": "number"
+				},
+				"Minutes": {
+					"type": "integer"
+				},
 				"Resource": {
 					"$ref": "#/definitions/IxResource"
 				},
@@ -1518,11 +1524,11 @@
 						"$ref": "#/definitions/IxCostCode"
 					}
 				},
-				"Hours": {
-					"type": "number"
-				},
-				"Minutes": {
-					"type": "integer"
+				"Auxiliaries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResource"
+					}
 				},
 				"JobActivity": {
 					"$ref": "#/definitions/IxJobActivity"
@@ -1530,20 +1536,25 @@
 				"Owner": {
 					"$ref": "#/definitions/IxParty"
 				},
-				"Auxiliaries": {
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/IxResource"
-					}
+				"IsVoid": {
+					"type": "boolean"
 				},
 				"Billable": {
 					"type": "boolean"
 				},
-				"IsVoid": {
-					"type": "boolean"
+				"StartLocation": {
+					"$ref": "#/definitions/IxGeocode"
 				},
-				"ApprovedByOwner": {
-					"type": "boolean"
+				"PunchStart": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"EndLocation": {
+					"$ref": "#/definitions/IxGeocode"
+				},
+				"PunchEnd": {
+					"type": "string",
+					"format": "date-time"
 				},
 				"Punch": {
 					"type": "string",
@@ -1553,25 +1564,14 @@
 						"PunchedOut"
 					]
 				},
-				"StartLocation": {
-					"$ref": "#/definitions/IxGeocode"
-				},
-				"EndLocation": {
-					"$ref": "#/definitions/IxGeocode"
-				},
-				"PunchStart": {
-					"type": "string",
-					"format": "date-time"
-				},
 				"StartDistance": {
 					"$ref": "#/definitions/IxQuantity"
 				},
-				"PunchEnd": {
-					"type": "string",
-					"format": "date-time"
-				},
 				"EndDistance": {
 					"$ref": "#/definitions/IxQuantity"
+				},
+				"ApprovedByOwner": {
+					"type": "boolean"
 				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
@@ -1591,10 +1591,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -1680,10 +1680,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
