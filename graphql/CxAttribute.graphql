@@ -4,7 +4,6 @@ type CxAttribute {
   Value: String
   CustomProperty: IxCustomProperty
   Description: String
-  ObjectType: CxAttributeObjectType
 }
 
 input CxAttributeInput {
@@ -12,11 +11,6 @@ input CxAttributeInput {
   Value: String!
   CustomProperty: IxCustomPropertyDO!
   Description: String
-  ObjectType: CxAttributeObjectType
-}
-
-enum CxAttributeObjectType {
-  Attribute
 }
 
 type CxDependency {
@@ -91,10 +85,10 @@ input methodsByItemInput {
 }
 
 extend type Mutation {
-  cxAttributes_onSave(data: [CxAttributeInput], filters: [FilterInput], objectType: String = "Attribute", operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAttribute]
-  cxAttributes_onDelete(data: [String], objectType: String = "Attribute", operation: String = "delete"): [CxAttribute]
+  cxAttributes_onSave(data: [CxAttributeInput], filters: [FilterInput], objectType: String, operation: String = "edit", properties: [String], methodsByItem: [methodsByItemInput]): [CxAttribute]
+  cxAttributes_onDelete(data: [String], objectType: String, operation: String = "delete"): [CxAttribute]
 }
 
 extend type Query {
-  cxAttributes(filters: [FilterInput], objectType: String = "Attribute"): [CxAttribute]
+  cxAttributes(filters: [FilterInput], objectType: String): [CxAttribute]
 }

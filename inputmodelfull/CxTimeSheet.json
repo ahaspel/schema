@@ -4,8 +4,6 @@
 	},
 	"Entries": [
 		{
-			"Hours": 120,
-			"Minutes": 377,
 			"Resource": {
 				"Id": 6
 			},
@@ -20,46 +18,48 @@
 					"Id": 2
 				}
 			],
-			"Auxiliaries": [],
+			"Hours": 871,
+			"Minutes": 935,
 			"JobActivity": {
 				"Id": 156
 			},
 			"Owner": {
 				"Id": 1
 			},
+			"Auxiliaries": [],
+			"Billable": true,
 			"IsVoid": false,
-			"Billable": false,
+			"Punch": "PunchedOut",
 			"StartLocation": {
-				"Lat": 63.9053,
-				"Lng": 26.3672,
+				"Lat": 76.7116,
+				"Lng": 158.3733,
+				"Source": "GPSService",
+				"Id": 0
+			},
+			"EndLocation": {
+				"Lat": -16.9034,
+				"Lng": 159.2831,
 				"Source": "Action",
 				"Id": 0
 			},
 			"PunchStart": "2019-01-14T08:00:00",
-			"EndLocation": {
-				"Lat": 28.6937,
-				"Lng": -157.8699,
-				"Source": "Owner",
-				"Id": 0
-			},
 			"PunchEnd": "2019-01-14T08:00:00",
-			"Punch": "Manual",
 			"CurrentLifespan": {
 				"Start": "2018-01-14T00:00:00",
 				"End": "2018-12-14T00:00:00"
 			},
 			"ObjectType": "TimeEntry",
 			"Id": 0,
-			"Name": "YTUAqveXJwp",
-			"Description": "NJyvuP",
+			"Name": "VzuwFaelPNCX",
+			"Description": "mvamRirHn",
 			"Tags": [
 				{
 					"CustomProperty": {
 						"Id": 92
 					},
-					"Value": "IPrpruSWGpF",
+					"Value": "mrYSxIipyslD",
 					"Id": 0,
-					"Description": "RWzmwx"
+					"Description": "ibNmmFV"
 				}
 			],
 			"Approvals": [
@@ -85,7 +85,7 @@
 	],
 	"Attachments": [
 		{
-			"Key": "cKdqqsgFPTG",
+			"Key": "LquMyVys",
 			"DocumentTypes": [
 				{
 					"Id": 1
@@ -93,8 +93,8 @@
 			],
 			"ObjectType": "Document",
 			"Id": 0,
-			"Name": "yWlXRCV",
-			"Description": "eXBGRBbUgjdh"
+			"Name": "fDzOXaMZ",
+			"Description": "upPwcyEZJZyQ"
 		}
 	],
 	"CurrentLifespan": {
@@ -107,15 +107,15 @@
 			"Id": 12
 		}
 	],
-	"Description": "jxQQqjWmL",
+	"Description": "OnfzfjnSvfz",
 	"Tags": [
 		{
 			"CustomProperty": {
 				"Id": 92
 			},
-			"Value": "FNOnOBeXU",
+			"Value": "xupUwp",
 			"Id": 0,
-			"Description": "YJtmMrKmN"
+			"Description": "cAcJpZy"
 		}
 	],
 	"__typename": "CxTimeSheet"

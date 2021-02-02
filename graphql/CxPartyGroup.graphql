@@ -19,6 +19,7 @@ input CxPartyGroupInput {
   ObjectType: CxPartyGroupObjectType
   Name: String!
   Parties: [IxPartyDO]!
+  SMSGroupNumbers: [IxPhoneNumberInput]
   Id: ID!
   Description: String
 }
@@ -222,6 +223,13 @@ type IxPhoneNumber {
   PhoneNumber: String
   NumericPhoneNumber: String
   Valid: Boolean
+  Id: ID!
+  Name: String
+  Description: String
+}
+
+input IxPhoneNumberInput {
+  PhoneNumber: String!
   Id: ID!
   Name: String
   Description: String

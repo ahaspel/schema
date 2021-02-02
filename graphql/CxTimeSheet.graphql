@@ -578,25 +578,25 @@ enum IxShiftObjectType {
 }
 
 type IxTimeEntry {
-  Hours: Float
-  Minutes: Int
   Resource: IxResource
   EntryType: IxLookupValue
   EntryLaborClass: IxLookupValue
   CostCodes: [IxCostCode]
-  Auxiliaries: [IxResource]
+  Hours: Float
+  Minutes: Int
   JobActivity: IxJobActivity
   Owner: IxParty
-  IsVoid: Boolean
+  Auxiliaries: [IxResource]
   Billable: Boolean
-  StartLocation: IxGeocode
-  PunchStart: String
-  EndLocation: IxGeocode
-  PunchEnd: String
-  Punch: IxTimeEntryPunch
-  StartDistance: IxQuantity
-  EndDistance: IxQuantity
+  IsVoid: Boolean
   ApprovedByOwner: Boolean
+  Punch: IxTimeEntryPunch
+  StartLocation: IxGeocode
+  EndLocation: IxGeocode
+  PunchStart: String
+  StartDistance: IxQuantity
+  PunchEnd: String
+  EndDistance: IxQuantity
   CurrentLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxTimeEntryObjectType
@@ -612,22 +612,22 @@ type IxTimeEntry {
 }
 
 input IxTimeEntryInput {
-  Hours: Float
-  Minutes: Int
   Resource: IxResourceDO!
   EntryType: IxLookupValueDO
   EntryLaborClass: IxLookupValueDO
   CostCodes: [IxCostCodeDO]
-  Auxiliaries: [IxResourceDO]
+  Hours: Float
+  Minutes: Int
   JobActivity: IxJobActivityDO!
   Owner: IxPartyDO!
-  IsVoid: Boolean
+  Auxiliaries: [IxResourceDO]
   Billable: Boolean
-  StartLocation: IxGeocodeInput
-  PunchStart: String
-  EndLocation: IxGeocodeInput
-  PunchEnd: String
+  IsVoid: Boolean
   Punch: IxTimeEntryPunch
+  StartLocation: IxGeocodeInput
+  EndLocation: IxGeocodeInput
+  PunchStart: String
+  PunchEnd: String
   CurrentLifespan: IxRangeInput!
   ObjectType: IxTimeEntryObjectType
   Id: ID!
