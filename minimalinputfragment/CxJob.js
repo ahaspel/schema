@@ -12,13 +12,6 @@ const CXJOBINPUTMIN = `fragment CXJOBINPUTMIN on CxJob {
     Id
     _ObjectType: ObjectType
   }
-  Address {
-    State {
-      Id
-      _ObjectType: ObjectType
-    }
-    Id
-  }
   AccountCode
   Name
   CurrentLifespan {
