@@ -941,6 +941,14 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
+						"State",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"ToDoStatus",
+						"ToDoPriority",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -952,14 +960,6 @@
 						"Skill",
 						"Training",
 						"Union",
-						"State",
-						"ToDoStatus",
-						"ToDoPriority",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobCertification",
 						"Privilege"
 					]
@@ -1727,6 +1727,13 @@
 			"items": {
 				"$ref": "#/definitions/IxPhoneNumber"
 			}
+		},
+		"LastModified": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"Creator": {
+			"$ref": "#/definitions/IxParty"
 		},
 		"CurrentLifespan": {
 			"$ref": "#/definitions/IxRange"

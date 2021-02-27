@@ -23,6 +23,8 @@ type CxAllocation {
   Resources: [IxResource]
   Principals: [IxResource]
   SMSNumbers: [IxPhoneNumber]
+  LastModified: String
+  Creator: IxParty
   Id: ID!
   Description: String
   DisplayName: String
@@ -52,6 +54,8 @@ input CxAllocationInput {
   Crew: IxCrewDO
   CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
+  LastModified: String
+  Creator: IxPartyDO
   Id: ID!
   Description: String
   Tags: [IxAttributeInput]
@@ -516,6 +520,14 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
+  State
+  TimeEntryType
+  CompanyType
+  JobStatus
+  ToDoStatus
+  ToDoPriority
+  DocumentType
+  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -527,14 +539,6 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
-  State
-  ToDoStatus
-  ToDoPriority
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobCertification
   Privilege
 }
@@ -563,6 +567,10 @@ type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
+}
+
+input IxPartyDO {
+  Id: ID!
 }
 
 type IxPartyGroup {
@@ -760,6 +768,8 @@ type IxTaskDay {
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
+  LastModified: String
+  Creator: IxParty
   ForeColor: String
   BackColor: String
 }
@@ -793,6 +803,8 @@ input IxTaskDayInput {
   Description: String
   CurrentLifespan: IxRangeInput!
   Tags: [IxAttributeInput]
+  LastModified: String
+  Creator: IxPartyDO
 }
 
 enum IxTaskDayObjectType {

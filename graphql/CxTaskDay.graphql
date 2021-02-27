@@ -45,6 +45,8 @@ type CxTaskDay {
   Resources: [IxResource]
   Principals: [IxResource]
   SMSNumbers: [IxPhoneNumber]
+  LastModified: String
+  Creator: IxParty
   CurrentLifespan: IxRange
   Id: ID!
   Description: String
@@ -76,6 +78,8 @@ input CxTaskDayInput {
   ResourceRoles: [CxResourceRoleInput]
   ActionStatus: IxActionStatusDO
   Principals: [IxResourceDO]
+  LastModified: String
+  Creator: IxPartyDO
   CurrentLifespan: IxRangeInput!
   Id: ID!
   Description: String
@@ -414,6 +418,14 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
+  State
+  TimeEntryType
+  CompanyType
+  JobStatus
+  ToDoStatus
+  ToDoPriority
+  DocumentType
+  TimeEntryLaborClass
   JobPriority
   JobSubtype
   JobType
@@ -425,14 +437,6 @@ enum IxLookupValueObjectType {
   Skill
   Training
   Union
-  State
-  ToDoStatus
-  ToDoPriority
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
   JobCertification
   Privilege
 }
@@ -461,6 +465,10 @@ type IxParty {
   Emails: [IxEmail]
   PhoneNumbers: [IxPhoneNumber]
   SMSNumbers: [IxPhoneNumber]
+}
+
+input IxPartyDO {
+  Id: ID!
 }
 
 type IxPartyGroup {
