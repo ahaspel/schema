@@ -691,14 +691,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"ToDoStatus",
-						"ToDoPriority",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -710,6 +702,14 @@
 						"Skill",
 						"Training",
 						"Union",
+						"State",
+						"ToDoStatus",
+						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
 						"Privilege"
 					]
