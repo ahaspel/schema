@@ -39,14 +39,15 @@ type IxAttribute {
   CustomProperty: IxCustomProperty
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxCompany {
   CompanyType: IxLookupValue
   Supplier: Boolean
   Title: String
+  Initials: String
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -54,8 +55,8 @@ type IxCompany {
   Dependencies: [CxDependency]
   ObjectType: IxCompanyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
@@ -85,8 +86,8 @@ type IxContacts {
   Dependencies: [CxDependency]
   ObjectType: IxContactsObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
 }
 
@@ -104,8 +105,8 @@ type IxCustomProperty {
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -141,8 +142,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -164,8 +165,8 @@ type IxInventoryItem {
   Vendor: IxCompany
   Id: ID!
   AccountCode: String
-  Description: String
   Name: String
+  Description: String
 }
 
 input IxInventoryItemInput {
@@ -174,16 +175,16 @@ input IxInventoryItemInput {
   Vendor: IxCompanyDO
   Id: ID!
   AccountCode: String
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxLookupValue {
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -215,6 +216,7 @@ enum IxLookupValueObjectType {
 
 type IxParty {
   Title: String
+  Initials: String
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -222,8 +224,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   Tags: [IxAttribute]
@@ -241,8 +243,8 @@ type IxPartyGroup {
   Dependencies: [CxDependency]
   ObjectType: IxPartyGroupObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
 }
 
@@ -262,8 +264,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {

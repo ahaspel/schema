@@ -77,10 +77,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -122,10 +122,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -187,10 +187,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -258,10 +258,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -343,10 +343,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -371,6 +371,9 @@
 			"type": "object",
 			"properties": {
 				"Title": {
+					"type": "string"
+				},
+				"Initials": {
 					"type": "string"
 				},
 				"ContactOf": {
@@ -412,12 +415,12 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
-					"type": "string"
-				},
 				"Name": {
 					"type": "string",
 					"minLength": 1
+				},
+				"Description": {
+					"type": "string"
 				},
 				"DisplayName": {
 					"type": "string"
@@ -469,6 +472,7 @@
 				"Dependencies",
 				"DisplayName",
 				"Dto",
+				"Initials",
 				"IsContact",
 				"SMSGroupNumbers",
 				"SMSNumbers"
@@ -510,10 +514,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -543,10 +547,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				}
 			},
@@ -589,6 +593,7 @@
 		"Dependencies",
 		"DisplayName",
 		"Dto",
+		"Initials",
 		"IsContact",
 		"SMSGroupNumbers",
 		"SMSNumbers",
@@ -651,6 +656,9 @@
 			"minLength": 1
 		},
 		"Title": {
+			"type": "string"
+		},
+		"Initials": {
 			"type": "string"
 		},
 		"ContactOf": {
