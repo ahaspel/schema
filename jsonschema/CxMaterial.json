@@ -159,6 +159,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -714,6 +717,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -752,6 +758,7 @@
 				"Id"
 			],
 			"immutable": [
+				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
 				"Dependencies",
@@ -921,6 +928,9 @@
 					"type": "string"
 				},
 				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CachedLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
 				"Dependencies": {
@@ -1183,6 +1193,7 @@
 	},
 	"immutable": [
 		"Address",
+		"CachedLifespan",
 		"CurrentLifespan",
 		"CustomProperties",
 		"Dependencies",
@@ -1265,6 +1276,9 @@
 		},
 		"AccountCode": {
 			"type": "string"
+		},
+		"CachedLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"

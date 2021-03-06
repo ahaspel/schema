@@ -8,6 +8,7 @@ type CxHoliday {
   Name: String
   ObjectType: CxHolidayObjectType
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Id: ID!
   Description: String
   DisplayName: String

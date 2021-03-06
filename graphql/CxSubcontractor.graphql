@@ -24,6 +24,7 @@ type CxSubcontractor {
   IsContact: Boolean
   Address: IxAddress
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -264,6 +265,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress

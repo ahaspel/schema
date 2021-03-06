@@ -301,6 +301,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -503,6 +506,9 @@
 					"type": "string"
 				},
 				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CachedLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
 				"Dependencies": {
@@ -869,6 +875,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -1087,6 +1096,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1165,6 +1177,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1188,6 +1203,7 @@
 				"Id"
 			],
 			"immutable": [
+				"CachedLifespan",
 				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
@@ -1426,6 +1442,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1464,6 +1483,7 @@
 				"Id"
 			],
 			"immutable": [
+				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
 				"Dependencies",
@@ -1633,6 +1653,9 @@
 					"type": "string"
 				},
 				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CachedLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
 				"Dependencies": {
@@ -2040,6 +2063,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -2073,6 +2099,7 @@
 			"immutable": [
 				"ActionType",
 				"BackColor",
+				"CachedLifespan",
 				"ConflictIds",
 				"Creator",
 				"CustomProperties",
@@ -2167,8 +2194,10 @@
 		"ActionType",
 		"Auxiliaries",
 		"BackColor",
-		"CustomProperties",
+		"CachedLifespan",
 		"Creator",
+		"CurrentLifespan",
+		"CustomProperties",
 		"Dependencies",
 		"DisplayName",
 		"Dto",
@@ -2308,6 +2337,9 @@
 		},
 		"Creator": {
 			"$ref": "#/definitions/IxParty"
+		},
+		"CachedLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
 			"type": "integer"

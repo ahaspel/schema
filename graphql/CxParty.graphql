@@ -17,6 +17,7 @@ type CxParty {
   Address: IxAddress
   ObjectType: CxPartyObjectType
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Id: ID!
   Description: String
   DisplayName: String
@@ -243,6 +244,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress

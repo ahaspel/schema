@@ -159,6 +159,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -655,6 +658,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -733,6 +739,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -756,6 +765,7 @@
 				"Id"
 			],
 			"immutable": [
+				"CachedLifespan",
 				"CustomProperties",
 				"Dependencies",
 				"DisplayName",
@@ -996,6 +1006,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -1034,6 +1047,7 @@
 				"Id"
 			],
 			"immutable": [
+				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
 				"Dependencies",
@@ -1235,6 +1249,9 @@
 					"type": "string"
 				},
 				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CachedLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
 				"Dependencies": {

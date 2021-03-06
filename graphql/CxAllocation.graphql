@@ -25,6 +25,7 @@ type CxAllocation {
   SMSNumbers: [IxPhoneNumber]
   LastModified: String
   Creator: IxParty
+  CachedLifespan: IxRange
   Id: ID!
   Description: String
   DisplayName: String
@@ -52,7 +53,6 @@ input CxAllocationInput {
   Shift: IxShiftDO
   TaskDays: [IxTaskDayInput]
   Crew: IxCrewDO
-  CurrentLifespan: IxRangeInput
   ObjectType: CxAllocationObjectType
   Id: ID!
   Description: String
@@ -187,6 +187,7 @@ type IxCompany {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -258,6 +259,7 @@ type IxCrew {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxCrewObjectType
   Id: ID!
@@ -374,6 +376,7 @@ type IxEmployee {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxEmployeeObjectType
   Id: ID!
@@ -438,6 +441,7 @@ type IxJob {
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -457,6 +461,7 @@ type IxJobActivity {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   ForeColor: String
@@ -561,6 +566,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -627,6 +633,7 @@ type IxResource {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxResourceObjectType
   Id: ID!
@@ -762,6 +769,7 @@ type IxTaskDay {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   LastModified: String

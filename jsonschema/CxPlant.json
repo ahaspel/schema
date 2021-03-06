@@ -453,6 +453,9 @@
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"Tags": {
 					"type": "array",
 					"items": {
@@ -492,6 +495,7 @@
 				"Name"
 			],
 			"immutable": [
+				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
 				"Dependencies",
@@ -780,6 +784,7 @@
 		}
 	},
 	"immutable": [
+		"CachedLifespan",
 		"ContactOf",
 		"CustomProperties",
 		"DefaultCapacity",
@@ -874,6 +879,9 @@
 			"$ref": "#/definitions/IxAddress"
 		},
 		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"CachedLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {

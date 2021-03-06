@@ -82,6 +82,7 @@ type IxCompany {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -252,6 +253,7 @@ type IxJob {
   ForeColor: String
   BackColor: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -271,6 +273,7 @@ type IxJobActivity {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   ForeColor: String
@@ -369,6 +372,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress

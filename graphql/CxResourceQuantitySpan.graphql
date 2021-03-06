@@ -68,6 +68,7 @@ type IxCompany {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -213,6 +214,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress

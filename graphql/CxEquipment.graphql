@@ -30,6 +30,7 @@ type CxEquipment {
   Location: IxLocation
   AccountCode: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Id: ID!
   Divisions: [IxLookupValue]
   Description: String
@@ -125,6 +126,7 @@ type IxCompany {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -325,6 +327,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress
@@ -396,6 +399,7 @@ type IxResource {
   HasAuxiliaries: Boolean
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxResourceObjectType
   Id: ID!

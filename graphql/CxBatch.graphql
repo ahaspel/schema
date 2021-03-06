@@ -11,6 +11,7 @@ type CxBatch {
   Runs: [CxBatchRun]
   Attachments: [IxDocument]
   HasAttachments: Boolean
+  CachedLifespan: IxRange
   Id: ID!
   Description: String
   Tags: [IxAttribute]
@@ -264,6 +265,7 @@ type IxParty {
   Description: String
   DisplayName: String
   CurrentLifespan: IxRange
+  CachedLifespan: IxRange
   Tags: [IxAttribute]
   CustomProperties: [IxCustomProperty]
   Address: IxAddress

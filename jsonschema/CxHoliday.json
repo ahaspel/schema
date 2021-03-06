@@ -242,6 +242,7 @@
 		}
 	},
 	"immutable": [
+		"CachedLifespan",
 		"CurrentLifespan",
 		"Dependencies",
 		"DisplayName",
@@ -265,6 +266,9 @@
 			]
 		},
 		"CurrentLifespan": {
+			"$ref": "#/definitions/IxRange"
+		},
+		"CachedLifespan": {
 			"$ref": "#/definitions/IxRange"
 		},
 		"Id": {
