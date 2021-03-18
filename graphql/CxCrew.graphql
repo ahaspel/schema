@@ -4,7 +4,6 @@ type CxCrew {
   Resources: [IxResource]
   CurrentResources: [IxResource]
   Name: String
-  Location: IxLocation
   ObjectType: CxCrewObjectType
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
@@ -14,6 +13,7 @@ type CxCrew {
   HasAttachments: Boolean
   ForeColor: String
   BackColor: String
+  Location: IxLocation
   AccountCode: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
@@ -317,19 +317,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  ToDoStatus
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
   JobCertification
-  Minority
   Privilege
 }
 

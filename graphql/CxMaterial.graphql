@@ -22,6 +22,7 @@ type CxMaterial {
   HasAttachments: Boolean
   ForeColor: String
   BackColor: String
+  Location: IxLocation
   AccountCode: String
   CachedLifespan: IxRange
   Id: ID!
@@ -301,19 +302,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
+  ToDoStatus
+  ToDoPriority
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  ToDoStatus
-  ToDoPriority
   JobCertification
-  Minority
   Privilege
 }
 
