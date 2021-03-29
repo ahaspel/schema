@@ -2108,6 +2108,9 @@
 				"Amount": {
 					"type": "number"
 				},
+				"IsCrewMember": {
+					"type": "boolean"
+				},
 				"JobActivity": {
 					"$ref": "#/definitions/IxJobActivity"
 				},
@@ -2258,6 +2261,7 @@
 				"Equipment",
 				"Filled",
 				"ForeColor",
+				"IsCrewMember",
 				"Job",
 				"JobActivityId",
 				"JobId",

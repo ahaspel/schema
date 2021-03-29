@@ -34,6 +34,7 @@ type CxTaskDay {
   Amount: Float
   Filled: Boolean
   Supplier: IxCompany
+  IsCrewMember: Boolean
   ShiftSupervisor: Boolean
   Job: IxJob
   JobActivity: IxJobActivity

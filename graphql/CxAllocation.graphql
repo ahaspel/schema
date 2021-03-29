@@ -795,6 +795,7 @@ type IxTaskDay {
   ResourceSubtypeId: ID
   Supplier: IxCompany
   Amount: Float
+  IsCrewMember: Boolean
   JobActivity: IxJobActivity
   Job: IxJob
   Location: IxLocation
