@@ -55,8 +55,8 @@ type IxUnit {
   BaseObject: String
   ObjectType: IxUnitObjectType
   Id: ID!
-  Name: String
   Description: String
+  Name: String
 }
 
 type IxUnitCost {

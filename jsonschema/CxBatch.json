@@ -13,11 +13,14 @@
 					"type": "string",
 					"format": "date-time"
 				},
+				"Errors": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxError"
+					}
+				},
 				"ErrorCount": {
 					"type": "integer"
-				},
-				"Success": {
-					"type": "boolean"
 				},
 				"Overwrite": {
 					"type": "boolean"
@@ -58,6 +61,38 @@
 			"required": [
 				"ObjectType",
 				"Ids"
+			]
+		},
+		"CxError": {
+			"type": "object",
+			"properties": {
+				"Id": {
+					"type": "integer"
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Error"
+					]
+				},
+				"Severity": {
+					"type": "string",
+					"enum": [
+						"Error",
+						"Warning",
+						"Info",
+						"Debug"
+					]
+				},
+				"Message": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Id",
+				"ObjectType",
+				"Severity",
+				"Message"
 			]
 		},
 		"IxAddress": {
@@ -117,10 +152,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -162,10 +197,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -227,10 +262,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -282,10 +317,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -360,10 +395,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -445,10 +480,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -517,10 +552,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -618,10 +653,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -651,10 +686,10 @@
 				"Id": {
 					"type": "integer"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				}
 			},
@@ -746,13 +781,7 @@
 		"Errors": {
 			"type": "array",
 			"items": {
-				"type": "string"
-			}
-		},
-		"Warnings": {
-			"type": "array",
-			"items": {
-				"type": "string"
+				"$ref": "#/definitions/CxError"
 			}
 		},
 		"Runs": {
