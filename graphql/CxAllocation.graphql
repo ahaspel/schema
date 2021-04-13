@@ -15,6 +15,7 @@ type CxAllocation {
   BackColor: String
   ResourceIds: [Int]
   Crew: IxCrew
+  ActualCrew: Boolean
   HasConflicts: Boolean
   CurrentLifespan: IxRange
   ActionType: CxAllocationActionType

@@ -2345,6 +2345,7 @@
 	"immutable": [
 		"ActionStatus",
 		"ActionType",
+		"ActualCrew",
 		"Auxiliaries",
 		"BackColor",
 		"CachedLifespan",
@@ -2437,6 +2438,9 @@
 		},
 		"Crew": {
 			"$ref": "#/definitions/IxCrew"
+		},
+		"ActualCrew": {
+			"type": "boolean"
 		},
 		"HasConflicts": {
 			"type": "boolean"
