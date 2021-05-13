@@ -2,7 +2,8 @@ type CxShiftDay {
   Day: Int
   DayByName: String
   Start: String
-  Duration: String
+  Hours: Float
+  Minutes: Int
   End: String
   Included: Boolean
   Valid: Boolean
@@ -12,7 +13,8 @@ input CxShiftDayInput {
   Day: Int!
   DayByName: String
   Start: String!
-  Duration: String!
+  Hours: Float
+  Minutes: Int!
   End: String
   Included: Boolean
   Valid: Boolean

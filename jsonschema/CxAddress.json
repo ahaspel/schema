@@ -108,22 +108,22 @@
 						"State",
 						"ToDoStatus",
 						"ToDoPriority",
+						"JobCertification",
 						"TimeEntryType",
 						"CompanyType",
 						"JobStatus",
 						"DocumentType",
 						"TimeEntryLaborClass",
-						"JobCertification",
 						"Privilege"
 					]
 				},
 				"Id": {
 					"type": "integer"
 				},
-				"Description": {
+				"Name": {
 					"type": "string"
 				},
-				"Name": {
+				"Description": {
 					"type": "string"
 				},
 				"DisplayName": {
@@ -169,6 +169,9 @@
 		},
 		"Geocode": {
 			"$ref": "#/definitions/IxGeocode"
+		},
+		"Autocode": {
+			"type": "boolean"
 		}
 	},
 	"required": [

@@ -40,7 +40,8 @@ type IxShiftDay {
   Day: Int
   DayByName: String
   Start: String
-  Duration: String
+  Minutes: Int
+  Hours: Float
   Valid: Boolean
   End: String
   Included: Boolean
@@ -50,7 +51,8 @@ input IxShiftDayInput {
   Day: Int!
   DayByName: String
   Start: String!
-  Duration: String!
+  Minutes: Int!
+  Hours: Float
   Valid: Boolean
   End: String
   Included: Boolean

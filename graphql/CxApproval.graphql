@@ -26,6 +26,7 @@ type IxAddress {
   State: IxLookupValue
   City: String
   ZipCode: String
+  Autocode: Boolean
   Geocode: IxGeocode
   ObjectType: IxAddressObjectType
   Id: ID!
@@ -39,8 +40,8 @@ type IxAttribute {
   CustomProperty: IxCustomProperty
   Value: String
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxContacts {
@@ -48,8 +49,8 @@ type IxContacts {
   Dependencies: [CxDependency]
   ObjectType: IxContactsObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
 }
 
@@ -67,8 +68,8 @@ type IxCustomProperty {
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -104,8 +105,8 @@ type IxEmail {
   Email: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxGeocode {
@@ -125,8 +126,8 @@ type IxLookupValue {
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   ForeColor: String
   BackColor: String
@@ -147,12 +148,12 @@ enum IxLookupValueObjectType {
   State
   ToDoStatus
   ToDoPriority
+  JobCertification
   TimeEntryType
   CompanyType
   JobStatus
   DocumentType
   TimeEntryLaborClass
-  JobCertification
   Privilege
 }
 
@@ -166,8 +167,8 @@ type IxParty {
   Dependencies: [CxDependency]
   ObjectType: IxPartyObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
@@ -190,8 +191,8 @@ type IxPartyGroup {
   Dependencies: [CxDependency]
   ObjectType: IxPartyGroupObjectType
   Id: ID!
-  Description: String
   Name: String
+  Description: String
   DisplayName: String
 }
 
@@ -211,8 +212,8 @@ type IxPhoneNumber {
   NumericPhoneNumber: String
   Valid: Boolean
   Id: ID!
-  Description: String
   Name: String
+  Description: String
 }
 
 type IxRange {

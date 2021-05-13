@@ -2,7 +2,7 @@
 const CXSHIFTDAYINPUTMIN = `fragment CXSHIFTDAYINPUTMIN on CxShiftDay {
   Day
   Start
-  Duration
+  Minutes
 }`;
 module.exports = { fragment: CXSHIFTDAYINPUTMIN,
                    fragmentName: 'CXSHIFTDAYINPUTMIN',

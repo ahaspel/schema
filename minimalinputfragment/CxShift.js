@@ -3,7 +3,7 @@ const CXSHIFTINPUTMIN = `fragment CXSHIFTINPUTMIN on CxShift {
   Days {
     Day
     Start
-    Duration
+    Minutes
   }
   Name
   Id
