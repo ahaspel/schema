@@ -74,6 +74,7 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
+  JobStatus
   JobPriority
   JobSubtype
   JobType
@@ -81,19 +82,18 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
-  Minority
   Skill
   Training
   Union
   State
+  TimeEntryType
+  CompanyType
+  DocumentType
+  TimeEntryLaborClass
   ToDoStatus
   ToDoPriority
   JobCertification
-  TimeEntryType
-  CompanyType
-  JobStatus
-  DocumentType
-  TimeEntryLaborClass
+  Minority
   Privilege
 }
 

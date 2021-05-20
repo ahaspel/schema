@@ -864,6 +864,7 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
+						"JobStatus",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -871,19 +872,18 @@
 						"LaborClass",
 						"Language",
 						"License",
-						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
+						"TimeEntryType",
+						"CompanyType",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"ToDoStatus",
 						"ToDoPriority",
 						"JobCertification",
-						"TimeEntryType",
-						"CompanyType",
-						"JobStatus",
-						"DocumentType",
-						"TimeEntryLaborClass",
+						"Minority",
 						"Privilege"
 					]
 				},
