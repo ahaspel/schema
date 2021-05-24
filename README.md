@@ -8,7 +8,7 @@ They will be updated whenever a commit in master branch of the c# source is tagg
 
 To include this in your application put a strophe like this in your package.json file:
 
-    "cb-schema": "git+ssh://git@github.com:ahaspel/schema.git#XXX"
+    "cb-schema": "git+ssh://git@github.com:congistics/schema.git#XXX"
 
 
 Where XXX is the build that Aaron tagged it with.
@@ -20,7 +20,7 @@ Then do:
     
 Or just do this:
 
-    npm i --save git+ssh://git@github.com:congistics/schema.git   
+    yarn add git+ssh://git@github.com:congistics/schema.git   
     
 As you can see, you have the choice of tracking master or a tag.      
 
