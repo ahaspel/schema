@@ -20,7 +20,7 @@ Then do:
     
 Or just do this:
 
-    npm i --save git+ssh://git@github.com:ahaspel/schema.git   
+    npm i --save git+ssh://git@github.com:congistics/schema.git   
     
 As you can see, you have the choice of tracking master or a tag.      
 
