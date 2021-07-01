@@ -112,6 +112,9 @@
 				"Initials": {
 					"type": "string"
 				},
+				"AsEmployee": {
+					"$ref": "#/definitions/IxEmployee"
+				},
 				"ContactOf": {
 					"type": "array",
 					"items": {
@@ -462,6 +465,186 @@
 				"Valid"
 			]
 		},
+		"IxEmployee": {
+			"type": "object",
+			"properties": {
+				"Person": {
+					"$ref": "#/definitions/IxParty"
+				},
+				"FirstName": {
+					"type": "string"
+				},
+				"LastName": {
+					"type": "string"
+				},
+				"MiddleName": {
+					"type": "string"
+				},
+				"BirthDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"PreviousExperience": {
+					"$ref": "#/definitions/IxQuantity"
+				},
+				"Minority": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Unions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Licenses": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Languages": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"TrainingCourses": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Skills": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"LaborClassification": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"Machines": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResourceType"
+					}
+				},
+				"Owner": {
+					"$ref": "#/definitions/IxCompany"
+				},
+				"ResourceType": {
+					"$ref": "#/definitions/IxResourceType"
+				},
+				"ResourceSubtype": {
+					"$ref": "#/definitions/IxResourceSubtype"
+				},
+				"Temporary": {
+					"type": "boolean"
+				},
+				"UnitCost": {
+					"$ref": "#/definitions/IxUnitCost"
+				},
+				"Auxiliaries": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxResource"
+					}
+				},
+				"HasAuxiliaries": {
+					"type": "boolean"
+				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"DisplayName": {
+					"type": "string"
+				},
+				"CurrentLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"CachedLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
+				"Dependencies": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/CxDependency"
+					}
+				},
+				"ObjectType": {
+					"type": "string",
+					"enum": [
+						"Employee"
+					]
+				},
+				"Id": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Description": {
+					"type": "string"
+				},
+				"Tags": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxAttribute"
+					}
+				},
+				"CustomProperties": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxCustomProperty"
+					}
+				},
+				"Attachments": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxDocument"
+					}
+				},
+				"HasAttachments": {
+					"type": "boolean"
+				},
+				"Divisions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxLookupValue"
+					}
+				},
+				"AccountCode": {
+					"type": "string"
+				},
+				"Location": {
+					"$ref": "#/definitions/IxLocation"
+				},
+				"ForeColor": {
+					"type": "string"
+				},
+				"BackColor": {
+					"type": "string"
+				},
+				"Contacts": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/IxParty"
+					}
+				},
+				"InCrew": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"Id"
+			]
+		},
 		"IxGeocode": {
 			"superRequired": [
 				"Lat",
@@ -528,7 +711,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobStatus",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -536,18 +718,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"ToDoStatus",
 						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
-						"Minority",
 						"Privilege"
 					]
 				},
@@ -605,6 +788,9 @@
 				},
 				"Initials": {
 					"type": "string"
+				},
+				"AsEmployee": {
+					"$ref": "#/definitions/IxEmployee"
 				},
 				"ContactOf": {
 					"type": "array",
@@ -698,6 +884,7 @@
 				"Id"
 			],
 			"immutable": [
+				"AsEmployee",
 				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
@@ -863,6 +1050,9 @@
 				},
 				"HasAuxiliaries": {
 					"type": "boolean"
+				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"DisplayName": {
 					"type": "string"
@@ -1138,6 +1328,7 @@
 		"DisplayName",
 		"Dependencies",
 		"Dto",
+		"EffectiveLifespan",
 		"InCrew",
 		"Location",
 		"ResourceType",
@@ -1198,6 +1389,9 @@
 		},
 		"UnitCost": {
 			"$ref": "#/definitions/IxUnitCost"
+		},
+		"EffectiveLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"InCrew": {
 			"type": "boolean"

@@ -1,36 +1,30 @@
 {
 	"Job": {
-		"Id": 216
+		"Id": 218
 	},
 	"CostPerUnit": {
 		"Unit": {
 			"Id": 1
 		},
-		"Quantity": 826
+		"Quantity": 611
 	},
 	"CostCode": {
+		"Id": 64,
+		"Name": "3-210",
 		"UnitCost": {
-			"Unit": {
-				"Id": 1
-			},
 			"Cost": {
 				"Unit": {
 					"Id": 1
 				},
-				"Quantity": 232
+				"Quantity": 11
 			},
-			"Notes": "fcyOsSzRJN"
-		},
-		"Global": true,
-		"ObjectType": "CostCode",
-		"Id": 0,
-		"Name": "RpcaJzn",
-		"Description": "rCjObiMsFPy",
-		"ForeColor": "#000000",
-		"BackColor": "#FFFFFF"
+			"Unit": {
+				"Id": 15
+			}
+		}
 	},
-	"TotalAmount": 791,
-	"ExpectedDailyAmount": 808,
+	"TotalAmount": 910,
+	"ExpectedDailyAmount": 844,
 	"ObjectType": "JobCost",
 	"Id": 0,
 	"ForeColor": "#000000",

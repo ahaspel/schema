@@ -7,6 +7,7 @@ type CxCrew {
   ObjectType: CxCrewObjectType
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
+  EffectiveLifespan: IxRange
   HasAuxiliaries: Boolean
   Auxiliaries: [IxResource]
   Attachments: [IxDocument]
@@ -99,6 +100,7 @@ type IxCompany {
   Supplier: Boolean
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -246,6 +248,7 @@ type IxEmployee {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
@@ -311,7 +314,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  JobStatus
   JobPriority
   JobSubtype
   JobType
@@ -319,18 +321,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
-  TimeEntryType
-  CompanyType
-  DocumentType
-  TimeEntryLaborClass
   ToDoStatus
   ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
-  Minority
   Privilege
 }
 
@@ -342,6 +345,7 @@ type IxMoney {
 type IxParty {
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -418,6 +422,7 @@ type IxResource {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange

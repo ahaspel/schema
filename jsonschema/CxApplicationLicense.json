@@ -171,7 +171,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobStatus",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -179,18 +178,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"ToDoStatus",
 						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
-						"Minority",
 						"Privilege"
 					]
 				},
@@ -234,6 +234,9 @@
 		"AllowedFullUsers": {
 			"type": "integer"
 		},
+		"AllowedFieldUsers": {
+			"type": "integer"
+		},
 		"AllowedReadOnlyUsers": {
 			"type": "integer"
 		},
@@ -264,6 +267,7 @@
 	},
 	"required": [
 		"AllowedFullUsers",
+		"AllowedFieldUsers",
 		"AllowedMobileUsers",
 		"AllowedReadOnlyUsers",
 		"Expiration",

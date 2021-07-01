@@ -192,6 +192,9 @@
 				"Initials": {
 					"type": "string"
 				},
+				"AsEmployee": {
+					"$ref": "#/definitions/IxEmployee"
+				},
 				"ContactOf": {
 					"type": "array",
 					"items": {
@@ -690,6 +693,9 @@
 				"HasAuxiliaries": {
 					"type": "boolean"
 				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"DisplayName": {
 					"type": "string"
 				},
@@ -831,6 +837,9 @@
 				"HasAuxiliaries": {
 					"type": "boolean"
 				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"DisplayName": {
 					"type": "string"
 				},
@@ -958,6 +967,9 @@
 				"Notes": {
 					"type": "string"
 				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"JobActivities": {
 					"type": "array",
 					"items": {
@@ -1049,6 +1061,13 @@
 				"BackColor": {
 					"type": "string"
 				},
+				"LastModified": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"Creator": {
+					"$ref": "#/definitions/IxParty"
+				},
 				"CurrentLifespan": {
 					"$ref": "#/definitions/IxRange"
 				},
@@ -1105,6 +1124,9 @@
 				},
 				"DefaultShift": {
 					"$ref": "#/definitions/IxShift"
+				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -1164,6 +1186,7 @@
 				"Dependencies",
 				"DisplayName",
 				"Dto",
+				"EffectiveLifespan",
 				"Job",
 				"SortOrder"
 			]
@@ -1269,7 +1292,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobStatus",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -1277,18 +1299,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"ToDoStatus",
 						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
-						"Minority",
 						"Privilege"
 					]
 				},
@@ -1346,6 +1369,9 @@
 				},
 				"Initials": {
 					"type": "string"
+				},
+				"AsEmployee": {
+					"$ref": "#/definitions/IxEmployee"
 				},
 				"ContactOf": {
 					"type": "array",
@@ -1439,6 +1465,7 @@
 				"Id"
 			],
 			"immutable": [
+				"AsEmployee",
 				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
@@ -1604,6 +1631,9 @@
 				},
 				"HasAuxiliaries": {
 					"type": "boolean"
+				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"DisplayName": {
 					"type": "string"

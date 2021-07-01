@@ -10,7 +10,10 @@ type CxJob {
   Types: [IxLookupValue]
   Subtypes: [IxLookupValue]
   Certifications: [IxLookupValue]
+  EffectiveLifespan: IxRange
   Address: IxAddress
+  LastModified: String
+  Creator: IxParty
   DefaultShift: IxShift
   AccountCode: String
   Contacts: [IxParty]
@@ -49,6 +52,8 @@ input CxJobInput {
   Subtypes: [IxLookupValueDO]!
   Certifications: [IxLookupValueDO]
   Address: IxAddressInput
+  LastModified: String
+  Creator: IxPartyDO
   DefaultShift: IxShiftDO
   AccountCode: String!
   Contacts: [IxPartyInput]
@@ -132,6 +137,7 @@ type IxCompany {
   Supplier: Boolean
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -296,6 +302,54 @@ input IxEmailInput {
   Description: String
 }
 
+type IxEmployee {
+  Person: IxParty
+  FirstName: String
+  LastName: String
+  MiddleName: String
+  BirthDate: String
+  PreviousExperience: IxQuantity
+  Minority: [IxLookupValue]
+  Unions: [IxLookupValue]
+  Licenses: [IxLookupValue]
+  Languages: [IxLookupValue]
+  TrainingCourses: [IxLookupValue]
+  Skills: [IxLookupValue]
+  LaborClassification: [IxLookupValue]
+  Machines: [IxResourceType]
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  Auxiliaries: [IxResource]
+  HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
+  DisplayName: String
+  CurrentLifespan: IxRange
+  CachedLifespan: IxRange
+  Dependencies: [CxDependency]
+  ObjectType: IxEmployeeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+  Contacts: [IxParty]
+  InCrew: Boolean
+}
+
+enum IxEmployeeObjectType {
+  Employee
+}
+
 type IxGeocode {
   Lat: Float
   Lng: Float
@@ -321,6 +375,7 @@ type IxJob {
   Priority: IxLookupValue
   Certifications: [IxLookupValue]
   Notes: String
+  EffectiveLifespan: IxRange
   JobActivities: [IxJobActivity]
   JobStatus: IxLookupValue
   StatusDue: String
@@ -344,6 +399,8 @@ type IxJob {
   HasAttachments: Boolean
   ForeColor: String
   BackColor: String
+  LastModified: String
+  Creator: IxParty
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
   Tags: [IxAttribute]
@@ -358,6 +415,7 @@ type IxJobActivity {
   Completed: Boolean
   SortOrder: Int
   DefaultShift: IxShift
+  EffectiveLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -430,6 +488,13 @@ enum IxJobObjectType {
   Job
 }
 
+type IxLocation {
+  Address: IxAddress
+  JobId: ID
+  Name: String
+  Description: String
+}
+
 type IxLookupValue {
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
@@ -446,7 +511,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  JobStatus
   JobPriority
   JobSubtype
   JobType
@@ -454,18 +518,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
-  TimeEntryType
-  CompanyType
-  DocumentType
-  TimeEntryLaborClass
   ToDoStatus
   ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
-  Minority
   Privilege
 }
 
@@ -482,6 +547,7 @@ input IxMoneyInput {
 type IxParty {
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -563,6 +629,11 @@ input IxPhoneNumberInput {
   Description: String
 }
 
+type IxQuantity {
+  Unit: IxUnit
+  Quantity: Float
+}
+
 type IxRange {
   Start: String
   End: String
@@ -572,6 +643,82 @@ type IxRange {
 input IxRangeInput {
   Start: String!
   End: String!
+}
+
+type IxResource {
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  Auxiliaries: [IxResource]
+  HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
+  DisplayName: String
+  CurrentLifespan: IxRange
+  CachedLifespan: IxRange
+  Dependencies: [CxDependency]
+  ObjectType: IxResourceObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+}
+
+enum IxResourceObjectType {
+  Crew
+  Employee
+  Equipment
+  Material
+}
+
+type IxResourceSubtype {
+  ResourceType: IxResourceType
+  Dependencies: [CxDependency]
+  ObjectType: IxResourceSubtypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+}
+
+enum IxResourceSubtypeObjectType {
+  ResourceSubtype
+}
+
+type IxResourceType {
+  Family: IxResourceTypeFamily
+  Unit: IxUnit
+  ResourceSubtypes: [IxResourceSubtype]
+  Dependencies: [CxDependency]
+  ObjectType: IxResourceTypeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  DisplayName: String
+  ForeColor: String
+  BackColor: String
+  Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
+}
+
+enum IxResourceTypeFamily {
+  Labor
+  Equipment
+  Material
+  Group
+}
+
+enum IxResourceTypeObjectType {
+  ResourceType
 }
 
 type IxShift {

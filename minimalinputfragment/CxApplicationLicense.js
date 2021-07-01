@@ -3,6 +3,7 @@ const CXAPPLICATIONLICENSEINPUTMIN = `fragment CXAPPLICATIONLICENSEINPUTMIN on C
   Id
   Expiration
   AllowedFullUsers
+  AllowedFieldUsers
   AllowedReadOnlyUsers
   AllowedMobileUsers
 }`;

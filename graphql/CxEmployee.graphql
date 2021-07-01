@@ -27,6 +27,7 @@ type CxEmployee {
   ResourceType: IxResourceType
   ResourceSubtype: IxResourceSubtype
   UnitCost: IxUnitCost
+  EffectiveLifespan: IxRange
   InCrew: Boolean
   HasAuxiliaries: Boolean
   Auxiliaries: [IxResource]
@@ -140,6 +141,7 @@ type IxCompany {
   Supplier: Boolean
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -276,6 +278,54 @@ input IxEmailInput {
   Description: String
 }
 
+type IxEmployee {
+  Person: IxParty
+  FirstName: String
+  LastName: String
+  MiddleName: String
+  BirthDate: String
+  PreviousExperience: IxQuantity
+  Minority: [IxLookupValue]
+  Unions: [IxLookupValue]
+  Licenses: [IxLookupValue]
+  Languages: [IxLookupValue]
+  TrainingCourses: [IxLookupValue]
+  Skills: [IxLookupValue]
+  LaborClassification: [IxLookupValue]
+  Machines: [IxResourceType]
+  Owner: IxCompany
+  ResourceType: IxResourceType
+  ResourceSubtype: IxResourceSubtype
+  Temporary: Boolean
+  UnitCost: IxUnitCost
+  Auxiliaries: [IxResource]
+  HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
+  DisplayName: String
+  CurrentLifespan: IxRange
+  CachedLifespan: IxRange
+  Dependencies: [CxDependency]
+  ObjectType: IxEmployeeObjectType
+  Id: ID!
+  Name: String
+  Description: String
+  Tags: [IxAttribute]
+  CustomProperties: [IxCustomProperty]
+  Attachments: [IxDocument]
+  HasAttachments: Boolean
+  Divisions: [IxLookupValue]
+  AccountCode: String
+  Location: IxLocation
+  ForeColor: String
+  BackColor: String
+  Contacts: [IxParty]
+  InCrew: Boolean
+}
+
+enum IxEmployeeObjectType {
+  Employee
+}
+
 type IxGeocode {
   Lat: Float
   Lng: Float
@@ -319,7 +369,6 @@ input IxLookupValueDO {
 }
 
 enum IxLookupValueObjectType {
-  JobStatus
   JobPriority
   JobSubtype
   JobType
@@ -327,18 +376,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
-  TimeEntryType
-  CompanyType
-  DocumentType
-  TimeEntryLaborClass
   ToDoStatus
   ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
-  Minority
   Privilege
 }
 
@@ -355,6 +405,7 @@ input IxMoneyInput {
 type IxParty {
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -461,6 +512,7 @@ type IxResource {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange

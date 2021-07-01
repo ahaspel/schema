@@ -2,6 +2,7 @@ type CxApplicationLicense {
   Id: ID!
   Expiration: String
   AllowedFullUsers: Int
+  AllowedFieldUsers: Int
   AllowedReadOnlyUsers: Int
   AllowedMobileUsers: Int
   Valid: Boolean
@@ -15,6 +16,7 @@ input CxApplicationLicenseInput {
   Id: ID!
   Expiration: String!
   AllowedFullUsers: Int!
+  AllowedFieldUsers: Int!
   AllowedReadOnlyUsers: Int!
   AllowedMobileUsers: Int!
   Valid: Boolean

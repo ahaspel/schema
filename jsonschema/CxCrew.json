@@ -112,6 +112,9 @@
 				"Initials": {
 					"type": "string"
 				},
+				"AsEmployee": {
+					"$ref": "#/definitions/IxEmployee"
+				},
 				"ContactOf": {
 					"type": "array",
 					"items": {
@@ -556,6 +559,9 @@
 				"HasAuxiliaries": {
 					"type": "boolean"
 				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
+				},
 				"DisplayName": {
 					"type": "string"
 				},
@@ -703,7 +709,6 @@
 				"ObjectType": {
 					"type": "string",
 					"enum": [
-						"JobStatus",
 						"JobPriority",
 						"JobSubtype",
 						"JobType",
@@ -711,18 +716,19 @@
 						"LaborClass",
 						"Language",
 						"License",
+						"Minority",
 						"Skill",
 						"Training",
 						"Union",
 						"State",
-						"TimeEntryType",
-						"CompanyType",
-						"DocumentType",
-						"TimeEntryLaborClass",
 						"ToDoStatus",
 						"ToDoPriority",
+						"TimeEntryType",
+						"CompanyType",
+						"JobStatus",
+						"DocumentType",
+						"TimeEntryLaborClass",
 						"JobCertification",
-						"Minority",
 						"Privilege"
 					]
 				},
@@ -780,6 +786,9 @@
 				},
 				"Initials": {
 					"type": "string"
+				},
+				"AsEmployee": {
+					"$ref": "#/definitions/IxEmployee"
 				},
 				"ContactOf": {
 					"type": "array",
@@ -873,6 +882,7 @@
 				"Id"
 			],
 			"immutable": [
+				"AsEmployee",
 				"CachedLifespan",
 				"ContactOf",
 				"CustomProperties",
@@ -1038,6 +1048,9 @@
 				},
 				"HasAuxiliaries": {
 					"type": "boolean"
+				},
+				"EffectiveLifespan": {
+					"$ref": "#/definitions/IxRange"
 				},
 				"DisplayName": {
 					"type": "string"
@@ -1315,6 +1328,7 @@
 		"Dependencies",
 		"DisplayName",
 		"Dto",
+		"EffectiveLifespan",
 		"Location",
 		"ResourceType"
 	],
@@ -1353,6 +1367,9 @@
 		},
 		"ResourceSubtype": {
 			"$ref": "#/definitions/IxResourceSubtype"
+		},
+		"EffectiveLifespan": {
+			"$ref": "#/definitions/IxRange"
 		},
 		"HasAuxiliaries": {
 			"type": "boolean"

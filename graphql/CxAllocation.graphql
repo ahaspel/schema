@@ -179,6 +179,7 @@ type IxCompany {
   Supplier: Boolean
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -260,6 +261,7 @@ type IxCrew {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
@@ -377,6 +379,7 @@ type IxEmployee {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
@@ -420,6 +423,7 @@ type IxEquipment {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
@@ -462,6 +466,7 @@ type IxJob {
   Priority: IxLookupValue
   Certifications: [IxLookupValue]
   Notes: String
+  EffectiveLifespan: IxRange
   JobActivities: [IxJobActivity]
   JobStatus: IxLookupValue
   StatusDue: String
@@ -485,6 +490,8 @@ type IxJob {
   HasAttachments: Boolean
   ForeColor: String
   BackColor: String
+  LastModified: String
+  Creator: IxParty
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
   Tags: [IxAttribute]
@@ -499,6 +506,7 @@ type IxJobActivity {
   Completed: Boolean
   SortOrder: Int
   DefaultShift: IxShift
+  EffectiveLifespan: IxRange
   Dependencies: [CxDependency]
   ObjectType: IxJobActivityObjectType
   Id: ID!
@@ -569,7 +577,6 @@ type IxLookupValue {
 }
 
 enum IxLookupValueObjectType {
-  JobStatus
   JobPriority
   JobSubtype
   JobType
@@ -577,18 +584,19 @@ enum IxLookupValueObjectType {
   LaborClass
   Language
   License
+  Minority
   Skill
   Training
   Union
   State
-  TimeEntryType
-  CompanyType
-  DocumentType
-  TimeEntryLaborClass
   ToDoStatus
   ToDoPriority
+  TimeEntryType
+  CompanyType
+  JobStatus
+  DocumentType
+  TimeEntryLaborClass
   JobCertification
-  Minority
   Privilege
 }
 
@@ -600,6 +608,7 @@ type IxMoney {
 type IxParty {
   Title: String
   Initials: String
+  AsEmployee: IxEmployee
   ContactOf: [IxContacts]
   IsContact: Boolean
   PartyGroups: [IxPartyGroup]
@@ -676,6 +685,7 @@ type IxResource {
   UnitCost: IxUnitCost
   Auxiliaries: [IxResource]
   HasAuxiliaries: Boolean
+  EffectiveLifespan: IxRange
   DisplayName: String
   CurrentLifespan: IxRange
   CachedLifespan: IxRange
