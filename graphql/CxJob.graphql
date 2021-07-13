@@ -52,8 +52,6 @@ input CxJobInput {
   Subtypes: [IxLookupValueDO]!
   Certifications: [IxLookupValueDO]
   Address: IxAddressInput
-  LastModified: String
-  Creator: IxPartyDO
   DefaultShift: IxShiftDO
   AccountCode: String!
   Contacts: [IxPartyInput]
