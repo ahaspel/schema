@@ -4,6 +4,7 @@ type CxCostCode {
   ObjectType: CxCostCodeObjectType
   Id: ID!
   Description: String
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String
@@ -17,6 +18,7 @@ input CxCostCodeInput {
   ObjectType: CxCostCodeObjectType
   Id: ID!
   Description: String
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String!

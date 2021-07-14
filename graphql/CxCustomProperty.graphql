@@ -4,6 +4,7 @@ type CxCustomProperty {
   ObjectType: CxCustomPropertyObjectType
   Id: ID!
   Description: String
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String
@@ -27,6 +28,7 @@ input CxCustomPropertyInput {
   ObjectType: CxCustomPropertyObjectType
   Id: ID!
   Description: String
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String!

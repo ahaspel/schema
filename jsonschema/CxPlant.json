@@ -327,6 +327,9 @@
 						"Date"
 					]
 				},
+				"Active": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -725,6 +728,9 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
+				"Active": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {

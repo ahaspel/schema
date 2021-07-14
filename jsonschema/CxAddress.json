@@ -85,6 +85,9 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
+				"Active": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {

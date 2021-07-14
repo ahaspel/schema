@@ -179,6 +179,7 @@ enum IxContactsObjectType {
 type IxCostCode {
   UnitCost: IxUnitCost
   Global: Boolean
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxCostCodeObjectType
   Id: ID!
@@ -200,6 +201,7 @@ enum IxCostCodeObjectType {
 type IxCustomProperty {
   SupportedTypes: [IxCustomPropertySupportedTypes]
   AttributeType: IxCustomPropertyAttributeType
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
@@ -408,6 +410,7 @@ type IxJobCost {
   TotalAmount: Float
   ExpectedDailyAmount: Float
   CompletedAmount: Float
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxJobCostObjectType
   Id: ID!
@@ -434,6 +437,7 @@ type IxLocation {
 }
 
 type IxLookupValue {
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!

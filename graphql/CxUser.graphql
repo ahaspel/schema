@@ -162,6 +162,7 @@ enum IxContactsObjectType {
 type IxCustomProperty {
   SupportedTypes: [IxCustomPropertySupportedTypes]
   AttributeType: IxCustomPropertyAttributeType
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!
@@ -292,6 +293,7 @@ type IxLevel {
   Privileges: [IxLevelPrivileges]
   ObjectPrivileges: [CxObjectPrivilege]
   Editable: Boolean
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxLevelObjectType
   Id: ID!
@@ -325,6 +327,7 @@ type IxLocation {
 }
 
 type IxLookupValue {
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!

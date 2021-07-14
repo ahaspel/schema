@@ -280,6 +280,9 @@
 				"Global": {
 					"type": "boolean"
 				},
+				"Active": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -356,6 +359,9 @@
 						"Boolean",
 						"Date"
 					]
+				},
+				"Active": {
+					"type": "boolean"
 				},
 				"Dependencies": {
 					"type": "array",
@@ -1000,6 +1006,9 @@
 				"CompletedAmount": {
 					"type": "number"
 				},
+				"Active": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {
@@ -1068,6 +1077,9 @@
 		"IxLookupValue": {
 			"type": "object",
 			"properties": {
+				"Active": {
+					"type": "boolean"
+				},
 				"Dependencies": {
 					"type": "array",
 					"items": {

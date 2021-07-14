@@ -33,6 +33,7 @@ type IxAttribute {
 type IxCustomProperty {
   SupportedTypes: [IxCustomPropertySupportedTypes]
   AttributeType: IxCustomPropertyAttributeType
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxCustomPropertyObjectType
   Id: ID!

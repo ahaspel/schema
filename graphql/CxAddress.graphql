@@ -59,6 +59,7 @@ enum IxGeocodeSource {
 }
 
 type IxLookupValue {
+  Active: Boolean
   Dependencies: [CxDependency]
   ObjectType: IxLookupValueObjectType
   Id: ID!

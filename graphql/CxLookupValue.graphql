@@ -12,6 +12,7 @@ type CxLookupValue {
   Id: ID!
   Description: String
   ObjectType: CxLookupValueObjectType
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String
@@ -23,6 +24,7 @@ input CxLookupValueInput {
   Id: ID!
   Description: String
   ObjectType: CxLookupValueObjectType
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String!

@@ -15,6 +15,7 @@ type CxLevel {
   Editable: Boolean
   Id: ID!
   Description: String
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String
@@ -29,6 +30,7 @@ input CxLevelInput {
   Editable: Boolean
   Id: ID!
   Description: String
+  Active: Boolean
   ForeColor: String
   BackColor: String
   Name: String!
